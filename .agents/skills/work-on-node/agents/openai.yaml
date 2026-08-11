@@ -1,0 +1,4 @@
+interface:
+  display_name: "Work on Puzzle Node"
+  short_description: "Solve or resume one normal, subpuzzle, or Meta Node"
+  default_prompt: "Use $work-on-node to work on rounds/<ROUND_ID>/nodes/<NODE_ID>."

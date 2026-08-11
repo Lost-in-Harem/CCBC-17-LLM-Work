@@ -1,0 +1,4 @@
+interface:
+  display_name: "Inspect Puzzle Visuals"
+  short_description: "Extract, number, crop, annotate, and inspect puzzle media"
+  default_prompt: "Use $inspect-puzzle-visuals to inspect the current Node's visual or multimedia input."
