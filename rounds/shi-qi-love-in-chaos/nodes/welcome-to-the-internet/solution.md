@@ -7,10 +7,10 @@ parent:
 source: 
 round_feeder: yes
 feeders: 
-status: candidate
-answer: DOGMATICAL
-confidence: high
-summary: 十段文字分别描述十只名犬并暗示十条含“狗”的俗语；把段落序号用于对应图片的红色答案/信号，按图片顺序得到 COGMATICAL，再由题首名句揭示所有“用户”其实是狗，将 C 改为 D，得到 DOGMATICAL。
+status: rejected
+answer: 
+confidence: 
+summary: 用户已明确判错 DOGMATICAL、SNOOPY 和 ABSCISSION；ABSCISSION 没有触发任何里程碑信息。十只狗的身份匹配仍有较强证据，但单图产物不是可提交答案，旧 COGMATICAL 路线也含有倒推与错误读图；现重新推导十图红色结果之间的统一总提取。
 updated: 2026-08-15
 ---
 
@@ -18,9 +18,9 @@ updated: 2026-08-15
 
 ## Current conclusion
 
-候选答案是 **DOGMATICAL**。
+当前没有可提交的总答案。用户已明确反馈 **DOGMATICAL**、**SNOOPY** 和 **ABSCISSION** 全部错误；`ABSCISSION` 也没有触发任何里程碑信息。
 
-题面把“狗”“主人”和各种现实场所伪装成“用户”“邀请者”“论坛”。十条文字先确定十只名犬及其顺序；十张图片则以文字游戏、重排、摩斯码或图像双关给出这些狗和可抽取的红色结果。匹配后按图片顺序得到 `COGMATICAL`。开头的“在互联网上，没有人知道你是谁”明显截断了名句 “On the Internet, nobody knows you're a dog”；十位用户也确实全是狗。因此非词 `COGMATICAL` 的首字母身份伪装应由 `C` 改成 `D`，成为有效且切题的 **DOGMATICAL**。
+目前可靠的骨架仍是：十条文字各描述一只名犬，十张图片也各指向其中一只狗；开场句借用了 “On the Internet, nobody knows you're a dog”。但是，旧解把文字列表序号直接当成每张图片答案的索引，并用主题把非词 `COGMATICAL` 的首字母改成 `D`，这两步都缺乏题面操作指示，且最终提交已经被否定。第 1 图内部稳定得到的 `ABSCISSION` 现在只能视为局部构造结果，不能再视为里程碑候选。
 
 ## Observations
 
@@ -43,13 +43,24 @@ updated: 2026-08-15
 
 ## Working hypotheses
 
-- **采用：匹配后抽取。** 列表序号是对应图片结果的索引；按原图片顺序读字母。它完整产生一个只差题首提示所要求身份修正的英语词。
-- **否定：直接提交 `ABSCISSION`。** 第 1 图确实单独抽出这个完整单词，但它只是 Snoopy 图的中间结果；若把其余九图视为无用，则无法解释题面的主体结构。
-- **否定：把每张图仅当作十个互不相关的狗谜。** 红色答案与列表序号系统性地产生 `COGMATICAL`，不是偶然配对。
+- **H1：各图先产生局部字符串或信号，再统一总提取。** `ABSCISSION` 的判错且无里程碑信息说明局部结果不是提交目标；应寻找十图之间一致的取位、重排或转写规则。
+- **H2：十条文字末尾的含狗俗语提供第二层操作。** 十句俗语目前只用于确认“狗”主题，信息利用不足；它们可能决定删字、取位或排列，而不是简单提供列表序号。
+- **H3：图片的红色元素本身组成统一编码。** 旧表中第 5、6、8、9、10 图的所谓完整字符串大量依赖最终词倒推；应只抄录红色格、编号、颜色和箭头，再寻找跨图一致规则。
+- **H4：`ENIGMATICAL` 是待证的总词形。** 旧路线的第 3–10 图恰好给出后缀 `GMATICAL`，因此判错后自然会想到 `ENIGMATICAL`；但前两图还没有可复现地给出 `ENI`，所以它目前只能用于设计检验，不能提交。
+- **已否定：列表序号索引后把 `COGMATICAL` 改成 `DOGMATICAL`。** 最终提交被明确判错，且 C→D 没有显式操作依据。
 
-## Extraction
+## Fresh visual audit after rejection
 
-列表序号随狗移动到对应图片。除第 6 图直接把红色横划按摩斯码读作 `T` 外，其余图对解出的红色字符串取该狗的列表序号：
+- **第 1 图（Snoopy）：** `?BC?=ANUBIS`、`CAB≈VISHNU`、`A?C=SCOOBY-DOO`，红色编号 1–10 严格给出 `ABSCISSION`。这是完整局部答案，而不是狗名本身。
+- **第 2 图（Pluto 配对仍待独立确认）：** `步 / 上海 / 高` 依读音近似“不 / 伤害 / 狗”，`天 / 塔 / 眼` 依读音近似“填 / 答 / 案”，即“不伤害狗，填答案”。旧解的 `PARADOX` 并没有从这幅图逐格出现。
+- **第 6 图（哮天犬）：** 取 `B∩C=大`，得 `X=天−大=一`、`Y=犬−大=丶`；`YXXY / YX / XXX` 按摩斯为 `P/A/O`。红色斜线位于 `A` 组上方，是把 `PAO` 标成二声 `páo` 的声调符号，再与 `A=哮` 合成“咆哮”。它不是摩斯横划，因此旧表从它直接读 `T` 的解释确定错误。
+- **第 8 图（Spike）：** `SPIKE` 与鱼 `PIKE` 的差为 `S`；下半图很可能要补成 `THIS IS BISCUIT`，但颜色块怎样逐块产生整句仍需完整复原，不能仅因旧目标需要 `C` 就采用第 10 字母。
+- **第 9 图（Akamaru）：** 网格恰有 18 格，正好容纳 `AKAMARU`（7）与 `KIBA INUZUKA`（11）的全部罗马字；红色箭路必须实际转录后，才能证明是否得到 `GATSUUGA`。放大的持久视图在 `work/visual/panel9-route-4x.png`。
+- **第 10 图（Isabelle）：** `SHE IS A BELLE` 是很自然的姓名拆解，但数字 1–5、六个问号和红蓝六格的作用还未解释；旧表直接取第 9 字母仍属回填。
+
+## Rejected extraction reconstruction
+
+下表保留旧路线，便于定位哪些环节曾被最终词反向约束；它**不再是有效提取**。除第 1、3、4、7 图外，多项“图片中解出的结果”并未独立证明。
 
 | 图片 | 狗（列表序号） | 图片中解出的结果 | 抽取 | 字母 |
 | --- | --- | --- | --- | --- |
@@ -58,7 +69,7 @@ updated: 2026-08-15
 | 3 | Hachikō (1) | `GO`（日语“五”） | 第 1 字母 | G |
 | 4 | Santa's Little Helper (3) | `SIMPSONS` | 第 3 字母 | M |
 | 5 | Shiro (7) | `SHINCHAN` | 第 7 字母 | A |
-| 6 | 哮天犬 (2) | `天−大=一=X`，`犬−大=丶=Y`；`YXXY/YX/XXX` 以点划读成 `PAO`，与“哮”合成“咆哮”；红横划本身是摩斯 `T` | 直接读红划 | T |
+| 6 | 哮天犬 (2) | `天−大=一=X`，`犬−大=丶=Y`；`YXXY/YX/XXX` 以点划读成 `PAO`，红斜线把 A 标为二声，再与“哮”合成“咆哮” | 旧解误把声调符号当摩斯横划 | T（无效） |
 | 7 | Laika (5) | `TETRIS`（俄罗斯 + 方块） | 第 5 字母 | I |
 | 8 | Spike (10) | `PIKE + S -> SPIKE`；`HIBISCUS + TIT -> THIS IS BISCUIT` | `THISISBISCUIT` 第 10 字母 | C |
 | 9 | Akamaru (8) | `GATSUUGA`（牙通牙） | 第 8 字母 | A |
@@ -66,24 +77,24 @@ updated: 2026-08-15
 
 第 1 图的内部填法可独立复核：令 `ABC=史努比`，则 `?BC?=ANUBIS`、`CAB` 谐音为 `VISHNU`、`A?C=SCOOBY-DOO`。依图中红色编号 1–10 读取，得到 `ABSCISSION`。
 
-图片顺序给出：
+旧路线按图片顺序给出：
 
 ```text
 COGMATICAL
 ```
 
-这不是英语词；题首残缺名句和十只狗共同指示把开头伪装的 `C` 揭示为 `D`：
+旧路线再无题面指示地把首字母改成 `D`：
 
 ```text
 COGMATICAL -> DOGMATICAL
 ```
 
-## Candidate audit
+## Rejected candidate audit
 
-- **格式：** `DOGMATICAL` 是 10 个英文字母，且是 `dogmatic` 的有效变体，符合无大小写限制的答案格式。
-- **主设计：** 十只狗、十条狗俗语、十图匹配、列表序号抽取以及题首 “dog” 补全均得到解释。
-- **独立检查：** `ANUBIS/VISHNU/SCOOBY-DOO -> ABSCISSION` 已逐格核对；所有抽取位置已另存为 `artifacts/extraction.tsv`；`COGMATICAL` 只需一次且主题唯一的 C→D 修正即可成为词。
-- **剩余风险：** 第 5、6、9 图的图像双关比其它项更依赖文化知识；但它们的狗身份、目标字母和完整的 `DOGMATICAL` 校验彼此一致。最重要的推断性步骤是最终 C→D，题首截断名句与全题狗主题提供了强支持。
+- `DOGMATICAL` 的词形与狗主题吻合，但这只是事后校验，不能补足操作证据。
+- `ANUBIS/VISHNU/SCOOBY-DOO -> ABSCISSION` 已逐格核对；这只能证明第 1 图的局部结果，不能证明“列表序号取位”。
+- 旧解的第 5、6、8、9、10 图字符串均不同程度受目标字母反向约束；第 2 图的 `PARADOX` 也是概念概括，而非从所有图符严格逐格得到。
+- 明确判错说明 `COGMATICAL -> DOGMATICAL` 不能再作为候选恢复，除非出现全新的、独立的题面证据。
 
 ## Submission history
 
@@ -91,10 +102,13 @@ COGMATICAL -> DOGMATICAL
 
 | Date | Candidate | Result | Note |
 | --- | --- | --- | --- |
+| 2026-08-15 | DOGMATICAL | rejected | 用户明确反馈“不是答案”。 |
+| 2026-08-15 | SNOOPY | rejected | 用户尝试作为答案或中间答案，并明确反馈它不是答案之一。 |
+| 2026-08-15 | ABSCISSION | rejected | 用户明确反馈它不是答案之一，且判题没有提供任何附加信息。 |
 
 ## Evidence and artifacts
 
-- `artifacts/extraction.tsv`：十图匹配与逐字抽取表。
+- `artifacts/extraction.tsv`：已判错路线的十图匹配与逐字抽取审计表；不能再当作候选证据。
 - `artifacts/panel-contact-sheet.png`：十一项内嵌图像（头像 + 十面板）的稳定编号总览。
 - `artifacts/panel9-labeled.png`：第 9 图的 `r1c1`–`r3c6` 坐标标注。
 - 复现图像清单：
@@ -111,9 +125,11 @@ python .agents/skills/inspect-puzzle-visuals/scripts/visual_workbench.py invento
 
 ## Important failed routes
 
-- 只解第 1 图会很自然地得到 `ABSCISSION`，但直接把它当总答案会遗弃另外九图及十条描述；它应保留为 Snoopy 面板的中间结果。
+- **DOGMATICAL（用户明确判错）：** 旧解按狗在文字列表中的序号对对应图片字符串取位，得到 `COGMATICAL`，再依据全题狗主题强行做 `C -> D`。最终修正没有显式指示，且提交已经被拒；不得在没有新证据时恢复。
+- **SNOOPY（用户明确判错）：** 它是第 1 图的用户身份，不是该图可验证的答案或中间答案。第 1 图真正由红色编号抽出的字符串是 `ABSCISSION`。
+- **ABSCISSION（用户明确判错，且无里程碑信息）：** 虽然第 1 图能严格产生该字符串，但它只是局部构造结果；不得继续把它当总答案或里程碑。直接提交它也遗弃另外九图及十条描述。
 - 把“论坛/用户/邀请者”当真实互联网账号会走偏；它们稳定替代“活动场所/狗/主人”，末句也都能还原成含“狗”的俗语。
 
 ## Next action
 
-由用户向 Hunt 提交 `DOGMATICAL` 并反馈明确判定；若被拒绝，优先复查最终的 C→D 修正，其次复核第 5、6、9 图的中间字符串。
+不再测试单图产物或里程碑。先完整复原第 5、8、9、10 图的局部字符串与红色操作，再把十条含狗俗语作为候选操作说明进行一一配对；只有当同一规则解释十图、且无需 `DOGMATICAL` 或 `ENIGMATICAL` 回填时，才形成新的总答案候选。

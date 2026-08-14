@@ -1,13 +1,13 @@
-panel	matched_list_item	user	resolved_red_text_or_signal	extraction	letter
-1	4	SNOOPY	ABSCISSION	4th character	C
-2	6	PLUTO	PARADOX	6th character	O
-3	1	HACHIKO	GO	1st character	G
-4	3	SANTA'S LITTLE HELPER	SIMPSONS	3rd character	M
-5	7	SHIRO	SHINCHAN	7th character	A
-6	2	XIAOTIANQUAN	red dash / Morse dash	dash in Morse	T
-7	5	LAIKA	TETRIS	5th character	I
-8	10	SPIKE	THISISBISCUIT	10th character	C
-9	8	AKAMARU	GATSUUGA	8th character	A
-10	9	ISABELLE	SHEISABELLE	9th character	L
+panel	matched_list_item	user	proposed_red_text_or_signal	old_extraction	old_letter	evidence_status
+1	4	SNOOPY	ABSCISSION	4th character	C	independently reproduced, but list-index extraction unproved
+2	6	PLUTO	PARADOX	6th character	O	conceptual guess; not a strict rebus transcription
+3	1	HACHIKO	GO	1st character	G	local GO is strong; list-index extraction unproved
+4	3	SANTA'S LITTLE HELPER	SIMPSONS	3rd character	M	local SIMPSONS is strong; list-index extraction unproved
+5	7	SHIRO	SHINCHAN	7th character	A	backsolved / unproved
+6	2	XIAOTIANQUAN	red rising-tone mark over PAO	incorrectly read as a Morse dash	T	invalid: the mark supplies the second tone for 咆, not Morse T
+7	5	LAIKA	TETRIS	5th character	I	local TETRIS is plausible; list-index extraction unproved
+8	10	SPIKE	THISISBISCUIT	10th character	C	backsolved / unproved
+9	8	AKAMARU	GATSUUGA	8th character	A	backsolved / unproved
+10	9	ISABELLE	SHEISABELLE	9th character	L	backsolved / unproved
 
-image-order intermediate			COGMATICAL	opening quote identifies every user as a dog; C -> D	DOGMATICAL
+rejected image-order intermediate			COGMATICAL	unsupported thematic C -> D	DOGMATICAL	user explicitly rejected DOGMATICAL on 2026-08-15

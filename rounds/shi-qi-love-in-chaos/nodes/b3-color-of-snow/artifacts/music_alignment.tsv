@@ -1,0 +1,5 @@
+mask	track	feature	score	start_seconds	duration_seconds	reversed_pitch	transpose
+targets	snow_preview	onset	0.341782	4.643991	5.50	True	7
+targets	spring_preview	onset	0.332223	13.839093	3.00	False	2
+segments	snow_preview	chroma	0.411828	5.015510	2.75	False	3
+segments	spring_preview	chroma	0.299024	13.839093	7.25	True	4

@@ -1,0 +1,21 @@
+[
+  {"slot": "R1", "row": 1, "col": 19, "char": "阳", "hex": "#ff0000"},
+  {"slot": "R2", "row": 2, "col": 5, "char": "柿", "hex": "#ff0000"},
+  {"slot": "R3", "row": 5, "col": 8, "char": "袍", "hex": "#ff0000"},
+  {"slot": "R4", "row": 7, "col": 5, "char": "口", "hex": "#ff0000"},
+  {"slot": "R5", "row": 10, "col": 8, "char": "酒", "hex": "#ff0000"},
+  {"slot": "Y1", "row": 1, "col": 2, "char": "地", "hex": "#f1c232"},
+  {"slot": "Y2", "row": 1, "col": 5, "char": "收", "hex": "#f1c232"},
+  {"slot": "Y3", "row": 6, "col": 13, "char": "鸭", "hex": "#f1c232"},
+  {"slot": "Y4", "row": 6, "col": 17, "char": "星", "hex": "#f1c232"},
+  {"slot": "Y5", "row": 12, "col": 8, "char": "蜜", "hex": "#f1c232"},
+  {"slot": "Y6", "row": 11, "col": 4, "char": "金", "hex": "#f1c232"},
+  {"slot": "G1", "row": 2, "col": 11, "char": "青", "hex": "#34a853"},
+  {"slot": "G2", "row": 4, "col": 16, "char": "林", "hex": "#34a853"},
+  {"slot": "G3", "row": 4, "col": 18, "char": "叶", "hex": "#34a853"},
+  {"slot": "G4", "row": 8, "col": 17, "char": "碧", "hex": "#34a853"},
+  {"slot": "C1", "row": 3, "col": 11, "char": "山", "hex": "#00b0f0"},
+  {"slot": "C2", "row": 4, "col": 8, "char": "冰", "hex": "#00b0f0"},
+  {"slot": "C3", "row": 5, "col": 11, "char": "水", "hex": "#00b0f0"},
+  {"slot": "C4", "row": 6, "col": 15, "char": "江", "hex": "#00b0f0"}
+]

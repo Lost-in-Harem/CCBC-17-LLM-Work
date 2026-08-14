@@ -1,0 +1,6 @@
+board	attacker_move_1	defender_reply_1	attacker_move_2	defender_reply_2	attacker_move_3	families	base3	decimal	letter
+image-002	C knight c1-b3	C king d4-d3	C castle O-O-O	C king d3xe2	S gold f4-e4	CCS	001	1	A
+image-003	S rook c4-c7 promote	C king d8-d9	C pawn h8-h9=Q	X cannon a9xh9	C pawn f8-f9=Q	SCC	100	9	I
+image-004	X horse i10-g9	S gold f8-f9	C rook h1-h8	X advisor e9-f8	S gold c8xd8	XCS	201	19	S
+image-005	C pawn g7xf8	S king g9-f9	S pawn drop b9	S king f9-e8	X soldier f7-e7	CSX	012	5	E
+image-006	S rook a1-a10	X general d10-d9	S knight b5-c7	X general d9-e9	X cannon f4-e4	SSX	112	14	N
