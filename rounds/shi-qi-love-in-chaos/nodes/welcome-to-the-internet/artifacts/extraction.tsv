@@ -1,0 +1,13 @@
+panel	matched_list_item	user	resolved_red_text_or_signal	extraction	letter
+1	4	SNOOPY	ABSCISSION	4th character	C
+2	6	PLUTO	PARADOX	6th character	O
+3	1	HACHIKO	GO	1st character	G
+4	3	SANTA'S LITTLE HELPER	SIMPSONS	3rd character	M
+5	7	SHIRO	SHINCHAN	7th character	A
+6	2	XIAOTIANQUAN	red dash / Morse dash	dash in Morse	T
+7	5	LAIKA	TETRIS	5th character	I
+8	10	SPIKE	THISISBISCUIT	10th character	C
+9	8	AKAMARU	GATSUUGA	8th character	A
+10	9	ISABELLE	SHEISABELLE	9th character	L
+
+image-order intermediate			COGMATICAL	opening quote identifies every user as a dog; C -> D	DOGMATICAL
