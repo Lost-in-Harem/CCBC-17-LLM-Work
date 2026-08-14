@@ -12,3 +12,5 @@ rounds/*/nodes/*/work/*
 !rounds/*/nodes/*/work/.gitkeep
 
 .vscode/
+
+*.mp4
