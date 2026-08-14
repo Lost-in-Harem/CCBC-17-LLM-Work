@@ -13,6 +13,25 @@
   `python tools/move_node.py OLD_ROUND/OLD_NODE NEW_ROUND/NEW_NODE` outside any
   active solving task.
 
+## Stateful WIG exception
+
+- `rounds/wig/` is a stateful investigation area rather than a conventional
+  Puzzle Hunt Round. Its applications, messages, calls, searches, and story
+  state can provide evidence for several answer events at once.
+- The user may explicitly assign the entire WIG area. In that case, the
+  exactly-one-Node read/write boundary is replaced by a boundary around
+  `rounds/wig/`; do not inspect or modify other Rounds.
+- Keep cross-application facts, the current story state, open questions, and
+  collection requests in `rounds/wig/STATE.md`. Keep the reasoning and verdict
+  for each answer-producing event in that event's `solution.md`.
+- WIG `input/` files and `shared/` captures remain immutable evidence. New
+  captures are supplied by the user; derived extraction and analysis belong
+  under the relevant Node's `work/` or `artifacts/`.
+- Read-only inspection of the WIG interface is allowed when the user requests
+  browser collection. Never reply to mail, dial a number, install an app,
+  submit an answer, request a hint, or otherwise advance external state unless
+  the user explicitly requests that exact action.
+
 ## Dependency model
 
 - Every answer-producing unit is a Node, including a normal puzzle, a subpuzzle inside a compound page, or a Meta.

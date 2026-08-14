@@ -2,10 +2,10 @@
 node_id: a1
 title: 入职声明
 kind: puzzle
-round: unassigned
+round: wig
 parent: 
 source: wig-web
-round_feeder: yes
+round_feeder: no
 feeders: 
 status: accepted
 answer: 祁希艾
@@ -61,7 +61,7 @@ updated: 2026-08-14
 ## Evidence and artifacts
 
 - `artifacts/wig-text-report.md`：五个 WIG HTML 页面的可复核文本与 SHA-256；直接证据位于采访页章节。
-- `artifacts/extract_wig_text.py`：从 SingleFile ZIP HTML 的 `<main hidden>` 搜索文本块生成上述报告。复现：`python rounds/unassigned/nodes/a1/artifacts/extract_wig_text.py rounds/unassigned/nodes/a1/input rounds/unassigned/shared/wig-web --output rounds/unassigned/nodes/a1/work/wig-text-report.md`。
+- `artifacts/extract_wig_text.py`：从 SingleFile ZIP HTML 的 `<main hidden>` 搜索文本块生成上述报告。复现：`python rounds/wig/nodes/a1/artifacts/extract_wig_text.py rounds/wig/nodes/a1/input rounds/wig/shared/wig-web --output rounds/wig/nodes/a1/work/wig-text-report.md`。
 - `work/visual/input-inventory/` 与 `work/visual/source-inventory/`：当前题面和共享 WIG 页面的稳定图像清单。
 - `work/visual/video/`：视频元数据、逐秒帧和接触表；复现命令见其中 `render-manifest.json`。
 - `work/recognize_audio.py` 与 `work/audio-recognition*.json`：有界识曲实验及空匹配结果。

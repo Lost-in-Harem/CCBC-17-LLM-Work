@@ -3,7 +3,7 @@
 ## 30岁以下优秀文娱创业青年采访 - 新声文娱观察.html
 
 - SHA-256: `107d739c300229a4252fb8ac0b27bcdb353b2824d68b992a02f448a98b1eb72a`
-- Source: `G:/Repo/CCBC-17-LLM-Work/rounds/unassigned/shared/wig-web/30岁以下优秀文娱创业青年采访 - 新声文娱观察.html`
+- Source: `G:/Repo/CCBC-17-LLM-Work/rounds/wig/shared/wig-web/30岁以下优秀文娱创业青年采访 - 新声文娱观察.html`
 
 ```text
 17
@@ -88,7 +88,7 @@ Changes made from this popup are temporary and only affect the current tab.
 ## 入职声明.html
 
 - SHA-256: `f17c9e4b6613015223326621544ac7efe72fc1fe67c21c10ab5e7afc54936c46`
-- Source: `G:/Repo/CCBC-17-LLM-Work/rounds/unassigned/nodes/a1/input/入职声明.html`
+- Source: `G:/Repo/CCBC-17-LLM-Work/rounds/wig/nodes/a1/input/入职声明.html`
 
 ```text
 17
@@ -132,7 +132,7 @@ Changes made from this popup are temporary and only affect the current tab.
 ## 分享一点最近的生活 - 小七的小本子.html
 
 - SHA-256: `ed14c05608936118b56932896b2de4d96f4823589d6b9478cf963b42cec5a207`
-- Source: `G:/Repo/CCBC-17-LLM-Work/rounds/unassigned/shared/wig-web/分享一点最近的生活 - 小七的小本子.html`
+- Source: `G:/Repo/CCBC-17-LLM-Work/rounds/wig/shared/wig-web/分享一点最近的生活 - 小七的小本子.html`
 
 ```text
 17
@@ -197,7 +197,7 @@ Changes made from this popup are temporary and only affect the current tab.
 ## 密码菌 - 官方主页.html
 
 - SHA-256: `9fe15c16196b0e777f90565a64c64ed881ebb7d2de82e6526e5982a8701ed80b`
-- Source: `G:/Repo/CCBC-17-LLM-Work/rounds/unassigned/shared/wig-web/密码菌 - 官方主页.html`
+- Source: `G:/Repo/CCBC-17-LLM-Work/rounds/wig/shared/wig-web/密码菌 - 官方主页.html`
 
 ```text
 17
@@ -269,7 +269,7 @@ Changes made from this popup are temporary and only affect the current tab.
 ## 手机状元榜.html
 
 - SHA-256: `4d30790bf3a2253fa0f8ec6335a7256a1531625c4c1887aced0357f25c6957e3`
-- Source: `G:/Repo/CCBC-17-LLM-Work/rounds/unassigned/shared/wig-web/手机状元榜.html`
+- Source: `G:/Repo/CCBC-17-LLM-Work/rounds/wig/shared/wig-web/手机状元榜.html`
 
 ```text
 17
