@@ -1,13 +1,16 @@
-panel	matched_list_item	user	proposed_red_text_or_signal	old_extraction	old_letter	evidence_status
-1	4	SNOOPY	ABSCISSION	4th character	C	independently reproduced, but list-index extraction unproved
-2	6	PLUTO	PARADOX	6th character	O	conceptual guess; not a strict rebus transcription
-3	1	HACHIKO	GO	1st character	G	local GO is strong; list-index extraction unproved
-4	3	SANTA'S LITTLE HELPER	SIMPSONS	3rd character	M	local SIMPSONS is strong; list-index extraction unproved
-5	7	SHIRO	SHINCHAN	7th character	A	backsolved / unproved
-6	2	XIAOTIANQUAN	red rising-tone mark over PAO	incorrectly read as a Morse dash	T	invalid: the mark supplies the second tone for 咆, not Morse T
-7	5	LAIKA	TETRIS	5th character	I	local TETRIS is plausible; list-index extraction unproved
-8	10	SPIKE	THISISBISCUIT	10th character	C	backsolved / unproved
-9	8	AKAMARU	GATSUUGA	8th character	A	backsolved / unproved
-10	9	ISABELLE	SHEISABELLE	9th character	L	backsolved / unproved
+panel	matched_list_item	user	carrier_or_meta_result	extraction	letter	evidence_status
+1	4	SNOOPY	ABSCISSION	4th character	C	ABSCISSION is reproduced exactly; its meaning later instructs cutting off this row's C
+2	6	PLUTO	PARADOX	6th character	O	Pluto/Goofy contradiction is conventionally called the Pluto paradox; carrier remains the weakest row
+3	1	HACHIKO	GO	1st character	G	Hachiko supplies 8, so Japanese 5 is GO
+4	3	SANTA'S LITTLE HELPER	SIMPSONS	3rd character	M	helping hands come from The Simpsons
+5	7	SHIRO	HIGHTEA	7th character	A	SHIRO supplies IS; the Morse/rebus places T high, giving HIGH TEA (7)
+6	2	XIAOTIANQUAN	red rising stroke / Morse dash	direct Morse value	T	the red stroke both marks pao as second tone and is a Morse dash T
+7	5	LAIKA	RUSSIA	5th character	I	red box is Laika's country, RUSSIA; TETRIS is the combined Russia-square identification
+8	9	ISABELLE	THISISBISCUIT	9th character	S	HIBISCUS color partition and the clue reconstruct THIS IS BISCUIT; panel 10 fixes Spike, leaving Isabelle here
+9	8	AKAMARU	PERMUTATION	8th character	T	18 cells fit the combined names and red cycles depict a permutation; exact name fill is still to be audited
+10	10	SPIKE	TYPES	meta check, not an extracted letter	—	SPIKE+Y gives SPIKEY; color split gives PIE/SKY, PIE IN THE SKY labels 1-5 spell TYPES
 
-rejected image-order intermediate			COGMATICAL	unsupported thematic C -> D	DOGMATICAL	user explicitly rejected DOGMATICAL on 2026-08-15
+panels 1-9 raw			COGMATIST	read in panel order	COGMATIST	all nine positions are accounted for above
+ABSCISSION instruction			COGMATIST	cut the initial C contributed by panel 1	OGMATIST	the instruction removes its own extraction contribution
+flavor restoration			OGMATIST	restore omitted DOG by overlapping its existing OG prefix	DOGMATIST	adding only D completes DOG + MATIST
+panel 10 grammatical check			DOGMATIST TYPES	read TYPES as the third-person singular verb	DOGMATIST	the Internet sentence requires singular DOGMATIST; adding S makes it ungrammatical

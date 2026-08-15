@@ -7,10 +7,10 @@ parent:
 source:
 round_feeder: yes
 feeders:
-status: rejected
-answer:
-confidence:
-summary: 用户已明确判错 `397:1964`、`WIRES`、`COPPER`。Miracle Sudoku 唯一解仍可靠，完整录音与七张候选图已保存；七图坐标路线读出 `397:1964`，且该串精确命中 ISO/R 397:1964，但从标准标题直接选 `WIRES` 或 `COPPER` 都已被实测否决。当前重新检查 ISO 条目是否只用于下一层操作，以及前四张图的编号/顺序是否存在一位误取。
+status: candidate
+answer: 396:3964
+confidence: high
+summary: 用户明确纠正“七个数本身就是答案”，因此撤销未提交的 `WRAPPING` 后处理。重新按视觉描述审计后，第三图应是字面写着 `Photo 3.4 — Construction of Luzhou port` 的港口图，不是三联船闸 `3.6`；第四图应是蓝色秘稀飞行生物 `Dream Eater`，右下为 `4/3`，不是易认且仅为非普通的 `Blue Dragon 5/5`。七图遂给坐标 `1.4, 2.4, 3.4, 4/3, 5/3, 6/3, 6.80`，唯一的 Miracle Sudoku 解在这些格中读出 `396:3964`。
 updated: 2026-08-15
 ---
 
@@ -18,17 +18,14 @@ updated: 2026-08-15
 
 ## Current conclusion
 
-当前 **没有可提交候选**。用户已经明确判错 `397:1964`、`WIRES` 与 `COPPER`；三者都不得在没有新机制证据时换单复数或近义词重投。
+当前候选是 **`396:3964`**。用户明确纠正“数字解出来应该就是答案”，所以这里到七格读数即停止，不再做 ISO、年份、查表或英文词后处理。
 
-`397:1964` 仍可能是七格读出的中间查表码，因为它精确命中 ISO/R 397:1964；但从标准标题直接挑 `WIRES` 或 `COPPER` 的做法都已被判题否决。这说明尚缺一个受题面约束的后续操作，或者七图坐标链里至少一位只是后验凑成了 ISO 号。
+这轮不是改数独，而是撤销两处曾被 `397:1964` 结果反向影响的图像识别：
 
-这轮审计确认：
-
-- Miracle Sudoku 的规则、两个口述给定数和唯一解都没有发现问题。
-- 录音直接确定青、蓝、紫三格是 `r5c3`、`r6c3`、`r6c8`，解中数字为 `9,6,4`。
-- 七张图各自提供一对 `行,列`；前三张直接来自图注/章节编号，第四张来自牌面 `5/5`，第五张来自 Faker 第 5 次夺冠且决赛取 3 胜，后两张来自 Mission 6 / Metal Slug 3D 与 Dota 6.80。
-- 旧 Airships 6.3 与旧 Invoker 网页确实是误配，但现在分别找到了外观更吻合的 Big Shiee/Morden's Battleship 家族，以及 6.80 改动页中的绿色 Medusa 小图；这两项与录音直接给出的 `(6,3)`、`(6,8)` 互相校验。
-- 所以 `397:1964` 作为中间码已经有可复现机制，并且精确命中一个与“拆弹/电线”题名高度相关的 ISO 标准；它仍然不能作为最终答案重复提交。
+- 第三图旧选 `Photo 3.6` 只是因为它让结果精确命中 ISO；但那张图实际是三幅船闸/驳船的拼图。相同 PDF 中的 `Photo 3.4 — Construction of Luzhou port` 是单张港口建设照，与录音“一个港口”直接吻合，也和前两图的 `1.4、2.4` 构成连续编号。
+- 第四图旧选 `Blue Dragon 5/5` 不够可信：图名和龙形都过于易认，而且它不是秘稀。模糊录音 `面部神经体颜色那种` 更自然的切分是“**蝙蝠形，整体蓝色那种**”；`Dream Eater` 正是蓝色秘稀的飞行梦魇斯芬克斯，暗色蝙蝠轮廓，右下明确为 `4/3`。
+- 于是七图独立形成一条结构整齐的坐标链：`1.4 → 2.4 → 3.4 → 4/3 → 5/3 → 6/3 → 6.80`。后三对又和录音直接指出的青、蓝、紫格 `r5c3、r6c3、r6c8` 完全重合。
+- Miracle Sudoku 仍为唯一解；在新坐标取数为 `3,9,6,3,9,6,4`，按底部 `___:____` 写成 **`396:3964`**。
 
 ## 完整录音转写
 
@@ -53,7 +50,7 @@ updated: 2026-08-15
 | 00:56–00:59 | “第二张是一个大楼，顶上的露台。” |
 | 01:00–01:03 | “第三张是一个港口，都认不出来。” |
 | 01:04–01:10 | “第四张是一个蓝色的万智牌，牌上字都小，只看到一个神话生物在飞。” |
-| 01:11–01:13 | “[听不清；四份 ASR 都近似‘面部神经体颜色那种’，语义不通，不能据此识别牌名。]” |
+| 01:11–01:13 | “[听不清；自动转写近似‘面部神经体颜色那种’。结合音素和上句，较可能是‘蝙蝠形，整体蓝色那种’，但不能当作完全确定的逐字稿。]” |
 | 01:15–01:18 | “然后第五张图。第五张图是一个体育馆。” |
 | 01:18–01:22 | “这个我还真认识吧，就是那个英国的 O2 体育馆。” |
 | 01:22–01:25 | “我先[搜/去]吧。”“啊，行。” |
@@ -75,7 +72,7 @@ updated: 2026-08-15
 | 02:14–02:15 | “啊，我再盯一下这个数独。”（“盯”字不完全确定。） |
 | 02:15–02:17 | 无新的可辨语句，只有尾音和环境底噪。 |
 
-本地逐段 ASR、时间戳及不确定项仍保存在 [`artifacts/audio_transcript.md`](artifacts/audio_transcript.md) 与 `work/` 中。第四张牌的 01:11–01:13、以及第七张的 02:00–02:07 已经用三种有界识别方案交叉过，继续换模型没有产生新事实，因此不再用自动转写硬猜。
+本地逐段 ASR、时间戳及不确定项仍保存在 [`artifacts/audio_transcript.md`](artifacts/audio_transcript.md) 与 `work/` 中。第四张牌的 01:11–01:13、以及第七张的 02:00–02:07 已经用三种有界识别方案交叉过；“蝙蝠形，整体蓝色”只作为带明示不确定性的语境复原，并由 Dream Eater 牌图独立校验，不把它伪装成 ASR 的确定输出。
 
 ## Miracle Sudoku
 
@@ -117,12 +114,12 @@ python rounds\shi-qi-love-in-chaos\nodes\b4-keep-solving-and-nobody-explodes\art
 
 | # / 色 | 录音描述与识别 | 两数来源 | 数独提取 | 可信度与人工检查点 |
 | --- | --- | --- | --- | --- |
-| 1 / 红 | Richard II 王座像；来源页标题为 [Plate **1.4: Portrait of Richard II**](https://scalar.missouri.edu/vm/vol1plate4-colorprints) | 图版号 `1.4` | `r1c4 = 3` | **较高。** 金色背景、王冠、紫袍、左手宝球、右手权杖。录音说“头像”可以是对小缩略图的概括；若原图没有这些要素则否决。 |
+| 1 / 红 | Richard II 王座像；来源页标题为 [Plate **1.4: Portrait of Richard II**](https://scalar.missouri.edu/vm/vol1plate4-colorprints) | 图版号 `1.4` | `r1c4 = 3` | **高。** 金色背景、王冠、紫袍、左手宝球、右手权杖；小缩略图会被口述成“国王头像”。它也开启前三图连续的 `1.4、2.4、3.4`。 |
 | 2 / 橙 | [Shunchang Museum](https://www.world-architects.com/de/uad-zhejiang/project/shunchang-museum)；项目图组的 **2.4 Urban terrace** | 图组小节 `2.4` | `r2c4 = 9` | **高。** 沿河白灰色弧形屋顶，露台上有巨大椭圆形采光口，和录音“大楼，顶上的露台”高度一致。 |
-| 3 / 黄 | 世界银行 *Blue Routes for a New Era* 的 **Photo 3.6, Development of tributary waterways**；[原 PDF](https://documents1.worldbank.org/curated/en/908191600317351237/pdf/Blue-Routes-for-a-New-Era-Developing-Inland-Waterways-Transportation-in-China.pdf) | 照片编号 `3.6` | `r3c6 = 7` | **中等。** 实际是三幅内河航运图拼接：装砂驳船、船闸内货驳、双船闸；小图下被口述成“一个港口”合理，但需人工看构图。 |
-| 4 / 绿 | [Blue Dragon](https://mtg.wtf/card/afr/289/Blue-Dragon)：蓝色万智牌，画面是带翼蓝龙喷吐闪电，规则含 Flying | 牌面力量/防御 `5/5` | `r5c5 = 1` | **中高。** `5/5` 直接印在右下角。Keiga 等别的蓝色飞龙也可能是 `5/5`，故角色名仍需看图；但只要原牌右下是 `5/5`，坐标不受牌名歧义影响。 |
+| 3 / 黄 | 世界银行 *Blue Routes for a New Era* 的 [**Photo 3.4, Construction of Luzhou port**](https://documents1.worldbank.org/curated/en/908191600317351237/pdf/Blue-Routes-for-a-New-Era-Developing-Inland-Waterways-Transportation-in-China.pdf) | 照片编号 `3.4` | `r3c4 = 6` | **高。** 单张图就是岸边码头与红色港机，标题逐字写“泸州港建设”，比旧 `3.6` 三联船闸图更贴合“一个港口”；并延续 `1.4、2.4、3.4`。 |
+| 4 / 绿 | [Dream Eater](https://scryfall.com/card/grn/38/dream-eater)：蓝色秘稀万智牌；类型是 Nightmare Sphinx，规则含 Flying，画面为暗蓝绿色的蝙蝠状飞行怪物 | 牌面力量/防御 `4/3` | `r4c3 = 3` | **高。** 右下 `4/3` 清楚；“秘稀 + 飞行神话生物 + 蝙蝠轮廓 + 整体蓝色”逐项吻合。旧 `Blue Dragon 5/5` 仅为非普通，而且图名与龙形太容易认，现作废。 |
 | 5 / 青 | [Faker 在 2024 Worlds 决赛举杯的 Riot 照片](https://www.flickr.com/photos/lolesports/54112369706)，地点为伦敦 O2 | Faker 第 `5` 次夺得 Worlds；该决赛 T1 取得 `3` 局胜利（3–2） | `r5c3 = 9` | **很高。** 白色五冠纪念 T 恤、眼镜、银色 Worlds 奖杯、蓝色舞台；录音又直接给出了 `r5c3=9`，构成交叉校验。 |
-| 6 / 蓝 | 外观最吻合的是 [Big Shiee 3D fan art](https://polycount.com/discussion/179391/big-shiee-metal-slug-fanart)：巨型战舰形车体、密集炮塔、整圈履带。相关的 [Morden's Battleship](https://metalslug.fandom.com/wiki/Morden%27s_Battleship) 是《Metal Slug 3D》的 Mission 6 Boss；该 Wiki 的 3D Boss 列表甚至写作第 6 项 “Morden Battle Ship (Big Shiee)” | Mission `6` + 游戏名 `3D` | `r6c3 = 6` | **数对高、精确型号中等。** Big Shiee 与 Morden's Battleship 在不同页面有“近亲/不同单位”的命名冲突；前者最像录音中的履带模型，后者最干净地产生 `(6,3)`。该格位置已由录音独立确定，不影响读数。 |
+| 6 / 蓝 | [Morden's Battleship](https://metalslug.fandom.com/wiki/Morden%27s_Battleship)：《Metal Slug 3D》中 Mission 6 的巨型陆行战舰；Big Shiee 的履带 3D 同人模型可作清晰外形对照 | Mission `6` + 游戏名 `3D` | `r6c3 = 6` | **数对很高、精确截图中等。** 录音“船的游戏建模、很大、地上开、陆行舰”吻合这一家族；`(6,3)` 又由口述蓝格独立确定。Big Shiee 只是外形对照，不再拿《Metal Slug 2》关卡号取数。 |
 | 7 / 紫 | [Dota **6.80** 改动分析页](https://game8review.blogspot.com/2014/01/dota-680-changelog-reviewanalysis.html)中的 Medusa 小图：低分辨率、绿色女性脸、两侧绿色蛇形结构，确实像老式 Warcraft/Dota 图标 | 版本号 `6.80`，作坐标读 `6,8` | `r6c8 = 4` | **高。** 旧 Weebly 页的 Invoker 图只是误搜，并不能否定 Dota；新图与“绿色女角色、原始、像魔兽技能图标”逐项吻合，录音也独立给出 `r6c8`。 |
 
 ### 七图候选原图：人工核对版
@@ -135,25 +132,29 @@ python rounds\shi-qi-love-in-chaos\nodes\b4-keep-solving-and-nobody-explodes\art
 
 ![2 橙：Shunchang Museum，2.4 Urban terrace](artifacts/visual/02-shunchang-museum.jpg)
 
-#### 3 / 黄：Photo 3.6，Development of tributary waterways
+#### 3 / 黄：Photo 3.4，Construction of Luzhou port
 
-![3 黄：Photo 3.6，Development of tributary waterways](artifacts/visual/03-blue-routes-photo-3-6.png)
+![3 黄：Photo 3.4，Construction of Luzhou port](artifacts/visual/03-blue-routes-photo-3-4.png)
 
-#### 4 / 绿：Blue Dragon，5/5
+旧误选 `Photo 3.6` 仍保存在 [`artifacts/visual/03-blue-routes-photo-3-6.png`](artifacts/visual/03-blue-routes-photo-3-6.png)，供人工直接比较：它是三幅驳船/船闸拼图，不应概括成单个港口。
 
-![4 绿：Blue Dragon，5/5](artifacts/visual/04-blue-dragon.png)
+#### 4 / 绿：Dream Eater，4/3
+
+![4 绿：Dream Eater，4/3](artifacts/visual/04-dream-eater.jpg)
+
+旧误选 [`Blue Dragon 5/5`](artifacts/visual/04-blue-dragon.png) 保留作对照；它既不是秘稀，图中的龙也远比录音所说的未知“神话生物”容易辨认。
 
 #### 5 / 青：Faker，第 5 冠；决赛 3 胜
 
 ![5 青：Faker 在 O2 举杯](artifacts/visual/05-faker-o2.jpg)
 
-#### 6 / 蓝：Big Shiee 履带 3D 模型；对照 Morden's Battleship
+#### 6 / 蓝：Morden's Battleship，Mission 6 / Metal Slug 3D
 
-第一张在视觉上最贴合录音，第二张则是《Metal Slug 3D》Mission 6 的游戏内相关战舰。人工核对时最关键的是原题小图究竟是“灰底侧视、履带完全外露”，还是“沙地正视、红色船体两侧突出”。
+第一张是《Metal Slug 3D》的游戏内 Morden's Battleship；资料页把它明确列为 Mission 6 的 Boss。第二张是近亲 Big Shiee 的高清履带 3D 同人模型，只用于让人核对录音所说的“船、履带、地上开”的外形，不再从《Metal Slug 2》的关卡号取数。
 
-![6 蓝主候选：Big Shiee 履带 3D 模型](artifacts/visual/06-big-shiee-model.jpg)
+![6 蓝主候选：Morden's Battleship](artifacts/visual/06-morden-battleship.webp)
 
-![6 蓝对照：Morden's Battleship](artifacts/visual/06-morden-battleship.webp)
+![6 蓝外形对照：Big Shiee 履带 3D 模型](artifacts/visual/06-big-shiee-model.jpg)
 
 #### 7 / 紫：Dota 6.80 页面中的 Medusa
 
@@ -167,37 +168,34 @@ python rounds\shi-qi-love-in-chaos\nodes\b4-keep-solving-and-nobody-explodes\art
 
 ```text
 红      橙      黄      绿      青      蓝      紫
-r1c4   r2c4   r3c6   r5c5   r5c3   r6c3   r6c8
-  3      9      7      1      9      6      4
-                 397:1964
+r1c4   r2c4   r3c4   r4c3   r5c3   r6c3   r6c8
+  3      9      6      3      9      6      4
+                 396:3964
 ```
 
-这个机制比“拿格中数字索引图名”更好，原因有三：
+复现命令：
 
-1. 前四张图本身就出现或对应 `1.4`、`2.4`、`3.6`、`5/5`，都是合法的数独行列；不是先从格中数字倒推名字。
-2. 后三对 `(5,3)、(6,3)、(6,8)` 与录音直接指出的青、蓝、紫格完全重合，形成独立交叉校验。尤其 Dota 6.80 页面确有符合描述的绿色 Medusa 图，旧 Invoker 误配已不再使用。
-3. 若改走图名字符索引，青格数字是 `9`，却无法自然索引只有 5 个字母的 `FAKER`；必须临时改用长标题或全名，规则不统一。
-
-底部格式正好是 `___:____`，所以七位读数应保留为 `397:1964`。它作为最终提交已被判错，但作为查表码会**精确**命中 [ISO/R 397:1964](https://www.iso.org/standard/4397.html)：
+```powershell
+python rounds\shi-qi-love-in-chaos\nodes\b4-keep-solving-and-nobody-explodes\artifacts\miracle_sudoku.py --extract r1c4 r2c4 r3c4 r4c3 r5c3 r6c3 r6c8
+```
 
 ```text
-ISO/R 397:1964
-Wrapping test for copper and copper alloy wire
+unique: True
+extract: 3963964 (r1c4=3 r2c4=9 r3c4=6 r4c3=3 r5c3=9 r6c3=6 r6c8=4)
 ```
 
-题名对《Keep Talking and Nobody Explodes》的改写已经提示“拆弹/电线”，所以 `WIRE(S)` 只是查表方向，不是答案；用户提交 `WIRES` 被拒绝也与此一致。标准标题中新出现、且同时覆盖 “copper” 与 “copper alloy wire” 的核心材料词为：
+这条机制现在有三层独立校验：
 
-```text
-COPPER
-```
-
-因此当前把 **`COPPER`** 作为可复现候选；没有提交记录，仍需用户或网站确认。
+1. 前四图依次给出 `1.4、2.4、3.4、4/3`，不是从数独答案倒推出来的任意数字；尤其更正后的港口和牌图在视觉描述上明显优于旧候选。
+2. 后三图给出的 `(5,3)、(6,3)、(6,8)` 与录音直接指出的青、蓝、紫格完全一致。第五、第六图也正好按录音列举的彩虹顺序落在上方青格 `r5c3`、下方蓝格 `r6c3`，所以不交换成 `...3694`。
+3. 底部格式恰为 `___:____`。用户又明确说“数字解出来应该就是答案”，故 **`396:3964` 到此即为最终候选**，没有额外提取。
 
 ## Working hypotheses
 
-1. **主路线：图像给坐标 → 数独取数 → ISO 查表 → `COPPER`。** 七对坐标、格式和标准标题形成完整闭环，当前最能解释全部材料。
-2. **剩余视觉歧义集中在第 6 图。** 履带侧视模型明显是 Big Shiee；Mission 6 / Metal Slug 3D 的干净编号属于相关的 Morden's Battleship，社区资料又有把二者并写的情况。原题小图的具体构图可以区分名称，但蓝格与最终数字已由录音独立确定。
-3. **图名索引路线降为低优先级。** 它对 `FAKER` 的第 9 字符没有统一定义，也解释不了为何七图会各自自然携带两位坐标；除非人工核对直接否定多张候选图，否则不再沿此路线造长标题。
+1. **主路线：七图给七对坐标 → Miracle Sudoku 取七个数 → `396:3964`。** 目前每一对坐标均有统一来源，且后三对受录音直接约束。
+2. **第 6 图仍有“精确截图”层面的歧义，但没有坐标歧义。** Big Shiee 高清模型最清楚地显示履带；Morden's Battleship 才是 Mission 6 / Metal Slug 3D。二者为近亲外形，且蓝格 `r6c3` 由录音独立固定。
+3. **第 7 图是网页中的低分辨率 Medusa 图，而非完整战斗画面。** 它仍与“绿色女角色、原始、像魔兽技能图标”吻合，并且 Dota 6.80 与紫格 `r6c8` 交叉验证；若新候选被拒，这一图和第 1 图是下一批应继续寻找精确原图的项目。
+4. **图名字符索引不成立。** 它无法统一处理 `FAKER` 的第 9 字符，也浪费了七图自然携带的两位坐标；不再沿这条路线造长标题。
 
 ## Submission history
 
@@ -211,23 +209,24 @@ COPPER
 
 ## Important failed routes
 
-- **`397:1964` 已作为提交答案被拒绝。** 即使之后证明它是中间查表码，也不能重新当最终答案提交。
-- **`WIRES` 已被拒绝。** 不再改投 `WIRE`、`线路`、`WRAPPING TEST` 等近义变体。
+- **`397:1964` 已作为提交答案被拒绝。** 现在能定位到两处具体错误：第三图用结果反向选了 `Photo 3.6`，第四图把未知飞行怪物草率配成 `Blue Dragon 5/5`。正确的强匹配分别是 `Photo 3.4` 与 `Dream Eater 4/3`。
+- **ISO/R 397:1964 是后验巧合。** `WRAPPING` 曾被本文件列为候选，但用户明确纠正“数字本身就是答案”后，该后处理已撤销；它没有被用户报告为提交或判错，所以不写入 Submission history。
+- **`WIRES` 已被拒绝。** 不再改投 `WIRE`、`线路` 等单复数或翻译变体。
 - **`COPPER` 已被拒绝。** “从 ISO 标题挑最显眼材料词”不是充分提取；不再改投 `COPPER ALLOY`、`ALLOY` 等标题片段。
 - **Airships 6.3 = 第六图** 这一具体来源放弃：6.3 时还没有录音所说的已发布履带陆行舰，且其像素画风不如 Big Shiee 模型吻合。不能把这条失败扩大成“所有 `(6,3)` 解释都错”。
 - **Weebly 的 Dota 6.8 AI Invoker 图 = 第七图** 放弃：主体不是绿色女角色。它只是错误网页，不是否定 Dota 6.80；现在的 Medusa 候选来自另一张确实匹配描述的图。
-- **ISO 修订链到 7802:2013** 虽然真实，但题面没有“沿修订链继续”的指令；该路线停止。
+- **交换青、蓝两格得到 `396:3694`** 暂不采用：录音先按“红橙黄绿青蓝紫”列色，随后又按同一顺序报七张小图；第五图 `(5,3)` 与第六图 `(6,3)` 正好分别验证上方青格、下方蓝格。只有原图颜色顺序被新证据推翻时才重开。
 - 音频左右声道、频谱与元数据没有支持隐写的异常；倒放只产生高压缩率 ASR 幻觉。该路线停止。
-- 第四张牌和第七张截图的含混短句经过三组有界 ASR 仍无新事实；不再靠增加模型次数硬猜。
+- 第四张牌和第七张截图的含混短句经过三组有界 ASR 后仍不适合逐字硬猜；本轮只采用可由完整语义和图片共同支持的“蝙蝠形、整体蓝色”读法。
 
 ## Evidence and artifacts
 
 - [`artifacts/audio_transcript.md`](artifacts/audio_transcript.md)：逐段 ASR 来源、时间戳和不确定项。
-- [`artifacts/extraction.md`](artifacts/extraction.md)：旧坐标假设的机器可复核摘要；以本文件的新审计为准。
+- [`artifacts/extraction.md`](artifacts/extraction.md)：新旧坐标逐项对照与机器可复核命令。
 - [`artifacts/miracle_sudoku.py`](artifacts/miracle_sudoku.py)：Miracle Sudoku 唯一解与任意坐标取值脚本。
-- [`artifacts/visual/`](artifacts/visual/)：七项候选原图；第 6 项另保留 Big Shiee/Morden 两张判别图，第 7 项同时保留 59×33 原图和无插值放大图。
+- [`artifacts/visual/`](artifacts/visual/)：七项候选原图；另保留第三、第四图的旧误选作人工对照，第 6 项保留 Big Shiee/Morden 两张判别图，第 7 项同时保留 59×33 原图和无插值放大图。
 - PDF 渲染、候选图片、波形、频谱和各 ASR 原始输出留在 `work/`。
 
 ## Next action
 
-请人工按本文件内嵌的七图逐项比对原题，尤其看第 3 图是否确为三联驳船/船闸图、第 4 图是否为右下 `5/5` 的 Blue Dragon，以及第 6 图是履带外露的 Big Shiee 侧视模型还是沙地中的 Morden's Battleship。若视觉核对通过，最有价值的外部动作是由用户自行提交 `COPPER` 并回报结果；本任务不会擅自提交。若任一图不符，则优先用其具体构图否决该行并替换来源，而不是改数独或重投 `397:1964` / `WIRES`。
+最有价值的外部检验是由用户先人工对照本页的 **Photo 3.4** 与 **Dream Eater 4/3** 两张更正图；若吻合，再自行提交 **`396:3964`** 并回报判题结果，本任务不会擅自提交。若仍被拒绝，优先继续找第 1、6、7 图的精确原始缩略图并核查色块，而不是恢复 ISO 后处理或改猜英文词。无论如何，不重投 `397:1964`、`WIRES` 或 `COPPER`。
