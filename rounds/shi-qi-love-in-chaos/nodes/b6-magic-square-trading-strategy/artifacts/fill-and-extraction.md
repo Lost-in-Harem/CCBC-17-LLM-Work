@@ -32,12 +32,34 @@ Therefore the profile, all five depth readings, and the frequency extraction
 below are invalid as a solution. The title sequence may clue `书名号` or a
 four-character category such as `世界名著`; its slot is not yet confirmed.
 
+The correction is stronger than a thematic reinterpretation. Two reciprocal
+block trades are visible directly:
+
+- `悲惨世` (`G3-A08.3`) ↔ `清灭洋` (`G3-D04.2`);
+- `圣母院` (`G3-A03.4`) ↔ `的舌头` (`G3-D04.4`).
+
+After flattening each clue group against the corresponding grid-character
+stream, they constrain the frequency classes at
+`freq(G3-A08[3]) = freq(G3-D04[2])` and
+`freq(G3-A04[3]) = freq(G3-D05[1])`. No rejected fill is used
+to obtain those position equalities. They support continuing to test
+equal-global-frequency trading, but do not identify the characters yet.
+
+The former note that `初音的 / 黑化版 / 以前有 / 种设定` implied `十六岁`
+was also wrong. The sequence naturally identifies **黑岩射手** via the old
+misconception that it was a dark Hatsune Miku variant; the original character
+itself was not a 16-year-old Hatsune setting. This clue must be reassigned by
+length/crossings rather than used to preserve the old `十六岁` entry.
+
 ## Rejected extraction trace
 
 Counting each Across/Down string in the rejected profile once gives the top
 multiset `大×6，地×5，中×5，山×4，学×4`. Reordering those letters as
 **中山大学** was not constrained by the puzzle, and the user explicitly
 reported that candidate as wrong on 2026-08-15.
+
+The linked Tencent sheet was checked read-only and is a blank solving
+template; it supplies no hidden numbering, formulas, fill, or correction.
 
 ## Reproduction of the failed construction
 

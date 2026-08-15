@@ -1,14 +1,15 @@
 record	image	string	length	matched_saying	dog_positions	extracted	status	note
 carrier	1	ABSCISSION	10	狗咬吕洞宾不识好人心	1	A	confirmed	red numbered cells 1-10 spell ABSCISSION; unique length 10
-carrier	2						unresolved	FRIEND and PARADOX were unsupported guesses
-local	3	GO	2				partial	red question locally gives Japanese GO; full length-matched carrier remains unknown
-carrier	4						unresolved	old SIMPSONS reading conflicts with the corrected image-9 role and needs a fresh solve
-carrier	5	RISOTTO	7	仗义每多屠狗辈	6	T	strong	SHIRO -> IRO+S, diagram adds T/O/T, then anagram; the dog name, length, and dog-position extraction all close independently
+carrier	2		9_or_6	肉包子打狗有去无回_or_挂羊头卖狗肉	5	G_or_I	accepted_answer_lock	must be paired with Hachiko or Akamaru; local carrier remains unresolved
+carrier	3	JUPITER	7	打狗还要看主人	2	U	strong	Pluto is no longer counted among the nine planets; the fifth planet is Jupiter
+carrier	4		9_or_6	肉包子打狗有去无回_or_挂羊头卖狗肉	5	G_or_I	accepted_answer_lock	must be paired with Hachiko or Akamaru; old SIMPSONS route withdrawn
+carrier	5		7	仗义每多屠狗辈	6	N	accepted_answer_lock	must use SHIRO; carrier unresolved, but user-confirmed GREATUNITY fixes the sixth letter as N
 carrier	6	ROAR	4	狗急跳墙	1	R	strong	哮天犬 stroke differences give dot/dash Morse PAO plus 哮 = 咆哮; ROAR is the unique equal-length English carrier
 carrier	7	TETRIS	6	狗咬狗一嘴毛	1,3	T	confirmed_by_user	Russia plus blocks gives TETRIS; positions 1 and 3 are both T, so the pair yields one unambiguous letter
 carrier	8	THOUSAND	8	狗嘴里吐不出象牙	1	T	confirmed_by_user	user supplied the completed image answer and corrected the saying; the old THISISBISCUIT reading was only an intermediate route
 carrier	9	TRIATHLETES	11	金窝银窝不如自己的狗窝	10	E	confirmed_by_user	fill SANTASLITTLEHELPER in the 3x6 grid and follow the marked extraction order
 carrier	10	TYPES	5	好狗不挡道	2	Y	confirmed	numbered letters after SPIKEY and PIE IN THE SKY
-saying			9	肉包子打狗有去无回	5		missing_carrier	
-saying			4	狗急跳墙	1		missing_carrier	
+saying			9	肉包子打狗有去无回	5	G	accepted_answer_lock	Hachiko carrier remains unresolved
+saying			4	狗急跳墙	1	R	matched	paired with image 6 ROAR
 saying			8	狗嘴里吐不出象牙	1	T	matched	paired with image 8 THOUSAND by explicit user confirmation
+final	text_order	GREATUNITY	10			GREAT UNITY	accepted	user explicitly confirmed the final answer; unresolved local carriers contribute G, N, I

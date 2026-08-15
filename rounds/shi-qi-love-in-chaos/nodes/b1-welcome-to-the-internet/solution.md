@@ -1,5 +1,5 @@
 ---
-node_id: welcome-to-the-internet
+node_id: b1-welcome-to-the-internet
 title: 欢迎来到互联网
 kind: puzzle
 round: shi-qi-love-in-chaos
@@ -7,10 +7,10 @@ parent:
 source:
 round_feeder: yes
 feeders:
-status: rejected
-answer:
-confidence:
-summary: 用户已确认完整的“狗名解图—答案与俗语等长—按狗位索引”规则，并明确判错试探候选 CREATIVITY。现已确认 ABSCISSION[1]=A、TETRIS[1/3]=T、THOUSAND[1]=T、TRIATHLETES[10]=E、TYPES[2]=Y；图片序骨架为 A?????TTEY，文本序骨架为 ??EAT???TY。剩余五幅图必须独立闭合，不能再用目标词反推局部答案。
+status: accepted
+answer: "GREAT UNITY"
+confidence: high
+summary: 用户明确确认最终答案为 GREAT UNITY。按十段文字顺序排列提取字母为 G-R-E-A-T-U-N-I-T-Y；规则是以狗名解对应图片，图片答案长度与该段含“狗”俗语字数相同，再取“狗”所在位置。已有七项独立闭合，八公、小白、赤丸三幅局部图的完整载体仍待补写，但其提取字母由用户确认的最终串锁定为 G、N、I。
 updated: 2026-08-15
 ---
 
@@ -18,7 +18,13 @@ updated: 2026-08-15
 
 ## Current conclusion
 
-目前**没有可提交的新答案**。旧路线 `DOGMATICS -> THEOLOGY` 已被用户判错；提示揭示的正确方向是：
+用户明确确认最终答案为：
+
+```text
+GREAT UNITY
+```
+
+去掉空格即十个提取字母 `GREATUNITY`。最终顺序是十段文字顺序，而不是图片顺序。旧路线 `DOGMATICS -> THEOLOGY` 已被用户判错；提示揭示的正确机制是：
 
 1. 十段文字的末句各自改写了一条含“狗”的俗语。
 2. 将这些俗语按**字数**与题图所得的英文字符串匹配。
@@ -106,52 +112,48 @@ THOUSAND[1] = T
 | `TRIATHLETES` | 11 | 金窝银窝不如自己的狗窝 | 10 | E | 用户明确纠正；唯一 11 字项 |
 | `TYPES` | 5 | 好狗不挡道 | 2 | Y | 图 10 编号 1–5 拼出；唯一 5 字项 |
 
-另外两项已能在不借助任何目标词的前提下完整复原，暂列为 strong：
+另有两项已能在不借助任何目标词的前提下完整复原，暂列为 strong：
 
-- 图 5 将小白的英文名 `SHIRO` 代入 `ABCDE`，由 `(C-D-E)+A` 得 `IRO+S`，图示另一部分给出 `T/O/T`，重排为七字母 `RISOTTO`；“仗义每多屠狗辈”的“狗”在第 6 位，故取 `RISOTTO[6]=T`。
+- 图 3 对应 Pluto/布鲁托。冥王星被降级后，行星数量不再等于 9；题问“那么 5 = ?”，即问第五颗行星，答案为 `JUPITER`（7）。对应“打狗还要看主人”第 2 位，取 `JUPITER[2]=U`。
 - 图 6 将“哮天犬”代入 `ABC`；`天∩犬=大`，所以 `B-(B∩C)=一`、`C-(B∩C)=丶`。以 `一/丶` 作摩斯长短划，`YXXY / YX / XXX` 读为 `PAO`，接 `A=哮` 得“咆哮”；按唯一 4 字长度转为 `ROAR`，由“狗急跳墙”第 1 位取 `R`。
 
-所以当前已有五个稳固提取字母：`A`、`T`、`T`、`E`、`Y`。按图片序，它们暂位于图 1、7、8、9、10；按文本序，它们暂位于 Snoopy、Laika、Isabelle、Santa's Little Helper、Spike 对应的位置。在最终排序尚未确认前，不强行拼成候选词。
+用户最终确认采用**文字段落顺序**，完整提取为：
+
+| 文字序 | 狗 | 载体 | “狗”位 | 提取 |
+| ---: | --- | --- | ---: | --- |
+| 1 | Hachikō | 局部载体待补写（9） | 5 | `G` |
+| 2 | 哮天犬 | `ROAR` | 1 | `R` |
+| 3 | Santa's Little Helper | `TRIATHLETES` | 10 | `E` |
+| 4 | Snoopy | `ABSCISSION` | 1 | `A` |
+| 5 | Laika | `TETRIS` | 1 或 3 | `T` |
+| 6 | Pluto | `JUPITER` | 2 | `U` |
+| 7 | Shiro | 局部载体待补写（7） | 6 | `N` |
+| 8 | Akamaru | 局部载体待补写（6） | 5 | `I` |
+| 9 | Isabelle | `THOUSAND` | 1 | `T` |
+| 10 | Spike | `TYPES` | 2 | `Y` |
+
+```text
+G R E A T  U N I T Y
+```
 
 ## Local image results under audit
 
 | 图 | 当前局部结果 | 长度 | 可信度 / 问题 |
 | ---: | --- | ---: | --- |
 | 1 | `ABSCISSION` | 10 | confirmed；红色编号 1–10 严格拼出 |
-| 2 | 尚未定；旧猜 `FRIEND` / `PARADOX` 均缺少严格复原 | — | unresolved |
-| 3 | 红问号局部读作 `GO` | 2 | observed，但它显然不是长度表中的最终载体，需找完整字符串 |
-| 4 | 旧猜 `SIMPSONS` | 8 | 与第 9 图的新确认发生角色冲突，必须重解，不能继续当作已确认 |
-| 5 | `RISOTTO` | 7 | strong；由 `SHIRO` 得 `IROS + TOT` 重排，且图上标明 `(7)` |
+| 2 | 局部载体待补写；最终提取 `G` 或 `I`，取决于与图 4 的 Hachikō/Akamaru 配对 | 9 或 6 | final answer confirmed, local derivation incomplete |
+| 3 | `JUPITER` | 7 | strong；Pluto/冥王星不再计入九大行星，第五颗行星是 Jupiter |
+| 4 | 局部载体待补写；最终提取 `G` 或 `I`，取决于与图 2 的 Hachikō/Akamaru 配对 | 9 或 6 | final answer confirmed, local derivation incomplete |
+| 5 | 应代入 `SHIRO`；最终第 6 位为 `N` | 7 | final answer confirmed, local derivation incomplete；旧猜 `RISOTTO` 与 `UPRIGHT` 均未正确解释全部符号 |
 | 6 | `ROAR`（中间量 `PAO`+“哮”=咆哮） | 4 | strong；笔画差、摩斯、语义转换和俗语长度均闭合 |
 | 7 | `TETRIS` | 6 | confirmed by user；“俄罗斯”与“方块”合成“俄罗斯方块” |
 | 8 | `THOUSAND` | 8 | confirmed by user；对应西施惠与“狗嘴里吐不出象牙” |
 | 9 | `TRIATHLETES` | 11 | confirmed by user；见上面的 18 格复原 |
 | 10 | `TYPES` | 5 | confirmed；`SPIKE + Y`、`PIE IN THE SKY` 后按编号取出 |
 
-图 5、6 现已按对应狗名和俗语独立闭合；它们并非从 `CREATIVITY` 反推。不过在用户或判题确认前，仍与五个 user-confirmed/unique-length 项区分为 strong。
+最终排序问题已由用户确认解决：使用文字段落顺序，得到 `GREATUNITY`，按语义断为 `GREAT UNITY`。图片顺序不作为最终答案顺序。`CREATIVITY` 仍是明确判错的旧候选，不能与本答案混同。
 
-如果暂时只放入用户已经确认或唯一长度锁定的五项，两种顺序的已知骨架是：
-
-```text
-图片顺序：A?????TTEY
-文本顺序：??EAT???TY
-```
-
-若再计入上述两条 strong 链，则为：
-
-```text
-图片顺序：A???TRTTEY
-文本顺序：?REAT?T?TY
-```
-
-文本顺序的骨架曾让 `CREATIVITY` 看似可作试探补全，但用户已经明确判错。此后不得再用它反推其余五个局部字母，也不能因为独立得到的 `ROAR`、`RISOTTO` 恰好进一步贴合该词就恢复它。
-
-旧的两个 7 字母局部读法曾产生以下歧义，现仅作为待验记录：
-
-- `RISOTTO` 若对应“打狗还要看主人”取第 2 位为 `I`，若对应“仗义每多屠狗辈”取第 6 位为 `T`；
-- `PAOXIAO` 若对应前者取 `A`，若对应后者也取 `A`。
-
-在得到题图与狗的一一对应关系的正确版本前，不据此猜词。
+尚未复原的图 2、4、5 不影响 accepted 状态，但属于解答文档的开放复现缺口：分别需要补出 Hachikō 的 9 字母载体（第 5 位 `G`）、Akamaru 的 6 字母载体（第 5 位 `I`）和 Shiro 的 7 字母载体（第 6 位 `N`）。
 
 ## What changed after the hint
 
@@ -159,6 +161,10 @@ THOUSAND[1] = T
 - 旧解把第 9 图只解释成重排操作；用户已明确给出其真正提取 `TRIATHLETES`。
 - 旧表把图、狗的身份线索、题图局部答案和最终英文载体混在了一列；现在将四层信息分开记录，并要求每个文本只和自己的图片配对。
 - 题首缺少的 `DOG` 仍是“所有用户都是狗”的主题提示，但没有证据表明它要求把字母重排成 `DOGMATICS`。
+
+## Acceptance confirmation
+
+2026-08-15，用户明确确认：“答案是 great unity”。本节点据此标为 `accepted`；用户没有在该消息中报告一次新的判题提交，因此不把它虚构成 `Submission history` 中的提交记录。
 
 ## Submission history
 
@@ -187,6 +193,8 @@ THOUSAND[1] = T
 - **第 9 图 = `PERMUTATION`：** 已被用户纠正；正确提取为 `TRIATHLETES`。
 - **第 9 图填 `AKAMARU + KIBA + INUZUKA`：** 虽然恰有 18 字母，但无法沿箭线产生稳定英文，且与 `SANTASLITTLEHELPER` 的可复核填法冲突，废弃。
 - **图 8 = `THISISBISCUIT`：** 旧笔记误把图上的拆词过程当成最终载体；用户已确认最终结果是 `THOUSAND`。
+- **图 5 = `RISOTTO`：** 旧推导把 `(C-D-E)` 中的减号当分隔符、把右侧短横另作摩斯 `T`，最后又无指示地重排为 `RISOTTO`；符号解释不统一，已撤回。
+- **图 5 = `UPRIGHT`：** 错把 Pluto 代入图 5；用户指出 Pluto/冥王星显然对应图 3 的“不是 9 / 第 5 颗行星”，故图 5 的该路线撤回。
 - **图 7 分别使用 `RUSSIA`、`SQUARE`：** 用户已纠正最终答案应合并为 `TETRIS`；两个“狗”位置都取到同一个 `T`。
 - **`CREATIVITY`：** 用户明确判错；它来自 `??EAT????Y` 的模式补全，没有六幅剩余图片的独立推导，不能恢复。
 
@@ -200,4 +208,4 @@ THOUSAND[1] = T
 
 ## Next action
 
-集中重解图 2、3、4：先分别确认它们使用 Pluto、Hachikō、Akamaru 的哪一个名字，再得到长度 7、9、6 的三个载体。优先验证两组可区分假设：图 2 是否由 Pluto/Goofy 的图像谐音严格导向 `PARADOX`（7）；图 4 的“手上两个用户 / The ?”究竟是 `BEATLES`（7）的自足叠词，还是 Akamaru/Kiba 导向另一个 6 字母载体。图 3 的 `GO` 只算中间量，必须补成 9 字母载体。完成后分别写出图片序与文本序，再判断排序及是否还有末步；禁止用 `CREATIVITY` 或其他目标词倒推。
+答案已由用户确认，无必需后续。若要补全可复现解答，继续重解图 2、4、5：补出 Hachikō 的 9 字母载体（第 5 位 `G`）、Akamaru 的 6 字母载体（第 5 位 `I`）及 Shiro 的 7 字母载体（第 6 位 `N`），并继续禁止恢复已判错的 `CREATIVITY` 或旧的无指示 `RISOTTO` 重排。
