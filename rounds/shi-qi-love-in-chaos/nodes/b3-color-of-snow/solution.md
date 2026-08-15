@@ -7,7 +7,7 @@ parent:
 source:
 round_feeder: yes
 feeders:
-status: candidate
+status: accepted
 answer: REST
 confidence: high
 summary: 19 个颜色替换词对应下方色槽，拼音索引提取得到中间指令 PAINT LINES IN PASSAGE。根据下方图示矩阵的纵向连线与分段结构（红 1 段 5 点、黄 2 段 4+2 点、绿 1 段 4 点、蓝 2 段 2+2 点），在正文矩阵中连接各色锚点，四色分别精确绘制出大写字母 R、E、S、T，拼出答案 REST，完美呼应正文末尾终点词“安宁”。

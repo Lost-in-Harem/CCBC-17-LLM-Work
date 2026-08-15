@@ -1,0 +1,6 @@
+pair	left_T-I-M-R-P	right_T-I-M-R-P	pose_evidence	shadow	length	extract_index	extracted
+A/B	g##/###/###/###/###	g../.../.../.../...	all valid A joints curled; B straight; fist shell beside extended body	SNAIL	5	2	N
+C/D	g##/##./##./##./##.	g##/##./##./##./##.	symmetric clawed hands with fingertip directions pointing outward	CRAB	4	3	A
+E/F	g../###/.../.../...	g../###/.../.../...	both index fingers curled inward; other fingers extended	DOG	3	1	D
+G/H	g#./#../#../.##/.##	g##/.#./.../.../.#.	asymmetric stacked pose matching the documented two-hand rabbit	RABBIT	6	5	I
+I/J	g#./.#./.#./.#./.#.	g.#/.../.../.../...	curled spread antler hand plus thumb-folded triangular head hand	DEER	4	4	R

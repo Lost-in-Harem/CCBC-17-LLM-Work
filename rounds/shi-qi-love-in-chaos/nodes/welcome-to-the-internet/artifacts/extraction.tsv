@@ -1,16 +1,14 @@
-panel	matched_list_item	user	carrier_or_meta_result	extraction	letter	evidence_status
-1	4	SNOOPY	ABSCISSION	4th character	C	ABSCISSION is reproduced exactly; its meaning later instructs cutting off this row's C
-2	6	PLUTO	PARADOX	6th character	O	Pluto/Goofy contradiction is conventionally called the Pluto paradox; carrier remains the weakest row
-3	1	HACHIKO	GO	1st character	G	Hachiko supplies 8, so Japanese 5 is GO
-4	3	SANTA'S LITTLE HELPER	SIMPSONS	3rd character	M	helping hands come from The Simpsons
-5	7	SHIRO	HIGHTEA	7th character	A	SHIRO supplies IS; the Morse/rebus places T high, giving HIGH TEA (7)
-6	2	XIAOTIANQUAN	red rising stroke / Morse dash	direct Morse value	T	the red stroke both marks pao as second tone and is a Morse dash T
-7	5	LAIKA	RUSSIA	5th character	I	red box is Laika's country, RUSSIA; TETRIS is the combined Russia-square identification
-8	9	ISABELLE	THISISBISCUIT	9th character	S	HIBISCUS color partition and the clue reconstruct THIS IS BISCUIT; panel 10 fixes Spike, leaving Isabelle here
-9	8	AKAMARU	PERMUTATION	8th character	T	18 cells fit the combined names and red cycles depict a permutation; exact name fill is still to be audited
-10	10	SPIKE	TYPES	meta check, not an extracted letter	—	SPIKE+Y gives SPIKEY; color split gives PIE/SKY, PIE IN THE SKY labels 1-5 spell TYPES
-
-panels 1-9 raw			COGMATIST	read in panel order	COGMATIST	all nine positions are accounted for above
-ABSCISSION instruction			COGMATIST	cut the initial C contributed by panel 1	OGMATIST	the instruction removes its own extraction contribution
-flavor restoration			OGMATIST	restore omitted DOG by overlapping its existing OG prefix	DOGMATIST	adding only D completes DOG + MATIST
-panel 10 grammatical check			DOGMATIST TYPES	read TYPES as the third-person singular verb	DOGMATIST	the Internet sentence requires singular DOGMATIST; adding S makes it ungrammatical
+record	image	string	length	matched_saying	dog_positions	extracted	status	note
+carrier	1	ABSCISSION	10	狗咬吕洞宾不识好人心	1	A	confirmed	red numbered cells 1-10 spell ABSCISSION; unique length 10
+carrier	2						unresolved	FRIEND and PARADOX were unsupported guesses
+local	3	GO	2				partial	red question locally gives Japanese GO; full length-matched carrier remains unknown
+carrier	4						unresolved	old SIMPSONS reading conflicts with the corrected image-9 role and needs a fresh solve
+carrier	5	RISOTTO	7	仗义每多屠狗辈	6	T	strong	SHIRO -> IRO+S, diagram adds T/O/T, then anagram; the dog name, length, and dog-position extraction all close independently
+carrier	6	ROAR	4	狗急跳墙	1	R	strong	哮天犬 stroke differences give dot/dash Morse PAO plus 哮 = 咆哮; ROAR is the unique equal-length English carrier
+carrier	7	TETRIS	6	狗咬狗一嘴毛	1,3	T	confirmed_by_user	Russia plus blocks gives TETRIS; positions 1 and 3 are both T, so the pair yields one unambiguous letter
+carrier	8	THOUSAND	8	狗嘴里吐不出象牙	1	T	confirmed_by_user	user supplied the completed image answer and corrected the saying; the old THISISBISCUIT reading was only an intermediate route
+carrier	9	TRIATHLETES	11	金窝银窝不如自己的狗窝	10	E	confirmed_by_user	fill SANTASLITTLEHELPER in the 3x6 grid and follow the marked extraction order
+carrier	10	TYPES	5	好狗不挡道	2	Y	confirmed	numbered letters after SPIKEY and PIE IN THE SKY
+saying			9	肉包子打狗有去无回	5		missing_carrier	
+saying			4	狗急跳墙	1		missing_carrier	
+saying			8	狗嘴里吐不出象牙	1	T	matched	paired with image 8 THOUSAND by explicit user confirmation

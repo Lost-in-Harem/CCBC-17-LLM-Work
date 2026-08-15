@@ -1,0 +1,11 @@
+label	hand	T	I	M	R	P	black_count
+A	left	g##	###	###	###	###	14
+B	right	g..	...	...	...	...	0
+C	left	g##	##.	##.	##.	##.	10
+D	right	g##	##.	##.	##.	##.	10
+E	left	g..	###	...	...	...	3
+F	right	g..	###	...	...	...	3
+G	left	g#.	#..	#..	.##	.##	7
+H	right	g##	.#.	...	...	.#.	4
+I	left	g#.	.#.	.#.	.#.	.#.	5
+J	right	g.#	...	...	...	...	1

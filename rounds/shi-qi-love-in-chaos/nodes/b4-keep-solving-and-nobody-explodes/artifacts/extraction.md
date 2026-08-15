@@ -1,75 +1,108 @@
-# Coordinate extraction audit
+# Extraction audit: `ANS:MENU` candidate
 
-The current seven-image coordinate chain is:
+## Reproducible calculation
 
-| Color | Image identification | Number source | Coordinate | Solved digit |
-| --- | --- | --- | --- | --- |
-| Red | Richard II portrait | page title **Plate 1.4** | `r1c4` | 3 |
-| Orange | Shunchang Museum rooftop | section **2.4 Urban terrace** | `r2c4` | 9 |
-| Yellow | Luzhou port construction | caption **Photo 3.4** | `r3c4` | 6 |
-| Green | *Dream Eater*, a blue mythic flying Nightmare Sphinx | printed power/toughness **4/3** | `r4c3` | 3 |
-| Cyan | Faker lifting the trophy at the O2 | fifth Worlds title; T1 won three games | `r5c3` | 9 |
-| Blue | Morden's Battleship | Mission **6** of *Metal Slug 3D* | `r6c3` | 6 |
-| Purple | green Medusa image on the Dota patch page | version **6.80**, with the zero discarded for a 1–9 grid | `r6c8` | 4 |
-
-Read in the spoken rainbow order, the coordinates and digits are:
+The Miracle Sudoku with givens `r5c3=9` and `r6c7=8` has the unique solution
+recorded by `miracle_sudoku.py`.  Under the current seven-cell reconstruction,
+the spoken rainbow order gives:
 
 ```text
 red     orange  yellow  green   cyan    blue    purple
-r1c4    r2c4    r3c4    r4c3    r5c3    r6c3    r6c8
-3       9       6       3       9       6       4
-                       396:3964
+r1c4    r2c4    r3c4    r3c2    r5c2    r6c3    r6c8
+3       9       6       5       4       6       4
+                       396:5464
 ```
 
-Run the retained solver from the repository root:
+Run from the repository root:
 
 ```powershell
-python rounds\shi-qi-love-in-chaos\nodes\b4-keep-solving-and-nobody-explodes\artifacts\miracle_sudoku.py --extract r1c4 r2c4 r3c4 r4c3 r5c3 r6c3 r6c8
+python rounds\shi-qi-love-in-chaos\nodes\b4-keep-solving-and-nobody-explodes\artifacts\miracle_sudoku.py --extract r1c4 r2c4 r3c4 r3c2 r5c2 r6c3 r6c8
 ```
 
 Expected final lines:
 
 ```text
 unique: True
-extract: 3963964 (r1c4=3 r2c4=9 r3c4=6 r4c3=3 r5c3=9 r6c3=6 r6c8=4)
+extract: 3965464 (r1c4=3 r2c4=9 r3c4=6 r3c2=5 r5c2=4 r6c3=6 r6c8=4)
 ```
 
-The bottom answer pattern is `___:____`, and the user explicitly clarified that
-the extracted digits themselves are the answer. Therefore no ISO lookup or word
-extraction follows this table.
+Treat the seven digits as one-based indices into normalized English proper
+names (uppercase, spaces and punctuation deleted):
 
-## Corrections to the rejected 397:1964 chain
+| # / color | Picture candidate | Coordinate evidence | Digit | Index result | Confidence |
+| --- | --- | --- | ---: | --- | --- |
+| 1 / red | King **Charles** | `r1c4` is reconstructed, not heard | 3 | `CHARLES[3]=A` | weak until portrait comparison |
+| 2 / orange | **Sky Garden** rooftop | `r2c4` is reconstructed, not heard | 9 | `SKYGARDEN[9]=N` | weak until building comparison |
+| 3 / yellow | Port of **Santos** | `r3c4` is reconstructed, not heard | 6 | `SANTOS[6]=S` | weak until port comparison |
+| 4 / green | **Serum Raker** Magic card | card P/T is directly `3/2`, hence `r3c2=5` | 5 | `SERUMRAKER[5]=M` | strong candidate |
+| 5 / cyan | **Faker** lifting the trophy at the O2 | picture 5 + O2 suggests `r5c2=4` | 4 | `FAKER[4]=E` | identity strong; coordinate inferred |
+| 6 / blue | **Cocoon** from *MGS: Peace Walker* | lower blue cell is directly `r6c3=6` | 6 | `COCOON[6]=N` | strong candidate |
+| 7 / purple | Dota **Medusa** | purple is directly `r6c8=4` | 4 | `MEDUSA[4]=U` | fairly strong candidate |
 
-| Image | Rejected match | Why it was wrong | Corrected match |
-| --- | --- | --- | --- |
-| 3 / yellow | World Bank **Photo 3.6**, a three-panel set of barges and locks | It was selected after noticing that `397:1964` matched an ISO number; visually it is not a single port. | **Photo 3.4 — Construction of Luzhou port**, a single port image with a crane and pier. |
-| 4 / green | *Blue Dragon*, **5/5** | It is uncommon, obviously a dragon, and was not uniquely supported by the spoken description. | *Dream Eater*, a blue mythic flying Nightmare Sphinx with a bat-like silhouette, **4/3**. |
-
-Those two changes turn:
+This gives:
 
 ```text
-r1c4 r2c4 r3c6 r5c5 r5c3 r6c3 r6c8 -> 397:1964 (rejected)
+CHARLES[3]      = A
+SKY GARDEN[9]   = N
+SANTOS[6]       = S
+SERUM RAKER[5]  = M
+FAKER[4]        = E
+COCOON[6]       = N
+MEDUSA[4]       = U
+
+display = ANS:MENU
+answer  = MENU
 ```
 
-into:
+Reproduce the indexing with:
 
-```text
-r1c4 r2c4 r3c4 r4c3 r5c3 r6c3 r6c8 -> 396:3964 (candidate)
+```powershell
+python rounds\shi-qi-love-in-chaos\nodes\b4-keep-solving-and-nobody-explodes\artifacts\test_indexing.py
 ```
 
-The exact ISO/R 397:1964 hit was post-hoc coincidence, not independent image
-evidence. `WIRES` and `COPPER` were explicitly rejected; `WRAPPING` was an
-unsubmitted guess that was withdrawn when the user clarified the numeric
-mechanism.
+## Why the fourth coordinate changed
 
-## Sources
+The rejected `HEAD` route assumed a generic `SPHINX` and `r4c3=3`.  A bounded
+Scryfall search instead found the specific blue flying card *Serum Raker*.
+Its printed power/toughness is `3/2`, so it naturally identifies the Sudoku cell
+`r3c2`; that cell contains 5, and the fifth letter of `SERUMRAKER` is M.
 
-- [Miracle Sudoku rules and the original two-given puzzle](https://ethmcc.github.io/miracle-sudoku/)
-- [Plate 1.4: Portrait of Richard II](https://scalar.missouri.edu/vm/vol1plate4-colorprints)
-- [Shunchang Museum — section 2.4 “Urban terrace”](https://www.world-architects.com/de/uad-zhejiang/project/shunchang-museum)
-- [World Bank, *Blue Routes for a New Era* — Photo 3.4](https://documents1.worldbank.org/curated/en/908191600317351237/pdf/Blue-Routes-for-a-New-Era-Developing-Inland-Waterways-Transportation-in-China.pdf)
-- [*Dream Eater* — flying, mythic, 4/3](https://scryfall.com/card/grn/38/dream-eater)
-- [Riot photo: Faker at the 2024 Worlds final in the O2](https://www.flickr.com/photos/lolesports/54112369706)
-- [T1 won the final 3–2 and Faker earned his fifth title](https://www.cna.com.tw/news/aspt/202411030005.aspx)
-- [Morden's Battleship — Mission 6 boss in *Metal Slug 3D*](https://metalslug.fandom.com/wiki/Morden%27s_Battleship)
-- [Dota 6.80 analysis page containing the Medusa image](https://game8review.blogspot.com/2014/01/dota-680-changelog-reviewanalysis.html)
+*Dream Strix* and *Shimmerwing Chimera* are remaining `3/2` alternatives with M
+as the fifth letter, but *Serum Raker* best matches the uncertain audio impression
+of a bat-like blue flying creature.  Only comparison with the original card can
+choose among them.
+
+## Unresolved evidence
+
+- The saved SingleFile page contains the title, flavor text, and MP3, but not the
+  Sudoku screenshot or seven source pictures.
+- Only the blue and purple positions are directly recoverable from the recording.
+  The red/orange/yellow coordinates, and the `(5,2)` reading for Faker/O2, remain
+  hypotheses.
+- Charles, Sky Garden, and Santos are not uniquely determined by the broad audio
+  descriptions.  `ANS` is a useful fit, but is not independent proof of those
+  names.
+- Cocoon is a substantially better fit than Big Shiee because it is both a
+  specific proper name and explicitly a giant tracked land battleship.  Medusa
+  is a better visual/UI fit than Windrunner, but Lady Vashj remains an alternative.
+
+Therefore `MENU` is a medium-confidence candidate for manual visual checking,
+not a confirmed answer.
+
+## Rejected alternatives
+
+- Literal `397:1964`, `396:3964`, and `396:3464` were rejected.
+- `WIRES`, `COPPER`, `DEF:USER`, `WAR:HEAD`, `CRUELTY`, and `HEAD` were rejected.
+- `ANS:HEAD` depended on a generic `SPHINX`, generic `LAND BATTLESHIP`, and
+  target-selected `WINDRUNNER`; it must not be restored.
+
+## Public references for manual comparison
+
+- [King Charles III coronation portraits](https://www.royal.uk/coronation-portraits)
+- [Sky Garden at 20 Fenchurch Street](https://skygarden.london/)
+- [Port of Santos](https://www.portodesantos.com.br/en/)
+- [Serum Raker](https://scryfall.com/card/mbs/31/serum-raker)
+- [Faker at the 2024 Worlds final in the O2](https://www.flickr.com/photos/lolesports/54112369706)
+- [Konami Peace Walker product lineup naming Cocoon](https://www.konami.com/mg/archive/mgs_pw/jp/lineup/)
+- [Cocoon visual reference](https://metalgear.fandom.com/wiki/Cocoon)
+- [Old Dota Medusa guide](https://blogdota.ru/gajdy-po-geroyam/medusa.html)
