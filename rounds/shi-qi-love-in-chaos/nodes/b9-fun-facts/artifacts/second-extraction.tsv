@@ -1,0 +1,7 @@
+order	icon	icon_x	icon_y	glyph	letter	letter_x	letter_y	distance	runner_up	runner_letter	runner_distance	cell_letters_by_distance
+1	metaphor	950.0	372.0	glyph-041	F	1027.5	374.0	77.5	glyph-044	N	117.9	FN
+2	podium	800.0	431.0	glyph-052	O	752.0	485.0	72.2	glyph-047	S	79.0	OSEDR
+3	box	950.0	491.0	glyph-055	U	1012.0	506.0	63.8	glyph-048	B	67.5	UBAFECSDK
+4	broom	800.0	558.0	glyph-061	R	737.5	550.5	62.9	glyph-056	R	64.1	RRRJEUGDIA
+5	morse	950.0	700.0	glyph-074	E	958.0	632.0	68.5	glyph-082	A	72.7	EAEHESIUA
+6	nunchaku	800.0	754.0	glyph-087	N	737.5	715.5	73.4	glyph-081	W	78.1	NWAAIHP

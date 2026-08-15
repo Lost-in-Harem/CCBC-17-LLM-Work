@@ -36,8 +36,8 @@ names (uppercase, spaces and punctuation deleted):
 | 3 / yellow | Port of **Santos** | `r3c4` is reconstructed, not heard | 6 | `SANTOS[6]=S` | weak until port comparison |
 | 4 / green | **Serum Raker** Magic card | card P/T is directly `3/2`, hence `r3c2=5` | 5 | `SERUMRAKER[5]=M` | strong candidate |
 | 5 / cyan | **Faker** lifting the trophy at the O2 | picture 5 + O2 suggests `r5c2=4` | 4 | `FAKER[4]=E` | identity strong; coordinate inferred |
-| 6 / blue | **Cocoon** from *MGS: Peace Walker* | lower blue cell is directly `r6c3=6` | 6 | `COCOON[6]=N` | strong candidate |
-| 7 / purple | Dota **Medusa** | purple is directly `r6c8=4` | 4 | `MEDUSA[4]=U` | fairly strong candidate |
+| 6 / blue | **Morden's Battleship** from *Metal Slug 3D* | its source identifies it as the Mission 6 boss of a `3D` game, hence `r6c3`; this is also the lower spoken blue cell | 6 | `MORDENSBATTLESHIP[6]=N` | strong coordinate/name loop |
+| 7 / purple | Dota **Medusa** | the matching old guide is explicitly for Dota `6.78`, echoing the spoken given `r6c7=8`; the purple extraction cell is immediately right at `r6c8` | 4 | `MEDUSA[4]=U` | strong candidate |
 
 This gives:
 
@@ -47,7 +47,7 @@ SKY GARDEN[9]   = N
 SANTOS[6]       = S
 SERUM RAKER[5]  = M
 FAKER[4]        = E
-COCOON[6]       = N
+MORDEN'S BATTLESHIP[6] = N
 MEDUSA[4]       = U
 
 display = ANS:MENU
@@ -82,9 +82,19 @@ choose among them.
 - Charles, Sky Garden, and Santos are not uniquely determined by the broad audio
   descriptions.  `ANS` is a useful fit, but is not independent proof of those
   names.
-- Cocoon is a substantially better fit than Big Shiee because it is both a
-  specific proper name and explicitly a giant tracked land battleship.  Medusa
-  is a better visual/UI fit than Windrunner, but Lady Vashj remains an alternative.
+- Morden's Battleship is independently documented as the Mission 6 boss of
+  *Metal Slug 3D*, so its source supplies `(6,3)` while its normalized proper
+  name supplies the extracted N.  Cocoon remains a close visual alternative
+  and also has N as its sixth letter, but it does not supply the coordinate.
+- The Medusa guide title says Dota `6.78`, which independently mirrors the
+  spoken given `r6c7=8`; its old guide banner also has the four Warcraft-style
+  skill icons described in the recording.  Lady Vashj remains an image-level
+  alternative, but lacks this numeric cross-check.
+- The competing `EASY` chain is not a clean extraction: under this file's
+  normalization `WORLD CHAMPION[9]=M`, not A, and using `T1 WORLD CHAMPION`
+  solely to force A is not the exact Flickr title.  It also mixes the
+  Richard/Shunchang/Luzhou coordinate sources with Charles/Sky Garden/Santos
+  labels from different candidate pictures.
 
 Therefore `MENU` is a medium-confidence candidate for manual visual checking,
 not a confirmed answer.
@@ -103,6 +113,5 @@ not a confirmed answer.
 - [Port of Santos](https://www.portodesantos.com.br/en/)
 - [Serum Raker](https://scryfall.com/card/mbs/31/serum-raker)
 - [Faker at the 2024 Worlds final in the O2](https://www.flickr.com/photos/lolesports/54112369706)
-- [Konami Peace Walker product lineup naming Cocoon](https://www.konami.com/mg/archive/mgs_pw/jp/lineup/)
-- [Cocoon visual reference](https://metalgear.fandom.com/wiki/Cocoon)
-- [Old Dota Medusa guide](https://blogdota.ru/gajdy-po-geroyam/medusa.html)
+- [Morden's Battleship: Metal Slug 3D, Mission 6](https://metalslug.fandom.com/wiki/Morden%27s_Battleship)
+- [Old Dota 6.78 Medusa guide](https://blogdota.ru/gajdy-po-geroyam/medusa.html)

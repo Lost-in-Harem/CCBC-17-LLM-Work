@@ -10,8 +10,8 @@ feeders:
 status: candidate
 answer: MENU
 confidence: medium
-summary: 当前最强候选为 `MENU`：Miracle Sudoku 唯一解中，七个暂定彩色格给出 `396:5464`，依次索引 `CHARLES / SKY GARDEN / SANTOS / SERUM RAKER / FAKER / COCOON / MEDUSA` 得 `ANS:MENU`。第 4、6、7 图已有与录音高度相符的具体对象，第 5 图 Faker 较强；但第 1–3 图及红橙黄青格坐标仍缺原图直证，提交前应人工比图。
-updated: 2026-08-15
+summary: 当前最强候选仍为 `MENU`：暂定七格给出 `396:5464`，索引 `CHARLES / SKY GARDEN / SANTOS / SERUM RAKER / FAKER / MORDEN'S BATTLESHIP / MEDUSA` 得 `ANS:MENU`。本轮确认第 6 图名称、Mission 6 与 Metal Slug 3D 同时闭合 `(6,3)`；第 7 图的 Dota 6.78 页面也呼应口述 `r6c7=8`。`EASY` 路线存在字段混搭及第 5 项索引错误，暂降级；第 1–3 图仍缺原图直证。
+updated: 2026-08-16
 ---
 
 # 保持解谜就无人爆炸
@@ -27,23 +27,27 @@ Miracle Sudoku 七个彩色格
      396:5464
         ↓ 依次作为七个英文标识的 1-based 索引
 CHARLES / SKY GARDEN / SANTOS :
-SERUM RAKER / FAKER / COCOON / MEDUSA
+SERUM RAKER / FAKER / MORDEN'S BATTLESHIP / MEDUSA
         ↓
       ANS:MENU
 ```
 
 其中第 4 图是关键修正：*Serum Raker* 是蓝色、Flying、画面为飞行的
 Drake，右下角 `3/2` 指向 `r3c2=5`，而 `SERUMRAKER[5]=M`。第 6 图
-*Cocoon* 是《Metal Gear Solid: Peace Walker》中四组履带的巨型陆上战舰，
-`COCOON[6]=N`；第 7 图 *Medusa* 的旧式 Dota 指南图带一列四个技能图标，
-`MEDUSA[4]=U`。这三项比被拒绝的 `SPHINX / LAND BATTLESHIP /
-WINDRUNNER` 更具体，也不再混用类别名和专名。
+*Morden's Battleship* 的资料明确同时给出《Metal Slug **3D**》与
+Mission **6**，闭合 `r6c3=6`，而 `MORDENSBATTLESHIP[6]=N`。第 7 图
+*Medusa* 的旧式 Dota 指南图带一列四个技能图标，页面标题又明确写
+Dota `6.78`，与录音给定 `r6c7=8` 交叉验证；紫格 `r6c8=4` 后有
+`MEDUSA[4]=U`。后三项现在都同时保留具体专名和数值来源。
 
 候选仍只有**中等置信**，不能当作已确认答案：保存下来的 SingleFile 页面
 没有舍友屏幕里的七张原图；第 1–3 图的 `CHARLES / SKY GARDEN / SANTOS`
 以及红橙黄三格坐标仍是待比对识别，第 5 图虽几乎可认作 Faker，`r5c2`
-也尚缺原图直接显示。下文把完整录音、七张对照图、每步索引和风险全部
-列出，人工确认这些外形后才建议尝试提交 **`MENU`**。
+也尚缺原图直接显示。曾考虑的 `ANS:EASY` 不能替代这些缺口：它把
+Richard/Shunchang/Luzhou 的编号来源和 Charles/Sky Garden/Santos 的名称
+混在一起，而且 `WORLDCHAMPION[9]` 实为 M，不是 A。下文把完整录音、
+七张对照图、每步索引和风险全部列出，人工确认这些外形后才建议尝试提交
+**`MENU`**。
 
 ## 完整录音文字
 
@@ -158,8 +162,8 @@ extract: 3965464 (r1c4=3 r2c4=9 r3c4=6 r3c2=5 r5c2=4 r6c3=6 r6c8=4)
 | 3 / 黄 | 一个港口 | `SANTOS` | 6 | **S** | 候选；需比对港区布局 |
 | 4 / 绿 | 蓝色万智牌，飞行的神话生物 | `SERUM RAKER` | 5 | **M** | 牌面外形、Flying、`3/2` 均相符；强候选 |
 | 5 / 青 | O2、戴眼镜的亚洲选手举杯 | `FAKER` | 4 | **E** | 强匹配 |
-| 6 / 蓝 | 有履带、地上开的船式游戏建模 | `COCOON` | 6 | **N** | 四组履带的巨型陆上战舰；强候选 |
-| 7 / 紫 | 老式游戏界面中的绿色女角色 | `MEDUSA` | 4 | **U** | 旧 Dota 指南图与四个技能图标相符；较强候选 |
+| 6 / 蓝 | 有履带、地上开的船式游戏建模 | `MORDEN'S BATTLESHIP` | 6 | **N** | *Metal Slug 3D* Mission 6，同时闭合 `(6,3)` |
+| 7 / 紫 | 老式游戏界面中的绿色女角色 | `MEDUSA` | 4 | **U** | Dota 6.78 旧指南与四技能图标相符，并对照 `r6c7=8` |
 
 ### 1 / 红：Charles 候选
 
@@ -222,24 +226,23 @@ Shimmerwing Chimera / War Machine, James Rhodes*。其中 Enigma Sphinx 是
 `(5,2)`，故 `r5c2=4`，再得 `FAKER[4]=E`。人物识别强，但 `(5,2)` 的
 坐标读法还需要题图颜色位置确认。公开原图：[LoL Esports / Riot](https://www.flickr.com/photos/lolesports/54112369706)。
 
-### 6 / 蓝：Cocoon
+### 6 / 蓝：Morden's Battleship
 
-![6 蓝：Cocoon 候选](artifacts/visual/06-cocoon-candidate.webp)
+![6 蓝：Morden's Battleship 候选](artifacts/visual/06-morden-battleship.webp)
 
-*Cocoon (TR-COCOON 7000)* 是《Metal Gear Solid: Peace Walker》的巨型
-AI 兵器，外形成层叠舰体，底部四组履带，正是“船的游戏建模、不是航母、
-有履带、地上开、陆行舰”这一整串描述。它的英文资料也直接称其为
-`giant land battleship`，比先前用泛称 `LAND BATTLESHIP` 或只靠外形猜
-*Big Shiee* 更具体。录音固定提取下方蓝格 `r6c3=6`，所以：
+*Morden's Battleship* 是《Metal Slug 3D》的 Boss；资料页明确写它出现在
+Mission 6。于是游戏名的 `3D` 和 Mission 的 `6` 给出坐标 `(6,3)`，正好
+落在录音所说的下方蓝格 `r6c3=6`。规范化名称的第六个字母又是 N：
 
 ```text
-COCOON[6] = N
+MORDENSBATTLESHIP[6] = N
 ```
 
-人工检查点：是否为上窄下宽的灰黑船体、四个履带模块、密集炮塔以及顶部
-机械臂。官方商品目录列有 `COCOON / コクーン`，尺寸资料为长 41.1 m：
-[Konami 商品目录](https://www.konami.com/mg/archive/mgs_pw/jp/lineup/)、
-[对照图来源](https://metalgear.fandom.com/wiki/Cocoon)。
+人工检查点：是否是巨大灰黑船体、正面六管机枪、两侧履带/浮筒和密集炮塔。
+原网页的 infobox 同时列出 `Metal Slug 3D`，正文写明 “Mission 6 boss”：
+[Metal Slug Wiki](https://metalslug.fandom.com/wiki/Morden%27s_Battleship)。
+*Cocoon*（另存于 `artifacts/visual/06-cocoon-candidate.webp`）是外形很近的
+替代图，且第六字母也为 N，但没有同样清楚的 `(6,3)` 来源，故不作为主识别。
 
 ### 7 / 紫：Medusa
 
@@ -247,16 +250,17 @@ COCOON[6] = N
 
 这张老式 Dota 指南横幅以绿色/蓝绿色的 Medusa 女性为主体，右侧正好竖排
 四个 Warcraft III 风格技能图标，贴近录音的“图有点原始”“绿色女角色”
-和“旁边像魔兽的技能图标”。紫格由原音直接固定为 `r6c8=4`，所以：
+和“旁边像魔兽的技能图标”。原页面标题明确为 **Dota 6.78**；其中
+`6,7,8` 又与录音给出的 `r6c7=8` 相符，紫色格就是右侧 `r6c8=4`，所以：
 
 ```text
 MEDUSA[4] = U
 ```
 
 人工检查点：头发是否为蛇、右侧是否正是四个蓝色技能图标、画面中能否
-看到 `Medusa`。*Lady Vashj* 也有绿色女性和 Warcraft UI，仍是必须比对
-的替代项；若原图不是 Medusa，就不能保留 U。对照页：
-[Dota Medusa guide](https://blogdota.ru/gajdy-po-geroyam/medusa.html)。
+看到 `Medusa`。*Lady Vashj* 也有绿色女性和 Warcraft UI，仍是图像层面的
+替代项；但它没有 Dota `6.78` 这一数字交叉校验。对照页：
+[Dota 6.78 Medusa guide](https://blogdota.ru/gajdy-po-geroyam/medusa.html)。
 
 ## 统一字母索引
 
@@ -270,7 +274,7 @@ MEDUSA[4] = U
 | 黄 | `SANTOS` | `SANTOS` | 6 | **S** |
 | 绿 | `SERUM RAKER` | `SERUMRAKER` | 5 | **M** |
 | 青 | `FAKER` | `FAKER` | 4 | **E** |
-| 蓝 | `COCOON` | `COCOON` | 6 | **N** |
+| 蓝 | `MORDEN'S BATTLESHIP` | `MORDENSBATTLESHIP` | 6 | **N** |
 | 紫 | `MEDUSA` | `MEDUSA` | 4 | **U** |
 
 所以：
@@ -281,17 +285,32 @@ SKY GARDEN[9]       = N
 SANTOS[6]           = S
 SERUM RAKER[5]      = M
 FAKER[4]            = E
-COCOON[6]           = N
+MORDENSBATTLESHIP[6] = N
 MEDUSA[4]           = U
 
 ANS:MENU
 ```
 
 可用 [`artifacts/test_indexing.py`](artifacts/test_indexing.py) 复现。后四项
-现在全部使用画面对象的具体英文专名，并统一得到一个正常可提交词
-`MENU`；这比已拒绝的 `HEAD` 链条有明显的新证据。不过 `ANS` 仍可能是
-前三图选词后的巧合，且红橙黄三格位置未从保存文件恢复，因此置信度只能
-是中等。
+现在全部使用画面对象的具体英文专名；其中 Morden's Battleship 还同时给出
+`(6,3)`，Medusa 来源页的 `6.78` 则复核录音给定。它们统一得到正常可提交词
+`MENU`。不过 `ANS` 仍可能是前三图选词后的巧合，且红橙黄三格位置未从
+保存文件恢复，因此置信度只能是中等。
+
+## 与 `EASY` 路线的判别
+
+`EASY` 是本轮重点核验的竞争假设，但目前不能替代 `MENU`：
+
+- 它沿用 Richard II / Shunchang Museum / Luzhou port 三张候选网页的
+  `1.4 / 2.4 / 3.4` 来定坐标，却改用另一组三个对象名 `CHARLES /
+  SKY GARDEN / SANTOS` 来取 `ANS`；在没有原图时这是两组图片的混搭。
+- 第 5 项若用自然标签 `WORLD CHAMPION`，按本文统一的“去空格标点、只数
+  A–Z”规则，第 9 字母是 **M**，不是 A。改成 `T1 WORLD CHAMPION` 才能
+  得 A，但该短语既不是 Flickr 原图标题（标题是 *League of Legends World
+  Championship 2024 - Finals*），也没有独立理由优先于 `FAKER`。
+- 第 7 项 Lady Vashj 的第四字母确为 Y，但 Medusa 对照页同时提供了更贴近
+  录音的四技能指南横幅和 `Dota 6.78` 数字校验。因此 `EASY` 目前只是
+  后验可拼出的替代词，不升级为候选，也没有提交判定可写入历史。
 
 ## 原页与检索的负证据
 
@@ -301,10 +320,9 @@ ANS:MENU
   否定 `ANS:`。
 - 站点脚本只暴露通用的题面/答案日志/提示/解析接口。按照项目规则没有
   调用共享 Hunt API，也没有提交答案。
-- 用中英文题名、Miracle Sudoku 和多项图片描述检索公开网页，没有找到
-  可索引的原题副本；最终又以 `Serum Raker + Faker + Cocoon + Medusa`
-  四项共现检索，仍只有各对象的独立资料，没有题面或复盘命中。网络检索
-  到此停止。
+- 用中英文题名、英文 slug、Miracle Sudoku 和多项图片描述检索公开网页，
+  没有找到可索引的原题副本；对象共现检索也只有各自独立资料，没有题面或
+  复盘命中。网络检索到此停止。
 - 万智牌检索先后做了三个有界实验：把原音误当“神话稀有度”、强限 `4/3`
   都未得到稳定对象；最终允许牌面 P/T 本身给坐标，并只检查落在数独数字
   5 的坐标，得到 *Serum Raker* 等四个标准化后“第五字母 M”的 flying
@@ -346,10 +364,11 @@ ANS:MENU
   是选词后的巧合，不能验证这些图名；此路线不得恢复。
 - **Big Shiee 只像外形，不支持索引。** 它确实是履带船式游戏模型，但
   `BIGSHIEE[6]=I`；用泛称 `LAND BATTLESHIP[6]=A` 是混用命名层级。当前
-  *Cocoon* 同时具有具体专名和“巨型陆上战舰”的资料描述，才是新证据。
+  *Morden's Battleship* 不但有具体专名，还由 Mission 6 / Metal Slug 3D
+  独立给出 `(6,3)`，才是更完整的新证据。
 - **Mythic/4/3 对万智牌的过滤过窄。** 原音说的是“一个神话生物”，不是
-  “神话稀有度”；也没有证据说牌一定是 `4/3`。*Dream Eater / Sphinx*
-  路线随 `HEAD` 一并停止。
+  “神话稀有度”；也没有证据说牌一定是 `4/3`。*Dream Eater* 仍只能支撑
+  已拒绝的 `CRUELTY` 或字段混搭的 `EASY`，不恢复为主识别。
 - **Leviathan、Lady Vashj 不是已证实识别。** 它们只是旧路线里为得到
   `CRUELTY` 选出的标签。Windrunner 也是 `HEAD` 的后验标签；当前 Medusa
   仍须原图确认，不能只凭目标字母 U 定案。
@@ -390,7 +409,7 @@ ANS:MENU
    - `SANTOS[6] = S`
    - `SERUMRAKER[5] = M`
    - `FAKER[4] = E`
-   - `COCOON[6] = N`
+   - `MORDENSBATTLESHIP[6] = N`
    - `MEDUSA[4] = U`
    - 拼出 `ANS:MENU`，提取目标答案 **`MENU`**。
 
@@ -398,7 +417,7 @@ ANS:MENU
 
 - **数独唯一性**：通过 Z3 SMT 求解器与 Python 脚本双重验证，证明在给定规则和提示数下仅有唯一解。
 - **专名特异性**：
-  - 后四项专名（*Serum Raker* / *Faker* / *Cocoon* / *Medusa*）与录音的描述（蓝色飞行生物且 P/T 为 3/2、O2 戴眼镜举杯亚洲选手、带履带陆行战舰建模、绿色女性角色配老式魔兽技能图标）高度吻合，且均使用精确专名，不再混用泛称。
+  - 后四项专名（*Serum Raker* / *Faker* / *Morden's Battleship* / *Medusa*）与录音的描述（蓝色飞行生物且 P/T 为 3/2、O2 戴眼镜举杯亚洲选手、带履带陆行战舰建模、绿色女性角色配老式魔兽技能图标）高度吻合，且均使用精确专名；后两项还有 Mission 6 / Metal Slug 3D 与 Dota 6.78 的数值交叉校验。
   - 索引结果 `ANS:MENU` 格式为标准的 `ANS:`（Answer:）指示词加上 4 字母单词 `MENU`，符合题面底部的 `___:____` 下划线结构，也与游戏/防爆解谜（Keep Talking and Nobody Explodes）的主题情境自然契合。
 
 ### 3. 未使用信息、含糊步骤与潜在风险
@@ -420,10 +439,10 @@ ANS:MENU
 
 ## Next action
 
-请人工把第 4、6、7 张题图依次与本文的 *Serum Raker*、*Cocoon*、
-*Medusa* 对照，尤其核对牌名/`3/2`、Cocoon 四履带与机械臂、Medusa 蛇发
-与右侧四技能图标；再核对第 1–3 图是否真是 Charles、Sky Garden、Santos。
+请人工把第 4、6、7 张题图依次与本文的 *Serum Raker*、
+*Morden's Battleship*、*Medusa* 对照，尤其核对牌名/`3/2`、战舰正面六管
+机枪与《Metal Slug 3D》造型、Medusa 蛇发与右侧四技能图标；再核对第 1–3
+图是否真是 Charles、Sky Garden、Santos。
 若后三项相符但前三项有任一不符，保留数独和 `MENU` 后四字母证据，重新
 识别对应图片，不能为了维持 `ANS` 换同义词。只有这些外形检查通过后才
 建议提交 `MENU`。
-

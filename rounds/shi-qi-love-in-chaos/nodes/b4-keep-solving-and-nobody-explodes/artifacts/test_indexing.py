@@ -18,7 +18,11 @@ ROWS = (
     ("yellow", "SANTOS", "candidate port name"),
     ("green", "SERUM RAKER", "candidate blue flying Magic card; printed P/T 3/2"),
     ("cyan", "FAKER", "player lifting the trophy at the O2"),
-    ("blue", "COCOON", "candidate tracked land battleship from MGS: Peace Walker"),
+    (
+        "blue",
+        "MORDEN'S BATTLESHIP",
+        "Metal Slug 3D Mission 6 boss; both numbers independently give r6c3",
+    ),
     ("purple", "MEDUSA", "candidate green woman in an old Dota guide/interface"),
 )
 
