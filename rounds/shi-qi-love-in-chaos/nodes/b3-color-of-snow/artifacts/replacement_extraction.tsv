@@ -1,0 +1,20 @@
+color	slot	number	word	removed_char	pinyin	letter	note
+R	1	1	冰红茶	袍	pao	P
+R	2	2	西红柿	方	fang	A	R2/R4 may swap with 大红袍; letters stay A/N
+R	3	2	满江红	英	ying	I
+R	4	3	大红袍	寒	han	N	R2/R4 may swap with 西红柿; letters stay A/N
+R	5	1	藏红花	同	tong	T
+Y	1	1	大黄蜂	楼	lou	L
+Y	2	2	黄金屋	丽	li	I
+Y	3	3	明日黄花	用	yong	N
+Y	4	2	人约黄昏后	门	men	E
+Y	5	1	信口雌黄	水	shui	S
+Y	6	2	雄黄酒	音	yin	I
+G	1	3	绿林好汉	静	jing	N
+G	2	1	青山绿水	盼	pan	P
+G	3	2	鸭绿江	在	zai	A
+G	4	1	叶绿体	谁	shei	S
+B	1	1	板蓝根	实	shi	S
+B	2	2	碧蓝幻想	把	ba	A
+B	3	1	天蓝色	国	guo	G
+B	4	2	忧郁蓝调	也	ye	E
