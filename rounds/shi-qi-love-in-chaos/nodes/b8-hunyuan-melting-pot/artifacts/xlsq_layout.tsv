@@ -1,0 +1,40 @@
+record	axis	value	start	source_or_note
+row	R01	CBPQDPYHXTGSSM	c1	A4-A8; 后四条的共同首字母 C 熔入首个 C
+row	R02	BCBLGSBLQ	c6	A1-A3; A1=冰茶
+row	R03	YSYKRYHX	c7	A22-A23
+row	R04	LWTLJDLLB	c6	A17-A19; 莱万汀/老君丹炉/罗宾
+row	R05	XLQB	c11	A21
+row	R06	GGQ	c9	A12
+row	R07	TX	c9	A20
+row	R08	JSJ	c8	A16
+row	R09	FZTLFCJTFWJ	c4	A9-A11
+row	R10	HTSSHGMMHJH	c4	A13-A15
+column	C01	YWYXYLYGB	r2	D19-D21
+column	C02	BKLBRXWYJH	r1	D5-D6
+column	C03	SYSGSGSQT	r2	D15-D17
+column	C04	PMZJZBX	r2	D14
+column	C05	BSDDBGBZ	r2	D1-D3; 板上钉钉/冰柜/冰柱或冰锥
+column	C06	BLFTMHT	r3	D4
+column	C07	HNBC	r5	D10
+column	C08	KLQ	r5	D11
+column	C09	LCG	r4	D12
+column	C10	MGX	r5	D13
+column	C11	GST	r7	D9=泔水桶
+column	C12	XHC	r6	D18
+column	C13	FFSW	r6	D8
+column	C14	CZW	r6	D7
+grid	G01	CBPQDPYHXTGSSM	-	-
+grid	G02	YKSPBBCBLGSBLQ	-	-
+grid	G03	WLYMSBYSYKRYHX	-	-
+grid	G04	YBSZDLWTLJDLLB	-	-
+grid	G05	XRGJDFHKCMXLQB	-	-
+grid	G06	YXSZBTNLGGQXFC	-	-
+grid	G07	LWGBGMBQTXGHFZ	-	-
+grid	G08	YYSXBHCJSJSCSW	-	-
+grid	G09	GJQFZTLFCJTFWJ	-	-
+grid	G10	BHTHTSSHGMMHJH	-	-
+extract	1	X	r6c12	-
+extract	2	L	r9c7	-
+extract	3	S	r2c3	-
+extract	4	Q	r1c4	-
+meta	candidate	心灵手巧	XLSQ	四格按 1→4 读取；全网格覆盖且恰有 10 个横竖交叉

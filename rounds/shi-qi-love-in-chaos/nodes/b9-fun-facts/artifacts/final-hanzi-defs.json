@@ -1,0 +1,10 @@
+{
+  "annotations": [
+    {"type": "polyline", "points": [[640.5,774.0],[669.5,753.0],[885.5,618.5]], "label": "1 PIE → 派", "color": "#377eb8"},
+    {"type": "polyline", "points": [[1007.5,442.0],[900.0,575.0],[818.0,678.0]], "label": "2 FEW → 些", "color": "#ff7f00"},
+    {"type": "polyline", "points": [[649.0,596.0],[712.0,621.5],[1019.0,731.0]], "label": "3 AGE → 行", "color": "#4daf4a"},
+    {"type": "polyline", "points": [[669.5,753.0],[701.5,726.0],[1059.0,417.0]], "label": "4 IAN → 家", "color": "#984ea3"},
+    {"type": "polyline", "points": [[1061.0,572.0],[1044.5,624.0],[1019.0,731.0]], "label": "5 DIE → 去", "color": "#e41a1c"},
+    {"type": "polyline", "points": [[640.5,774.0],[723.5,591.5],[737.5,550.5]], "label": "6 PER → 码", "color": "#00a6a6"}
+  ]
+}

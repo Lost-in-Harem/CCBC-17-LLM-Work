@@ -1,0 +1,11 @@
+{
+  "command": "annotate",
+  "source": "G:/Repo/CCBC-17-LLM-Work/rounds/shi-qi-love-in-chaos/nodes/b9-fun-facts/work/visual/inventory/assets/image-001.png",
+  "source_sha256": "db40d9186853c471dae68a0fefa72f442afcc442a61341b9f9f862d2e142cadb",
+  "spec": "G:/Repo/CCBC-17-LLM-Work/rounds/shi-qi-love-in-chaos/nodes/b9-fun-facts/artifacts/connections.json",
+  "spec_sha256": "e5ef4f32149d47f7eb2ea5dba0c5885dc21d227a46d6eb7f2e817fad558a8c97",
+  "coordinate_space": "EXIF-transposed source pixels",
+  "scale": 1,
+  "annotation_count": 11,
+  "output": "G:/Repo/CCBC-17-LLM-Work/rounds/shi-qi-love-in-chaos/nodes/b9-fun-facts/artifacts/matched-lines.png"
+}

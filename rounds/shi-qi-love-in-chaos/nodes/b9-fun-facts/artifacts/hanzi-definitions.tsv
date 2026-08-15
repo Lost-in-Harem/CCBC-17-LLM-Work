@@ -1,0 +1,7 @@
+reading_order	clue_group	definition	hanzi	dictionary_sense	max_residual_px	path
+1	leader	PIE	派	(loanword) pie	2.20	P@640.5,774.0;I@669.5,753.0;E@885.5,618.5
+2	moving	FEW	些	classifier indicating a small amount or small number greater than 1: some, a few, several	0.55	F@1007.5,442.0;E@900.0,575.0;W@818.0,678.0
+3	gang	AGE	行	(bound form) to rank (first, second etc) among one's siblings (by age)	2.36	A@649.0,596.0;G@712.0,621.5;E@1019.0,731.0
+4	trash	IAN	家	noun suffix for a specialist in some activity, corresponding to English -ian	0.46	I@669.5,753.0;A@701.5,726.0;N@1059.0,417.0
+5	speech	DIE	去	to die (euphemism)	2.67	D@1061.0,572.0;I@1044.5,624.0;E@1019.0,731.0
+6	lottery	PER	码	(coll.) kilometers per hour (informal misuse of yard to mean kph in speed references)	3.48	P@640.5,774.0;E@723.5,591.5;R@737.5,550.5

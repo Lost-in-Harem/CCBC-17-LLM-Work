@@ -1,0 +1,15 @@
+{
+  "annotations": [
+    {"type": "line", "xy": [620, 107, 868, 252], "label": "forest-map"},
+    {"type": "line", "xy": [620, 242, 868, 700], "label": "lottery-morse"},
+    {"type": "line", "xy": [625, 427, 871, 431], "label": "leader-powerpoint"},
+    {"type": "line", "xy": [624, 605, 870, 491], "label": "moving-box"},
+    {"type": "line", "xy": [624, 680, 868, 754], "label": "gang-nunchaku"},
+    {"type": "line", "xy": [625, 863, 870, 804], "label": "temptation-cornflakes"},
+    {"type": "line", "xy": [1123, 166, 869, 313], "label": "oil-derrick"},
+    {"type": "line", "xy": [1123, 373, 869, 372], "label": "speech-rhetoric"},
+    {"type": "line", "xy": [1121, 717, 869, 116], "label": "moles-mallet"},
+    {"type": "line", "xy": [1120, 773, 870, 558], "label": "trash-vacuum"},
+    {"type": "line", "xy": [1122, 861, 869, 862], "label": "branches-shears"}
+  ]
+}
