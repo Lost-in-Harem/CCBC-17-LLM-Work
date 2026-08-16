@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760">
+  <rect width="1400" height="760" fill="#fffaf2"/>
+  <style>
+    .title { font: 700 30px system-ui, sans-serif; fill: #222; }
+    .sub { font: 16px system-ui, sans-serif; fill: #555; }
+    .board { font: 700 18px system-ui, sans-serif; fill: #333; }
+    .word { font: 13px ui-monospace, Consolas, monospace; fill: #666; }
+    .circle { fill: #fff; stroke: #282828; stroke-width: 4; }
+    .junction { fill: #ffe0a6; stroke: #b45309; stroke-width: 6; }
+    .terminal { fill: #ffd1d1; stroke: #a32626; stroke-width: 6; }
+    .splitn { fill: #dceeff; stroke: #3973a8; stroke-width: 5; }
+    .letter { font: 700 22px ui-monospace, Consolas, monospace; fill: #111; text-anchor: middle; dominant-baseline: central; }
+    .connector { stroke: #8d8d8d; stroke-width: 3; opacity: .78; }
+    .pair { font: 700 15px ui-monospace, Consolas, monospace; fill: #555; text-anchor: middle; }
+    .result { font: 800 50px ui-monospace, Consolas, monospace; fill: #9b3d25; text-anchor: middle; }
+    .explain { font: 17px system-ui, sans-serif; fill: #333; text-anchor: middle; }
+    .rejected { font: 900 72px system-ui, sans-serif; fill: #b91c1c; opacity: .16; text-anchor: middle; }
+  </style>
+
+  <text x="700" y="42" class="title" text-anchor="middle">B10 rejected route: NASTY</text>
+  <text x="700" y="72" class="sub" text-anchor="middle">Negative evidence only — the terminal-tail rule is not licensed by the diagram</text>
+
+  <!-- Equal-letter connections: two per gap. -->
+  <g class="connector">
+    <line x1="90" y1="320" x2="260" y2="320"/><line x1="90" y1="390" x2="260" y2="390"/>
+    <line x1="260" y1="250" x2="430" y2="180"/><line x1="260" y1="390" x2="430" y2="250"/>
+    <line x1="430" y1="320" x2="600" y2="320"/><line x1="430" y1="390" x2="600" y2="390"/>
+    <line x1="600" y1="180" x2="770" y2="250"/><line x1="600" y1="250" x2="770" y2="180"/>
+    <line x1="770" y1="250" x2="940" y2="250"/><line x1="770" y1="320" x2="940" y2="320"/>
+    <line x1="940" y1="320" x2="1110" y2="180"/><line x1="940" y1="390" x2="1110" y2="250"/>
+    <line x1="1110" y1="250" x2="1280" y2="320"/><line x1="1110" y1="320" x2="1280" y2="250"/>
+  </g>
+
+  <!-- Board headings. -->
+  <g text-anchor="middle">
+    <text x="90" y="110" class="board">B4</text><text x="90" y="132" class="word">FLUCTUATION</text>
+    <text x="260" y="110" class="board">B2</text><text x="260" y="132" class="word">BIATHLON</text>
+    <text x="430" y="110" class="board">B5</text><text x="430" y="132" class="word">INCORPORATING</text>
+    <text x="600" y="110" class="board">B1</text><text x="600" y="132" class="word">APPREHENDING</text>
+    <text x="770" y="110" class="board">B7</text><text x="770" y="132" class="word">PANAFRICANISM</text>
+    <text x="940" y="110" class="board">B3</text><text x="940" y="132" class="word">CARDIOLOGIST</text>
+    <text x="1110" y="110" class="board">B8</text><text x="1110" y="132" class="word">STRATOLIFTER</text>
+    <text x="1280" y="110" class="board">B6</text><text x="1280" y="132" class="word">NEGATIVITY</text>
+  </g>
+
+  <!-- Vertical strand backbones. -->
+  <g stroke="#282828" stroke-width="5">
+    <line x1="90" y1="156" x2="90" y2="414"/><line x1="260" y1="156" x2="260" y2="414"/>
+    <line x1="430" y1="156" x2="430" y2="414"/><line x1="600" y1="156" x2="600" y2="414"/>
+    <line x1="770" y1="156" x2="770" y2="414"/><line x1="940" y1="156" x2="940" y2="414"/>
+    <line x1="1110" y1="156" x2="1110" y2="414"/><line x1="1280" y1="156" x2="1280" y2="430"/>
+  </g>
+
+  <!-- Circles and letters. -->
+  <g>
+    <!-- B4 FLON -->
+    <circle class="circle" cx="90" cy="180" r="25"/><text class="letter" x="90" y="180">F</text>
+    <circle class="circle" cx="90" cy="250" r="25"/><text class="letter" x="90" y="250">L</text>
+    <circle class="circle" cx="90" cy="320" r="25"/><text class="letter" x="90" y="320">O</text>
+    <circle class="circle" cx="90" cy="390" r="25"/><text class="letter" x="90" y="390">N</text>
+    <!-- B2 BION -->
+    <circle class="circle" cx="260" cy="180" r="25"/><text class="letter" x="260" y="180">B</text>
+    <circle class="circle" cx="260" cy="250" r="25"/><text class="letter" x="260" y="250">I</text>
+    <circle class="circle" cx="260" cy="320" r="25"/><text class="letter" x="260" y="320">O</text>
+    <circle class="junction" cx="260" cy="390" r="25"/><text class="letter" x="260" y="390">N</text>
+    <!-- B5 INNG: the two N occurrences serve different sides. -->
+    <circle class="circle" cx="430" cy="180" r="25"/><text class="letter" x="430" y="180">I</text>
+    <circle class="splitn" cx="430" cy="250" r="25"/><text class="letter" x="430" y="250">N</text>
+    <circle class="splitn" cx="430" cy="320" r="25"/><text class="letter" x="430" y="320">N</text>
+    <circle class="circle" cx="430" cy="390" r="25"/><text class="letter" x="430" y="390">G</text>
+    <!-- B1 APNG -->
+    <circle class="circle" cx="600" cy="180" r="25"/><text class="letter" x="600" y="180">A</text>
+    <circle class="circle" cx="600" cy="250" r="25"/><text class="letter" x="600" y="250">P</text>
+    <circle class="circle" cx="600" cy="320" r="25"/><text class="letter" x="600" y="320">N</text>
+    <circle class="circle" cx="600" cy="390" r="25"/><text class="letter" x="600" y="390">G</text>
+    <!-- B7 PASM -->
+    <circle class="circle" cx="770" cy="180" r="25"/><text class="letter" x="770" y="180">P</text>
+    <circle class="junction" cx="770" cy="250" r="25"/><text class="letter" x="770" y="250">A</text>
+    <circle class="circle" cx="770" cy="320" r="25"/><text class="letter" x="770" y="320">S</text>
+    <circle class="circle" cx="770" cy="390" r="25"/><text class="letter" x="770" y="390">M</text>
+    <!-- B3 CAST -->
+    <circle class="circle" cx="940" cy="180" r="25"/><text class="letter" x="940" y="180">C</text>
+    <circle class="circle" cx="940" cy="250" r="25"/><text class="letter" x="940" y="250">A</text>
+    <circle class="junction" cx="940" cy="320" r="25"/><text class="letter" x="940" y="320">S</text>
+    <circle class="circle" cx="940" cy="390" r="25"/><text class="letter" x="940" y="390">T</text>
+    <!-- B8 STER -->
+    <circle class="circle" cx="1110" cy="180" r="25"/><text class="letter" x="1110" y="180">S</text>
+    <circle class="junction" cx="1110" cy="250" r="25"/><text class="letter" x="1110" y="250">T</text>
+    <circle class="circle" cx="1110" cy="320" r="25"/><text class="letter" x="1110" y="320">E</text>
+    <circle class="circle" cx="1110" cy="390" r="25"/><text class="letter" x="1110" y="390">R</text>
+    <!-- B6 NETY -->
+    <circle class="circle" cx="1280" cy="180" r="25"/><text class="letter" x="1280" y="180">N</text>
+    <circle class="circle" cx="1280" cy="250" r="25"/><text class="letter" x="1280" y="250">E</text>
+    <circle class="circle" cx="1280" cy="320" r="25"/><text class="letter" x="1280" y="320">T</text>
+    <circle class="terminal" cx="1280" cy="390" r="25"/><text class="letter" x="1280" y="390">Y</text>
+  </g>
+
+  <g class="pair">
+    <text x="175" y="458">NO</text><text x="345" y="458">IN</text><text x="515" y="458">GN</text>
+    <text x="685" y="458">AP</text><text x="855" y="458">AS</text><text x="1025" y="458">ST</text><text x="1195" y="458">ET</text>
+  </g>
+
+  <text x="700" y="515" class="explain">Orange circles are forced to match on both sides: N · A · S · T</text>
+  <text x="700" y="546" class="explain">The two blue N circles in INNG match different neighbours; continue from the final T through NETY to the red endpoint Y.</text>
+  <text x="700" y="625" class="result">REJECTED: N A S T + Y = NASTY</text>
+  <text x="700" y="680" class="sub" text-anchor="middle">User feedback disproves this extraction; retain only to prevent repetition.</text>
+  <text x="700" y="390" class="rejected" transform="rotate(-12 700 390)">REJECTED</text>
+</svg>

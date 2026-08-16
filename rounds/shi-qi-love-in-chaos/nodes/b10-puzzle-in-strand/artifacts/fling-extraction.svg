@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="640" viewBox="0 0 1400 640">
+  <rect width="1400" height="640" fill="#fbf7ef"/>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; fill: #20242b; }
+    .title { font-size: 32px; font-weight: 700; }
+    .subtitle { font-size: 19px; font-weight: 600; fill: #39414d; }
+    .code { font-family: Consolas, monospace; font-size: 22px; font-weight: 700; }
+    .small { font-size: 15px; fill: #5a6370; }
+    .token { font-family: Consolas, monospace; font-size: 25px; font-weight: 700; fill: #0f5c5e; }
+    .answer { font-family: Consolas, monospace; font-size: 48px; font-weight: 800; fill: #9b3d25; }
+    .box { fill: #fff; stroke: #39414d; stroke-width: 2; rx: 9; }
+    .target { fill: #fff2d9; stroke: #9b3d25; stroke-width: 3; rx: 9; }
+    .edge { stroke: #0f5c5e; stroke-width: 4; fill: none; stroke-linecap: round; }
+    .guide { stroke: #b5a995; stroke-width: 2; fill: none; }
+    .arrow { stroke: #9b3d25; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9b3d25"/>
+    </marker>
+  </defs>
+
+  <text x="700" y="46" text-anchor="middle" class="title">REJECTED route: FLING</text>
+  <text x="700" y="78" text-anchor="middle" class="small">The lexical ON / ING / PASTE split loses the circles' occurrence information</text>
+
+  <text x="48" y="120" class="subtitle">1. Unique order (up to whole-chain reversal)</text>
+  <g transform="translate(45 142)">
+    <g transform="translate(0 0)"><rect class="target" width="145" height="76"/><text x="72" y="29" text-anchor="middle" class="small">B4 · target FL</text><text x="72" y="59" text-anchor="middle" class="code">FL|NO</text></g>
+    <g transform="translate(172 0)"><rect class="box" width="145" height="76"/><text x="72" y="29" text-anchor="middle" class="small">B2</text><text x="72" y="59" text-anchor="middle" class="code">BINO</text></g>
+    <g transform="translate(344 0)"><rect class="box" width="145" height="76"/><text x="72" y="29" text-anchor="middle" class="small">B5</text><text x="72" y="59" text-anchor="middle" class="code">INGN</text></g>
+    <g transform="translate(516 0)"><rect class="box" width="145" height="76"/><text x="72" y="29" text-anchor="middle" class="small">B1</text><text x="72" y="59" text-anchor="middle" class="code">APGN</text></g>
+    <g transform="translate(688 0)"><rect class="box" width="145" height="76"/><text x="72" y="29" text-anchor="middle" class="small">B7</text><text x="72" y="59" text-anchor="middle" class="code">PAMS</text></g>
+    <g transform="translate(860 0)"><rect class="box" width="145" height="76"/><text x="72" y="29" text-anchor="middle" class="small">B3</text><text x="72" y="59" text-anchor="middle" class="code">CATS</text></g>
+    <g transform="translate(1032 0)"><rect class="box" width="145" height="76"/><text x="72" y="29" text-anchor="middle" class="small">B8</text><text x="72" y="59" text-anchor="middle" class="code">STRE</text></g>
+    <g transform="translate(1204 0)"><rect class="box" width="145" height="76"/><text x="72" y="29" text-anchor="middle" class="small">B6 · NY check</text><text x="72" y="59" text-anchor="middle" class="code">NEYT</text></g>
+    <path class="guide" d="M145 38H172 M317 38H344 M489 38H516 M661 38H688 M833 38H860 M1005 38H1032 M1177 38H1204"/>
+    <text x="158" y="29" text-anchor="middle" class="small">NO</text>
+    <text x="330" y="29" text-anchor="middle" class="small">IN</text>
+    <text x="502" y="29" text-anchor="middle" class="small">GN</text>
+    <text x="674" y="29" text-anchor="middle" class="small">AP</text>
+    <text x="846" y="29" text-anchor="middle" class="small">AS</text>
+    <text x="1018" y="29" text-anchor="middle" class="small">ST</text>
+    <text x="1190" y="29" text-anchor="middle" class="small">ET</text>
+  </g>
+
+  <text x="48" y="282" class="subtitle">2. Overlap adjacent pairs on their repeated letter</text>
+  <g transform="translate(75 310)">
+    <g transform="translate(0 0)">
+      <circle cx="35" cy="35" r="23" class="box"/><text x="35" y="43" text-anchor="middle" class="code">O</text>
+      <circle cx="125" cy="35" r="23" class="box"/><text x="125" y="43" text-anchor="middle" class="code">N</text>
+      <path class="edge" d="M58 35H102"/><text x="80" y="90" text-anchor="middle" class="token">ON</text>
+    </g>
+    <g transform="translate(300 0)">
+      <circle cx="35" cy="35" r="23" class="box"/><text x="35" y="43" text-anchor="middle" class="code">I</text>
+      <circle cx="125" cy="35" r="23" class="box"/><text x="125" y="43" text-anchor="middle" class="code">N</text>
+      <circle cx="215" cy="35" r="23" class="box"/><text x="215" y="43" text-anchor="middle" class="code">G</text>
+      <path class="edge" d="M58 35H102 M148 35H192"/><text x="125" y="90" text-anchor="middle" class="token">ING</text>
+    </g>
+    <g transform="translate(680 0)">
+      <path class="edge" d="M35 35H155H275H395H515"/>
+      <circle cx="35" cy="35" r="23" class="box"/><text x="35" y="43" text-anchor="middle" class="code">P</text>
+      <circle cx="155" cy="35" r="23" class="box"/><text x="155" y="43" text-anchor="middle" class="code">A</text>
+      <circle cx="275" cy="35" r="23" class="box"/><text x="275" y="43" text-anchor="middle" class="code">S</text>
+      <circle cx="395" cy="35" r="23" class="box"/><text x="395" y="43" text-anchor="middle" class="code">T</text>
+      <circle cx="515" cy="35" r="23" class="box"/><text x="515" y="43" text-anchor="middle" class="code">E</text>
+      <text x="275" y="90" text-anchor="middle" class="token">PASTE</text>
+    </g>
+  </g>
+
+  <path class="arrow" d="M1260 440H185"/>
+  <text x="720" y="428" text-anchor="middle" class="small">read the word blocks right-to-left</text>
+
+  <text x="700" y="505" text-anchor="middle" class="code">PASTE  ING  ON  FL</text>
+  <text x="700" y="555" text-anchor="middle" class="code">FL + ING</text>
+  <text x="700" y="615" text-anchor="middle" class="answer">REJECTED: FLING</text>
+</svg>

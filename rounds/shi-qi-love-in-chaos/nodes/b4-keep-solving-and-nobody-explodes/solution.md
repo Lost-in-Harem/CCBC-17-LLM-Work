@@ -10,7 +10,7 @@ feeders:
 status: candidate
 answer: MENU
 confidence: medium
-summary: 当前最强候选仍为 `MENU`：暂定七格给出 `396:5464`，索引 `CHARLES / SKY GARDEN / SANTOS / SERUM RAKER / FAKER / MORDEN'S BATTLESHIP / MEDUSA` 得 `ANS:MENU`。本轮确认第 6 图名称、Mission 6 与 Metal Slug 3D 同时闭合 `(6,3)`；第 7 图的 Dota 6.78 页面也呼应口述 `r6c7=8`。`EASY` 路线存在字段混搭及第 5 项索引错误，暂降级；第 1–3 图仍缺原图直证。
+summary: 当前最强候选仍为 `MENU`：暂定七格给出 `396:5464`，索引 `CHARLES / SKY GARDEN / SANTOS / SERUM RAKER / FAKER / MORDEN'S BATTLESHIP / MEDUSA` 得 `ANS:MENU`。本轮确认第 6 图名称、Mission 6 与 Metal Slug 3D 同时闭合 `(6,3)`；第 7 图的 Dota 6.78 页面也呼应口述 `r6c7=8`。SingleFile 清单没有题图，三组有界 Whisper 复核没有新增坐标或专名，因此 `MENU` 仍是中等置信 candidate，尚未提交；第 1–3 图、彩色格坐标和第 4/5/7 图仍需原图直证。
 updated: 2026-08-16
 ---
 
@@ -329,6 +329,22 @@ ANS:MENU
   候选（第五个 API 命中 *War Machine* 是空格造成的正则假阳性）。
   这已达到本实验族上限，不再继续扩大检索；下一步只能拿原图比牌面。
 
+### 本轮 SingleFile 与音频复核（2026-08-16）
+
+- 解包后的 `work/singlefilez/manifest.json` 只有 `index.html`、KaTeX
+  字体、CSS、`favicon.ico` 和一个头像/图标 `61.webp`；`images/` 中没有
+  数独截图或七张小图。故本地保存页不能用来确认任何彩色格坐标或图片专名。
+- 按 [`work/audio_asr_experiment.md`](work/audio_asr_experiment.md) 的预先
+  界限，使用 `base` 模型完成三组且仅三组配置：`full-default`、
+  `full-nocontext`、`critical-channels`（左右声道各复核彩色、牌面、游戏
+  片段）。结果见 [`work/asr/whisper_results.json`](work/asr/whisper_results.json)。
+  三组重复了“第五行第三列为 9 / 第六行第七列为 8”、蓝色相邻格、蓝色
+  万智牌/飞行神话生物、O2 体育馆选手、履带陆行舰、绿色女角色等概括，
+  但没有稳定恢复新的坐标、牌名、人物名或游戏名；左右声道也没有分歧信号。
+- 因此 ASR 假设族已达到三次无新事实的停止条件。继续换模型或无界搜词只会
+  放大幻听，不能提高 `MENU` 的可复现性；当前缺口只能由原题截图/页面重新
+  提供后，以图像比对解决。
+
 ## Submission history
 
 | Date | Candidate | Result | Note |
@@ -439,7 +455,8 @@ ANS:MENU
 
 ## Next action
 
-请人工把第 4、6、7 张题图依次与本文的 *Serum Raker*、
+补充一张包含完整彩色数独和七张小图的原题截图；若暂时只能人工查看原页，
+请把第 4、6、7 张题图依次与本文的 *Serum Raker*、
 *Morden's Battleship*、*Medusa* 对照，尤其核对牌名/`3/2`、战舰正面六管
 机枪与《Metal Slug 3D》造型、Medusa 蛇发与右侧四技能图标；再核对第 1–3
 图是否真是 Charles、Sky Garden、Santos。

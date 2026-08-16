@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#fbf6eb"/>
+  <style>
+    .title { font: 700 28px Georgia, serif; fill: #172033; }
+    .sub { font: 600 18px Arial, sans-serif; fill: #334155; }
+    .mono { font: 700 21px Consolas, monospace; fill: #172033; }
+    .small { font: 15px Arial, sans-serif; fill: #475569; }
+    .cell { font: 700 22px Consolas, monospace; text-anchor: middle; dominant-baseline: middle; fill: #172033; }
+    .grid { stroke: #94a3b8; stroke-width: 1.5; fill: none; }
+  </style>
+
+  <text x="45" y="46" class="title">B10 candidate extraction: ION</text>
+  <text x="45" y="82" class="sub">Overlap edges, left to right</text>
+  <text x="300" y="82" class="mono">NO / IN / GN / AP / AS / ST / ET</text>
+  <text x="45" y="116" class="sub">Join adjacent edge-trails, then reverse block order</text>
+  <text x="455" y="116" class="mono">FL | ON | ING | PASTE  →  PASTE ING ON FL</text>
+
+  <text x="500" y="178" class="sub">Execute the instruction on Board 4</text>
+  <text x="500" y="216" class="mono">WAVERING − ING = WAVER</text>
+  <text x="500" y="254" class="mono">FLUCTUATION − ION + ING = FLUCTUATING</text>
+  <text x="500" y="292" class="small">The fixed themed paths below have exactly one noncrossing 45-cell cover.</text>
+  <text x="500" y="330" class="small">Blue: WAVER. Orange: FLUCTUATING. Purple: the pasted NG cells.</text>
+
+  <!-- Board 4 grid, origin (60,160), 58px cells. -->
+  <rect x="60" y="160" width="348" height="464" rx="8" fill="#ffffff" stroke="#64748b" stroke-width="2"/>
+  <path class="grid" d="M118 160V624 M176 160V624 M234 160V624 M292 160V624 M350 160V624
+                         M60 218H408 M60 276H408 M60 334H408 M60 392H408 M60 450H408 M60 508H408 M60 566H408"/>
+
+  <!-- Cells used by the two changed words. -->
+  <polyline points="147,595 205,595 263,537 263,595 321,595" fill="none" stroke="#2563eb" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.42"/>
+  <polyline points="89,421 147,363 147,421 205,363 205,305 263,363 263,421 263,479 321,479 321,537 379,537" fill="none" stroke="#ea580c" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.42"/>
+  <circle cx="321" cy="537" r="23" fill="#a855f7" opacity="0.32"/>
+  <circle cx="379" cy="537" r="23" fill="#a855f7" opacity="0.32"/>
+
+  <!-- The three cells left by the unique 45-cell cover. -->
+  <rect x="351" y="393" width="56" height="56" rx="9" fill="#86efac" stroke="#15803d" stroke-width="3"/>
+  <rect x="351" y="451" width="56" height="56" rx="9" fill="#86efac" stroke="#15803d" stroke-width="3"/>
+  <rect x="351" y="567" width="56" height="56" rx="9" fill="#86efac" stroke="#15803d" stroke-width="3"/>
+
+  <!-- Board letters. -->
+  <g class="cell">
+    <text x="89" y="189">I</text><text x="147" y="189">A</text><text x="205" y="189">U</text><text x="263" y="189">T</text><text x="321" y="189">T</text><text x="379" y="189">I</text>
+    <text x="89" y="247">R</text><text x="147" y="247">C</text><text x="205" y="247">N</text><text x="263" y="247">M</text><text x="321" y="247">A</text><text x="379" y="247">O</text>
+    <text x="89" y="305">A</text><text x="147" y="305">E</text><text x="205" y="305">T</text><text x="263" y="305">I</text><text x="321" y="305">F</text><text x="379" y="305">N</text>
+    <text x="89" y="363">V</text><text x="147" y="363">L</text><text x="205" y="363">C</text><text x="263" y="363">U</text><text x="321" y="363">H</text><text x="379" y="363">T</text>
+    <text x="89" y="421">F</text><text x="147" y="421">U</text><text x="205" y="421">Y</text><text x="263" y="421">A</text><text x="321" y="421">S</text><text x="379" y="421">N</text>
+    <text x="89" y="479">I</text><text x="147" y="479">T</text><text x="205" y="479">L</text><text x="263" y="479">T</text><text x="321" y="479">I</text><text x="379" y="479">O</text>
+    <text x="89" y="537">D</text><text x="147" y="537">U</text><text x="205" y="537">F</text><text x="263" y="537">V</text><text x="321" y="537">N</text><text x="379" y="537">G</text>
+    <text x="89" y="595">I</text><text x="147" y="595">W</text><text x="205" y="595">A</text><text x="263" y="595">E</text><text x="321" y="595">R</text><text x="379" y="595">I</text>
+  </g>
+
+  <path d="M450 606 V410 M450 410 l-10 18 M450 410 l10 18" fill="none" stroke="#15803d" stroke-width="4" stroke-linecap="round"/>
+  <text x="475" y="595" class="mono" fill="#15803d">I</text>
+  <text x="475" y="479" class="mono" fill="#15803d">O</text>
+  <text x="475" y="421" class="mono" fill="#15803d">N</text>
+  <text x="500" y="390" class="sub" fill="#15803d">Read the one leftover column upward: ION</text>
+
+  <rect x="500" y="435" width="635" height="150" rx="14" fill="#ecfdf5" stroke="#15803d" stroke-width="2"/>
+  <text x="530" y="478" class="sub">Exact path transfer</text>
+  <text x="530" y="518" class="small">The new FLUCTUATING path keeps FLUCTUATI from FLUCTUATION,</text>
+  <text x="530" y="548" class="small">then takes the N,G cells formerly at the end of WAVERING.</text>
+  <text x="530" y="578" class="small">The unused donor I plus the displaced target O,N are the green column.</text>
+
+  <text x="500" y="635" class="mono" style="font-size:32px; fill:#15803d">ANSWER CANDIDATE: ION</text>
+  <text x="500" y="670" class="small">Reproduce: python artifacts/verify_solution.py</text>
+</svg>

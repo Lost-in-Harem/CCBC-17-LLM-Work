@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="720" viewBox="0 0 1400 720">
+  <rect width="1400" height="720" fill="#fbf7ef"/>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; fill: #20242b; }
+    .title { font-size: 30px; font-weight: 700; }
+    .subtitle { font-size: 19px; font-weight: 600; fill: #39414d; }
+    .code { font: 700 22px Consolas, monospace; }
+    .small { font-size: 15px; fill: #5a6370; }
+    .token { font: 700 25px Consolas, monospace; fill: #0f5c5e; }
+    .answer { font: 800 42px Consolas, monospace; fill: #9b3d25; }
+    .box { fill: #ffffff; stroke: #39414d; stroke-width: 2; rx: 9; }
+    .edge { stroke: #0f5c5e; stroke-width: 4; fill: none; stroke-linecap: round; }
+    .guide { stroke: #b5a995; stroke-width: 2; fill: none; }
+  </style>
+
+  <text x="700" y="43" text-anchor="middle" class="title">B10 REJECTED route: FLYING</text>
+  <text x="700" y="75" text-anchor="middle" class="small">User rejected 2026-08-16; retained only to prevent repetition</text>
+
+  <text x="55" y="115" class="subtitle">1. Unique ×2 chain</text>
+  <g transform="translate(55 135)">
+    <g transform="translate(0 0)"><rect class="box" width="135" height="68"/><text x="67" y="28" text-anchor="middle" class="small">B4</text><text x="67" y="55" text-anchor="middle" class="code">FLNO</text></g>
+    <g transform="translate(170 0)"><rect class="box" width="135" height="68"/><text x="67" y="28" text-anchor="middle" class="small">B2</text><text x="67" y="55" text-anchor="middle" class="code">BINO</text></g>
+    <g transform="translate(340 0)"><rect class="box" width="135" height="68"/><text x="67" y="28" text-anchor="middle" class="small">B5</text><text x="67" y="55" text-anchor="middle" class="code">INGN</text></g>
+    <g transform="translate(510 0)"><rect class="box" width="135" height="68"/><text x="67" y="28" text-anchor="middle" class="small">B1</text><text x="67" y="55" text-anchor="middle" class="code">APGN</text></g>
+    <g transform="translate(680 0)"><rect class="box" width="135" height="68"/><text x="67" y="28" text-anchor="middle" class="small">B7</text><text x="67" y="55" text-anchor="middle" class="code">PAMS</text></g>
+    <g transform="translate(850 0)"><rect class="box" width="135" height="68"/><text x="67" y="28" text-anchor="middle" class="small">B3</text><text x="67" y="55" text-anchor="middle" class="code">CATS</text></g>
+    <g transform="translate(1020 0)"><rect class="box" width="135" height="68"/><text x="67" y="28" text-anchor="middle" class="small">B8</text><text x="67" y="55" text-anchor="middle" class="code">STRE</text></g>
+    <g transform="translate(1190 0)"><rect class="box" width="135" height="68"/><text x="67" y="28" text-anchor="middle" class="small">B6</text><text x="67" y="55" text-anchor="middle" class="code">NEYT</text></g>
+    <path class="guide" d="M135 34H170 M305 34H340 M475 34H510 M645 34H680 M815 34H850 M985 34H1020 M1155 34H1190"/>
+    <text x="152" y="25" text-anchor="middle" class="small">NO</text><text x="322" y="25" text-anchor="middle" class="small">IN</text>
+    <text x="492" y="25" text-anchor="middle" class="small">GN</text><text x="662" y="25" text-anchor="middle" class="small">AP</text>
+    <text x="832" y="25" text-anchor="middle" class="small">AS</text><text x="1002" y="25" text-anchor="middle" class="small">ST</text>
+    <text x="1172" y="25" text-anchor="middle" class="small">ET</text>
+  </g>
+
+  <text x="55" y="260" class="subtitle">2. Use every shared-pair edge once</text>
+  <g transform="translate(95 282)">
+    <circle cx="90" cy="38" r="22" class="box"/><text x="90" y="46" text-anchor="middle" class="code">O</text>
+    <circle cx="185" cy="38" r="22" class="box"/><text x="185" y="46" text-anchor="middle" class="code">N</text>
+    <circle cx="90" cy="113" r="22" class="box"/><text x="90" y="121" text-anchor="middle" class="code">I</text>
+    <circle cx="280" cy="113" r="22" class="box"/><text x="280" y="121" text-anchor="middle" class="code">G</text>
+    <path class="edge" d="M112 38H163 M105 100L168 53 M207 53L265 100"/>
+    <text x="185" y="157" text-anchor="middle" class="token">ON + ING</text>
+  </g>
+  <text x="435" y="360" class="token">+</text>
+  <g transform="translate(490 320)">
+    <path class="edge" d="M35 38H155H275H395H515"/>
+    <g class="code">
+      <circle cx="35" cy="38" r="23" class="box"/><text x="35" y="46" text-anchor="middle">P</text>
+      <circle cx="155" cy="38" r="23" class="box"/><text x="155" y="46" text-anchor="middle">A</text>
+      <circle cx="275" cy="38" r="23" class="box"/><text x="275" y="46" text-anchor="middle">S</text>
+      <circle cx="395" cy="38" r="23" class="box"/><text x="395" y="46" text-anchor="middle">T</text>
+      <circle cx="515" cy="38" r="23" class="box"/><text x="515" y="46" text-anchor="middle">E</text>
+    </g>
+    <text x="275" y="95" text-anchor="middle" class="token">PASTE</text>
+  </g>
+  <text x="1090" y="360" class="token">⇒ PASTE ING ON</text>
+
+  <text x="55" y="480" class="subtitle">3. Unsupported step: add the opposite-end Y, then use an SCS</text>
+  <text x="95" y="525" class="code">FLNO − NO = FL</text>
+  <text x="440" y="525" class="code">NEYT − ET = NY → YN</text>
+  <text x="930" y="525" class="code">overlap trail = ING</text>
+
+  <g transform="translate(385 565)">
+    <text x="0" y="0" class="code" fill="#5a6370">FL----</text>
+    <text x="0" y="35" class="code" fill="#5a6370">--Y-N-</text>
+    <text x="0" y="70" class="code" fill="#5a6370">---ING</text>
+    <path class="guide" d="M190 -8H310"/>
+    <polygon points="310,-8 296,-16 296,0" fill="#b5a995"/>
+    <text x="350" y="45" class="answer">FLYING</text>
+  </g>
+  <text x="700" y="695" text-anchor="middle" class="small">REJECTED: an occurrence-blind edge split suggested PASTE ING ON FL; neither that split nor adding Y/SCS is licensed</text>
+</svg>
