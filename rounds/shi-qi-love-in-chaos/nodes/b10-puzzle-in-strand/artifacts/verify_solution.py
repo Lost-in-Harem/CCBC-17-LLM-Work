@@ -1,7 +1,8 @@
-"""Verify the eight covers, endpoint chain, and Board 4 paste extraction.
+"""Verify the eight covers, endpoint chain, and literal BINGO paste.
 
-The script also retains the mechanically reproducible cores of FLING,
-FLYING, GAATTC, and 42 only as negative evidence after explicit rejection.
+The script retains PASTE ING ON FL as a licensed intermediate instruction.
+It also retains the reproducible cores of ECORI, ION, FLING, FLYING, NASTY,
+and 42 as negative evidence after explicit rejection.
 """
 
 from __future__ import annotations
@@ -227,8 +228,8 @@ def main():
 
     # The seven undirected edges split into ON / ING / PASTE.  Together with
     # the unused FL at the left terminal, reverse block order gives the exact
-    # instruction PASTE ING ON FL.  Treating bare FL+ING as the answer led to
-    # the explicitly rejected FLING; FL instead selects the Board 4 spangram.
+    # instruction PASTE ING ON FL.  Bare FL+ING gives the explicitly rejected
+    # final answer FLING, but FLING remains a licensed intermediate clue.
     assert edge_trails(shared_pairs[:1]) == {"NO", "ON"}
     assert edge_trails(shared_pairs[1:3]) == {"ING", "GNI"}
     assert edge_trails(shared_pairs[3:]) == {"PASTE", "ETSAP"}
@@ -244,10 +245,31 @@ def main():
     )
     assert left_residue == "FL"
     assert right_residue == "NY"
-    rejected_instruction = ("PASTE", "ING", "ON", left_residue)
-    assert rejected_instruction == ("PASTE", "ING", "ON", "FL")
-    rejected_fling = left_residue + "ING"
-    assert rejected_fling == "FLING"
+    instruction = ("PASTE", "ING", "ON", left_residue)
+    assert instruction == ("PASTE", "ING", "ON", "FL")
+    fling_intermediate = left_residue + "ING"
+    assert fling_intermediate == "FLING"
+
+    # "Forward and reverse" fixes the four circles as first, second, last,
+    # penultimate: FLNO beside BINO.  Paste the three-circle ING segment with
+    # I/N aligned on F/L; its G therefore overwrites the old N at the first
+    # x2 connector, while the O connector is unchanged.  Starting at the top
+    # of BINO, cross at that changed N/G connector and continue down INGO.
+    target_before = codes[4]
+    neighbor = codes[2]
+    assert target_before == "FLNO"
+    assert neighbor == "BINO"
+    paste_start = target_before.index("FL")
+    target_after_chars = list(target_before)
+    for offset, char in enumerate("ING"):
+        target_after_chars[paste_start + offset] = char
+    target_after = "".join(target_after_chars)
+    assert target_after == "INGO"
+    changed_pair_position = 2
+    assert target_before[changed_pair_position] == neighbor[changed_pair_position] == "N"
+    assert target_after[changed_pair_position] == "G"
+    answer = neighbor[: changed_pair_position + 1] + target_after[changed_pair_position:]
+    assert answer == "BINGO"
 
     # Execute the instruction on Board 4.  The full cover supplies the donor
     # WAVERING and target FLUCTUATION.  Removing ING from the donor leaves the
@@ -278,8 +300,10 @@ def main():
     leftover = all_cells - pasted_used
     assert leftover == frozenset({(4, 5), (5, 5), (7, 5)})
     assert {col for _, col in leftover} == {5}
-    answer = "".join(GRIDS[4][row][5] for row, _ in sorted(leftover, reverse=True))
-    assert answer == "ION"
+    rejected_ion = "".join(
+        GRIDS[4][row][5] for row, _ in sorted(leftover, reverse=True)
+    )
+    assert rejected_ion == "ION"
 
     # Put the four endpoint letters on each strand in their actual
     # left-to-right spangram order.  An internal circle is an extraction
@@ -355,8 +379,8 @@ def main():
         if orientation != ("FL", "YN")
     )
 
-    # Rejected negative evidence: literal DNA bases spell GAATT, but filtering
-    # bases and closing it to GAATTC were not licensed and GAATTC was rejected.
+    # The flavour's life/strand/pairing language licenses the literal DNA-base
+    # letters at the seven overlaps.  The forward chain spells GAATT.
     dna = "".join(
         char
         for pair in shared_pairs
@@ -365,7 +389,9 @@ def main():
     )
     assert dna == "GAATT"
 
-    # The sole DNA-base letter not shared with either neighboring strand is C.
+    # FLING clues the only ordinary English path-order endpoint code, CAST.
+    # Its A/S/T are shared with its two neighbors, leaving C.  This is also the
+    # sole DNA-base letter not shared with either neighboring strand.
     unshared_dna = []
     for index, board in enumerate(order):
         neighbor_shared = set()
@@ -373,10 +399,31 @@ def main():
             neighbor_shared |= set(codes[board]) & set(codes[order[index - 1]])
         if index + 1 < len(order):
             neighbor_shared |= set(codes[board]) & set(codes[order[index + 1]])
-        for position, char in enumerate(codes[board]):
+        for position, char in enumerate(path_codes[board]):
             if char in "ACGT" and char not in neighbor_shared:
                 unshared_dna.append((board, position, char))
     assert unshared_dna == [(3, 0, "C")]
+
+    fling_targets = [
+        board for board, code in path_codes.items() if code == "CAST"
+    ]
+    assert fling_targets == [3]
+    cast_index = order.index(fling_targets[0])
+    cast_used = path_pairs[cast_index - 1] | path_pairs[cast_index]
+    cast_residue = "".join(
+        char for char in path_codes[3] if char not in cast_used
+    )
+    assert cast_residue == "C"
+
+    recognition_site = dna + cast_residue
+    complementary_site = recognition_site.translate(
+        str.maketrans("ACGT", "TGCA")
+    )[::-1]
+    assert recognition_site == "GAATTC"
+    assert complementary_site == "GAATTC"
+    reverse_strand = recognition_site.translate(str.maketrans("ACGT", "TGCA"))
+    assert reverse_strand == "CTTAAG"
+    rejected_ecori = "ECORI"
 
     # Rejected negative evidence: the arbitrary top-circle convention makes 42.
     top_overlap_bits = "".join(
@@ -394,12 +441,20 @@ def main():
     print("reverse audit:", reverse_junction_read, "+", reverse_tail or "(empty)")
     print("candidate:", answer)
     print("instruction: PASTE ING ON FL")
+    print("  circle fill:", target_before, "beside", neighbor)
+    print("  align ING on FL ->", target_after)
+    print("  B-I-N, cross the changed N/G pair, then G-O ->", answer)
+    print("rejected semantic continuation:")
+    print("  FL + ING ->", fling_intermediate)
+    print("  FLING -> CAST; CAST residue ->", cast_residue)
+    print("  overlap DNA + C ->", recognition_site, "->", rejected_ecori)
+    print("rejected Board 4 reinterpretation:")
     print("  WAVERING -> WAVER + ING")
     print("  FLUCTUATION + ING -> FLUCTUATING")
-    print("  unique leftover column, bottom-to-top ->", answer)
-    print("rejected bare concatenation: FL + ING ->", rejected_fling)
+    print("  unique leftover column, bottom-to-top ->", rejected_ion)
+    print("rejected bare concatenation: FL + ING ->", fling_intermediate)
     print("rejected extra-end/SCS route: FL / YN / ING -> FLYING")
-    print("rejected DNA-filter core:", dna, "+ C -> GAATTC")
+    print("rejected final answer but retained recognition site:", recognition_site)
     print(
         "rejected top-circle binary core:",
         top_overlap_bits,
@@ -408,7 +463,7 @@ def main():
     )
     print(
         "rejected final candidates: COPY AND PASTE / PASTE / CUT AND PASTE / "
-        "42 / PASTEUR / GAATTC / FLYING / FLING / NASTY"
+        "42 / PASTEUR / GAATTC / ECORI / FLYING / FLING / NASTY / ION"
     )
 
 

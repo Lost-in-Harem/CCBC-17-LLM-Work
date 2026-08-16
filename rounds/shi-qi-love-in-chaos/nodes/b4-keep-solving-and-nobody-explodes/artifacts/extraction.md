@@ -31,10 +31,10 @@ names (uppercase, spaces and punctuation deleted):
 
 | # / color | Picture candidate | Coordinate evidence | Digit | Index result | Confidence |
 | --- | --- | --- | ---: | --- | --- |
-| 1 / red | King **Charles** | `r1c4` is reconstructed, not heard | 3 | `CHARLES[3]=A` | weak until portrait comparison |
-| 2 / orange | **Sky Garden** rooftop | `r2c4` is reconstructed, not heard | 9 | `SKYGARDEN[9]=N` | weak until building comparison |
-| 3 / yellow | Port of **Santos** | `r3c4` is reconstructed, not heard | 6 | `SANTOS[6]=S` | weak until port comparison |
-| 4 / green | **Serum Raker** Magic card | card P/T is directly `3/2`, hence `r3c2=5` | 5 | `SERUMRAKER[5]=M` | strong candidate |
+| 1 / red | King **Charles** | `r1c4` is reconstructed, not heard | 3 | `CHARLES[3]=A` | weak semantic candidate |
+| 2 / orange | **Sky Garden** rooftop | `r2c4` is reconstructed, not heard | 9 | `SKYGARDEN[9]=N` | weak semantic candidate |
+| 3 / yellow | Port of **Santos** | `r3c4` is reconstructed, not heard | 6 | `SANTOS[6]=S` | weak semantic candidate |
+| 4 / green | **Serum Raker** Magic card | card P/T is directly `3/2`, hence `r3c2=5` | 5 | `SERUMRAKER[5]=M` | strong semantic candidate |
 | 5 / cyan | **Faker** lifting the trophy at the O2 | picture 5 + O2 suggests `r5c2=4` | 4 | `FAKER[4]=E` | identity strong; coordinate inferred |
 | 6 / blue | **Morden's Battleship** from *Metal Slug 3D* | its source identifies it as the Mission 6 boss of a `3D` game, hence `r6c3`; this is also the lower spoken blue cell | 6 | `MORDENSBATTLESHIP[6]=N` | strong coordinate/name loop |
 | 7 / purple | Dota **Medusa** | the matching old guide is explicitly for Dota `6.78`, echoing the spoken given `r6c7=8`; the purple extraction cell is immediately right at `r6c8` | 4 | `MEDUSA[4]=U` | strong candidate |
@@ -69,19 +69,20 @@ Its printed power/toughness is `3/2`, so it naturally identifies the Sudoku cell
 
 *Dream Strix* and *Shimmerwing Chimera* are remaining `3/2` alternatives with M
 as the fifth letter, but *Serum Raker* best matches the uncertain audio impression
-of a bat-like blue flying creature.  Only comparison with the original card can
-choose among them.
+of a bat-like blue flying creature. The audio-only route cannot uniquely choose
+among them; the ranking is based on semantic fit and the indexing loop.
 
 ## Unresolved evidence
 
 - The saved SingleFile page contains the title, flavor text, and MP3, but not the
-  Sudoku screenshot or seven source pictures.
+  Sudoku screenshot or seven source pictures; this is intentional for the
+  audio-only version of the puzzle, not a missing local download.
 - Only the blue and purple positions are directly recoverable from the recording.
   The red/orange/yellow coordinates, and the `(5,2)` reading for Faker/O2, remain
   hypotheses.
 - Charles, Sky Garden, and Santos are not uniquely determined by the broad audio
-  descriptions.  `ANS` is a useful fit, but is not independent proof of those
-  names.
+  descriptions. `ANS` is a useful fit, but is not independent proof of those
+  names; this is the principal semantic ambiguity of an audio-only solve.
 - Morden's Battleship is independently documented as the Mission 6 boss of
   *Metal Slug 3D*, so its source supplies `(6,3)` while its normalized proper
   name supplies the extracted N.  Cocoon remains a close visual alternative
@@ -96,8 +97,9 @@ choose among them.
   Richard/Shunchang/Luzhou coordinate sources with Charles/Sky Garden/Santos
   labels from different candidate pictures.
 
-Therefore `MENU` is a medium-confidence candidate for manual visual checking,
-not a confirmed answer.
+Therefore `MENU` is a medium-confidence candidate for semantic checking or a
+user-authorized submission, not a confirmed answer. No screenshot is required
+to continue this route.
 
 ## Rejected alternatives
 

@@ -10,7 +10,7 @@ feeders:
 status: candidate
 answer: MENU
 confidence: medium
-summary: 当前最强候选仍为 `MENU`：暂定七格给出 `396:5464`，索引 `CHARLES / SKY GARDEN / SANTOS / SERUM RAKER / FAKER / MORDEN'S BATTLESHIP / MEDUSA` 得 `ANS:MENU`。本轮确认第 6 图名称、Mission 6 与 Metal Slug 3D 同时闭合 `(6,3)`；第 7 图的 Dota 6.78 页面也呼应口述 `r6c7=8`。SingleFile 清单没有题图，三组有界 Whisper 复核没有新增坐标或专名，因此 `MENU` 仍是中等置信 candidate，尚未提交；第 1–3 图、彩色格坐标和第 4/5/7 图仍需原图直证。
+summary: 当前最强候选仍为 `MENU`：暂定七格给出 `396:5464`，索引 `CHARLES / SKY GARDEN / SANTOS / SERUM RAKER / FAKER / MORDEN'S BATTLESHIP / MEDUSA` 得 `ANS:MENU`。本题本来就只靠语音猜图，SingleFile 没有题图并非缺失；公开资料复核了后四项中的 `3/2`、`Mission 6 + Metal Slug 3D`、Dota `6.78` 和四技能图标。`MENU` 仍是中等置信 candidate，尚未提交；剩余风险是宽泛描述导致的对象/坐标歧义。
 updated: 2026-08-16
 ---
 
@@ -40,14 +40,15 @@ Mission **6**，闭合 `r6c3=6`，而 `MORDENSBATTLESHIP[6]=N`。第 7 图
 Dota `6.78`，与录音给定 `r6c7=8` 交叉验证；紫格 `r6c8=4` 后有
 `MEDUSA[4]=U`。后三项现在都同时保留具体专名和数值来源。
 
-候选仍只有**中等置信**，不能当作已确认答案：保存下来的 SingleFile 页面
-没有舍友屏幕里的七张原图；第 1–3 图的 `CHARLES / SKY GARDEN / SANTOS`
-以及红橙黄三格坐标仍是待比对识别，第 5 图虽几乎可认作 Faker，`r5c2`
-也尚缺原图直接显示。曾考虑的 `ANS:EASY` 不能替代这些缺口：它把
+候选仍只有**中等置信**，不能当作已确认答案：本题故意只给语音，第一至
+三图的 `CHARLES / SKY GARDEN / SANTOS` 以及红橙黄三格坐标是从描述、
+编号模式和目标格式综合得到的候选，第 5 图虽几乎可认作 Faker，`r5c2`
+仍是机制推断。没有“等待原图”的后续步骤。曾考虑的 `ANS:EASY` 不能替代
+这些缺口：它把
 Richard/Shunchang/Luzhou 的编号来源和 Charles/Sky Garden/Santos 的名称
 混在一起，而且 `WORLDCHAMPION[9]` 实为 M，不是 A。下文把完整录音、
-七张对照图、每步索引和风险全部列出，人工确认这些外形后才建议尝试提交
-**`MENU`**。
+七张语音检索候选、每步索引和风险全部列出；若用户愿意承担一次提交成本，
+当前最值得测试的答案是 **`MENU`**。
 
 ## 完整录音文字
 
@@ -125,13 +126,13 @@ Richard/Shunchang/Luzhou 的编号来源和 Charles/Sky Garden/Santos 的名称
 
 | 色 | 格 | 数字 | 位置证据 |
 | --- | --- | ---: | --- |
-| 红 | `r1c4` | 3 | 当前重建；原音在说出“红色……”后被叠音打断，缺原图直证 |
-| 橙 | `r2c4` | 9 | 当前重建；缺原图直证 |
-| 黄 | `r3c4` | 6 | 当前重建；缺原图直证 |
-| 绿 | `r3c2` | 5 | 第 4 张 *Serum Raker* 牌面直接给 `3/2`；仍需原图确认牌名 |
-| 青 | `r5c2` | 4 | 第 5 图序号 5 与 O2 的 2 构成 `(5,2)`；这是机制推断，不是原音直说 |
-| 蓝 | `r6c3` | 6 | 原音直接固定上下两个蓝格为 `r5c3/r6c3`；当前提取下格 |
-| 紫 | `r6c8` | 4 | 原音直接说给定 `r6c7=8` 的右格为紫色 |
+| 红 | `r1c4` | 3 | 语音未报坐标；当前候选沿用第一图的 `1.4` 编号模式 |
+| 橙 | `r2c4` | 9 | 语音未报坐标；当前候选沿用第二图的 `2.4` 编号模式 |
+| 黄 | `r3c4` | 6 | 语音未报坐标；当前候选沿用第三图的 `3.4` 编号模式 |
+| 绿 | `r3c2` | 5 | 第 4 张牌的 `3/2` 直接给坐标；牌名仍是语音检索候选 |
+| 青 | `r5c2` | 4 | 第 5 图序号 5 与场馆 O2 的 2 构成 `(5,2)`；这是机制推断 |
+| 蓝 | `r6c3` | 6 | 录音明确说 `r5c3=9` 与正下方格同为重复的蓝色；当前图 6 取下格 |
+| 紫 | `r6c8` | 4 | 录音明确说给定 `r6c7=8` 的右格为紫色 |
 
 复现：
 
@@ -157,38 +158,36 @@ extract: 3965464 (r1c4=3 r2c4=9 r3c4=6 r3c2=5 r5c2=4 r6c3=6 r6c8=4)
 
 | # / 色 | 录音中的图 | 当前英文标识 | 索引 | 提取 | 判断 |
 | --- | --- | --- | ---: | --- | --- |
-| 1 / 红 | 某个国王头像 | `CHARLES` | 3 | **A** | 候选；需比对具体国王 |
-| 2 / 橙 | 大楼顶上的露台 | `SKY GARDEN` | 9 | **N** | 候选；需比对建筑外形 |
-| 3 / 黄 | 一个港口 | `SANTOS` | 6 | **S** | 候选；需比对港区布局 |
-| 4 / 绿 | 蓝色万智牌，飞行的神话生物 | `SERUM RAKER` | 5 | **M** | 牌面外形、Flying、`3/2` 均相符；强候选 |
-| 5 / 青 | O2、戴眼镜的亚洲选手举杯 | `FAKER` | 4 | **E** | 强匹配 |
-| 6 / 蓝 | 有履带、地上开的船式游戏建模 | `MORDEN'S BATTLESHIP` | 6 | **N** | *Metal Slug 3D* Mission 6，同时闭合 `(6,3)` |
-| 7 / 紫 | 老式游戏界面中的绿色女角色 | `MEDUSA` | 4 | **U** | Dota 6.78 旧指南与四技能图标相符，并对照 `r6c7=8` |
+| 1 / 红 | 某个国王头像 | `CHARLES` | 3 | **A** | 语音语义候选；第三字母与 `ANS` 前缀闭合 |
+| 2 / 橙 | 大楼顶上的露台 | `SKY GARDEN` | 9 | **N** | 语音语义候选；第九字母与 `ANS` 前缀闭合 |
+| 3 / 黄 | 一个港口 | `SANTOS` | 6 | **S** | 语音语义候选；第六字母与 `ANS` 前缀闭合 |
+| 4 / 绿 | 蓝色万智牌，飞行的神话生物 | `SERUM RAKER` | 5 | **M** | `3/2` 坐标和蓝色 Flying 描述相符；仍有同类牌替代项 |
+| 5 / 青 | O2、戴眼镜的亚洲选手举杯 | `FAKER` | 4 | **E** | O2/奖杯/人物描述的强语义匹配 |
+| 6 / 蓝 | 有履带、地上开的船式游戏建模 | `MORDEN'S BATTLESHIP` | 6 | **N** | *Metal Slug 3D* Mission 6 与重复蓝格下方闭合 |
+| 7 / 紫 | 老式游戏界面中的绿色女角色 | `MEDUSA` | 4 | **U** | Dota 6.78/绿色角色/技能栏描述的强语义匹配 |
 
 ### 1 / 红：Charles 候选
 
 ![1 红：Charles 候选](artifacts/visual/01-charles-candidate.jpg)
 
-人工检查点：王冠、面部角度、服饰和背景。这里只确认 `CHARLES[3]=A` 能
-参与干净提取；保存图是 King Charles III 的代表性候选，不声称已经与
-录音中所见题图一致。若原图不是 Charles，这一项就必须整体推翻，不能为
-了字母 A 改用另一个国王。公开对照：[英国王室加冕肖像](https://www.royal.uk/coronation-portraits)。
+语音检索候选的检查点是王冠、面部角度、服饰和背景。这里只把
+`CHARLES[3]=A` 作为可复现候选，不声称“国王头像”在语音层面能唯一锁定
+Charles；若描述后续指向别的国王，应整体替换该项，而不能为了字母 A 任意
+改名。公开对照：[英国王室加冕肖像](https://www.royal.uk/coronation-portraits)。
 
 ### 2 / 橙：Sky Garden 候选
 
 ![2 橙：Sky Garden 候选](artifacts/visual/02-sky-garden-candidate.jpg)
 
-人工检查点：是否是伦敦 20 Fenchurch Street（“Walkie-Talkie”）顶部的
-公共花园/露台，尤其比较弧形玻璃顶和露台绿化。若原图确是该地点，
-`SKYGARDEN[9]=N`。公开对照：[Sky Garden](https://skygarden.london/)。
+语音检索候选是伦敦 20 Fenchurch Street（“Walkie-Talkie”）顶部的公共
+花园/露台；`SKYGARDEN[9]=N`。公开对照：[Sky Garden](https://skygarden.london/)。
 
 ### 3 / 黄：Santos 港候选
 
 ![3 黄：Santos 港候选](artifacts/visual/03-santos-port-candidate.jpg)
 
-人工检查点：航道两侧连续码头、集装箱堆场、岸线走向。录音只给出“一个
-港口”，因此这一项不能只凭类别认定；若题图是 Port of Santos，
-`SANTOS[6]=S`。公开对照：[Port of Santos](https://www.portodesantos.com.br/en/)。
+语音只给出“一个港口”，因此这一项只能作为语音检索候选；若对象是 Port
+of Santos，`SANTOS[6]=S`。公开对照：[Port of Santos](https://www.portodesantos.com.br/en/)。
 
 ### 4 / 绿：Serum Raker 候选
 
@@ -206,7 +205,8 @@ SERUMRAKER[5] = M
 黑色长尾飞龙、费用是否 `2UU`、右下角是否 `3/2`。有界 Scryfall 检索还
 留下 *Dream Strix* 与 *Shimmerwing Chimera* 两个同为 `3/2`、第五字母
 也为 M 的替代项；三者中 *Serum Raker* 最贴近录音里不确定的“蝙蝠形、
-整体蓝色”。这仍必须靠原图定案。公开牌面：[Scryfall](https://scryfall.com/card/mbs/31/serum-raker)。
+整体蓝色”。这是当前最贴近语音的牌名候选，但不声称仅凭音频已唯一确定。
+公开牌面：[Scryfall](https://scryfall.com/card/mbs/31/serum-raker)。
 
 ![第 4 图有界候选接触表](artifacts/visual/04-blue-fliers-menu-contact-sheet.jpg)
 
@@ -214,8 +214,8 @@ SERUMRAKER[5] = M
 Shimmerwing Chimera / War Machine, James Rhodes*。其中 Enigma Sphinx 是
 `5/4`，坐标会落到 `r5c4=5`，也能给 M；但其金橙牌框与“整体蓝色”冲突。
 其余三张 `3/2` 候选中，War Machine 又明显不是“神话生物”，而且删除
-空格后 `WARMACHINE[5]=A`，并不能提取 M；所以实际需要和原图重点比对
-的是第 1、3、4 张。
+空格后 `WARMACHINE[5]=A`，并不能提取 M；所以实际需要重点比较
+第 1、3、4 张的语音描述与公开牌面，不等待原图。
 
 ### 5 / 青：Faker 在 O2 举杯
 
@@ -224,7 +224,7 @@ Shimmerwing Chimera / War Machine, James Rhodes*。其中 Enigma Sphinx 是
 这是七项中最强的识别：O2 场馆、银色 Worlds 奖杯、戴眼镜且身材偏瘦的
 亚洲电竞选手都吻合 Faker。当前把“第 5 图”和场馆名 **O2** 解释为坐标
 `(5,2)`，故 `r5c2=4`，再得 `FAKER[4]=E`。人物识别强，但 `(5,2)` 的
-坐标读法还需要题图颜色位置确认。公开原图：[LoL Esports / Riot](https://www.flickr.com/photos/lolesports/54112369706)。
+坐标读法是“图序号 + O2”这一机制假设。公开原图：[LoL Esports / Riot](https://www.flickr.com/photos/lolesports/54112369706)。
 
 ### 6 / 蓝：Morden's Battleship
 
@@ -303,7 +303,8 @@ ANS:MENU
 
 - 它沿用 Richard II / Shunchang Museum / Luzhou port 三张候选网页的
   `1.4 / 2.4 / 3.4` 来定坐标，却改用另一组三个对象名 `CHARLES /
-  SKY GARDEN / SANTOS` 来取 `ANS`；在没有原图时这是两组图片的混搭。
+  SKY GARDEN / SANTOS` 来取 `ANS`；这不是独立事实，而是语音描述下的
+  两组候选混搭。
 - 第 5 项若用自然标签 `WORLD CHAMPION`，按本文统一的“去空格标点、只数
   A–Z”规则，第 9 字母是 **M**，不是 A。改成 `T1 WORLD CHAMPION` 才能
   得 A，但该短语既不是 Flickr 原图标题（标题是 *League of Legends World
@@ -327,13 +328,15 @@ ANS:MENU
   都未得到稳定对象；最终允许牌面 P/T 本身给坐标，并只检查落在数独数字
   5 的坐标，得到 *Serum Raker* 等四个标准化后“第五字母 M”的 flying
   候选（第五个 API 命中 *War Machine* 是空格造成的正则假阳性）。
-  这已达到本实验族上限，不再继续扩大检索；下一步只能拿原图比牌面。
+  这已达到本实验族上限，不再继续扩大检索；下一步只能回到语音语义和
+  坐标闭合，不把缺少截图当作新的任务输入。
 
 ### 本轮 SingleFile 与音频复核（2026-08-16）
 
 - 解包后的 `work/singlefilez/manifest.json` 只有 `index.html`、KaTeX
   字体、CSS、`favicon.ico` 和一个头像/图标 `61.webp`；`images/` 中没有
-  数独截图或七张小图。故本地保存页不能用来确认任何彩色格坐标或图片专名。
+  数独截图或七张小图；这符合本题“只靠语音”的设计，不能单独否定语音
+  检索候选。
 - 按 [`work/audio_asr_experiment.md`](work/audio_asr_experiment.md) 的预先
   界限，使用 `base` 模型完成三组且仅三组配置：`full-default`、
   `full-nocontext`、`critical-channels`（左右声道各复核彩色、牌面、游戏
@@ -341,9 +344,41 @@ ANS:MENU
   三组重复了“第五行第三列为 9 / 第六行第七列为 8”、蓝色相邻格、蓝色
   万智牌/飞行神话生物、O2 体育馆选手、履带陆行舰、绿色女角色等概括，
   但没有稳定恢复新的坐标、牌名、人物名或游戏名；左右声道也没有分歧信号。
-- 因此 ASR 假设族已达到三次无新事实的停止条件。继续换模型或无界搜词只会
-  放大幻听，不能提高 `MENU` 的可复现性；当前缺口只能由原题截图/页面重新
-  提供后，以图像比对解决。
+- 因此 ASR 假设族已达到三次无新事实的停止条件。另做的声道差分、动态压缩
+  和语音频段增强也没有恢复专名或坐标；继续换模型或无界搜词只会放大幻听。
+  当前剩余不确定性来自语音描述本身的宽泛性，而不是等待原题截图。
+
+增强实验的参数与结果保存在 `work/audio_enhancement_experiment.md`；声道差分
+的平均电平约为 `-79.5 dB`，说明没有可分离的第二声道内容，两个听感增强版
+也只重复已知概括。这条路线按三次有界实验规则停止。
+
+### 语音题的输入边界与重复蓝格
+
+用户确认本题就是靠录音中的口述来猜图，不能把 SingleFile 没有七张图当作
+缺失输入。录音先说 `r5c3=9` 及其正下方格都是重复的蓝色，再说七种彩虹色
+中只有蓝色出现两格；当前机制把这解释为：给定的 `r5c3=9` 是额外蓝格，
+第 6 图定位下方 `r6c3=6`，而第 5 图的青格由 `5 + O2` 定到 `r5c2=4`。
+这一步仍是最需要谨慎的语音推断，但它解释了“八个彩色格、七张小图”的
+数量差，不需要假设一个未提供的截图。
+
+### 低成本语义核验已收束（2026-08-16）
+
+- Scryfall 的结构化牌面数据确认 *Serum Raker* 是蓝色 Phyrexian Drake，
+  关键词为 Flying，攻防为 `3/2`；它的稀有度其实是 common，因此录音中的
+  “神话生物”只能理解为外形描述，不能误作 Mythic 稀有度。*Dream Strix*
+  等同类 `3/2` 蓝色飞行生物仍会造成专名歧义，但几个最贴近候选的第五
+  字母同为 M，不改变当前第 4 位提取。
+- Metal Slug Wiki 的结构化页面文本明确同时写明 *Morden's Battleship*
+  来自 *Metal Slug 3D*，并且是 Mission 6 boss，故 `(6,3)` 数字闭环真实
+  存在。外形上 *Cocoon* 仍是合理替代项，但 `COCOON[6]` 也为 N，当前第 6
+  位提取对这两个最强语义候选稳定。
+- Dota 6.78 Medusa 指南页面确实同时出现 `6.78`、Medusa 名称和四个技能
+  图标；这与“绿色女角色、较原始、旁边像魔兽技能图标”的口述相符。
+  *Lady Vashj* 仍是画面层替代项，所以这一证据支持但不能单独证明 U。
+
+上述检查没有恢复任何不存在的题图，也没有引入新坐标。语义检索、ASR 和
+音频增强三条本地路线均已收束；在明确判题反馈前，继续换同义图片名只会
+增加后验拟合。
 
 ## Submission history
 
@@ -387,7 +422,7 @@ ANS:MENU
   已拒绝的 `CRUELTY` 或字段混搭的 `EASY`，不恢复为主识别。
 - **Leviathan、Lady Vashj 不是已证实识别。** 它们只是旧路线里为得到
   `CRUELTY` 选出的标签。Windrunner 也是 `HEAD` 的后验标签；当前 Medusa
-  仍须原图确认，不能只凭目标字母 U 定案。
+  是更贴合语音的候选，但仍不能只凭目标字母 U 定案。
 - 音频左右声道、频谱、元数据和倒放没有稳定隐写信号；三次有界 ASR 没有
   产生新的可靠词句，不再继续这一实验族。
 
@@ -438,10 +473,10 @@ ANS:MENU
 
 ### 3. 未使用信息、含糊步骤与潜在风险
 
-1. **原图未内嵌**：SingleFile 保存的 HTML 中未包含 7 张小图及大数独的原始位图，目前依赖舍友语音描述及网络对照图。
-2. **前三项坐标未口述**：录音在提到“红色……”处被环境叠音截断，红橙黄三格坐标目前采用第 4 列对称/对齐推断，尚缺原始数独图确认。
-3. **前三项专名存在后验拟合成分**：`CHARLES`、`SKYGARDEN`、`SANTOS` 是在已知前缀可能为 `ANS` 的情况下精选的名称，虽然各自符合“国王头像”、“大楼露台”、“港口”的描述，但原图需人工比对确认。
-4. **后四项存在近义备选**：第 4 图万智牌尚有 *Dream Strix*、*Shimmerwing Chimera* 等同为 `3/2` 且第 5 字母为 M 的候选；第 7 图尚有 *Lady Vashj* 等候选。
+1. **语音描述是有意的唯一图像输入**：SingleFile 保存的 HTML 只有录音；七张图和大数独不应被当作待补附件。
+2. **前三项坐标未口述**：录音在提到“红色……”处被环境叠音截断，红橙黄三格坐标目前采用 `1.4 / 2.4 / 3.4` 的候选编号模式，需靠整体机制而不是截图确认。
+3. **前三项专名存在后验拟合成分**：`CHARLES`、`SKYGARDEN`、`SANTOS` 是在已知前缀可能为 `ANS` 的情况下，从“国王头像、楼顶露台、港口”的语义候选中精选的名称；这仍是本候选的主要风险。
+4. **后四项存在近义备选**：第 4 图万智牌尚有 *Dream Strix*、*Shimmerwing Chimera* 等同为 `3/2` 且第 5 字母为 M 的候选；第 7 图尚有 *Lady Vashj* 等候选。它们是语音检索歧义，不是缺失文件。
 
 ## Evidence and artifacts
 
@@ -455,11 +490,6 @@ ANS:MENU
 
 ## Next action
 
-补充一张包含完整彩色数独和七张小图的原题截图；若暂时只能人工查看原页，
-请把第 4、6、7 张题图依次与本文的 *Serum Raker*、
-*Morden's Battleship*、*Medusa* 对照，尤其核对牌名/`3/2`、战舰正面六管
-机枪与《Metal Slug 3D》造型、Medusa 蛇发与右侧四技能图标；再核对第 1–3
-图是否真是 Charles、Sky Garden、Santos。
-若后三项相符但前三项有任一不符，保留数独和 `MENU` 后四字母证据，重新
-识别对应图片，不能为了维持 `ANS` 换同义词。只有这些外形检查通过后才
-建议提交 `MENU`。
+低成本语义核验已经完成，`MENU` 是当前唯一不依赖截图的完整候选。若用户
+选择承担一次提交成本，建议测试 `MENU` 并把明确判题反馈带回；在反馈前
+不再穷举同义图片名、寻找题图或重复跑 ASR。

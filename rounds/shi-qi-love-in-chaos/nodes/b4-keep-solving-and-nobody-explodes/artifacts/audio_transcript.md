@@ -56,8 +56,10 @@ Directly heard:
 - The 9-cell and cell below it are blue; the cell right of the 8 is purple.
 - The seven picture descriptions are exactly the broad descriptions above.
 
-Current interpretations, all subject to comparison with the unavailable source
-images:
+Current interpretations from the intentionally audio-only puzzle. The source
+images are not expected to be available; these remain semantic search
+hypotheses and must be judged by how well they explain the spoken descriptions
+and the numeric/indexing closure:
 
 1. King Charles → label `CHARLES`.
 2. Sky Garden → label `SKY GARDEN`.
@@ -71,6 +73,8 @@ images:
    label `MEDUSA` (fairly strong; Lady Vashj remains an alternative).
 
 The ASR family has already been tested three bounded ways and no additional
-stable wording emerged.  Further transcription runs are unlikely to distinguish
-the image identities; the useful next check is visual comparison with the
-original seven pictures.
+stable wording emerged.  A separate channel-difference/dynamic-enhancement
+check also recovered no proper name or coordinate.  Further transcription runs
+are unlikely to distinguish the image identities; the useful next check is a
+semantic consistency check or explicit submission feedback, not recovery of
+unavailable pictures.
