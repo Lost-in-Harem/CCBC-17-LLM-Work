@@ -1,8 +1,8 @@
-"""Verify the eight covers, endpoint chain, and literal BINGO paste.
+"""Verify the eight covers, endpoint chain, and FLOUNDERING rebus.
 
 The script retains PASTE ING ON FL as a licensed intermediate instruction.
-It also retains the reproducible cores of ECORI, ION, FLING, FLYING, NASTY,
-and 42 as negative evidence after explicit rejection.
+It also retains the reproducible cores of BINGO, ECORI, ION, FLING, FLYING,
+NASTY, and 42 as negative evidence after explicit rejection.
 """
 
 from __future__ import annotations
@@ -228,8 +228,7 @@ def main():
 
     # The seven undirected edges split into ON / ING / PASTE.  Together with
     # the unused FL at the left terminal, reverse block order gives the exact
-    # instruction PASTE ING ON FL.  Bare FL+ING gives the explicitly rejected
-    # final answer FLING, but FLING remains a licensed intermediate clue.
+    # instruction PASTE ING ON FL.
     assert edge_trails(shared_pairs[:1]) == {"NO", "ON"}
     assert edge_trails(shared_pairs[1:3]) == {"ING", "GNI"}
     assert edge_trails(shared_pairs[3:]) == {"PASTE", "ETSAP"}
@@ -250,26 +249,48 @@ def main():
     fling_intermediate = left_residue + "ING"
     assert fling_intermediate == "FLING"
 
-    # "Forward and reverse" fixes the four circles as first, second, last,
-    # penultimate: FLNO beside BINO.  Paste the three-circle ING segment with
-    # I/N aligned on F/L; its G therefore overwrites the old N at the first
-    # x2 connector, while the O connector is unchanged.  Starting at the top
-    # of BINO, cross at that changed N/G connector and continue down INGO.
+    # ON and ING meet at the same letter-value vertex N in the edge-trail
+    # graph. Moving the complete ING trail therefore moves that N instead of
+    # copying it. ON leaves O behind next to FL, making FLO. Pasting ING above
+    # it is the standard rebus FLO UNDER ING.
+    on_trail = "ON"
+    ing_trail = "ING"
+    shared_hinge = set(on_trail) & set(ing_trail)
+    assert shared_hinge == {"N"}
+    on_residue = "".join(char for char in on_trail if char not in shared_hinge)
+    lower = left_residue + on_residue
+    upper = ing_trail
+    assert on_residue == "O"
+    assert lower == "FLO"
+    candidate = lower + "UNDER" + upper
+    assert candidate == "FLOUNDERING"
+
+    # Rejected BINGO experiment: overwrite Board 4's first three circles with
+    # Board 5's ING, then retain an obsolete N/N junction and choose a new read
+    # start on BINO. The mechanics are reproducible, but the user rejected the
+    # result and the diagram does not license either extra assumption.
     target_before = codes[4]
     neighbor = codes[2]
+    donor = codes[5]
     assert target_before == "FLNO"
     assert neighbor == "BINO"
+    assert donor == "INGN"
+    paste_segment = donor[:3]
+    assert paste_segment == "ING"
     paste_start = target_before.index("FL")
     target_after_chars = list(target_before)
-    for offset, char in enumerate("ING"):
+    for offset, char in enumerate(paste_segment):
         target_after_chars[paste_start + offset] = char
     target_after = "".join(target_after_chars)
     assert target_after == "INGO"
     changed_pair_position = 2
     assert target_before[changed_pair_position] == neighbor[changed_pair_position] == "N"
     assert target_after[changed_pair_position] == "G"
-    answer = neighbor[: changed_pair_position + 1] + target_after[changed_pair_position:]
-    assert answer == "BINGO"
+    rejected_bingo = (
+        neighbor[: changed_pair_position + 1]
+        + target_after[changed_pair_position:]
+    )
+    assert rejected_bingo == "BINGO"
 
     # Execute the instruction on Board 4.  The full cover supplies the donor
     # WAVERING and target FLUCTUATION.  Removing ING from the donor leaves the
@@ -439,11 +460,16 @@ def main():
     print("forced double-paired circles:", "/".join(value or "-" for value in forced_double))
     print("rejected junction + terminal-tail route:", junction_read, "+", tail, "->", rejected_nasty)
     print("reverse audit:", reverse_junction_read, "+", reverse_tail or "(empty)")
-    print("candidate:", answer)
     print("instruction: PASTE ING ON FL")
+    print("  ON and ING share:", "".join(sorted(shared_hinge)))
+    print("  move ING; ON leaves:", on_residue)
+    print("  rebus rows:", upper, "/", lower)
+    print("candidate: FLO UNDER ING ->", candidate)
+    print("rejected overlay result:", rejected_bingo)
     print("  circle fill:", target_before, "beside", neighbor)
+    print("  donor Board 5:", donor, "(paste", paste_segment + ")")
     print("  align ING on FL ->", target_after)
-    print("  B-I-N, cross the changed N/G pair, then G-O ->", answer)
+    print("  B-I-N, cross the changed N/G pair, then G-O ->", rejected_bingo)
     print("rejected semantic continuation:")
     print("  FL + ING ->", fling_intermediate)
     print("  FLING -> CAST; CAST residue ->", cast_residue)
@@ -463,7 +489,8 @@ def main():
     )
     print(
         "rejected final candidates: COPY AND PASTE / PASTE / CUT AND PASTE / "
-        "42 / PASTEUR / GAATTC / ECORI / FLYING / FLING / NASTY / ION"
+        "42 / PASTEUR / GAATTC / ECORI / FLYING / FLING / NASTY / ION / "
+        "BINGO"
     )
 
 

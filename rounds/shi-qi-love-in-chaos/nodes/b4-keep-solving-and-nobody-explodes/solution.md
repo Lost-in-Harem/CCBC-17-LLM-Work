@@ -7,11 +7,11 @@ parent:
 source:
 round_feeder: yes
 feeders:
-status: candidate
-answer: MENU
-confidence: medium
-summary: 当前最强候选仍为 `MENU`：暂定七格给出 `396:5464`，索引 `CHARLES / SKY GARDEN / SANTOS / SERUM RAKER / FAKER / MORDEN'S BATTLESHIP / MEDUSA` 得 `ANS:MENU`。本题本来就只靠语音猜图，SingleFile 没有题图并非缺失；公开资料复核了后四项中的 `3/2`、`Mission 6 + Metal Slug 3D`、Dota `6.78` 和四技能图标。`MENU` 仍是中等置信 candidate，尚未提交；剩余风险是宽泛描述导致的对象/坐标歧义。
-updated: 2026-08-16
+status: rejected
+answer:
+confidence:
+summary: 用户明确否定 `MENU`。旧路线把前三个对象后验命名为 `CHARLES / SKY GARDEN / SANTOS`，并把蓝色 `{9,6}` 取 `min=6`，拼出 `ANS:MENU`；该整条提取现已停止。已确认第六图候选与《Metal Gear Solid: Peace Walker》的 `Cocoon` 主图一致，下一步是不预设输出地独立识别七个对象的共同类别，并据此检验蓝色两数的交换律运算。
+updated: 2026-08-17
 ---
 
 # 保持解谜就无人爆炸
@@ -24,18 +24,23 @@ updated: 2026-08-16
 ```text
 Miracle Sudoku 七个彩色格
         ↓
+  3,9,6 : 5,4,{9,6},4
+        ↓ 蓝色取 min(9,6)=6
      396:5464
         ↓ 依次作为七个英文标识的 1-based 索引
 CHARLES / SKY GARDEN / SANTOS :
-SERUM RAKER / FAKER / MORDEN'S BATTLESHIP / MEDUSA
+SERUM RAKER / FAKER / COCOON / MEDUSA
         ↓
       ANS:MENU
 ```
 
 其中第 4 图是关键修正：*Serum Raker* 是蓝色、Flying、画面为飞行的
-Drake，右下角 `3/2` 指向 `r3c2=5`，而 `SERUMRAKER[5]=M`。第 6 图
-*Morden's Battleship* 的资料明确同时给出《Metal Slug **3D**》与
-Mission **6**，闭合 `r6c3=6`，而 `MORDENSBATTLESHIP[6]=N`。第 7 图
+Drake，右下角 `3/2` 指向 `r3c2=5`，而 `SERUMRAKER[5]=M`。第 6 图现已
+核验为《Metal Gear Solid: Peace Walker》的 AI 武器 *Cocoon*：保存的
+对照图与 Metal Gear Wiki 页面主图 `Robot1.PNG` 的图像内容匹配，四履带、
+巨大舰体也最贴合录音。它的名字只有六个字母，因此蓝色两格 `{9,6}` 中
+只有 6 是合法的一次索引；把两值视为无序集合取唯一合法值，等价于本例的
+`min(9,6)=6`，满足交换律并给出 `COCOON[6]=N`。第 7 图
 *Medusa* 的旧式 Dota 指南图带一列四个技能图标，页面标题又明确写
 Dota `6.78`，与录音给定 `r6c7=8` 交叉验证；紫格 `r6c8=4` 后有
 `MEDUSA[4]=U`。后三项现在都同时保留具体专名和数值来源。
@@ -131,24 +136,25 @@ Richard/Shunchang/Luzhou 的编号来源和 Charles/Sky Garden/Santos 的名称
 | 黄 | `r3c4` | 6 | 语音未报坐标；当前候选沿用第三图的 `3.4` 编号模式 |
 | 绿 | `r3c2` | 5 | 第 4 张牌的 `3/2` 直接给坐标；牌名仍是语音检索候选 |
 | 青 | `r5c2` | 4 | 第 5 图序号 5 与场馆 O2 的 2 构成 `(5,2)`；这是机制推断 |
-| 蓝 | `r6c3` | 6 | 录音明确说 `r5c3=9` 与正下方格同为重复的蓝色；当前图 6 取下格 |
+| 蓝 | `r5c3`、`r6c3` | 9、6 | 录音明确说这两个相邻格同为蓝色；取无序集合中唯一能索引 `COCOON` 的 6，即 `min(9,6)` |
 | 紫 | `r6c8` | 4 | 录音明确说给定 `r6c7=8` 的右格为紫色 |
 
 复现：
 
 ```powershell
-python rounds\shi-qi-love-in-chaos\nodes\b4-keep-solving-and-nobody-explodes\artifacts\miracle_sudoku.py --extract r1c4 r2c4 r3c4 r3c2 r5c2 r6c3 r6c8
+python rounds\shi-qi-love-in-chaos\nodes\b4-keep-solving-and-nobody-explodes\artifacts\miracle_sudoku.py --extract r1c4 r2c4 r3c4 r3c2 r5c2 r5c3 r6c3 r6c8
 ```
 
 期望末行：
 
 ```text
 unique: True
-extract: 3965464 (r1c4=3 r2c4=9 r3c4=6 r3c2=5 r5c2=4 r6c3=6 r6c8=4)
+extract: 39654964 (r1c4=3 r2c4=9 r3c4=6 r3c2=5 r5c2=4 r5c3=9 r6c3=6 r6c8=4)
 ```
 
-这就是显示成 `396:5464` 的七个索引。纯数字提交已被拒绝；当前机制把
-它们分别用于七个英文词，而不是把整串当答案。
+蓝色先将两值按交换不变规则合并为 `min(9,6)=6`，故七个索引才显示成
+`396:5464`。纯数字提交已被拒绝；当前机制把它们分别用于七个英文词，
+而不是把整串当答案。
 
 ## 七张图和逐项提取
 
@@ -163,7 +169,7 @@ extract: 3965464 (r1c4=3 r2c4=9 r3c4=6 r3c2=5 r5c2=4 r6c3=6 r6c8=4)
 | 3 / 黄 | 一个港口 | `SANTOS` | 6 | **S** | 语音语义候选；第六字母与 `ANS` 前缀闭合 |
 | 4 / 绿 | 蓝色万智牌，飞行的神话生物 | `SERUM RAKER` | 5 | **M** | `3/2` 坐标和蓝色 Flying 描述相符；仍有同类牌替代项 |
 | 5 / 青 | O2、戴眼镜的亚洲选手举杯 | `FAKER` | 4 | **E** | O2/奖杯/人物描述的强语义匹配 |
-| 6 / 蓝 | 有履带、地上开的船式游戏建模 | `MORDEN'S BATTLESHIP` | 6 | **N** | *Metal Slug 3D* Mission 6 与重复蓝格下方闭合 |
+| 6 / 蓝 | 有履带、地上开的船式游戏建模 | `COCOON` | `min(9,6)=6` | **N** | Metal Gear Wiki 主图命中；六字母名使 6 成为唯一合法索引 |
 | 7 / 紫 | 老式游戏界面中的绿色女角色 | `MEDUSA` | 4 | **U** | Dota 6.78/绿色角色/技能栏描述的强语义匹配 |
 
 ### 1 / 红：Charles 候选
@@ -226,23 +232,22 @@ Shimmerwing Chimera / War Machine, James Rhodes*。其中 Enigma Sphinx 是
 `(5,2)`，故 `r5c2=4`，再得 `FAKER[4]=E`。人物识别强，但 `(5,2)` 的
 坐标读法是“图序号 + O2”这一机制假设。公开原图：[LoL Esports / Riot](https://www.flickr.com/photos/lolesports/54112369706)。
 
-### 6 / 蓝：Morden's Battleship
+### 6 / 蓝：Cocoon
 
-![6 蓝：Morden's Battleship 候选](artifacts/visual/06-morden-battleship.webp)
+![6 蓝：Cocoon 候选](artifacts/visual/06-cocoon-candidate.webp)
 
-*Morden's Battleship* 是《Metal Slug 3D》的 Boss；资料页明确写它出现在
-Mission 6。于是游戏名的 `3D` 和 Mission 的 `6` 给出坐标 `(6,3)`，正好
-落在录音所说的下方蓝格 `r6c3=6`。规范化名称的第六个字母又是 N：
+这张图与 Metal Gear Wiki 的 *Cocoon* 页面主图 `Robot1.PNG` 内容匹配，
+而四履带、舰体般巨大的轮廓正好对应录音里的“很大、不是航母、有履带、
+地上开的陆行舰”。页面把对象标作《Metal Gear Solid: Peace Walker》
+的 AI weapon **Cocoon**：
 
 ```text
-MORDENSBATTLESHIP[6] = N
+COCOON = C O C O O N
 ```
 
-人工检查点：是否是巨大灰黑船体、正面六管机枪、两侧履带/浮筒和密集炮塔。
-原网页的 infobox 同时列出 `Metal Slug 3D`，正文写明 “Mission 6 boss”：
-[Metal Slug Wiki](https://metalslug.fandom.com/wiki/Morden%27s_Battleship)。
-*Cocoon*（另存于 `artifacts/visual/06-cocoon-candidate.webp`）是外形很近的
-替代图，且第六字母也为 N，但没有同样清楚的 `(6,3)` 来源，故不作为主识别。
+蓝色格的两个数是无序的 `{9,6}`。对一个六字母名称，9 不是合法的一次
+索引，只有 6 可用；因此采用交换不变的“取唯一合法索引”（在本例等价
+于 `min(9,6)`），得到 `COCOON[6]=N`。页面：[Metal Gear Wiki: Cocoon](https://metalgear.fandom.com/wiki/Cocoon)。
 
 ### 7 / 紫：Medusa
 
@@ -274,7 +279,7 @@ MEDUSA[4] = U
 | 黄 | `SANTOS` | `SANTOS` | 6 | **S** |
 | 绿 | `SERUM RAKER` | `SERUMRAKER` | 5 | **M** |
 | 青 | `FAKER` | `FAKER` | 4 | **E** |
-| 蓝 | `MORDEN'S BATTLESHIP` | `MORDENSBATTLESHIP` | 6 | **N** |
+| 蓝 | `COCOON` | `COCOON` | `min(9,6)=6` | **N** |
 | 紫 | `MEDUSA` | `MEDUSA` | 4 | **U** |
 
 所以：
@@ -285,17 +290,17 @@ SKY GARDEN[9]       = N
 SANTOS[6]           = S
 SERUM RAKER[5]      = M
 FAKER[4]            = E
-MORDENSBATTLESHIP[6] = N
+COCOON[6]            = N
 MEDUSA[4]           = U
 
 ANS:MENU
 ```
 
 可用 [`artifacts/test_indexing.py`](artifacts/test_indexing.py) 复现。后四项
-现在全部使用画面对象的具体英文专名；其中 Morden's Battleship 还同时给出
-`(6,3)`，Medusa 来源页的 `6.78` 则复核录音给定。它们统一得到正常可提交词
-`MENU`。不过 `ANS` 仍可能是前三图选词后的巧合，且红橙黄三格位置未从
-保存文件恢复，因此置信度只能是中等。
+现在全部使用画面对象的具体英文专名；Cocoon 的图像主图和六字母长度独立
+约束了蓝格的合并方式，Medusa 来源页的 `6.78` 则复核录音给定。它们统一
+得到正常可提交词 `MENU`。不过 `ANS` 仍可能是前三图选词后的巧合，且红橙黄
+三格位置未从保存文件恢复，因此置信度只能是中等。
 
 ## 与 `EASY` 路线的判别
 
@@ -356,22 +361,25 @@ ANS:MENU
 
 用户确认本题就是靠录音中的口述来猜图，不能把 SingleFile 没有七张图当作
 缺失输入。录音先说 `r5c3=9` 及其正下方格都是重复的蓝色，再说七种彩虹色
-中只有蓝色出现两格；当前机制把这解释为：给定的 `r5c3=9` 是额外蓝格，
-第 6 图定位下方 `r6c3=6`，而第 5 图的青格由 `5 + O2` 定到 `r5c2=4`。
-这一步仍是最需要谨慎的语音推断，但它解释了“八个彩色格、七张小图”的
-数量差，不需要假设一个未提供的截图。
+中只有蓝色出现两格。根据用户的新提取提示，不能再忽略上格的 9：蓝色
+应从无序集合 `{9,6}` 产生一个索引。第 6 图的正式名 `COCOON` 只有六个
+字母，所以 6 是唯一合法的一次索引；交换两个格子的顺序不会改变选择，
+也就是本例的 `min(9,6)=6`。这同时解释了“八个彩色格、七张小图”的数量差。
 
-### 低成本语义核验已收束（2026-08-16）
+### 低成本语义核验已收束（2026-08-17）
 
 - Scryfall 的结构化牌面数据确认 *Serum Raker* 是蓝色 Phyrexian Drake，
   关键词为 Flying，攻防为 `3/2`；它的稀有度其实是 common，因此录音中的
   “神话生物”只能理解为外形描述，不能误作 Mythic 稀有度。*Dream Strix*
   等同类 `3/2` 蓝色飞行生物仍会造成专名歧义，但几个最贴近候选的第五
   字母同为 M，不改变当前第 4 位提取。
-- Metal Slug Wiki 的结构化页面文本明确同时写明 *Morden's Battleship*
-  来自 *Metal Slug 3D*，并且是 Mission 6 boss，故 `(6,3)` 数字闭环真实
-  存在。外形上 *Cocoon* 仍是合理替代项，但 `COCOON[6]` 也为 N，当前第 6
-  位提取对这两个最强语义候选稳定。
+- 对现有第 6 图候选做了三个有界反查：通用缩略图搜索因区域结果噪声没有
+  命中；Metal Gear Wiki 的页面图片清单则给出零距离感知哈希命中，确认
+  `artifacts/visual/06-cocoon-candidate.webp` 对应其 `Cocoon` 主图
+  `Robot1.PNG`。`COCOON` 的六字母长度又使蓝色 `{9,6}` 只有索引 6 合法。
+- *Morden's Battleship* 虽能用 *Metal Slug 3D* / Mission 6 凑出 `(6,3)`，
+  但其模型与录音不如 Cocoon 主图吻合，而且旧路线完全没有使用上方蓝格 9；
+  在用户明确要求交换不变的双格提取后，它不再作为主识别。
 - Dota 6.78 Medusa 指南页面确实同时出现 `6.78`、Medusa 名称和四个技能
   图标；这与“绿色女角色、较原始、旁边像魔兽技能图标”的口述相符。
   *Lady Vashj* 仍是画面层替代项，所以这一证据支持但不能单独证明 U。
@@ -393,12 +401,18 @@ ANS:MENU
 | 2026-08-15 | `WAR:HEAD` | rejected | 用户明确报告“WAR:HEAD 也不是答案”。 |
 | 2026-08-15 | `CRUELTY` | rejected | 用户明确报告“CRUELTY 不是答案”。 |
 | 2026-08-15 | `HEAD` | rejected | 用户明确报告“HEAD 不是答案”。 |
+| 2026-08-17 | `MENU` | rejected | 用户明确报告“menu 不是答案”。 |
 
-`HEAD` 已被单独测试并拒绝，因此 `ANS:HEAD` 整条路线停止。`MENU` 尚未
-收到提交结果，不写入 Submission history。
+`HEAD` 已被单独测试并拒绝，因此 `ANS:HEAD` 整条路线停止。`MENU` 也已
+被明确拒绝，不能再用输出词倒推七张图的名称。
 
 ## Important failed routes
 
+- **`MENU` 已被拒绝。** `CHARLES[3] / SKYGARDEN[9] / SANTOS[6] /
+  SERUMRAKER[5] / FAKER[4] / COCOON[6] / MEDUSA[4]` 得到的 `ANS:MENU`
+  依赖前三项的目标驱动命名，也没有独立理由把蓝色 `{9,6}` 定义为
+  `min(9,6)=6`。“唯一合法索引”不是题目提示所要求的自然提取方法；整条
+  路线停止，除非共同类别提供新的独立证据。
 - **纯数字不是最终答案。** `397:1964`、`396:3964`、`396:3464` 均已被
   拒绝；七个数字更合理的作用是七次字母索引。
 - **`WIRES`、`COPPER`、`DEF:USER` 都没有统一、可复现的图片命名规则，且
@@ -490,6 +504,7 @@ ANS:MENU
 
 ## Next action
 
-低成本语义核验已经完成，`MENU` 是当前唯一不依赖截图的完整候选。若用户
-选择承担一次提交成本，建议测试 `MENU` 并把明确判题反馈带回；在反馈前
-不再穷举同义图片名、寻找题图或重复跑 ASR。
+不预设 `ANS:` 或任何答案词，独立寻找七个被描述对象（尤其已强识别的
+`Cocoon`）所属的共同类别；用该类别给出的规范名称重新索引，并在
+`sum/product/max/gcd/差的绝对值` 等有独立语义动机的交换律运算中判别蓝色
+`{9,6}` 的合并方式。

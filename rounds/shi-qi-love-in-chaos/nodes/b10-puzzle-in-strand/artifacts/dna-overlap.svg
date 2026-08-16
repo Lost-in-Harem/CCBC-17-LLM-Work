@@ -16,7 +16,7 @@
     .empty { fill: #d8dde3; rx: 10; }
   </style>
 
-  <text x="640" y="38" text-anchor="middle" class="title">DNA overlap extraction - EcoRI</text>
+  <text x="640" y="38" text-anchor="middle" class="title">REJECTED ROUTE: DNA overlap / EcoRI</text>
 
   <g>
     <rect class="card" x="20" y="70" width="110" height="82"/><text class="board" x="75" y="94" text-anchor="middle">Board 4</text><text class="code" x="75" y="127" text-anchor="middle">FLON</text>
@@ -54,6 +54,6 @@
   <text x="650" y="355" class="strong">FLING -&gt; CAST -&gt; C</text>
   <text x="50" y="405" class="note">complete the reverse-complement DNA site:</text>
   <text x="525" y="405" class="duplex">5'-GAATT C-3'   /   3'-CTTAA G-5'</text>
-  <text x="640" y="475" text-anchor="middle" class="strong">EcoRI cuts G^AATTC (the raw sequence is an intermediate)</text>
-  <text x="640" y="535" text-anchor="middle" class="answer">ANSWER: ECORI</text>
+  <text x="640" y="475" text-anchor="middle" class="strong">Rejected: EcoRI cuts G^AATTC; this is only an unsupported continuation</text>
+  <text x="640" y="535" text-anchor="middle" class="answer">REJECTED: ECORI</text>
 </svg>

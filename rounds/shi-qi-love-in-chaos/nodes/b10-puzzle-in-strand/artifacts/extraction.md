@@ -1,110 +1,152 @@
 # Reproducible extraction
 
-Current answer candidate: **ECORI**.
+Current candidate: **`FLOUNDERING`**. The `BINGO` circle-overlay route is
+retained below only as an explicitly rejected experiment.
 
-## 1. The eight Strands
+## 1. Solve the eight Strands
 
-The eight grids have these complete non-crossing covers and unique left-right
-spangrams:
+The complete non-crossing covers give these spangrams (the other theme words
+are omitted here because only the spangram crosses both grid edges):
 
-| Board | Spangram | Other theme words |
+| Board | Spangram | Endpoint letters (first two, then last two inward) |
 | ---: | --- | --- |
-| 1 | `APPREHENDING` | `ARRESTING`, `SEIZING`, `SEARCHING`, `SURVEILLING` |
-| 2 | `BIATHLON` | `SNOWBOARDING`, `BOBSLEIGH`, `CURLING`, `SKELETON`, `LUGE` |
-| 3 | `CARDIOLOGIST` | `PHYSICIAN`, `DIETICIAN`, `SURGEON`, `DOCTOR`, `NURSE` |
-| 4 | `FLUCTUATION` | `WAVERING`, `SHIFT`, `VARIANCE`, `MUTATION`, `FLUIDITY` |
-| 5 | `INCORPORATING` | `EMBRACING`, `CONCEALING`, `DEVOURING`, `PENNING` |
-| 6 | `NEGATIVITY` | `DESPAIR`, `SORROW`, `MELANCHOLY`, `GLOOM`, `APATHY`, `BLUE` |
-| 7 | `PANAFRICANISM` | `RUSSIA`, `HUNGARY`, `LUXEMBOURG`, `ESTONIA`, `GABON` |
-| 8 | `STRATOLIFTER` | `GROWLER`, `SEAKNIGHT`, `PEGASUS`, `SUPERFORTRESS` |
+| 1 | `APPREHENDING` | `APGN` |
+| 2 | `BIATHLON` | `BINO` |
+| 3 | `CARDIOLOGIST` | `CATS` |
+| 4 | `FLUCTUATION` | `FLNO` |
+| 5 | `INCORPORATING` | `INGN` |
+| 6 | `NEGATIVITY` | `NEYT` |
+| 7 | `PANAFRICANISM` | `PAMS` |
+| 8 | `STRATOLIFTER` | `STRE` |
 
-Take the first two and last two letters in the spangram's actual left-to-right
-path order. The eight four-circle strings are:
-
-```text
-1 APNG   2 BION   3 CAST   4 FLON
-5 INNG   6 NETY   7 PASM   8 STER
-```
-
-Requiring each adjacent pair in the last image to share exactly two distinct
-letters gives one Hamilton chain, up to reversal:
+The last picture says that adjacent strands have exactly two letters in
+common. The only Hamilton chain (up to reversing the whole chain) is:
 
 ```text
 4 - 2 - 5 - 1 - 7 - 3 - 8 - 6
-FLON  BION  INNG  APNG  PASM  CAST  STER  NETY
+FLNO  BINO  INGN  APGN  PAMS  CATS  STRE  NEYT
 ```
 
-The seven shared pairs are:
+Its shared pairs are:
 
 ```text
 NO / IN / GN / AP / AS / ST / ET
 ```
 
-Repeated `N` in `INNG` is two separate circles; it does not force one circle
-to be used twice.
+Treat the repeated `N` in `INGN` as two physical circles. The endpoint order
+is fixed by the wording "forward and reverse": the first two letters are read
+forward and the final two are read inward (backward).
 
-## 2. The intermediate instruction
+## 2. Read the intermediate instruction
 
-The overlap edges form the trails `ON`, `ING`, and `PASTE`; the unused two
-letters at the left terminal are `FL`. Reading each trail in the opposite
-direction (equivalently, using the whole-chain reversal) gives the grammatical
-instruction:
+The shared pairs form three edge trails: `ON`, `ING`, and `PASTE`. The two
+unused circles at the left terminal are `FL`. Reversing the trail/block order
+gives the literal instruction:
 
 ```text
 PASTE ING ON FL
 ```
 
-The literal concatenation `FL + ING = FLING` was rejected by the user as a
-final answer, but it is a useful intermediate clue. `Fling` means throw/cast;
-among the eight path-order endpoint strings, the unique ordinary English word
-matching that synonym is Board 3's `CAST`.
+This is an operation, not the answer `FLING`. In particular, `FL + ING` and
+the old `FLING -> CAST -> EcoRI` continuation are rejected routes.
 
-On the chain, `CAST` shares `AS` with its left neighbor and `ST` with its right
-neighbor. Those matches consume `A`, `S`, and `T`, leaving exactly the physical
-circle `C`.
+## 3. Execute the instruction as a shared-node rebus
 
-## 3. DNA read and answer
-
-The flavor explicitly mentions life, strands, and forward/reverse pairing.
-Keep the literal DNA bases `A/C/G/T` in the seven overlap pairs. Each pair has
-at most one such base, so the canonical chain reads:
+The extracted edge trails are not independent strings. `ON` and `ING` meet at
+the same letter-value vertex `N`:
 
 ```text
-NO / IN / GN / AP / AS / ST / ET
--  / -  / G  / A  / A  / T  / T  = GAATT
+ON intersect ING = N
 ```
 
-The `C` selected from `CAST` closes the reverse-complement palindrome:
+Move the complete `ING` trail when carrying out `PASTE ING ...`. Its shared
+`N` moves with it, so the `ON` arm leaves only `O`. That `O` remains beside the
+left residue `FL`, producing `FLO`:
 
 ```text
-5'-GAATTC-3'
-3'-CTTAAG-5'
+before:  FL + ON, with N also belonging to ING
+move:         ING  (including the shared N)
+left:    FL + O = FLO
 ```
 
-The forward and reversed chain therefore give the two orientations of the
-same site. `GAATTC` is the canonical EcoRI recognition sequence, cut as
-`G^AATTC`; the enzyme name, rather than the rejected raw sequence, is the
-answer **`ECORI`**.
+The word `ON` supplies the placement relation: paste `ING` above `FL`. After
+the shared `N` has moved, the actual lower row is `FLO`:
 
-Reference: [EcoRI](https://en.wikipedia.org/wiki/EcoRI), which documents the
-`G^AATTC` recognition/cut site and its `CTTAA^G` reverse complement. The
-synonym step is the ordinary English relation *fling* = *cast/throw*.
+```text
+       ING
+       FLO
+```
 
-## 4. Negative evidence
+The lower text is under the upper text, so the rebus reads:
 
-- Board 4 word transfer (`WAVERING -> WAVER`, `FLUCTUATION -> FLUCTUATING`)
-  leaves `ION`, but that candidate was explicitly rejected and is not implied
-  by the final diagram.
-- Reading internally double-paired circles and appending the terminal `Y`
-  gives `NASTY`, also explicitly rejected.
-- `GAATTC` is the biochemical intermediate, not the answer string; the user
-  explicitly rejected submitting that raw sequence.
-- Binary, secondary-grid, ordinary-word, and literal connector-geometry
-  interpretations have no unique output; they remain in the workbench audit.
+```text
+FLO UNDER ING = FLOUNDERING
+```
 
-Reproduce the extraction and all cover checks with:
+This operation does not preserve an overwritten connector and does not invent
+a new path start. Its remaining ambiguity is that the last diagram has no
+arrow fixing an absolute up/down direction; the reading uses ordinary English
+`on` to put the pasted text above its target.
+
+Reproduce the extraction with:
 
 ```powershell
+python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hypotheses.py --paste-rebus
 python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\artifacts\verify_solution.py
-python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hypotheses.py --dna-overlap
 ```
+
+The stable layout is `artifacts/floundering-extraction.svg` (and its rendered
+PNG).
+
+## 4. Rejected literal circle-overlay experiment (`BINGO`)
+
+The source of the three-circle segment is visible in Board 5's endpoint strand:
+
+```text
+Board 5: I N G N
+            ^ ^ ^   (the contiguous ING segment)
+```
+
+The target named by `FL` is the start of Board 4:
+
+```text
+before: Board 4  F L N O       beside Board 2  B I N O
+paste:             I N G       onto the FL start
+after:  Board 4  I N G O       beside Board 2  B I N O
+```
+
+Because the pasted segment has three circles, its `G` occupies the old third
+circle (`N`); this is why the instruction must be executed on the pictured
+circles rather than by concatenating text. Keep the existing Board 4/Board 2
+strand junction and trace from the top of `BINO`: `B-I-N`, cross at the changed
+old `N` junction to the new `G`, then continue down the target strand to `O`:
+
+```text
+B I N  +  G O  =  BINGO
+```
+
+Equivalently, after the paste the adjacent strings `BINO` and `INGO` merge on
+their ordered common subsequence `I-N-O`; their shortest common supersequence is
+the same `BINGO`.
+
+The parameterized audit tries all 24 endpoint orders. The wording-licensed
+`abdc` order produces `BINGO` under this overlay experiment, but the user
+explicitly rejected it. The final picture does not say to retain the old
+`N/N` junction after overwriting a circle or to start the read at `BINO`.
+
+Reproduce this rejected experiment with:
+
+```powershell
+python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hypotheses.py --paste-ing-on-fl
+python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\artifacts\verify_solution.py
+```
+
+## 5. Other rejected routes
+
+- `ECORI` / `GAATTC`: the DNA overlap observation was real, but the extra
+  `FLING -> CAST` and enzyme-name step is not licensed by the diagram; the user
+  explicitly rejected both candidates.
+- `ION`: Board 4 can be repathed as `FLUCTUATING`, leaving an `ION` column, but
+  the final picture does not authorize that grid rewrite; explicitly rejected.
+- `NASTY`, `FLING`, `FLYING`, `42`, and the other submitted strings were also
+  explicitly rejected and remain only as negative evidence.

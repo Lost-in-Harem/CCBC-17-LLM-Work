@@ -10,26 +10,25 @@ feeders:
 status: rejected
 answer:
 confidence:
-summary: "用户明确否定候选 ECORI；八盘 spangram、×2 唯一链和 PASTE ING ON FL 的字面结构仍确认，但此前 FLING→CAST→EcoRI 的额外操作缺乏题图授权，重新审计指令的实际对象与方向。"
-updated: 2026-08-16
+summary: "用户明确否定 FLOUNDERING。八盘 spangram、唯一链和中间指令 PASTE ING ON FL 仍确认；共享 N 后构造 FLO UNDER ING 的 rebus 也不是官方提取，需重新审计 ×2 的配对位置和正反交织规则。"
+updated: 2026-08-17
 ---
 
 # 刻在strands里的谜题
 
 ## Current conclusion
 
-候选 **`ECORI`** 已被用户明确否定。此前确实把 `PASTE ING ON FL` 执行成了
-`FLING`，再把 `FLING` 同义解释为 `CAST` 并补成 EcoRI 位点；这不是题图直接
-要求的操作，不能继续保留为答案路线。`ION` 也已被此前反馈否定。
+用户已明确否定 **`FLOUNDERING`**。此前把 `PASTE ING ON FL` 解释成共享 `N`
+移动后的空间 rebus；这一步仍是未经图示明确授权的语义补全。`BINGO`、`ECORI`、
+`ION`、`FLING` 等也均已否定，当前没有可提交候选。
 
 八条 spangram 的端点四字按最后一图的 `×2` 关系排成唯一链
 `4-2-5-1-7-3-8-6`（整体反向等价）。相邻交叠对是
 `NO / IN / GN / AP / AS / ST / ET`。这些边的连续轨迹和左端余字给出中间指令
-`PASTE ING ON FL`，即 `FLING`；它作为“throw/cast”的同义线索，唯一指向端点串
-`CAST`。`CAST` 与两侧分别共享 `AS`、`ST`，所以剩余字母为 `C`。
-
-题句的 life/strand/正反配对语义曾被用来补成 DNA 位点，但这依赖被否定的
-`CAST` 同义跳转；因此只保留为失败路线，不再当作当前结论。
+`PASTE ING ON FL`。此前将 `ON` 与 `ING` 的字母值 `N` 合并，搬走 `ING` 后留下
+`O`，再把 `ING` 放在 `FLO` 上方并读作 `FLO UNDER ING`；用户已明确否定该结果。
+这说明公共字母的集合关系不能直接当作一个可移动的物理节点，最后图的 `×2` 必须
+按实际配对位置或另一种正反交织规则解释。
 
 ## Confirmed Strands solves
 
@@ -56,20 +55,23 @@ Board 6 用 `BLUE` 的“忧郁”义统摄消极情绪；Board 7 的五个国�
 
 ## Extraction
 
-### 1. 每条 spangram 的两端各取两字，并保留原词方向
+### 1. 每条 spangram 的两端各取两字
 
 每条 spangram 都从盘面左边界走到右边界。取首二字与末二字，并按原词从左到右的次序放入四圆；即 `first, second, penultimate, last`。四圆的顺序不是任意排列，因为后续要判断同一个**字母出现位置**是否被左右两侧同时配到。
 
-| Board | Spangram | 四圆 strand |
-| ---: | --- | --- |
-| 1 | `APPREHENDING` | `APNG` |
-| 2 | `BIATHLON` | `BION` |
-| 3 | `CARDIOLOGIST` | `CAST` |
-| 4 | `FLUCTUATION` | `FLON` |
-| 5 | `INCORPORATING` | `INNG` |
-| 6 | `NEGATIVITY` | `NETY` |
-| 7 | `PANAFRICANISM` | `PASM` |
-| 8 | `STRATOLIFTER` | `STER` |
+先得到原词方向的端点四字；按题句“正反”实际填图时，后两字从另一端向内读，
+所以圆的顶到底顺序是 `first, second, last, penultimate`：
+
+| Board | Spangram | 原词端点 | 圆的顶到底填入 |
+| ---: | --- | --- | --- |
+| 1 | `APPREHENDING` | `APNG` | `APGN` |
+| 2 | `BIATHLON` | `BION` | `BINO` |
+| 3 | `CARDIOLOGIST` | `CAST` | `CATS` |
+| 4 | `FLUCTUATION` | `FLON` | `FLNO` |
+| 5 | `INCORPORATING` | `INNG` | `INGN` |
+| 6 | `NEGATIVITY` | `NETY` | `NEYT` |
+| 7 | `PANAFRICANISM` | `PASM` | `PAMS` |
+| 8 | `STRATOLIFTER` | `STER` | `STRE` |
 
 ### 2. `×2` 强制唯一链
 
@@ -77,7 +79,7 @@ Board 6 用 `BLUE` 的“忧郁”义统摄消极情绪；Board 7 的五个国�
 
 ```text
 4 - 2 - 5 - 1 - 7 - 3 - 8 - 6
-FLON  BION  INNG  APNG  PASM  CAST  STER  NETY
+FLNO  BINO  INGN  APGN  PAMS  CATS  STRE  NEYT
 ```
 
 相邻公共对依次为：
@@ -86,7 +88,67 @@ FLON  BION  INNG  APNG  PASM  CAST  STER  NETY
 NO / IN / GN / AP / AS / ST / ET
 ```
 
-### 3. 公共边指令与 DNA 识别位点
+### 3. 已否定：共享 N 的 `FLOUNDERING` rebus
+
+七个公共对按链的位置分成 `1 / 2 / 4` 条边；分别可以走成：
+
+```text
+ON | ING | PASTE
+```
+
+链首 Board 4 未用于第一个 `NO` 交叠的两个字母是 `FL`。从右往左读取这些块，
+得到完整操作 `PASTE ING ON FL`，而不是把 `FL+ING` 裸拼成已否定的 `FLING`。
+
+关键是 `ON` 与 `ING` 并非完全独立：在按字母值建立的公共边图上，它们共用
+`N`。搬动完整路径 `I-N-G` 时，连接点 `N` 必须一起搬走；原来的 `O-N` 支路只
+留下 `O`。这个 `O` 仍接在左端余字 `FL` 之后，因此下方材料变成：
+
+```text
+FL + O = FLO
+```
+
+把 `ING` “on”在该目标上，即放在它的上方：
+
+```text
+ING
+FLO
+```
+
+此前据此读出：
+
+```text
+FLO UNDER ING = FLOUNDERING
+```
+
+用户明确报告 `FLOUNDERING` 不是答案。失败点是把公共边中相同的字母值 `N` 当作
+同一个可移动物理圆，并把英文 `on` 自行升级为“上下排版”指令；题图只标出每个
+相邻 strand 有两个匹配，未授权这两个额外操作。
+
+复核命令与稳定图示：
+
+```powershell
+python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hypotheses.py --paste-rebus
+python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\artifacts\verify_solution.py
+```
+
+该路线的图示 `artifacts/floundering-extraction.svg` / `.png` 仅保留作负证据。
+
+### 4. 已否定：保留旧连接读 `BINGO`
+
+此前实验把 Board 5 的 `ING` 覆盖到 Board 4 的 `FLNO` 开头，得到 `INGO`，再
+保留被覆盖前的 `N/N` 配对并从相邻 `BINO` 顶端起读：
+
+```text
+B-I-N -> G-O = BINGO
+```
+
+用户明确否定 `BINGO`。最后一图既未授权覆盖后保留旧连接，也未指定从 `BINO`
+顶端开始；因此该读法不可恢复。参数化负证据仍可用
+`work/extraction_hypotheses.py --paste-ing-on-fl` 复核。
+
+### 5. 已否定：DNA / EcoRI 路线
+
+以下只记录已被用户否定的 `ECORI` 路线，不是当前提取。
 
 把相邻公共对中首尾相接的边连成字母路径，并保留左端 Board 4 未参与
 `NO` 的 `FL`。块结构为：
@@ -129,7 +191,7 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\artifacts\verify_s
 python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hypotheses.py --dna-overlap
 ```
 
-### 4. 已否定：Board 4 的后缀重铺
+### 6. 已否定：Board 4 的后缀重铺
 
 以下只记录曾试验并被用户否定的 `ION` 路线，不是当前提取。
 
@@ -179,7 +241,7 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\solve_strands
 python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\artifacts\verify_solution.py
 ```
 
-### 5. 已否定：读取被左右两侧同时配到的同一个圆
+### 7. 已否定：读取被左右两侧同时配到的同一个圆
 
 对每个内部 strand，把它与左邻的公共对、与右邻的公共对进行比较。若两对含有同一个字母，而且该 strand 中这个字母只有一个物理圆，那么该圆被左右两组配对强制复用，正是题句“交叠之处”所指的二次交叠。
 
@@ -200,7 +262,7 @@ N A S T
 
 Board 5 的重复 `N` 说明字母出现位置不能随意压成集合；但题图未明确指示“被两侧同时使用的圆就是提取位”，因此 `NAST` 只保留为负证据。
 
-### 6. 已否定：从最后的双配圆走到 spangram 右端
+### 8. 已否定：从最后的双配圆走到 spangram 右端
 
 最后一个双配圆是 Board 8 `STER` 中的 `T`；它通过末组 `ET` 配入终端 Board 6 的 `NETY`。沿这条已固定为左到右的 spangram，从 `T` 继续到右边界，恰剩末字 `Y`：
 
@@ -218,12 +280,9 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hy
 
 - 可复核事实：八盘完整铺法、八条左右横跨的 spangram、首末各两字、唯一 `×2` 链及七个公共对。
 - 公共边分成 `FL | ON | ING | PASTE`；反向按块读成唯一通顺的中间指令 `PASTE ING ON FL`。
-- `FLING` 不是终答，而是 *fling* = *throw/cast* 的同义线索；八个原方向端点串中只有 Board 3 的 `CAST` 是普通英文词。
-- `CAST` 的左右交叠是 `AS`、`ST`，所以其未配字母唯一为 `C`。这为补齐 DNA 位点提供了字母级来源，不是任意补字。
-- 交叠对中筛选 `A/C/G/T` 得 `GAATT`；加上该 `C` 得 `GAATTC`，反向链为 `CTTAAG`。公开资料将 `G^AATTC` 识别/切割位点对应到 EcoRI，故候选为 `ECORI`。
-- 参考资料：<https://en.wikipedia.org/wiki/EcoRI>（识别序列、切割位置和反向互补链）。
-- 整体链反向只交换两条互补 DNA 表示，不改变 EcoRI 识别；因此不需要题图未提供的绝对方向。
-- Board 4 的 `ION` 重铺、内部双配的 `NASTY`、二进制/几何/二次方阵和连接图均保留为已否定或非唯一的负证据。
+- `ON` 与 `ING` 的字母值确实都含 `N`，但这不证明它们在图中共用同一物理圆。
+- `FLO UNDER ING` 的空间 rebus 已被用户明确否定，不能再列为候选。
+- `FLING`、Board 4 的 `ION`、DNA/`ECORI`、内部双配的 `NASTY` 以及二进制/几何/二次方阵均保留为已否定或非唯一的负证据。
 
 ## Submission history
 
@@ -242,17 +301,21 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hy
 | 2026-08-16 | NASTY | rejected | 用户明确报告不是答案；因此“强制双配圆读 NAST，再沿终端 NETY 续 Y”不是官方终提取。 |
 | 2026-08-16 | ION | rejected | 用户明确报告不是答案；Board 4 的后缀搬移与余格读取不是官方终提取。 |
 | 2026-08-16 | ECORI | rejected | 用户明确报告不是答案；`FLING → CAST → GAATTC → ECORI` 的后续补充操作不成立。 |
+| 2026-08-16 | BINGO | rejected | 用户明确报告不是答案；Board 5 `ING` 覆盖 Board 4 `FLNO` 的圆位读法不是官方终提取。 |
+| 2026-08-17 | FLOUNDERING | rejected | 用户明确报告不是答案；把共享字母 `N` 移动并将 `ING` 置于 `FLO` 上方的 rebus 不是官方终提取。 |
 
 ## Evidence and artifacts
 
-- `artifacts/extraction.md`：精简记录完整 spangram、唯一链、`PASTE ING ON FL`、`FLING → CAST → C` 与 EcoRI 位点提取。
+- `artifacts/extraction.md`：精简记录完整 spangram、唯一链及已否定的共享 `N` rebus。
+- `artifacts/floundering-extraction.svg/png`：保留已判错的 `ING` 搬移、`FLO` 和上下 rebus，仅作负证据。
+- `artifacts/bingo-extraction.svg/png`：保留已判错的 `BINGO` 圆位覆盖，仅作防重复负证据。
 - `artifacts/ion-extraction.svg/png`：候选提取的坐标示意，标出 `WAVER`、`FLUCTUATING`、移入的 `NG` 与同列余字 `ION`。
 - `artifacts/nasty-extraction.svg` 与渲染后的 PNG：已否定路线的可视化，仅作防重复负证据。
 - `artifacts/fling-extraction.svg/png`：已判错 `FLING` 的旧词图分块，现已明确标为 `REJECTED`。
 - `artifacts/flying-extraction.svg/png`：已判错 `FLYING` 的旧最短交织，仅作防重复负证据。
-- `artifacts/verify_solution.py`：标准库复核八盘精确覆盖、唯一链、DNA 交叠、`CAST` 残字、`GAATTC/CTTAAG` 双链和候选 `ECORI`，并保留用户否定路线的负证据审计。
+- `artifacts/verify_solution.py`：标准库复核八盘精确覆盖、唯一链和各失败路线；`FLOUNDERING` 断言仅作已否定路线审计。
 - `work/solve_strands.py`：探索阶段的铺盘搜索器；`--full` 输出完整路径，`4 --paste-board4` 穷举候选重铺。
-- `work/extraction_hypotheses.py`：`--double-overlap` 参数化复核当前提取；其余参数保留已停止路线的有界审计。
+- `work/extraction_hypotheses.py --paste-rebus`：复核已否定的 `ON ∩ ING = N`、搬走 `ING` 后留下 `O` 及 `FLO UNDER ING`；`--paste-ing-on-fl` 保留已判错的 `BINGO` 实验。
 - `work/extraction_hypotheses.py --glyph-weave`：复核 `a,d,b,c` 四圆交织与 256 个整股翻转的几何负证据。
 - `work/endpoint_grid_search.py` 与 `work/nested_strands.py --endpoint-order adbc`：复核二次 `4×8` 盘面没有精确覆盖或横跨词。
 - `work/pasted_graph.py`：复核相同字母圆连接/合并后的 3 种拓扑均无唯一读串。
@@ -261,13 +324,19 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hy
 - `work/visual/flying_scs.tsv`：已判错路线中四种端点方向及最短交织结果。
 - `work/visual/endpoint_geometry.tsv`：原盘端点纵坐标不能唯一决定四圆上下次序的负证据。
 - `work/visual/paste_4_on_2.tsv`：把已判错的 `42` 当作 `PASTE 4 ON 2` 参数也不能闭合的负证据。
-- `artifacts/dna-overlap.svg/png`：稳定呈现 `GAATT`、`FLING → CAST → C`、EcoRI 双链及候选 `ECORI`。
+- `artifacts/dna-overlap.svg/png`：保留已否定的 DNA/`ECORI` 路线，仅作负证据。
 - `artifacts/overlap-binary.svg/png`、`endpoint-chain.svg/png`：保留已判错的 `42` 与旧交叉读 `PASTE`，仅作防重复负证据。
 
 ## Important failed routes
 
+- **`BINGO`**：用户明确报告不是答案。把 Board 5 的前三圆 `ING` 覆盖到 Board 4
+  `FLNO` 的前三圆可机械得到 `INGO`，再沿旧 `N/N` 配对读出 `BINGO`，但最终图没有
+  授权保留被覆盖的配对或指定从 `BINO` 顶端起读；该操作不能恢复。
+- **`FLOUNDERING`**：用户明确报告不是答案。把 `ON` 与 `ING` 的相同字母值 `N`
+  当作一个可移动节点，留下 `O`，再把 `ING` 排在 `FLO` 上方，确实能构成
+  `FLO UNDER ING`，但题图没有授权这种物理合并或空间 rebus；不得恢复。
 - **`NASTY`**：用户明确报告不是答案。内部 strand 的单一物理圆若同时参与左右公共对，确实依次给出 `N/A/S/T`，但从最后一个 `T` 沿终端 `NETY` 续取 `Y` 没有图示依据；题句与 Hobbes 语句的对应也只是后验联想。整条路线不再恢复。
-- **`FLING`**：用户明确报告不是答案，因此 `FL+ING` 的裸拼结果不得恢复为终答。它现在只作为 `fling = throw/cast` 的中间同义线索，唯一指向端点串 `CAST`，再取其未配 `C`。
+- **`FLING`**：用户明确报告不是答案。错误在于把 “paste ... on ...” 当成字符串拼接；当前候选改为移动共用 `N` 的完整 `ING` 路径并读取空间 rebus，不再使用 `fling = cast` 的同义跳转。
 - **`FLYING`**：用户明确报告不是答案。旧路线把右端 `NY` 反读为 `YN`，再对 `FL / YN / ING` 做最短公共超序列；“把两端都作为材料”和 SCS 均非图上指令。
 - **`GAATTC / ECORI`**：用户明确否定序列和酶名。DNA 字母筛选本身可重复，但 `FLING → CAST`、补 `C` 和把识别位点命名为答案都不是题图强制步骤。
 - **`PASTEUR`**：用户明确报告不是答案；`UR` 没有任何字母级来源，只是借“生命”补成人名。
@@ -291,6 +360,7 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hy
 
 ## Next action
 
-重新审计 `PASTE ING ON FL` 的字面操作：确定 `ING` 和 `FL` 是八条 strand 中的
-字母、词块、盘面编号还是方向标记，并用最后图的实际圆位置决定粘贴后的读法；
-不得恢复已否定的 `ION`、`FLING`、`GAATTC` 或 `ECORI`。
+重新审计最后图的 `×2`：不要把公共字母集合当作物理连接；为每个相邻 strand
+保留两个匹配字母的**具体圆位**，枚举正向/反向交织后的配对位置，并从题句“正反
+交织配对、交叠之处”寻找直接字母读法。需要一个不依赖英文同义词或 rebus 的候选；
+不得恢复已否定的 `FLOUNDERING`、`BINGO`、`ION`、`FLING`、`GAATTC` 或 `ECORI`。

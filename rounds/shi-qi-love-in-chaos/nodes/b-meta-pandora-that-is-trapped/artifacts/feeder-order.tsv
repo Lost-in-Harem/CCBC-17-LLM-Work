@@ -1,0 +1,12 @@
+rank_if_s	track	element	atomic_number	matched_feeder	feeder_status	feeder_answer	match_reason	match_confidence
+1	11	F	9	b7	accepted	NADIR	Fox 是《女神异闻录5》怪盗团成员代号，呼应“盗影团”	high
+2	4	S	16	b10	rejected		“没有人能更接近”对应 strands 的相接、重叠	medium
+3	7	Ca	20	b3	accepted	REST	《4′33″》静默对应 REST	high
+4	8	V	23	b4	rejected		语音信箱对应只靠录音复述的语音题	high
+5	2	Y	39	b5	accepted	XHOSA	《一念执着》是《步步惊心》主题曲，对应“三步”	medium-high
+6	6	Ba	56	b1	accepted	GREAT UNITY	Badger Badger Badger 是经典互联网动画	high
+7	3	Sm	62	b8	accepted	PENTAGON	Small World 对应世界/文化熔炉	medium
+8	5	Ta	73	b2	accepted	DEFLAGRATE	Tanebi/焚音打对应余烬、爆燃	high
+9	10	W	74	b9	accepted	RACKET	高响度电子乐是 racket（喧闹声）	medium
+10	1	Re	75	b6	candidate	以物易物	Circulation 对应交易/物品流通	medium
+11	9	Bi	83	b11	accepted	XL	Bigger 直接对应 XL	high

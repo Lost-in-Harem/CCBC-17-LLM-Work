@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" fill="#f8f7f3"/>
+  <style>
+    text { font-family: "Segoe UI", Arial, sans-serif; fill: #20252b; }
+    .title { font-size: 34px; font-weight: 700; text-anchor: middle; }
+    .heading { font-size: 21px; font-weight: 700; text-anchor: middle; }
+    .note { font-size: 17px; fill: #4d5963; text-anchor: middle; }
+    .token { font-family: Consolas, monospace; font-size: 29px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+    .word { font-family: Consolas, monospace; font-size: 42px; font-weight: 800; text-anchor: middle; dominant-baseline: middle; }
+    .answer { font-family: Consolas, monospace; font-size: 38px; font-weight: 800; fill: #17643d; text-anchor: middle; }
+    .node { fill: #ffffff; stroke: #34414b; stroke-width: 3; }
+    .moving { fill: #e1f2e8; stroke: #1d7548; stroke-width: 4; }
+    .leftover { fill: #fff0c9; stroke: #a96800; stroke-width: 4; }
+    .edge { fill: none; stroke: #66737d; stroke-width: 5; }
+    .move-edge { fill: none; stroke: #1d7548; stroke-width: 6; }
+    .guide { fill: none; stroke: #9aa4ab; stroke-width: 3; stroke-dasharray: 8 8; }
+    .move { fill: none; stroke: #1d7548; stroke-width: 4; stroke-dasharray: 9 8; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#1d7548"/>
+    </marker>
+  </defs>
+
+  <text x="600" y="48" class="title">PASTE ING ON FL</text>
+  <text x="300" y="96" class="heading">1. Move the complete ING trail</text>
+  <text x="895" y="96" class="heading">2. Read the resulting rebus</text>
+
+  <!-- FL and the ON / ING letter-value graph. -->
+  <rect x="72" y="190" width="68" height="68" rx="8" class="node"/>
+  <text x="106" y="224" class="token">F</text>
+  <rect x="146" y="190" width="68" height="68" rx="8" class="node"/>
+  <text x="180" y="224" class="token">L</text>
+  <circle cx="285" cy="224" r="34" class="leftover"/>
+  <text x="285" y="224" class="token">O</text>
+  <circle cx="390" cy="224" r="34" class="moving"/>
+  <text x="390" y="224" class="token">N</text>
+  <circle cx="495" cy="224" r="34" class="moving"/>
+  <text x="495" y="224" class="token">I</text>
+  <circle cx="390" cy="344" r="34" class="moving"/>
+  <text x="390" y="344" class="token">G</text>
+  <path d="M319 224 L356 224" class="edge"/>
+  <path d="M424 224 L461 224" class="move-edge"/>
+  <path d="M390 258 L390 310" class="move-edge"/>
+  <text x="338" y="188" class="note">ON</text>
+  <text x="462" y="303" class="note">I-N-G shares the N</text>
+
+  <path d="M420 364 C570 430 650 235 735 202" class="move"/>
+  <text x="365" y="424" class="note">Moving ING takes the shared N.</text>
+  <text x="275" y="454" class="note">The ON arm leaves O beside FL:  FL + O = FLO.</text>
+
+  <!-- Final dingbat: ING above FLO. -->
+  <rect x="744" y="164" width="302" height="92" rx="8" class="moving"/>
+  <text x="895" y="210" class="word">ING</text>
+  <path d="M744 302 L1046 302" class="guide"/>
+  <rect x="744" y="344" width="302" height="92" rx="8" class="leftover"/>
+  <text x="895" y="390" class="word">FLO</text>
+  <text x="895" y="474" class="note">FLO is UNDER ING</text>
+
+  <path d="M620 534 L1080 534" class="guide"/>
+  <text x="600" y="585" class="heading">No overwritten connector and no invented path start</text>
+  <text x="600" y="648" class="answer">FLO + UNDER + ING = FLOUNDERING</text>
+</svg>
