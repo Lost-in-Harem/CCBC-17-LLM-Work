@@ -1,0 +1,5 @@
+seed_rebus	seed_index	seed_colour	top_anchor	top_character_hypothesis	carry_rule_index_after_top	top_to_left_colour_hypothesis	left_anchor	left_character_hypothesis	carry_rule_index_after_left	confidence	note
+熊	6	bright-yellow	top +7 right #1	義	13	red	left +7 right #1	赞	4	medium	義 is supported by the strong pair あね/義姉; red routing is still geometric rather than exact.
+猫	2	yellow-green	top +1 right #4	ぜ	3	brown-or-bright-magenta	left +7 left #2	赞	10	low-medium	The pair 涼風/すずかぜ is strong, but the precise red-family colour is unresolved.
+能	6	neon-green	top +5 left #2	す	1	purple-family	left -6 left #2	静	9	medium	The incoming neon 8x2 note agrees with the horizontal first stroke of す.
+力	1	dark-green	top +1 right #3	か	2	lavender-family	left -6 right #2	悄	6	low-medium	The pair 涼風/すずかぜ supports か; exact purple-family routing is unresolved.
