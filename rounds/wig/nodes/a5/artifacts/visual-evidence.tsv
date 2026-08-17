@@ -1,0 +1,30 @@
+id	app	kind	observed_text_or_layout	local_file
+A5-V01	队列溢出	page-screenshot	文章《最近尝试的一个新东西》包含异常块：“您的飞行安全由我们记录”与“7.3.4.5”。	work/visual/source/blog-crab-clue.png
+A5-V02	秒克	profile-screenshot	少年维持着烦恼：7 帖子、417 粉丝、59 关注；简介后出现“我们是十进制计算的载体。4.3.1.3”和时间问候行。	work/visual/source/secondgram-profile.png
+A5-V03	秒克	original-image	帖子配文：“通过二手平台，我从她的手上买来的，我会珍惜一辈子。”画面为大型泰迪熊。	work/visual/source/secondgram-01-teddy.webp
+A5-V04	秒克	original-image	帖子配文：“我的第一个时柒周边。是还原了她麦克风风格的手持电风扇。”	work/visual/source/secondgram-02-fan.webp
+A5-V05	秒克	original-image	帖子配文：“我最喜欢的植物，我希望有一天能去那片森林看看它”。	work/visual/source/secondgram-03-forest.webp
+A5-V06	秒克	puzzle-screenshot	两种互补的青白 2×2 图案分别等于黄酒和黄雀；纯青方块等于问号。	work/visual/source/secondgram-04-sequence-1.png
+A5-V07	秒克	original-image	A5-V06 第一行结果原图：正在倒入杯中的黄酒。	work/visual/source/secondgram-04a-tea.webp
+A5-V08	秒克	original-image	A5-V06 第二行结果原图：黄雀。	work/visual/source/secondgram-04b-bird.webp
+A5-V09	秒克	puzzle-screenshot	红、蓝、黄三个色块“= S”；两行七格含 S₈₅、五只叠有 S₃₁₅ 的燕子、S₈₂ 与问号；页脚“作者 ∈ S₂₅₂”。	work/visual/source/secondgram-05-sequence-2.png
+A5-V10	秒克	original-image	A5-V09 重复使用的燕子原图；页面 alt 文本为“燕子”。	work/visual/source/secondgram-05a-swallow.webp
+A5-V11	秒克	puzzle-screenshot	从左上入口到右下出口的迷宫；羊、马、粉色鸟、蓝鱼、虎占据部分节点；题注“走到终点，注意避开所有动物！”。	work/visual/source/secondgram-06-sequence-3.png
+A5-V12	秒克	vector-source	A5-V11 的页面内嵌 SVG 原始结构。	work/visual/source/secondgram-06a-maze.svg
+A5-V13	秒克	puzzle-screenshot	虚线框内三行“牛 - 人”“乐 + 奴”“呢 - 米”，分别双向箭头指向“精”“西”“？”。	work/visual/source/secondgram-07-sequence-4.png
+A5-V14	两杯	page-screenshot	首页出现异常横幅：“大爱Miraitowa！(16.1.9.4)”；首页另有时柒出道纪念礼盒等商品。	work/visual/source/secondhand-home.png
+A5-V15	领聘	page-screenshot	陈子衿公开简历：现任澜芯半导体嵌入式软件工程师；2022 年首份实习为田七娱乐；自述提到“小题APP”。	work/visual/source/career-chen-zijin.png
+A5-V16	小题	profile-screenshot	陈子衿实名主页；置顶“想去的地方”并列出 2026-07-26 至 07-31 的连续游记。	work/visual/source/smallq/00-profile.png
+A5-V17	小题	page-screenshot	置顶帖只说最想去能看到极光的“遥远北方”，未直接写城市名。	work/visual/source/smallq/01-pinned-destination.png
+A5-V18	小题	page-text	《旅行随记》含 23 组全大写英文短语，页脚固定“复利的自然力量 / 17.12.7.3”。	work/visual/source/smallq/02-travel-notes-dom.txt
+A5-V19	小题	vector-source	第一日《代号：世界之窗》的 10×5 像素 SVG；黑格外有红、绿、蓝、黄四组深浅递进色块。	work/visual/source/smallq/03-day1-window.svg
+A5-V20	小题	interactive-source	第二日《别惹蚂蚁》为 Langton's ant；2×3 观察窗可前进至 11000 步，并列出 13 个 emoji 算式。	work/smallq-day2-0d409d18.vue
+A5-V21	小题	derived-table	按页面源码复现的 0–11000 步 2×3 六位状态；0、3、4、100、140 步已与页面逐帧核对。	work/day2-langton-frames.tsv
+A5-V22	小题	page-screenshot	第三日《唯一的通路》为 4×4 排列的 16 张线段迷宫碎片，含绿起点、红终点与 8 个黄格。	work/visual/source/smallq/05-day3-only-path.png
+A5-V23	小题	original-image-set	第三日 16 张原始 WebP，按页面 DOM 顺序编号 01–16。	work/visual/source/smallq/05-day3-piece-01.webp
+A5-V24	小题	interactive-source	第四日《度秒如年》包含七行问号跑马灯；周期依次 13、25772、4、11、76、33、243 秒，文字长度可对应《旅行随记》短语。	work/smallq-day4-88bdf281.vue
+A5-V25	小题	page-structure	《旅行总结》加粗“平复(2 4)”“核心信条(4 5)”“扬抑(7)”“缝线都快掉完了(10)”，并明确提示“求同存异”、每日纪念品和混乱思绪中的真实路线。	work/visual/source/smallq/07-travel-summary.html
+A5-V26	谷猫 / 植物神经紊乱	statement-package	大陆帅哥作品页、游戏标题、第一关盘面与原始 Vue；用户确认对应 c02《本是同根生》。	work/toringmoni-statements/c02-born-from-the-same-root/author-page.png
+A5-V27	星浦植物博物馆	statement-package	玫瑰展宣传单的 1000×1000 原始矩阵、页面截图和完整 DOM；用户确认对应 c05《玫瑰花园的小径》。	work/toringmoni-statements/c05-path-in-a-rose-garden/rose-crossword-matrix.webp
+A5-V28	两杯	statement-package	“黑白无偿记账”首页、账本初始状态、DOM 与 Vue；高可信对应 c07《碳基生物计算器》。	work/toringmoni-statements/c07-carbon-based-lifeform-calculator/two-cups-ledger.png
+A5-V29	跨应用	collection-index	六组候选题面的映射依据、完整度、异常短句和文件包索引；不含对这些小题的求解。	work/toringmoni-statements/INDEX.md

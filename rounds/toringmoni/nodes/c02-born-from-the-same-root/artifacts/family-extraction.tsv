@@ -1,0 +1,12 @@
+level	family_cn	family_latin	card_a	plant_a	pos_a	dir_a	card_b	plant_b	pos_b	dir_b	letter	note
+1	木犀科	Oleaceae	茉莉花	茉莉花	18	S	丁香	丁香	21	SW	A	两者都是木犀科植物。
+2	葫芦科	Cucurbitaceae	西瓜	西瓜	21	SW	南瓜	南瓜	25	SE	N	两者都是葫芦科植物。
+3	菊科	Asteraceae	向日葵	向日葵	11	W	菊苣	菊苣	19	SE	S	两者都是菊科植物。
+4	蔷薇科	Rosaceae	海棠	海棠（Malus spectabilis）	5	NE	梅	梅（Prunus mume）	21	SW	L	两者都是蔷薇科植物。
+5	旋花科	Convolvulaceae	地瓜	红薯（Ipomoea batatas）	1	NW	喇叭花	牵牛花（Ipomoea）	17	SW	I	同义牌红薯在 7、牵牛花在 21，仍分别位于 NW、SW 射线上。
+6	菊科	Asteraceae	艾草	艾草	3	N	木香	木香	7	NW	T	两者都是菊科植物。
+7	天门冬科	Asparagaceae	龙舌兰	龙舌兰（Agave）	12	W	芦笋	芦笋（Asparagus）	21	SW	H	按现代 APG 广义分类，两属均在天门冬科。
+8	豆科	Fabaceae	红豆	红豆（Adenanthera/Abrus）	21	SW	槐树	槐树	23	S	A	“红豆”的常见候选均为豆科；槐树亦属豆科。
+9	蔷薇科	Rosaceae	梅花	梅（Prunus mume）	12	W	樱花	樱（Prunus）	14	E	R	两者都是蔷薇科李属植物。
+10	桑科	Moraceae	海高斯	无花果（Ficus carica）	19	SE	榕树	榕树（Ficus）	23	S	G	海高斯 Higos 是查莫罗语“无花果”；无花果与榕树同属桑科榕属。
+11	大麻科	Cannabaceae	卜又寸	朴树（Celtis sinensis）	5	NE	广大	大麻（Cannabis sativa）	18	S	E	部件抵消分别还原“朴树”和“大麻”，两者均属大麻科。

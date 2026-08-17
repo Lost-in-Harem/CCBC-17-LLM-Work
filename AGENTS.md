@@ -12,6 +12,7 @@
   requests a move, use
   `python tools/move_node.py OLD_ROUND/OLD_NODE NEW_ROUND/NEW_NODE` outside any
   active solving task.
+- If user assign more things or nodes, one node restriction can be not applied.            
 
 ## Stateful WIG exception
 
