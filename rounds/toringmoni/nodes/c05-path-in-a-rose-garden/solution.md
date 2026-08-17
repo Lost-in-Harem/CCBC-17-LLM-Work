@@ -7,10 +7,10 @@ parent:
 source:
 round_feeder: yes
 feeders:
-status: rejected
-answer:
-confidence:
-summary: Rows Garden 与三条 garden-path sentences 已完整交叉验证；先前从 13 朵余花自由选字所得 DECELERATIONS 已被用户明确否定，正确提取仍待确定。
+status: accepted
+answer: BOUGAINVILLEA
+confidence: high
+summary: 用户已确认 BOUGAINVILLEA 正确；填盘后沿三条箭头读出 garden-path sentences，提取消歧词并从左到右排列为 THREE ANGLED PLUMS，即“三角梅”。
 updated: 2026-08-17
 ---
 
@@ -18,14 +18,21 @@ updated: 2026-08-17
 
 ## Current conclusion
 
-先前候选 **DECELERATIONS** 已被明确否定，不能继续使用。当前可靠进展是完整 Rows Garden 填字与三条入口—出口 garden-path sentences；错误集中在余花提取规则。
+用户已确认答案为 **`BOUGAINVILLEA`**（13）。
 
-题面是一盘标准全尺寸 Rows Garden。填完横行与 38 朵六字母花后，从三支指入棋盘的箭头出发、每步走到共享一条边的三角格，可分别读出三句 garden-path sentences。三条句子路径本身证据充分；“剩余 13 朵花后自由挑字母”的做法缺少显式索引，现已由拒绝结果证实为错误路线。
+宣传单是一盘标准 Rows Garden。填完横行与 38 朵六字母花后，从三支入箭头出发、每步跨越三角格的共享边，会分别读出三句 garden-path sentences：
+
+1. 左入口：`THE COMPLEX HOUSES THREE MEN`
+2. 中入口：`WHEN I HIT THE PHOTO ANGLED`
+3. 右入口：`THE OLD PLANT PLUMS BEHIND`
+
+三句各有一个迫使读者放弃初始句法分析的词。按照图面横坐标从左到右排列，三个**入口箭头**与三个**提取词段**都给出同一个顺序：`THREE / ANGLED / PLUMS`。所得短语 **`THREE ANGLED PLUMS`** 正是中文植物名“**三角梅**”的逐词直译；其英文名 **BOUGAINVILLEA** 恰好是 13 个字母。官方植物资料也将“三角梅”对应为 `Bougainvillea`，因此整条提取同时解释了提示 4、植物园语境和答案枚举。
 
 ## Observations
 
-- 实际题页只给出标题、答案长度 `(13)`、一句主题文字和一个文件入口；用户下载的宣传单才是题面主体。
-- 宣传单矩阵是 12 行、38 朵花的标准 Rows Garden：14 粉、14 白、10 灰。矩阵另有三支入箭头和三支出箭头。
+- 实际题页只给出标题、枚举和一句主题文字；用户下载的星浦植物园玫瑰展宣传单才是题面主体。
+- 用户给出的提示结构明确区分四步：找到宣传单、理解“本题主题”、进行提取、解释所得三个词。这排除了把某个语法术语直接当最终答案的做法，并要求对三个提取词再作一次语义转换。
+- 宣传单矩阵是 12 行、38 朵花的标准 Rows Garden：14 粉、14 白、10 灰，并有三支入箭头和三支出箭头。
 - 横行填字如下；斜线只表示题目给出的横向分词。
 
 | Row | Fill |
@@ -59,86 +66,85 @@ updated: 2026-08-17
 | J–K | pink | `CANADA`, `NIKOLI`, `DOMAIN`, `CALLED` |
 | K–L | white | `MENACE`, `WHENCE`, `OVOIDS` |
 
-- 每朵花均通过上下两个三字母块交叉验证。例如 `GER + reverse(NAD) = GERDAN` 是 `DANGER` 的循环排列；脚本验证了全部 38 朵花。
-- J 行首题意看似可能是 `CANNER`，但灰花 `RELISH` 要求其后三字母块严格为 `LER`，因此全交叉网格只能保留 `CANLER`。这个题面/答案异常不在三条路径及最终 13 朵花中，不影响候选。
+- 全部 38 朵花均通过上下两个三字母块交叉验证。例如 `GER + reverse(NAD) = GERDAN` 是 `DANGER` 的循环排列。
+- 灰花 `DANGER` 是 `GARDEN` 的重排；F 行首答案为 `PATH`。这两处明确给出主题 **GARDEN PATH**。
+- J 行首题意看似应为 `CANNER`，但灰花 `RELISH` 的交叉要求后三字母严格为 `LER`，因此网格只能保留 `CANLER`。该一字异常不在三条句子路径或三个 disambiguators 上。
 
-## Working hypotheses
+## Path reconstruction
 
-- **采用共享边移动：确认。** 三角格中心组成三度蜂窝图；只允许跨共享边时会出现下述完整英文句。仅共享顶点也可移动时分支骤增，且不再唯一支持句子。
-- **三条路径覆盖全盘：否定。** 把六支箭头当作三条覆盖全部 228 格的 Numberlink，即使只保留局部度数条件也为 `unsat`，所以路径只负责读句子，不覆盖全盘。
-- **第三句的同字母微分支：由答案长度消歧。** 两条路线都拼出同一句；第一条经过 25 朵花，恰剩 13 朵，第二条只经过 24 朵而剩 14 朵。题面枚举 `(13)` 因而选第一条。
-
-## Extraction
-
-三条入口到出口的路径为：
+三角格只有在共享完整边时才视为相邻；若仅共享顶点也允许移动，会产生大量偶然分支。精确路径为：
 
 | Entry → exit | Path text | Geometric matches |
 | --- | --- | --- |
 | 左上 → 左下 | `THE COMPLEX HOUSES THREE MEN` | 1 |
+| 下中 → 上中 | `WHEN I HIT THE PHOTO ANGLED` | 2 个同字母微路线 |
 | 右上 → 右下 | `THE OLD PLANT PLUMS BEHIND` | 1 |
-| 下中 → 上中 | `WHEN I HIT THE PHOTO ANGLED` | 2；取留下 13 朵花的第一条 |
 
-三句都需要在后半句出现后重新分析前文：`houses`、`plant` 及 `hit the photo` 的最初句法读法会把读者带错。这解释了标题、实体花园中的三条路径，以及题面“迷茫后意义明朗”的描述。
+第三句开头 `WHEN` 有两条只差两个格子的路线，但两条都给出完全相同的句子，且后续 `ANGLED` 段也完全重合。因此最终语义提取不依赖这个几何微分支。
 
-三条选定路径经过 25 朵花，未经过的 13 朵按网格常规顺序倒读，逐花选字如下：
+## Extraction
 
-| # | Unused bloom | Letter |
-| --- | --- | --- |
-| 1 | `OVOI[D]S` | D |
-| 2 | `CALL[E]D` | E |
-| 3 | `[C]ANADA` | C |
-| 4 | `SUMT[E]R` | E |
-| 5 | `PO[L]INA` | L |
-| 6 | `ST[E]RIC` | E |
-| 7 | `SI[R]IUS` | R |
-| 8 | `COMP[A]T` | A |
-| 9 | `REBOO[T]` | T |
-| 10 | `OR[I]ENT` | I |
-| 11 | `BR[O]ADS` | O |
-| 12 | `O[N]E HAS` | N |
-| 13 | `WRECK[S]` | S |
+| Entry x-order | Sentence | Initial parse | Required reanalysis | Extracted word |
+| --- | --- | --- | --- | --- |
+| 1（左，x=296） | `THE COMPLEX HOUSES THREE MEN` | `complex` 被当作形容词、`houses` 被当作复数名词 | `complex` 是名词，`houses` 是动词，宾语为 `three men` | `THREE` |
+| 2（中，x=536） | `WHEN I HIT THE PHOTO ANGLED` | `the photo` 被当作 `hit` 的宾语 | `when I hit` 在此结束，`the photo` 是主句主语，`angled` 是谓语 | `ANGLED` |
+| 3（右，x=776） | `THE OLD PLANT PLUMS BEHIND` | `the old plant` 被当作完整名词短语 | `the old` 是“老人们”，`plant` 是动词，`plums` 是宾语 | `PLUMS` |
 
-这条自由选字路线曾给出 **DECELERATIONS**，但现已被用户明确否定。
+这里取的正是 flavor 所说“在那之后，一切的意味都会变得明朗”的第一个词。入口横坐标为 296、536、776；三个提取词段的中心横坐标也依次为 328、476、744，所以从左到右的次序不依赖于选择哪一种图面锚点：
 
-脚本曾在常用英语词频表前 50 万项中寻找“依次从每朵余花取一个字母”的 13 字母词：正序无结果；倒序只有 `DENUNCIATIONS` 与 `DECELERATIONS`。这种做法没有从题面推出逐花索引，拒绝结果说明主题吻合不足以补上机制缺口；两词都不得作为候选。
+```text
+THREE  ANGLED  PLUMS
+ 三      角      梅
+```
 
-## Candidate audit
+于是“三角梅”对应 **`BOUGAINVILLEA`**。语言学中固然可以把这些临界词称作 disambiguators，但站点已经否定 `DISAMBIGUATOR`；它只是三个词的共同角色，不是提示 4 所要求解释的三词短语。
 
-- **已保留：** 38 朵花交叉、共享边移动与三条 garden-path sentences 均可复算。
-- **已推翻：** “反向排列 13 朵余花，再凭主题自由选字”没有索引依据；`DECELERATIONS` 已被明确拒绝。
-- **仍需解释：** 第三句两条同字母微分支、路径相对花心的左右关系、以及 `(13)` 应如何产生有索引的 13 个字母。
+## Answer audit
+
+- **主题闭环：** 完整填盘给出 `GARDEN`（`DANGER` 重排）与 `PATH`；三条箭头路径实际构成三句 garden-path sentences。
+- **提取闭环：** 每句在第一个迫使重分析的词处变得明朗，分别是 `THREE`、`ANGLED`、`PLUMS`；入口和词段自身的横坐标都给出唯一自然顺序。
+- **答案闭环：** `THREE ANGLED PLUMS` → “三角梅” → `BOUGAINVILLEA`，正好 13 字母，并延续植物园主题。
+- **不影响答案的信息：** 第三句有两条同字母微路线，但两条都包含同一段 `ANGLED`；J 行有 `CANLER`/`CANNER` 异常，但不在三条路径或最终提取上。
 
 ## Submission history
 
 | Date | Candidate | Result | Note |
 | --- | --- | --- | --- |
 | 2026-08-17 | DECELERATIONS | rejected | 用户明确反馈“不是答案”；无额外反馈。 |
+| 2026-08-17 | DENUNCIATIONS | rejected | 用户明确反馈“不是答案”；无额外反馈。 |
+| 2026-08-17 | DISAMBIGUATOR | rejected | 用户明确反馈“不是答案”；无额外反馈。 |
+| 2026-08-17 | BOUGAINVILLEA | accepted | 用户明确反馈“答案正确”。 |
+
+## Important failed routes
+
+- 三条选定路径在一种第三句微路线下恰好留下 13 朵完整未触及的花，但题面没有给出逐花字母索引。按余花自下而上各任取一字，在常用词中只得到 `DECELERATIONS` 与 `DENUNCIATIONS`；两者均被用户明确否定，所以整套“余花成员约束”机制已经作废。
+- 路径也会留下 13 个完整未触及的横行答案，但它们与 13 朵余花没有自然一一配对；长度、题号、交叉数量和最近距离索引都不成词。
+- 65 个路径步数确实等于 `13×5`，但穷举转向、花色、横行边界和花朵边界的合理五位编码都没有常见 13 字母词，不能继续在二进制约定中挑结果。
+- 三句合计有 13 个词间空隙；边端字母、侧邻字母以及“空隙序号索引花答案”的有限模型均无候选。
+- `THREE`、`PLUMS`、`ANGLED` 的首字母之后共有 13 步，但这些步的字母、方向和邻格也不产生答案；这个计数只强化了消歧位置，而不是独立密码。
+- 把 `THREE`、`PLUMS`、`ANGLED` 的共同语言学角色直接命名为 `DISAMBIGUATOR`，虽然长度为 13 且能解释 flavor，但已被用户明确否定。没有新提取证据时，不得恢复它或改猜相邻术语。
+- 先前把路径按“左、右、中”列出，错误地产生了 `THREE PLUMS ANGLED`。提示 4 说明三个词本身仍需解释后，重新检查图面可见三个**入口**的 x 坐标依次为 296、536、776，三个词段中心的 x 坐标也依次为 328、476、744；唯一自然的空间顺序是“左、中、右”：`THREE ANGLED PLUMS`。
+- 把 `ANGLED` 当普通变位指示词也不成立：共享边图中 `PLUMS` 只有一条拼法且为斜直线，常见变位 `LUMPS`、`SLUMP` 均不存在；真正的操作是把整组三词逐字译成“三角梅”。
+- 左、右入口的若干误路可汇入 `RIGHT TOO`，但误路前缀本身不成句，且“取右侧”无法给出答案；它不是可靠提取规则。
+- 不能把棋盘当作三条覆盖全部 228 格的 Numberlink；局部度数约束已经不可满足。
 
 ## Evidence and artifacts
 
 - `artifacts/rows_garden.py`：横行/花朵交叉、三角格坐标、共享边图及精确文字路径。
-- `artifacts/extract_paths.py`：统计路径经过的花、选定第三句分支并生成余花提取。
-- `artifacts/path-sentences.tsv`：三条句子的精确格子序列与左右转向序列。
-- `artifacts/final-extraction.tsv`：13 朵余花、所选字母、原答案位置及具体花瓣格。
-- `artifacts/three-paths.png`：在持久坐标系上的三条已填路径标注图。
+- `artifacts/path-sentences.tsv`：三条句子的具体格子序列与转向序列。
+- `artifacts/disambiguators.tsv`：三句的入口与提取词段横坐标、从左到右次序、初始分析、正确分析和提取词。
+- `artifacts/three-paths.png`：在持久坐标系上的三条路径标注图。
+- `artifacts/extract_paths.py` 与 `artifacts/final-extraction.tsv`：保留被否定的余花提取实验，仅作失败路线复核，不支持当前候选。
 - Rows Garden 格式核对：[A Muse Labs Rows Garden overview](https://amuselabs.com/docs/puzzles/rows-garden/overview/)。
-- Garden-path 阅读中的回视/重读现象参考：[Retracing the garden-path: Nonselective rereading and no reanalysis](https://www.sciencedirect.com/science/article/pii/S0749596X24000184)。
+- 术语依据：[Neural Language Models as Psycholinguistic Subjects](https://aclanthology.org/N19-1004/)；[Garden-path sentence](https://en.wikipedia.org/wiki/Garden-path_sentence)。
+- 植物名核对：[深圳市政府“探秘深圳市花”](https://www.sz.gov.cn/szstory/202302/content/post_10420237.html)同时使用英文 `bougainvillea` 和中文名“三角梅”；[Kew Plants of the World Online](https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A331418-2)确认属名拼写 `Bougainvillea`。
 
-复算命令（从仓库根目录执行）：
+复算路径（从仓库根目录执行）：
 
 ```powershell
 python rounds\toringmoni\nodes\c05-path-in-a-rose-garden\artifacts\rows_garden.py --path-query "left|A01|L01|THE COMPLEX HOUSES THREE MEN" --path-query "right|A07|K13|THE OLD PLANT PLUMS BEHIND" --path-query "middle|L04|B07|WHEN I HIT THE PHOTO ANGLED"
-python rounds\toringmoni\nodes\c05-path-in-a-rose-garden\artifacts\extract_paths.py --middle-match 1
 ```
-
-## Important failed routes
-
-- 不能把矩阵当成三条覆盖全盘的 Numberlink；度数约束本身已不可满足。
-- 不能允许只碰顶点的三角格相邻；它产生大量偶然文字路径，失去句子唯一性。
-- `THE OLD POOR TOO ...`、`THE COMPLEX HOUSES US ...` 是在分叉处可读出的诱饵/偶然延伸，不通向对应出口；完整入口—出口句分别要求 `PLANT PLUMS BEHIND` 与 `THREE MEN`。
-- 不应把 J 行强改成 `CANNER`；这样会立即破坏 `RELISH` 的交叉。
-- `DECELERATIONS` 来自对 13 朵余花的无索引自由选字；虽与“放慢脚步”主题吻合，但已被明确拒绝，不能在没有新证据时恢复。`DENUNCIATIONS` 使用同一失效机制，也一并排除。
 
 ## Next action
 
-从三条已确认路径的几何关系中寻找显式的 13 次取字事件，优先检查句法消歧点所触发的回退/改道及路径两侧花瓣，而不是继续对余花自由挑字。
+无需进一步解题；节点已完成，保留解答与产物供后续 Round Meta 使用。

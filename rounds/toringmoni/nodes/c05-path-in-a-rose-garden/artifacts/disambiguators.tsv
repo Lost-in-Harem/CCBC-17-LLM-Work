@@ -1,0 +1,4 @@
+entry	entry_x	extracted_mid_x	left_to_right_rank	sentence	initial_parse	resolved_parse	disambiguator
+top-left	296	328	1	THE COMPLEX HOUSES THREE MEN	THE [COMPLEX(adj) HOUSES(noun)]	[THE COMPLEX](noun phrase) HOUSES(verb) [THREE MEN]	THREE
+bottom-middle	536	476	2	WHEN I HIT THE PHOTO ANGLED	WHEN [I HIT THE PHOTO]	WHEN [I HIT], [THE PHOTO](subject) ANGLED(verb)	ANGLED
+top-right	776	744	3	THE OLD PLANT PLUMS BEHIND	[THE OLD PLANT](noun phrase)	[THE OLD](noun phrase) PLANT(verb) PLUMS(object) BEHIND(adverb)	PLUMS

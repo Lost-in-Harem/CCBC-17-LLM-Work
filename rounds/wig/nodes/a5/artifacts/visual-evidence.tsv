@@ -28,3 +28,6 @@ A5-V26	谷猫 / 植物神经紊乱	statement-package	大陆帅哥作品页、游
 A5-V27	星浦植物博物馆	statement-package	玫瑰展宣传单的 1000×1000 原始矩阵、页面截图和完整 DOM；用户确认对应 c05《玫瑰花园的小径》。	work/toringmoni-statements/c05-path-in-a-rose-garden/rose-crossword-matrix.webp
 A5-V28	两杯	statement-package	“黑白无偿记账”首页、账本初始状态、DOM 与 Vue；高可信对应 c07《碳基生物计算器》。	work/toringmoni-statements/c07-carbon-based-lifeform-calculator/two-cups-ledger.png
 A5-V29	跨应用	collection-index	六组候选题面的映射依据、完整度、异常短句和文件包索引；不含对这些小题的求解。	work/toringmoni-statements/INDEX.md
+A5-V30	尼罗	statement-package	首页广告“最好的贺卡”含异常标记“国宝级实力（6.2.6.1）”；1500×2500 放大图分成三个大区，用户确认对应 c09《亚细亚三重奏》。	work/toringmoni-statements/c09-asia-trio/01-best-card.webp
+A5-V31	谷猫 / 基围虾百科	page-package	《极光》条目顶部警告“本条目可能被恶意用户编辑”及异常标记“苦涩而清醒，只是有一点稀释。18.17.7.14”；高可信为 c03《创造你的历史》的入口。	work/toringmoni-statements/candidates/aurora-shrimpedia/02-page-visible.png
+A5-V32	谷猫 / 基围虾百科	statement-package	《极光 - 历史修改记录》按时间列出从加入七个条目到组合所有条目的 13 次编辑操作；完整 DOM 和原始响应已保存，不执行变换。	work/toringmoni-statements/candidates/aurora-shrimpedia/04-history.dom.txt

@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Analyze extraction candidates induced by the three garden-sentence paths."""
+"""Reproduce the rejected untouched-bloom extraction hypothesis.
+
+This diagnostic is retained so the two submitted failures can be audited.  A
+target must be supplied explicitly; the untouched blooms do not determine a
+current answer candidate.
+"""
 
 from __future__ import annotations
 
@@ -17,8 +22,6 @@ PATH_QUERIES = [
     ("right", "A07", "K13", "THE OLD PLANT PLUMS BEHIND"),
     ("middle", "L04", "B07", "WHEN I HIT THE PHOTO ANGLED"),
 ]
-
-TARGET = "DECELERATIONS"
 
 OPPOSITE = {"NW": "SE", "N": "S", "NE": "SW", "SE": "NW", "S": "N", "SW": "NE"}
 
@@ -53,6 +56,11 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--middle-match", type=int, choices=[1, 2], default=1)
     parser.add_argument(
+        "--target",
+        required=True,
+        help="Rejected candidate to audit against the untouched blooms",
+    )
+    parser.add_argument(
         "--output",
         type=Path,
         default=Path(__file__).resolve().parent / "grid" / "extraction-candidates.tsv",
@@ -63,6 +71,7 @@ def main() -> None:
         default=Path(__file__).resolve().parent / "grid" / "final-extraction.tsv",
     )
     args = parser.parse_args()
+    target = args.target.upper()
 
     cells = make_cells()
     adjacency = make_adjacency(cells, "edge")
@@ -180,10 +189,10 @@ def main() -> None:
     ]
     write_tsv(args.output, rows, headers)
     reverse_rows = list(reversed(rows))
-    if len(reverse_rows) != len(TARGET):
-        raise ValueError(f"Expected {len(TARGET)} untouched blooms, found {len(reverse_rows)}")
+    if len(reverse_rows) != len(target):
+        raise ValueError(f"Expected {len(target)} untouched blooms, found {len(reverse_rows)}")
     final_rows: list[dict[str, object]] = []
-    for order, (row, letter) in enumerate(zip(reverse_rows, TARGET, strict=True), start=1):
+    for order, (row, letter) in enumerate(zip(reverse_rows, target, strict=True), start=1):
         answer = str(row["answer"])
         if letter not in answer:
             raise ValueError(f"{row['bloom']}={answer} cannot supply target letter {letter}")
@@ -217,9 +226,9 @@ def main() -> None:
         ],
     )
 
-    # The answer enumeration supplies the word length.  Check how strongly the
-    # remaining blooms constrain ordinary English words in both grid orders;
-    # the flavor text resolves the small reverse-order candidate set.
+    # Check how weakly the remaining blooms constrain ordinary English words.
+    # DECELERATIONS and DENUNCIATIONS survive in reverse order, and both were
+    # explicitly rejected; this family is not a valid extraction.
     from wordfreq import top_n_list, zipf_frequency
 
     common_words = [word for word in top_n_list("en", 500_000) if len(word) == len(rows) and word.isalpha()]
