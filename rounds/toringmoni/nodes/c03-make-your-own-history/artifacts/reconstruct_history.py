@@ -85,16 +85,16 @@ def build_transitions() -> list[Transition]:
             "刀前本可加动词‘切’，而‘切’可独立表示同一动作，故刀换为切。",
         ),
         Transition(
-            ("三明", "汁", "横", "切", "瓜"),
-            "交换倒数第4项与末项；删天气字‘雷’；删去四字项先提后斩。",
+            ("汁", "横", "切", "瓜"),
+            "交换倒数第4项与末项；删天气字‘雷’；‘明’同时含七曜中的日、月，故删去三明；再删四字项先提后斩。",
         ),
         Transition(
-            ("JOHN", "横切南瓜"),
-            "后三项归并为横切南瓜（jack-o'-lantern→JACK）；其余两项成三明汁≈三明治，追溯命名者John Montagu得JOHN；Jack亦是John昵称。",
+            ("汁", "横切西瓜"),
+            "后三项横、切、瓜合并成四字条目横切西瓜；只剩一个前置条目汁，因此不触发西文名称替换。",
         ),
         Transition(
-            ("JOHN", "UNKNOWN_SURNAME"),
-            "最新修改要求把末项换成合适姓氏；当前下载件没有改变后的第二版历史，姓氏仍未知。",
+            ("汁袁",),
+            "西瓜横截面为圆；换成同音常见姓氏袁，与汁顺序组合成汁袁，谐音支援。",
         ),
     ]
 
@@ -142,8 +142,9 @@ def main() -> None:
             )
 
     print(f"date signal: {date_message}")
-    print("intermediate: JOHN")
-    print("final surname: unresolved; altered history capture required")
+    print("intermediate: RED HERRING")
+    print("literal final state: U+6C41 U+8881 (zhi yuan)")
+    print("candidate: U+652F U+63F4 (ZHIYUAN / support)")
     print(f"wrote: {output}")
 
 
