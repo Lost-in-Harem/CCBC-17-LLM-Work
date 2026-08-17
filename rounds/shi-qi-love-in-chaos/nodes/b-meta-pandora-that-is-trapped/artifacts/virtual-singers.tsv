@@ -1,0 +1,7 @@
+clip	former_claim	status	reason
+1	初音未来	withdrawn	《大悲咒》直接指向观音菩萨；翻唱角色多走一层
+3	言和/镜音铃连	withdrawn	用户确认音频为周深《望》，旧英文听写为模型幻听
+5	重音Teto	withdrawn	歌曲名焚音打本身已经满足“某音某”
+7	镜音连	withdrawn	273.048秒用于指向《4′33″》及大音希声，不要求特定翻唱
+10	摩音麦郎	withdrawn	歌曲名电音之王本身已经满足“某音某某”
+catalog	102个某音角色	failed	按“后缀减 feeder 只剩一字”得到101条边，非唯一；HELP/XL无边

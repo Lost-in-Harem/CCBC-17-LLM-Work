@@ -1,0 +1,12 @@
+clip\tthing\tkey\tfeeder\tanswer\tanswer_status\tsame_position\tposition_1_based\textracted
+1\t观音菩萨\tPUSA\tb6\tPERSPECTIVE\tmeta-inferred\tP\t1\tP
+2\t五音不全\tBUQUAN\tb8\tPENTAGON\taccepted\tA\t5\tA
+3\t余音绕梁\tRAOLIANG\tb3\tREST\taccepted\tR\t1\tR
+4\t声音玩具\tWANJU\tb9\tRACKET\taccepted\tA\t2\tA
+5\t焚音打\tDA\tb2\tDEFLAGRATE\taccepted\tD\t1\tD
+6\t怪音波\tBO\tb4\tWONDER\tmeta-inferred\tO\t2\tO
+7\t大音希声\tXISHENG\tb11\tXL\taccepted\tX\t1\tX
+8\t语音信箱\tXINXIANG\tb5\tXHOSA\taccepted\tX\t1\tX
+9\t低音提琴\tTIQIN\tb7\tNADIR\taccepted\tI\t4\tI
+10\t电音之王\tZHIWANG\tb10\tCURRENT\tmeta-inferred\tN\t6\tN
+11\t谐音梗\tGENG\tb1\tGREAT UNITY\taccepted\tG\t1\tG

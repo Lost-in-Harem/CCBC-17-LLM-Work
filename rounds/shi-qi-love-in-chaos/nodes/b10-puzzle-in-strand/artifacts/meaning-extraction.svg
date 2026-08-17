@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="884" height="722" viewBox="0 0 884 722">
+<style>
+text{font-family:Arial,sans-serif;letter-spacing:0}
+.title{font-size:30px;font-weight:700;fill:#17202a}
+.label{font-size:18px;font-weight:700;fill:#34495e}
+.cell{fill:#fff;stroke:#aab7b8;stroke-width:2}
+.letter{font-size:28px;font-weight:700;text-anchor:middle;dominant-baseline:central;fill:#17202a}
+.fling{fill:none;stroke:#d35400;stroke-width:13;stroke-linecap:round;stroke-linejoin:round;opacity:.72}
+.meaning{fill:none;stroke:#2471a3;stroke-width:13;stroke-linecap:round;stroke-linejoin:round;opacity:.72}
+.shared{fill:#f4d03f;stroke:#7d6608;stroke-width:3}
+.legend{font-size:21px;font-weight:700}
+</style>
+<rect width="884" height="722" fill="#f7f9f9"/>
+<text x="442.0" y="48" text-anchor="middle" class="title">First/last endpoint matrix in board order</text>
+<text x="442.0" y="82" text-anchor="middle" class="label">Rejected endpoint-matrix continuation: FLING / MEANING</text>
+<text x="134.0" y="126" text-anchor="middle" class="label">B1</text>
+<text x="222.0" y="126" text-anchor="middle" class="label">B2</text>
+<text x="310.0" y="126" text-anchor="middle" class="label">B3</text>
+<text x="398.0" y="126" text-anchor="middle" class="label">B4</text>
+<text x="486.0" y="126" text-anchor="middle" class="label">B5</text>
+<text x="574.0" y="126" text-anchor="middle" class="label">B6</text>
+<text x="662.0" y="126" text-anchor="middle" class="label">B7</text>
+<text x="750.0" y="126" text-anchor="middle" class="label">B8</text>
+<rect x="90" y="150" width="88" height="88" class="cell"/>
+<rect x="178" y="150" width="88" height="88" class="cell"/>
+<rect x="266" y="150" width="88" height="88" class="cell"/>
+<rect x="354" y="150" width="88" height="88" class="cell"/>
+<rect x="442" y="150" width="88" height="88" class="cell shared"/>
+<rect x="530" y="150" width="88" height="88" class="cell"/>
+<rect x="618" y="150" width="88" height="88" class="cell"/>
+<rect x="706" y="150" width="88" height="88" class="cell"/>
+<rect x="90" y="238" width="88" height="88" class="cell"/>
+<rect x="178" y="238" width="88" height="88" class="cell"/>
+<rect x="266" y="238" width="88" height="88" class="cell"/>
+<rect x="354" y="238" width="88" height="88" class="cell"/>
+<rect x="442" y="238" width="88" height="88" class="cell shared"/>
+<rect x="530" y="238" width="88" height="88" class="cell"/>
+<rect x="618" y="238" width="88" height="88" class="cell"/>
+<rect x="706" y="238" width="88" height="88" class="cell"/>
+<rect x="90" y="326" width="88" height="88" class="cell"/>
+<rect x="178" y="326" width="88" height="88" class="cell"/>
+<rect x="266" y="326" width="88" height="88" class="cell"/>
+<rect x="354" y="326" width="88" height="88" class="cell"/>
+<rect x="442" y="326" width="88" height="88" class="cell shared"/>
+<rect x="530" y="326" width="88" height="88" class="cell"/>
+<rect x="618" y="326" width="88" height="88" class="cell"/>
+<rect x="706" y="326" width="88" height="88" class="cell"/>
+<rect x="90" y="414" width="88" height="88" class="cell"/>
+<rect x="178" y="414" width="88" height="88" class="cell"/>
+<rect x="266" y="414" width="88" height="88" class="cell"/>
+<rect x="354" y="414" width="88" height="88" class="cell"/>
+<rect x="442" y="414" width="88" height="88" class="cell"/>
+<rect x="530" y="414" width="88" height="88" class="cell"/>
+<rect x="618" y="414" width="88" height="88" class="cell"/>
+<rect x="706" y="414" width="88" height="88" class="cell"/>
+<polyline points="398,194 398,282 486,194 486,282 486,370" class="fling"/>
+<polyline points="662,370 574,282 662,282 574,194 486,194 486,282 486,370" class="meaning"/>
+<text x="134.0" y="194.0" class="letter">A</text>
+<text x="222.0" y="194.0" class="letter">B</text>
+<text x="310.0" y="194.0" class="letter">C</text>
+<text x="398.0" y="194.0" class="letter">F</text>
+<text x="486.0" y="194.0" class="letter">I</text>
+<text x="574.0" y="194.0" class="letter">N</text>
+<text x="662.0" y="194.0" class="letter">P</text>
+<text x="750.0" y="194.0" class="letter">S</text>
+<text x="134.0" y="282.0" class="letter">P</text>
+<text x="222.0" y="282.0" class="letter">I</text>
+<text x="310.0" y="282.0" class="letter">A</text>
+<text x="398.0" y="282.0" class="letter">L</text>
+<text x="486.0" y="282.0" class="letter">N</text>
+<text x="574.0" y="282.0" class="letter">E</text>
+<text x="662.0" y="282.0" class="letter">A</text>
+<text x="750.0" y="282.0" class="letter">T</text>
+<text x="134.0" y="370.0" class="letter">G</text>
+<text x="222.0" y="370.0" class="letter">N</text>
+<text x="310.0" y="370.0" class="letter">T</text>
+<text x="398.0" y="370.0" class="letter">N</text>
+<text x="486.0" y="370.0" class="letter">G</text>
+<text x="574.0" y="370.0" class="letter">Y</text>
+<text x="662.0" y="370.0" class="letter">M</text>
+<text x="750.0" y="370.0" class="letter">R</text>
+<text x="134.0" y="458.0" class="letter">N</text>
+<text x="222.0" y="458.0" class="letter">O</text>
+<text x="310.0" y="458.0" class="letter">S</text>
+<text x="398.0" y="458.0" class="letter">O</text>
+<text x="486.0" y="458.0" class="letter">N</text>
+<text x="574.0" y="458.0" class="letter">T</text>
+<text x="662.0" y="458.0" class="letter">S</text>
+<text x="750.0" y="458.0" class="letter">E</text>
+<line x1="90" y1="554" x2="150" y2="554" class="fling"/>
+<text x="168" y="561" class="legend" fill="#d35400">FLING: rejected intermediate reading</text>
+<line x1="90" y1="599" x2="150" y2="599" class="meaning"/>
+<text x="168" y="606" class="legend" fill="#2471a3">MEANING: rejected answer path</text>
+<text x="442.0" y="694" text-anchor="middle" class="label">Shared suffix is not an authorized extraction</text>
+</svg>

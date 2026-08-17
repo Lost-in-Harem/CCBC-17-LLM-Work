@@ -10,7 +10,7 @@ feeders:
 status: rejected
 answer:
 confidence:
-summary: "用户明确否定 FLOUNDERING。八盘 spangram、唯一链和中间指令 PASTE ING ON FL 仍确认；共享 N 后构造 FLO UNDER ING 的 rebus 也不是官方提取，需重新审计 ×2 的配对位置和正反交织规则。"
+summary: "FLUCTUATING 已被用户明确否定。八条 spangram、唯一 ×2 链和中间指令 PASTE ING ON FL 仍可复核，但在第 4 盘替换词尾不是官方终提取。"
 updated: 2026-08-17
 ---
 
@@ -18,17 +18,14 @@ updated: 2026-08-17
 
 ## Current conclusion
 
-用户已明确否定 **`FLOUNDERING`**。此前把 `PASTE ING ON FL` 解释成共享 `N`
-移动后的空间 rebus；这一步仍是未经图示明确授权的语义补全。`BINGO`、`ECORI`、
-`ION`、`FLING` 等也均已否定，当前没有可提交候选。
+当前没有可靠候选。用户已明确否定 **`FLUCTUATING`**；第 4 盘的词形重铺虽然
+可复现，但这证明的只是盘面存在该变形，不能证明它是最后一图要求的“粘贴”。
 
 八条 spangram 的端点四字按最后一图的 `×2` 关系排成唯一链
 `4-2-5-1-7-3-8-6`（整体反向等价）。相邻交叠对是
 `NO / IN / GN / AP / AS / ST / ET`。这些边的连续轨迹和左端余字给出中间指令
-`PASTE ING ON FL`。此前将 `ON` 与 `ING` 的字母值 `N` 合并，搬走 `ING` 后留下
-`O`，再把 `ING` 放在 `FLO` 上方并读作 `FLO UNDER ING`；用户已明确否定该结果。
-这说明公共字母的集合关系不能直接当作一个可移动的物理节点，最后图的 `×2` 必须
-按实际配对位置或另一种正反交织规则解释。
+`PASTE ING ON FL`。目前确定它是中间指令，但 `FL` 究竟指一个圆段、一个完整
+strand、一个对齐锚点还是某个更大的字母布局，仍未由现有图示唯一确定。
 
 ## Confirmed Strands solves
 
@@ -88,7 +85,43 @@ FLNO  BINO  INGN  APGN  PAMS  CATS  STRE  NEYT
 NO / IN / GN / AP / AS / ST / ET
 ```
 
-### 3. 已否定：共享 N 的 `FLOUNDERING` rebus
+### 3. 执行 `PASTE ING ON FL`
+
+链首的 `FL` 来自 Board 4 spangram `FLUCTUATION` 的左端，因此 `ON FL` 的对象不是
+孤立字符串 `FL`，而是这条由 `FL` 唯一标识的完整 strand。把后缀 `ING` 贴到共同
+词干 `FLUCTUAT` 上，覆盖原来的名词后缀 `ION`：
+
+```text
+FLUCTUATION = FLUCTUAT + ION
+                         ↓ paste ING
+FLUCTUATING = FLUCTUAT + ING
+```
+
+输出是精确拼写 **`FLUCTUATING`**，不再增加同义词或另一次寻词。
+
+这一步不只是在字面上造出一个英语词。Board 4 的原完整铺法含有 `WAVERING`，其
+末尾正好是 `ING`。执行变形后可得到唯一的无交叉 45 格铺法：
+
+```text
+WAVER / SHIFT / VARIANCE / MUTATION / FLUCTUATING / FLUIDITY
+```
+
+其中 `FLUCTUATING` 的前九格与原 `FLUCTUATION` 完全相同，末尾 `N,G` 两格取自
+原 `WAVERING` 的末端；`WAVER` 也仍是合法主题词。这种词形、路径和主题三重吻合
+为构造级信号，而不只是“变化”主题下的同义联想。
+
+该重铺留下同列三格 `I/O/N`，但用户已经明确否定 `ION`。因此这三格只视为被
+`ING` 换下来的旧后缀回声，不再执行额外提取。复核命令和稳定图示：
+
+```powershell
+python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\solve_strands.py 4 --paste-board4
+python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\artifacts\verify_solution.py
+```
+
+路径图为 `artifacts/ion-extraction.svg` / `.png`；图内已将 `ION` 明确标为不读取的
+旧后缀，并将操作结果标为 `FLUCTUATING`。
+
+### 4. 已否定：共享 N 的 `FLOUNDERING` rebus
 
 七个公共对按链的位置分成 `1 / 2 / 4` 条边；分别可以走成：
 
@@ -133,7 +166,7 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\artifacts\verify_s
 
 该路线的图示 `artifacts/floundering-extraction.svg` / `.png` 仅保留作负证据。
 
-### 4. 已否定：保留旧连接读 `BINGO`
+### 5. 已否定：保留旧连接读 `BINGO`
 
 此前实验把 Board 5 的 `ING` 覆盖到 Board 4 的 `FLNO` 开头，得到 `INGO`，再
 保留被覆盖前的 `N/N` 配对并从相邻 `BINO` 顶端起读：
@@ -146,7 +179,7 @@ B-I-N -> G-O = BINGO
 顶端开始；因此该读法不可恢复。参数化负证据仍可用
 `work/extraction_hypotheses.py --paste-ing-on-fl` 复核。
 
-### 5. 已否定：DNA / EcoRI 路线
+### 6. 已否定：DNA / EcoRI 路线
 
 以下只记录已被用户否定的 `ECORI` 路线，不是当前提取。
 
@@ -191,9 +224,9 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\artifacts\verify_s
 python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hypotheses.py --dna-overlap
 ```
 
-### 6. 已否定：Board 4 的后缀重铺
+### 7. 已否定：把 Board 4 的余格 `ION` 当作答案
 
-以下只记录曾试验并被用户否定的 `ION` 路线，不是当前提取。
+本节否定的是**重铺后的余格读取**，不是上文由指令直接生成的 `FLUCTUATING`。
 
 把相邻公共对中首尾相接的边连成字母路径，并保留左端 Board 4 未参与 `NO` 的 `FL`，整条链从左到右分成：
 
@@ -207,7 +240,8 @@ FL | ON | ING | PASTE
 PASTE ING ON FL
 ```
 
-这不是把裸字符串拼成用户已经否定的 `FLING`。`FL` 选择同盘的 `FLUCTUATION`；Board 4 的完整铺法还恰有 `WAVERING`，可作为 `ING` 的供体：
+`FL` 选择同盘的 `FLUCTUATION`；Board 4 的完整铺法还恰有 `WAVERING`，可作为
+`ING` 的路径验证：
 
 ```text
 WAVERING - ING             = WAVER
@@ -234,14 +268,15 @@ r5c6 = N   （原 FLUCTUATION 的 N）
 I O N
 ```
 
-这也正好恢复被 `ING` 替换的原后缀 `ION`。复核命令：
+这也正好恢复被 `ING` 替换的原后缀 `ION`。但题图没有指示读取余格，而且用户已
+明确否定 `ION`；因此它只解释旧后缀去了哪里，不是第二次提取。复核命令：
 
 ```powershell
 python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\solve_strands.py 4 --paste-board4
 python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\artifacts\verify_solution.py
 ```
 
-### 7. 已否定：读取被左右两侧同时配到的同一个圆
+### 8. 已否定：读取被左右两侧同时配到的同一个圆
 
 对每个内部 strand，把它与左邻的公共对、与右邻的公共对进行比较。若两对含有同一个字母，而且该 strand 中这个字母只有一个物理圆，那么该圆被左右两组配对强制复用，正是题句“交叠之处”所指的二次交叠。
 
@@ -262,7 +297,7 @@ N A S T
 
 Board 5 的重复 `N` 说明字母出现位置不能随意压成集合；但题图未明确指示“被两侧同时使用的圆就是提取位”，因此 `NAST` 只保留为负证据。
 
-### 8. 已否定：从最后的双配圆走到 spangram 右端
+### 9. 已否定：从最后的双配圆走到 spangram 右端
 
 最后一个双配圆是 Board 8 `STER` 中的 `T`；它通过末组 `ET` 配入终端 Board 6 的 `NETY`。沿这条已固定为左到右的 spangram，从 `T` 继续到右边界，恰剩末字 `Y`：
 
@@ -280,9 +315,10 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hy
 
 - 可复核事实：八盘完整铺法、八条左右横跨的 spangram、首末各两字、唯一 `×2` 链及七个公共对。
 - 公共边分成 `FL | ON | ING | PASTE`；反向按块读成唯一通顺的中间指令 `PASTE ING ON FL`。
-- `ON` 与 `ING` 的字母值确实都含 `N`，但这不证明它们在图中共用同一物理圆。
-- `FLO UNDER ING` 的空间 rebus 已被用户明确否定，不能再列为候选。
-- `FLING`、Board 4 的 `ION`、DNA/`ECORI`、内部双配的 `NASTY` 以及二进制/几何/二次方阵均保留为已否定或非唯一的负证据。
+- `FL` 是链首 Board 4 的未配对端点，因而指回完整 spangram `FLUCTUATION`；以 `ING` 覆盖其词尾 `ION`，精确得到 `FLUCTUATING`。
+- Board 4 的唯一 45 格无交叉重铺独立验证该变形：`WAVERING` 变为 `WAVER`，新 `FLUCTUATING` 保留旧路径前九格并接用原 `WAVERING` 的 `N,G`。
+- 第 4 盘主题“唯有变是不变的”与题句“生命的真相”共同验证结果的语义，但候选本身来自精确字母操作，不依赖把主题同义改写为 `CHANGE`。
+- 余格 `ION`、端点矩阵中的 `MEANING`、`FLO UNDER ING`、DNA/`ECORI`、内部双配的 `NASTY` 以及二进制/几何路线均保留为已否定负证据。
 
 ## Submission history
 
@@ -303,21 +339,24 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hy
 | 2026-08-16 | ECORI | rejected | 用户明确报告不是答案；`FLING → CAST → GAATTC → ECORI` 的后续补充操作不成立。 |
 | 2026-08-16 | BINGO | rejected | 用户明确报告不是答案；Board 5 `ING` 覆盖 Board 4 `FLNO` 的圆位读法不是官方终提取。 |
 | 2026-08-17 | FLOUNDERING | rejected | 用户明确报告不是答案；把共享字母 `N` 移动并将 `ING` 置于 `FLO` 上方的 rebus 不是官方终提取。 |
+| 2026-08-17 | MEANING | rejected | 用户明确报告答案不对；从指定 `ING` 反向延伸并借“生命的真相”验证不是官方终提取。 |
+| 2026-08-17 | FLUCTUATING | rejected | 用户明确报告不是答案；把 `FL` 解释为完整 spangram 的标识并替换 `FLUCTUATION` 词尾不是官方终提取。 |
 
 ## Evidence and artifacts
 
-- `artifacts/extraction.md`：精简记录完整 spangram、唯一链及已否定的共享 `N` rebus。
+- `artifacts/extraction.md`：精简记录完整 spangram、唯一链、中间指令及 `FLUCTUATION → FLUCTUATING` 的最终操作。
+- `artifacts/meaning-extraction.svg/png`：保留已判错的端点矩阵 `MEANING` 路线，仅作防重复负证据。
 - `artifacts/floundering-extraction.svg/png`：保留已判错的 `ING` 搬移、`FLO` 和上下 rebus，仅作负证据。
 - `artifacts/bingo-extraction.svg/png`：保留已判错的 `BINGO` 圆位覆盖，仅作防重复负证据。
-- `artifacts/ion-extraction.svg/png`：候选提取的坐标示意，标出 `WAVER`、`FLUCTUATING`、移入的 `NG` 与同列余字 `ION`。
+- `artifacts/ion-extraction.svg/png`：候选操作的坐标示意，标出 `WAVER`、`FLUCTUATING`、接入的 `N,G`，并明确同列 `ION` 只是已否定的余格读取。
 - `artifacts/nasty-extraction.svg` 与渲染后的 PNG：已否定路线的可视化，仅作防重复负证据。
 - `artifacts/fling-extraction.svg/png`：已判错 `FLING` 的旧词图分块，现已明确标为 `REJECTED`。
 - `artifacts/flying-extraction.svg/png`：已判错 `FLYING` 的旧最短交织，仅作防重复负证据。
-- `artifacts/verify_solution.py`：标准库复核八盘精确覆盖、唯一链和各失败路线；`FLOUNDERING` 断言仅作已否定路线审计。
+- `artifacts/verify_solution.py`：标准库复核八盘精确覆盖、唯一链、`FLUCTUATING` 重铺及各失败路线；`MEANING` 等断言仅作已否定路线审计。
 - `work/solve_strands.py`：探索阶段的铺盘搜索器；`--full` 输出完整路径，`4 --paste-board4` 穷举候选重铺。
 - `work/extraction_hypotheses.py --paste-rebus`：复核已否定的 `ON ∩ ING = N`、搬走 `ING` 后留下 `O` 及 `FLO UNDER ING`；`--paste-ing-on-fl` 保留已判错的 `BINGO` 实验。
 - `work/extraction_hypotheses.py --glyph-weave`：复核 `a,d,b,c` 四圆交织与 256 个整股翻转的几何负证据。
-- `work/endpoint_grid_search.py` 与 `work/nested_strands.py --endpoint-order adbc`：复核二次 `4×8` 盘面没有精确覆盖或横跨词。
+- `work/endpoint_grid_search.py --meaning-audit`：复核指定 `ING`、两条唯一路径、20 万词固定后缀审计和 `8!` 列顺序对照；普通模式与 `nested_strands.py` 保留二级完整 Strands 的负证据。
 - `work/pasted_graph.py`：复核相同字母圆连接/合并后的 3 种拓扑均无唯一读串。
 - `work/visual/diagram_inventory/`：题面八条四圆 strand 和七个 `×2` 的稳定原图证据。
 - `work/visual/final_diagram_audit.md`：提示标题与最后一图的可见/不可见信息审计。
@@ -329,6 +368,12 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hy
 
 ## Important failed routes
 
+- **`MEANING`**：用户明确报告答案不对。它在原 Board 1–8 端点矩阵中可与
+  `FLING` 共用同一组三格 `ING`，但“从另一侧延伸”没有最后一图或提示授权，且
+  `MEANING` 在 8! 列排列中有 2856 种可出现，语义对应不足以确定答案；不得恢复。
+- **`FLUCTUATING`**：用户明确报告不是答案。Board 4 的 45 格重铺和
+  `FLUCTUATION - ION + ING` 都可复核，但“`FL` 指完整 spangram、`PASTE` 指替换
+  词尾”是额外解释；不得把盘面巧合或中间变形重新升级为终答。
 - **`BINGO`**：用户明确报告不是答案。把 Board 5 的前三圆 `ING` 覆盖到 Board 4
   `FLNO` 的前三圆可机械得到 `INGO`，再沿旧 `N/N` 配对读出 `BINGO`，但最终图没有
   授权保留被覆盖的配对或指定从 `BINO` 顶端起读；该操作不能恢复。
@@ -336,7 +381,7 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hy
   当作一个可移动节点，留下 `O`，再把 `ING` 排在 `FLO` 上方，确实能构成
   `FLO UNDER ING`，但题图没有授权这种物理合并或空间 rebus；不得恢复。
 - **`NASTY`**：用户明确报告不是答案。内部 strand 的单一物理圆若同时参与左右公共对，确实依次给出 `N/A/S/T`，但从最后一个 `T` 沿终端 `NETY` 续取 `Y` 没有图示依据；题句与 Hobbes 语句的对应也只是后验联想。整条路线不再恢复。
-- **`FLING`**：用户明确报告不是答案。错误在于把 “paste ... on ...” 当成字符串拼接；当前候选改为移动共用 `N` 的完整 `ING` 路径并读取空间 rebus，不再使用 `fling = cast` 的同义跳转。
+- **`FLING` 作为终答**：用户明确报告不是答案。把孤立字符串 `FL+ING` 裸拼接，忽略了 `FL` 是完整 spangram `FLUCTUATION` 的端点标识；不再做 `fling = cast` 的同义跳转。
 - **`FLYING`**：用户明确报告不是答案。旧路线把右端 `NY` 反读为 `YN`，再对 `FL / YN / ING` 做最短公共超序列；“把两端都作为材料”和 SCS 均非图上指令。
 - **`GAATTC / ECORI`**：用户明确否定序列和酶名。DNA 字母筛选本身可重复，但 `FLING → CAST`、补 `C` 和把识别位点命名为答案都不是题图强制步骤。
 - **`PASTEUR`**：用户明确报告不是答案；`UR` 没有任何字母级来源，只是借“生命”补成人名。
@@ -353,14 +398,14 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hy
 - 相邻完整 spangram 扣除端点公共对后，每对都留下 2–5 个额外共同字母，没有任何一对恰留一个强制字母。
 - 合并 `×2` 后的 18 字按奇偶拆为两条 9 字 strand：四种自然端点次序、链正反、全部整股正反和重复 `N` 选择共 2304 个贡献串，双词和单词命中均为 0。
 - **四圆交织几何**：自然的 `a,d,b,c` 放置不能固定绝对朝向；无交叉配线仅给出互补的 `2/L` 方向码，四排 7-bit 掩码也不成唯一文字。不得把 `2`、`L` 或它们的组合升级为候选。
-- **二次方阵与连接图**：`a,d,b,c` 的 `4×8` 盘没有精确 Strands 覆盖、没有横跨词；`NAMASTE/MATTERS` 是高密度字母盘中的偶然路径。三种同字母连接拓扑也没有唯一长读串；不再从其中挑普通词或做语义补全。
+- **二次完整 Strands 与连接图**：四种自然端点次序的 `4×8` 盘均没有词长至少 4 的精确 Strands 全覆盖，也没有横跨词；`NAMASTE/MATTERS` 是高密度字母盘中的偶然路径。端点矩阵里的 `MEANING` 也已被用户否定。三种同字母连接拓扑没有唯一长读串。
 - **`FLUCTUATING → NORI/IRON`**：旧路线错误保留 `WAVE`，因而让 `RING` 的 `R,I` 都落空，得到不连通的 `N,O,R,I` 并任意反读 `IRON`。正确执行会把 `WAVERING` 只截成 `WAVER`，保留 `R` 的覆盖，余格是同列 `ION`；`IRON` 仍不得恢复。
-- **`ION`**：用户明确报告不是答案；Board 4 的 45 格重铺虽可复核，但没有题图或提示授权把该余格升级为终提取。
+- **`ION`**：用户明确报告不是答案；Board 4 的 45 格重铺虽可复核，但该余格只是被 `ING` 换下来的旧后缀，没有题图授权把它升级为终提取。它的否定不否定操作直接生成的 `FLUCTUATING`。
 - **`ECORI`**：用户明确报告不是答案；此前把中间 DNA 识别位点升级为酶名，属于无授权的语义补全。
 
 ## Next action
 
-重新审计最后图的 `×2`：不要把公共字母集合当作物理连接；为每个相邻 strand
-保留两个匹配字母的**具体圆位**，枚举正向/反向交织后的配对位置，并从题句“正反
-交织配对、交叠之处”寻找直接字母读法。需要一个不依赖英文同义词或 rebus 的候选；
-不得恢复已否定的 `FLOUNDERING`、`BINGO`、`ION`、`FLING`、`GAATTC` 或 `ECORI`。
+重新建立最后一图的圆位级粘贴模型：保留八条 strand 的实际上下方向、每个公共
+字母的具体圆位和 `×2` 配线，枚举 `ING` 在 `FL` 上的有限平移/翻转对齐；只接受
+能在粘贴后由图上连通关系唯一读出的结果。若仍无唯一信号，所需新信息是提示 11
+或提示 12 的正文。

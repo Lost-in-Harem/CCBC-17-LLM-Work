@@ -9,7 +9,7 @@
     .grid { stroke: #94a3b8; stroke-width: 1.5; fill: none; }
   </style>
 
-  <text x="45" y="46" class="title">B10 candidate extraction: ION</text>
+  <text x="45" y="46" class="title">B10 candidate extraction: FLUCTUATING</text>
   <text x="45" y="82" class="sub">Overlap edges, left to right</text>
   <text x="300" y="82" class="mono">NO / IN / GN / AP / AS / ST / ET</text>
   <text x="45" y="116" class="sub">Join adjacent edge-trails, then reverse block order</text>
@@ -53,7 +53,7 @@
   <text x="475" y="595" class="mono" fill="#15803d">I</text>
   <text x="475" y="479" class="mono" fill="#15803d">O</text>
   <text x="475" y="421" class="mono" fill="#15803d">N</text>
-  <text x="500" y="390" class="sub" fill="#15803d">Read the one leftover column upward: ION</text>
+  <text x="500" y="390" class="sub" fill="#15803d">Rejected leftover read: ION (old suffix only)</text>
 
   <rect x="500" y="435" width="635" height="150" rx="14" fill="#ecfdf5" stroke="#15803d" stroke-width="2"/>
   <text x="530" y="478" class="sub">Exact path transfer</text>
@@ -61,6 +61,6 @@
   <text x="530" y="548" class="small">then takes the N,G cells formerly at the end of WAVERING.</text>
   <text x="530" y="578" class="small">The unused donor I plus the displaced target O,N are the green column.</text>
 
-  <text x="500" y="635" class="mono" style="font-size:32px; fill:#15803d">ANSWER CANDIDATE: ION</text>
+  <text x="500" y="635" class="mono" style="font-size:32px; fill:#15803d">ANSWER CANDIDATE: FLUCTUATING</text>
   <text x="500" y="670" class="small">Reproduce: python artifacts/verify_solution.py</text>
 </svg>

@@ -1,8 +1,8 @@
-"""Verify the eight covers, endpoint chain, and FLOUNDERING rebus.
+"""Verify the eight covers, endpoint chain, and FLUCTUATING extraction.
 
 The script retains PASTE ING ON FL as a licensed intermediate instruction.
-It also retains the reproducible cores of BINGO, ECORI, ION, FLING, FLYING,
-NASTY, and 42 as negative evidence after explicit rejection.
+It also retains the reproducible cores of MEANING, FLOUNDERING, BINGO, ECORI,
+ION, FLING, FLYING, NASTY, and 42 as negative evidence after rejection.
 """
 
 from __future__ import annotations
@@ -249,6 +249,31 @@ def main():
     fling_intermediate = left_residue + "ING"
     assert fling_intermediate == "FLING"
 
+    # Rejected endpoint-matrix continuation. FLING and MEANING are real paths,
+    # but restoring the original board order and extending through ING is not
+    # instructed by the final diagram.
+    matrix = tuple(
+        "".join(codes[board][row] for board in range(1, 9))
+        for row in range(4)
+    )
+    assert matrix == ("ABCFINPS", "PIALNEAT", "GNTNGYMR", "NOSONTSE")
+
+    def matrix_read(path):
+        assert len(path) == len(set(path))
+        assert all(
+            max(abs(ar - br), abs(ac - bc)) == 1
+            for (ar, ac), (br, bc) in zip(path, path[1:])
+        )
+        return "".join(matrix[row][column] for row, column in path)
+
+    ing_path = ((0, 4), (1, 4), (2, 4))
+    fling_path = ((0, 3), (1, 3)) + ing_path
+    meaning_path = ((2, 6), (1, 5), (1, 6), (0, 5)) + ing_path
+    assert matrix_read(fling_path) == "FLING"
+    rejected_meaning = matrix_read(meaning_path)
+    assert rejected_meaning == "MEANING"
+    assert set(fling_path) & set(meaning_path) == set(ing_path)
+
     # ON and ING meet at the same letter-value vertex N in the edge-trail
     # graph. Moving the complete ING trail therefore moves that N instead of
     # copying it. ON leaves O behind next to FL, making FLO. Pasting ING above
@@ -262,8 +287,8 @@ def main():
     upper = ing_trail
     assert on_residue == "O"
     assert lower == "FLO"
-    candidate = lower + "UNDER" + upper
-    assert candidate == "FLOUNDERING"
+    rejected_floundering = lower + "UNDER" + upper
+    assert rejected_floundering == "FLOUNDERING"
 
     # Rejected BINGO experiment: overwrite Board 4's first three circles with
     # Board 5's ING, then retain an obsolete N/N junction and choose a new read
@@ -292,11 +317,18 @@ def main():
     )
     assert rejected_bingo == "BINGO"
 
-    # Execute the instruction on Board 4.  The full cover supplies the donor
-    # WAVERING and target FLUCTUATION.  Removing ING from the donor leaves the
-    # valid path WAVER; pasting it onto the word beginning FL changes that path
-    # to FLUCTUATING.  Across every possible path spelling there is exactly one
-    # noncrossing 45-cell pack.
+    # Execute the instruction on the complete spangram identified by its FL
+    # endpoint. Replacing FLUCTUATION's ION suffix with ING gives the exact
+    # candidate FLUCTUATING. The Board 4 layout independently supports the
+    # rewrite: shortening WAVERING to WAVER leaves exactly one noncrossing
+    # 45-cell pack containing the candidate.
+    target = SPANGRAMS[4]
+    candidate = target[:-3] + "ING"
+    assert target.startswith(left_residue)
+    assert target.endswith("ION")
+    assert candidate == "FLUCTUATING"
+    assert candidate in PASTED_BOARD4_PACK
+
     full_board4_covers = exact_covers(4)
     assert len(full_board4_covers) == 1
     full_board4 = dict(full_board4_covers[0])
@@ -305,14 +337,8 @@ def main():
     pasted_board4 = dict(pasted_covers[0])
 
     assert pasted_board4["WAVER"] == full_board4["WAVERING"][:5]
-    assert (
-        pasted_board4["FLUCTUATING"][:9]
-        == full_board4["FLUCTUATION"][:9]
-    )
-    assert (
-        pasted_board4["FLUCTUATING"][9:]
-        == full_board4["WAVERING"][-2:]
-    )
+    assert pasted_board4[candidate][:9] == full_board4["FLUCTUATION"][:9]
+    assert pasted_board4[candidate][9:] == full_board4["WAVERING"][-2:]
 
     all_cells = frozenset(itertools.product(range(8), range(6)))
     pasted_used = frozenset().union(
@@ -461,10 +487,14 @@ def main():
     print("rejected junction + terminal-tail route:", junction_read, "+", tail, "->", rejected_nasty)
     print("reverse audit:", reverse_junction_read, "+", reverse_tail or "(empty)")
     print("instruction: PASTE ING ON FL")
+    print("endpoint matrix in board order:", "/".join(matrix))
+    print("  execute instruction path:", matrix_read(fling_path))
+    print("  shared cells:", matrix_read(ing_path))
+    print("rejected endpoint-matrix continuation:", rejected_meaning)
     print("  ON and ING share:", "".join(sorted(shared_hinge)))
     print("  move ING; ON leaves:", on_residue)
     print("  rebus rows:", upper, "/", lower)
-    print("candidate: FLO UNDER ING ->", candidate)
+    print("rejected rebus: FLO UNDER ING ->", rejected_floundering)
     print("rejected overlay result:", rejected_bingo)
     print("  circle fill:", target_before, "beside", neighbor)
     print("  donor Board 5:", donor, "(paste", paste_segment + ")")
@@ -474,10 +504,10 @@ def main():
     print("  FL + ING ->", fling_intermediate)
     print("  FLING -> CAST; CAST residue ->", cast_residue)
     print("  overlap DNA + C ->", recognition_site, "->", rejected_ecori)
-    print("rejected Board 4 reinterpretation:")
+    print("candidate operation on Board 4:")
     print("  WAVERING -> WAVER + ING")
-    print("  FLUCTUATION + ING -> FLUCTUATING")
-    print("  unique leftover column, bottom-to-top ->", rejected_ion)
+    print("  FLUCTUATION - ION + ING ->", candidate)
+    print("  unique leftover column, bottom-to-top ->", rejected_ion, "(rejected residue)")
     print("rejected bare concatenation: FL + ING ->", fling_intermediate)
     print("rejected extra-end/SCS route: FL / YN / ING -> FLYING")
     print("rejected final answer but retained recognition site:", recognition_site)
@@ -490,8 +520,9 @@ def main():
     print(
         "rejected final candidates: COPY AND PASTE / PASTE / CUT AND PASTE / "
         "42 / PASTEUR / GAATTC / ECORI / FLYING / FLING / NASTY / ION / "
-        "BINGO"
+        "BINGO / FLOUNDERING / MEANING"
     )
+    print("candidate:", candidate)
 
 
 if __name__ == "__main__":
