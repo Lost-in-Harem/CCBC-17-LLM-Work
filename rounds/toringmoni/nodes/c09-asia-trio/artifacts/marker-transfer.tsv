@@ -1,0 +1,31 @@
+# Colour-coded component transfer on 最好的贺卡.webp.
+# A marker sits centred above one character cell; it draws that character's
+# top-level part list left to right (a part that decomposes further is drawn as
+# a split box) and colours the part(s) that get extracted.
+# A footer strip draws a target character's part list, each part coloured by the
+# source marker it came from.  Panels feed forward CN -> JP footer,
+# JP -> KR footer, KR -> CN footer.
+kind	id	box_px	source_cell	boxes	split_boxes	colours(left->right)
+marker	CN+7L	(332,565)-(386,593)	CN_+7_L#2	3	2	white | lightpink(246,147,240)/magenta(247,49,240) | brown(113,73,34)
+marker	CN+7R	(476,565)-(530,593)	CN_+7_R#1	3	2	red(228,27,33) | white/white | white
+marker	CN-6L	(332,709)-(387,737)	CN_-6_L#2	3	3	white | white | lightviolet(183,119,176)/purple(142,37,134)
+marker	CN-6R	(557,709)-(594,737)	CN_-6_R#2	2	2	periwinkle(157,123,177) | white/white
+marker	CN+6R	(485,853)-(522,881)	CN_+6_R#1	2	2	white | tan(244,200,129)/orange(240,142,28)
+marker	CN+2L	(269,997)-(306,1025)	CN_+2_L#1	2	2	darkmagenta(152,0,87) | white/white
+footer	JPfoot1	(1218,475)-(1254,503)	-	2	2	periwinkle | lightviolet/purple
+footer	JPfoot2	(1263,475)-(1317,503)	-	3	2	darkmagenta | lightpink/magenta | brown
+footer	JPfoot3	(1326,476)-(1362,503)	-	2	2	red | tan/orange
+marker	JP+5L_a	(920,84)-(956,120)	JP_+5_L#2	3	-	white / brightgreen(49,244,48) / mediumgreen(99,158,128)  [3 stacked bands 2:2:4]
+marker	JP+5L_b	(991,84)-(1028,120)	JP_+5_L#3	2	1	green(49,162,100)+white on top / white below
+marker	JP+1L	(848,228)-(884,264)	JP_+1_L#1	2	1	tan(192,150,103)+yellowgreen(136,191,59) on top / white below
+marker	JP+1R_a	(1208,228)-(1244,264)	JP_+1_R#3	2	1	paleyellow(245,238,157)+darkgreen(0,76,39) on top / white below
+marker	JP+1R_b	(1280,228)-(1316,264)	JP_+1_R#4	2	1	yellowgreen2(214,216,71)/olive(158,162,24) | darkolive(105,107,16)
+marker	JP+7R	(1064,372)-(1100,408)	JP_+7_R#1	3	-	white / brightyellow(245,230,31) / lightgreen(181,213,133)  [3 stacked bands 4:2:2]
+footer	KRfoot1	(1183,1605)-(1255,1642)	-	3	2	paleyellow/brightyellow/tan | yellowgreen2/olive | darkolive
+footer	KRfoot2	(1264,1605)-(1372,1642)	-	5	1	lightgreen | yellowgreen | green/brightgreen | mediumgreen | darkgreen
+marker	KR-3L	(1034,1192)-(1071,1210)	KR_-3_L#3	2	0	blue(0,0,241) | white
+marker	KR+4L	(890,1336)-(927,1354)	KR_+4_L#1	2	0	teal(49,177,166) | lightblue(123,198,225)
+marker	KR+8L_a	(881,1480)-(936,1498)	KR_+8_L#1	3	0	white | white | periwinkle2(126,127,181)
+marker	KR+8L_b	(971,1479)-(990,1499)	KR_+8_L#2	1	0	navy(44,47,138)
+marker	KR+8R	(1186,1479)-(1207,1499)	KR_+8_R#2	1	0	skyblue(39,163,211)
+footer	CNfoot	(638,1137)-(737,1156)	-	6	0	teal | lightblue | skyblue | blue(small,bottom) | periwinkle2 | navy

@@ -1,9 +1,0 @@
-position	letter	matching_route_positions	matching_thoughts
-1	L	1,2	LUNAR ORBIT / LILLIE BRIDGE DEPOT
-2	O	3,4	COMMUNICATION FOUNDATION / DOWN TWO
-9	I	1,2	LUNAR ORBIT / LILLIE BRIDGE DEPOT
-10	T	1,3	LUNAR ORBIT / COMMUNICATION FOUNDATION
-
-# Reading the rows by increasing character position gives LOIT.  The summary's
-# “混乱思绪” supplies the anagram operation; TOIL is the only ordinary English
-# word among the anagrams of LOIT.

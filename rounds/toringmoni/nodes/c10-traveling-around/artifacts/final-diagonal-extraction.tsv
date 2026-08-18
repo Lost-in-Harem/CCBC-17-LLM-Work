@@ -1,7 +1,0 @@
-route_position\tday\tthought\tnormalized_prefix\tselected_letter
-1\t3\tLUNAR ORBIT\tLUNA\tL
-2\t2\tLILLIE BRIDGE DEPOT\tLILL\tI
-3\t1\tCOMMUNICATION FOUNDATION\tCOMM\tM
-4\t4\tDOWN TWO\tDOWN\tN
-
-# Reading selected_letter in route order gives LIMN.

@@ -1,0 +1,84 @@
+# Day 3 (第三日 唯一的通路) — SOLVED: MINOTAUR
+#
+# 1) 16 tiles (each 3x3 cells, fixed orientation) -> 4x4 -> a 12x12 maze.  Exactly one of
+#    the 384 border-legal layouts is a PERFECT maze (144 cells / 143 open edges / connected
+#    and acyclic), i.e. the green->red route really is the ONLY path.  See
+#    day3-path-arrangement.tsv for that deduction.
+# 2) Write this puzzle's six feeders, one after another, along the 55-cell path so that every
+#    letter landing on a CORNER is the compass letter of the direction the path leaves that
+#    corner in (N=up, S=down, E=right, W=left).  Over all 7 choices of which candidate feeder
+#    to leave out x spaces/no-spaces x 720 orders, exactly ONE filling satisfies all 24 corners.
+# 3) Read the eight yellow cells in path order.
+
+order	feeder	letters
+1	SAM EPSTEIN	SAMEPSTEIN
+2	THE SPEYSIDE POST	THESPEYSIDEPOST
+3	WHO KNOWS	WHOKNOWS
+4	DOWN TWO	DOWNTWO
+5	SAFE	SAFE
+6	TURNED SEATS	TURNEDSEATS
+
+# (DANGANRONPA is the one candidate NOT used here - it is day 2’s ☠️ feeder.)
+
+idx	cell	letter	corner	yellow
+0	(0,0)	S	-	
+1	(1,0)	A	-	
+2	(2,0)	M	-	YELLOW
+3	(3,0)	E	S>E OK	
+4	(3,1)	P	-	
+5	(3,2)	S	E>S OK	
+6	(4,2)	T	-	
+7	(5,2)	E	S>E OK	
+8	(5,3)	I	-	
+9	(5,4)	N	E>N OK	
+10	(4,4)	T	-	
+11	(3,4)	H	-	
+12	(2,4)	E	N>E OK	
+13	(2,5)	S	E>S OK	
+14	(3,5)	P	-	
+15	(4,5)	E	S>E OK	
+16	(4,6)	Y	-	
+17	(4,7)	S	E>S OK	
+18	(5,7)	I	-	YELLOW
+19	(6,7)	D	-	
+20	(7,7)	E	S>E OK	
+21	(7,8)	P	-	
+22	(7,9)	O	-	
+23	(7,10)	S	E>S OK	
+24	(8,10)	T	-	
+25	(9,10)	W	S>W OK	
+26	(9,9)	H	-	
+27	(9,8)	O	-	
+28	(9,7)	K	-	
+29	(9,6)	N	W>N OK	YELLOW
+30	(8,6)	O	-	
+31	(7,6)	W	N>W OK	
+32	(7,5)	S	W>S OK	
+33	(8,5)	D	-	
+34	(9,5)	O	-	YELLOW
+35	(10,5)	W	S>W OK	
+36	(10,4)	N	W>N OK	
+37	(9,4)	T	-	YELLOW
+38	(8,4)	W	N>W OK	
+39	(8,3)	O	-	
+40	(8,2)	S	W>S OK	
+41	(9,2)	A	-	YELLOW
+42	(10,2)	F	-	
+43	(11,2)	E	S>E OK	
+44	(11,3)	T	-	
+45	(11,4)	U	-	YELLOW
+46	(11,5)	R	-	YELLOW
+47	(11,6)	N	E>N OK	
+48	(10,6)	E	N>E OK	
+49	(10,7)	D	-	
+50	(10,8)	S	E>S OK	
+51	(11,8)	E	S>E OK	
+52	(11,9)	A	-	
+53	(11,10)	T	-	
+54	(11,11)	S	E>S OK	
+
+field	value
+fill	SAMEPSTEINTHESPEYSIDEPOSTWHOKNOWSDOWNTWOSAFETURNEDSEATS
+corners	24 / 24 matched
+yellow_reading	MINOTAUR
+answer	MINOTAUR
