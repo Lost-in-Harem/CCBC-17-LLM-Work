@@ -1,0 +1,42 @@
+# 亚细亚三重奏 — what the coloured mini-diagrams actually are.
+#
+# A marker sits centred above ONE character cell and draws that character's
+# READING, in the same room-partition style as the big black diagrams:
+#   Chinese panel (left)        pinyin: one box per LETTER (17w x 25h, taller
+#                               than wide).  A box split into a small top strip
+#                               + a larger bottom = a letter that carries a dot
+#                               or diacritic (i, j, or a tone-marked vowel).
+#   Korean panel (top right)    hangul: one 35x35 square = one syllable; the
+#                               boxes inside are its jamo (초성/중성/종성).
+#                               3 stacked bands = horizontal vowel (ㅗㅜㅡ...);
+#                               2 boxes on top + 1 wide below, or left column
+#                               split + right column = vertical vowel + 종성.
+#   Japanese panel (bottom rt)  kana: one 17x17 square per kana of the reading.
+# Coloured boxes = the pieces that travel.  Each panel's FOOTER draws the string
+# assembled from the PREVIOUS panel in the cycle, same style and same scale:
+#   Chinese pinyin -> Korean panel footer   (boxes 17w x 26h = letters)
+#   Korean hangul  -> Japanese panel footer (boxes 35x35   = syllables)
+#   Japanese kana  -> Chinese panel footer  (boxes 17x17   = kana; one half-size
+#                                            box at the baseline = a SMALL kana)
+panel	marker	cell	character	reading	marker_layout	extracted	colour
+CN	CN+2L	CN_+2_L#1	苦	kǔ	[k][ǔ split]	k	darkmagenta
+CN	CN+7L	CN_+7_L#2	弹	dàn	[d][à split][n]	à , n	lightpink+magenta , brown
+CN	CN+7R	CN_+7_R#1	头	tóu	[t][ó split][u]	t	red
+CN	CN-6L	CN_-6_L#2	?	C C V(toned)	[.][.][V split]	V	lightviolet+purple
+CN	CN-6R	CN_-6_R#2	物	wù	[w][ù split]	w	periwinkle
+CN	CN+6R	CN_+6_R#1	?	C V(toned)	[.][V split]	V	tan+orange
+KR	JP+5L_a	JP_+5_L#2	物	물	⿳ ㅁ/ㅜ/ㄹ	ㅜ , ㄹ	brightgreen , mediumgreen
+KR	JP+5L_b	JP_+5_L#3	線	선	ㅅ,ㅓ / ㄴ	ㅅ	green
+KR	JP+1L	JP_+1_L#1	?	vert3 syllable	초,중 / 종	초성 , 중성	tan2 , yellowgreen
+KR	JP+1R_a	JP_+1_R#3	?	vert3 syllable	초,중 / 종	초성 , 중성	paleyellow , darkgreen
+KR	JP+1R_b	JP_+1_R#4	?	vert3 syllable	초/종 | 중	all three	yellowgreen2, olive, darkolive
+KR	JP+7R	JP_+7_R#1	銃	총	⿳ ㅊ/ㅗ/ㅇ	ㅗ , ㅇ	brightyellow , lightgreen
+JP	KR-3L	KR_-3_L#3	雪 (probable)	ゆき	[ゆ][き]	ゆ -> small ゅ	blue
+JP	KR+4L	KR_+4_L#1	?	2 kana	[k1][k2]	both	teal , lightblue
+JP	KR+8L_a	KR_+8_L#1	?	3 kana	[k1][k2][k3]	k3	periwinkle2
+JP	KR+8L_b	KR_+8_L#2	?	1 kana	[k1]	k1	navy
+JP	KR+8R	KR_+8_R#2	地	ち	[ち]	ち	skyblue
+# --- resulting footer strings (physical left-to-right order) ---
+footer	Korean panel (pinyin)	3 groups	= [w + CN_-6_L#2 last letter] [k + à + n = kàn] [t + CN_+6_R#1 letter2]
+footer	Japanese panel (hangul)	5 syllables	= [JP_+1_R#3 초성 + ㅗ + JP_+1_L#1 초성] [JP_+1_R#4 syllable] | [ㅇ + JP_+1_L#1 중성] [수] [ㄹ + JP_+1_R#3 중성]
+footer	Chinese panel (kana)	6 boxes	= [KR_+4_L#1 kana1] [kana2] [ち] [small ゅ] [KR_+8_L#1 kana3] [KR_+8_L#2 kana]

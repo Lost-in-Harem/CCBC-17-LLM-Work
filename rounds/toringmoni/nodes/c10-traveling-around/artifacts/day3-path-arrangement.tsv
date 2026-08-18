@@ -1,25 +1,68 @@
-row	column	tile
-1	1	2
-1	2	4
-1	3	11
-1	4	1
-2	1	5
-2	2	15
-2	3	13
-2	4	16
-3	1	10
-3	2	7
-3	3	14
-3	4	6
+# Day 3 (第三日 唯一的通路) — verified tile arrangement
+# 16 tiles, each a 3x3 cell block, fixed orientation, laid out 4x4 -> a 12x12 maze.
+# Tiles are numbered 1..16 in the order the <img> elements appear in the article.
+#
+# Border deduction: only p1,p2,p16 have a full top edge (+p4 which carries the green
+# entrance arrow); only p12,p14,p15 a full bottom edge (+p8, red exit arrow); only
+# p3,p4,p11,p12 a full left edge; only p2,p8,p9,p10 a full right edge. The four
+# intersections force the corners p4/p2/p12/p8, leaving 384 candidate layouts.
+# Exactly one of the 384 makes the 12x12 maze a perfect maze (144 cells, 143 open
+# edges, fully connected => the green->red route is literally the ONLY path, matching
+# the title). Independently, only 5 of the 384 never have the same boundary wall drawn
+# by both neighbouring tiles, and the perfect-maze layout is one of those 5.
+
+row	col	tile
+1	1	4
+1	2	1
+1	3	16
+1	4	2
+2	1	3
+2	2	6
+2	3	7
+2	4	10
+3	1	11
+3	2	13
+3	3	5
+3	4	9
 4	1	12
-4	2	8
-4	3	9
-4	4	3
+4	2	14
+4	3	15
+4	4	8
 
 field	value
-green_to_red_path_tiles	4,15,13,14,13,16,6,14,7,8,12,8
-yellow_path_coordinates	(2,3),(3,3),(6,7),(6,8),(8,8),(8,7),(8,4),(9,2)
-yellow_tile_runs	4,15,14,7,12
-yellow_run_lengths	2,2,2,1,1
-morse	---..
-decoded_digit	8
+entrance	top edge of cell (0,0) - green arrow on tile 4
+exit	bottom edge of cell (11,11) - red arrow on tile 8
+open_edges	143 (cells 144, connected, acyclic)
+path_length	55 cells
+path	0,0 1,0 2,0 3,0 3,1 3,2 4,2 5,2 5,3 5,4 4,4 3,4 2,4 2,5 3,5 4,5 4,6 4,7 5,7 6,7 7,7 7,8 7,9 7,10 8,10 9,10 9,9 9,8 9,7 9,6 8,6 7,6 7,5 8,5 9,5 10,5 10,4 9,4 8,4 8,3 8,2 9,2 10,2 11,2 11,3 11,4 11,5 11,6 10,6 10,7 10,8 11,8 11,9 11,10 11,11
+yellow_cells	(2,0) (5,7) (9,2) (9,4) (9,5) (11,4) (11,5) (9,6)
+yellow_cells_on_path	8 of 8
+yellow_order_along_path	2,0 5,7 9,6 9,5 9,4 9,2 11,4 11,5
+
+# Maze (Y = yellow cell)
+# +   +---+---+---+---+---+---+---+---+---+---+---+
+# |       |   |   |   |   |   |   |   |           |
+# +   +---+   +   +   +   +   +   +   +   +---+---+
+# |               |   |       |           |   |   |
+# +   +---+---+---+   +   +---+   +---+   +   +   +
+# | Y |   |       |                   |   |       |
+# +   +   +---+   +   +   +   +---+---+---+   +   +
+# |               |   |   |       |       |   |   |
+# +   +---+   +---+   +   +---+---+   +---+   +---+
+# |   |           |   |           |   |   |   |   |
+# +   +---+   +---+   +---+   +   +   +   +   +   +
+# |       |               |   | Y             |   |
+# +   +---+   +---+---+   +---+   +---+---+---+   +
+# |   |       |   |       |   |       |   |       |
+# +---+   +   +   +---+---+   +   +---+   +   +   +
+# |       |   |   |   |       |               |   |
+# +---+---+---+   +   +   +   +   +   +---+   +---+
+# |                   |   |   |   |       |       |
+# +---+---+   +---+   +   +   +---+---+---+   +   +
+# |       | Y     | Y | Y | Y                 |   |
+# +---+   +   +   +   +   +---+---+---+   +   +---+
+# |           |   |       |           |   |       |
+# +---+   +   +---+---+---+   +---+   +---+---+---+
+# |       |         Y   Y         |               |
+# +---+---+---+---+---+---+---+---+---+---+---+   +
+# 

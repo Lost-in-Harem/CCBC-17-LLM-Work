@@ -1,0 +1,42 @@
+# Day 2 (第二日 别惹蚂蚁) — SOLVED: ANGRY BIRDS (milestone confirmed)
+#
+# Mechanism: standard Langton's ant (white -> turn right + flip black; black -> turn left + flip
+# white).  The viewer shows a 2-wide x 3-tall window whose top-left cell is the ant, i.e. a
+# BRAILLE cell (dot1=(x,y) dot2=(x,y+1) dot3=(x,y+2) dot4=(x+1,y) dot5=(x+1,y+1) dot6=(x+1,y+2)).
+# Each of the 13 emoji expressions evaluates to a step number; go to that step and read the
+# braille letter.  Values above 11000 wrap: the window sequence is periodic with period 104
+# from step 10076 on (Langton's ant "highway"), which is why the module caps at 11000.
+#
+# The 7 emoji are the 7 feeders in 旅行随记 that are famous FOR A NUMBER:
+
+emoji	feeder_thought	number	why
+👀	GEORGE ORWELL	1984	Big Brother is watching you
+☎️	JENNY	8675309	867-5309/Jenny
+🧑‍🚀	SPACE ODYSSEY	2001	2001: A Space Odyssey
+⚾️	SHORTSTOP	6	shortstop is fielding position 6
+👮	LES MISERABLES	24601	Valjean's prisoner number (Javert is the policeman)
+⏰	SEASON OF LOVE	525600	525,600 minutes ("Seasons of Love", Rent)
+☠️	(still open)	>=1990	only e2/e3/e7 depend on it; e7 = SKULL-1990 must be a letter
+
+# The six confirmed values are pinned ten times over: equations 4-13 spell ANGRYBIRDS exactly.
+
+eq	expression	letter	position
+1	EYE^2 + PHONE*ASTRO	a	1
+2	SKULL^2*ASTRO*BALL + EYE	?	2
+3	COP^2*PHONE - SKULL*COP	?	3
+4	PHONE^3 + CLOCK*COP	a	4
+5	CLOCK*COP*ASTRO + BALL	n	5
+6	2*ASTRO + EYE - BALL	g	6
+7	SKULL - EYE - BALL	r	7
+8	PHONE*CLOCK + ASTRO - BALL	y	8
+9	ASTRO^3*COP - BALL	b	9
+10	PHONE*COP^BALL - EYE + BALL	i	10
+11	BALL^2 + BALL + 2*ASTRO	r	11
+12	EYE*PHONE^BALL + PHONE	d	12
+13	CLOCK^3 + EYE	s	13
+
+field	value
+reading	positions 4-13 = A N G R Y B I R D S
+answer	ANGRY BIRDS
+note	positions 1-3 read "a??"; equation 1 is 'a' for every EYE that satisfies eqs 6/8/10/12/13,
+note	so the first three characters are not part of the milestone answer.

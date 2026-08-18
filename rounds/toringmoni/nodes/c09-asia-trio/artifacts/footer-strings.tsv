@@ -1,0 +1,21 @@
+# 亚细亚三重奏 — the three footer strings (state as of 2026-08-18)
+#
+# Cycle: Chinese panel (left) -> Korean panel (top-right) footer
+#        Korean panel        -> Japanese panel (bottom-right) footer
+#        Japanese panel      -> Chinese panel footer
+# Each footer is written in the PREVIOUS panel's script; the box gaps inside a
+# footer separate WORDS (pinyin: 3 one-syllable words; hangul: 2 words; kana: 1 word).
+panel	script	boxes	assembly	string	reading
+Korean (top right)	pinyin	3 groups = 2/3/2 letters	[w + CN_-6_L#2 letter3] [k + a(tone) + n] [t + CN_+6_R#1 letter2]	w?  kàn  t?	UNSOLVED - two vowels missing
+Japanese (bottom right)	hangul	2 groups = 2 + 3 syllables	[JP_+1_R#3 초성 + ㅗ + JP_+1_L#1 초성][JP_+1_R#4 syllable] | [ㅇ + JP_+1_L#1 중성][ㅅ+ㅜ][ㄹ + JP_+1_R#3 중성]	봄과 아수라	SOLVED = 『春と修羅』(Miyazawa Kenji, 1924) Korean title
+Chinese (left)	kana	1 group = 6 kana, box 4 half-size	[KR_+4_L#1 kana1][kana2][ち = 地][small ゅ = 雪's ゆ][KR_+8_L#1 kana3][KR_+8_L#2 kana]	? ? ち ゅ ? ?	16 EDICT candidates - 白昼夢 (はくちゅうむ) preferred
+#
+# Evidence for 봄과 아수라
+#   JP_+1_R#4  = 過 (과)   model rank 1, 0.892; marker layout = compound vowel, no batchim
+#   JP_+1_R#3  = 搬 (반)   model rank 1 among vert3, 0.907  -> 초성 ㅂ, 중성 ㅏ
+#   JP_+1_L#1  = 蹣 (만)   model rank 1 among vert3, 0.916  -> 초성 ㅁ, 중성 ㅏ
+#   footer syl1 = ㅂ + ㅗ(from 銃 총) + ㅁ = 봄 ; syl2 = 과 ; then 아 수 라
+#   the 2+3 box grouping reproduces the space in 「봄과 아수라」
+#
+# The 16 EDICT 6-kana readings with ち ゅ in boxes 3-4 (artifacts/kana_footer.py)
+候補	航宙士 こうちゅうし / 甲冑師 かっちゅうし / 接中辞 せっちゅうじ / 分注器 ぶんちゅうき / 道中記 どうちゅうき / 接中語 せっちゅうご / 要注意 ようちゅうい / 諸注意 しょちゅうい / 獄中記 ごくちゅうき / 雪中花 せっちゅうか / 水中花 すいちゅうか / 白昼夢 はくちゅうむ / 十柱戯 じっちゅうぎ / 町中華 まちちゅうか / 戦中派 せんちゅうは / 一昼夜 いっちゅうや
