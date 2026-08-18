@@ -1,0 +1,13 @@
+- main:
+  - generic: Heptadec
+  - generic: 13:54 · 100%
+  - button "← 返回"
+  - generic: 第一日 代号：世界之窗
+  - generic "小题": 小
+  - main:
+    - article:
+      - generic: 陈子衿的游记
+      - heading "第一日 代号：世界之窗" [level=1]
+      - generic: 陈子衿 · 2026年7月27日 18:52
+      - text: 复利的自然力量
+      - text: 17.12.7.3

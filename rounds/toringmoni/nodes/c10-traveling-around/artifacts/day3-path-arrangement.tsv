@@ -1,0 +1,25 @@
+row	column	tile
+1	1	2
+1	2	4
+1	3	11
+1	4	1
+2	1	5
+2	2	15
+2	3	13
+2	4	16
+3	1	10
+3	2	7
+3	3	14
+3	4	6
+4	1	12
+4	2	8
+4	3	9
+4	4	3
+
+field	value
+green_to_red_path_tiles	4,15,13,14,13,16,6,14,7,8,12,8
+yellow_path_coordinates	(2,3),(3,3),(6,7),(6,8),(8,8),(8,7),(8,4),(9,2)
+yellow_tile_runs	4,15,14,7,12
+yellow_run_lengths	2,2,2,1,1
+morse	---..
+decoded_digit	8

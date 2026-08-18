@@ -1,0 +1,41 @@
+- main:
+  - generic: Heptadec
+  - generic: 13:55 · 100%
+  - button "← 返回"
+  - generic: 第二日 别惹蚂蚁
+  - generic "小题": 小
+  - main:
+    - article:
+      - generic: 陈子衿的游记
+      - heading "第二日 别惹蚂蚁" [level=1]
+      - generic: 陈子衿 · 2026年7月28日 22:03
+      - heading "第二日 - 别惹蚂蚁" [level=2]
+      - region "Cell sequence viewer":
+        - grid "Two by three cell viewing window":
+          - gridcell "White cell"
+          - gridcell "White cell"
+          - gridcell "White cell"
+          - gridcell "White cell"
+          - gridcell "White cell"
+          - gridcell "White cell"
+        - heading "步数：0" [level=3]:
+          - generic: 步数：0
+        - button "Go to previous iteration" [disabled]:
+          - generic: ← 上一步
+        - button "Go to next iteration":
+          - generic: 下一步 →
+      - generic: 👀×👀+☎️×🧑‍🚀
+      - generic: ☠️×☠️×🧑‍🚀×⚾️+👀
+      - generic: 👮×👮×☎️-☠️×👮
+      - generic: ☎️×☎️×☎️+⏰×👮
+      - generic: ⏰×👮×🧑‍🚀+⚾️
+      - generic: 🧑‍🚀+🧑‍🚀+👀-⚾️
+      - generic: ☠️-👀-⚾️
+      - generic: ☎️×⏰+🧑‍🚀-⚾️
+      - generic: 🧑‍🚀×🧑‍🚀×🧑‍🚀×👮-⚾️
+      - generic: ☎️×👮^⚾️-👀+⚾️
+      - generic: ⚾️×⚾️+⚾️+🧑‍🚀+🧑‍🚀
+      - generic: 👀×☎️^⚾️+☎️
+      - generic: ⏰×⏰×⏰+👀
+      - text: 复利的自然力量
+      - text: 17.12.7.3

@@ -1,0 +1,7 @@
+pair	before_order	before_editor	before_referent	before_culture	before_category	after_order	after_editor	after_referent	after_culture	after_category	expected_after_culture	expected_after_category	culture_check	category_check	resolution
+1	1	什锦饭	Jambalaya	美国/英语	食物	7	柴可夫斯基	Tchaikovsky	俄罗斯/俄语	人物	俄罗斯/俄语	人物	ok	ok	
+2	2	汉斯季默	Hans Zimmer	德国/德语	人物	8	巴吞鲁日	Baton Rouge	美国/英语	城市	美国/英语	城市	ok	ok	
+3	3	猫王	Elvis Presley	美国/英语	人物	9	圣彼得堡	Saint Petersburg	俄罗斯/俄语	城市	俄罗斯/俄语	城市	ok	ok	
+4	4	罪与罚	Crime and Punishment	俄罗斯/俄语	作品	10	酸菜猪肘	Sauerkraut pork knuckle	德国/德语	食物	德国/德语	食物	ok	ok	
+5	5	罗宋汤	Borscht	俄罗斯/俄语	食物	11	变形记	Die Verwandlung / The Metamorphosis（Franz Kafka）	德国/德语	作品	德国/德语	人物	ok	mismatch	变形记→作者 FRANZ KAFKA（德语人物）
+6	6	法兰克福	Frankfurt	德国/德语	城市	12	百万英镑	The Million Pound Bank Note（Mark Twain）	美国/英语	作品	美国/英语	作品	ok	ok	

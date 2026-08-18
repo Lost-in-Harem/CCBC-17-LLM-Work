@@ -1,0 +1,9 @@
+server_time	photo	observation
+2026-08-17 13:03	1	color=青; check-tl=黄酒; check-tr=黄雀; solid=?
+2026-08-17 13:03	2	top=[blank,S85,S315,S315,S315,S315,S315]; borders={c4:red,c5:yellow,c6:blue}; bottom=[blank,blank,blank,S82,blank,blank,?]; author=S252
+2026-08-17 13:03	3	animals={羊:r1c1,马:r1c2,鸟:r2c2,鱼:r3c3,虎:r5c5}; walls=rounds/wig/nodes/a5/work/toringmoni-statements/c01-carpe-diem/secondgram-06a-maze.svg
+2026-08-17 13:03	4	牛-人↔精; 乐+奴↔西; 呢-米↔?
+2026-08-17 23:47	1	color=青; lr-left=黄鹂; solid=黄鳝; solid=?
+2026-08-17 23:48	2	top=[blank,S87,S315,S315,S315,blank,S315]; borders={c5:red,c6:yellow,c7:blue}; bottom=[?,blank,blank,S31,blank,blank,blank]; author=S252
+2026-08-17 23:48	3	animals={羊:r1c1,马:r2c2,鱼:r3c3,鸟:r5c2,虎:r5c5}; walls=work/visual/sfz/3/index.html
+2026-08-17 23:48	4	狗+儿↔忠; 喜+娇↔西; 吽+油↔?

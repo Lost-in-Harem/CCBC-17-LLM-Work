@@ -1,0 +1,14 @@
+- main:
+  - generic: Heptadec
+  - generic: 13:53 · 100%
+  - button "← 返回"
+  - generic: 旅行随记
+  - generic "小题": 小
+  - main:
+    - article:
+      - generic: 陈子衿的游记
+      - heading "旅行随记" [level=1]
+      - generic: 陈子衿 · 2026年7月26日 23:14
+      - paragraph: BURNING TO DEATH COMMUNICATION FOUNDATION DANGANRONPA DOWN TWO ELEVEN EXPAT SERVICEMAN GEORGE ORWELL JENNY LES MISERABLES LILLIE BRIDGE DEPOT LUNAR ORBIT MANAGEMENT SOFTWARE ME OUGHTN'T TOUCH SAFE SAM EPSTEIN SEASON OF LOVE SHORTSTOP SPACE ODYSSEY TERMINAL THE SPEYSIDE POST TURNED SEATS UI LIBRARY USED FLUID CAN WHO KNOWS
+      - text: 复利的自然力量
+      - text: 17.12.7.3

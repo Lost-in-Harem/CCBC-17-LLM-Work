@@ -1,0 +1,16 @@
+record_type	panel_or_source	row	left_length	right_length	note_palette	destination_or_observation
+row	Japanese (top)	+5	3	2	green	
+row	Japanese (top)	+1	2	4	green	
+row	Japanese (top)	+7	2	2	green	
+row	Chinese (left)	+7	2	2	red/purple/orange	
+row	Chinese (left)	-6	2	3	red/purple/orange	
+row	Chinese (left)	+6	2	2	red/purple/orange	
+row	Chinese (left)	+2	2	3	red/purple/orange	
+row	Korean (bottom)	-3	3	2	blue	
+row	Korean (bottom)	+4	2	3	blue	
+row	Korean (bottom)	+8	2	2	blue	
+cycle	Japanese (top)				green	Korean bottom footer: two fully tiled blocks, 2 cells + 3 cells
+cycle	Chinese (left)				red/purple/orange	Japanese top footer: three separated coloured blocks
+cycle	Korean (bottom)				blue	Chinese left footer: one irregular blue strip
+duplicate	Japanese +5 left #2					identical black diagram to Chinese -6 right #2
+duplicate	Japanese +7 right #2					identical black diagram to Chinese +7 left #2

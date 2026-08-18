@@ -1,0 +1,50 @@
+- main:
+  - generic: Heptadec
+  - generic: 13:52 · 100%
+  - button "← 返回"
+  - generic: 陈子衿
+  - generic "小题": 小
+  - main:
+    - generic: 子衿
+    - heading "陈子衿" [level=1]
+    - paragraph: 游记与生活感悟
+    - generic: 🏠 家乡 深川市
+    - generic: 📍 现居 星浦市
+    - strong: "6"
+    - text: 篇游记
+    - button "📌 置顶 2023年12月18日 00:07 想去的地方 至今最想去的地方，应该是能看见极光的遥远北方。 阅读全文 ›":
+      - generic: 📌 置顶
+      - generic: 2023年12月18日 00:07
+      - heading "想去的地方" [level=2]
+      - generic: 至今最想去的地方，应该是能看见极光的遥远北方。
+      - generic: 阅读全文 ›
+    - button "2026年7月31日 21:17 旅行总结 不管去到什么地方，我的核心原则都是平复自己的心情…… 阅读全文 ›":
+      - generic: 2026年7月31日 21:17
+      - heading "旅行总结" [level=2]
+      - generic: 不管去到什么地方，我的核心原则都是平复自己的心情……
+      - generic: 阅读全文 ›
+    - button "2026年7月30日 20:41 第四日 度秒如年 旅途第四日。时间在眼前变得既具体，又漫长。 阅读全文 ›":
+      - generic: 2026年7月30日 20:41
+      - heading "第四日 度秒如年" [level=2]
+      - generic: 旅途第四日。时间在眼前变得既具体，又漫长。
+      - generic: 阅读全文 ›
+    - button "2026年7月29日 19:26 第三日 唯一的通路 所有散落的片段，似乎都指向唯一的一条路。 阅读全文 ›":
+      - generic: 2026年7月29日 19:26
+      - heading "第三日 唯一的通路" [level=2]
+      - generic: 所有散落的片段，似乎都指向唯一的一条路。
+      - generic: 阅读全文 ›
+    - button "2026年7月28日 22:03 第二日 别惹蚂蚁 旅途第二日留下的忠告：别惹蚂蚁。 阅读全文 ›":
+      - generic: 2026年7月28日 22:03
+      - heading "第二日 别惹蚂蚁" [level=2]
+      - generic: 旅途第二日留下的忠告：别惹蚂蚁。
+      - generic: 阅读全文 ›
+    - button "2026年7月27日 18:52 第一日 代号：世界之窗 旅行第一日，从一扇像素构成的世界之窗开始。 阅读全文 ›":
+      - generic: 2026年7月27日 18:52
+      - heading "第一日 代号：世界之窗" [level=2]
+      - generic: 旅行第一日，从一扇像素构成的世界之窗开始。
+      - generic: 阅读全文 ›
+    - button "2026年7月26日 23:14 旅行随记 BURNING TO DEATH / COMMUNICATION FOUNDATION / DANGANRONPA… 阅读全文 ›":
+      - generic: 2026年7月26日 23:14
+      - heading "旅行随记" [level=2]
+      - generic: BURNING TO DEATH / COMMUNICATION FOUNDATION / DANGANRONPA…
+      - generic: 阅读全文 ›

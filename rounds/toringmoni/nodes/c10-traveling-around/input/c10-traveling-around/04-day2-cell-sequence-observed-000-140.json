@@ -1,0 +1,707 @@
+[
+  {
+    "step": "步数：0",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：1",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：2",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：3",
+    "bits": "010000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：4",
+    "bits": "111100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：5",
+    "bits": "000100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：6",
+    "bits": "001001",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：7",
+    "bits": "000111",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：8",
+    "bits": "011100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：9",
+    "bits": "110100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：10",
+    "bits": "010000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：11",
+    "bits": "010000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：12",
+    "bits": "001100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：13",
+    "bits": "011100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：14",
+    "bits": "110000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：15",
+    "bits": "110000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：16",
+    "bits": "110100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：17",
+    "bits": "100000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：18",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：19",
+    "bits": "110000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：20",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：21",
+    "bits": "010000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：22",
+    "bits": "001100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：23",
+    "bits": "011000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：24",
+    "bits": "100000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：25",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：26",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：27",
+    "bits": "010000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：28",
+    "bits": "011100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：29",
+    "bits": "101000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：30",
+    "bits": "100010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：31",
+    "bits": "101011",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：32",
+    "bits": "101100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：33",
+    "bits": "001000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：34",
+    "bits": "100000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：35",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：36",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：37",
+    "bits": "010000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：38",
+    "bits": "011100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：39",
+    "bits": "101000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：40",
+    "bits": "000010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：41",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：42",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：43",
+    "bits": "011000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：44",
+    "bits": "111110",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：45",
+    "bits": "101111",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：46",
+    "bits": "111100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：47",
+    "bits": "111000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：48",
+    "bits": "010110",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：49",
+    "bits": "101000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：50",
+    "bits": "100010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：51",
+    "bits": "001001",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：52",
+    "bits": "011010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：53",
+    "bits": "100000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：54",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：55",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：56",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：57",
+    "bits": "010000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：58",
+    "bits": "111100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：59",
+    "bits": "101110",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：60",
+    "bits": "111010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：61",
+    "bits": "110000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：62",
+    "bits": "010100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：63",
+    "bits": "101000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：64",
+    "bits": "000010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：65",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：66",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：67",
+    "bits": "011000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：68",
+    "bits": "111110",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：69",
+    "bits": "001101",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：70",
+    "bits": "001011",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：71",
+    "bits": "000111",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：72",
+    "bits": "011110",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：73",
+    "bits": "111101",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：74",
+    "bits": "110100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：75",
+    "bits": "111000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：76",
+    "bits": "110110",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：77",
+    "bits": "000001",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：78",
+    "bits": "111000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：79",
+    "bits": "000100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：80",
+    "bits": "001001",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：81",
+    "bits": "000110",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：82",
+    "bits": "011000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：83",
+    "bits": "110100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：84",
+    "bits": "010000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：85",
+    "bits": "011000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：86",
+    "bits": "001110",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：87",
+    "bits": "011100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：88",
+    "bits": "110000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：89",
+    "bits": "100001",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：90",
+    "bits": "110000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：91",
+    "bits": "100000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：92",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：93",
+    "bits": "111000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：94",
+    "bits": "100001",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：95",
+    "bits": "000010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：96",
+    "bits": "001010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：97",
+    "bits": "010101",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：98",
+    "bits": "011101",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：99",
+    "bits": "101010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：100",
+    "bits": "100010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：101",
+    "bits": "001011",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：102",
+    "bits": "101010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：103",
+    "bits": "000101",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：104",
+    "bits": "001001",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：105",
+    "bits": "010010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：106",
+    "bits": "001010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：107",
+    "bits": "110101",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：108",
+    "bits": "010111",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：109",
+    "bits": "010001",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：110",
+    "bits": "001100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：111",
+    "bits": "011101",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：112",
+    "bits": "110111",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：113",
+    "bits": "101011",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：114",
+    "bits": "100010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：115",
+    "bits": "100001",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：116",
+    "bits": "000111",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：117",
+    "bits": "110001",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：118",
+    "bits": "000110",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：119",
+    "bits": "010001",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：120",
+    "bits": "001100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：121",
+    "bits": "011001",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：122",
+    "bits": "100110",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：123",
+    "bits": "011100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：124",
+    "bits": "110000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：125",
+    "bits": "110101",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：126",
+    "bits": "100101",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：127",
+    "bits": "100000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：128",
+    "bits": "000000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：129",
+    "bits": "011010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：130",
+    "bits": "001110",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：131",
+    "bits": "001000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：132",
+    "bits": "100000",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：133",
+    "bits": "010101",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：134",
+    "bits": "010100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：135",
+    "bits": "010010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：136",
+    "bits": "011100",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：137",
+    "bits": "111101",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：138",
+    "bits": "000111",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：139",
+    "bits": "001010",
+    "nextEnabled": true
+  },
+  {
+    "step": "步数：140",
+    "bits": "101010",
+    "nextEnabled": true
+  }
+]

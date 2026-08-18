@@ -1,0 +1,13 @@
+- main:
+  - generic: Heptadec
+  - generic: 13:53 · 100%
+  - button "← 返回"
+  - generic: 想去的地方
+  - generic "小题": 小
+  - main:
+    - article:
+      - generic: 置顶帖子
+      - heading "想去的地方" [level=1]
+      - generic: 陈子衿 · 2023年12月18日 00:07
+      - paragraph: 至今最想去的地方，应该是能看见极光的遥远北方。
+      - paragraph: 那里一定非常美。如果能在漫天流动的光下，和自己喜欢的人海誓山盟，应该会是一件非常浪漫的事。

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920">
+  <rect width="1600" height="920" fill="#fbfaf7"/>
+  <style>
+    text { font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #17202a; }
+    .title { font-size: 46px; font-weight: 700; }
+    .section { font-size: 29px; font-weight: 700; fill: #34495e; }
+    .body { font-size: 26px; }
+    .small { font-size: 21px; fill: #566573; }
+    .token { font-size: 42px; font-weight: 700; }
+    .answer { font-size: 52px; font-weight: 800; fill: #145a32; }
+    .box { fill: #ffffff; stroke: #c8c4bb; stroke-width: 2; rx: 14; }
+    .arrow { stroke: #5d6d7e; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+  </style>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5d6d7e"/>
+    </marker>
+  </defs>
+
+  <text x="65" y="70" class="title">《创造你的历史》末段重放：MARK TWAIN</text>
+
+  <text x="65" y="125" class="section">4 月：三个条目都要换成常见单字</text>
+  <rect x="65" y="150" width="1470" height="180" class="box"/>
+
+  <text x="105" y="205" class="body">先提后斩</text>
+  <text x="105" y="252" class="small">提的前/左部 扌 ＋ 斩的后/右部 斤</text>
+  <text x="410" y="235" class="token">→ 折</text>
+
+  <text x="590" y="205" class="body">三明</text>
+  <text x="590" y="252" class="small">三个“日”</text>
+  <text x="790" y="235" class="token">→ 晶</text>
+
+  <text x="970" y="205" class="body">南家子</text>
+  <text x="970" y="252" class="small">家的下部换成“子”：宀 ＋ 子</text>
+  <text x="1320" y="235" class="token">→ 字</text>
+
+  <text x="65" y="390" class="section">6 月清理后：关键是“不同七曜”</text>
+  <rect x="65" y="415" width="1470" height="130" class="box"/>
+  <text x="125" y="493" class="token">折 ｜ 晶 ｜ 横 ｜ 切 ｜ 字</text>
+  <text x="900" y="473" class="small">晶：日×3，但只有一种七曜，保留</text>
+  <text x="900" y="510" class="small">青提子：含月、日两种七曜，删除</text>
+
+  <text x="65" y="605" class="section">7–8 月：两个条件都得到使用</text>
+  <rect x="65" y="630" width="1470" height="225" class="box"/>
+
+  <text x="115" y="700" class="body">后三项</text>
+  <text x="245" y="700" class="token">横｜切｜字</text>
+  <path d="M 530 690 L 675 690" class="arrow"/>
+  <text x="705" y="700" class="token">横切两字</text>
+  <text x="1040" y="700" class="small">“两字” = 前面的 折、晶</text>
+
+  <text x="130" y="790" font-size="78" font-weight="700">折　晶</text>
+  <line x1="112" y1="758" x2="455" y2="758" stroke="#c0392b" stroke-width="9"/>
+  <text x="500" y="775" class="body">横切留下一个</text>
+  <text x="705" y="780" class="answer">MARK</text>
+  <path d="M 875 765 L 985 765" class="arrow"/>
+  <text x="1015" y="750" class="small">TWAIN = two / 两</text>
+  <text x="1015" y="810" class="answer">MARK TWAIN</text>
+
+  <text x="65" y="895" class="small">独立校验：最后一位修改者“百万英镑”是 Mark Twain 的作品。</text>
+</svg>
