@@ -163,9 +163,28 @@ def write_editor_grid(path: Path, clues: list[EditorClue]) -> None:
         if not (culture_ok and category_ok):
             anomalies.append((pair, before, after))
 
-        resolution = ""
+        resolution = "-"
+        shared_letters = ""
+        repaired_person = ""
         if pair == 5:
-            resolution = "唯一异常：按类别循环这里应为德国人物，但实际编辑者是德语作品‘变形记’；不要直接把异常作品或其作者当答案"
+            # The folded pair is the only category mismatch.  Its English
+            # referents have a deliberately useful multiset intersection:
+            # BORSCHT ∩ THEMETAMORPHOSIS = H,O,R,S,T.  Alphabetically writing
+            # that overlap gives HORST, a German male given name, which fits
+            # the missing German-person slot.  Keep the extraction explicit so
+            # the candidate is reproducible rather than an arbitrary title or
+            # author guess.
+            left = re.sub(r"[^A-Z]", "", before.referent.upper())
+            right = re.sub(r"[^A-Z]", "", after.referent.upper())
+            shared_letters = "".join(
+                sorted(set(left).intersection(right))
+            )
+            repaired_person = "HORST" if shared_letters == "HORST" else ""
+            resolution = (
+                "唯一类别异常：按循环这里应为德国人物；变形记是德语作品。"
+                f"其英文名与 Borscht 的共有字母为 {shared_letters}，"
+                f"重排成德国人名 {repaired_person}"
+            )
 
         rows.append(
             [
@@ -184,6 +203,8 @@ def write_editor_grid(path: Path, clues: list[EditorClue]) -> None:
                 expected_category,
                 "ok" if culture_ok else "mismatch",
                 "ok" if category_ok else "mismatch",
+                shared_letters,
+                repaired_person,
                 resolution,
             ]
         )
@@ -213,6 +234,8 @@ def write_editor_grid(path: Path, clues: list[EditorClue]) -> None:
                 "expected_after_category",
                 "culture_check",
                 "category_check",
+                "shared_letters",
+                "repaired_person",
                 "resolution",
             ]
         )
@@ -280,7 +303,8 @@ def main() -> None:
     print("milestone bridge: final editor is The Million Pound Bank Note")
     print("paired-editor anomaly: Borscht -> The Metamorphosis")
     print("expected second type: German-language person")
-    print("answer candidate: unresolved after folded-history extraction")
+    print("folded overlap: BORSCHT ∩ THEMETAMORPHOSIS = HORST")
+    print("answer candidate: HORST (German-person repair; not submitted)")
     print(f"wrote: {output}")
     print(f"wrote: {editor_output}")
 
