@@ -2,12 +2,10 @@ from __future__ import annotations
 
 import argparse
 import csv
+import html
 import re
-import zipfile
 from dataclasses import dataclass
 from pathlib import Path
-
-from bs4 import BeautifulSoup
 
 
 @dataclass(frozen=True)
@@ -32,21 +30,33 @@ class EditorClue:
     referent: str
 
 
-def archived_index(path: Path) -> str:
-    with zipfile.ZipFile(path) as archive:
-        return archive.read("index.html").decode("utf-8")
+DATE_RE = re.compile(r"^\d{4}年\d{1,2}月\d{1,2}日 \d{2}:\d{2}$")
+
+
+def visible_lines(path: Path) -> list[str]:
+    """Flatten the SingleFile capture into visible text lines (stdlib only)."""
+    raw = path.read_text(encoding="utf-8", errors="replace")
+    text = re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", raw)
+    text = re.sub(r"(?is)<br\s*/?>", "\n", text)
+    text = re.sub(r"(?is)</(p|div|li|tr|h1|h2|h3|h4|td|section)>", "\n", text)
+    text = html.unescape(re.sub(r"(?s)<[^>]+>", " ", text))
+    lines = (re.sub(r"[ \t\xa0]+", " ", line).strip() for line in text.split("\n"))
+    return [line for line in lines if line]
 
 
 def extract_revisions(path: Path) -> list[Revision]:
-    soup = BeautifulSoup(archived_index(path), "html.parser")
+    """Read the revision list, which the page renders newest first."""
+    lines = visible_lines(path)
     newest_first: list[Revision] = []
-    for item in soup.select(".sph-rev"):
+    for index, line in enumerate(lines):
+        if not DATE_RE.match(line):
+            continue
+        editor = lines[index + 1]
+        comment = lines[index + 2]
+        if comment.startswith("（讨论"):
+            comment = lines[index + 3]
         newest_first.append(
-            Revision(
-                timestamp=item.select_one(".sph-date").get_text(" ", strip=True),
-                editor=item.select_one(".sph-user").get_text(" ", strip=True),
-                comment=item.select_one(".sph-comment").get_text(" ", strip=True),
-            )
+            Revision(timestamp=line, editor=editor, comment=comment)
         )
     return list(reversed(newest_first))
 
@@ -167,23 +177,20 @@ def write_editor_grid(path: Path, clues: list[EditorClue]) -> None:
         shared_letters = ""
         repaired_person = ""
         if pair == 5:
-            # The folded pair is the only category mismatch.  Its English
-            # referents have a deliberately useful multiset intersection:
-            # BORSCHT ∩ THEMETAMORPHOSIS = H,O,R,S,T.  Alphabetically writing
-            # that overlap gives HORST, a German male given name, which fits
-            # the missing German-person slot.  Keep the extraction explicit so
-            # the candidate is reproducible rather than an arbitrary title or
-            # author guess.
+            # The folded pair is the only category mismatch.  It is recorded as
+            # a plain observation only: every extraction tried on this cell so
+            # far (the work title, its author, the already-used German person,
+            # and the BORSCHT/THEMETAMORPHOSIS shared letters) was rejected by
+            # the user, and the mismatch is in fact forced by the design (see
+            # solution.md, "Editor grid: closed route"), so it carries no
+            # answer.
             left = re.sub(r"[^A-Z]", "", before.referent.upper())
             right = re.sub(r"[^A-Z]", "", after.referent.upper())
-            shared_letters = "".join(
-                sorted(set(left).intersection(right))
-            )
-            repaired_person = "HORST" if shared_letters == "HORST" else ""
+            shared_letters = "".join(sorted(set(left).intersection(right)))
+            repaired_person = ""
             resolution = (
                 "唯一类别异常：按循环这里应为德国人物；变形记是德语作品。"
-                f"其英文名与 Borscht 的共有字母为 {shared_letters}，"
-                f"重排成德国人名 {repaired_person}"
+                "该异常由排列本身强制产生，所有基于它的抽取均已被用户判错。"
             )
 
         rows.append(
@@ -303,8 +310,8 @@ def main() -> None:
     print("milestone bridge: final editor is The Million Pound Bank Note")
     print("paired-editor anomaly: Borscht -> The Metamorphosis")
     print("expected second type: German-language person")
-    print("folded overlap: BORSCHT ∩ THEMETAMORPHOSIS = HORST")
-    print("answer candidate: HORST (German-person repair; not submitted)")
+    print("folded overlap (rejected route): BORSCHT ∩ THEMETAMORPHOSIS = HORST")
+    print("answer candidate: 折子 (chain output; not submitted)")
     print(f"wrote: {output}")
     print(f"wrote: {editor_output}")
 
