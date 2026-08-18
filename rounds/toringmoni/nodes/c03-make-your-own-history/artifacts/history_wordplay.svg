@@ -17,9 +17,9 @@
     </marker>
   </defs>
 
-  <text x="65" y="70" class="title">《创造你的历史》末段重放：MARK TWAIN</text>
+  <text x="65" y="70" class="title">《创造你的历史》末段重放：单字姓氏待定</text>
 
-  <text x="65" y="125" class="section">4 月：三个条目都要换成常见单字</text>
+  <text x="65" y="125" class="section">4 月：需要换字的条目与单字限制</text>
   <rect x="65" y="150" width="1470" height="180" class="box"/>
 
   <text x="105" y="205" class="body">先提后斩</text>
@@ -27,35 +27,33 @@
   <text x="410" y="235" class="token">→ 折</text>
 
   <text x="590" y="205" class="body">三明</text>
-  <text x="590" y="252" class="small">三个“日”</text>
-  <text x="790" y="235" class="token">→ 晶</text>
+  <text x="590" y="252" class="small">四月保持原样；六月按明=日+月删除</text>
+  <text x="790" y="235" class="token">→ 删除</text>
 
-  <text x="970" y="205" class="body">南家子</text>
-  <text x="970" y="252" class="small">家的下部换成“子”：宀 ＋ 子</text>
-  <text x="1320" y="235" class="token">→ 字</text>
+  <text x="970" y="205" class="body">南家</text>
+  <text x="970" y="252" class="small">完整两字条目，保留</text>
+  <text x="1320" y="235" class="token">→ 南家</text>
 
   <text x="65" y="390" class="section">6 月清理后：关键是“不同七曜”</text>
   <rect x="65" y="415" width="1470" height="130" class="box"/>
-  <text x="125" y="493" class="token">折 ｜ 晶 ｜ 横 ｜ 切 ｜ 字</text>
-  <text x="900" y="473" class="small">晶：日×3，但只有一种七曜，保留</text>
-  <text x="900" y="510" class="small">青提子：含月、日两种七曜，删除</text>
+  <text x="125" y="493" class="token">折 ｜ 横 ｜ 雕 ｜ 南家</text>
+  <text x="900" y="473" class="small">三明和青提子：各含日、月两种七曜，删除</text>
+  <text x="900" y="510" class="small">雷横去雷，南家保留</text>
 
-  <text x="65" y="605" class="section">7–8 月：两个条件都得到使用</text>
+  <text x="65" y="605" class="section">7–8 月：合并后要求单字姓氏</text>
   <rect x="65" y="630" width="1470" height="225" class="box"/>
 
   <text x="115" y="700" class="body">后三项</text>
-  <text x="245" y="700" class="token">横｜切｜字</text>
+  <text x="245" y="700" class="token">横｜雕｜南家</text>
   <path d="M 530 690 L 675 690" class="arrow"/>
-  <text x="705" y="700" class="token">横切两字</text>
-  <text x="1040" y="700" class="small">“两字” = 前面的 折、晶</text>
+  <text x="705" y="700" class="token">横雕南家</text>
+  <text x="1040" y="700" class="small">横向雕刻“南家”这两个字</text>
 
-  <text x="130" y="790" font-size="78" font-weight="700">折　晶</text>
-  <line x1="112" y1="758" x2="455" y2="758" stroke="#c0392b" stroke-width="9"/>
-  <text x="500" y="775" class="body">横切留下一个</text>
-  <text x="705" y="780" class="answer">MARK</text>
-  <path d="M 875 765 L 985 765" class="arrow"/>
-  <text x="1015" y="750" class="small">TWAIN = two / 两</text>
-  <text x="1015" y="810" class="answer">MARK TWAIN</text>
+  <text x="130" y="790" font-size="78" font-weight="700">折</text>
+  <text x="360" y="775" class="body">合并后三项后只剩一个条目，故不生成 MARK</text>
+  <path d="M 1010 765 L 1115 765" class="arrow"/>
+  <text x="1140" y="750" class="small">四字末项 4→1，换成单字姓氏</text>
+  <text x="1140" y="810" class="answer">折 ｜ 〔姓〕</text>
 
-  <text x="65" y="895" class="small">独立校验：最后一位修改者“百万英镑”是 Mark Twain 的作品。</text>
+  <text x="65" y="895" class="small">八月修改者为“百万英镑”；此前取英文 TWAIN 的路线违反 4→1，已撤回。</text>
 </svg>
