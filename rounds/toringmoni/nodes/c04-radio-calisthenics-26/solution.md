@@ -8,7 +8,7 @@ source:
 round_feeder: yes
 feeders: 
 status: accepted
-answer: 月亮伊布
+answer: UMBREON
 confidence: high
 summary: "已确认跳舞的蟹后端与界面均为 19/19。将全部 19 张 18×18 黑白贴纸逐格相加，恰有 7 个被所有贴纸填白的格；按行列读取得到‘八种中黑夜进化’，指向八种伊布进化中的月亮伊布（Umbreon）。用户确认 Umbreon 答案正确。"
 updated: 2026-08-18
