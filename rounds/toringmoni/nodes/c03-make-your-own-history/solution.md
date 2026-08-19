@@ -698,6 +698,63 @@ CLEAN SLATE（抹掉记录、重写历史）。姊妹串 `BLANK SLATE`、`TABULA
 - 三十三轮总结：结构（五项/合并/姓氏/组合）与 M=刻 牢固；X 与七月读向
   在 6 次判错后仍未定；无提交动作。
 
+2026-08-19 第四十七轮（**Meta 解出——c03 答案的硬约束注入**）：
+
+- Meta 已解出（BACKUPANDTESTSUMMARIZETHEGISTS，用户确认）。其机制：每题的
+  WIG 短语指出一件名不副实之物 → 给出**伪→真替换轴** → 施加到**该题自己的答案**
+  上得到新词（长度=L）→ 按下标取 3 字母入 30 槽。已验证例：
+  LITHARGE(一氧化铅)–[铅→碳]→CARBONMONOXIDE；UMBREON(黑)–[黑→橙]→FLAREON；
+  BOUGAINVILLEA(海南省花)–[海南→新加坡]→VANDAMISSJOAQUIM；
+  JAMES SHOAL(最南端)–[南→北]→MOHE；KAGAMINE RIN(黄)–[黄→绿]→HATSUNEMIKU；
+  EMERGENCY SKIN(2020雨果中篇)–[2020→2021]→TWOTRUTHSANDALIE。
+- **c03 的轴 ＝ 美式→意式**（美式咖啡：名为美式、实为意式稀释浓缩）。
+  由 Meta 答案反推（槽6=P、槽21=Z、槽27=I；取法 S18[17]/S18[7]/S18[14]）：
+  **c03 答案经 美式→意式 变换后的串 ＝ 18 字母，[7]=Z、[14]=I、[17]=P**：
+  `_ _ _ _ _ _ Z _ _ _ _ _ _ I _ _ P _`
+- ⟹ 两条硬推论：**①c03 答案是一个带"美式/American"属性的事物**（同类换国籍的
+  替换轴才能施加）；**②其意大利对应物的英文/意文名（去空格 18 字母）满足上述
+  三字母**。首扫未中：LEANINGTOWEROFPISA(18,G7✗)、ITALIANCITIZENSHIP(18,N7✗)、
+  CARNEVALEDIVENEZIA(18,A7✗)、CERAUNAVOLTAILWEST(18,A7✗)、
+  PARMIGIANOREGGIANO(18,I7✗)、SPAGHETTIWESTERN(16✗)、RIVOLUZIONE+7(Z7✓未续)。
+  Z@7 是最强筛子。
+
+2026-08-19 第四十九轮（串的结构化攻坚）：
+
+- **结构发现**：任何以 -IZZAZIONI 结尾的 14 字母意语复数词（ORGANIZZAZIONI、
+  CIVILIZZAZIONI、COLONIZZAZIONI…）自动满足 [7]=Z、[14]=I——但需再接 4 字母
+  ??P? 词（TIPO/CAPO/LUPO/DOPO…）凑 18，语法不通，暂弃。
+  AMERICANIZZAZIONE=17、ITALIANIZZAZIONE=16、AMERICANIZATION=15 均差长度。
+- 尾段族：**ILUPO**（"il lupo" 狼——I(14)L U P(17) O(18) 完美贴合!!）：
+  «狼来了»（说谎放假警报＝伪造历史!! 主题强），但意语标准形
+  IL RAGAZZO CHE GRIDAVA AL LUPO 超长；ILLUPODIWALLSTREET=18 恰好但 [7]=D ✗。
+  DILUPO/DICAPO/DITOPO 同族备用。
+- Z7 反复近击的框架：??RAGAZZO/NOSTROZIO+DAMERICA（美国来的叔叔/小伙——
+  意语习语 lo zio d'America＝美国阔佬亲戚!!）全部 [14]=R 差一位；
+  ZUCCHERI@7-14 满足 Z7+I14（差 [17]=P 的接续）。
+- 明确当前串模式供人工辨认：**`? ? ? ? ? ? Z ? ? ? ? ? ? I ? ? P ?`**
+  （很可能为意大利语，词尾多元音；Z 常来自 -ZZ-/-ZION- 结构）。
+- 英文态结构族：-IZATION 系 12 字母词（ROMANIZATION/COLONIZATION/ORGANIZATION/
+  CANONIZATION/URBANIZATION/HUMANIZATION/LATINIZATION/DIGITIZATION）全部
+  自动 [7]=Z——再接 6 字母 `?I??P?` 词（MIXUPS/PINUPS/SITUPS 型）即满足全部
+  三约束，但语义组合未见成立者。ROMANIZATIONPINYIN=18 差 [17]。
+  ILLUPODIWALLSTREET=18 差 [7]。
+
+2026-08-19 第四十八轮（Z7/I14/P17 约束求解进行中）：
+
+- 脚本筛过 ~120 个意大利事物名（去空格）：18 字母者有 LEANINGTOWEROFPISA、
+  STATUADELLALIBERTA、PARMIGIANOREGGIANO、NICCOLOMACHIAVELLI、
+  CERAUNAVOLTAILWEST、WESTERNALLITALIANA、ITALIANCITIZENSHIP、
+  GORGONZOLAPICCANTE(Z7✓但14/17✗) 等——**无一全中**。
+- 结构性近击（记录备续）：尾段 «ANTICIPA/ANTICIPO» 恰好满足 [14]=I、[17]=P、
+  [18]=元音（置于 11–18 位）；前段 «MOTOGUZZI»（美式哈雷 vs 意式古兹！）
+  Z 恰在 7——MOTOGUZZICALIFORNIA=19 差一字母，扼腕。
+- 类别配对表已扫：咖啡(轴本体)、披萨、芝士(美国芝士→帕玛森 18字母但Z✗)、
+  冰淇淋(GELATO)、快餐→慢食、国歌(FRATELLIDITALIA=15)、摩托(哈雷→GUZZI)、
+  黑手党、歌剧、文艺复兴人物——均未同时满足 18+Z7+I14+P17。
+- **重要回推**：c03 答案必为"美式/American 属性"之物 ⟹ 46 轮机器里的
+  美式候选（LIBERTY BELL、TOM SAWYER✗已死、美国队长✗已死）获得先验加权；
+  且答案一旦经 美式→意式 映射即可用三字母自检——**任何新候选先过此检再谈提交**。
+
 2026-08-19 第四十六轮（构词裁决＋典源清库）：
 
 - 「并合理构词」倾向普通词 ⟹ **T ＝ 茂林**（真词：茂林修竹）优于 上林（苑名）。
