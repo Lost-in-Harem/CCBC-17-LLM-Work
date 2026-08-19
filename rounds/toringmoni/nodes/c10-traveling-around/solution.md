@@ -906,6 +906,89 @@ ALERT 那一支四个加粗词全部是各自中文最自然的英文（UNRAVELL
 
 三个槽位有强候选、(2 4) 一个都没有，这个不对称本身说明**「纪念品＝格列佛物件」的假设有问题**。
 
+
+### 结构性结论（2026-08-19 晚）
+
+1. **求同的另一侧不可能是小题答案本身**：第四日已证的求同要求两侧 pattern 完全一致，
+   而四答案 pattern (3 3 8)(7 6)(5 5)(8) 与四枚举 (2 4)(4 5)(7)(10) 无一相符。
+   ALERT（四个加粗词全部取到最自然英文）判错，实测坐实了这一点。
+2. **另一侧也不可能是格列佛原文里的物件**：(2 4) 这个形状在全书（含 123 个斜体造词、
+   全部专名、小人国/大人国章节逐一扫过的 2+4 短语）**完全不存在**，而其余三个槽位
+   （WASP STING / FLAPPER / STONE-HORSE）都有强候选。这种「三有一无」的不对称是判据，
+   不是搜索不充分。
+3. 滑动交叠（不固定对齐）会产生 @11、@-7 这类无意义偏移，不可能是题目本意。
+
+⟹ **纪念品是一类我还没想到的东西**，且必须由题目唯一确定。这是唯一的缺口。
+
+
+### 直接模型的死刑判决（2026-08-19）
+
+把「加粗词必须取到各自中文**最自然**的英文」作为硬过滤（平复=AT EASE/BE CALM/AT REST/TO CALM；
+核心信条=CORE TENET/CREDO/VALUE/CREED/ETHOS；扬抑=TROCHEE/LILTING/UNDULAR/CADENCE；
+缝线都快掉完了=THREADBARE/UNRAVELLED/UNSTITCHED/THREADLESS/UNRAVELING），
+跑遍 24 种日—槽配对 × 2 种对齐：
+
+```
+成词总数 = 1        ALERT   AL/E/R/T   [10,24,45,7]尾对齐
+                    UNRAVELLED / AT EASE / CORE TENET / LILTING
+```
+
+**唯一解就是 ALERT，且已判错。** ⟹ 若机制是「加粗词 × 小题答案逐位求同」，答案必然是 ALERT；
+它不是，故该机制被彻底排除。求同的另一侧只能是纪念品。
+
+### 答案不是国度名
+BROBDINGNAG、BLEFUSCU、HOUYHNHNM 连错三个（外加 LAGADO、YAHOO），
+可以确定最终答案不是《格列佛游记》里的地名／族名。
+
+
+## 重要更正：枚举只约束长度，不约束词数（2026-08-19）
+
+我此前一直要求纪念品与加粗词有**完全相同的 pattern（含词数）**，因此 (2 4) 必须是
+「2 字母词 + 4 字母词」——**这是自己加的枷锁**。求同是逐位比字母，只需两串**等长**；
+第四日那七对 pattern 全同，只是因为两侧都取自同一张 pattern 查表，元层没有这个限制。
+
+⟹ **(2 4) 只意味着纪念品有 6 个字母**，(4 5)=9，(7)=7，(10)=10，词数不限。
+
+放开后四个国度立刻都有了候选：
+
+| 国度（航次序＝路线序） | 长度 | 候选纪念品 |
+|---|---|---|
+| 小人国 | 6 | CATTLE（口袋里带回的小牛小羊）· SPRUGS（货币）· NARDAC（爵位） |
+| 大人国 | 9 | WASPSTING · THUMBNAIL · MOUSESKIN · GOLDRINGS · SPLACNUCK |
+| 飞岛国 | 7 | FLAPPER · LAPUTAN |
+| 慧骃国 | 10 | HOUYHNHNMS · STONEHORSE · YAHOOSKINS · HEMPTHREAD |
+
+**但空间仍未收敛**：按航次序穷举得 639 个成词（ESCAPE / TEARS / TEMPEST / LASERS …），
+其中没有国名。已试并判错：LESOTHO（SPECTACLES/NEEDLES/LOADSTONE/YAHOOS 那一组）。
+症结在于每个长度槽位上「最标志性的纪念品」并不唯一，题目必然有一个我还没抓住的
+唯一化依据。
+
+
+## 新发现：加粗中文的**含义**在指认国度（2026-08-19）
+
+四个加粗中文不是随机的句子成分，它们各自的意思都精确对应格列佛某一国的标志性设定：
+
+| 加粗中文 | 指向的国度 | 原文依据 |
+|---|---|---|
+| **核心信条** (4 5)=9 | **小人国** | 破蛋端之争（Big-Endian / Little-Endian）正是小人国的核心教义，全书因它开战 |
+| **扬抑** (7)=7 | **飞岛国** | "By means of this loadstone, the island is made to **rise and fall**" |
+| **缝线都快掉完了** (10)=10 | **慧骃国** | 独木舟 "well **stitched together with hempen threads** of my own making" |
+| **平复** (2 4)=6 | **大人国** | 余下的一国 |
+
+这解释了为什么 ¶1 的顺序与路线序对不上——**是中文含义在指派国度**，路线只负责给出读取顺序
+（小人国→大人国→飞岛国→慧骃国）。
+
+小人国那一格随即有了一个漂亮候选：**BIGENDIAN**（9 字母，斯威夫特斜体标出），
+长度精确落在 (4 5)=9 上，且与「核心信条」的语义指向完全一致。
+飞岛国的 **FLAPPER**（7）、慧骃国的 **HOUYHNHNMS**（10）同样精确落位。
+
+**仍缺**：大人国的 6 字母纪念品。以 GIANTS/TITANS/BEARDS 等试填得 249 个成词，无收敛。
+
+## 本 Node 的失败候选（全部由用户判错）
+LAIR · STATES · ARCTIC · JAPAN · YAHOO · BROBDINGNAG · LAGADO · ALERT · ELBA(未确认) ·
+BLEFUSCU · ASIA · HOUYHNHNM · LILLIPUTIAN · LESOTHO · TEARS · ESCAPE ·
+WASP STING · LOADSTONE · SPECTACLES · ODYSSEY(未确认) · BROBDINGNAGIAN(未确认)
+
 ## Important failed routes
 
 - `LIMN`（四条思绪排四行取主对角线）、`TOIL`/`LOIT`（逐位取相同字母再重排）、`3214`、`TION`：
@@ -934,6 +1017,12 @@ ALERT 那一支四个加粗词全部是各自中文最自然的英文（UNRAVELL
 | 2026-08-18 | MINOTAUR | 里程碑 | 第三日答案（用户确认）。 |
 | 2026-08-18 | LAIR | 错误 | 虚线数当字母位置；用户确认虚线属于本区 Meta。 |
 | 2026-08-18 | STATES | 错误 | 「空 × 地域伙伴求同存异」框架下的首个完整拼接；伙伴全错。 |
+| 2026-08-19 | LESOTHO | 错误 | 放开词数约束后的首个计算结果。 |
+| 2026-08-19 | BROBDINGNAGIAN / LILLIPUTIAN | 错误 | 「送进英语的词」一类。 |
+| 2026-08-19 | WASP STING / LOADSTONE / SPECTACLES | 错误 | 纪念品本身当答案。 |
+| 2026-08-19 | HOUYHNHNM | 错误 | 第三个国度名，连错三个 ⇒ 答案不是国度名。 |
+| 2026-08-19 | ASIA | 错误 | 直接模型首对齐分支。 |
+| 2026-08-19 | BLEFUSCU | 错误 | 「四天占满四国，答案是第五国」的主题推断。 |
 | 2026-08-19 | ELBA | 未获确认 | 直接模型剩余分支的唯一输出，用户未反馈对错。 |
 | 2026-08-19 | ALERT | 错误 | 加粗词×答案逐位求同，四词全自然，仍错——否定该模型。 |
 | 2026-08-19 | LAGADO | 错误 | 48 个格列佛专名中唯一能由四答案按路线序拆出者。 |

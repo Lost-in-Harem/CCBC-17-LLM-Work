@@ -1,6 +1,6 @@
 ---
 node_id: a6
-title: 调查杨国富拖欠合作方款项
+title: 试着和洛深建立联系
 kind: puzzle
 round: wig
 parent:
@@ -14,7 +14,7 @@ summary: a5 后续【2-2】电话已把下一方向固定为“杨国富拖欠�
 updated: 2026-08-17
 ---
 
-# 调查杨国富拖欠合作方款项
+# 试着和洛深建立联系
 
 ## Current conclusion
 
