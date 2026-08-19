@@ -1,131 +1,88 @@
 #!/usr/bin/env python3
-"""Enumerate cell/axis-node routes for Photo 3's fixed 5x5 maze.
+"""Parse Photo 3's maze straight out of the saved SingleFile capture and report
+connectivity under the ordinary "a drawn segment is a wall" model.
 
-This is a reproducible exploratory model: walls block ordinary cell-boundary
-crossings, while every drawn internal circle is treated as a four-way portal.
-It reports shortest routes and the animal cells they visit; it does not claim
-that this is the puzzle's final extraction.
+Usage:
+    python3 artifacts/maze_graph_analysis.py input/3.html
+
+The capture is a SingleFileZ archive: index.html inside a zip appended to an
+HTML shell. The maze is an inline SVG on a 5x5 unit grid, so wall segments and
+animal positions can be read exactly instead of by OCR.
+
+Result for the 2026-08-17 23:48 capture: 36 wall segments (18 border, 18
+internal), 22 open internal edges, and the 25 cells split into FOUR connected
+components. The entrance component is only {(1,1),(1,2)}, so the drawn board
+has no ordinary path from the entrance to the exit. Any solution therefore
+needs a movement rule beyond "cross an edge that has no drawn segment".
 """
 from __future__ import annotations
 
-import argparse
-from collections import defaultdict, deque
+import re
+import sys
+import zipfile
+from collections import deque
 from pathlib import Path
 
-from bs4 import BeautifulSoup
+N = 5
+ICON = {"\U0001F434": "马", "\U0001F426": "鸟", "\U0001F41F️": "鱼",
+        "\U0001F42F": "虎", "\U0001F410": "羊"}
 
 
-def parse(path: Path):
-    soup = BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
-    walls: set[tuple[int, int, int, int]] = set()
-    for line in soup.select("line.maze-wall"):
-        p = tuple(int(float(line[k])) for k in ("x1", "y1", "x2", "y2"))
-        walls.add(p)
-        walls.add((p[2], p[3], p[0], p[1]))
+def read_capture(path: Path) -> str:
+    try:
+        with zipfile.ZipFile(path) as zf:
+            return zf.read("index.html").decode("utf-8", errors="replace")
+    except zipfile.BadZipFile:
+        return path.read_text(encoding="utf-8", errors="replace")
+
+
+def parse(src: str):
+    walls = {tuple(float(v) for v in m.groups()) for m in re.finditer(
+        r"<line class=maze-wall x1=([\d.-]+) y1=([\d.-]+) x2=([\d.-]+) y2=([\d.-]+)>", src)}
     animals = {}
-    mapping = {"🐴": "马", "🐦": "鸟", "🐟️": "鱼", "🐯": "虎", "🐐": "羊"}
-    for node in soup.select("text.maze-icon"):
-        x, y = int(float(node["x"])), int(float(node["y"]))
-        animals[(y, x)] = mapping.get(node.get_text(strip=True), node.get_text(strip=True))
-    return walls, animals
+    for m in re.finditer(r"<text class=maze-icon x=([\d.]+) y=([\d.]+)[^>]*>(.*?)</text>", src):
+        r, c = int(float(m.group(2)) - 0.5), int(float(m.group(1)) - 0.5)
+        animals[(r, c)] = ICON.get(m.group(3), m.group(3))
+    axes = {(int(m.group(1)), int(m.group(2))) for m in re.finditer(
+        r"<circle class=maze-axis cx=(\d+) cy=(\d+)", src)}
+    return walls, animals, axes
 
 
-def routes(path: Path, avoid_animals: bool = False, portal_mode: str = "all"):
-    walls, animals = parse(path)
-    graph: dict[tuple[str, int, int], set[tuple[str, int, int]]] = defaultdict(set)
+def main() -> None:
+    src = read_capture(Path(sys.argv[1] if len(sys.argv) > 1 else "input/3.html"))
+    walls, animals, axes = parse(src)
+    hw = lambda r, c: (float(c), float(r), float(c + 1), float(r)) in walls
+    vw = lambda r, c: (float(c), float(r), float(c), float(r + 1)) in walls
 
-    # Open crossings between adjacent cells where no wall segment is drawn.
-    blocked_cells = set(animals) if avoid_animals else set()
-    blocked_cells -= {(0, 0), (4, 4)}
-    for r in range(5):
-        for c in range(5):
-            cell = ("C", r, c)
-            if (r, c) in blocked_cells:
-                continue
-            candidates = [
-                ((r - 1, c), (c, r, c + 1, r)),
-                ((r + 1, c), (c, r + 1, c + 1, r + 1)),
-                ((r, c - 1), (c, r, c, r + 1)),
-                ((r, c + 1), (c + 1, r, c + 1, r + 1)),
-            ]
-            for (rr, cc), edge in candidates:
-                if 0 <= rr < 5 and 0 <= cc < 5 and (rr, cc) not in blocked_cells and edge not in walls:
-                    graph[cell].add(("C", rr, cc))
+    print(f"walls={len(walls)} axis-circles={len(axes)} animals={ {f'({r+1},{c+1})': a for (r, c), a in sorted(animals.items())} }")
+    for r in range(N + 1):
+        print("".join("+" + ("---" if hw(r, c) else "   ") for c in range(N)) + "+")
+        if r < N:
+            row = ""
+            for c in range(N + 1):
+                row += "|" if vw(r, c) else " "
+                if c < N:
+                    row += f" {animals.get((r, c), ' ')} "
+            print(row)
 
-    # Model each internal circle according to the selected finite hypothesis.
-    # ``all`` means a four-way crossing; ``diagonal`` means only opposite
-    # quadrants connect; ``none`` leaves circles as ordinary wall vertices.
-    for r in range(1, 5):
-        for c in range(1, 5):
-            portal = ("P", r, c)
-            cells = (("C", r - 1, c - 1), ("C", r - 1, c), ("C", r, c - 1), ("C", r, c))
-            if portal_mode == "diagonal":
-                cells = (cells[0], cells[3])
-            elif portal_mode == "none":
-                cells = ()
-            for cell in cells:
-                if (cell[1], cell[2]) not in blocked_cells:
-                    graph[cell].add(portal)
-                    graph[portal].add(cell)
-
-    start, goal = ("C", 0, 0), ("C", 4, 4)
-    dist = {start: 0}
-    parents: dict[tuple[str, int, int], list[tuple[str, int, int]]] = defaultdict(list)
-    queue = deque([start])
-    while queue:
-        node = queue.popleft()
-        for other in sorted(graph[node]):
-            nd = dist[node] + 1
-            if other not in dist:
-                dist[other] = nd
-                parents[other].append(node)
-                queue.append(other)
-            elif dist[other] == nd:
-                parents[other].append(node)
-
-    paths: list[list[tuple[str, int, int]]] = []
-    def backtrack(node, suffix):
-        if node == start:
-            paths.append([start, *suffix])
-            return
-        for parent in parents[node]:
-            backtrack(parent, [node, *suffix])
-
-    if goal in dist:
-        backtrack(goal, [])
-
-    def fmt(node):
-        kind, r, c = node
-        return f"{kind}{r+1},{c+1}"
-
-    result = {
-        "source": str(path),
-        "distance": dist.get(goal),
-        "shortest_path_count": len(paths),
-        "avoid_animals": avoid_animals,
-        "portal_mode": portal_mode,
-        "animals": {f"r{r+1}c{c+1}": animal for (r, c), animal in sorted(animals.items())},
-        "shortest_paths": [
-            {
-                "nodes": [fmt(node) for node in route],
-                "cells": [fmt(node) for node in route if node[0] == "C"],
-                "animals_on_cells": [animals[(node[1], node[2])] for node in route if node[0] == "C" and (node[1], node[2]) in animals],
-            }
-            for route in paths
-        ],
-    }
-    return result
-
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument("source", type=Path)
-    parser.add_argument("--output", type=Path, required=True)
-    parser.add_argument("--avoid-animals", action="store_true")
-    parser.add_argument("--portal-mode", choices=("all", "diagonal", "none"), default="all")
-    args = parser.parse_args()
-    import json
-    args.output.write_text(json.dumps(routes(args.source, args.avoid_animals, args.portal_mode), ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    seen, comps = set(), []
+    for start in ((r, c) for r in range(N) for c in range(N)):
+        if start in seen:
+            continue
+        comp, q = {start}, deque([start])
+        seen.add(start)
+        while q:
+            r, c = q.popleft()
+            for nr, nc, blocked in ((r - 1, c, hw(r, c)), (r + 1, c, hw(r + 1, c)),
+                                    (r, c - 1, vw(r, c)), (r, c + 1, vw(r, c + 1))):
+                if 0 <= nr < N and 0 <= nc < N and not blocked and (nr, nc) not in seen:
+                    seen.add((nr, nc)); comp.add((nr, nc)); q.append((nr, nc))
+        comps.append(sorted(comp))
+    print(f"connected components: {len(comps)}")
+    for comp in comps:
+        print("   size", len(comp), [(r + 1, c + 1) for r, c in comp])
+    entrance = next(comp for comp in comps if (0, 0) in comp)
+    print("entrance component reaches exit:", (N - 1, N - 1) in entrance)
 
 
 if __name__ == "__main__":

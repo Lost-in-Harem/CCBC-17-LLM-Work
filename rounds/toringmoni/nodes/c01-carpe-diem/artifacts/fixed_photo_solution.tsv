@@ -1,7 +1,0 @@
-photo	observed mechanism	surface result	role in final chain
-1	The two identical solid cyan blocks must have the same image; the visible reference is 黄鳝. Taking only its first character is an extraction hypothesis, not an explicit instruction.	黄鳝	possible 黄
-2	百家姓 indices + 燕 + 刘姓作者 + 2x7 layout identify 刘禹锡《乌衣巷》末联; the current lower-row first cell is 飞.	飞	飞
-3	The ordinary missing-edge maze is disconnected. If each circled lattice vertex permits a wall-dependent cross-corner transition, the current board has a unique shortest animal-avoiding route: r1c1→r2c1→r3c2→r4c3→r5c4→r5c5. The tiger is fixed at the exit, but no stable letter extraction beyond that has been proved.	虎 (endpoint label only; route extraction unresolved)	possible 虎
-4	Current row 2 demonstrates 娇's 女 plus 喜 → 嬉, homophone 西. Current row 3 analogously gives 油's 氵 plus 吽's 牛 → 汼, homophone 牛. Row 1 remains inconsistent with this rule (狗+儿↔忠).	牛	possible 牛; not a final answer
-milestone hypothesis	The first three possible extracted characters spell the recognizable name 黄飞虎. The parent Hunt context explicitly allows intermediate-answer validation; this has not been submitted or confirmed.	黄飞虎	next user-side verification
-final	The submitted strings 黄飞虎牛 and 五色神牛 were rejected. No reliable final answer is established from the fixed four screenshots.		unresolved

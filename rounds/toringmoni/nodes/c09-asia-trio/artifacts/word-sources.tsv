@@ -1,0 +1,28 @@
+# 亚细亚三重奏 — SOLVED.  Answer = PAINTBRUSH
+#
+# Every black-framed word is lifted verbatim from one of three East-Asian works,
+# and the two words on a line come from the SAME numbered section of that work.
+# Row label ±N is added to that section number; A1Z26 gives one letter per row.
+#
+# panel  row  left word  right word  source work            section  section+N  letter
+KR(top-right)	+5	抛物線	氣絶	李箱『烏瞰圖 / 오감도』	詩第十四號	14+5=19	S
+KR(top-right)	+1	滿月	沈下搬過	李箱『烏瞰圖 / 오감도』	詩第七號	7+1=8	H
+KR(top-right)	+7	烈風	銃彈	李箱『烏瞰圖 / 오감도』	詩第九號	9+7=16	P
+JP(bottom-right)	-3	笹の雪	玲瓏	宮沢賢治『春と修羅』	4 丘の眩惑	4-3=1	A
+JP(bottom-right)	+4	薄明	巻烟草	宮沢賢治『春と修羅』	5 カーバイト倉庫	5+4=9	I
+JP(bottom-right)	+8	氷霧	山地	宮沢賢治『春と修羅』	6 コバルト山地	6+8=14	N
+CN(left)	+7	流弹	头颅	北岛《白日梦》	第13节	13+7=20	T
+CN(left)	-6	蜘蛛	博物馆	北岛《白日梦》	第8节	8-6=2	B
+CN(left)	+6	颂歌	蜉蝣	北岛《白日梦》	第12节	12+6=18	R
+CN(left)	+2	苦根	花岗岩	北岛《白日梦》	第19节	19+2=21	U
+#
+# Reading the three segments around the marker cycle KR -> JP -> CN:
+#   SHP + AIN + TBRU  =  SHPAINTBRU
+# The cycle has no fixed start ("回环的注脚"); rotating two places gives
+#   PAINTBRUSH
+# and 「来自东方的三支笔」 lands on it exactly.
+#
+# The three footers name the three works, each in the PREVIOUS language's script:
+#   Korean panel footer  (pinyin) wu kan tu   = 烏瞰圖  -> the Korean work
+#   Japanese panel footer (hangul) 봄과 아수라  = 春と修羅 -> the Japanese work
+#   Chinese panel footer  (kana)  はくちゅうむ  = 白昼夢  -> the Chinese work (北岛《白日梦》)

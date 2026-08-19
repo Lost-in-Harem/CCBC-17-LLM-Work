@@ -1,21 +1,47 @@
-# 亚细亚三重奏 — the three footer strings (state as of 2026-08-18)
+# 亚细亚三重奏 — the three footer strings (state as of 2026-08-19)
 #
 # Cycle: Chinese panel (left) -> Korean panel (top-right) footer
 #        Korean panel        -> Japanese panel (bottom-right) footer
 #        Japanese panel      -> Chinese panel footer
-# Each footer is written in the PREVIOUS panel's script; the box gaps inside a
-# footer separate WORDS (pinyin: 3 one-syllable words; hangul: 2 words; kana: 1 word).
+# Each footer is written in the PREVIOUS panel's script, and (two of three now
+# confirmed) spells a literary work by an author of THAT PANEL'S OWN language.
+# Box gaps inside a footer: 1-2 px between adjacent units, 9-11 px at a real
+# word / syllable separator.
 panel	script	boxes	assembly	string	reading
-Korean (top right)	pinyin	3 groups = 2/3/2 letters	[w + CN_-6_L#2 letter3] [k + a(tone) + n] [t + CN_+6_R#1 letter2]	w?  kàn  t?	UNSOLVED - two vowels missing
+Korean (top right)	pinyin	3 groups = 2/3/2 letters	[w + CN_-6_L#2 letter3][k + a(toned) + n][t + CN_+6_R#1 letter2]	wu kan tu	SOLVED = 烏瞰圖 「오감도」(Yi Sang / 이상, 1934)
 Japanese (bottom right)	hangul	2 groups = 2 + 3 syllables	[JP_+1_R#3 초성 + ㅗ + JP_+1_L#1 초성][JP_+1_R#4 syllable] | [ㅇ + JP_+1_L#1 중성][ㅅ+ㅜ][ㄹ + JP_+1_R#3 중성]	봄과 아수라	SOLVED = 『春と修羅』(Miyazawa Kenji, 1924) Korean title
-Chinese (left)	kana	1 group = 6 kana, box 4 half-size	[KR_+4_L#1 kana1][kana2][ち = 地][small ゅ = 雪's ゆ][KR_+8_L#1 kana3][KR_+8_L#2 kana]	? ? ち ゅ ? ?	16 EDICT candidates - 白昼夢 (はくちゅうむ) preferred
+Chinese (left)	kana	1 group = 6 kana, box 4 half-size	[薄 は][く][ち = 地][small ゅ = 雪の ゆ][う = 氷 ひょう の 3rd][む = 霧]	はくちゅうむ	SOLVED = 白昼夢 = 北岛《白日梦》
+#
+# Evidence for 烏瞰圖 (wu kan tu)
+#   the middle group is nailed: k from 苦(ku3) + a-with-diacritic and n from 弹(dan4)
+#   TONES ARE NOT RECOVERABLE from the drawing: a split box only says "this letter
+#   carries a dot or a diacritic", which is identical for the four tones.  So the
+#   footer encodes the LETTERS  w? / kan / t?  only.
+#   all four characters of CN_-6_L and CN_+6_R share one left radical: the left
+#   three columns of all four room maps match, cell for cell, ONLY 女-radical
+#   characters (65 of them, no other radical) -> artifacts/partfilter.py
+#   CN_-6_L#2 : best 女-radical char with letter-shape [.][.][V] = 姝 shu1 (#26, 0.909)
+#               runner-up 妷 zhi2 gives "i" but "wi" is not a pinyin syllable;
+#               next admissible is 媰 chu2 -> also "u".  => letter 1 = u
+#   CN_+6_R#1 : best 女-radical chars with [.][V] = 嬉 xi1 (#34), 婦 fu4 (#77, 0.904),
+#               媍 fu4 (#177), 娛 yu2 (#239)  => letter = u (or i)
+#   => w u   k a n   t u  = 烏瞰圖, Yi Sang's 1934 poem cycle (a pun on 鳥瞰圖).
+#   It sits in the KOREAN panel, exactly as 『春と修羅』(Japanese) sits in the
+#   JAPANESE panel => the Chinese panel's footer must be a CHINESE work.
 #
 # Evidence for 봄과 아수라
 #   JP_+1_R#4  = 過 (과)   model rank 1, 0.892; marker layout = compound vowel, no batchim
 #   JP_+1_R#3  = 搬 (반)   model rank 1 among vert3, 0.907  -> 초성 ㅂ, 중성 ㅏ
 #   JP_+1_L#1  = 蹣 (만)   model rank 1 among vert3, 0.916  -> 초성 ㅁ, 중성 ㅏ
 #   footer syl1 = ㅂ + ㅗ(from 銃 총) + ㅁ = 봄 ; syl2 = 과 ; then 아 수 라
-#   the 2+3 box grouping reproduces the space in 「봄과 아수라」
 #
-# The 16 EDICT 6-kana readings with ち ゅ in boxes 3-4 (artifacts/kana_footer.py)
-候補	航宙士 こうちゅうし / 甲冑師 かっちゅうし / 接中辞 せっちゅうじ / 分注器 ぶんちゅうき / 道中記 どうちゅうき / 接中語 せっちゅうご / 要注意 ようちゅうい / 諸注意 しょちゅうい / 獄中記 ごくちゅうき / 雪中花 せっちゅうか / 水中花 すいちゅうか / 白昼夢 はくちゅうむ / 十柱戯 じっちゅうぎ / 町中華 まちちゅうか / 戦中派 せんちゅうは / 一昼夜 いっちゅうや
+# Kana footer, resolved: はくちゅうむ = 白昼夢 = 北岛《白日梦》
+#   KR_+4_L = 薄明 (薄 はく)  -> boxes 1,2   [the 艹-head read off rows 0-2 was right]
+#   KR_+8_R = 山地 (地 ち)    -> box 3
+#   KR_-3_L = 笹の雪 (雪 ゆき) -> box 4, drawn half-size because it is a SMALL kana
+#            in the target string; note cell 2 of that word is the hiragana の.
+#   KR_+8_L = 氷霧 (氷 ひょう) -> box 5 = う ; (霧 む) -> box 6
+# CORRECTION to an earlier note here: markers do NOT half-size small kana - the
+# marker over 氷 draws ひ / ょ / う as three EQUAL boxes.  Only the FOOTER draws a
+# small kana half-height and bottom-aligned.  The "no small kana" rule stated in
+# the previous version of this file was wrong and had excluded the true answer.

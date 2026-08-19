@@ -1,9 +1,9 @@
-server_time	photo	observation
-2026-08-17 13:03	1	color=青; check-tl=黄酒; check-tr=黄雀; solid=?
-2026-08-17 13:03	2	top=[blank,S85,S315,S315,S315,S315,S315]; borders={c4:red,c5:yellow,c6:blue}; bottom=[blank,blank,blank,S82,blank,blank,?]; author=S252
-2026-08-17 13:03	3	animals={羊:r1c1,马:r1c2,鸟:r2c2,鱼:r3c3,虎:r5c5}; walls=rounds/wig/nodes/a5/work/toringmoni-statements/c01-carpe-diem/secondgram-06a-maze.svg
-2026-08-17 13:03	4	牛-人↔精; 乐+奴↔西; 呢-米↔?
-2026-08-17 23:47	1	color=青; lr-left=黄鹂; solid=黄鳝; solid=?
-2026-08-17 23:48	2	top=[blank,S87,S315,S315,S315,blank,S315]; borders={c5:red,c6:yellow,c7:blue}; bottom=[?,blank,blank,S31,blank,blank,blank]; author=S252
-2026-08-17 23:48	3	animals={羊:r1c1,马:r2c2,鱼:r3c3,鸟:r5c2,虎:r5c5}; walls=work/visual/sfz/3/index.html
-2026-08-17 23:48	4	狗+儿↔忠; 喜+娇↔西; 吽+油↔?
+server_time	source	photo	exact_content
+2026-08-17 13:03	rounds/wig/nodes/a5 截图记录（二手转述）	1	color=青; check-tl=黄酒; check-tr=黄雀; solid=?  （两示例图案互补）
+2026-08-17 13:03	rounds/wig/nodes/a5 截图记录（二手转述）	2	row1=[_,S85,燕,燕,燕,燕,燕]; borders={c4:red,c5:yellow,c6:blue}; row2=[_,_,_,S82,_,_,?]; 作者∈S252
+2026-08-17 13:03	rounds/wig/nodes/a5 截图记录（二手转述）	3	animals={羊:(1,1),马:(1,2),鸟:(2,2),鱼:(3,3),虎:(5,5)}; 墙面未留存
+2026-08-17 13:03	rounds/wig/nodes/a5 截图记录（二手转述）	4	牛 − 人 ↔ 精; 乐 + 奴 ↔ 西; 呢 − 米 ↔ ?
+2026-08-17 23:47	input/1.html DOM（精确）	1	三行 riddle1-row，--c:#13b6c4；row1=sq--lr-left=图 huangli(黄鹂); row2=sq--solid=图 huangshan(黄鳝); row3=sq--solid=?
+2026-08-17 23:48	input/2.html DOM（精确）	2	row1=[_,S87,燕,燕,燕(红框),_(黄框),燕(蓝框)]; row2=[?,_,_,S31,_,_,_]; 页首 🟥🟦🟨=S; 页脚 作者∈S252
+2026-08-17 23:48	input/3.html DOM（精确）	3	36 条 maze-wall + 16 个 maze-axis 圆点; animals={羊:(1,1),马:(2,2),鱼:(3,3),鸟:(5,2),虎:(5,5)}; 入口 (1,1) 上方, 出口 (5,5) 下方
+2026-08-17 23:48	input/4.html DOM（精确）	4	狗 + 儿 ↔ 忠; 喜 + 娇 ↔ 西; 吽 + 油 ↔ ?

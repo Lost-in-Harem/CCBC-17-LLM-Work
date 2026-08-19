@@ -805,6 +805,107 @@ stopping all the chinks with Yahoos' **tallow**" —— 「缝线」的直接出
 Glumdalclitch(13)·50、Blefuscu(8)·33、Houyhnhnm(9)·20、Lilliput(8)·18、Luggnagg(8)·17、
 Lagado(6)·11、Balnibarbi(10)·9、Laputa(6)·8。**7 个字母的专名一个都没有。**
 
+
+## 用户澄清后的机制定位（2026-08-19）
+
+用户明确两点：**①置顶帖与本题无关；②提取就是「两个单词交叠取公共部分」，且答案字母来自小题答案。**
+
+这与第四日已证机制完全一致：*同 pattern 的两串逐位求同*。四个加粗枚举 (2 4)(4 5)(7)(10)
+即四个**纪念品**的 pattern，另一侧是加粗中文的英文（平复/核心信条/扬抑/缝线都快掉完了）。
+
+### 决定性筛选
+
+答案字母既然来自四个小题答案，则答案必须能按**路线序**（MAXANDCAROLINE → JUSTICELEAGUE →
+ANGRYBIRDS → MINOTAUR）拆成四段非空、每段是对应答案的子序列。四个答案合起来只含
+`{M A X N D C R O L I E J U S T G B Y}`，**不含 F H K P Q V W Z**。
+
+拿《格列佛游记》48 个专名逐一检验：
+
+```
+✓ LAGADO   L / AG / AD / O        （唯一通过）
+✗ 其余 47 个全部不可行：LILLIPUT(P) LAPUTA(P) HOUYHNHNM(H) BLEFUSCU(F) YAHOO(H)
+  BROBDINGNAG(B×2) BALNIBARBI(B×3) STRULDBRUG GULLIVER(V) FLAPPER(F) LOADSTONE …
+```
+
+**48 选 1。** 段长 1/2/2/1 也与第四日每对产出 1–3 个字母的规模吻合。
+
+LAGADO 是《格列佛游记》第三卷巴尔尼巴比的**首都**（拉格多大科学院所在地），
+是书中真正的「列国」城市之一，与题名「周游列国」及本区 Meta「要确定城市，
+我首先要先知道国家」的层级都对得上。
+
+### 仍未复原的部分
+四个纪念品的确切英文未定死，因此字母级的逐位求同未能独立复算。已排除：原文实物清单
+（四国都没有 (2 4) 形状的物件）、斯威夫特造词（没有 7 字母专名）、置顶帖地理线索。
+
+
+## 路线 = 格列佛航行顺序（新发现，2026-08-19）
+
+由 feeder 最小编号排出的真实路线 **第四日→第一日→第二日→第三日**，与格列佛四次航行
+**小人国→大人国→飞岛国→慧骃国** 顺序一致。这正是「我真正的旅行路径」的用处：
+它告诉你**哪一天对应哪一国**（四天的日期顺序并不是游历顺序）。
+
+| 路线序 | 日 | 小题答案 | 国度 | 加粗枚举 |
+|---|---|---|---|---|
+| 1 | 第四日 | MAX AND CAROLINE | 小人国 Lilliput | 平复 (2 4) |
+| 2 | 第一日 | JUSTICE LEAGUE | 大人国 Brobdingnag | 核心信条 (4 5) |
+| 3 | 第二日 | ANGRY BIRDS | 飞岛国 Laputa | 扬抑 (7) |
+| 4 | 第三日 | MINOTAUR | 慧骃国 Houyhnhnm | 缝线都快掉完了 (10) |
+
+### 已定位的三件纪念品（原文佐证）
+
+- **大人国 (4 5) = WASP STING** —— "four **wasp stings**, like joiner's tacks"；且
+  "I carefully preserved them all… upon my return to England I gave three of them to
+  Gresham College, and **kept the fourth for myself**" —— 他真正带回并展示的纪念品。
+- **飞岛国 (7) = FLAPPER** —— "those persons who are able to afford it always keep a
+  **flapper**（原文 climenole）in their family" —— 飞岛国独有。
+- **慧骃国 (10) = STONE-HORSE** —— 回英国后 "The first money I laid out was to buy
+  **two young stone-horses**, which I keep in a good stable… I converse with them at least
+  four hours every day" —— 字面意义上怀念慧骃的纪念品。
+
+### 仍缺的一块
+**小人国的 (2 4)**。原文里他从小人国/不来夫斯古带回的是 black cattle and sheep、
+Blefuscu 的 gold、皇帝画像、两袋 sprugs、以及那条船 —— 没有任何 2+4 形状的名目。
+以上述三件为骨架穷举第一段，拼出的词（TASTES / TESTES / GOATEE / BOOTEE …）
+全都不像谜题答案，说明这一组纪念品里至少还有一件是错的。
+
+
+## 直接模型（加粗词 × 小题答案逐位求同）的完整清算，2026-08-19
+
+用户提示「提取是用两个单词交叠取公共部分，答案从小题答案里来」后，我把
+**加粗词英文 × 当天答案**（首对齐 / 尾对齐 × 全部 24 种日—槽配对）穷举，并加上关键约束：
+*chunk 的字母必须同时出现在加粗词的同一位置*。全词典只剩 78 词，其中两种**有理据**的配法各只剩几个：
+
+| 配法 | 对齐 | 结果 |
+|---|---|---|
+| ¶1 顺序＝日期序，按路线序读 | 尾 | **ALERT**（UNRAVELLED/AT EASE/CORE TENET/LILTING）→ **已判错** |
+| 同上 | 首 | ASIA（UNRAVELLED/GO SLOW/CORE FAITH/UNDULAR） |
+| ¶1 顺序＝路线序 | 尾 | ELBA / ELSA / NASA（AT EASE/SOUL CREDO/BOBBING/THREADBARE） |
+| 同上 | 首 | MASAI（MY CALM/BASE FAITH/ACCENTS/DISHEVELED） |
+
+ALERT 那一支四个加粗词全部是各自中文最自然的英文（UNRAVELLED / AT EASE / CORE TENET / LILTING），
+逐位求同给出 AL+E+R+T，却判错 —— **这基本否定了「加粗词直接与小题答案求同」的整个模型**。
+更根本的理由：第四日已证的求同要求两侧 **pattern 完全相同**，而四个答案的 pattern
+(3 3 8)(7 6)(5 5)(8) 与四个加粗枚举 (2 4)(4 5)(7)(10) 无一相符 —— 求同的另一侧
+只能是**纪念品**，不是答案本身。
+
+### 纪念品仍未定位
+已排除：原文实物清单、斯威夫特斜体造词（(2 4) 形状在全书 123 个斜体词中**一个都没有**）、
+四国专名、通用旅游纪念品。(2 4) 这个槽位是死结。
+
+
+### 纪念品模型也已跑到尽头
+把原文小人国章节实际出现的全部 (2 4) 短语（MY COWS / MY EWES / MY BOAT / OF GOLD / MY COMB …）
+与大人国 (4 5)、飞岛 (7)、慧骃 (10) 的候选组合穷举，成词 1019 个 —— 纪念品那一侧只要放开，
+空间就爆炸。**纪念品必须由题目唯一确定，不能靠枚举。**
+
+目前唯一自洽的骨架（若 ¶1 顺序＝路线序＝航次序）：
+- 小人国 ↔ 平复 (2 4)：**无候选**（全书没有 2+4 形状的小人国物件）
+- 大人国 ↔ 核心信条 (4 5)：**WASP STING** —— 他明确保存并展示的四根黄蜂刺
+- 飞岛国 ↔ 扬抑 (7)：**FLAPPER** —— 飞岛独有的拍打侍从
+- 慧骃国 ↔ 缝线都快掉完了 (10)：**STONE-HORSE** —— 回英国后买来怀念慧骃的两匹马
+
+三个槽位有强候选、(2 4) 一个都没有，这个不对称本身说明**「纪念品＝格列佛物件」的假设有问题**。
+
 ## Important failed routes
 
 - `LIMN`（四条思绪排四行取主对角线）、`TOIL`/`LOIT`（逐位取相同字母再重排）、`3214`、`TION`：
@@ -833,6 +934,11 @@ Lagado(6)·11、Balnibarbi(10)·9、Laputa(6)·8。**7 个字母的专名一个�
 | 2026-08-18 | MINOTAUR | 里程碑 | 第三日答案（用户确认）。 |
 | 2026-08-18 | LAIR | 错误 | 虚线数当字母位置；用户确认虚线属于本区 Meta。 |
 | 2026-08-18 | STATES | 错误 | 「空 × 地域伙伴求同存异」框架下的首个完整拼接；伙伴全错。 |
+| 2026-08-19 | ELBA | 未获确认 | 直接模型剩余分支的唯一输出，用户未反馈对错。 |
+| 2026-08-19 | ALERT | 错误 | 加粗词×答案逐位求同，四词全自然，仍错——否定该模型。 |
+| 2026-08-19 | LAGADO | 错误 | 48 个格列佛专名中唯一能由四答案按路线序拆出者。 |
+| 2026-08-19 | BROBDINGNAG | 错误 | 置顶帖地理线索，用户指出置顶帖与本题无关。 |
+| 2026-08-19 | YAHOO | 错误 | 「带回英语的纪念品词」推断。 |
 | 2026-08-18 | JAPAN | 错误 | 「格列佛游记里唯一真实国家」的语义跳跃。 |
 | 2026-08-18 | ARCTIC | 错误 | 「枚举=词数、取各词首字母」= AT REST+CORE TENET+INFLECT+C词；机制已证伪。 |
 | 2026-08-18 | TOIL | 未提交 / 用户否定 | 同位相同字母 + 重排。 |
