@@ -1,0 +1,8 @@
+boundary_y	meaning	bits_left_to_right	decimal	hex	character
+0	1=real tab on lower piece; 0=real tab on upper piece	01010000	80	50	P
+1	1=real tab on lower piece; 0=real tab on upper piece	00110001	49	31	1
+2	1=real tab on lower piece; 0=real tab on upper piece	01010010	82	52	R
+3	1=real tab on lower piece; 0=real tab on upper piece	01100001	97	61	a
+4	1=real tab on lower piece; 0=real tab on upper piece	01010100	84	54	T
+5	1=real tab on lower piece; 0=real tab on upper piece	01100101	101	65	e
+6	1=real tab on lower piece; 0=real tab on upper piece	00100100	36	24	$
