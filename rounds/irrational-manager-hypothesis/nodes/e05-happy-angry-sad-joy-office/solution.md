@@ -7,10 +7,10 @@ parent:
 source: 
 round_feeder: yes
 feeders: 
-status: candidate
-answer: AQUAMAN
-confidence: medium
-summary: "六枚红图按提示 3 再次下落为 🔄/✅/🚶‍➡️/➕/💧/🎨。提示 4 下逐图换义后，整段直接读作 TURN RIGHT | MAN + WATER COLOR；WATER COLOR 给 AQUA，TURN RIGHT 指示把 MAN 移到右侧，得到 AQUA + MAN = AQUAMAN。该路线不取 emoji 英文名首字母，并与标题所指的影片《Inside Out》形成电影标题层面的交叉校验。"
+status: rejected
+answer: 
+confidence: 
+summary: "AQUAMAN 已被用户明确判错，说明把暂定红图读作 TURN RIGHT | MAN + WATER COLOR 并交换词块并非正确转换。当前保留硬机制：128 格同列 dropquote、六首歌词、提示 3 的 c5..c10 再下落及七字母 A?????? 格式；下一步先逐坐标完成 R6 剩余 14 个非红格，以重新判定仍非库存唯一的 c5（🔄/🔁）和 c7（🚶‍➡️/🔡）红格。"
 updated: 2026-08-22
 ---
 
@@ -18,7 +18,7 @@ updated: 2026-08-22
 
 ## Current conclusion
 
-当前候选答案是 **AQUAMAN**（中等置信度）。**ANOMALY、ANXIETY、AFFECTS、ARTISTS、ARTIST、ADAPTER、ARTICLE、ARTWORK、ARTFORM、ACTRESS、ARTISTE、ARTLESS、ALTERED、ATTEMPT、ACTIONS、ACRYLIC、AQUARIA、AQUATIC** 均已被用户明确判错，不能复用；**ANSWERS** 与 **ANOTHER** 均未提交，因缺乏题面支持的逐图首字母规则而撤回。
+当前**没有可提交候选**。**ANOMALY、ANXIETY、AFFECTS、ARTISTS、ARTIST、ADAPTER、ARTICLE、ARTWORK、ARTFORM、ACTRESS、ARTISTE、ARTLESS、ALTERED、ATTEMPT、ACTIONS、ACRYLIC、AQUARIA、AQUATIC、AQUAMAN** 均已被用户明确判错，不能复用；**ANSWERS** 与 **ANOTHER** 均未提交，因缺乏题面支持的逐图首字母规则而撤回。
 
 用户解锁的提示 3 明确说：**“你需要对红色框位置的 emoji 再执行一次下落操作。”** 六个歌词区红格恰好各占 `c5..c10` 一列，最底部也有同列的六个红格，因此第二次下落给出严格的从左到右顺序，不允许像 `ADAPTER` 路线那样异序。
 
@@ -43,7 +43,7 @@ updated: 2026-08-22
 | 💧 | `泣きたい`／眼泪 | **WATER** | 右操作数的一部分 |
 | 🎨 | `落書き`／涂鸦 | **COLOR** | 右操作数的一部分 |
 
-因此整句是：
+曾将整句读为：
 
 ```text
 TURN RIGHT | MAN + WATER COLOR
@@ -55,7 +55,7 @@ TURN RIGHT | MAN + WATER COLOR
 MAN + AQUA  -- move MAN right -->  AQUA + MAN  -->  AQUAMAN
 ```
 
-这条路线不把六图强制命名后取首字母；每枚图只承担一个直接可见的词义或操作。答案也严格符合题面给出的七字母格式 `A??????`。标题 `😊😠😢😃🏢` 可读成“情绪在总部工作”，指向《Inside Out》；Pixar 官方说明 Joy、Anger、Sadness 等情绪住在并工作于 Headquarters。这给“最终结果也是英文影视标题／角色名 **AQUAMAN**”一层独立校验，但不单独作为答案来源。
+但用户已明确判定 **AQUAMAN** 错误。失败点是：`TURN RIGHT` 并不能可靠地推出“交换加号两边的完整词块”；标题指向《Inside Out》也没有证据要求最终答案必须是另一部英文影视标题。现在须回到仍未完全落位的 R6，优先验证红图本身，而不是继续解释这串暂定图。
 
 ## Observations
 
@@ -86,13 +86,13 @@ MAN + AQUA  -- move MAN right -->  AQUA + MAN  -->  AQUAMAN
 2. c5 的 `🔄/🔁` 同列交换不是库存唯一，而是由 `ずっと`（持续循环）与 `いつも`（每次反复）两句成对判定；R6 的 `🔁/👈/👉` 还形成一致的横向箭头组。候选把 `🔄` 直接读作 TURN，因此若这里仍有交换，最终 rebus 会被破坏。
 3. `TURN RIGHT` 到“把 MAN 放在 AQUA 右边”的操作需要把加号两边视为完整词块，而不是将六枚图逐字符倒读；这是候选目前最需要网站确认的一点。相比旧路线，它至少由前两图直接给出换位指令，而不是为拼词任意重排。
 
-## Candidate audit
+## Rejected audit: AQUAMAN
 
 - `work/lyrics_model.py` 验证 128 个目标格的逐列库存；当前 114 个已填格无冲突，R1–R5 全部配平，14 个余格全部落在 R6 非红位置。
 - `artifacts/extraction.tsv` 逐行核对六个粉格与换义角色；组合结果只有两个操作数：`MAN` 与 `WATER COLOR = AQUA`，中间 `➕` 是显式运算符，开头 `TURN RIGHT` 是显式换位指令。
 - R4 的 `✅` 纠错是本次 rebus 能成立的关键：它从歌词／MV 的 `それでよろし` 独立落位，最终才可改用方向义 RIGHT；这不是从 **AQUAMAN** 反推红格。
 - 标题的《Inside Out》识别与最终 **AQUAMAN** 同为英文影视标题；[Pixar 官方页](https://www.pixar.com/inside-out)确认情绪在 Headquarters 工作，[DC 官方页](https://www.dc.com/characters/aquaman)确认标准名称为 **Aquaman**。这是一层弱交叉校验，核心证据仍是六图 rebus。
-- 重要未用信息：R6 下半关系图的 14 格尚未逐坐标填完，且 `TURN RIGHT` 的词块换位语法仍有解释空间。因此记录为中等置信度候选，等待比赛网站确认。
+- 重要未用信息：R6 下半关系图的 14 格尚未逐坐标填完，且 `TURN RIGHT` 的词块换位语法没有题面授权。用户已明确判错，故该组合只保留为负证据。
 
 ## Rejected extraction: AQUATIC
 
@@ -276,6 +276,7 @@ ALTERED    = A D E E L R T
 | 2026-08-21 | ACRYLIC | rejected | 用户明确报告“ACRYLIC 不是答案，继续”；`ACYCLIC + R - C` 的 R/C 与位置没有题面来源，停止该换字路线。 |
 | 2026-08-21 | AQUARIA | rejected | 用户在对话中明确报告“不对，请继续”；只读网站日志未见该词，页面当时仍显示 4/20 次机会，因此这是对话级否定而非可见的网站提交。 |
 | 2026-08-21 | AQUATIC | rejected | 用户明确报告“AQUATIC 不是答案，你认真点”；无额外判题提示。 |
+| 2026-08-22 | AQUAMAN | rejected | 用户明确报告“AQUAMAN 不是答案”；无额外判题提示。 |
 
 ## Unlocked hints
 
@@ -283,13 +284,13 @@ ALTERED    = A D E E L R T
 | --- | --- | --- |
 | 2 | `可以关注🎤开头的那行风味文本中的某四个连续emoji，也许你还没有确认过其中某几个emoji代表的内容？` | 风味首行的 `🎤➡️🔻👧🔻` 中，后四枚 `➡️🔻👧🔻` 应整体读成“指向／这是 + 双钻头女孩（重音テト）”，而不是四枚各自对应四段文字。它直接确认 `➡️` 可作结构连接、`👧` 可指重音テト；结合歌词库存把 `👧` 放入 R2，并支持 R5 用四格复合图表现“脱出”。 |
 | 3 | `你需要对红色框位置的emoji再执行一次下落操作。` | 六个红格保持列号落入底部六个红格，给出 `c5..c10` 的严格顺序；排除任意异序。“红色框”只是位置说明，不能在 `ALTERED` 被拒后继续当作隐藏字料 `RED`。 |
-| 4 | `事实上，这段信息里的每个emoji都与其先前代表的含义有差别。尝试根据emoji的其他可能含义解读这段信息，并将其转化为一个符合格式要求的英文单词。注意格式里的🅰️不是answer的意思，而是答案的一部分。` | 不取首字母。六图整体换读为 `TURN RIGHT | MAN + WATER COLOR`；`WATER COLOR → AQUA`，把 `MAN` 转到右侧后成为 `AQUA + MAN → AQUAMAN`，符合 `A??????`。 |
+| 4 | `事实上，这段信息里的每个emoji都与其先前代表的含义有差别。尝试根据emoji的其他可能含义解读这段信息，并将其转化为一个符合格式要求的英文单词。注意格式里的🅰️不是answer的意思，而是答案的一部分。` | 明确要求六枚最终 emoji 全部改用与歌词阶段不同的含义，再整体转成 `A??????` 英文词；不自动授权取英文首字母。`TURN RIGHT | MAN + WATER COLOR → AQUAMAN` 已被判错，故其中至少有红图落位、换义或整句转换不成立。 |
 
 ## Evidence and artifacts
 
 - [`artifacts/layout.tsv`](artifacts/layout.tsv)：从保存页解析出的 1-based 坐标、边框和颜色表。
 - [`artifacts/dropquote-layout.png`](artifacts/dropquote-layout.png)：保持六块区域、粉格和列对齐的可视化。
-- [`artifacts/extraction.tsv`](artifacts/extraction.tsv)：候选 `AQUAMAN` 的六个红格、旧歌词义、直接换义及其在整体 rebus 中的角色。
+- [`artifacts/extraction.tsv`](artifacts/extraction.tsv)：已拒 `AQUAMAN` 路线的六个暂定红格、旧歌词义、换义及其在整体 rebus 中的角色；保留为负证据。
 - [`artifacts/rebus_transform.tsv`](artifacts/rebus_transform.tsv)：已拒 `AQUA+TIC` 与 `AQUA+RIA` 的并列审计；不再支持候选。
 - [`artifacts/extract_layout.py`](artifacts/extract_layout.py)：从离线 HTML 重新生成稳定布局的脚本；原始解包页在 `work/visual/archive/index.html`。
 - [`work/lyric_fill.tsv`](work/lyric_fill.tsv)：128 格的单一工作表；当前 114 格有赋值和歌词锚点，未填 14 格全部位于 R6 非红图。
@@ -321,6 +322,7 @@ ALTERED    = A D E E L R T
 - **ACRYLIC（2026-08-21 被拒绝）：** 路线把六图读成 CYCLIC / THINK / LETTER / ADD / DROP / PAINT，先以题给 A 构造 `ACYCLIC`，再从 PAINT 反推 `+R/-C` 得 `ACRYLIC`。词表唯一性不能提供缺失的 R、C 与位置；用户拒答后停止这条答案导向换字。
 - **AQUARIA（2026-08-21 被拒绝）：** 路线把前三图自由命名为 REPEAT / IDEA / ALPHABET 取 `RIA`，再把 `💧🎨` 合读为 AQUA，并借题给首字母交换加号两侧得到 `AQUA+RIA`。用户明确判错；提示 2 只证明多图可以合义，并未指示这种“前三项取首字母、后两项取共同词”的混合规则，加号也不自动授权调换图面顺序。该路线不能复用。
 - **AQUATIC（2026-08-21 被拒绝）：** 路线先自由命名为 TURN / IDEA / CHARACTER 取 `TIC`，再把 `💧🎨` 合读为 AQUA，最后调换加号两侧。用户明确判错；R4 七格组又把其中 c6 从 `💭` 纠正为 `✅`，所以它不仅转换规则混杂，连底层红图序列也已被推翻。
+- **AQUAMAN（2026-08-22 被拒绝）：** 路线把暂定红图 `🔄/✅/🚶‍➡️/➕/💧/🎨` 读成 `TURN RIGHT | MAN + WATER COLOR`，将 `WATER COLOR` 压成 `AQUA`，再把 `MAN` 移到右侧得到 `AQUAMAN`。用户明确判错；`TURN RIGHT` 没有充分依据指示交换加号两侧，标题《Inside Out》与另一影视名之间也只是弱类比。更根本地，c5 与 c7 尚未由完整 R6 配平锁死，必须先回查落位。
 - **ANSWERS（2026-08-22 撤回，未提交）：** 同一红图序列被换读为 NEW/SUCCESS/WALK/EXTRA/RAIN/SPECTRUM 得 `NSWERS`。用户指出不像正确答案；更关键的是 SUCCESS/WALK/EXTRA 等读法没有共同选择原则，`ANSWERS` 只回扣提示里的 “answer”。不把撤回候选写入提交历史。
 - **ANOTHER（2026-08-22 撤回，未提交）：** 六图被自由换读为 NEW/OPTION/TRAVEL/HOSPITAL/EYEDROP/RAINBOW，再取首字母 `NOTHER` 并补题给 A。用户追问“从 emoji 英文首字母提取的依据”；复核后确认提示 4 只要求换义和整体解读，从未指示逐图取首字母，而六个英文词又是为目标字母反选的。词义回扣 `other meanings` 只是事后校验，不能补上缺失规则。
 - **标准 emoji 名称首字母：** [Unicode Emoji List](https://unicode.org/emoji/charts/emoji-list.html) 对六图的标准短名首字母不能生成答案。这说明最终仍依赖提示允许的“其他可能含义”，而不是机械抄录 Unicode 名称；也因此逐项换义的自然度仍是候选风险。
@@ -328,4 +330,4 @@ ALTERED    = A D E E L R T
 
 ## Next action
 
-候选 **AQUAMAN** 的非首字母 rebus 已形成；由用户决定是否向比赛网站提交并回报明确结果，Agent 不代为提交。若被拒绝，优先逐坐标完成 R6 剩余 14 格，并重新检查 c5 的 `🔄/🔁` 交换与 `TURN RIGHT` 的词块换位语法，不再做无约束的 A 开头词表枚举。
+逐坐标完成 R6 剩余 14 个非红格，利用“隣の隣の隣／言葉繰り返してる／間違っていても壊れない／丸ごと／大切／聞きたいその声”的图形关系重新判定 c7 的 `🚶‍➡️/🔡`；同时重查 R1 `ずっと` 与 R6 `いつも` 对 c5 `🔄/🔁` 的交换。两格未锁定前不再生成或提交新的 A 开头候选。

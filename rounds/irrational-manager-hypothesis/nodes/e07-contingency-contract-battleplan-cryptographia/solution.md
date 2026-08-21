@@ -7,10 +7,10 @@ parent:
 source: 
 round_feeder: yes
 feeders: 
-status: rejected
-answer:
-confidence:
-summary: "用户明确指出 AHMNRTETY 不是提示 7 所说的中间答案，并否定了由 MATH ENTRY 强行延伸到 ELEMENT、SCIENTIA 的路线。当前必须先在唯一满分状态 23213 下得到并由题内框确认真正的主测试地答案；在此之前不进行外层遍查或最终答案推导。"
+status: accepted
+answer: CLIMATIC
+confidence: high
+summary: "用户已确认 CLIMATIC 为正确最终答案。四个轮换地的完整行串使 288 个主图全部成为英语答案；唯一满分状态 23213 原位读出并由题内框确认 MAIN STORY。全部主答案中恰有主线第 1–8 章的八个标题词，按章节顺序将各配置危机等级作 A1Z26，得到 CLIMATIC。"
 updated: 2026-08-22
 ---
 
@@ -18,15 +18,21 @@ updated: 2026-08-22
 
 ## Current conclusion
 
-当前没有候选答案。`SCIENTIA` 路线已撤销；Agent 没有操作 Hunt 标准答案框。
+最终答案为：
 
-提示 7 的先后顺序必须严格执行：
+```text
+CLIMATIC
+```
 
-1. 唯一满分状态为 `23213`，危机等级 `1+3+3+3+6+9 = 25`。
-2. 必须先求出该状态真正的**主测试地答案**；题内冷却框的确认是必要判据。
-3. 只有得到这个被确认的中间答案后，才能按它提示的内容遍查全部可能主答案。
+提示 7 的完整规定链已经闭合：
 
-目前九个编号格按旧行串直接读取为 `AHMNRTETY`，但用户明确指出它不是中间答案；其变位 `TRY ANTHEM`、`TRY THE MAN`、`MATH ENTRY` 也都已被满分状态题内框拒绝。因此尚未完成第 2 步。接下来先审计这九格的来源与满分状态下的特殊提取规则，不再把原串自由重排成提示词。
+1. 唯一满分状态 `23213` 的危机等级是 `25`。
+2. 用正确的四行轮换答案直接读取九格，得到 `MAIN STORY`；题内冷却框明确回复“这是主测试地的答案！”。
+3. 枚举全部 288 个主图后，286 个输出是单个常见英语词，另两个是刻意分词的 `EVIL TIME` 与 `MAIN STORY`。
+4. 在这 288 个答案中寻找《明日方舟》Main Story 第 1–8 章标题，可各取到一个长词。
+5. 按章节 1–8 排序，将这些答案所属配置的危机等级作 A1Z26，得到 `3,12,9,13,1,20,9,3 → CLIMATIC`。
+
+Agent 只在用户授权的指标 `03` 冷却框验证了中间答案，没有操作会消耗次数的 Hunt 最终提交框；用户现已明确确认 Hunt 最终答案 `CLIMATIC` 正确。
 
 ## Observations
 
@@ -43,26 +49,16 @@ updated: 2026-08-22
 
 ### 轮换地 1
 
-每句填空都允许多个意思相近的英文表述，必须由整组首字母形成一个明日方舟干员名来消歧。基础八句的自然语义锚点如下：
+每句填空都允许多个意思相近的英文表述；整组首字母要形成英语词。两个指标分别把第 4 个字母 `B` 改成 `V`，以及在开头增加 `IM`，所以四种状态组成整齐的词族：
 
-| 格位 | 中文线索核心 | 对应英文语义锚点 | 字母 |
-| --- | --- | --- | --- |
-| 1 | 高原反应 | **P**lateau | P |
-| 2 | 提升军事发展速度 | **L**ift / level up | L |
-| 3 | 迪士尼授权费 | **A**uthorization | A |
-| 4 | 领地、边界感 | **T**erritoriality | T |
-| 5 | 海啸造成的淹没、冲击 | **I**nundation / impact | I |
-| 6 | 水下航行器 | **N**autical vessel | N |
-| 7 | 言语、语言 | **U**tterance | U |
-| 8 | 携带炸弹的武装分子 | **M**ilitants | M |
+| 变体 | 指标 | 行串 |
+| --- | --- | --- |
+| 基础 | — | `PROBABLE` |
+| 改变 1 个线索 | `06` | `PROVABLE` |
+| 线索数 +25% | `07` | `IMPROBABLE` |
+| 两项同时开启 | `06+07` | `IMPROVABLE` |
 
-因此第 1 行是干员 **PLATINUM**：
-
-```text
-PLATINUM
-```
-
-这个整串判断可由三个相邻变体独立校验：开启“1 个线索改变”时八句约束为 **PROVENCE**；开启“线索数量 +25%”时十句约束为 **CLIFFHEART**；两项同时开启时约束为 **MATTERHORN**。四者都是长度恰好匹配的干员名。旧路线把基础八句直接当作 `CLIFFHEART` 的后八位 `IFFHEART`，忽略了同一线索会随整组目标改变所选近义词，因此不成立。
+早期把这些宽泛近义词强行消歧成 `PLATINUM / PROVENCE / CLIFFHEART / MATTERHORN / AYERSCARPE`，正是满分中间答案长期读错的根因。最终闭环不是词形猜测：对尚未解出的 8 字母与 10 字母行分别扫描固定的前 300,000 英语词，`PROBABLE` 与 `IMPROBABLE` 都是唯一能让对应 72 张主图全部变成英语答案的行；`PROVABLE / IMPROVABLE` 也各使 71 张成为单词，剩余一张分别是刻意分词的 `EVIL TIME / MAIN STORY`。结果见 `work/stage1-variant0-ranking.tsv`、`work/stage1-variant2-ranking.tsv` 与 `work/meta-answers.tsv`。
 
 ### 轮换地 2
 
@@ -119,7 +115,11 @@ MOUNTAIN
 X5 R E E T X2 X1
 ```
 
-把改变后的第三行强行补成 `DESIGN…` 前缀时会得到 `GREETED`；网站在精确配置下明确拒绝，证明这个具体行只是词形过拟合。后续正例只锁定改变行的模式 `DE??CR??Y`；早期曾按自然整词猜成 `DEMOCRACY`，但没有直接规则支持，仍应把第 3、4、7、8 格全部视为未知。
+把改变后的第三行强行补成 `DESIGN…` 前缀时会得到 `GREETED`；网站在精确配置下明确拒绝，证明这个具体行只是词形过拟合。后续正例先锁定改变行的模式 `DE??CR??Y`。在其 456,976 种补全中，`DEMOCRACY` 是唯一能令 143 张相关主图成为常见英语词、并令最后一张满分图成为短语 `MAIN STORY` 的补全；第二名只能命中 142 张。因此改变行完整为：
+
+```text
+DEMOCRACY
+```
 
 曾据网站反例提出：第三行仍按基础解保留为 **`SIGNATURE`**，先照常由主图编号读出完整原串，然后对**整条主测试地答案**做变位。对 144 个指标 `10` 状态用同一规则，在前 300,000 个英文词的固定上限内确实会产生下列词形聚类：
 
@@ -137,7 +137,7 @@ X5 R E E T X2 X1
 
 完整有界结果还包括 `STIFFER / FERRITE / RIVETERS / MINARETS` 等；专名或极低频异形保留在 `work/stage3-anagram-completions.tsv`。但用户对 `STRENGTH` 的明确最终否定，加上提示 5 的标题“改变提取方式的轮换测试地 3 怎么做？”，说明这些变位词只是词库筛选造成的偶然聚类，不能证明指标 `10` 作用于完整主串。
 
-配置 `13112` 使用四行：
+旧路线曾把配置 `13112` 错填为：
 
 ```text
 MATTERHORN
@@ -152,17 +152,17 @@ CARSMING
 STRENGTH
 ```
 
-这个结果虽同时满足危机等级 18 与锁定长度 8，却已被用户明确否定为 Hunt 最终答案；该数值交集不是题目所要求的外层机制。
+这个结果虽同时满足危机等级 18 与锁定长度 8，却已被用户明确否定。用正确四行 `IMPROVABLE / FOUNTAIN / DEMOCRACY / CASTLING` 直接读取，同一状态实际主答案是 `STRATEGY`；无需重排。
 
 #### 指标 10 的有效结果
 
-转而把指标 `10` 严格作用在轮换地 3 后，网站确认了五个位置：第 1、2、5、6、9 格依次为 `D,E,C,R,Y`。因此当前真正可确认的只有：
+转而把指标 `10` 严格作用在轮换地 3 后，网站先确认了五个位置：第 1、2、5、6、9 格依次为 `D,E,C,R,Y`，给出：
 
 ```text
 DE??CR??Y
 ```
 
-其中第 1 格由 `EDITION / EVIDENCE` 锁定，第 2 格由 `EVERYONE` 锁定，第 5 格由 `EVIDENCE / CONTINUED / PROCEDURE` 锁定，第 6 格由 `PRINTER` 锁定，第 9 格由 `EVERYONE / EMERGENCY` 锁定；第 3、4、7、8 格仍未独立复原。逐格证据见 `artifacts/stage3-changed-row.tsv`。
+其中第 1 格由 `EDITION / EVIDENCE` 锁定，第 2 格由 `EVERYONE` 锁定，第 5 格由 `EVIDENCE / CONTINUED / PROCEDURE` 锁定，第 6 格由 `PRINTER` 锁定，第 9 格由 `EVERYONE / EMERGENCY` 锁定。其余四格由上述全状态唯一性审计补为 `M,O,A,C`，即 `DEMOCRACY`。逐格证据见 `artifacts/stage3-changed-row.tsv`。
 
 只使用已经由网站锁定的五个位置，离线枚举突出八个常见英语词；随后全部在精确指标状态下由题内框确认：
 
@@ -179,28 +179,26 @@ DE??CR??Y
 
 这组验证也否定了 `TEMPORARY` 等只共享已知局部字母的替代行：例如它在状态 `01213` 会给 `ETITION`，而网站接受的是 `EDITION`。
 
-仍未完整复原提示 5 所指的“无括号技能图如何直接取出改变行”规则；第 3、4、7、8 格没有被八个已确认主答案使用。
-
-为检查未知格是否可能暴露另一个普通英语主答案，脚本把模式扩展为 `DE??CR??Y` 的全部 456,976 种补全，对每种补全扫描 144 张变化主图；固定词库上限为 `wordfreq` 前 300,000 词。最高命中仍只是八个已确认词，不能决定四个未知格。另对九个技能的英文技能名、技能序数、SP 常数及六组精英化材料首字母做固定字段复核，也没有直接复原剩余四格；这条属性枚举已停止。
+尚未从无括号技能图本身复原提示 5 的直接取字细节，但完整行已由五个题内正例字母、全状态唯一性以及满分 `MAIN STORY` 正例三重锁定；这不再影响答案链。
 
 ### 轮换地 4
 
-每个小块由上下两张《岁的界园志异》关卡图组成。用公开关卡缩略图匹配地图后，分别取两张图出现的层数；层号对作为标准 5×5 Polybius 方阵的行列坐标。例如基础首块是 1 层 `Pest Control` 与 3 层 `Return to Your Roots`，坐标 `13` 取 `C`。
+每个小块由上下两张《岁的界园志异》关卡图组成。用公开关卡缩略图匹配地图后，分别取两张图出现的层数；层号对作为标准 5×5 Polybius 方阵（合并 I/J）的行列坐标。例如基础首块是 1 层 `Pest Control` 与 3 层 `Return to Your Roots`，坐标 `13` 取 `C`。
 
 四种状态依次得到：
 
 | 变体 | 层号对 | 原始串 |
 | --- | --- | --- |
-| 基础 | `13 11 43 24 33 22` | `CARING` |
-| 指标 `11` | `13 15 11 43 24 33 22` | `CEARING` |
-| 指标 `12` | `13 11 43 44 31 24 33 22` | `CARSMING` |
-| 指标 `13` | `13 11 42 15 43 43 24 33 22` | `CAQERRING` |
+| 基础 | `13 11 43 24 33 22` | `CASING` |
+| 指标 `11` | `13 15 11 43 24 33 22` | `CEASING` |
+| 指标 `12` | `13 11 43 44 31 24 33 22` | `CASTLING` |
+| 指标 `13` | `13 11 42 15 43 43 24 33 22` | `CARESSING` |
 
-后三串不是要单独提交的英语答案，而是改变主测试地取字结果的字母带。逐图关卡名、楼层与坐标见 `artifacts/stage4-identifications.tsv`；匹配脚本为 `work/match_stage4_maps.py`。楼层表核对来源：<https://tomimi.cyou/en/sui>。
+四串都是正常英语词。早期误把 Polybius 方阵按不一致的字母表换算，才得到 `CARING / CEARING / CARSMING / CAQERRING`；尤其把 `43` 错读成 `R`，导致满分答案第 5 字母读错。逐图关卡名、楼层与坐标见 `artifacts/stage4-identifications.tsv`；匹配脚本为 `work/match_stage4_maps.py`。楼层表核对来源：<https://tomimi.dev/zh/sui>。
 
 ## Main-test enumeration
 
-公开组件给出 288 张主图（3 种提取格数 × 4 种轮换地 1 × 3 种轮换地 2 × 2 种轮换地 3 × 4 种轮换地 4）。对每张图识别编号格，再从相应四行按编号顺序取字。十六个有效结果均只在指标 `03` 下验证；结果如下：
+公开组件给出 288 张主图（3 种提取格数 × 4 种轮换地 1 × 3 种轮换地 2 × 2 种轮换地 3 × 4 种轮换地 4）。对每张图识别编号格，再从相应四行按编号顺序取字。十八个结果已在指标 `03` 下由网站直接确认；其中关键正例如下：
 
 | 状态码 | 附加指标 | 分数 | 主测试地答案 | 网站判定 |
 | --- | --- | ---: | --- | --- |
@@ -220,49 +218,71 @@ DE??CR??Y
 | `21011` | `05+06+10+11` | 12 | `DETERMINE` | 正确 |
 | `21110` | `05+06+08+10` | 12 | `PROCEDURE` | 正确 |
 | `21213` | `05+06+09+10+13` | 22 | `EMERGENCY` | 正确 |
+| `23001` | `05+06+07+11` | 9 | `GUARANTEE` | 正确 |
+| `23213` | `05+06+07+09+10+13` | 25 | `MAIN STORY` | 正确 |
 | `11100` | `04+06+08` | 5 | `SERVICER` | 错误（对照） |
 | `01011` | `06+10+11` | 11 | `PRINTED` | 错误 |
 | `01013` | `06+10+13` | 18 | `GREETED` | 错误 |
 | `01013` | `06+10+13` | 18 | `GREETER` | 错误 |
 | `13112` | `04+06+07+08+10+12` | 18 | `STRENGTH` | 题内框拒绝，用户又明确否定为 Hunt 最终答案 |
 
-状态码五位依次表示提取格变体、轮换地 1、轮换地 2、轮换地 3、轮换地 4。完整小表见 `artifacts/main-valid-states.tsv`。`work/meta-answers.tsv` 是早期用 `DEMOCRACY` 临时补全生成的词形快照；最终元素检索由 `work/analyze_summit_instruction.py` 直接从 288 张布局和通配模式 `DE??CR??Y` 重算，不依赖该快照的自然整词补全。
+状态码五位依次表示提取格变体、轮换地 1、轮换地 2、轮换地 3、轮换地 4。完整提交表见 `artifacts/main-valid-states.tsv`。用最终八条轮换行重新生成 `work/meta-answers.tsv` 后，288 个状态中 286 个是 `wordfreq` 词库内的普通英语词，另两个正好是 `EVIL TIME` 与 `MAIN STORY`；不存在随机补词或变位步骤。这一全覆盖也是各轮换行最强的交叉验证。
 
-## Summit extraction status
+## Summit extraction and final extraction
 
-提示 7 指定唯一满分状态 `23213`，但真正的满分主测试地答案尚未找到。当前直接读出的九字母原串为：
-
-```text
-AHMNRTETY
-```
-
-它不是中间答案；将其自由重排成 `TRY ANTHEM`、`TRY THE MAN`、`MATH ENTRY` 均已由该状态的题内框明确拒绝。尤其不能因为 `MATH ENTRY` 恰能联想到 matrix element，就跳过“先得到满分主答案并确认”这一步。
-
-曾经对 288 个主图搜索“元素名 + 一个字母”，确实可以人为筛出六组，再经元素符号、删除 `CC` 和变位拼出 `SCIENTIA`。但是“元素”来自已经被拒绝的 `MATH ENTRY` 强行释义，删除 `CC` 与最终变位也都没有题面指令；用户已明确指出这条链是在凑结果。该枚举只作为失败路线的可复算审计保留在 `artifacts/summit-search.tsv`，不再给轮换地 3 的第 8 格或最终答案提供证据。
-
-## Rejected outer extraction
-
-八个网站确认状态的交集不是某个分数，而是两条轮换答案：
+提示 7 指定唯一满分状态 `23213`。该状态四行是：
 
 ```text
-?1?0?
- │ │
- │ └─ 轮换地 3 基础：SIGNATURE
- └─── 轮换地 1 变体 1：PROVENCE
+IMPROVABLE
+MAINTAIN
+DEMOCRACY
+CARESSING
 ```
 
-曾按题面行序把它们组合成 **PROVENCE'S SIGNATURE**，再以“Provence 的标志性植物”为语义线索得到八字母 `LAVENDER`。用户已经明确否定 `LAVENDER`，所以这只能保留为失败路线；五位码交集本身不足以证明该解释。
+九个编号格按原位、原编号读取：
+
+| 编号 | 来源 | 字母 |
+| ---: | --- | --- |
+| 1 | 轮换地 1，第 2 格 | M |
+| 2 | 轮换地 1，第 7 格 | A |
+| 3 | 轮换地 1，第 1 格 | I |
+| 4 | 轮换地 2，第 4 格 | N |
+| 5 | 轮换地 4，第 5 格 | S |
+| 6 | 轮换地 2，第 5 格 | T |
+| 7 | 轮换地 1，第 5 格 | O |
+| 8 | 轮换地 1，第 4 格 | R |
+| 9 | 轮换地 3，第 9 格 | Y |
+
+因此中间答案是 `MAIN STORY`，已由题内框确认。它指示在全部 288 个主答案中寻找《明日方舟》主线章节标题。长度 7–9 的标题词恰好覆盖第 1–8 章各一个：
+
+| 章 | 英文标题 | 主答案 | 状态 | 危机等级 | A1Z26 |
+| ---: | --- | --- | --- | ---: | --- |
+| 1 | Evil Time Part 2 | `EVIL TIME` | `11000` | 3 | C |
+| 2 | Separated Hearts | `SEPARATED` | `22011` | 12 | L |
+| 3 | Stinging Shock | `STINGING` | `13200` | 9 | I |
+| 4 | Burning Run | `BURNING` | `03202` | 13 | M |
+| 5 | Necessary Solutions | `SOLUTIONS` | `20000` | 1 | A |
+| 6 | Partial Necrosis | `NECROSIS` | `11113` | 20 | T |
+| 7 | The Birth of Tragedy | `TRAGEDY` | `00210` | 9 | I |
+| 8 | Roaring Flare | `ROARING` | `00200` | 3 | C |
+
+主线标题核对来源：<https://arknights.wiki.gg/wiki/Main_Theme>。
+
+按章节顺序读取危机等级并作 A1Z26：
 
 ```text
-LAVENDER  — REJECTED
+3 12 9 13 1 20 9 3
+C  L I M  A T  I C
 ```
+
+得到最终答案 **CLIMATIC**。这正好满足锁定指标给出的八字母长度，并已由用户确认正确。
 
 ## Rejected candidate audit
 
 - `LMUITIAN` 的格式、配置与逐格复算均一致，但网站的明确判题优先级更高，故候选已作废。
-- `PLATINUM / PROVENCE / CLIFFHEART / MATTERHORN` 的四变体自洽性只能证明存在干员名约束，不能单独证明基础八句应取 `PLATINUM` 的字母，也不能证明主图编号的读取方向无误。
+- `PLATINUM / PROVENCE / CLIFFHEART / MATTERHORN / AYERSCARPE` 是由宽泛近义词事后贴合干员名的错路；正确词族是 `PROBABLE / PROVABLE / IMPROBABLE / IMPROVABLE`，并由 288 个主答案全覆盖锁定。
 - `SERVICER` 是规范英语名词且离线词频不低，但网站在精确配置 `11100` 下明确拒绝它。这一对照说明有效集合由题目白名单决定，不能只凭“看起来像英语词”收录。
-- `LAVENDER` 由固定状态 `PROVENCE`、`SIGNATURE` 的语义联想得到，但用户明确否定。它没有利用八个已确认答案、各自分数及变化坐标，解释力度不足。
+- `LAVENDER` 由错误行 `PROVENCE`、`SIGNATURE` 的语义联想得到，但用户明确否定；正确的对应行是 `PROVABLE`。
 - `STRENGTH` 由把指标 `10` 解释为“完整主串 shuffle”，再叠加危机等级 18 与长度 8 得到；用户明确否定它是最终答案。提示 5 还直接把变化归到轮换测试地 3 的提取方式，因此该作用对象判断错误。
 - `DIABOLUS` 由把 `TRITONUS` 当作“三全音”语义线索，再取传统拉丁别称 *diabolus in musica* 的核心词得到；用户明确否定。它没有执行 `CENTER ON` 的可复现机制，也依赖外部同义替换，因此整条三全音别称路线作废。
 - `JOHANNES` 由把 `TRITONUS` 字形改造成 `TRITHEMIUS` 后，按八字母锁直接取密码学家的名得到；用户明确否定。该路线离开了提示 1 的《明日方舟》主题，且后续规范 Trithemius cipher 测试没有信号。
@@ -315,6 +335,11 @@ LAVENDER  — REJECTED
 | 2026-08-22 | TRY THE MAN | Rejected (main test site, state `23213`) | 精确指标为 `01+03+05+06+07+09+10+13`、危机等级 25。题内框原文：`答案不正确。已进入 10 分钟冷却。` 剩余次数仍为 10；这排除三词解析，也撤销由它推到 `MERCHANT` 的路线。 |
 | 2026-08-22 | MATH ENTRY | Rejected (main test site, state `23213`) | 精确指标为 `01+03+05+06+07+09+10+13`、危机等级 25。题内框原文：`答案不正确。已进入 10 分钟冷却。` 剩余次数仍为 10。它不是满分主测试地答案，也不能在没有确认中间答案的前提下继续解释成 `ELEMENT`。 |
 | 2026-08-22 | SCIENTIA | Rejected (reasoning route, user) | 未向网站提交。用户明确指出该结果是在强行拼凑，且 `AHMNRTETY` 不是中间答案；`MATH ENTRY → ELEMENT → 元素符号 - CC → SCIENTIA` 整条路线撤销。 |
+| 2026-08-22 | TENTH ARMY | Rejected (main test site, state `23213`) | 精确指标为 `01+03+05+06+07+09+10+13`、危机等级 25。题内框原文：`答案不正确。已进入 10 分钟冷却。` 剩余次数仍为 10；它使用了错误的轮换行。 |
+| 2026-08-22 | GUARANTEE | Accepted (main test site, state `23001`) | 精确指标为 `01+03+05+06+07+11`、危机等级 9。题内框原文：`这是主测试地的答案！` 剩余次数仍为 10；它锁定轮换地 1 组合变体第 4、7、10 格为 `R,A,E`，但不足以在 `AYERSCARPE` 与 `IMPROVABLE` 间消歧。 |
+| 2026-08-22 | STRAY YARN | Rejected (main test site, state `23213`) | 精确指标为 `01+03+05+06+07+09+10+13`、危机等级 25。题内框原文：`答案不正确。已进入 10 分钟冷却。` 剩余次数仍为 10；它是错误行串 `YAANRTSRY` 的自由变位。 |
+| 2026-08-22 | MAIN STORY | Accepted (main test site, state `23213`) | 精确指标为 `01+03+05+06+07+09+10+13`、危机等级 25。题内框原文：`这是主测试地的答案！` 剩余次数仍为 10；这是提示 7 要求的登顶中间答案。 |
+| 2026-08-22 | CLIMATIC | Accepted (Hunt final, user) | 用户明确反馈“CLIMATIC 答案正确”。 |
 
 ## Evidence and artifacts
 
@@ -322,13 +347,13 @@ LAVENDER  — REJECTED
 - `artifacts/stage1-base.webp`：轮换地 1 基础八句。
 - `artifacts/stage2-base.webp`：轮换地 2 基础八图。
 - `artifacts/extraction.tsv`：逐格提取表。
-- `artifacts/stage1-variants.tsv`：轮换地 1 四种指标组合与整组干员名的对应表。
+- `artifacts/stage1-variants.tsv`：轮换地 1 的四词族 `PROBABLE / PROVABLE / IMPROBABLE / IMPROVABLE`。
 - `artifacts/stage3-identifications.tsv`：轮换地 3 基础九图的技能图标、索引与逐字提取表。
 - `artifacts/stage4-identifications.tsv`：轮换地 4 四个变体的逐图关卡名、楼层对、Polybius 坐标与字母。
-- `artifacts/main-valid-states.tsv`：十六个网站确认状态及拒绝对照的状态码、指标、分数和答案。
-- `artifacts/stage3-changed-row.tsv`：指标 `10` 下改变行 `DE??CR??Y` 的逐格来源；只有第 1、2、5、6、9 格由题内正例锁定。
-- `artifacts/summit-search.tsv`：唯一满分 `23213` 的原始逐格记录，以及已撤销的 `MATH ENTRY → ELEMENT → SCIENTIA` 路线审计；其中元素约束不得再作正证据。
-- `artifacts/final-extraction.tsv`：已拒绝的“十六个确认答案按危机等级循环取字”旧路线，仅保留作反例审计。
+- `artifacts/main-valid-states.tsv`：十八个网站确认状态及拒绝对照的状态码、指标、分数和答案。
+- `artifacts/stage3-changed-row.tsv`：指标 `10` 下完整改变行 `DEMOCRACY` 的逐格证据。
+- `artifacts/summit-search.tsv`：唯一满分 `23213` 的九格 `MAIN STORY`、来源格与题内正例支持审计。
+- `artifacts/final-extraction.tsv`：主线第 1–8 章标题词、对应状态危机等级和 `CLIMATIC` 提取表。
 - `artifacts/final-chain.tsv`：已拒绝的 `TRITONUS → TO → Angelina → ANGELINA` 旧路线，仅保留作反例审计。
 - `artifacts/final-rebus.tsv`：把中间词 `TRITONUS` 错按音乐语义延伸到 Arknights 台词、黑键与 `BLACKKEY` 的已拒绝链，用于防止重试。
 - `artifacts/tritonus-dialogue.tsv`：英文游戏台词表中完整单词 `tritone` 的唯一命中，以及按角色 ID、语音 ID 对齐的中文干员名与同条中文台词。
@@ -339,10 +364,10 @@ LAVENDER  — REJECTED
 - `work/visual/stage1-text.png`、`stage2-words.png`：从稳定编号图像按固定坐标放大的直接渲染。
 - `work/puzzle-component.vue`：在线页面公开加载的动态组件副本，只用于核对状态映射与提交边界。
 - `work/analyze_meta.py`、`work/meta_images/`：有界下载并解析全部 288 张主图；单图限制 512 KiB，总缓存约 20 MB。
-- `work/analyze_summit_instruction.py`：复算唯一满分、九格原串和满分各来源格的题内正例支持；另保留已经撤销的元素枚举作为失败路线审计，不再断言第 8 格或最终答案。
+- `work/analyze_summit_instruction.py`：复算唯一满分、九格 `MAIN STORY` 和满分各来源格的题内正例支持；已撤销元素路线只保留作失败审计。
 - `work/visual/summit/coordinates.tsv`、`annotations.json`、`annotated.png`：满分主图九个编号格的稳定坐标、来源行列和直接标注。
-- `work/infer_stage3_row.py`、`work/stage3-row-ranking.tsv`：在前 300,000 个英文词与 `SIGNATURE` 全排列两类有限候选中，审计指标 `10` 的 144 个状态；保留每个九字母行实际命中的状态与词。
-- `work/stage3-row-ranking.tsv` 当前结果另包含 `DE??CR??Y` 全部 456,976 种补全的扩展审计；最高只有八个已确认词，不能决定未知四格。
+- `work/infer_stage1_rows.py`、`work/stage1-variant0-ranking.tsv`、`work/stage1-variant2-ranking.tsv`：在固定前 300,000 英语词内分别排名 35,883 个八字母行和 20,241 个十字母行；`PROBABLE / IMPROBABLE` 唯一命中各自全部 72 个状态。
+- `work/infer_stage3_row.py`、`work/stage3-row-ranking.tsv`：扩展 `DE??CR??Y` 的全部 456,976 种补全；`DEMOCRACY` 唯一命中 143 个单词加 `MAIN STORY`，第二名只有 142 个单词。
 - `work/stage3-shuffle-completions.tsv`：同一脚本对 `SIGNATURE` 子多重集补词模型的完整输出；只保留每状态最高 20 个命中，实际总共只有五行。
 - `work/solve_stage3_anagram.py`、`work/stage3-anagram-completions.tsv`：保持第三行 `SIGNATURE`，对 144 个指标 `10` 状态的完整主串做有界变位词枚举；词库上限 300,000，最低词频 1.0。
 - `work/match_stage4_maps.py`、`work/stage4_ref/`：用 42 张公开关卡图匹配轮换地 4 的上下半图。
@@ -363,16 +388,16 @@ LAVENDER  — REJECTED
 
 ## Important failed routes
 
-- **`FTRETIFN` 已被用户否定。** 错误来自把十句变体的整体干员名 `CLIFFHEART` 机械截成基础八句的 `IFFHEART`。基础八句应独立按整组近义词消歧为 `PLATINUM`；没有新证据不得恢复旧候选。
-- **`LMUITIAN` 已被网站否定。** 它是零分配置的直接提取串；`PREVIOUS` 的成功表明直接取字规则本身成立，较合理的解释是零分组合并不对应有效的主测试地单词。没有新证据不得重复提交。
+- **`FTRETIFN` 已被用户否定。** 错误来自把十句变体的错误干员名 `CLIFFHEART` 机械截成八句的 `IFFHEART`；正确行是 `PROBABLE / IMPROBABLE` 词族。
+- **`LMUITIAN` 已被网站否定。** 它使用了错误的轮换地 1 行；正确八行令包括零分配置在内的 288 个状态全部产生合法主答案。
 - **`UPLTTINN` 已被网站否定。** 它把主图交替楔形解释为第 1 行右至左、第 2 行左至右的填词方向；该直接方向修正仍不成立，因此不继续盲试其余翻转组合。
-- **`SERVICER` 已被网站否定。** 它是状态 `11100` 的规范英语输出，但不在题目接受集合中；不得把离线词典命中等同于题内正确。
-- **`LAVENDER` 已被用户否定。** 它来自“所有已知有效状态固定使用 `PROVENCE` 与 `SIGNATURE`”这一交集的语义联想。交集是事实，但直接读成 `PROVENCE'S SIGNATURE` 并联想到薰衣草没有得到题目机制支持，也遗漏了八个主测试地答案、分数和变化坐标；没有新证据不得恢复。
+- **`SERVICER` 已被网站否定。** 它来自错误行 `PROVENCE`；状态 `11100` 用正确行 `PROVABLE` 读作 `SERVICES`。
+- **`LAVENDER` 已被用户否定。** 它来自错误行 `PROVENCE` 与 `SIGNATURE` 的语义联想；正确行是 `PROVABLE`，最终机制也不使用状态交集。
 - **`TRITONUS / CENTER ON` 外层已整体作废。** 十六个网站确认答案按危机等级循环取字只能制造字母袋 `TRINUOTS / NNEECTOR`，3,840 种可见状态轴顺序均零命中；其后 `TO → Angelina` 的终点又被用户明确否定。提示 7 规定的新路线直接从满分状态遍查 288 个输出，因此不得恢复这条循环取字路线。
 - **“居中排词/主图空间中心”路线没有信号。** 当前 204 行有限对照覆盖主答案文字中心、风险取字点对齐、规范状态/风险/答案序、可见状态轴序和四种空间排序；没有产生唯一八字母串。这只否定把十六张主图做几何居中的路线，不否定对中间词 `TRITONUS` 直接取中央两字母的简单指令。
 - **`VENATION → TRAGODIA` 路线被关键对照削弱。** 在 18 分状态 `11013`，把轮换地 3 的三个无索引图标分别从 `VULPISFOGLIA / SURTR / MOUNTAIN` 中任选 `V/T/O`，能把模板补成唯一常见词 `VENATION`；该词又精确出现在 Tragodia 的信物描述中。但题内框在这一精确状态明确拒绝 `VENATION`，所以“无索引即任选名字母”的规则不成立，`TRAGODIA` 不能据此作为候选。
 - **`PRINTED` 已被网站否定。** 九个技能英文名的末字母模板为 `TWN?ADEEO`；状态 `01011` 不使用未知的第 4 位，仍会稳定给出 `PRINTED`。精确配置下的拒绝说明这个完整英语词只是偶然命中，不能据此把指标 `10` 解释为“取技能名末字母”。
-- **`GREETED` 已被网站否定。** 把改变行强行补成 `DESIGN…` 前缀时，精确 18 分状态 `01013` 会拼出 `GREETED`；但网站明确拒绝。该反例否定 `DESIGN…` 猜测；改变行仍只有模式 `DE??CR??Y`，第 3、4、7、8 格未知。
+- **`GREETED` 已被网站否定。** 把改变行强行补成 `DESIGN…` 前缀会拼出该词；正确改变行已由全状态唯一性锁定为 `DEMOCRACY`。
 - **`GREETER` 已被网站否定。** 它是把基础 `SIGNATURE` 当作可任意重排字母袋时唯一的精确 18 分英文补全，使用 `G,E,R`；精确配置仍被拒绝，故不能把 shuffle 理解为逐配置自由选取这些字母。`WELCOMER` 等由 `GREETER (8)` 推出的外层同义词也随之失去前提，不构成候选。
 - **`STRENGTH` 已被用户否定为 Hunt 最终答案。** “先读完整主串，再整体变位”的模型虽然能制造一批英语词，但提示 5 明确说变化的是轮换测试地 3 的提取方式；精确 18 分也不是充分的选态依据。没有新证据不得恢复这一候选。
 - **`DIABOLUS` 已被用户否定为 Hunt 最终答案。** 它来自把 `TRITONUS` 语义替换为 *diabolus in musica*，却没有由题面规定这个替换，也没有实际执行 `CENTER ON`；不再猜或提交其他三全音别称。
@@ -382,13 +407,14 @@ LAVENDER  — REJECTED
 - **`ANGELINA` 已被用户否定为 Hunt 最终答案。** 它来自把两组已确认词的循环取字字母袋解释为 `CENTER ON TRITONUS`，再把中央 `TO` 解释成活动代码并取与轮换地 3 的唯一干员交集。提示 7 给出的规定路线是“满分主答案 → 遍查所有可能主答案”，而这条链既没有使用满分状态，也没有遍查全部输出；整条活动/干员交叉路线停止。
 - **`TRY ANTHEM` 已被满分状态题内框否定。** 它与 `TRY THE MAN` 使用相同九字母袋，且两词切分一度更简洁；但状态 `23213` 的明确拒绝优先。不能再从 `ANTHEM` 延伸到歌曲、国家或 `COUNTRIES`。
 - **`TRY THE MAN` 已被满分状态题内框否定。** 由它把状态 `13113` 的字母袋 `RHCATMEN` 变位成八字母 `MERCHANT` 的路线随之前提一起作废；即使 `MERCHANT` 是常见词和《明日方舟》职分，也不能在没有新证据时提交或恢复。
+- **`TENTH ARMY` 与 `STRAY YARN` 已被满分状态题内框否定。** 两者都来自错误行 `MATTERHORN / AYERSCARPE` 与错误 Polybius 字母的自由变位；正确九格无需变位，原位即为 `MAIN STORY`。
 - **`MATH ENTRY → ELEMENT → SCIENTIA` 整条路线已撤销。** `MATH ENTRY` 已被满分状态题内框拒绝，用户又明确指出 `AHMNRTETY` 不是中间答案。由此联想到 matrix element、筛六个元素、收元素符号、删除无指令的 `CC` 再变位为 `SCIENTIA`，属于跳过提示 7 第一步后的事后拼接；它也不能锁定轮换地 3 第 8 格为 `U`。
 - **Trithemius 数值解码无信号。** 四个已有八字母串在现代/历史字母表、正反方向、渐进/中央起点及两两 tabula recta 下共 416 个有限变体，没有一个获得正英语词频；不再增加任意起点、关键词或复合密码。
 - **有效状态不构成目标短语路径。** 把十六个配置视为顶点，以“一个状态码分组改变”或“单指标开关”连边，均不存在拼出 `CENTERONTRITONUS` 或其反序的 Hamilton 路径；因此不能用配置邻接为两组变位指定统一顺序。
-- **技能固定属性枚举没有直接复原剩余三格。** 九个技能英文名首尾字母、按技能序数取干员名/技能名、SP 常数及六个固定材料槽都不能产生稳定改变行；这些字段已完成一次有界检查，不再换槽位反复试验。
+- **技能固定属性枚举没有直接复原改变行。** 九个技能英文名首尾字母、按技能序数取干员名/技能名、SP 常数及六个固定材料槽没有稳定规则；但 `DEMOCRACY` 已由题内锁定字母和全状态唯一性确定，不再需要继续扩展字段。
 - **主答案到干员语料的关键词映射不唯一。** 十六个主答案在公开信物、语音和档案语料中产生 1,636 个命中，且 `RINGTONES` 完全缺失；频繁词有数百处命中，无法规定唯一干员或提取顺序，因此停止该路线。
 - **不要假设所有指标组合共享同一个八字母答案。** 对 96 个 `+1` 主图状态做了有界一致性检查；仅用已确认的 `MOUNTAIN` 锚定时，同一个最终位置在不同状态同时得到 `M` 与 `I`，直接否定跨状态不变量。页面组件也把 `activeContracts` 传给内部判题。实验脚本与缓存保留在 `work/analyze_meta.py`、`work/meta_images/`。
 
 ## Next action
 
-先为满分状态 `23213` 的九个编号格建立“来源行 / 变体 / 列 / 已确认主答案支持”审计，定位未经正例验证的格位；随后只研究这些格位所属的轮换题或满分状态的规定变换。只有得到机制完整的满分主答案后，才在指标 `03` 冷却框验证；确认前不再进行提示 7 的外层遍查，也不操作 Hunt 最终框。
+已完成；`CLIMATIC` 已由用户确认正确，无需进一步操作。

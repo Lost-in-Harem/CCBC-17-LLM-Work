@@ -21,3 +21,7 @@ code	active_extra_contracts	risk	length	main_answer	verdict
 01013	06+10+13	18	7	GREETER	rejected
 01013	06+10+13	18	7	EDITION	rejected-wrong-state-control
 13112	04+06+07+08+10+12	18	8	STRENGTH	rejected-internal-and-final
+23001	05+06+07+11	9	9	GUARANTEE	accepted
+23213	05+06+07+09+10+13	25	9	TENTH ARMY	rejected
+23213	05+06+07+09+10+13	25	9	STRAY YARN	rejected
+23213	05+06+07+09+10+13	25	9	MAIN STORY	accepted

@@ -7,10 +7,10 @@ parent:
 source:
 round_feeder: yes
 feeders:
-status: candidate
-answer: "TAKE OUT"
-confidence: high
-summary: 顶层五块稳定重建为 OBSERVE / UPON / HANG WITH / HIGH GATE WARNING / TACKLE。标准短语关系给出 LOOK ON=OBSERVE、LOOK OUT=WARNING、TAKE ON=TACKLE；UPON−HIGH 提取 ON，HANG _ WITH 补出 OUT，GATE=TAKE，因此缺失的第四格唯一为 TAKE OUT。
+status: rejected
+answer:
+confidence:
+summary: 顶层金字塔暂重建为 OBSERVE / UPON / HANG WITH / HIGH GATE WARNING / TACKLE，且下层一路闭合至题面校验词 ANSWER；但由这五块构造出的 TAKE OUT 已被用户明确否定，原“短语矩阵”也不是受题面指示的标准 cryptic 解析。当前回到顶层逐词审计与正规 cryptic 断句。
 updated: 2026-08-22
 ---
 
@@ -18,7 +18,7 @@ updated: 2026-08-22
 
 ## Current conclusion
 
-**当前候选答案是 `TAKE OUT`**（提交时可写 `TAKEOUT`）。这不是把 `OUTTAKE` 简单倒写，而是一个可由原顺序完整复算的缺角短语矩阵。
+**当前没有候选答案。** `TAKE OUT` 已被用户明确否定；此前的缺角短语矩阵只是事后构造，缺少 cryptic clue 所需的明确指示词，现已撤回。
 
 ```text
 UPON - HIGH = UPON - UP = ON
@@ -212,6 +212,7 @@ TRANCE[3], SWEDEN[6], SWEDEN[1], SWEDEN[2], TRANCE[6], TRANCE[2]
 | 2026-08-21 | GEAR | rejected | 用户明确指出这不是合法 cryptic clue；`REGARDING-REGARD` 及 `GEARING-ING` 的减字均无 indicator，且解析可逆。 |
 | 2026-08-21 | GET ON WITH | rejected | 用户明确反馈“不对”；`G+reverse(NOTE)+WITH` 虽字母精确，但 `ON HANG WITH` 的附着语法是强行补出的，不构成可靠 cryptic parse。 |
 | 2026-08-21 | NOTICE | rejected | 用户明确反馈“不正确”；`WITH→CON→C` 后再把同义词间接重排的解析不是正确答案。 |
+| 2026-08-22 | TAKE OUT | rejected | 用户明确反馈“take out 不是答案”；缺角词组矩阵没有受到题面指示，也不是标准 cryptic 解析。 |
 
 ## Strict cryptic audit
 
