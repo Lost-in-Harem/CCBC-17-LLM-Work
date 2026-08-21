@@ -1,0 +1,7 @@
+source	moves	visited	extracted
+Ca	D1 L14 U1	Ca > Sr > Mo > Cr	C
+Ni	R3 U1	Ni > Ga > Al	A
+Ne	R9 D1	Ne > Li > Na	N
+Dy	U2 L1	Dy > Hg > Au	A
+Na	D1 L16 U2	Na > K > Sc > La	A
+Mo	L12 D2	Mo > Cd > Cn	N

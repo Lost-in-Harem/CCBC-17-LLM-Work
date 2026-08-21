@@ -1,0 +1,7 @@
+reference=rounds\irrational-manager-hypothesis\nodes\e03-till-the-lands-become-a-puzzle\work\visual\reference-google-shanghai-north-bund-full-z18.jpg
+grid_origin_center_px=(119.726,279.733)
+reference_targets=55
+reference_grid_rmse_px=0.626
+placed_pieces=61
+missing_cells=(5,0),(4,4),(6,6)
+reference_source_crop_px=(50,210)-(1170,1330)

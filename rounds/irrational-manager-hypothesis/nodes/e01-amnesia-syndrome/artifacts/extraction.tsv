@@ -1,0 +1,17 @@
+stage	inputs	operation	output	certainty
+P1	DISTRESSING + RAZOR	RAZOR cuts the pictured RINGS out of DISTRESSING; exact letter subtraction leaves DESIST, “to quit”	DESIST	exact letter equation; route/rings reinforce the deletion
+P2	RAZOR + NEMATOCYSTIC	RAZOR compound chains extract CAN; Scrabble-star score 21=SEMIPRIME, then SEMI/PRIME chains extract INE	CANINE	exact
+P3	NEMATOCYSTIC + SIDE	remove CC,TT,EE,SS,II pairs and anagram A,D,M,N,O,Y	DYNAMO	exact
+P4	SIDE + OFF	switch to OFFSIDE and answer its game	FOOTBALL	high
+P5	DESIST + CANINE	repeated-arrow mechanism unresolved; P8 inverse forces JADE→玉	JADE	high downstream; direct mechanism incomplete
+P6	CANINE + DYNAMO	wrapped periodic-table routes spell CANAAN; likely Canaan as a member of the Table of Nations	MEMBER	high downstream; semantic bridge incomplete
+P7	DYNAMO + FOOTBALL	six formulas unresolved; P9 same-pattern mapping uniquely forces PIPKIN	PIPKIN	high downstream; direct mechanism incomplete
+P8	JADE + MEMBER	玉+囗=国=NATION and 员+囗=圆=CIRCLE; indexed extraction	TRANCE	exact under Hint 4
+P9	MEMBER + PIPKIN	map M↔P E↔I B↔K R↔N; connect matching pinyin and read on-line letters	SWEDEN	exact under Hint 4
+P10	TRANCE + SWEDEN	follow black route: T3 B6 B1 B2 T6 T2	ANSWER	exact match to given bottom value; not the Node answer
+Rejected cryptic	DISTRESSING + RAZOR + NEMATOCYSTIC + SIDE + OFF	DISTRESSING as definition; RAZOR=CUT; NEMATOCYSTIC loosely treated as STING; SIDE OFF removes initial S	CUTTING	rejected by user 2026-08-21; NEMATOCYSTIC=STING is not strict enough
+Rejected cryptic	DISTRESSING + RAZOR + NEMATOCYSTIC + SIDE + OFF	remove SIDE and either edge R of RAZOR from DISTRESSING; OFF indicates rearrangement; NEMATOCYSTIC defines the result	STINGS	rejected by user 2026-08-21; SIDE was doing double duty and the definition form was loose
+Rejected cryptic	DISTRESSING + RAZOR + NEMATOCYSTIC + SIDE + OFF	DISTRESSING defines the answer; RAZOR=EDGE, NEMATOCYSTIC=STINGING, SIDE=EDGE, and OFF removes the latter EDGE	STINGING	rejected by user 2026-08-21; synonym-cancellation family was not unique
+Rejected cryptic	JOINING + RAZOR + NEMATOCYSTIC + SIDE + OFF	JOINING defines the phrase; RAZOR=CUT; NEMATOCYSTIC=STINGING; SIDE OFF removes outer S and G to give TINGIN; concatenate CUT+TINGIN	CUTTING IN	rejected by user 2026-08-21; first input and singular SIDE operation were not independently secure
+Rejected cryptic	DISTRESSING + RAZOR + NEMATOCYSTIC + SIDE + OFF	DISTRESSING defines BITING; RAZOR=BIC and NEMATOCYSTIC=STING; remove their facing side letters C and S, then concatenate BI+TING	BITING	rejected by user 2026-08-21; SIDE OFF was stretched into two deletions
+Rejected cryptic	DISTRESSING + RAZOR + NEMATOCYSTIC + SIDE + OFF	DISTRESSING rearranges CNIDA (a nematocyst) plus the SIDE letter R of RAZOR; OFF defines the result	RANCID	rejected by user 2026-08-21; nonlocal SIDE attachment was unsupported

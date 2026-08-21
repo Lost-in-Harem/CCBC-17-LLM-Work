@@ -1,0 +1,5 @@
+panel	left_input	right_input	operation	output
+P1	DISTRESSING	RAZOR	RAZOR tells us to cut the pictured RINGS out of DISTRESSING; the exact multiset subtraction DISTRESSING-RINGS leaves DESIST, “to quit”	DESIST
+P2	RAZOR	NEMATOCYSTIC	RAZOR compound chains extract CAN; Scrabble-star score NEMATOCYSTIC=21=SEMIPRIME, whose SEMI/PRIME chains extract INE	CANINE
+P3	NEMATOCYSTIC	SIDE	discard every paired occurrence and anagram the odd-count remainder A,D,M,N,O,Y	DYNAMO
+P4	SIDE	OFF	switch the two inputs to make OFFSIDE, then answer the game containing that controversial rule	FOOTBALL

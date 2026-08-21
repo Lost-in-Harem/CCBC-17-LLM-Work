@@ -1,0 +1,5 @@
+letters	search_bound	common_anagrams	interpretation	status
+AACLNR	wordfreq top 100000 six-letter alphabetic entries	CARNAL (Zipf 2.97)	free anagram lacks an instruction and was explicitly rejected by user	rejected 2026-08-20
+AACILNRV	wordfreq top 200000 eight-letter alphabetic entries	CARNIVAL (Zipf 3.86)	unsupported insertion of IV from P9 exchange number; explicitly rejected by user	rejected 2026-08-20
+AAACLNRV	Portuguese/French dictionary spelling plus exact crossed multiset	CARNAVAL (English Zipf 2.52; French 3.86; Portuguese 4.85)	BRAZIL and French CANCAN suggested the non-English A-spelling, but VA was not independently extracted	rejected 2026-08-20
+AACLNRU	wordfreq top 200000 seven-letter alphabetic entries	LACUNAR (Zipf 1.43)	unsupported U insertion and anagram from the now-invalid BRAZIL/CANCAN parent answers; explicitly rejected by user	rejected 2026-08-20

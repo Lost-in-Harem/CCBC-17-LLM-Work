@@ -1,0 +1,6 @@
+model	definition	razor	nematocystic	side_removed	off_operation	result	status
+literal-letter subtraction	NEMATOCYSTIC	DISTRESSING as fodder	-	SIDE + edge R	anagram	STINGS	rejected by user 2026-08-21; SIDE did double duty
+synonym cancellation	DISTRESSING	EDGE	STINGING	EDGE	remove the preceding SIDE synonym	STINGING	rejected by user 2026-08-21; family is non-unique
+rejected charade	JOINING	CUT	STINGING	remove outer S…G to leave TINGIN	SIDE OFF deletes both outer letters	CUTTING IN	rejected by user 2026-08-21; JOINING/CUT OUT was not independently established and SIDE is singular
+facing-sides deletion	DISTRESSING = BITING	BIC -> BI	STING -> TING	C and S at the join	remove the mutually facing side letter of each synonym	BITING	rejected by user 2026-08-21; singular SIDE OFF cannot justify two deletions
+scientific-synonym anagram	OFF = RANCID	either side of RAZOR -> R	CNIDA	SIDE selects the edge letter R (both edges agree)	DISTRESSING rearranges R+CNIDA	RANCID	rejected by user 2026-08-21; SIDE cannot skip over NEMATOCYSTIC to modify RAZOR

@@ -1,0 +1,7 @@
+number	x	y	first_segment	second_segment	ordered_pairs	selection
+1	5490.9	6648.2	FLOW O-W	END E-N	OW+EN	
+2	5521.6	6646.2	FLOW F-L	END E-N	FL+EN	
+3	5523.8	6695.4	FLOW O-W	EASE E-A	OW+EA	
+4	5526.2	6696.0	FLOW F-L	EASE E-A	FL+EA=FLEA	swap column 4
+5	5691.5	6666.4	END N-D	EASE A-S	ND+AS	
+6	5957.7	6755.0	END D-endpoint	EASE S-E	D?+SE	

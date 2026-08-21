@@ -1,0 +1,10 @@
+region_convention	cell_order	letters	zipf_en	assessment
+all_crossed_visual	T2 T3 T6 B1 B2 B6	RALCAN	0.00	same six cells as the rejected anagram route; no natural answer signal
+all_not_crossed_visual	T1 T4 T5 B3 B4 B5	BZINCA	0.00	complement of all crossed cells; no natural answer signal
+open_upper_tail_crossed_visual	T2 T3 T6	RAL	2.53	crossed top cells, left to right; no natural answer signal
+open_upper_tail_arrow_order	T3 T6 T2	ALR	2.88	top crossings from unmarked endpoint toward arrow; no natural answer signal
+apparent_upper_U_interior_visual	T3 T4 T5	AZI	1.75	visual heuristic only: the upper tail is not closed; no natural answer signal
+closed_lower_loop_boundary_visual	B1 B2 B6	CAN	6.46	boundary-hit cells, left to right; inherited CAN half; not a new extraction
+closed_lower_loop_boundary_path	B6 B1 B2	NCA	2.76	boundary-hit cells in loop traversal order; no natural answer signal
+closed_lower_loop_strict_interior	B3 B4 B5	NCA	2.76	cell centres strictly inside the only closed loop; no natural answer signal
+closed_lower_loop_boundary_complement	B3 B4 B5	NCA	2.76	non-boundary bottom cells; identical to strict interior; no natural answer signal

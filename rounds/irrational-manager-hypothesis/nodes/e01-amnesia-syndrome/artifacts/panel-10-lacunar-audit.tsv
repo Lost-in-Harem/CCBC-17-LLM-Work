@@ -1,0 +1,7 @@
+test	input	result	assessment
+crossed_cells	T2 T3 T6 B1 B2 B6	RALCAN	multiset AACLNR
+route_shape	B6 down, bottom edge, B1 up	U	the sole closed detour has a conspicuous U-shaped lower half and encloses one lacuna
+combined_multiset	AACLNR + U	AACLNRU	seven letters; no other letters supplied
+bounded_anagram	wordfreq top 200000 seven-letter alphabetic entries	LACUNAR	unique hit; Zipf 1.43
+title_checksum	Amnesia Syndrome	LACUNAR AMNESIA / LACUNAR SYNDROME	both phrases are established terms
+remaining_caveat	literal endpoint-to-arrow traversal	ANCALR or AACNLR before U	the diagram supplies a multiset/shape rebus, not the spelling order

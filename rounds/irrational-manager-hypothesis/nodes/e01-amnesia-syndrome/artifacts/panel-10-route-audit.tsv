@@ -1,0 +1,10 @@
+convention	cell_order	letters	zipf_en	result
+endpoint_to_arrow_south_first	T3 B6 B1 B2 T6 T2	ANCALR	0.00	not a common word
+endpoint_to_arrow_west_first	T3 B2 B1 B6 T6 T2	AACNLR	0.00	not a common word
+arrow_to_endpoint_south_first	T2 T6 B2 B1 B6 T3	RLACNA	0.00	not a common word
+arrow_to_endpoint_west_first	T2 T6 B6 B1 B2 T3	RLNCAA	0.00	not a common word
+visual_rows_top_then_bottom	T2 T3 T6 B1 B2 B6	RALCAN	0.00	not a common word
+visual_rows_bottom_then_top	B1 B2 B6 T2 T3 T6	CANRAL	0.00	not a common word
+columns_top_before_bottom	B1 T2 B2 T3 T6 B6	CRAALN	0.00	not a common word
+columns_bottom_before_top	B1 B2 T2 T3 B6 T6	CARANL	0.00	not a common word
+unordered_crossed_cells	T2 T3 T6 B1 B2 B6	AACLNR -> CARNAL	2.97	unique common anagram, but explicitly rejected as the answer

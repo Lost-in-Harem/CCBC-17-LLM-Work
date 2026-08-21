@@ -1,0 +1,11 @@
+{
+  "command": "annotate",
+  "source": "G:/Repo/CCBC-17-LLM-Work/rounds/irrational-manager-hypothesis/nodes/e01-amnesia-syndrome/work/visual/panel-01.png",
+  "source_sha256": "935359c151771a45db36c51c9236d7f4c612c91f2dc58344954c7b3ff041f6b6",
+  "spec": "G:/Repo/CCBC-17-LLM-Work/rounds/irrational-manager-hypothesis/nodes/e01-amnesia-syndrome/work/visual/panel-01-razor-path.json",
+  "spec_sha256": "1b34cb3d6b1f8be51fada84ebb04ea838dce7fae39825aa381fad86f1fc04a90",
+  "coordinate_space": "EXIF-transposed source pixels",
+  "scale": 1,
+  "annotation_count": 6,
+  "output": "G:/Repo/CCBC-17-LLM-Work/rounds/irrational-manager-hypothesis/nodes/e01-amnesia-syndrome/artifacts/panel-01-cut-in-route.png"
+}

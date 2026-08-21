@@ -1,0 +1,7 @@
+clue	chain_from_parent	extraction	letter
+similarity	RAZOR — EDGE — HARD — COPY — EXACT	COPY[1]	C
+similarity	RAZOR — EDGE — HARD — COPY — EXACT	EXACT[3]	A
+risk	RAZOR — THIN — ICE	ICE[1] shifted +5	N
+timidity	SEMIPRIME → SEMI — BOLD	SEMI[4]	I
+procrastination	SEMIPRIME → PRIME — TIME — OUT — BOX	OUT[2] shifted -7	N
+procrastination	SEMIPRIME → PRIME — TIME — OUT — BOX	BOX[3] shifted +7	E

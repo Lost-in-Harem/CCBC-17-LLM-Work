@@ -1,0 +1,13 @@
+route	from_char	to_char	from_pinyin	to_pinyin	glyph_id	letter	projection	center_distance	selected	x	y
+1	灭	配	MIE	PEI	12	E	0.1447	3.36	yes	5353.5	6657.0
+1	灭	配	MIE	PEI	6	O	0.4491	23.54	no	5620.0	6554.0
+1	灭	配	MIE	PEI	8	I	0.6144	34.48	no	5785.0	6564.0
+1	灭	配	MIE	PEI	4	S	0.7907	0.58	yes	5932.5	6482.0
+2	笔	渴	BI	KE	20	D	0.3434	1.04	yes	5813.0	6804.0
+2	笔	渴	BI	KE	21	O	0.5472	32.33	no	5620.0	6833.5
+2	笔	渴	BI	KE	22	I	0.7018	43.80	no	5478.0	6869.0
+2	笔	渴	BI	KE	26	N	0.7877	14.05	yes	5410.5	6923.0
+3	热	逆	RE	NI	24	E	0.1662	0.50	yes	5971.5	6904.0
+3	热	逆	RE	NI	20	D	0.3424	1.04	yes	5813.0	6804.0
+3	热	逆	RE	NI	16	A	0.5356	30.84	no	5624.0	6718.0
+3	热	逆	RE	NI	7	W	0.7719	2.17	yes	5428.0	6558.0

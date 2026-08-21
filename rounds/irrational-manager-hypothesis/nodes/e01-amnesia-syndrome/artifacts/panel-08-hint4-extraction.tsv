@@ -1,0 +1,10 @@
+record	parent	parent_hanzi	enclosure	derived_hanzi	english	index	letter
+transform	JADE	玉	囗	国	NATION		
+transform	MEMBER	员	囗	圆	CIRCLE		
+1	JADE	玉	囗	国	NATION	3	T
+2	MEMBER	员	囗	圆	CIRCLE	3	R
+3	JADE	玉	囗	国	NATION	2	A
+4	JADE	玉	囗	国	NATION	6	N
+5	MEMBER	员	囗	圆	CIRCLE	1	C
+6	MEMBER	员	囗	圆	CIRCLE	6	E
+result					TRANCE		TRANCE

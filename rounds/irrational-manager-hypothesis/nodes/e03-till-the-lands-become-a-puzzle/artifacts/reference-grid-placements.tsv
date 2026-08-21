@@ -1,0 +1,62 @@
+piece_id	x	y	rotation	component	source	homography_inliers	grid_residual_px
+5f0920c4	0	0	0	1	exact-main-component	96	0.386
+2eff9802	1	0	180	1	exact-main-component	103	0.319
+ff6f435c	2	0	180	7	rigid-reference-fit:1-matched	114	0.808
+9407124b	3	0	90	1	exact-main-component	110	0.356
+64b51910	4	0	180	1	exact-main-component	89	0.350
+db77c9fa	6	0	0	1	exact-main-component	125	0.385
+b5e1065f	7	0	270	1	exact-main-component	48	0.357
+76d05305	0	1	270	1	exact-main-component	70	0.348
+0b1ff022	1	1	0	1	exact-main-component	113	0.373
+a6ec40a9	2	1	270	1	exact-main-component	68	0.354
+bf8b09ff	3	1	180	1	exact-main-component	56	0.329
+08a4363f	4	1	180	1	exact-main-component	72	0.324
+62bd3360	5	1	90	1	exact-main-component	120	0.343
+53184703	6	1	180	1	exact-main-component	87	0.338
+014117a3	7	1	0	1	exact-main-component	64	0.393
+276949da	0	2	90	1	exact-main-component	85	0.353
+a889bef3	1	2	270	1	exact-main-component	54	0.345
+346ef132	2	2	270	1	exact-main-component	96	0.340
+0443c954	3	2	90	1	exact-main-component	51	0.345
+bff4ce52	4	2	90	1	exact-main-component	86	0.339
+b8f64ca8	5	2	180	1	exact-main-component	122	0.339
+235d146a	6	2	180	1	exact-main-component	99	0.335
+7d636eee	7	2	90	1	exact-main-component	109	0.376
+a289dbd6	0	3	0	6	rigid-reference-fit:1-matched	39	0.352
+6abbd1fc	1	3	270	4	rigid-reference-fit:1-matched	118	1.270
+baa80563	2	3	270	1	exact-main-component	74	0.342
+5b68e07e	3	3	0	1	exact-main-component	151	0.365
+c14ba047	4	3	180	1	exact-main-component	72	0.304
+be4215a4	5	3	0	1	exact-main-component	107	0.403
+d5dc2e47	6	3	180	1	exact-main-component	148	0.363
+edce30b6	7	3	180	1	exact-main-component	92	0.317
+a538373f	0	4	270	1	exact-main-component	58	0.355
+af7415d6	1	4	0	1	exact-main-component	85	0.336
+50cf6628	2	4	0	1	exact-main-component	114	0.374
+d8cfc0af	3	4	90	1	exact-main-component	68	0.363
+beb3bcc2	5	4	270	1	exact-main-component	28	0.376
+d694797c	6	4	270	1	exact-main-component	59	0.357
+acd8f1be	7	4	270	1	exact-main-component	41	0.340
+b3ac6977	0	5	180	1	exact-main-component	84	0.356
+99ee3fce	1	5	270	1	exact-main-component	120	0.378
+f9d99d3e	2	5	90	1	exact-main-component	59	0.359
+c728a7be	3	5	0	1	exact-main-component	51	0.372
+6cee1920	4	5	180	5	rigid-reference-fit:1-matched	59	0.313
+3634d35b	5	5	0	3	rigid-reference-fit:1-matched	120	1.298
+b13896a4	6	5	90	1	exact-main-component	59	0.381
+24034ee8	7	5	270	1	exact-main-component	56	0.394
+15b38a5b	0	6	270	1	exact-main-component	91	0.333
+680757c9	1	6	90	1	exact-main-component	40	0.354
+861a6847	2	6	0	1	exact-main-component	15	0.427
+6c4c9a64	3	6	90	1	exact-main-component	64	0.394
+98857c56	4	6	270	2	rigid-reference-fit:2-matched	22	0.257
+26aba7b8	5	6	270	2	rigid-reference-fit:2-matched	7	3.337
+9e96e433	7	6	180	1	exact-main-component		
+a6e93cb7	0	7	90	1	exact-main-component	35	0.346
+3a622d33	1	7	90	1	exact-main-component	59	0.351
+f661f9d2	2	7	0	1	exact-main-component	76	0.424
+5210f857	3	7	0	1	exact-main-component		
+64974546	4	7	90	1	exact-main-component		
+ea661231	5	7	270	2	rigid-reference-fit:2-matched		
+8736e621	6	7	180	1	exact-main-component		
+87db5ccf	7	7	270	1	exact-main-component		
