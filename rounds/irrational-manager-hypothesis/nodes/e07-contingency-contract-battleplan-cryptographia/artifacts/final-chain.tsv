@@ -1,0 +1,7 @@
+step	input	operation	output	evidence
+anagram-signature	TRINUOTS	compare letter multisets	TRITONUS	all eight letters match exactly
+anagram-democracy	NNEECTOR	compare letter multisets	CENTERON	all eight letters match exactly
+literal-instruction	TRITONUS	take the centre two letters	TO	8-letter word
+stage2-cross-reference	TO	look up the rotation-site-2 event abbreviation	TILL THE LANDS BECOME AN ORANGE	stage2 identification table; event abbreviation TO
+stage3-cross-reference	TO event operators ∩ stage3 pictured operators	set intersection	ANGELINA THE MELLOW WISH	unique common operator
+final	ANGELINA THE MELLOW WISH	take the operator's Original codename	ANGELINA	Original=Angelina; fixed final length=8

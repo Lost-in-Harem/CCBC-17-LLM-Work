@@ -1,0 +1,3 @@
+rank	candidate	left_chunk	operator	right_chunk	format_constraint	result	audit
+1	AQUATIC	TIC	+	AQUA	A??????	AQUA+TIC	TURN / IDEA / CHARACTER give TIC; WATER and COLOR jointly give AQUA. The plus sign joins the chunks, and the fixed initial A determines AQUA first.
+2	AQUARIA	RIA	+	AQUA	A??????	AQUA+RIA	Rejected by the user. It depended on the weaker placements 🔁 and 🔡 and on REPEAT / ALPHABET readings that did not differ cleanly from their lyric roles.

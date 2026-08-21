@@ -1,0 +1,79 @@
+{
+  "hypothesis": "completionRate is the floored percentage of exact piece states matching the nearest hidden target layout",
+  "bounds": {
+    "maximum_validations": 160,
+    "maximum_seconds": 30
+  },
+  "calibration": [
+    {
+      "layout": "FOX",
+      "completionRate": 100,
+      "feedback": "(3)"
+    },
+    {
+      "layout": "FOX with two corner pieces swapped",
+      "completionRate": 96
+    },
+    {
+      "layout": "random valid layout",
+      "completionRate": 34
+    }
+  ],
+  "seed": {
+    "sample": 5,
+    "completionRate": 37,
+    "inferred_matching_states": 24,
+    "best_FOX_rotation_matching_states": 17,
+    "gap": 7
+  },
+  "five_probe_codebook": [
+    [0, 1, 2, 3],
+    [0, 1, 3, 2],
+    [0, 2, 1, 3],
+    [0, 2, 3, 1],
+    [0, 3, 1, 2]
+  ],
+  "decoded_group_permutations": [
+    [0, 2, 1, 3],
+    [0, 2, 1, 3],
+    [3, 1, 2, 0],
+    [0, 2, 1, 3],
+    [3, 1, 2, 0],
+    [0, 2, 1, 3],
+    [1, 2, 3, 0],
+    [1, 3, 0, 2],
+    [2, 3, 1, 0],
+    [0, 3, 1, 2],
+    [2, 3, 0, 1],
+    [3, 0, 1, 2],
+    [2, 3, 0, 1],
+    [1, 3, 0, 2],
+    [1, 0, 3, 2],
+    [0, 1, 3, 2]
+  ],
+  "unstable_probe_group": 13,
+  "last_group_trials": [
+    {"permutation": [0, 1, 2, 3], "completionRate": 93},
+    {"permutation": [0, 1, 3, 2], "completionRate": 93},
+    {"permutation": [0, 2, 1, 3], "completionRate": 93},
+    {"permutation": [0, 2, 3, 1], "completionRate": 95},
+    {"permutation": [0, 3, 1, 2], "completionRate": 95},
+    {"permutation": [0, 3, 2, 1], "completionRate": 96},
+    {"permutation": [1, 0, 2, 3], "completionRate": 93},
+    {"permutation": [1, 0, 3, 2], "completionRate": 93},
+    {"permutation": [1, 2, 0, 3], "completionRate": 95},
+    {"permutation": [1, 2, 3, 0], "completionRate": 93},
+    {"permutation": [1, 3, 0, 2], "completionRate": 96},
+    {"permutation": [1, 3, 2, 0], "completionRate": 95},
+    {"permutation": [2, 0, 1, 3], "completionRate": 95},
+    {"permutation": [2, 0, 3, 1], "completionRate": 96},
+    {"permutation": [2, 1, 0, 3], "completionRate": 96},
+    {"permutation": [2, 1, 3, 0], "completionRate": 95},
+    {"permutation": [2, 3, 0, 1], "completionRate": 100}
+  ],
+  "result": {
+    "completionRate": 100,
+    "feedback": "(4)",
+    "user_confirmed_word": "FIRE"
+  }
+}

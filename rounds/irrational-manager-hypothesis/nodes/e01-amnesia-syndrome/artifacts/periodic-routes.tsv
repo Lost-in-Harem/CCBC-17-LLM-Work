@@ -1,7 +1,7 @@
-source	moves	visited	extracted
-Ca	D1 L14 U1	Ca > Sr > Mo > Cr	C
-Ni	R3 U1	Ni > Ga > Al	A
-Ne	R9 D1	Ne > Li > Na	N
-Dy	U2 L1	Dy > Hg > Au	A
-Na	D1 L16 U2	Na > K > Sc > La	A
-Mo	L12 D2	Mo > Cd > Cn	N
+source	moves	visited	terminal_index	extracted
+S	D1 L14 U1	S > Se > Ca > Mg	1/2	M
+U	R3 U1	U > Am > Eu	1/2	E
+Nd	R9 D1	Nd > Tm > Md	1/2	M
+Ge	U2 L1	Ge > C > B	1/1	B
+Ar	D1 L16 U2	Ar > Kr > Ca > Be	2/2	E
+In	L12 D2	In > Rb > Fr	2/2	R

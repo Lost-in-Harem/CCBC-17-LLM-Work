@@ -1,0 +1,22 @@
+{
+  "group_order": "canonical rotation group in first appearance order of the fixed FOX grid; slots are row-major positions within each group",
+  "source": "completion-rate oracle reconstruction; 100% validation with feedback (4)",
+  "permutations": [
+    [0, 2, 1, 3],
+    [0, 2, 1, 3],
+    [3, 1, 2, 0],
+    [0, 2, 1, 3],
+    [3, 1, 2, 0],
+    [0, 2, 1, 3],
+    [1, 2, 3, 0],
+    [1, 3, 0, 2],
+    [2, 3, 1, 0],
+    [0, 3, 1, 2],
+    [2, 3, 0, 1],
+    [3, 0, 1, 2],
+    [2, 3, 0, 1],
+    [1, 3, 0, 2],
+    [1, 0, 3, 2],
+    [0, 1, 3, 2]
+  ]
+}

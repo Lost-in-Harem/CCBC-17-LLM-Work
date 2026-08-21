@@ -1,6 +1,9 @@
-model	definition	razor	nematocystic	side_removed	off_operation	result	status
-literal-letter subtraction	NEMATOCYSTIC	DISTRESSING as fodder	-	SIDE + edge R	anagram	STINGS	rejected by user 2026-08-21; SIDE did double duty
-synonym cancellation	DISTRESSING	EDGE	STINGING	EDGE	remove the preceding SIDE synonym	STINGING	rejected by user 2026-08-21; family is non-unique
-rejected charade	JOINING	CUT	STINGING	remove outer S…G to leave TINGIN	SIDE OFF deletes both outer letters	CUTTING IN	rejected by user 2026-08-21; JOINING/CUT OUT was not independently established and SIDE is singular
-facing-sides deletion	DISTRESSING = BITING	BIC -> BI	STING -> TING	C and S at the join	remove the mutually facing side letter of each synonym	BITING	rejected by user 2026-08-21; singular SIDE OFF cannot justify two deletions
-scientific-synonym anagram	OFF = RANCID	either side of RAZOR -> R	CNIDA	SIDE selects the edge letter R (both edges agree)	DISTRESSING rearranges R+CNIDA	RANCID	rejected by user 2026-08-21; SIDE cannot skip over NEMATOCYSTIC to modify RAZOR
+step	clue_material	operation	result	role	status
+1	UPON + HIGH	split the independently fixed UP|ON; remove HIGH=UP	ON	column label	exact
+2	HANG WITH	complete the synonymous idiom HANG _ WITH	OUT	column label; HANG OUT WITH	exact common phrase
+3	OBSERVE	resolve as LOOK ON using the ON label	LOOK ON	known matrix cell	exact phrasal-verb sense
+4	WARNING	resolve as the warning LOOK OUT using the OUT label	LOOK OUT	known matrix cell	exact warning utterance
+5	GATE	use the admission-receipts sense shared with TAKE	TAKE	row label	exact dictionary sense
+6	TACKLE	resolve as TAKE ON using TAKE and ON	TAKE ON	known matrix cell	exact phrasal-verb sense
+7	matrix completion	combine the TAKE row with the OUT column	TAKE OUT	missing fourth cell	candidate; all clue material assigned
+8	visual direction audit	five top boxes have only left-to-right placement and no reorder marks	no phrase-chain traversal	eliminates OUTTAKE route	exact observation from top-row crop

@@ -1,7 +1,7 @@
-column	pink_cell	region	song	lyric_anchor	emoji_or_class	english_reading	letter
-5	r3c5	1	ライアーダンサー	ずっと	🔁	non-stop	N
-6	r32c6	4	㋰責任集合体	わかる／許す	👌／affirmative icon	OK	O
-7	r47c7	5	イレギュラーマン	イレギュラーマン	🙆‍♂️	man	M
-8	r51c8	6	カンケーガール	矢印	arrow icon	arrow	A
-9	r16c9	2	ちっちゃな私	泣きたい	💧	liquid	L
-10	r26c10	3	ウルトラトレーラー	…としたら？	❓️	why	Y
+order	column	pink_cell	region	song	previous_lyric_role	emoji	alternate_reading	rebus_role	note
+1	5	r3c5	1	ライアーダンサー	ずっと／持续循环	🔄	TURN	instruction	改读为转动，不再表示持续。
+2	6	r32c6	4	㋰責任集合体	それでよろし／肯定	✅️	RIGHT	instruction	取方向义“右”，不同于歌词中的肯定义。
+3	7	r47c7	5	イレギュラーマン	脱出复合图中的人物运动	🚶‍➡️	MAN	left operand	只取图中人物，不再表示沿箭头脱出。
+4	8	r51c8	6	カンケーガール	交差点／交叉点	➕️	PLUS	operator	改读为加号，连接左右两个词块。
+5	9	r16c9	2	ちっちゃな私	泣きたい／眼泪	💧	WATER	right operand	改读为水，不再表示哭泣。
+6	10	r26c10	3	ウルトラトレーラー	落書き／涂鸦	🎨	COLOR	right operand	改读为颜色，不再表示落书；WATER COLOR 合成 AQUA。

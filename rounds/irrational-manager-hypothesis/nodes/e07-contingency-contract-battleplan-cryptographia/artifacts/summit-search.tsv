@@ -1,0 +1,61 @@
+kind	code	risk	raw	candidate	zipf	note
+summit_state	23213	25	AHMNRTETY			unique maximum; direct extraction is not yet the confirmed main answer
+global_anagram_constraint	01011	11	stage3_columns=6	R		accepted=PRINTER; consistent multiset constraint
+global_anagram_constraint	01213	21	stage3_columns=1	D		accepted=EDITION; consistent multiset constraint
+global_anagram_constraint	11011	11	stage3_columns=2,9	EY		accepted=EVERYONE; consistent multiset constraint
+global_anagram_constraint	11111	13	stage3_columns=1,2,5	CDE		accepted=EVIDENCE; consistent multiset constraint
+global_anagram_constraint	21010	10	stage3_columns=5,1	CD		accepted=CONTINUED; consistent multiset constraint
+global_anagram_constraint	21011	12	stage3_columns=1,2	DE		accepted=DETERMINE; consistent multiset constraint
+global_anagram_constraint	21110	12	stage3_columns=5,1,6,2	CDER		accepted=PROCEDURE; consistent multiset constraint
+global_anagram_constraint	21213	22	stage3_columns=2,5,9	CEY		accepted=EMERGENCY; consistent multiset constraint
+summit_cell	23213	25	digit=1;row=1;variant=3;column=2	A	0	no accepted main answer has yet touched this exact source cell
+summit_cell	23213	25	digit=2;row=1;variant=3;column=7	H	0	no accepted main answer has yet touched this exact source cell
+summit_cell	23213	25	digit=3;row=1;variant=3;column=1	M	0	no accepted main answer has yet touched this exact source cell
+summit_cell	23213	25	digit=4;row=2;variant=2;column=4	N	3	independently supported by accepted main answers: 21201[4]=N(COUNTRIES),01213[7]=N(EDITION),21213[7]=N(EMERGENCY)
+summit_cell	23213	25	digit=5;row=4;variant=3;column=5	R	0	no accepted main answer has yet touched this exact source cell
+summit_cell	23213	25	digit=6;row=2;variant=2;column=5	T	2	independently supported by accepted main answers: 21201[5]=T(COUNTRIES),01213[4]=T(EDITION)
+summit_cell	23213	25	digit=7;row=1;variant=3;column=5	E	0	no accepted main answer has yet touched this exact source cell
+summit_cell	23213	25	digit=8;row=1;variant=3;column=4	T	0	no accepted main answer has yet touched this exact source cell
+summit_cell	23213	25	digit=9;row=3;variant=1;column=9	Y	2	independently supported by accepted main answers: 11011[5]=Y(EVERYONE),21213[9]=Y(EMERGENCY)
+rejected_summit_parse	23213	25	AHMNRTETY	TRYANTHEM		rejected by internal box at state 23213 on 2026-08-21
+rejected_summit_parse	23213	25	AHMNRTETY	TRYTHEMAN		rejected by internal box at state 23213 on 2026-08-22
+rejected_summit_parse	23213	25	AHMNRTETY	MATHENTRY		rejected by internal box at state 23213 on 2026-08-22
+summit_two_word_anagram	23213	25	AHMNRTETY	HENRY MATT	4.330	rank=1; constituent_floor=4.550; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	ENTRY MATH	4.250	rank=2; constituent_floor=4.450; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	TRY ANTHEM	3.900	rank=3; constituent_floor=3.910; rejected in exact summit state
+summit_two_word_anagram	23213	25	AHMNRTETY	ARMY TENTH	3.890	rank=4; constituent_floor=3.920; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	MARY TENTH	3.860	rank=5; constituent_floor=3.920; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	THEN MARTY	3.640	rank=6; constituent_floor=3.640; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	TREAT HYMN	3.580	rank=7; constituent_floor=3.610; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	MYTH ARENT	3.410	rank=8; constituent_floor=3.520; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	MEH TYRANT	3.080	rank=9; constituent_floor=3.360; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	THE MARTYN	3.030	rank=10; constituent_floor=3.030; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	TYRANT HEM	2.990	rank=11; constituent_floor=3.240; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	MANY RHETT	2.980	rank=12; constituent_floor=2.980; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	RANT THYME	2.970	rank=13; constituent_floor=3.070; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	TENTH MYRA	2.960	rank=14; constituent_floor=3.010; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	THEM TRYNA	2.840	rank=15; constituent_floor=2.840; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	ETH MARTYN	2.810	rank=16; constituent_floor=3.030; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	NYT MATHER	2.800	rank=17; constituent_floor=3.000; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	TRAN THYME	2.780	rank=18; constituent_floor=3.070; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	HET MARTYN	2.780	rank=19; constituent_floor=3.030; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	METH TRYNA	2.770	rank=20; constituent_floor=2.840; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	TEH MARTYN	2.730	rank=21; constituent_floor=3.030; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	HEARTY MTN	2.730	rank=22; constituent_floor=2.840; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	HYMN TETRA	2.670	rank=23; constituent_floor=2.720; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	THY MARTEN	2.640	rank=24; constituent_floor=2.660; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	EARTHY MTN	2.620	rank=25; constituent_floor=2.840; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	NEYMAR THT	2.610	rank=26; constituent_floor=2.680; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	ANTHEM TYR	2.610	rank=27; constituent_floor=2.630; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	RHYME ATTN	2.600	rank=28; constituent_floor=2.650; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	THAYER MTN	2.590	rank=29; constituent_floor=2.840; unsubmitted lexical audit only
+summit_two_word_anagram	23213	25	AHMNRTETY	HYMN TATER	2.560	rank=30; constituent_floor=2.600; unsubmitted lexical audit only
+rejected_clue_target	23213	25	AHMNRTETY	ELEMENT		invalid inference from rejected MATH ENTRY parse
+rejected_element_rank			DE??CR??Y	DE??CR?UY	6	failed-route audit only; no evidentiary force;maximizing_rows=17576;sample_rows=DEAACRAUY,DEAACRBUY,DEAACRCUY,DEAACRDUY,DEAACREUY,DEAACRFUY,DEAACRGUY,DEAACRHUY
+rejected_element_match	00101	4	TMCIUSE	CESIUM		failed-route representative DEAACRAUY; extra=T
+rejected_element_match	00213	18	RCIMNUE	CERIUM		failed-route representative DEAACRAUY; extra=N
+rejected_element_match	01213	21	EDITION	IODINE		failed-route representative DEAACRAUY; extra=T
+rejected_element_match	20001	3	PATMNTIIU	TITANIUM		failed-route representative DEAACRAUY; extra=P
+rejected_element_match	20010	7	MDUCITIAN	ACTINIUM		failed-route representative DEAACRAUY; extra=D
+rejected_element_match	21001	6	RINGTONES	NITROGEN		failed-route representative DEAACRAUY; extra=S
+rejected_final_extension			CSCEITIACN	SCIENTIA		user rejected this forced ELEMENT / remove-CC / anagram route

@@ -1,5 +1,5 @@
 panel	left_input	right_input	operation	output
-P1	DISTRESSING	RAZOR	RAZOR tells us to cut the pictured RINGS out of DISTRESSING; the exact multiset subtraction DISTRESSING-RINGS leaves DESIST, “to quit”	DESIST
-P2	RAZOR	NEMATOCYSTIC	RAZOR compound chains extract CAN; Scrabble-star score NEMATOCYSTIC=21=SEMIPRIME, whose SEMI/PRIME chains extract INE	CANINE
-P3	NEMATOCYSTIC	SIDE	discard every paired occurrence and anagram the odd-count remainder A,D,M,N,O,Y	DYNAMO
-P4	SIDE	OFF	switch the two inputs to make OFFSIDE, then answer the game containing that controversial rule	FOOTBALL
+P1	OBSERVE	UPON	align hole letters O,B and P,O to the pictured circles; numbered positions 1..5 read V,E,N,U,S	VENUS
+P2	UPON	HANG WITH	split UP|ON and HANG|WITH; the row semicircles assign UP,HANG to the left halves and ON,WITH to the right halves; pictured extraction order UP,ON,WITH,HANG reads S,U,N,D,A,Y	SUNDAY
+P3	HANG WITH	HIGH GATE WARNING	cancel matching letter copies across the two inputs; the remainder A,E,G,G,I,N,R anagrams to GEARING	GEARING
+P4	HIGH GATE WARNING	TACKLE	exchange the embedded word GATE with the entire right input TACKLE, forming the controversial rugby rule name HIGH TACKLE WARNING; answer its field	RUGBY

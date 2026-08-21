@@ -1,0 +1,16 @@
+{
+  "hypothesis": "a third hidden image would sometimes score above the best exact match to the four FOX and four FIRE rotations",
+  "sample_count": 32,
+  "known_targets": [
+    "FOX at 0, 90, 180, and 270 degrees",
+    "FIRE at 0, 90, 180, and 270 degrees"
+  ],
+  "positive_gap_samples": 0,
+  "best_sample": {
+    "completionRate": 42,
+    "inferred_matching_states": 27,
+    "best_known_target_matching_states": 27,
+    "gap": 0
+  },
+  "conclusion": "no scoring evidence for a third image target; all sampled scores are fully explained by FOX and FIRE"
+}

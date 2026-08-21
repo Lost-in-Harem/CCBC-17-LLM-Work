@@ -1,0 +1,14 @@
+code	risk	raw	anagram	role
+00010	6	PLASUAT	SPATULA	supporting-common-word
+00112	12	LMISING	SMILING	supporting-common-word
+01010	9	REAOTSR	ROASTER	supporting-common-word
+01110	11	AERTEIN	TRAINEE	supporting-common-word
+02110	11	FTSIFER	STIFFER	supporting-common-word
+02112	15	IREETFR	FERRITE	supporting-common-word
+11012	13	SIRTENAE	TRAINEES	supporting-common-word
+11211	14	RERITVES	RIVETERS	supporting-common-word
+13110	14	TNAINTRE	INTRANET	supporting-common-word
+13112	18	RTTHSNGE	STRENGTH	rejected-final-hypothesis
+13213	24	TNAIMRES	MINARETS	supporting-common-word
+21213	22	EMIRGENAE	MENAGERIE	supporting-common-word
+22213	22	AFLIRTTIS	STAIRLIFT	supporting-common-word

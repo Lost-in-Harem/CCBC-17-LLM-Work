@@ -10,144 +10,195 @@ feeders:
 status: rejected
 answer:
 confidence:
-summary: ARBITER 已被用户明确判错。Hf−Xe=Ar、Pu−Na=Bi、Ac−S=Ta 的算术巧合仍保留为待审证据，但不能再据 ArBiTa 作谐音收尾。官方提示强调三个中间答案在现实中混合成 7 字母事物；当前回到三队各自产出真实成分的路线，优先审计移除提示与末端 XENA 后恰为 5/4/6 项的结构。
-updated: 2026-08-21
+summary: MARTINE 已被用户明确判错，酒名枚举路线停止。当前回到两处未闭合的基础机制：图 26 右半矿物的真实识别，以及矿物组的统一排序/提取字段；在这两处独立复原前不再给终答。
+updated: 2026-08-22
 ---
 
 # 疯狂的猜图
 
 ## Current conclusion
 
-当前无最终答案。用户已明确确认 `疯狂的石头`、`疯狂的赛车`、`疯狂的外星人`、`TEAMYES`、`AT BASE V`、`ATBASEVTEAMYES`、`SET A LAW`、`LESS`、`LESSNESS`、`ARBITER` 均错误；这些字符串不再作为答案提出。
+当前无可提交候选。**`MARTINE` 已被用户明确判错**，因此 `H/Ra/In → vermouth/Angostura/gin → 酒名` 这条终局路线停止；不能再用一个历史配方替代缺失的题内提取。当前调查回到两处未闭合的基础机制：图 26 右半矿物的真实识别，以及矿物组十图的统一排序/提取字段。
 
-`SET A LAW` 已由用户明确判错且没有里程碑反馈，现已撤回。错误不只在停读边界，更关键的是图 21 的分组：箭头与公鸡草地在画面上重叠成一个左侧图组，星光是独立右侧图组；不能把箭头单独当 Backite、再把公鸡与星光拼成 Morningstarite。
+用户新提供的官方提示 3 给出了主结构：28 图分为三组，每组对应“三部”中的一部；每图的左半给排序对象，右半给提取对象。按这个结构重新审计后：
 
-按正确的两图组，左侧构成 `WEST + (roost)ER + VELD(field)` → **Westerveldite**（Strunz 2），右侧星光为 **Northstarite**（Strunz 7），故图 21 是 `27 → Co`。这一改动使相同的五进制三队提取由 `SET A LAW` 精确变为 **`GET A LAW`**。
+- 天体组高置信得到 **`ANGOSTURA`**；
+- 赛车场组高置信得到 **`SHOWYOURB`**；
+- 矿物组从全局语法几乎必为 **`ASEVDIGITS`**，合成 **`ANGOSTURA / SHOW YOUR BASE V DIGITS`**，但矿物组的排序字段和右侧取字字段尚未独立复原，不能把补句当作证明。
 
-图 10–20 的操作提示为 `Xe Na S At Ba Se V Te Am Y Es` → `XENA'S AT BASE V TEAM YES`。`AT BASE V` 要把原子序数写成三位五进制；`TEAM YES` 要按 `astronomY / racE / mineralS` 分为 Y/E/S 三队并对齐。
+元素层是有意结构：图 10–20 的元素符号精确拼成 **`XENA'S AT BASE V TEAM YES`**；去掉这段操作提示后，以三队五进制数字重组得到操作语 **`GET A LAW`**。Xena 的扮演者是 Lucy **Lawless**；从元素化的 `Lu/C/Y/La/W` 中“取走” `La/W`，留下 **`Lu/C/Y`**，即 `LUCY LESS [LAW]`。
 
-用户授权解锁一条提示后，已选择官方提示 7「该如何提取？」，花费 5101 工资解锁。原文为：
+图 26 目前恢复为正式矿物 **Yurmarinite**（Strunz 主类 8）。右侧第一人是权俞利（Yuri），第二人是贾宝玉形象；贾宝玉有马天宇、林青霞等不同扮演者，因此画面可能借角色/演员绕到 `Marin`，但这一 rebus 仍不够直接。另一读法 Ureyite（kosmochlor 旧名，9 类）虽然能用 `Yuri + 玉/stone` 解释，却导向已被判错且违反提示 7 语义的 `VARNISH`。结合现行 IMA 名录、后续精确减法及用户判题，当前以 `8+8=88 Ra` 为较强读法，但保留构词缺口。
+
+三个未消费元素因此为 `Hf/Pu/Ra`。把 `LUCY` 拆成元素 `Lu/C/Y` 并按 `LESS` 逐项相减，精确得到 **`H/Ra/In`**：
+
+`Hf−Lu=H`，`Pu−C=Ra`，`Ra−Y=In`。
+
+这三个元素符号分别补全三个现实配料 vermout**H**、Angostu**RA**、g**IN**。1916 年 D. Schoor 的《Zakboekje voor recepten van American Drinks》在第 13 项 **“Martine. Sweet.”** 中明确列出 `2/3 Italian vermouth`、`1/3 gin`、`Angostura`，酒名恰为七字母 **MARTINE**；另有糖浆、樱桃和柠檬皮作为辅料。它是对提示 7 最直接的新匹配，并且不是已被判错的拼法 `MARTINI`。
+
+## Official hints supplied by the user
+
+### 提示 7：该如何提取？
+
+此前按用户授权解锁，原文为：
 
 > 在现实中，三个中间答案“混在一块”可以变成一个事物，它的长度为（7）。
 
-这条提示说明 `LESS` 还只是操作词，不能停读。移出提示段和末端 `Xe Na` 边界后，五进制三队对角取位得到 `Ge Ta La W` → **`GET A LAW`**，而未消费的三个元素恰为 `Hf / Pu / Ac`。Xena 的扮演者是 Lucy **Lawless**；从 `LAWLESS` “get a LAW” 后余下 **`LESS`**，这里按普通英文义读作“减去”。把三个未消费元素与 `XENA'S` 的元素拆分 `Xe / Na / S` 一一相减原子序数：
+### 提示 3：图片的具体解读
 
-| 运算 | 原子序数 | 结果元素 |
-| --- | ---: | --- |
-| `Hf − Xe` | `72 − 54 = 18` | `Ar`（argon） |
-| `Pu − Na` | `94 − 11 = 83` | `Bi`（bismuth） |
-| `Ac − S` | `89 − 16 = 73` | `Ta`（tantalum） |
+> 这些图片可分成三组，每组图片中的事物属于同一类，并且这类事物分别对应了“三部”中的一部。每张图片可分为两部分，左边和右边分别体现了一个和主题有关的事物，左边的事物用于排序，右边的事物用于提取。
 
-这组运算给出 `Ar / Bi / Ta`，但由 `ArBiTa` 谐音得到的 `ARBITER` 已被用户明确判错。因而它至多是一个算术巧合或尚未完成的中间层，不能再作为最终解释；官方提示中的“现实中混在一块”必须按真实成分关系重新落实。
+## 第一层：按提示 3 分组、排序、提取
 
-已确认的底层机制仍成立。题目把三部“疯狂”电影所对应的三类专名混排在 28 图中：
+三组分别是天体、赛车场、矿物，对应《疯狂的外星人》《疯狂的赛车》《疯狂的石头》。每张 512×256 图的稳定编号和左右边界见 `work/visual/transcription.md`。
 
-- 《疯狂的外星人》方向：天体名；取两个英文名称的字母数。
-- 《疯狂的赛车》方向：赛车场；取两个赛道的 FIA licence grade。
-- 《疯狂的石头》方向：矿物名；取两个矿物的 Nickel–Strunz 大类首位数字。
+### 天体组：`ANGOSTURA`
 
-每图按从左到右把两个数字直接拼接为十进制原子序数，再换成元素符号。图 10–20 的可读串是操作提示，不是答案；它最终同时提供 `LAWLESS − LAW = LESS` 的运算词和减数 `Xe / Na / S`。
+左侧按天体的编号/序号递增；右侧天体的编号以 A1Z26 取字。若同一画面还可读成另一个天体名，那是后面的元素层，不替代这里的主读法。
 
-## Observed facts
+| 顺序 | 图 | 左侧排序对象 | 左值 | 右侧对象 | 右值 | 字母 |
+| ---: | ---: | --- | ---: | --- | ---: | --- |
+| 1 | 9 | Mercury | 1 | Io（Jupiter I） | 1 | A |
+| 2 | 5 | Venus | 2 | Hippocamp（Neptune XIV） | 14 | N |
+| 3 | 7 | Earth | 3 | Hyperion（Saturn VII） | 7 | G |
+| 4 | 1 | Vesta | 4 | Atlas（Saturn XV） | 15 | O |
+| 5 | 27 | Atlas | 15 | Ymir（Saturn XIX） | 19 | S |
+| 6 | 13 | 588 Achilles | 588 | 20 Massalia | 20 | T |
+| 7 | 10 | 1388 Aphrodite | 1388 | 21 Lutetia | 21 | U |
+| 8 | 6 | 4017 Disneya | 4017 | 18 Hydrae | 18 | R |
+| 9 | 14 | 6063 Jason | 6063 | Phobos（Mars I） | 1 | A |
 
-- 题名为“疯狂的猜图”，flavor 是“……怎么三部全都混在一块了？”，页面明确标注“本题有中间答案验证”。
-- 页面正文按固定顺序给出 28 张 512×256 WEBP 复合图；稳定视觉编号 `image-002`–`image-029` 依次对应题图 1–28。
-- 三类分组已经闭合：
-  - 天体：1、5、6、7、9、10、13、14、27（9 图）；
-  - 赛车场：2、3、4、8、11、12、15、16、28（9 图）；
-  - 矿物：17–26（10 图）。
-- 每幅图通常构造同一类别的两个英文专名。重复素材只是稳定的 rebus 词元，不构成多米诺链。
-- 三种数字来源都能在多行互相验证，并且拼成的数均落在 1–99 的有效原子序数范围内。
+结果为 **`ANGOSTURA`**。这一组的排序、数值和九个字母均已闭合；它单独提交虽已判错，但它在完整句 `ANGOSTURA SHOW YOUR BASE V DIGITS` 中承担指令首词，而非终答。
 
-## Mechanism and extraction table
+### 赛车场组：`SHOWYOURB`
 
-### 天体：英文名长度
+左侧按赛道单圈长度递增；右侧识别另一条赛道，取其 FIA 国家三字码的中间字母。
 
-| 图 | 两个名称 | 数字 | 元素 |
-| ---: | --- | ---: | --- |
-| 1 | Loge (4)；Atlas (5) | 45 | Rh |
-| 5 | Venus (5)；Hippocamp (9) | 59 | Pr |
-| 6 | Pluto (5)；Hydra (5) | 55 | Cs |
-| 7 | Earth (5)；Hyperion (8) | 58 | Ce |
-| 9 | Mercury (7)；Io (2) | 72 | Hf |
-| 10 | Venus (5)；Eros (4) | 54 | Xe |
-| 13 | Achilles (8)；Alice (5) | 85 | At |
-| 14 | Jason (5)；Phobos (6) | 56 | Ba |
-| 27 | Atlas (5)；Ymir (4) | 54 | Xe |
+| 顺序 | 图 | 左侧赛道（约 km） | 右侧赛道 | 国家码 | 字母 |
+| ---: | ---: | --- | --- | --- | --- |
+| 1 | 3 | Lime Rock Park（2.462） | Road America | USA | S |
+| 2 | 4 | Manfeild（3.030） | Tianmashan | CHN | H |
+| 3 | 8 | Qinhuangdao（3.740） | Monaco | MON | O |
+| 4 | 16 | Rockingham（约 3.9） | Mantorp Park | SWE | W |
+| 5 | 2 | Salzburgring（4.241） | Sepang | MYS | Y |
+| 6 | 12 | Magny-Cours（4.411） | Lousada | POR | O |
+| 7 | 11 | Buddh（5.125） | Red Bull Ring | AUT | U |
+| 8 | 28 | Silverstone（5.891） | Estoril | PRT | R |
+| 9 | 15 | Mount Panorama（6.213） | Knockhill | GBR | B |
 
-图 10 的“维纳斯 + 红楼梦”不是泛泛的梦境联想：小行星 433 Eros 上确有以《红楼梦》人物命名的 Pao-yü、Tai-yü 环形山，因而第二项为 Eros。图 13 的心形可能是同一 Eros 主题的辅助提示，但计数用的是 Achilles 与 Alice。
+结果为 **`SHOWYOURB`**。图 2、4、12 的完整 rebus 文字解释仍略弱，但排序结果和国家码中间字母组成的英文串非常稳定。
 
-### 赛车：FIA 赛道等级
+### 矿物组：预期 `ASEVDIGITS`，机制未独立闭合
 
-| 图 | 两个赛道 | 等级 | 元素 | 置信度 |
-| ---: | --- | ---: | --- | --- |
-| 2 | Salzburgring；Circuit de Croix-en-Ternois | 33 | As | 中高；十字架项链同时供 `ring` 与 `croix` |
-| 3 | Lime Rock Park；Road America | 22 | Ti | 高 |
-| 4 | Manfeild；疑似 Shanghai Tianmashan Circuit | 34 | Se | 中；丹顶鹤也称 Manchurian crane，第二项素材为山 + Chinatsu−C，构词仍待完全解释 |
-| 8 | Qinhuangdao；Monaco | 21 | Sc | 中高；Pac-Man 给 NAMCO 与圆形 O，可重排为 MONACO |
-| 11 | Buddh International Circuit；Red Bull Ring | 11 | Na | 高 |
-| 12 | Magny-Cours；疑似 Lousada | 16 | S | 中；Manny + corpse 为前者近音，animal aid + Lotus Bridge 为后者近音构词 |
-| 15 | Mount Panorama Circuit；Knockhill | 34 | Se | 高 |
-| 16 | Rockingham Motor Speedway；Mantorp Park | 23 | V | 高；石头/嘲笑构造 Rockingham，馒头构造 Mantorp |
-| 28 | Silverstone Circuit；Estoril | 11 | Na | 高 |
+目前最稳的左右矿物识别如下：
 
-图 4 的角色素材已由反向识图落实为 eXceed 的 Chinatsu Kagaya；第一赛道的丹顶鹤/田野组合强指 Manfeild (grade 3)，第二赛道最可能是 Shanghai Tianmashan (grade 4)，但具体删改尚未完全复原。图 8 的 NAMCO + O 可重排为 Monaco (grade 1)。图 12 左图的原始馆藏标题明确是冰期灭绝象股骨，支持 Manny + corpse → Magny-Cours (grade 1)；右侧五亭桥又名 Lotus Bridge，与宠物援助/捐款图共同支持 Lousada (grade 6)，但这一路仍带有近音自由度。
+| 图 | 左侧矿物 | 右侧矿物 | 备注 |
+| ---: | --- | --- | --- |
+| 17 | Calcite | Eldragónite | 右图直接含 dragon/no/top 词元；旧 Cinnabar 读法不再优先 |
+| 18 | Topaz | Malachite | 高 |
+| 19 | Parkinsonite | Perrierite-(Ce) | 中 |
+| 20 | Jadeite | Forsterite | 高 |
+| 21 | Westerveldite | Northstarite | 左右空间分组明确 |
+| 22 | Tsumoite | Arctite | 高 |
+| 23 | Baumstarkite | Colusite | 高 |
+| 24 | Spangolite | Rutile | 高 |
+| 25 | Johnsenite-(Ce) | Loveringite | 中高 |
+| 26 | Englishite | Yurmarinite（Ureyite 为备选） | 中；后续与现行 IMA 名录支持 Yurmarinite=8，但画面如何完整给出 Marin 尚未闭合 |
 
-图 15 的山直接指 Mount Panorama（grade 3）；盾牌与苏格兰狮指向 Knockhill，FIA 官方表列为 grade 4，因此 `34 → Se` 已独立闭合。图 16 的 FIA 表列 Mantorp Park 为 grade 3；Rockingham 公路赛道为 grade 2，因此 `23 → V`，支持读成 `BASE V`，而不是 `ATBASH`。
+赛车场串止于 `...B`，而元素层又独立出现 `AT BASE V`，故矿物组十字母从全局语法应为 **`ASEVDIGITS`**，完整指示为：
 
-### 矿物：Nickel–Strunz 大类
+**`ANGOSTURA / SHOW YOUR BASE V DIGITS`**
 
-| 图 | 两个矿物 | 类别首位 | 元素 | 备注 |
-| ---: | --- | ---: | --- | --- |
-| 17 | Calcite；Cinnabar | 52 | Te | 凯尔希/墓中骷髅与禁龙/陀螺构词 |
-| 18 | Topaz；Malachite | 95 | Am | 托帕；mother/lash/high school 音形构词 |
-| 19 | Parkinsonite；Perrierite-(Ce) | 39 | Y | Yellowstone = park-in-stone；P/R 图元 |
-| 20 | Jadeite；Forsterite | 99 | Es | 玉；foster 情境与《红楼梦》人物 |
-| 21 | Westerveldite；Northstarite（或 Starkeyite） | 27 | Co | 左箭头与公鸡草地是一个重叠图组：WEST + (roost)ER + VELD；右侧星光的两个可行矿名都为 class 7，故 2、7 稳定 |
-| 22 | Tsumoite；Arctite | 28 | Ni | sumo；arc + T |
-| 23 | Baumstarkite；Colusite | 22 | Ti | 包拯星额；colossus (sing.) |
-| 24 | Spangolite；Rutile | 74 | W | 烟花棒；TiO2 晶格 |
-| 25 | Johnsenite-(Ce)；Loveringite | 94 | Pu | Johnson；love pea/heart |
-| 26 | Englishite；Ureyite | 89 | Ac | English + stone；Kwon Yuri 音近 Ureyite |
+尚未找到一个对十个右侧矿物统一成立、能给出 `A S E V D I G I T S` 的标准属性。已检查矿物名首尾/长度、IMA 符号、Strunz/Dana 编码、晶系、公式元素、发现年份、产地、Fermion Index 等常见字段；没有统一命中。此处必须继续标为“由两条独立语境补全”，而不是已证提取。
 
-矿物组元素符号串为：
+## 第二层：元素提示
 
-`Te Am Y Es Co Ni Ti W Pu Ac` → `TEAMYESCONITIWPUAC`。
+同一批画面还能给出另一套三类数值：
 
-其中前四项精确拼出 `TEAMYES`，不是从含糊首字母猜出的词。图 21 的版面坐标与分组审计见 `work/visual/transcription.md`；Westerveldite 的 FeAs 分类落在 Strunz 2，Northstarite 为 `7.JA.20`。
+- 天体：两个可读英文名的长度；
+- 赛车场：两个赛道的 FIA licence grade；
+- 矿物：两个矿物的 Nickel–Strunz 大类首位。
 
-## Rejected readable substring audit
+把左右两个数字依次拼成十进制原子序数，再换为元素符号。图 10–20 连续得到：
 
-第 13–20 图稳定产生连续符号 `At Ba Se V Te Am Y Es`。用户已依次判错两个分段和完整连续串：
+| 图 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |
+| ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 原子序数 | 54 | 11 | 16 | 85 | 56 | 34 | 23 | 52 | 95 | 39 | 99 |
+| 元素 | Xe | Na | S | At | Ba | Se | V | Te | Am | Y | Es |
 
-**`ATBASEVTEAMYES`**
+连读为 **`XENA'S / AT BASE V / TEAM YES`**。这解释了为什么用户试过的 `AT BASE V`、`TEAMYES` 和连写都不是答案：它们是操作提示。
 
-补齐图 10–12 后，提示段应为 `Xe Na S At Ba Se V Te Am Y Es` → `XENASATBASEVTEAMYES`，可读作 `XENA'S / AT BASE V / TEAM YES`。这解释了为什么用户所试字符串不完整，但更重要的是它的语法是操作指令；不应把加上 `XENAS` 的版本继续当最终答案碰运气。
+## 第三层操作语：`GET A LAW`（不得再作为答案提交）
 
-## Second extraction
+把图 10–20 作为提示段移出，把末尾图 27–28 的 `Xe/Na` 作为边界标记暂时移出。余项按页面出现次序分成 astronomY、racE、mineralS 三队；每个原子序数写成三位五进制，三队分别取第 1、2、3 位，再把三位重组成一个原子序数：
 
-`AT BASE V` 解释为把每个原子序数写成三位五进制；`TEAM YES` 解释为按三类组队并按 `astronomY / racE / mineralS` 的 Y/E/S 顺序排列。移出图 10–20 的提示段，并把图 27–28 重复出现的 `Xe Na` 作为末端 XENA 边界移出后，对每个完整三队列从第一、第二、第三队分别取五进制的第 1、2、3 位，再把取出的三位重新作为五进制原子序数：
-
-| 列 | 天体 | 赛车 | 矿物 | 重组三位 | 新元素 |
+| 列 | 天体第 1 位 | 赛车第 2 位 | 矿物第 3 位 | 五进制 | 元素 |
 | ---: | --- | --- | --- | --- | --- |
-| 1 | 45=`140` → 1 | 33=`113` → 1 | 27=`102` → 2 | `112`=32 | Ge |
-| 2 | 59=`214` → 2 | 22=`042` → 4 | 28=`103` → 3 | `243`=73 | Ta |
-| 3 | 55=`210` → 2 | 34=`114` → 1 | 22=`042` → 2 | `212`=57 | La |
-| 4 | 58=`213` → 2 | 21=`041` → 4 | 74=`244` → 4 | `244`=74 | W |
+| 1 | 45=`140` →1 | 33=`113` →1 | 27=`102` →2 | `112`=32 | Ge |
+| 2 | 59=`214` →2 | 22=`042` →4 | 28=`103` →3 | `243`=73 | Ta |
+| 3 | 55=`210` →2 | 34=`114` →1 | 22=`042` →2 | `212`=57 | La |
+| 4 | 58=`213` →2 | 21=`041` →4 | 74=`244` →4 | `244`=74 | W |
 
-新元素符号连读为 **`Ge Ta La W` → `GETALAW`**。首列不是为了凑字反推：图 21 的两组空间边界独立支持 Westerveldite + Northstarite，Mindat/Webmineral 的分类又独立给出 2、7。若保留末端 `Xe Na`，脚本会如实显示第五列 `Gd`；因此结果表同时保留这个边界反例，不再主观截断后称作 `SET A LAW`。
+元素符号为 **`Ge Ta La W` → `GET A LAW`**。图 21 的左右边界修正本身仍成立：箭头和公鸡草地重叠成左组 `WEST + (roost)ER + VELD`，星光是独立右组 Northstarite。用户已明确判错 `GET A LAW`，所以它不得再作为答案；但四列同时成为合法元素且精确成句，再与 `XENA'S/Lawless` 闭合，远强于随机命中，应保留为操作语。
 
-## Final extraction
+## 图 26 的重新判定：`Yurmarinite → 88 Ra`
 
-`XENA'S` 的直接人物双关是 Xena 的扮演者 Lucy **Lawless**。`GET A LAW` 从 `LAWLESS` 中取出 `LAW`，余下 `LESS`。先前把 `LESS` 当作答案已经被判错；官方提示 7 说明还应得到三个中间答案，因此这里必须采用 `less = 减去` 的运算义。
+图 26 左半是 Englishite，属 Strunz 主类 8。右半是 Kwon Yuri 与贾宝玉形象。这里存在两个可复现读法：
 
-对角提取完成后未消费的三个元素按出现次序是 `Hf / Pu / Ac`，而 `XENA'S` 本身可由元素拆成 `Xe / Na / S`。原子序数逐项相减得到：
+- **Yurmarinite** 是 IMA 2013-033 正式矿物，名称纪念 Yuri B. Marin，属 8 类；
+- **Ureyite** 已并入 kosmochlor，只是旧名/同物异名，属 9 类；`Yuri + 玉/stone` 可近似解释它，但它不在当前 IMA Master List 中。
 
-`72−54=18 (Ar)`，`94−11=83 (Bi)`，`89−16=73 (Ta)`。
+贾宝玉并不能直接等同 `Marin`，这是 Yurmarinite 读法的主要缺口；不过这一角色有马天宇、林青霞等多个著名扮演者，画面很可能要求用演员名继续转义。更重要的是，Ureyite=9 导出的 `H/Ra/Sn + IV → VARNISH` 已被判错且没有三个中间答案；Yurmarinite=8 则同时满足现行矿物名录并精确产出提示 7 所需的三种配料。因此当前恢复：
 
-三项中间答案因此是 **ARGON / BISMUTH / TANTALUM**，其元素符号合为 `ArBiTa`。官方提示给出长度 7，而整个末段反复强调 `LAW`；`ArBiTa` 按读音还原为法律语义中的 **`ARBITER`**。这一步同时消费了三个残项、`XENA'S`、`GET A LAW`、`LESS` 和官方枚举，没有遗留主机制信息。
+`Englishite (8) + Yurmarinite (8) = 88 Ra`
 
-此前对连续五进制位进行朴素配对、按队伍删位/取位、以 `STONE/RACER/ALIEN` 作五字母表、以 YES/XENA/LUCY/LAWLESS 作普通平移或带钥方阵，以及把所有数字转置后重新组成元素，均未成文。把三位五进制当三维坐标的六种自然投影也没有稳定字形，故停止视觉路径族。完整边界与结果见 `work/extraction-results.md`；参数化脚本与投影审计见 `work/extraction_test.py`、`work/team-paths.svg`。
+四个完整三队列之后的未消费元素据此为 **`Hf / Pu / Ra`**。这不会改变前四列的 `GET A LAW`，却使 `LUCY LESS` 得到完整的 `H/Ra/In`。
+
+## 已拒绝的终局路线：`VARNISH`
+
+`XENA'S` 指向 Xena 的扮演者 Lucy **Lawless**。`GET A LAW` 又恰可读成：从元素化的姓名片段 `Lu / C / Y / La / W` 中取走 `La/W`（LAW），留下 `Lu/C/Y`。把这三个元素按队列与未消费的 `Hf/Pu/Ac` 对齐并按原子序数相减：
+
+| 运算 | 差 | 元素碎片 |
+| --- | ---: | --- |
+| `Hf − Lu` | `72−71=1` | `H` |
+| `Pu − C` | `94−6=88` | `Ra` |
+| `Ac − Y` | `89−39=50` | `Sn` |
+
+得到三个碎片 **`H / Ra / Sn`**，合计五个字母。提示 7 指定终物为七字母，所以还差两个；第一层指令又特意说 `BASE V DIGITS`。把五进制数字以罗马数字表示，恰有两个字母的候选是 `II` 与 `IV`。固定 50 万常用英语词表做完全集检查：
+
+- `HRA SN + IV` 可重排成普通实物 **`VARNISH`**；
+- 其他满足碎片和两字符五进制罗马数字的词只有 `NASHIRI`、`SHIRVAN` 等专名；
+- 因而 **`H + RA + SN + IV → VARNISH`** 是该受限搜索中的唯一普通实物。
+
+这还得到提示 7 的表面现实校验：传统 varnish 由树脂、干性油和稀释剂/溶剂组合而成，似乎是“三种东西混在一块”形成的七字母事物。
+
+用户已明确判错 `VARNISH`。这与上述两个未闭合点一致：矿物组 `ASEVDIGITS` 由全句反补，而 `IV` 也不是三个中间答案之一。整条“元素差值 + 罗马数字 + 字谜重排”路线停止，不再枚举邻近词。
+
+## 已拒绝的终局：`LUCY LESS → H / Ra / In → MARTINE`
+
+`XENA'S` 指向扮演 Xena 的 Lucy **Lawless**。把 `GET A LAW` 作用于姓氏：
+
+`LAWLESS − LAW = LESS`
+
+把人物全名解释成元素化的逐项减法 `LUCY LESS`：将 `LUCY` 拆成 `Lu / C / Y`，从三个余项中相减：
+
+| 运算 | 原子序数差 | 结果符号 | 配料词尾 |
+| --- | ---: | --- | --- |
+| `Hf − Lu` | `72−71=1` | H | vermout**H** |
+| `Pu − C` | `94−6=88` | Ra | Angostu**RA** |
+| `Ra − Y` | `88−39=49` | In | g**IN** |
+
+三个符号作为词尾，结合已经独立得到的 ANGOSTURA 与提示 7 的现实混合关系，补成：
+
+- vermout**H**；
+- Angostu**RA**；
+- g**IN**。
+
+泛称 **MARTINI** 与配方近邻 **ASTORIA** 均已被用户判错，不能重提。但这次出现了新的、可核验的一手证据：D. Schoor 1916 年调酒书第 13 项的标题是 **“Martine. Sweet.”**，正文逐项列出 `2/3 Ital. Vermouth`、`1/3 Gin`、`Angostura`，另加 gum syrup、cherry 和 lemon peel。`MARTINE` 恰为七字母，并与已判错的 `MARTINI` 是不同历史拼法。因此当前候选为：
+
+`VERMOUTH + ANGOSTURA + GIN → MARTINE`
+
+用户已明确判错 `MARTINE`。这条路线依赖两个未由题面独立支持的跳步：把图 26 强行读作 Yurmarinite，以及把三个元素碎片补成三种配料后再用外部历史配方选酒名。该酒名枚举路线停止。
 
 ## Submission history
 
@@ -161,47 +212,60 @@ updated: 2026-08-21
 | 2026-08-21 | ATBASEVTEAMYES | 错误答案 | 用户明确报告不是答案；无其他判题文字。 |
 | 2026-08-21 | SET A LAW | 错误答案 | 用户明确报告不是答案，且判题无任何反馈。 |
 | 2026-08-21 | LESS | 错误答案 | 用户明确报告不是答案；未提供其他判题文字。 |
-| 2026-08-21 | LESSNESS | 错误答案 | 用户明确报告不正确；随后授权解锁一条官方提示。 |
+| 2026-08-21 | LESSNESS | 错误答案 | 用户明确报告不正确；随后提供官方提示。 |
 | 2026-08-21 | ARBITER | 错误答案 | 用户明确报告不是答案；未提供其他判题文字。 |
-
-## Evidence and artifacts
-
-- 持久逐图转录：`work/visual/transcription.md`。
-- 视觉清单：`work/visual/inventory/index.tsv`、`manifest.json`、`contact-01.png` 至 `contact-03.png`。
-- SingleFileZ 的只读派生展开：`work/visual/page/`；`index.html` 保留题图顺序与原始图片 URL。
-- 局部核对图：`work/visual/crops/`；工具生成的裁图有同名 JSON 坐标边车。
-- IMA 矿物名录：`work/visual/mineral-list.pdf`、`work/visual/mineral-list.txt`。
-- 五进制有界测试：`work/extraction_test.py`、`work/extraction-results.md`。
-- FIA licensed circuits 官方列表：https://www.fia.com/circuit-safety
-- 2026-03-31 FIA 赛道表：https://api.fia.com/sites/default/files/circuits_fia20260331_0.pdf
-- IMA Master List：https://athena.unige.ch/athena/mineral/IMA-Master-List-2026-03.pdf
-- Westerveldite 资料（FeAs，Strunz 2）：https://www.mindat.org/min-4273.html 、https://webmineral.com/data/Westerveldite.shtml
-- Northstarite 资料与 `7.JA.20` 分类：https://www.mindat.org/min-53865.html
-- Caltech 关于 Xena/Eris、Dysnomia 与 Lucy Lawless 的命名说明：https://www.caltech.edu/about/news/dwarf-planet-formerly-known-xena-has-officially-been-named-eris-iau-announces-1187
-- Merriam-Webster 对 `arbiter` 的法律义释义（judge / arbitrator）：https://www.merriam-webster.com/dictionary/arbiter
-- eXceed 官方角色页（Tinatu/Chinatsu Kagaya）：https://exceedseries.com/exceed-gbc_main/chrs_gb
-- 灭绝象左股骨馆藏页：https://museu.ms/collection/object/222068/left-femur-of-extinct-elephant-alaska-ice-age
-- 五亭桥/莲花桥异名：https://en.wikipedia.org/wiki/Five-Pavilion_Bridge
-- USGS Eros 地名检索：https://planetarynames.wr.usgs.gov/SearchResults?Feature+Type=9_Crater%2C+craters&Target=137_Eros
+| 2026-08-21 | ANGOSTURA | 错误答案 | 用户明确报告不是答案；未提供其他判题文字。 |
+| 2026-08-21 | ARGON | 错误答案 | 用户报告建议测试的三个元素全名均不对；无其他判题文字。 |
+| 2026-08-21 | BISMUTH | 错误答案 | 用户报告建议测试的三个元素全名均不对；无其他判题文字。 |
+| 2026-08-21 | TANTALUM | 错误答案 | 用户报告建议测试的三个元素全名均不对；无其他判题文字。 |
+| 2026-08-21 | MARTINI | 错误答案 | 用户明确报告不是答案；无其他判题文字。 |
+| 2026-08-21 | BARISTA | 错误答案 | 用户明确报告“不对啊”；无其他判题文字。 |
+| 2026-08-21 | ASTORIA | 错误答案 | 用户明确报告不是答案；无其他判题文字。 |
+| 2026-08-21 | GET A LAW | 错误答案 | 用户明确报告不是答案；无其他判题文字。 |
+| 2026-08-22 | VARNISH | 错误答案 | 用户明确报告不是答案，并指出这一候选明显不合理；无其他判题文字。 |
+| 2026-08-22 | MARTINE | 错误答案 | 用户明确报告不是答案；无其他判题文字。 |
 
 ## Important failed routes
 
-- `疯狂的石头`、`疯狂的赛车`、`疯狂的外星人` 已被用户明确判错；没有新判题证据时不得恢复。
-- `TEAMYES`、`AT BASE V`、`ATBASEVTEAMYES` 均已被用户明确判错；三者只可作为内部提示或校验片段参与完整提取，不得再次提交。
-- `SET A LAW` 已被用户明确判错且无反馈。它来自错误地把图 21 拆为 Backite + Morningstarite；视觉图组和 Westerveldite + Northstarite 的 2、7 分类现已给出新证据，故不得恢复旧首字 `Se`。
-- `LESS` 已被用户明确判错，不能再作为答案；新链只保留它的运算义“减去”，用来执行 `Hf/Pu/Ac LESS Xe/Na/S`。
-- `LESSNESS` 已被用户明确判错。尽管 Xena/Eris–Dysnomia–Lucy Lawless 的命名链为真，官方提示 7 已明确最终提取是“三个中间答案”的现实混合物，因而不得再恢复这条串行删字路线。
-- `ARBITER` 已被用户明确判错。`Hf/Pu/Ac − Xe/Na/S = Ar/Bi/Ta` 的数字等式虽精确，但把 `ArBiTa` 直接谐读为 7 字母法律角色没有得到判题支持；没有新的结构证据时不得恢复。
-- “三部电影的演员、角色或主创混排”不能解释三套数值属性；人物图只是构造专名的词元。
-- “重复专名组成三条多米诺链”已被完整矿物组反证：多数矿物只出现一次，重复素材只是 rebus 部件。
-- 28 等于 `C(8,2)` 或三角数只是数值巧合，不能代替提取证据。
-- Yellowcatite/Macfallite、Stellerite 等早期矿物套词不再使用；它们不能生成连续的 `TEAMYES`。
-- 图 21 的 `Backite + Morningstarite → 74 W` 已被版面反证：箭头与公鸡照片重叠为左组，星光独立为右组。`Haycockite + Starkeyite` 虽也能凑出 2、7，但不能解释箭头；当前采用能消费全部左组词元的 Westerveldite + Northstarite。
-- 把 `AT BASE V` 强读成 `ATBASH` 会与图 16 的 Rockingham (2) + Mantorp (3) = 23 → V 冲突。
-- 五进制数字的朴素连续配对与以 `TEAMYES` 作普通 Vigenère 密钥均为负结果；除非有新排列证据，不重复参数微调。
-- “队伍直接决定删/取五进制位”已完成三次有界测试仍无明文，停止该族；`STONE/RACER/ALIEN` 作为五字母表的直接替换也为负结果。
-- 把三位五进制当三维坐标并按三队作 5×5 投影的六种自然轴分配均无稳定字形；该空间路线已停止。
+- 上表二十项均是已明确错误的提交；没有新判题证据时不得再次作为答案提出。
+- `MARTINE` 已被明确判错。由 `H/Ra/In` 补配料并枚举酒名的路线没有题内唯一性，停止整个酒名家族，不再换拼法或找近邻配方。
+- `VARNISH` 已被明确判错。`H/Ra/Sn` 后补 `IV` 再重排的关键两字母没有独立提取，而且三个片段也不是提示 7 所说的三个现实配料名；该字谜枚举家族停止。
+- `GET A LAW` 已被判错，不能再作为答案提交；但 `Ge/Ta/La/W` 四列精确成句且能与 Xena/Lucy Lawless 闭合，所以保留为操作语。判题否定的是候选身份，不等于否定所有指令用途。
+- `BARISTA` 的 `LESS → Ar/Bi/Ta` 需要把英文 `LESS` 任意转成元素原子序数减法，随后又要从 `XENA'S` 或 `ANGOSTURA[V]` 补一个 S 并重排；判题已否定这条缺乏唯一指示的终局路线。
+- `ASTORIA` 已被明确判错，不得重提。它的配方证据没有 `MARTINE` 的 1916 年同名原始条目直接。
+- `MARTINI` 作为现代泛称已被明确判错。当前 `MARTINE` 不是无证据替换字母：1916 年同名配方明确逐项列出 vermouth、gin、Angostura；只有这条新证据允许有限恢复该配料族。
+- `ARGON / BISMUTH / TANTALUM` 三个元素全名均未通过中间答案验证，不能再次单独提交；它们所属的 `Ar/Bi/Ta → BARISTA` 路线也已整体停止。
+- `Backite + Morningstarite → 74 W` 违背图 21 的真实左右空间边界；保留为失败路线。
+- 图 26 当前采用 `Yurmarinite → 88 Ra`。`Marin` 的画面构词仍不完整，但它是现行 IMA 正式矿物，且与 `LUCY LESS → H/Ra/In`、提示 7 及 1916 年 MARTINE 配方形成同一条可复现链。Ureyite=9 保留为敏感性对照，其后 VARNISH 已被判错。
+- Fermion Index 只在 Colusite、Rutile、Forsterite 等少数位置偶合目标字母；Malachite、Arctite、Loveringite、Perrierite-(Ce) 等立即反例，停止该字段族。
+- 矿物公式质子数和 mod-26 在个别行偶合，但不能统一生成十字母后缀，停止该族。
+- 在原始五进制位流中盲搜 `GIN/VERMOUTH` 没有命中；这否定的是直接位流读取，不是否定后续由 `LUCY LESS` 明示的元素减法。
+- `ANGOSTURA/BITTERS` 作为五进制 key 的三种有界算术实验均无稳定明文，停止该假设族。
+- 把 `ARGON/BISMUTH/TANTALUM` 当作真实化学配方并猜 `CRYSTAL/CERAMIC/COATING` 需要任意添加反应物、气氛或泛化产物名，缺乏唯一性，不列候选。
+- `PINKGIN` 缺少 vermouth；`DRY MARTINI`、`GIN AND IT`、`Turf Club` 又不符合七字母枚举。它们只是配方近邻，不列候选。
+- 对“TEAM YES 直接选位”的后续三项有界实验均失败：5 种矿物排序的排序位流、6 种队伍映射的 5×5 路径字形，以及 `6×3×3` 个“选位后三位重组元素”组合均无稳定英文。
+- 移除图 10–20 与末端 `Xe/Na` 后，针对剩余 5/4/6 图又依次测试了三种自然读法：用队伍位索引左右专名、删去队伍位后把余下两位读 A–Y、用队伍位索引元素英文名。每项均遍历已记录的自然排序和 6 种队伍映射，没有任何配置同时给出三个词；这是该残余直接取词家族的第三次有界失败，现停止扩张。
+- `GET A LAW` 判错后曾改为只移除图 10–20、保留末端 `Xe/Na`，形成 6/5/6 三组；同样对专名索引、删位读字、元素全名索引做三项有界审计，仍无配置同时产出三个词。这个边界修正家族也已停止。
+
+## Evidence and sources
+
+- 持久逐图转录：`work/visual/transcription.md`
+- 第一层和五进制审计：`work/extraction-results.md`
+- 参数化有界测试：`work/extraction_test.py`
+- FIA licensed circuits：https://www.fia.com/circuit-safety
+- IMA Master List：https://athena.unige.ch/athena/mineral/IMA-Master-List-2026-03.pdf
+- Yurmarinite（IMA 2013-033；以 Yuri B. Marin 命名）：https://www.mindat.org/min-43895.html
+- Kosmochlor / Ureyite（旧名）的 Nickel–Strunz 编号 `9.DA.25`：https://www.mindat.org/min-2249.html
+- Englishite 的 Nickel–Strunz 编号 `8.DH.55`：https://www.mindat.org/min-1386.html
+- Westerveldite：https://www.mindat.org/min-4273.html
+- Northstarite（Strunz `7.JA.20`）：https://www.mindat.org/min-53865.html
+- Caltech 对 Xena/Eris、Dysnomia 与 Lucy Lawless 的说明：https://www.caltech.edu/about/news/dwarf-planet-formerly-known-xena-has-officially-been-named-eris-iau-announces-1187
+- Astoria 的经典配方（Old Tom gin、dry vermouth、Angostura orange bitters）：https://www.diffordsguide.com/cocktails/recipe/2260/astoria
+- D. Schoor 1916 年《Zakboekje voor recepten van American Drinks》；第 13 项 “Martine. Sweet.” 明列 Italian vermouth、gin、Angostura：https://www.dbnl.org/tekst/scho618zakb01_01/scho618zakb01_01_0003.php
+- Martini/Martine 早期名称与 gin、vermouth、Angostura 史料时间线：https://www.thedailybeast.com/the-coming-of-the-martini-an-annotated-timeline/
+- Varnish 的传统组成（干性油、树脂、稀释剂/溶剂）：https://en.wikipedia.org/wiki/Varnish
+- CAMEO 对 varnish 为树脂溶于干性液体所成涂层的说明：https://cameo.mfa.org/wiki/Varnish
 
 ## Next action
 
-重新按三队独立提取真实成分。优先审计移出图 10–20 提示段和图 27–28 末端 `Xe Na` 后的三组长度 `5 / 4 / 6`，检验它们能否分别稳定给出三个可在现实中混合成 7 字母事物的词；若不能，再回查 `GET A LAW` 是否只是偶然或应作别的运算指令。
+重新查看图 17–26 的原始左右半图，并建立矿物名称、分类号及可能提取字段的逐行证据表；优先用矿物组自身的统一规则同时决定排序、`ASEVDIGITS` 是否真实以及图 26 的名称，不再由下游候选反推图 26。若题内证据仍不足且用户允许再开官方提示，信息增益最高的是提示 6（“第三部”怎么做），但本任务不会自行解锁。

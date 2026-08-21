@@ -1,5 +1,9 @@
-letters	search_bound	common_anagrams	interpretation	status
-AACLNR	wordfreq top 100000 six-letter alphabetic entries	CARNAL (Zipf 2.97)	free anagram lacks an instruction and was explicitly rejected by user	rejected 2026-08-20
-AACILNRV	wordfreq top 200000 eight-letter alphabetic entries	CARNIVAL (Zipf 3.86)	unsupported insertion of IV from P9 exchange number; explicitly rejected by user	rejected 2026-08-20
-AAACLNRV	Portuguese/French dictionary spelling plus exact crossed multiset	CARNAVAL (English Zipf 2.52; French 3.86; Portuguese 4.85)	BRAZIL and French CANCAN suggested the non-English A-spelling, but VA was not independently extracted	rejected 2026-08-20
-AACLNRU	wordfreq top 200000 seven-letter alphabetic entries	LACUNAR (Zipf 1.43)	unsupported U insertion and anagram from the now-invalid BRAZIL/CANCAN parent answers; explicitly rejected by user	rejected 2026-08-20
+source_expression	normalized_fodder	normalized_result	result	status
+ON + TIE + C	CEINOT	CEINOT	NOTICE	rejected by user 2026-08-21; indirect synonym anagram was not the intended cryptic mechanism
+ON + TIE + GATE	AEEGINOTT	AEEGINOTT	NEGOTIATE	rejected by user 2026-08-21; the literal GATE substitution had no cryptic licence and left OBSERVE/WARNING unused
+AT + C + H + W	ACHTW	ACHTW	WATCH	rejected by user 2026-08-21; exact multiset equality was insufficient
+MOUNT - U + C + OMEN	CEMMNNOOT	CEMMNNOOT	COMMENT ON	rejected by user 2026-08-21; exact multiset equality was insufficient
+legacy free anagram AACLNR	AACLNR	AACLNR	CARNAL	rejected by user 2026-08-20
+legacy free anagram AACILNRV	AACILNRV	AACILNRV	CARNIVAL	rejected by user 2026-08-20
+legacy free anagram AAACLNRV	AAACLNRV	AAACLNRV	CARNAVAL	rejected by user 2026-08-20
+legacy free anagram AACLNRU	AACLNRU	AACLNRU	LACUNAR	rejected by user 2026-08-20

@@ -1,17 +1,12 @@
 stage	inputs	operation	output	certainty
-P1	DISTRESSING + RAZOR	RAZOR cuts the pictured RINGS out of DISTRESSING; exact letter subtraction leaves DESIST, “to quit”	DESIST	exact letter equation; route/rings reinforce the deletion
-P2	RAZOR + NEMATOCYSTIC	RAZOR compound chains extract CAN; Scrabble-star score 21=SEMIPRIME, then SEMI/PRIME chains extract INE	CANINE	exact
-P3	NEMATOCYSTIC + SIDE	remove CC,TT,EE,SS,II pairs and anagram A,D,M,N,O,Y	DYNAMO	exact
-P4	SIDE + OFF	switch to OFFSIDE and answer its game	FOOTBALL	high
-P5	DESIST + CANINE	repeated-arrow mechanism unresolved; P8 inverse forces JADE→玉	JADE	high downstream; direct mechanism incomplete
-P6	CANINE + DYNAMO	wrapped periodic-table routes spell CANAAN; likely Canaan as a member of the Table of Nations	MEMBER	high downstream; semantic bridge incomplete
-P7	DYNAMO + FOOTBALL	six formulas unresolved; P9 same-pattern mapping uniquely forces PIPKIN	PIPKIN	high downstream; direct mechanism incomplete
+P1	OBSERVE + UPON	align hole letters O,B and P,O to the circles; read numbered positions 1..5	VENUS	exact under Hint 6
+P2	UPON + HANG WITH	split UP|ON and HANG|WITH; semicircle sides fix the answer order while pictured extraction order UP,ON,WITH,HANG plus indexed/Caesar instructions reads SUNDAY	SUNDAY	exact under Hint 6
+P3	HANG WITH + HIGH GATE WARNING	cancel cross-input letter pairs; anagram remaining A,E,G,G,I,N,R	GEARING	exact under Hint 6
+P4	HIGH GATE WARNING + TACKLE	replace GATE with TACKLE to form HIGH TACKLE WARNING; answer its field	RUGBY	high
+P5	VENUS + SUNDAY	advance in planet and weekday sequences; extract JUPITER[1], URANUS[3], WEDNESDAY[3], TUESDAY[3]	JADE	exact under Hint 5
+P6	SUNDAY + GEARING	parse S|U|Nd and Ge|Ar|In; periodic-table routes end Mg,Eu,Md,B,Be,Fr and extract M,E,M,B,E,R	MEMBER	exact under Hint 5
+P7	GEARING + RUGBY	A1Z26 values under labels A..L; evaluate E+J,D/K,I-B,H-A,2sqrt(L)-C,4G-F	PIPKIN	exact under Hint 5
 P8	JADE + MEMBER	玉+囗=国=NATION and 员+囗=圆=CIRCLE; indexed extraction	TRANCE	exact under Hint 4
 P9	MEMBER + PIPKIN	map M↔P E↔I B↔K R↔N; connect matching pinyin and read on-line letters	SWEDEN	exact under Hint 4
-P10	TRANCE + SWEDEN	follow black route: T3 B6 B1 B2 T6 T2	ANSWER	exact match to given bottom value; not the Node answer
-Rejected cryptic	DISTRESSING + RAZOR + NEMATOCYSTIC + SIDE + OFF	DISTRESSING as definition; RAZOR=CUT; NEMATOCYSTIC loosely treated as STING; SIDE OFF removes initial S	CUTTING	rejected by user 2026-08-21; NEMATOCYSTIC=STING is not strict enough
-Rejected cryptic	DISTRESSING + RAZOR + NEMATOCYSTIC + SIDE + OFF	remove SIDE and either edge R of RAZOR from DISTRESSING; OFF indicates rearrangement; NEMATOCYSTIC defines the result	STINGS	rejected by user 2026-08-21; SIDE was doing double duty and the definition form was loose
-Rejected cryptic	DISTRESSING + RAZOR + NEMATOCYSTIC + SIDE + OFF	DISTRESSING defines the answer; RAZOR=EDGE, NEMATOCYSTIC=STINGING, SIDE=EDGE, and OFF removes the latter EDGE	STINGING	rejected by user 2026-08-21; synonym-cancellation family was not unique
-Rejected cryptic	JOINING + RAZOR + NEMATOCYSTIC + SIDE + OFF	JOINING defines the phrase; RAZOR=CUT; NEMATOCYSTIC=STINGING; SIDE OFF removes outer S and G to give TINGIN; concatenate CUT+TINGIN	CUTTING IN	rejected by user 2026-08-21; first input and singular SIDE operation were not independently secure
-Rejected cryptic	DISTRESSING + RAZOR + NEMATOCYSTIC + SIDE + OFF	DISTRESSING defines BITING; RAZOR=BIC and NEMATOCYSTIC=STING; remove their facing side letters C and S, then concatenate BI+TING	BITING	rejected by user 2026-08-21; SIDE OFF was stretched into two deletions
-Rejected cryptic	DISTRESSING + RAZOR + NEMATOCYSTIC + SIDE + OFF	DISTRESSING rearranges CNIDA (a nematocyst) plus the SIDE letter R of RAZOR; OFF defines the result	RANCID	rejected by user 2026-08-21; nonlocal SIDE attachment was unsupported
+P10	TRANCE + SWEDEN	follow black route: T3 B6 B1 B2 T6 T2	ANSWER	exact match to the printed checksum; not the Node answer
+Final cryptic	OBSERVE / UPON / HANG WITH / HIGH GATE WARNING / TACKLE	extract ON from UPON-HIGH and OUT as the missing word in HANG _ WITH; LOOK ON=OBSERVE, LOOK OUT=WARNING, TAKE ON=TACKLE, and GATE=TAKE form three cells and axes of a 2x2 phrase matrix; fill the only missing cell	TAKE OUT	candidate; high confidence, awaiting user/site verification
