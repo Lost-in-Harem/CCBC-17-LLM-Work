@@ -1,5 +1,5 @@
 panel	left_input	right_input	operation	output
 P1	OBSERVE	UPON	align hole letters O,B and P,O to the pictured circles; numbered positions 1..5 read V,E,N,U,S	VENUS
-P2	UPON	HANG WITH	split UP|ON and HANG|WITH; the row semicircles assign UP,HANG to the left halves and ON,WITH to the right halves; pictured extraction order UP,ON,WITH,HANG reads S,U,N,D,A,Y	SUNDAY
-P3	HANG WITH	HIGH GATE WARNING	cancel matching letter copies across the two inputs; the remainder A,E,G,G,I,N,R anagrams to GEARING	GEARING
-P4	HIGH GATE WARNING	TACKLE	exchange the embedded word GATE with the entire right input TACKLE, forming the controversial rugby rule name HIGH TACKLE WARNING; answer its field	RUGBY
+P2	UPON	TARGET	split UP|ON and TAR|GET; use TAR(RED) WITH THE SAME BRUSH, ON THIN ICE, GET COLD FEET, and UP IN THE AIR; indexed/Caesar extraction reads S,U,N,D,A,Y	SUNDAY
+P3	TARGET	AGAIN	remove the repeated pair T,T from TARGET and A,A from AGAIN; anagram ARGE+GIN to GEARING	GEARING
+P4	AGAIN	SIX	reorder the two inputs as SIX AGAIN, the controversial rugby league rule name; answer its field	RUGBY

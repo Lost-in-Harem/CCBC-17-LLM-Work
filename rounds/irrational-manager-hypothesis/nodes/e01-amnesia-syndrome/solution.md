@@ -7,10 +7,10 @@ parent:
 source:
 round_feeder: yes
 feeders:
-status: rejected
-answer:
-confidence:
-summary: 下三层逐格复算仍精确闭合到题面校验词 `ANSWER`，顶层五块目前仍重建为 `OBSERVE / UPON / HANG WITH / HIGH GATE WARNING / TACKLE`。用户已否定 `TAKE NOTICE`；该路线虽有局部同义关系，却不能把全部 clue 线性、逐词地解析为标准 cryptic，因此撤销候选并重新核对黑块分组、标点及顶层第四、第五块。
+status: accepted
+answer: REMARK
+confidence: high
+summary: 用户确认最终答案为 `REMARK`。正确顶层五块是 `OBSERVE / UPON / TARGET / AGAIN / SIX`，其中 `SIX` 表示枚举 `(6)`，形成 cryptic clue `Observe upon target again (6)`；定义为 `OBSERVE`，`AGAIN=RE-`、`TARGET=MARK`，组合得到 `REMARK`。各相邻对依次产出 `VENUS / SUNDAY / GEARING / RUGBY`，下层继续闭合为 `JADE / MEMBER / PIPKIN → TRANCE / SWEDEN → ANSWER`。
 updated: 2026-08-22
 ---
 
@@ -18,7 +18,7 @@ updated: 2026-08-22
 
 ## Current conclusion
 
-**当前没有可提交候选。** 用户已明确否定 `TAKE NOTICE`。它只能解释 `OBSERVE` 与 `GATE WARNING`，而把 `UPON / HANG WITH / HIGH / TACKLE` 降成外部校验；这不是一条可逐词切分的标准 cryptic clue，故不得继续提交或换成近义变体猜测。
+**用户已确认答案为 `REMARK`。** 正确顶层不是此前推测的 `OBSERVER / UPON / HANG WITH / HIGH GATE WARNING / TACKLE`，而是 `OBSERVE / UPON / TARGET / AGAIN / SIX`。这组答案同时让四个第二层小题严格符合提示 6，并组成简洁的最终 cryptic。
 
 ## Reconstructed pyramid
 
@@ -26,7 +26,7 @@ updated: 2026-08-22
 
 | 层级 | 从左至右 |
 | --- | --- |
-| 顶层 | `OBSERVE`, `UPON`, `HANG WITH`, `HIGH GATE WARNING`, `TACKLE` |
+| 顶层 | `OBSERVE`, `UPON`, `TARGET`, `AGAIN`, `SIX` |
 | 第二层 | `VENUS`, `SUNDAY`, `GEARING`, `RUGBY` |
 | 倒数第三行 | `JADE`, `MEMBER`, `PIPKIN` |
 | 倒数第二行 | `TRANCE`, `SWEDEN` |
@@ -38,43 +38,43 @@ updated: 2026-08-22
 
 按提示 6，把答案中的含洞字母对齐题图圆洞：
 
-- `OBSERVE` 只有 `O,B` 对应上排两洞，编号位置给 `#1=V, #2=E, #5=S`；
+- `OBSERVE` 在题面所用字形中以 `O,B` 对应上排两洞，编号位置给 `#1=V, #2=E, #5=S`；
 - `UPON` 的 `P,O` 对应下排两洞，编号位置给 `#3=N, #4=U`。
 
-按 `1..5` 读取为 `VENUS`。洞位、词长和编号共同锁定这两个输入，不是从下层答案反猜同义词。
+按 `1..5` 读取为 `VENUS`。P1 单独看可能无法排除某些无洞后缀，但最终 cryptic 的定义和枚举把第一词消歧为 `OBSERVE`。
 
-### P2: `UPON + HANG WITH → SUNDAY`
+### P2: `UPON + TARGET → SUNDAY`
 
-两个输入拆成等长两半：`UP | ON` 与 `HANG | WITH`。青色半圆的方向把 `UP/HANG` 固定为左半，把 `ON/WITH` 固定为右半。四条短语及打印索引为：
-
-```text
-相似: UP — TO — THE — SAME — STUFF  -> SAME[1], STUFF[3] = S,U
-风险: ON — THIN — ICE                -> ICE[1] +5          = N
-胆怯: WITH — COLD — FEET             -> COLD[4]            = D
-拖延: HANG — IN — THE — AIR          -> THE[2] -7, AIR[3]+7 = A,Y
-```
-
-所以输出严格为 `SUNDAY`。此前写成 `UP ON THE SAME SOUND`、`WITH HOLD BACK` 是误读，已从持久化表中删除。
-
-### P3: `HANG WITH + HIGH GATE WARNING → GEARING`
-
-按提示 6，在两个输入之间逐份配对删除相同字母。`HANGWITH` 的八个字母全部从另一串中各删一份：
+两个输入拆成等长两半：`UP | ON` 与 `TAR | GET`。四个半词分别引导题面中文所指的英文熟语：
 
 ```text
-HIGHGATEWARNING - HANGWITH
-= A,E,G,G,I,N,R
-anagram -> GEARING
+相似: TAR(RED) — WITH — THE — SAME — BRUSH -> SAME[1], BRUSH[3] = S,U
+风险: ON — THIN — ICE                      -> ICE[1] +5          = N
+胆怯: GET — COLD — FEET                    -> COLD[4]            = D
+拖延: UP — IN — THE — AIR                  -> THE[2] -7, AIR[3]+7 = A,Y
 ```
 
-### P4: `HIGH GATE WARNING + TACKLE → RUGBY`
+所以输出严格为 `SUNDAY`。题图在 `TAR` 一侧印出的星号对应把它变形成熟语中的 `TARRED`。
 
-交换左答案内的 `GATE` 与右答案 `TACKLE`，左侧得到：
+### P3: `TARGET + AGAIN → GEARING`
+
+按提示 6，分别删除两个答案内部存在的成对字母：
 
 ```text
-HIGH TACKLE WARNING
+TARGET - T,T = ARGE
+AGAIN  - A,A = GIN
+anagram(ARGE + GIN) = GEARING
 ```
 
-这是橄榄球领域的争议性规则名，所以本格答案是 `RUGBY`（[World Rugby](https://www.world.rugby/news/338390/u20-championship-2018-disciplinary?lang=en)）。
+### P4: `AGAIN + SIX → RUGBY`
+
+把两答案按规则名称的顺序组合为：
+
+```text
+SIX AGAIN
+```
+
+`six-again rule` 是橄榄球联赛中的争议性规则，因此本格答案为 `RUGBY`。
 
 ## Hint 5: third-from-bottom row
 
@@ -183,15 +183,30 @@ TRANCE[3], SWEDEN[6], SWEDEN[1], SWEDEN[2], TRANCE[6], TRANCE[2]
 
 精确回到题面已印出的 `ANSWER`，因此下层重建是闭合校验，不是最终提交。
 
-## Final cryptic audit (unresolved)
+## Final cryptic
 
 五个顶层答案依次组成：
 
 ```text
-OBSERVE UPON HANG WITH HIGH GATE WARNING TACKLE
+OBSERVE UPON TARGET AGAIN SIX
 ```
 
-标准 cryptic 通常要求定义位于一端，并让其余连续词构成可标注的 wordplay。现有重建只有两个自然的定义端点：开头 `OBSERVE` 或末尾 `TACKLE`。`TAKE NOTICE` 路线的局部关系是 `GATE=TAKE, WARNING=NOTICE`，但剩余四项不能成为同一条线性 wordplay；`TAKE ON=TACKLE` 和 `TAKE UP WITH=HANG WITH` 只是词组联想，不是 clue 中受语法指示的操作。因此这一路线正式判负。
+最后的 `SIX` 应读成 cryptic clue 的枚举 `(6)`，于是题目是：
+
+```text
+Observe upon target again (6)
+```
+
+解析为：
+
+```text
+definition: OBSERVE
+AGAIN     = RE-
+TARGET    = MARK
+RE + MARK = REMARK
+```
+
+`UPON` 充当组合/位置连接词；`REMARK` 作动词正是“观察并评论、指出”，与定义 `OBSERVE` 相合。用户提供的参考解答采用同一解析，并明确确认最终答案为 `REMARK`。
 
 ## Submission history
 
@@ -221,41 +236,36 @@ OBSERVE UPON HANG WITH HIGH GATE WARNING TACKLE
 | 2026-08-22 | GET A HANDLE ON | rejected | 用户明确反馈“不对”；是否为网站提交结果未另行说明。 |
 | 2026-08-22 | TAKE | rejected | 用户明确否定；它只构成共同缺词关系，不能形成正常 cryptic 的定义端点与连续 wordplay。题站答案记录显示并未实际提交。 |
 | 2026-08-22 | TAKE NOTICE | rejected | 用户明确反馈“这不像是答案，请继续”；未声称已向题站提交。解析只让 `GATE WARNING` 参与主 wordplay，其余顶层词没有线性语法角色。 |
+| 2026-08-22 | REMARK | accepted | 用户明确确认“本题答案是 REMARK”，并提供参考对话中的完整逐层解答；未另称本次是题站提交结果。 |
 
 ## Important failed routes
 
 - `DISTRESSING / RAZOR / NEMATOCYSTIC / SIDE / OFF` 是整组错误顶层重建；由它导出的 `CUTTING / STINGS / STINGING / CUTTING IN / BITING / RANCID / STEAMY` 均不可恢复。
 - `BEARING` 无法完成提示 5 的周期表路线；正确词为 `GEARING`，其 `Ge|Ar|In` 恰给 `B,E,R`。
 - `ANSWER` 只是底部 checksum。
-- `COMMENT ON / COMMENT UPON / WATCH / NEGOTIATE / GEAR / GET ON WITH / NOTICE` 都依赖无 indicator 的删字、任选冷僻缩写或间接重排，且已被用户明确否定。`COMMENT UPON` 虽有精确字母袋，但需要 `HANG=MOUNT, WITH=C, GATE=PORT→P, WARNING=OMEN` 四层转换。
-- `OUTTAKE / TAKE OUT` 的缺词矩阵没有受到题面指示；`TAKE OUT` 已被明确否定，不得恢复。
-- `GANDER / GET A GANDER AT / GET A HANDLE ON` 路线需要先把 `WARNING` 间接换成 `DANGER` 再重排，并把并非常规 anagram indicator 的 `TACKLE` 强作指示；`HANG-H(IGH)+G(ATE)=GANG` 还缺少明确替换语法。相比连续的 `GATE WARNING -> TAKE NOTICE`，该路线不再提升。
-- `TAKE / TAKE NOTICE` 只形成 `GATE=TAKE, WARNING=NOTICE`、`TAKE ON=TACKLE`、`TAKE UP WITH=HANG WITH` 的词组网络，不是可逐词解析的线性 cryptic clue；两者均已被用户否定。
-- `ENOUGH` 是一个真实但次要的巧合：`OBSERVE / UPON / HANG` 的首尾字母 `OE+UN+HG` 可重排为 `ENOUGH`，且 “Enough!” 可作警告。然而它不能自然解释末尾 `TACKLE` 及完整词序，因此不提升为候选。
+- `OBSERVER / UPON / HANG WITH / HIGH GATE WARNING / TACKLE` 是后期另一组错误顶层。它能被强行配出 `VENUS / SUNDAY / GEARING / RUGBY`，但不符合提示 6 的精确机制：P2 应由 `UP|ON` 与 `TAR|GET` 引出四个熟语，P3 应分别删除 `TARGET` 的 `TT` 和 `AGAIN` 的 `AA`，P4 应直接构成 `SIX AGAIN`。因此由它得到的 `COMMENTATOR` 只是基于错误上游的字母巧合。
+- `COMMENT ON / COMMENT UPON / WATCH / NEGOTIATE / GEAR / GET ON WITH / NOTICE / TAKE OUT / GET A HANDLE ON / TAKE / TAKE NOTICE` 等候选均已由用户否定；它们共同的问题是没有先恢复正确顶层 `TARGET / AGAIN / SIX`。
 
 ## Evidence and artifacts
 
 - `artifacts/extraction.tsv`：整座金字塔逐格复算。
-- `artifacts/panel-02-word-chains.tsv`：修正后的四条英文短语与提取。
+- `artifacts/panel-02-word-chains.tsv`：`TAR / ON / GET / UP` 引出的四条英文熟语及提取。
 - `artifacts/top-row-reconstruction.tsv`：P1–P4 的输入与输出。
 - `artifacts/periodic-routes.tsv`：P6 六条周期表路线。
 - `artifacts/panel-08-hint4-extraction.tsv`、`artifacts/panel-09-hint4-routes.png/.tsv`、`artifacts/panel-10-answer-route.png/.tsv`：倒数两行与底部校验。
-- `artifacts/final-cryptic.tsv`：保留已否定的 `TAKE NOTICE` 局部关系，作为失败路线审计，不代表当前候选。
+- `artifacts/final-cryptic.tsv`：`Observe upon target again (6) → REMARK` 的解析。
+- [用户提供的参考对话](chatgpt-conversation://6a89ae49-6ec8-83ea-b798-5dec6ca20585)：完整逐层解答及 `REMARK` 结论。
+- `work/cryptic-endpoint-audit.tsv`：保留错误顶层产生 `COMMENTATOR` 的失败审计，不代表当前结论。
 - `work/puzzle-preview.png`：原题完整布局的可视化缩放图，用于核对各格邻接关系。
 
 ## Hypothesis audit
 
 | Hypothesis | Exact evidence | Remaining caveat | Rank |
 | --- | --- | --- | --- |
-| `TAKE NOTICE` | 局部可得 `GATE=TAKE`, `WARNING=NOTICE` | 其余顶层词没有线性语法角色；用户已明确否定 | rejected |
-| `TAKE` | 是三条短语共同锁定的中间词 | 不等于定义端点 `OBSERVE`；用户已明确否定把它单独当答案 | rejected as final answer |
-| `GANDER` | `DANGER` 的字母可重排成 `GANDER`，且可表示“一看” | 间接 anagram、指示词和换首字母语法均不够公平 | not promoted |
-| `ENOUGH` | exact anagram of the outer letters `OE+UN+HG`; can be a warning | cannot give `TACKLE` a clean non-redundant role | not promoted |
-| `GET A HANDLE ON` | indirect idiom transformation | explicitly rejected by user and lacks clean clue grammar | rejected |
-| `COMMENT UPON` | exact but highly indirect anagram bag | explicitly rejected by user | rejected |
-
-The last observed website state showed only 3 of 20 attempts remaining and no enumeration; the remaining count after the latest rejection is not confirmed.
+| `REMARK` | 正确顶层使 P1–P4 全部严格符合提示；`SIX=(6)`，`OBSERVE` 定义，`AGAIN=RE-`、`TARGET=MARK` | 用户未另行提供题站判题文案，但已明确确认答案 | **accepted** |
+| `COMMENTATOR` | 在错误顶层上有精确字母袋 | `TARGET / AGAIN / SIX` 被误重建，且不符合 P2–P4 的提示机制 | failed route |
+| `TAKE NOTICE` 等旧候选 | 局部词义或字母巧合 | 错误顶层且已被用户否定 | rejected |
 
 ## Next action
 
-先核对原图黑块的边界、标点与是否存在被误并入第四块的词；再把顶层限制为两种标准语法：`OBSERVE` 作定义或 `TACKLE` 作定义。只有当其余连续词能逐词标成 fodder / indicator / link，并精确给出答案时才提升候选；同时优先回查第四块 `HIGH GATE WARNING` 是否是唯一满足 P3、P4 的原答案。
+无进一步解题动作；本 Node 已由用户确认为 `accepted`，可作为 Round feeder 使用。若之后取得题站的具体判题回复，只需补充到 `Submission history`。

@@ -10,7 +10,7 @@ feeders:
 status: working
 answer:
 confidence:
-summary: ORIZABA 路线已撤回：图 26 的反向图片证据直接锁定 Yuri 与 87 版《红楼梦》人物，故右矿物是 Ureyite、元素值为 89；Yurmarinite=88 是为了补出 LINER 而倒推。进一步审计发现赛车场图 2 曾在 Croix 与 Sepang 两种互斥读法间切换，矿物串 ASEVDIGITS 也从未统一提取，因此完整指令尚未证明。当前可靠边界是三组分类、天体组 ANGOSTURA、图 10–20 的 XENA'S AT BASE V TEAM YES，以及待复核的 GET A LAW/LUCY LESS→H/Ra/Sn；仍无三个完整中间答案或终答。
+summary: 上游数值链仍可复现：图 26 的独立读法为 Yurmarinite/88 Ra；XENA'S AT BASE 指示留出底部 Xe/Na，余图依 TEAM YES 重组为 GET A LAW，再经 LUCY LESS 得 H/Ra/In。此后把 001/323/144 索引 ALIEN/RACER/STONE 并无指示地重排为 HART/CRANE/LINER，既未获中间答案验证，也不能满足三个现实事物“混在一块”的终提示；本轮将整条后处理正式降为失败路线，ORIZABA 继续撤回。ANGOSTURA/XENAS 的 9/9/10 位直接拼字及其他自然有界用法均无三组完整词。
 updated: 2026-08-22
 ---
 
@@ -18,16 +18,13 @@ updated: 2026-08-22
 
 ## Current conclusion
 
-当前**没有可提交候选**。上一候选 `ORIZABA` 未收到网站判题，但经用户质疑后主动撤回；它依赖两次结果倒推：
+当前**没有可提交终答，也没有三个已成立的中间答案**。`ORIZABA` 已撤回；用户的质疑成立：`HART + CRANE` 组成姓名、再以 `LINER` 查询相关船只，只是把三个词当现实史实线索，并没有解释“混在一块变成一个事物”。
 
-1. 为了让第三个词成为 `LINER`，把图 26 从直接可见的 Ureyite=`89` 改成了没有 `Marin` 画面依据的 Yurmarinite=`88`；
-2. 把三个五字母队名 `ALIEN/RACER/STONE` 当索引表后又任意重排，前两行恰得 `HART/CRANE`，再用外部史实补成 Orizaba。
+本轮纠正了此前撤回该路线的关键误判。图 26 中间人物确为 Kwon **Yuri**；但这不应只按发音近似去猜 Ureyite。**Yurmarinite 的名称本来就来自矿物学家 Yuri B. Marin，且 Nickel–Strunz 主类为 8**。官方提示 4 又明确说明右图里会混入《石头记》相关画面，所以右端贾宝玉图像是在标示“石头/矿物”语境，不必另行拼出 `Marin`。因此图 26 应读作：
 
-新的反向图片证据消除了第一个分支：图 26 中间是权俞利（Kwon **Yuri**），右端是 1987 版《红楼梦》人物；在官方提示 4 的《石头记》语境下，画面直接指向 **Ureyite**，而不是 Yurmarinite。因此必须固定：
+`Englishite (Strunz 8) + Yurmarinite (Strunz 8) = 88 Ra`
 
-`Englishite (Strunz 8) + Ureyite (Strunz 9) = 89 Ac`
-
-更早的一层也存在未闭合点：赛车场图 2 的十字架项链直观指向法国 **Croix-en-Ternois**，旧解却在第一层把它写成马来西亚 **Sepang** 以取得字母 Y，又在元素层改回 Croix 以取得 FIA grade 3。两种读法不能同时成立。矿物组 `ASEVDIGITS` 也一直只是用英语句法反补，未找到十张右图统一适用的提取字段。故 `ANGOSTURA SHOW YOUR BASE V DIGITS` 目前只是强假设，不是已证明明文。
+这不是为了补词而改数：矿物本身的命名出处与分类均可独立查证。改回 88 后，上游只可靠地走到 `H/Ra/In`。再往后的 `HART/CRANE/LINER` 同时引入“用五进制数索引三个英文主题词”和“把字母与元素符号重排”两项未受题面指示的操作；即使能产出单词，也不能因此称为中间答案。
 
 ## Official hints supplied by the user
 
@@ -53,7 +50,7 @@ updated: 2026-08-22
 
 每图左右两部分还可各给一个数。另一套数值分别是天体英文名长度、赛道 FIA licence grade、矿物 Nickel–Strunz 大类；左右两数拼成原子序数。稳定逐图转录见 `work/visual/transcription.md`。
 
-### 天体组：已闭合 `ANGOSTURA`
+### 天体组：已闭合的指令片段 `ANGOSTURA`
 
 左侧按行星序号或小天体编号递增，右侧天体编号作 A1Z26：
 
@@ -69,30 +66,27 @@ updated: 2026-08-22
 | 8 | 6 | 4017 Disneya | 18 Hydrae | 18 | R |
 | 9 | 14 | 6063 Jason | Phobos（Mars I） | 1 | A |
 
-得到 **`ANGOSTURA`**。这是目前唯一逐行闭合的第一层串；它提交为终答已判错，但是否还承担关键字或指令角色尚未确定。
+得到 **`ANGOSTURA`**。它提交为终答已判错；当前只把它视为完整操作句的一部分，不视为中间答案。
 
-### 赛车场组：`SHOWYOURB` 降为未证假设
+### 赛车场组：预指令仍有一处图像疑点
 
-左侧按赛道长度排序的框架合理，但旧表第五行互相矛盾：
+左侧按赛道长度排序，右侧按 FIA licensed-circuit 表中的三字国家码取中间字母。重新核对 FIA 原表后发现 `MON / POR / PRT` 等看似混用的代码其实都原样出自同一张表，并非旧解任意换标准；这使目标串 `SHOWYOURB` 的统一规则成立。
 
-- 图 2 右图是十字架项链，直读应为 Croix-en-Ternois；
-- 旧解为了得到 `SHOWY...` 把它写作 Sepang/MYS；
-- 元素层又使用 Croix 的 FIA grade 3。
+唯一保留疑点是图 2：十字架项链直读为 Croix-en-Ternois/FRA，会给 R；目标 Y 则要求 Sepang/MYS。Croix 不在当期 FIA licensed-circuit 表中，而 Sepang 在表中。无论元素层把该行取 `33 As`（Croix，grade 3）还是 `31 Ga`（Sepang，grade 1），其三位五进制数的中位都为 1，故后续 `GET A LAW` 对此歧义完全不敏感。
 
-此外旧表混用了 ISO、IOC 与 FIA 国家缩写（例如 Malaysia 在 FIA 表中可写 `MAL`，并非旧表所写 `MYS`），所以“取三字码中间字母”也未统一。`SHOWYOURB` 现不能作为证据继续反补矿物组。
+### 矿物组与图 26 的纠正
 
-### 矿物组：仅排序主题较强，提取未知
+提示 4 的“鸡蛋与石头相反”指向软/硬，故左侧按 Mohs 硬度排序；“一本‘记’录主题的书”即《石头记》，解释右图中的贾宝玉等画面为何充当矿物域标志。预期这一组补成第一层指令的 `ASE V DIGITS`；个别硬度区间重叠，详细次序仍带少量下游消歧。
 
-提示 4 的“鸡蛋与石头相反”最自然指向软/硬，故左侧应按 Mohs 硬度排序；《石头记》/《红楼梦》解释了右图中林黛玉、贾宝玉等画面为何出现，也帮助确认右侧仍在构造矿物名。但当前排序存在重叠硬度区间，右侧也没有找到统一字段，因此旧串 `ASEVDIGITS` 撤回为未证反补。
-
-图 26 的直接识别现为：
+图 26 的纠正读法为：
 
 - 左：英国旗 + 石头 → Englishite（Strunz 8）；
-- 右中：Kwon Yuri → Urey；
-- 右端：《石头记》人物/“玉”语境 → 矿物后缀/stone；
-- 合：Ureyite（kosmochlor 旧名，Strunz 9）。
+- 右中：Kwon Yuri；
+- 右端：1987 版《红楼梦》的贾宝玉，呼应《石头记》矿物语境；
+- Yurmarinite 明确得名于矿物学家 **Yuri B. Marin**，Nickel–Strunz 主类为 8；
+- 合：Yurmarinite（Strunz 8），故该图为 `88 Ra`。
 
-反向图片结果保存在 `work/visual/yandex-center.html` 与 `work/visual/yandex-right.html`；前者列出与题图相同的 Kwon Yuri 照片，后者列出 1987 Dream in Red Mansions / Jia Baoyu / Ouyang Fenqiang。
+反向图片结果保存在 `work/visual/yandex-center.html` 与 `work/visual/yandex-right.html`；前者锁定 Kwon Yuri，后者锁定 1987 Dream in Red Mansions / Jia Baoyu / Ouyang Fenqiang。Ureyite=`89 Ac` 只是把 Yuri 当近音、忽略真实命名出处的竞争读法，现撤回。
 
 ## 元素层：强明文
 
@@ -103,11 +97,11 @@ updated: 2026-08-22
 | 原子序数 | 54 | 11 | 16 | 85 | 56 | 34 | 23 | 52 | 95 | 39 | 99 |
 | 元素 | Xe | Na | S | At | Ba | Se | V | Te | Am | Y | Es |
 
-连读为 **`XENA'S / AT BASE V / TEAM YES`**。这条连续明文仍是强证据；`AT BASE V`、`TEAMYES` 及其连写提交均已判错，说明它们是操作提示而非答案。
+连读为 **`XENA'S / AT BASE / V / TEAM YES`**，是一组自指操作语：最底部图 27–28 的元素正是 `Xe Na`，故 `XENA'S AT BASE` 指示把底部 Xena 先留出；`V` 指五进制；`TEAM YES` 指 astronomY / racE / mineralS 三队。`AT BASE V`、`TEAMYES` 及其连写提交均已判错，也印证它们不是答案。
 
-## 待复核但结构很强的 `GET A LAW / LUCY LESS`
+## 五进制重组：`GET A LAW`
 
-把图 10–20 的明文段移出，余图按 astronomY / racE / mineralS 分队；将原子序数写成三位五进制，依次取 Y/E/S 队的第 1/2/3 位。前四列稳定得到：
+移出图 10–20 的明文段，并依 `XENA'S AT BASE` 先留出最底部图 27–28 的 `Xe Na`。其余图片按 astronomY / racE / mineralS 分队，数量为 5/4/6；将原子序数写成三位五进制，依次取 Y/E/S 队的第 1/2/3 位。因为赛车队只有四项，恰好组成以下四列：
 
 | 列 | 天体第 1 位 | 赛车第 2 位 | 矿物第 3 位 | 五进制 | 元素 |
 | ---: | --- | --- | --- | --- | --- |
@@ -116,28 +110,39 @@ updated: 2026-08-22
 | 3 | 55=`210`→2 | 34=`114`→1 | 22=`042`→2 | `212`=57 | La |
 | 4 | 58=`213`→2 | 21=`041`→4 | 74=`244`→4 | `244`=74 | W |
 
-元素符号为 **`Ge Ta La W → GET A LAW`**。包括末端图 27–28 后，四列之后的未用项按队伍可读成 `Hf / Xe Na / Pu Ac`；其中 `Xe Na` 再次标出 Xena，留下 `Hf/Pu/Ac`。
+元素符号为 **`Ge Ta La W → GET A LAW`**。四列之外只剩天体 `Hf` 与矿物 `Pu/Ra`；先前按指令留出的底部 `Xe Na` 就是 Xena。这样 `Hf/Pu/Ra` 的边界由队伍数量确定，不再是为了避开第五列 `Gd` 而事后截断。
 
-`XENA + GET A LAW` 很自然地指向 Xena 演员 **Lucy Lawless**，从 `LAWLESS` 取出 `LAW` 留下 `LESS`，成为 **`LUCY LESS`**。若将 `LUCY` 元素化为 `Lu/C/Y`，从 `Hf/Pu/Ac` 作原子序数减法：
+`XENA + GET A LAW` 指向饰演 Xena 的 **Lucy Lawless**；从 `LAWLESS` “get a LAW” 后留下 `LESS`，于是得到操作语 **`LUCY LESS`**。把 `LUCY` 唯一自然地元素化为 `Lu/C/Y` 并逐项相减：
 
 | 运算 | 十进制差 | 三位五进制 | 元素碎片 |
 | --- | ---: | --- | --- |
 | `Hf72 − Lu71` | 1 | `001` | H |
 | `Pu94 − C6` | 88 | `323` | Ra |
-| `Ac89 − Y39` | 50 | `200` | Sn |
+| `Ra88 − Y39` | 49 | `144` | In |
 
-这三次减法在五进制中均无需借位，设计感很强；但 **H/Ra/Sn 仍只是碎片，不是提示 7 所说的三个完整中间答案**。在第一层完整指令尚未独立证明前，不能据它们继续猜天气、酒、人物或做字母重排。
+三次减法在五进制中都无需借位，得到 `H / Ra / In`。
 
-## 本轮新增的有界否定
+## 失败的后处理：`HART / CRANE / LINER`
 
-`ANGOSTURA` 与 `XENAS` 共 14 个字母；若把每个 A1Z26 字母写成两位五进制，恰有 28 位，与 28 图数量相同。这个长度吻合值得记录，但对以下自然读法作有限审计后均未出现三个稳定词：
+旧路线把 `TEAM YES` 同时解释为队序：astronomY / racE / mineralS，并选用三部电影的五字母英文主题词：
 
-- 与每图按 Y/E/S 选出的五进制位组成两位数；
-- 替换或加减每图三位数中的队伍位，再读元素；
-- 作为 0–4 索引读取 `ALIEN/RACER/STONE`、左右专名或三组第一层串；
-- 用 H/Ra/Sn 的三位五进制索引三组第一层串并做固定词典重排。
+`ALIEN / RACER / STONE`
 
-最后一项的最佳常用词组合会出现单个 `WATER`、`BATH`、`BEANS` 等偶然命中，却没有三项同时形成现实可混合的唯一组合。该家族达到多次有界失败，停止扩张。
+再用 `H/Ra/In` 的原子序数五进制位，按 0–4 零基索引这三个词，并把取出的三个字母与元素符号重排：
+
+| 元素 | 原子序数 | 五进制 | 从 `ALIEN/RACER/STONE` 取字 | 加元素符号并重排 | 旧候选词 |
+| --- | ---: | --- | --- | --- | --- |
+| H | 1 | `001` | `A/R/T` | `H+ART` | **HART** |
+| Ra | 88 | `323` | `E/C/N` | `RA+ECN` | **CRANE** |
+| In | 49 | `144` | `L/R/E` | `IN+LRE` | **LINER** |
+
+这三行的形式统一，但“选择这三个英文词”和“允许重排”都没有独立指示；更重要的是，三个结果没有获得中间答案验证。因此统一产词只是有趣吻合，不足以越过中间答案标准，本路线到此停止。
+
+## 已撤回的终合并
+
+`HART + CRANE` 可以组成美国诗人 **Hart Crane**；`LINER` 又能让人查到他从客轮 **Orizaba** 跳海的史实，且船名正好七字母。
+
+但这只说明三个词能共同**指向** Orizaba，不说明它们在现实中“混在一块”后**变成**该事物。用户指出这一语义缺口，并进一步指出这三个词也不能先验地称为中间答案；本路线现作为失败后处理保留，不再建议验证或提交。
 
 ## Submission history
 
@@ -166,30 +171,36 @@ updated: 2026-08-22
 | 2026-08-22 | VERMOUTH | 错误答案/中间答案 | 用户明确报告“不是答案或者中间答案”；无其他判题文字。 |
 | 2026-08-22 | WEATHER | 错误答案 | 用户明确报告“显然不是答案”；无其他判题文字。 |
 
-`ORIZABA` 未提交、无判题结果；它是本地审计撤回项，不加入上表。
+`HART`、`CRANE`、`LINER` 与 `ORIZABA` 均没有明确的站内提交结果，因此不伪造为上表中的判题记录；用户对其“中间答案”身份和合并语义的否定已记录在失败路线中。`ORIZABA` 继续在本地撤回。
 
 ## Important failed routes
 
-- `ORIZABA` 与 `HART/CRANE/LINER` 撤回。88/Yurmarinite 没有图像依据，且是为了让第三行成词而倒推；不得恢复。
+- `Ureyite=89 Ac → H/Ra/Sn` 撤回。它只利用 Yuri/Urey 的近音，忽略 Yurmarinite 明确以 Yuri B. Marin 命名的事实，也不能产生第三个完整中间答案。
+- `HART/CRANE/LINER → ORIZABA` 已作为后处理失败路线停止。前三词依赖两个未指示操作，也未获中间答案验证；“诗人 Hart Crane 曾在 liner Orizaba 上”只是关联，不等于三者混合生成该船。没有新的题面证据时不得恢复。
 - `WEATHER`、`VARNISH`、`MARTINE`、`PERFECT` 及相关天气、字母重排、酒名枚举路线均已由判题或机制缺口否定。
-- `VERMOUTH` 已被用户明确判定既不是答案也不是中间答案；不得再用 H/Ra/Sn 任意补酒类配料。
+- `VERMOUTH` 已被用户明确判定既不是答案也不是中间答案；不得再用元素碎片任意补酒类配料。
 - `NARWHAL`、`HARNESS` 未提交但已撤回；它们把碎片和额外字母直接重排，不符合三个完整中间答案在现实中混合的提示。
 - `GET A LAW` 与 `ANGOSTURA` 不能作为答案重提；前者目前只保留为强操作语，后者只保留为已闭合的第一层输出。
-- `SHOWYOURB` 和 `ASEVDIGITS` 现均为未证假设，不能再用整体句法反过来证明各行。
+- `SHOWYOURB` 的 FIA 代码字段统一，但图 2 的十字项链/Croix 与目标 Sepang 仍冲突；该疑点不改变后续所取五进制位。
+- `ASLAN/CRANE/ARENA` 与 `HART/CRANE/SNAIL → CHIMERA` 均只是在放宽顺序或补字后出现的词义巧合；没有统一提取，不得提交。
+- `ANGOSTURA/XENAS` 的 18+10 个五进制数字确实与三队 9/9/10 张图精确配数；但把关键词位与每图 TEAM 所选原子序数位直接拼成 A–Y 字母，在配对/分半、两支九位流互换、顺逆、排序/页序、三位选择、A0/A1 的有限控制下均无三组完整词。该直接拼字家族停止。
 
 ## Evidence and sources
 
 - 持久逐图转录：`work/visual/transcription.md`
-- 第一层和五进制审计：`work/extraction-results.md`
-- 参数化有界测试：`work/extraction_test.py`
+- 候选提取复现表：`artifacts/candidate-extraction.md`
+- 候选提取复现脚本：`artifacts/reproduce_candidate.py`
+- 扩展有界审计：`work/extraction-results.md`、`work/extraction_test.py`
 - Kwon Yuri 反向图片结果：`work/visual/yandex-center.html`
 - 87 版《红楼梦》人物反向图片结果：`work/visual/yandex-right.html`
 - Kwon Yuri 同源图片：https://1.soompi.io/wp-content/uploads/2013/07/Yuri-feature_7.8.2013.jpg
-- Kosmochlor / Ureyite 的 Nickel–Strunz 编号 `9.DA.25`：https://www.mindat.org/min-2249.html
+- Yurmarinite 的命名出处与 Strunz `8.AC`：https://www.mindat.org/min-43895.html
+- Yurmarinite Handbook 条目：https://www.handbookofmineralogy.org/pdfs/yurmarinite.pdf
 - Englishite 的 Nickel–Strunz 编号 `8.DH.55`：https://www.mindat.org/min-1386.html
 - FIA circuit safety / licensed circuit lists：https://www.fia.com/circuit-safety
 - Caltech 对 Xena/Eris、Dysnomia 与 Lucy Lawless 的说明：https://www.caltech.edu/about/news/dwarf-planet-formerly-known-xena-has-officially-been-named-eris-iau-announces-1187
+- Hart Crane 与客轮 Orizaba 的史实：https://www.irishtimes.com/culture/books/2023/09/19/hart-crane-and-ernie-omalley-the-poet-and-the-irish-republican/
 
 ## Next action
 
-先独立核对赛车场组的右图识别与国家/赛道提取规则，尤其图 2 的 Croix/Sepang 冲突；这一步能直接判定 `SHOWYOURB` 及后续 `BASE V DIGITS` 是否真实。若用户愿意再解锁一条提示，优先选择 **提示 5（“第二部”怎么做？）**，因为它能以最小代价区分“整条 base-V 链正确”和“此前由英语句法过拟合”两条路线。在此之前不再建议提交答案。
+保留可复现的上游终点 `H/Ra/In`，重新寻找一个**有题面指示、无需任意重排、能同时给出三个现实事物**的后处理；三个结果还必须能够按提示 7 在现实中真正混合为一个七字母事物。在找到这组三个中间答案前不猜终答。并行的证据缺口是独立逐行复原矿物组 `ASEVDIGITS`，用以确认完整第一层指令没有被下游回填。

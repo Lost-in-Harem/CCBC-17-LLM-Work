@@ -1,7 +1,7 @@
-clue_material	normalization	completed_phrase	checks_as	role
-OBSERVE	OBSERVE	TAKE NOTICE	OBSERVE	direct definition of answer
-GATE	TAKE (receipts/proceeds)	TAKE NOTICE	first word of answer	primary charade
-WARNING	NOTICE	TAKE NOTICE	second word of answer	primary charade
-UPON	ON	TAKE ON	TACKLE	first cross-check for TAKE
-HIGH	UP	TAKE UP WITH	HANG WITH	second cross-check for TAKE; WITH is retained literally
-full clue	OBSERVE=TAKE NOTICE; GATE=TAKE; WARNING=NOTICE; UPON=ON; TACKLE=TAKE ON; HIGH=UP; HANG WITH=TAKE UP WITH	TAKE NOTICE	all eight clue words accounted for	answer
+clue_token	reading	cryptic_role	contribution
+OBSERVE	definition of REMARK	definition	REMARK
+UPON	places/joins the following prefix with TARGET	assembly/link	
+TARGET	MARK	wordplay	MARK
+AGAIN	RE-	wordplay prefix	RE
+SIX	enumeration (6)	answer length	6
+full clue	Observe upon target again (6)	RE + MARK	REMARK

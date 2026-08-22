@@ -1,7 +1,7 @@
 row	parent_word	semicircle_side	answer_half	clue	chain_from_parent	extraction	letter
-1	UP	left	UPON left half	similarity	UP — TO — THE — SAME — STUFF	SAME[1]	S
-1	UP	left	UPON left half	similarity	UP — TO — THE — SAME — STUFF	STUFF[3]	U
+1	TAR	left	TARGET left half	similarity	TAR(RED) — WITH — THE — SAME — BRUSH	SAME[1]	S
+1	TAR	left	TARGET left half	similarity	TAR(RED) — WITH — THE — SAME — BRUSH	BRUSH[3]	U
 2	ON	right	UPON right half	risk	ON — THIN — ICE	ICE[1] shifted +5	N
-3	WITH	right	HANG WITH right half	timidity	WITH — COLD — FEET	COLD[4]	D
-4	HANG	left	HANG WITH left half	procrastination	HANG — IN — THE — AIR	THE[2] shifted -7	A
-4	HANG	left	HANG WITH left half	procrastination	HANG — IN — THE — AIR	AIR[3] shifted +7	Y
+3	GET	right	TARGET right half	timidity	GET — COLD — FEET	COLD[4]	D
+4	UP	left	UPON left half	procrastination	UP — IN — THE — AIR	THE[2] shifted -7	A
+4	UP	left	UPON left half	procrastination	UP — IN — THE — AIR	AIR[3] shifted +7	Y
