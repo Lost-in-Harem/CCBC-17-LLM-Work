@@ -7,10 +7,10 @@ parent:
 source:
 round_feeder: yes
 feeders:
-status: rejected
-answer:
-confidence:
-summary: `GET A HANDLE ON` 已被用户明确否定，连同此前 `COMMENT UPON` 等路线均不得恢复。虽然现有金字塔可闭合到题面 `ANSWER`，最终 cryptic 连续失败说明至少一个上游答案或分词仍可能由错误假设形成自洽闭环；当前从倒数第三行和倒数第二行反向重新审计，不再围绕旧顶层字符串猜同义词。
+status: candidate
+answer: GANDER
+confidence: high
+summary: 下三层逐格复算仍精确闭合到题面校验词 `ANSWER`；顶层则形成完整的嵌套 cryptic：`HANG-H(IGH)+G(ATE)=GANG`，`GANG UP ON=TACKLE`，再以 `WARNING=DANGER`、`DANGER* = GANDER = OBSERVE` 收束。八个顶层词均有连续且不重复的角色。
 updated: 2026-08-22
 ---
 
@@ -18,23 +18,19 @@ updated: 2026-08-22
 
 ## Current conclusion
 
-**当前没有候选答案。** `GET A HANDLE ON` 已被用户明确否定。
+**当前候选答案：`GANDER`。** 旧的 `TAKE` 路线已撤销；它只是几组可搭配短语，不能构成一条正常的 cryptic clue。
 
-这不是把 `WITH/HIGH/GATE` 各自压成冷僻缩写的大字母袋，而是两条同结构习语之间的变换：
+顶层真正的结构是嵌套 wordplay：
 
 ```text
-OBSERVE  = GET A GANDER AT
-                 GANDER = (DANGER)*       [WARNING]
-
-HANG     = DANGLE
-HIGH/GATE: DANGLE - G + H = DANHLE
-                         -> HANDLE
-UPON     = ON, replacing the final AT
-
-TACKLE   = GET A HANDLE ON
+HANG - H(IGH) + G(ATE) = GANG
+GANG + UP ON            = GANG UP ON = TACKLE
+WARNING                 = DANGER
+TACKLE DANGER           = anagram(DANGER) = GANDER
+OBSERVE                  = GANDER
 ```
 
-也就是说，共同骨架 `GET A _ _` 保留；`WARNING=DANGER` 的重排 `GANDER` 换成 `HANG=DANGLE` 经 `G[ate]→H[igh]` 后的重排 `HANDLE`，末尾 `AT` 换成 `ON`。两端分别是现成的 “observe” 与 “tackle” 习语，中间每个顶层词都参与变换。
+这里 `UPON` 必须按第二格已经由图面验证过的边界拆成 `UP | ON`。中间一段先造出操作词 `TACKLE`，再让它作用于 `WARNING` 的同义词 `DANGER`；结果 `GANDER` 正好是 `OBSERVE` 的定义。八个顶层词全部按原顺序进入解析。
 
 ## Reconstructed pyramid
 
@@ -207,43 +203,25 @@ TRANCE[3], SWEDEN[6], SWEDEN[1], SWEDEN[2], TRANCE[6], TRANCE[2]
 OBSERVE UPON HANG WITH HIGH GATE WARNING TACKLE
 ```
 
-### Two idiomatic endpoints
+### Nested cryptic parse
 
-首尾不是两个互不相干的短定义，而是同一骨架的起点和终点：
+1. `UPON` 在 P2 中已经被图形强制拆为 `UP | ON`，所以这里保留同一词界。
+2. `HANG WITH HIGH GATE` 给出一次首字母替换：从 `HANG` 去掉 `H(IGH)`，放入 `G(ATE)`，得到 `GANG`。`WITH` 是连接这次替换的语法词。
+3. 把结果接到前面的 `UP ON`：`GANG UP ON`，意思是联合攻击某人，即 `TACKLE`。这一步不是答案，而是构造出下一步的操作指示词。
+4. `WARNING` 的直接同义词是 `DANGER`。
+5. 用刚构造出的 `TACKLE` 去“处理/攻击” `DANGER` 的字母：`DANGER* = GANDER`。
+6. `GANDER` 可作名词“一看”，也可非正式地作动词“看”，与开头定义 `OBSERVE` 对应。
 
-```text
-OBSERVE = GET A GANDER AT
-TACKLE  = GET A HANDLE ON
-```
-
-`gander at` 的 “look/observe” 义可由 [Cambridge](https://dictionary.cambridge.org/us/dictionary/english/gander) 核对；[`get a handle on`](https://dictionary.cambridge.org/us/dictionary/english/to-get-a-handle-on-something) 则是 “understand or be able to deal with”，与 `tackle` 直接对应。两式的枚举同为 `(3,1,6,2)`，共同部分为 `GET A`。
-
-### Exact middle transformation
-
-| Clue material | Normalization | Exact role |
-| --- | --- | --- |
-| `WARNING` | `DANGER` | `DANGER* = GANDER`，给起点习语的核心词 |
-| `HANG` | `DANGLE` | 作为目标核心词的新 fodder |
-| `WITH HIGH GATE` | `H` for `G` | `DANGLE-G+H = DANHLE` |
-| implied rearrangement | `DANHLE*` | 得到 `HANDLE` |
-| `UPON` | `ON` | 把起点末尾的 `AT` 换成目标末尾的 `ON` |
-
-完整链为：
+因此整句按原词序可标成：
 
 ```text
-GET A GANDER AT                     (OBSERVE)
-      ^^^^^^  ^^
-      DANGER* AT
-
-WARNING=DANGER  ->  HANG=DANGLE
-                         -G[ate] +H[igh]
-                         -> HANDLE*
-AT                ->  ON                  (UPON)
-
-GET A HANDLE ON                      (TACKLE)
+OBSERVE | UP ON [HANG WITH H(IGH) G(ATE) -> GANG] | WARNING=DANGER | TACKLE
+definition              nested construction              fodder        indicator
 ```
 
-这比 `COMMENT UPON` 的 `MOUNT + C + P + OMEN` 路线少了三层任选缩写，并解释了为何 clue 同时刻意选用高度相似的 `WARNING/HANG`、`GATE/HIGH` 和首尾习语。
+更直观地说，中段先得到 `GANG UP ON = TACKLE`，随后这个 `TACKLE` 才充当 `DANGER` 的重排指示。这解释了为什么题面同时打印了一个 `TACKLE`：它既校验中段产物，又明确告诉我们如何处理 `WARNING`。全部八个词都被使用，且没有把若干独立搭配误当作 clue。
+
+词义核对：[Cambridge 的 `gang up on`](https://dictionary.cambridge.org/us/dictionary/english/gang-up-on) 是联合起来反对或攻击某人；[`gander`](https://en.wiktionary.org/wiki/gander) 有非正式的“一看/看一眼”义。
 
 ## Submission history
 
@@ -271,17 +249,17 @@ GET A HANDLE ON                      (TACKLE)
 | 2026-08-22 | TAKE OUT | rejected | 用户明确反馈“take out 不是答案”。 |
 | 2026-08-22 | COMMENT UPON | rejected | 用户明确判断该解析不可能是 intended answer；未声称已向网站提交。 |
 | 2026-08-22 | GET A HANDLE ON | rejected | 用户明确反馈“不对”；是否为网站提交结果未另行说明。 |
+| 2026-08-22 | TAKE | rejected | 用户明确否定；它只构成共同缺词关系，不能形成正常 cryptic 的定义端点与连续 wordplay。题站答案记录显示并未实际提交。 |
 
 ## Important failed routes
 
 - `DISTRESSING / RAZOR / NEMATOCYSTIC / SIDE / OFF` 是整组错误顶层重建；由它导出的 `CUTTING / STINGS / STINGING / CUTTING IN / BITING / RANCID / STEAMY` 均不可恢复。
 - `BEARING` 无法完成提示 5 的周期表路线；正确词为 `GEARING`，其 `Ge|Ar|In` 恰给 `B,E,R`。
 - `ANSWER` 只是底部 checksum。
-- `COMMENT ON / COMMENT UPON / WATCH / NEGOTIATE / GEAR / GET ON WITH / NOTICE` 都依赖无 indicator 的删字、任选冷僻缩写或间接重排，且已被用户明确否定。`COMMENT UPON` 虽有精确字母袋，但需要 `HANG=MOUNT, WITH=C, GATE=PORT→P, WARNING=OMEN` 四层转换，未解释题面刻意形成的两条同构习语。
+- `COMMENT ON / COMMENT UPON / WATCH / NEGOTIATE / GEAR / GET ON WITH / NOTICE` 都依赖无 indicator 的删字、任选冷僻缩写或间接重排，且已被用户明确否定。`COMMENT UPON` 虽有精确字母袋，但需要 `HANG=MOUNT, WITH=C, GATE=PORT→P, WARNING=OMEN` 四层转换。
 - `OUTTAKE / TAKE OUT` 的缺词矩阵没有受到题面指示；`TAKE OUT` 已被明确否定，不得恢复。
-- 单答 `GANDER` 或 `HANDLE` 都只解释 clue 的一半，不能提交；它们是完整习语变换中的两个核心词。
-- `GET A GANDER AT` 是 `OBSERVE` 给出的起始习语，不是当前目标；经过 `WARNING→HANG`、`G[ate]→H[igh]` 和 `AT→ON` 后，目标才是 `GET A HANDLE ON`。
-- `GET A HANDLE ON` 的双习语变换虽能逐字母闭合，但用户已明确否定；不得因字母等式再次恢复。
+- `GET A GANDER AT / GET A HANDLE ON` 路线把普通 clue 强行解释成两条习语之间的字母替换，缺少清晰语法，继续视为失败。此前孤立地注意到 `DANGER*=GANDER` 也不完整；本次只有在新找到 `HANG-H(IGH)+G(ATE)=GANG`、`GANG UP ON=TACKLE` 后，才恢复单词答案 `GANDER`，并未恢复这些短语路线。
+- `ENOUGH` 是一个真实但次要的巧合：`OBSERVE / UPON / HANG` 的首尾字母 `OE+UN+HG` 可重排为 `ENOUGH`，且 “Enough!” 可作警告。然而它不能自然解释末尾 `TACKLE` 及完整词序，因此不提升为候选。
 
 ## Evidence and artifacts
 
@@ -290,19 +268,21 @@ GET A HANDLE ON                      (TACKLE)
 - `artifacts/top-row-reconstruction.tsv`：P1–P4 的输入与输出。
 - `artifacts/periodic-routes.tsv`：P6 六条周期表路线。
 - `artifacts/panel-08-hint4-extraction.tsv`、`artifacts/panel-09-hint4-routes.png/.tsv`、`artifacts/panel-10-answer-route.png/.tsv`：倒数两行与底部校验。
-- `artifacts/final-cryptic.tsv`：最终 clue 的逐项字母等式。
+- `artifacts/final-cryptic.tsv`：`GANDER` 的逐步嵌套 cryptic 解析。
 - `work/puzzle-preview.png`：原题完整布局的可视化缩放图，用于核对各格邻接关系。
 
 ## Hypothesis audit
 
 | Hypothesis | Exact evidence | Remaining caveat | Rank |
 | --- | --- | --- | --- |
-| `GET A HANDLE ON` | `OBSERVE=GET A GANDER AT`; `WARNING=DANGER→GANDER`; `HANG=DANGLE`, `-G[ate]+H[igh]→HANDLE`; `UPON=ON` | explicitly rejected by user | rejected |
-| `GET A GANDER AT` | exact starting idiom and `DANGER* = GANDER` | it is the source phrase indicated by `OBSERVE`, before the clue's stated transformations | intermediate only |
-| `COMMENT UPON` | exact but highly indirect anagram bag | explicitly rejected by user; ignores the paired `GANDER/HANDLE` construction | rejected |
+| `GANDER` | `HANG-H(IGH)+G(ATE)=GANG`; `GANG UP ON=TACKLE`; `WARNING=DANGER`; `DANGER*=GANDER=OBSERVE` | `TACKLE` 作主动重排指示稍不常见，但它由前半句精确构造、字母结果精确且全句无废词 | candidate, high confidence |
+| `TAKE` | 四组搭配在词义上成立 | 缺少正常 cryptic 的连续语法；用户已明确否定 | rejected |
+| `ENOUGH` | exact anagram of the outer letters `OE+UN+HG`; can be a warning | cannot give `TACKLE` a clean non-redundant role | not promoted |
+| `GET A HANDLE ON` | indirect idiom transformation | explicitly rejected by user and lacks clean clue grammar | rejected |
+| `COMMENT UPON` | exact but highly indirect anagram bag | explicitly rejected by user | rejected |
 
 The last observed website state showed only 3 of 20 attempts remaining and no enumeration; the remaining count after the latest rejection is not confirmed.
 
 ## Next action
 
-从倒数第三行起反向审计每个输出是否由图面唯一决定，重点检查 `MEMBER / PIPKIN / TRANCE / SWEDEN` 是否只是被底部 `ANSWER` 反推出来的自洽词；在找到新的唯一顶层字符串前不再给提交候选。
+建议用户把 `GANDER` 作为下一次提交；等待网站判定。若被否定，记录题站的明确结果，并优先检查 `TACKLE` 是否只是在定义 `GANG UP ON`、而真正的末步指示词藏在题面排版中。

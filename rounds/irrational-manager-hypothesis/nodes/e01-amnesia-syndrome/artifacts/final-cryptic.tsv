@@ -1,10 +1,7 @@
-stage	clue_material	normalization	exact_operation	result	role
-source-definition	OBSERVE	GET A GANDER AT	straight idiomatic definition	GET A GANDER AT	starting phrase
-source-core	WARNING	DANGER	anagram DANGER	GANDER	middle word of the starting phrase
-source-preposition	OBSERVE phrase	AT	last word of GET A GANDER AT	AT	starting preposition
-target-preposition	UPON	ON	replace AT with ON	ON	last word of the target phrase
-target-core	HANG	DANGLE	use DANGLE as the replacement six-letter fodder	DANGLE	replaces WARNING=DANGER
-letter-substitution	WITH HIGH GATE	HIGH=H; GATE=G	replace G in DANGLE with H	DANHLE	licensed one-letter substitution
-target-anagram	HANG WITH HIGH [for] GATE	DANHLE	anagram	HANDLE	middle word of the target phrase
-target-definition	TACKLE	GET A HANDLE ON	straight idiomatic definition	GET A HANDLE ON	answer candidate
-full-chain	OBSERVE ... TACKLE	GET A GANDER AT -> GET A HANDLE ON	DANGER* -> GANDER; DANGLE-G+H -> HANDLE; AT -> ON	GET A HANDLE ON	all clue blocks participate in the transformation
+step	clue_material	operation	result	role
+1	UPON	split at the P2-confirmed boundary	UP ON	fodder for a phrasal verb
+2	HANG WITH HIGH GATE	replace H(IGH) in HANG with G(ATE)	GANG	letter substitution
+3	HANG-derived GANG + UP ON	concatenate as a standard phrasal verb	GANG UP ON = TACKLE	nested definition of the operation word
+4	WARNING	direct synonym	DANGER	anagram fodder
+5	DANGER + TACKLE	tackle/rearrange the letters	GANDER	wordplay result
+6	OBSERVE	direct definition	GANDER	answer
