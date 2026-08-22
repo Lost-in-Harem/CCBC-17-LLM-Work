@@ -1,7 +1,7 @@
-step	clue_material	operation	result	role
-1	UPON	split at the P2-confirmed boundary	UP ON	fodder for a phrasal verb
-2	HANG WITH HIGH GATE	replace H(IGH) in HANG with G(ATE)	GANG	letter substitution
-3	HANG-derived GANG + UP ON	concatenate as a standard phrasal verb	GANG UP ON = TACKLE	nested definition of the operation word
-4	WARNING	direct synonym	DANGER	anagram fodder
-5	DANGER + TACKLE	tackle/rearrange the letters	GANDER	wordplay result
-6	OBSERVE	direct definition	GANDER	answer
+clue_material	normalization	completed_phrase	checks_as	role
+OBSERVE	OBSERVE	TAKE NOTICE	OBSERVE	direct definition of answer
+GATE	TAKE (receipts/proceeds)	TAKE NOTICE	first word of answer	primary charade
+WARNING	NOTICE	TAKE NOTICE	second word of answer	primary charade
+UPON	ON	TAKE ON	TACKLE	first cross-check for TAKE
+HIGH	UP	TAKE UP WITH	HANG WITH	second cross-check for TAKE; WITH is retained literally
+full clue	OBSERVE=TAKE NOTICE; GATE=TAKE; WARNING=NOTICE; UPON=ON; TACKLE=TAKE ON; HIGH=UP; HANG WITH=TAKE UP WITH	TAKE NOTICE	all eight clue words accounted for	answer

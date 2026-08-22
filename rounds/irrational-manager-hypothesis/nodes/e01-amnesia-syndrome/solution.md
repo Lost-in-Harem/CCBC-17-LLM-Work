@@ -7,10 +7,10 @@ parent:
 source:
 round_feeder: yes
 feeders:
-status: candidate
-answer: GANDER
-confidence: high
-summary: 下三层逐格复算仍精确闭合到题面校验词 `ANSWER`；顶层则形成完整的嵌套 cryptic：`HANG-H(IGH)+G(ATE)=GANG`，`GANG UP ON=TACKLE`，再以 `WARNING=DANGER`、`DANGER* = GANDER = OBSERVE` 收束。八个顶层词均有连续且不重复的角色。
+status: rejected
+answer:
+confidence:
+summary: 下三层逐格复算仍精确闭合到题面校验词 `ANSWER`，顶层五块目前仍重建为 `OBSERVE / UPON / HANG WITH / HIGH GATE WARNING / TACKLE`。用户已否定 `TAKE NOTICE`；该路线虽有局部同义关系，却不能把全部 clue 线性、逐词地解析为标准 cryptic，因此撤销候选并重新核对黑块分组、标点及顶层第四、第五块。
 updated: 2026-08-22
 ---
 
@@ -18,19 +18,7 @@ updated: 2026-08-22
 
 ## Current conclusion
 
-**当前候选答案：`GANDER`。** 旧的 `TAKE` 路线已撤销；它只是几组可搭配短语，不能构成一条正常的 cryptic clue。
-
-顶层真正的结构是嵌套 wordplay：
-
-```text
-HANG - H(IGH) + G(ATE) = GANG
-GANG + UP ON            = GANG UP ON = TACKLE
-WARNING                 = DANGER
-TACKLE DANGER           = anagram(DANGER) = GANDER
-OBSERVE                  = GANDER
-```
-
-这里 `UPON` 必须按第二格已经由图面验证过的边界拆成 `UP | ON`。中间一段先造出操作词 `TACKLE`，再让它作用于 `WARNING` 的同义词 `DANGER`；结果 `GANDER` 正好是 `OBSERVE` 的定义。八个顶层词全部按原顺序进入解析。
+**当前没有可提交候选。** 用户已明确否定 `TAKE NOTICE`。它只能解释 `OBSERVE` 与 `GATE WARNING`，而把 `UPON / HANG WITH / HIGH / TACKLE` 降成外部校验；这不是一条可逐词切分的标准 cryptic clue，故不得继续提交或换成近义变体猜测。
 
 ## Reconstructed pyramid
 
@@ -195,7 +183,7 @@ TRANCE[3], SWEDEN[6], SWEDEN[1], SWEDEN[2], TRANCE[6], TRANCE[2]
 
 精确回到题面已印出的 `ANSWER`，因此下层重建是闭合校验，不是最终提交。
 
-## Final cryptic audit
+## Final cryptic audit (unresolved)
 
 五个顶层答案依次组成：
 
@@ -203,25 +191,7 @@ TRANCE[3], SWEDEN[6], SWEDEN[1], SWEDEN[2], TRANCE[6], TRANCE[2]
 OBSERVE UPON HANG WITH HIGH GATE WARNING TACKLE
 ```
 
-### Nested cryptic parse
-
-1. `UPON` 在 P2 中已经被图形强制拆为 `UP | ON`，所以这里保留同一词界。
-2. `HANG WITH HIGH GATE` 给出一次首字母替换：从 `HANG` 去掉 `H(IGH)`，放入 `G(ATE)`，得到 `GANG`。`WITH` 是连接这次替换的语法词。
-3. 把结果接到前面的 `UP ON`：`GANG UP ON`，意思是联合攻击某人，即 `TACKLE`。这一步不是答案，而是构造出下一步的操作指示词。
-4. `WARNING` 的直接同义词是 `DANGER`。
-5. 用刚构造出的 `TACKLE` 去“处理/攻击” `DANGER` 的字母：`DANGER* = GANDER`。
-6. `GANDER` 可作名词“一看”，也可非正式地作动词“看”，与开头定义 `OBSERVE` 对应。
-
-因此整句按原词序可标成：
-
-```text
-OBSERVE | UP ON [HANG WITH H(IGH) G(ATE) -> GANG] | WARNING=DANGER | TACKLE
-definition              nested construction              fodder        indicator
-```
-
-更直观地说，中段先得到 `GANG UP ON = TACKLE`，随后这个 `TACKLE` 才充当 `DANGER` 的重排指示。这解释了为什么题面同时打印了一个 `TACKLE`：它既校验中段产物，又明确告诉我们如何处理 `WARNING`。全部八个词都被使用，且没有把若干独立搭配误当作 clue。
-
-词义核对：[Cambridge 的 `gang up on`](https://dictionary.cambridge.org/us/dictionary/english/gang-up-on) 是联合起来反对或攻击某人；[`gander`](https://en.wiktionary.org/wiki/gander) 有非正式的“一看/看一眼”义。
+标准 cryptic 通常要求定义位于一端，并让其余连续词构成可标注的 wordplay。现有重建只有两个自然的定义端点：开头 `OBSERVE` 或末尾 `TACKLE`。`TAKE NOTICE` 路线的局部关系是 `GATE=TAKE, WARNING=NOTICE`，但剩余四项不能成为同一条线性 wordplay；`TAKE ON=TACKLE` 和 `TAKE UP WITH=HANG WITH` 只是词组联想，不是 clue 中受语法指示的操作。因此这一路线正式判负。
 
 ## Submission history
 
@@ -250,6 +220,7 @@ definition              nested construction              fodder        indicator
 | 2026-08-22 | COMMENT UPON | rejected | 用户明确判断该解析不可能是 intended answer；未声称已向网站提交。 |
 | 2026-08-22 | GET A HANDLE ON | rejected | 用户明确反馈“不对”；是否为网站提交结果未另行说明。 |
 | 2026-08-22 | TAKE | rejected | 用户明确否定；它只构成共同缺词关系，不能形成正常 cryptic 的定义端点与连续 wordplay。题站答案记录显示并未实际提交。 |
+| 2026-08-22 | TAKE NOTICE | rejected | 用户明确反馈“这不像是答案，请继续”；未声称已向题站提交。解析只让 `GATE WARNING` 参与主 wordplay，其余顶层词没有线性语法角色。 |
 
 ## Important failed routes
 
@@ -258,7 +229,8 @@ definition              nested construction              fodder        indicator
 - `ANSWER` 只是底部 checksum。
 - `COMMENT ON / COMMENT UPON / WATCH / NEGOTIATE / GEAR / GET ON WITH / NOTICE` 都依赖无 indicator 的删字、任选冷僻缩写或间接重排，且已被用户明确否定。`COMMENT UPON` 虽有精确字母袋，但需要 `HANG=MOUNT, WITH=C, GATE=PORT→P, WARNING=OMEN` 四层转换。
 - `OUTTAKE / TAKE OUT` 的缺词矩阵没有受到题面指示；`TAKE OUT` 已被明确否定，不得恢复。
-- `GET A GANDER AT / GET A HANDLE ON` 路线把普通 clue 强行解释成两条习语之间的字母替换，缺少清晰语法，继续视为失败。此前孤立地注意到 `DANGER*=GANDER` 也不完整；本次只有在新找到 `HANG-H(IGH)+G(ATE)=GANG`、`GANG UP ON=TACKLE` 后，才恢复单词答案 `GANDER`，并未恢复这些短语路线。
+- `GANDER / GET A GANDER AT / GET A HANDLE ON` 路线需要先把 `WARNING` 间接换成 `DANGER` 再重排，并把并非常规 anagram indicator 的 `TACKLE` 强作指示；`HANG-H(IGH)+G(ATE)=GANG` 还缺少明确替换语法。相比连续的 `GATE WARNING -> TAKE NOTICE`，该路线不再提升。
+- `TAKE / TAKE NOTICE` 只形成 `GATE=TAKE, WARNING=NOTICE`、`TAKE ON=TACKLE`、`TAKE UP WITH=HANG WITH` 的词组网络，不是可逐词解析的线性 cryptic clue；两者均已被用户否定。
 - `ENOUGH` 是一个真实但次要的巧合：`OBSERVE / UPON / HANG` 的首尾字母 `OE+UN+HG` 可重排为 `ENOUGH`，且 “Enough!” 可作警告。然而它不能自然解释末尾 `TACKLE` 及完整词序，因此不提升为候选。
 
 ## Evidence and artifacts
@@ -268,15 +240,16 @@ definition              nested construction              fodder        indicator
 - `artifacts/top-row-reconstruction.tsv`：P1–P4 的输入与输出。
 - `artifacts/periodic-routes.tsv`：P6 六条周期表路线。
 - `artifacts/panel-08-hint4-extraction.tsv`、`artifacts/panel-09-hint4-routes.png/.tsv`、`artifacts/panel-10-answer-route.png/.tsv`：倒数两行与底部校验。
-- `artifacts/final-cryptic.tsv`：`GANDER` 的逐步嵌套 cryptic 解析。
+- `artifacts/final-cryptic.tsv`：保留已否定的 `TAKE NOTICE` 局部关系，作为失败路线审计，不代表当前候选。
 - `work/puzzle-preview.png`：原题完整布局的可视化缩放图，用于核对各格邻接关系。
 
 ## Hypothesis audit
 
 | Hypothesis | Exact evidence | Remaining caveat | Rank |
 | --- | --- | --- | --- |
-| `GANDER` | `HANG-H(IGH)+G(ATE)=GANG`; `GANG UP ON=TACKLE`; `WARNING=DANGER`; `DANGER*=GANDER=OBSERVE` | `TACKLE` 作主动重排指示稍不常见，但它由前半句精确构造、字母结果精确且全句无废词 | candidate, high confidence |
-| `TAKE` | 四组搭配在词义上成立 | 缺少正常 cryptic 的连续语法；用户已明确否定 | rejected |
+| `TAKE NOTICE` | 局部可得 `GATE=TAKE`, `WARNING=NOTICE` | 其余顶层词没有线性语法角色；用户已明确否定 | rejected |
+| `TAKE` | 是三条短语共同锁定的中间词 | 不等于定义端点 `OBSERVE`；用户已明确否定把它单独当答案 | rejected as final answer |
+| `GANDER` | `DANGER` 的字母可重排成 `GANDER`，且可表示“一看” | 间接 anagram、指示词和换首字母语法均不够公平 | not promoted |
 | `ENOUGH` | exact anagram of the outer letters `OE+UN+HG`; can be a warning | cannot give `TACKLE` a clean non-redundant role | not promoted |
 | `GET A HANDLE ON` | indirect idiom transformation | explicitly rejected by user and lacks clean clue grammar | rejected |
 | `COMMENT UPON` | exact but highly indirect anagram bag | explicitly rejected by user | rejected |
@@ -285,4 +258,4 @@ The last observed website state showed only 3 of 20 attempts remaining and no en
 
 ## Next action
 
-建议用户把 `GANDER` 作为下一次提交；等待网站判定。若被否定，记录题站的明确结果，并优先检查 `TACKLE` 是否只是在定义 `GANG UP ON`、而真正的末步指示词藏在题面排版中。
+先核对原图黑块的边界、标点与是否存在被误并入第四块的词；再把顶层限制为两种标准语法：`OBSERVE` 作定义或 `TACKLE` 作定义。只有当其余连续词能逐词标成 fodder / indicator / link，并精确给出答案时才提升候选；同时优先回查第四块 `HIGH GATE WARNING` 是否是唯一满足 P3、P4 的原答案。
