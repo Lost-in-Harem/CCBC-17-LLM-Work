@@ -1,7 +1,7 @@
-order	column	pink_cell	region	song	previous_lyric_role	emoji	alternate_reading	rebus_role	note
-1	5	r3c5	1	ライアーダンサー	ずっと／持续循环	🔄	TURN	instruction	改读为转动，不再表示持续。
-2	6	r32c6	4	㋰責任集合体	それでよろし／肯定	✅️	RIGHT	instruction	取方向义“右”，不同于歌词中的肯定义。
-3	7	r47c7	5	イレギュラーマン	脱出复合图中的人物运动	🚶‍➡️	MAN	left operand	只取图中人物，不再表示沿箭头脱出。
-4	8	r51c8	6	カンケーガール	交差点／交叉点	➕️	PLUS	operator	改读为加号，连接左右两个词块。
-5	9	r16c9	2	ちっちゃな私	泣きたい／眼泪	💧	WATER	right operand	改读为水，不再表示哭泣。
-6	10	r26c10	3	ウルトラトレーラー	落書き／涂鸦	🎨	COLOR	right operand	改读为颜色，不再表示落书；WATER COLOR 合成 AQUA。
+status	order	column	pink_cell	region	song	previous_lyric_role	emoji	alternate_reading	extraction_role	note
+candidate-ANAGRAM	1	5	r3c5	1	ライアーダンサー	ずっと話してる／持续循环	🔄	TURN / REARRANGE	anagram indicator	R6 的左右往返改用水平 repeat 图 🔁；粉格中的循环箭头改作重排指示。
+candidate-ANAGRAM	2	6	r32c6	4	㋰責任集合体	これはなんだ／それがなにか；疑问	❓️	WORD PUZZLE	definition	R6 的“何よりも大切”改用 ✅；这里的问号在最终读作待求的文字谜题。
+candidate-ANAGRAM	3	7	r47c7	5	イレギュラーマン	脱出复合图中的人物运动	🚶‍➡️	A MAN	fodder 1	不再表示脱出方向，而把人物直接读作 A MAN。
+candidate-ANAGRAM	4	8	r51c8	6	カンケーガール	交差点／交叉点	➕️	PLUS	operator	不再表示交差点，而连接两组重排字料。
+candidate-ANAGRAM	5	9	r16c9	2	ちっちゃな私	泣きたい／眼泪	💧	WET / SPILL	rag clue part 1	不再表示眼泪；与画具合看，提示需要抹掉的水或湿颜料。
+candidate-ANAGRAM	6	10	r26c10	3	ウルトラトレーラー	落書き／涂鸦	🎨	PAINTER'S RAG	rag clue part 2	不再表示落书；与前一枚合指擦水和颜料的 RAG。答案格式及自指重排排除 CLOTH/SPONGE。

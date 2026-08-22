@@ -1,0 +1,11 @@
+{
+  "command": "annotate",
+  "source": "G:/Repo/CCBC-17-LLM-Work/rounds/irrational-manager-hypothesis/nodes/e08-one-legendary-night/work/visual/page/images/65.webp",
+  "source_sha256": "4b664647783d649c5fa1d1f98331a22e4255c69f08fdbf0352db94e1cb8d72f0",
+  "spec": "G:/Repo/CCBC-17-LLM-Work/rounds/irrational-manager-hypothesis/nodes/e08-one-legendary-night/work/visual/panel4-opaque-spec.json",
+  "spec_sha256": "3c1c38cb78bf379a3c094251ff9082d4b6b3753ed36d3a61f7ea95f0b9d5f776",
+  "coordinate_space": "EXIF-transposed source pixels",
+  "scale": 1,
+  "annotation_count": 2,
+  "output": "G:/Repo/CCBC-17-LLM-Work/rounds/irrational-manager-hypothesis/nodes/e08-one-legendary-night/artifacts/panel4-opaque-8p.png"
+}

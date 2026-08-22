@@ -1,0 +1,12 @@
+{
+  "source": "work/visual/inventory/assets/image-003.webp",
+  "source_sha256": "5ad445aaa74b549d9d701470560eae44f3ecf4c2e6761fc1e6607b9b4662ed0b",
+  "source_dimensions": [1104, 878],
+  "transformations": [
+    "crop source box [300,370,800,560] at 3x nearest-neighbor",
+    "rotate 180 degrees to dealer-upright orientation",
+    "crop derived box [560,50,940,520] at 2x nearest-neighbor",
+    "rotate 90 degrees clockwise"
+  ],
+  "observation": "The sideways riichi-declaration tile in panel 2 is 1m, not 9m."
+}

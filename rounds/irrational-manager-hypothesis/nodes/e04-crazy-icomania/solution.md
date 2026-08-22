@@ -7,10 +7,10 @@ parent:
 source:
 round_feeder: yes
 feeders:
-status: rejected
-answer:
-confidence:
-summary: MARTINE 已被用户明确判错，酒名枚举路线停止。当前回到两处未闭合的基础机制：图 26 右半矿物的真实识别，以及矿物组的统一排序/提取字段；在这两处独立复原前不再给终答。
+status: candidate
+answer: WEATHER
+confidence: medium
+summary: 旧调酒路线已撤回。题内操作可复现地留下 H/Ra/Sn；把大小写保留为英语词首，唯一明显的同类四字母补全是 HAIL/RAIN/SNOW。三者都是降水/天气类型，按提示 7 “混在一块”得到七字母 WEATHER。应先用中间答案框依次验证 RAIN、SNOW、HAIL，再提交 WEATHER；矿物组右侧十字母的逐项查表法仍是未复原缺口。
 updated: 2026-08-22
 ---
 
@@ -18,23 +18,23 @@ updated: 2026-08-22
 
 ## Current conclusion
 
-当前无可提交候选。**`MARTINE` 已被用户明确判错**，因此 `H/Ra/In → vermouth/Angostura/gin → 酒名` 这条终局路线停止；不能再用一个历史配方替代缺失的题内提取。当前调查回到两处未闭合的基础机制：图 26 右半矿物的真实识别，以及矿物组十图的统一排序/提取字段。
+当前候选为 **`WEATHER`**，但应先验证三个中间答案 **`HAIL / RAIN / SNOW`**。这条补全不再使用任何外部酒谱，也不把一个品牌反推成配料。
 
-用户新提供的官方提示 3 给出了主结构：28 图分为三组，每组对应“三部”中的一部；每图的左半给排序对象，右半给提取对象。按这个结构重新审计后：
+官方提示 4 把“第一部”锁定为《疯狂的石头》：左侧识别矿物并按石头相对于鸡蛋所体现的“硬”这一性质，即矿物硬度排序；右侧指向记录石头的《石头记》，画面中的林黛玉、贾宝玉正是校验。图 26 的右半是 `Kwon Yuri + 贾宝玉/玉`，直接给 **Ureyite**（kosmochlor 的旧名，Strunz 主类 9），不是需要画面中不存在的 `Marin` 的 Yurmarinite。因此图 26 为 `Englishite(8)+Ureyite(9)=89 Ac`。
 
-- 天体组高置信得到 **`ANGOSTURA`**；
-- 赛车场组高置信得到 **`SHOWYOURB`**；
-- 矿物组从全局语法几乎必为 **`ASEVDIGITS`**，合成 **`ANGOSTURA / SHOW YOUR BASE V DIGITS`**，但矿物组的排序字段和右侧取字字段尚未独立复原，不能把补句当作证明。
+三组第一层共同给出 **`ANGOSTURA / SHOW YOUR BASE V DIGITS`**。图 10–20 再以左右主题对象的数值拼原子序数，元素符号精确拼成 **`XENA'S AT BASE V TEAM YES`**；按 astronomY / racE / mineralS 三队取五进制数字，四个完整三队列得到 **`Ge Ta La W → GET A LAW`**。
 
-元素层是有意结构：图 10–20 的元素符号精确拼成 **`XENA'S AT BASE V TEAM YES`**；去掉这段操作提示后，以三队五进制数字重组得到操作语 **`GET A LAW`**。Xena 的扮演者是 Lucy **Lawless**；从元素化的 `Lu/C/Y/La/W` 中“取走” `La/W`，留下 **`Lu/C/Y`**，即 `LUCY LESS [LAW]`。
+移除这四个完整列后，三个余项是 `Hf/Pu/Ac`。`XENA'S` 指向 Xena 的演员 **Lucy Lawless**；`GET A LAW` 从 `LAWLESS` 中取走 `LAW`，留下操作语 **`LUCY LESS`**。把 `LUCY` 元素化为 `Lu/C/Y`，依次作原子序数减法：
 
-图 26 目前恢复为正式矿物 **Yurmarinite**（Strunz 主类 8）。右侧第一人是权俞利（Yuri），第二人是贾宝玉形象；贾宝玉有马天宇、林青霞等不同扮演者，因此画面可能借角色/演员绕到 `Marin`，但这一 rebus 仍不够直接。另一读法 Ureyite（kosmochlor 旧名，9 类）虽然能用 `Yuri + 玉/stone` 解释，却导向已被判错且违反提示 7 语义的 `VARNISH`。结合现行 IMA 名录、后续精确减法及用户判题，当前以 `8+8=88 Ra` 为较强读法，但保留构词缺口。
+| 余项 | 减数 | 原子序数差 | 元素碎片 | 完整中间答案候选 |
+| --- | --- | ---: | --- | --- |
+| Hf 72 | Lu 71 | 1 | `H` | **HAIL** |
+| Pu 94 | C 6 | 88 | `Ra` | **RAIN** |
+| Ac 89 | Y 39 | 50 | `Sn` | **SNOW** |
 
-三个未消费元素因此为 `Hf/Pu/Ra`。把 `LUCY` 拆成元素 `Lu/C/Y` 并按 `LESS` 逐项相减，精确得到 **`H/Ra/In`**：
+这里保留元素符号的自然大小写，并把它们当作词首：`H... / Ra... / Sn...`。三个同为四字母、同属天气/降水且逐项精确保留词首的补全是 **HAIL / RAIN / SNOW**；相比旧路线给 H、Ra、Sn 任意补不同长度的酒类词，这一补全有统一的长度、语义和方向。官方提示 7 又要求三个中间答案在现实中“混在一块”成为一个七字母事物；三者共同构成 **WEATHER**，长度正好为 7。
 
-`Hf−Lu=H`，`Pu−C=Ra`，`Ra−Y=In`。
-
-这三个元素符号分别补全三个现实配料 vermout**H**、Angostu**RA**、g**IN**。1916 年 D. Schoor 的《Zakboekje voor recepten van American Drinks》在第 13 项 **“Martine. Sweet.”** 中明确列出 `2/3 Italian vermouth`、`1/3 gin`、`Angostura`，酒名恰为七字母 **MARTINE**；另有糖浆、樱桃和柠檬皮作为辅料。它是对提示 7 最直接的新匹配，并且不是已被判错的拼法 `MARTINI`。
+尚未闭合的证据缺口是：矿物组右侧如何逐图统一查得 `ASEVDIGITS` 仍未复原。它由完整指令和下层独立出现的 `AT BASE V` 交叉固定，但不能伪装成已经逐项证明。因此当前置信度为 `medium`。为节省提交次数，先验证词首约束最强的 `RAIN → SNOW`，两者若都有中间反馈，再测只固定首字母的 `HAIL`；三个均通过后才提交 `WEATHER`。
 
 ## Official hints supplied by the user
 
@@ -47,6 +47,12 @@ updated: 2026-08-22
 ### 提示 3：图片的具体解读
 
 > 这些图片可分成三组，每组图片中的事物属于同一类，并且这类事物分别对应了“三部”中的一部。每张图片可分为两部分，左边和右边分别体现了一个和主题有关的事物，左边的事物用于排序，右边的事物用于提取。
+
+### 提示 4：“第一部”怎么做？
+
+用户于 2026-08-22 解锁，原文为：
+
+> 主题拥有一种特殊的性质（鸡蛋和主题拥有相反的这类性质），左侧是用主题进行对于这个性质的排序。右边是一本“记”录主题的书，你会注意到某些图片就和这本书有关。
 
 ## 第一层：按提示 3 分组、排序、提取
 
@@ -68,7 +74,7 @@ updated: 2026-08-22
 | 8 | 6 | 4017 Disneya | 4017 | 18 Hydrae | 18 | R |
 | 9 | 14 | 6063 Jason | 6063 | Phobos（Mars I） | 1 | A |
 
-结果为 **`ANGOSTURA`**。这一组的排序、数值和九个字母均已闭合；它单独提交虽已判错，但它在完整句 `ANGOSTURA SHOW YOUR BASE V DIGITS` 中承担指令首词，而非终答。
+结果为 **`ANGOSTURA`**。这一组的排序、数值和九个字母均已闭合；它单独提交已判错，因此既不是终答，也不是完整中间答案。它只承担完整指令 `ANGOSTURA SHOW YOUR BASE V DIGITS` 的首词；此前把后出的 `Ra` 强行对回该品牌并猜成 BITTERS 的路线已由 VERMOUTH 判错而撤回。
 
 ### 赛车场组：`SHOWYOURB`
 
@@ -88,7 +94,7 @@ updated: 2026-08-22
 
 结果为 **`SHOWYOURB`**。图 2、4、12 的完整 rebus 文字解释仍略弱，但排序结果和国家码中间字母组成的英文串非常稳定。
 
-### 矿物组：预期 `ASEVDIGITS`，机制未独立闭合
+### 矿物组：硬度排序，输出 `ASEVDIGITS`
 
 目前最稳的左右矿物识别如下：
 
@@ -103,13 +109,13 @@ updated: 2026-08-22
 | 23 | Baumstarkite | Colusite | 高 |
 | 24 | Spangolite | Rutile | 高 |
 | 25 | Johnsenite-(Ce) | Loveringite | 中高 |
-| 26 | Englishite | Yurmarinite（Ureyite 为备选） | 中；后续与现行 IMA 名录支持 Yurmarinite=8，但画面如何完整给出 Marin 尚未闭合 |
+| 26 | Englishite | Ureyite（kosmochlor 旧名） | 高；Yuri + 宝玉/玉，且提示 4 明示《石头记》；旧 Yurmarinite 缺少 Marin 画面证据 |
 
-赛车场串止于 `...B`，而元素层又独立出现 `AT BASE V`，故矿物组十字母从全局语法应为 **`ASEVDIGITS`**，完整指示为：
+提示 4 的“鸡蛋与石头相反”指向软硬，故左侧按矿物硬度递增；其自然顺序为 `19,23,22,24,17,26,25,21,20,18`。低硬度端的文献常以相邻区间报告（例如 `2–2.5`、`2.5`、`2.5–3`），具体并列次序由右侧明文消歧。右侧《石头记》线索与全局语法给出 **`ASEVDIGITS`**，完整指示为：
 
 **`ANGOSTURA / SHOW YOUR BASE V DIGITS`**
 
-尚未找到一个对十个右侧矿物统一成立、能给出 `A S E V D I G I T S` 的标准属性。已检查矿物名首尾/长度、IMA 符号、Strunz/Dana 编码、晶系、公式元素、发现年份、产地、Fermion Index 等常见字段；没有统一命中。此处必须继续标为“由两条独立语境补全”，而不是已证提取。
+其中 `...BASE V DIGITS` 还被下一层独立出现的 `AT BASE V` 交叉校验。当前仍有一项可披露缺口：提示 4 已确定右侧文本为《石头记》，但十张右图各自如何统一落到十个字母的标准化查表尚未逐项复原；`ASEVDIGITS` 由完整英语句、官方主题提示和下层独立指令三重确定，不把未知的逐图字段伪装成已证事实。
 
 ## 第二层：元素提示
 
@@ -141,18 +147,49 @@ updated: 2026-08-22
 
 元素符号为 **`Ge Ta La W` → `GET A LAW`**。图 21 的左右边界修正本身仍成立：箭头和公鸡草地重叠成左组 `WEST + (roost)ER + VELD`，星光是独立右组 Northstarite。用户已明确判错 `GET A LAW`，所以它不得再作为答案；但四列同时成为合法元素且精确成句，再与 `XENA'S/Lawless` 闭合，远强于随机命中，应保留为操作语。
 
-## 图 26 的重新判定：`Yurmarinite → 88 Ra`
+## 图 26 的最终判定：`Ureyite → 89 Ac`
 
-图 26 左半是 Englishite，属 Strunz 主类 8。右半是 Kwon Yuri 与贾宝玉形象。这里存在两个可复现读法：
+图 26 左半是 Englishite，属 Strunz 主类 8。右半是 Kwon Yuri 与贾宝玉形象：
 
-- **Yurmarinite** 是 IMA 2013-033 正式矿物，名称纪念 Yuri B. Marin，属 8 类；
-- **Ureyite** 已并入 kosmochlor，只是旧名/同物异名，属 9 类；`Yuri + 玉/stone` 可近似解释它，但它不在当前 IMA Master List 中。
+- `Yuri` 直接近音 `Urey`；
+- `宝玉/玉` 直接给 stone/mineral 的 `-ite`，并由提示 4 的《石头记》明示；
+- 合起来是 **Ureyite**，即 kosmochlor 的旧名，Nickel–Strunz `9.DA.25`。
 
-贾宝玉并不能直接等同 `Marin`，这是 Yurmarinite 读法的主要缺口；不过这一角色有马天宇、林青霞等多个著名扮演者，画面很可能要求用演员名继续转义。更重要的是，Ureyite=9 导出的 `H/Ra/Sn + IV → VARNISH` 已被判错且没有三个中间答案；Yurmarinite=8 则同时满足现行矿物名录并精确产出提示 7 所需的三种配料。因此当前恢复：
+旧读法 Yurmarinite 虽是现行正式矿物，却需要图中不存在的 `Marin`；它此前完全由错误的 MARTINE 配方反推。提示 4 消除了这一歧义，不能再用下游猜答覆盖直接图像证据。因此：
 
-`Englishite (8) + Yurmarinite (8) = 88 Ra`
+`Englishite (8) + Ureyite (9) = 89 Ac`
 
-四个完整三队列之后的未消费元素据此为 **`Hf / Pu / Ra`**。这不会改变前四列的 `GET A LAW`，却使 `LUCY LESS` 得到完整的 `H/Ra/In`。
+四个完整三队列之后的未消费元素为 **`Hf / Pu / Ac`**；这不改变前四列的 `GET A LAW`，但使 `LUCY` 的逐项减法得到正确的 **`H/Ra/Sn`**。
+
+## 已拒绝的终局路线：`VERMOUTH / BITTERS / GIN -> PERFECT`
+
+`XENA'S` 指 Xena 的演员 **Lucy Lawless**。把她的名字按题内两条操作语切成：
+
+`LUCY / LAW / LESS`
+
+`GET A LAW` 是从 `LAWLESS` 取走 `LAW`，留下 **`LUCY LESS`**。将 `LUCY` 元素化为 `Lu/C/Y`，按原子序数逐项从三个未消费元素中相减。原串 `XENA'S = Xe/Na/S` 还明确留有末尾的 `S`，可供第三行的 `less S` 使用：
+
+| 运算 | 差 | 符号 | 后续处理 | 完整中间答案候选 |
+| --- | ---: | --- | --- | --- |
+| `Hf72−Lu71` | 1 | H | 补在 `VERMOUT` 后 | **VERMOUTH** |
+| `Pu94−C6` | 88 | Ra | 补在 `ANGOSTU` 后识别品牌，再取品类 | **BITTERS** |
+| `Ac89−Y39` | 50 | Sn | `LESS S` 得 N，补在 `GI` 后 | **GIN** |
+
+这曾被当作提示 7 所要求的三个完整中间答案候选，但 `VERMOUTH` 已被用户明确判定既不是答案也不是中间答案。因此由 H/N 和调酒语境补出 VERMOUTH/GIN、再由 ANGOSTURA 猜 BITTERS 的做法没有题内依据，整条路线撤回。
+
+三种配料在现实中确有对应 Perfect Cocktail / Perfect Martini 的外部配方，但这不能替代题内提取；由于中间答案 VERMOUTH 已被判错，以下旧候选同时撤回：
+
+**`PERFECT`**
+
+不得再提交 `PERFECT`，除非出现全新的题内提取链并重新得到它。
+
+## 已撤回的终局路线：`HARNESS`
+
+`H+Ra+Sn+Es → HARNESS` 虽是精确七字母重排，但把提示 7 的“现实中混在一块”误读为纯字谜，而且 `Es` 不是三个完整中间答案之一。该路线在提交前主动撤回。
+
+## 已撤回的终局路线：`NARWHAL`
+
+`NARWHAL` 未收到提交判题结果，但用户指出其推导没有给出三个完整中间答案，而且 `H+Ra+Sn+LAW−S` 的合并不符合提示 7。故该候选主动撤回：`LAW` 的作用仅是从 `LAWLESS` 中取走自身、留下减法词 `LESS`，不能再次作为终局字母加入；也没有依据把 `LESS` 改读成对字母池执行 `−S`。
 
 ## 已拒绝的终局路线：`VARNISH`
 
@@ -194,7 +231,7 @@ updated: 2026-08-22
 - Angostu**RA**；
 - g**IN**。
 
-泛称 **MARTINI** 与配方近邻 **ASTORIA** 均已被用户判错，不能重提。但这次出现了新的、可核验的一手证据：D. Schoor 1916 年调酒书第 13 项的标题是 **“Martine. Sweet.”**，正文逐项列出 `2/3 Ital. Vermouth`、`1/3 Gin`、`Angostura`，另加 gum syrup、cherry 和 lemon peel。`MARTINE` 恰为七字母，并与已判错的 `MARTINI` 是不同历史拼法。因此当前候选为：
+泛称 **MARTINI** 与配方近邻 **ASTORIA** 均已被用户判错，不能重提。D. Schoor 1916 年调酒书第 13 项虽有 **“Martine. Sweet.”**，正文列出 `2/3 Ital. Vermouth`、`1/3 Gin`、`Angostura`，但这只能构成当时的外部枚举依据，不能弥补题内机制缺口。该旧候选为：
 
 `VERMOUTH + ANGOSTURA + GIN → MARTINE`
 
@@ -224,22 +261,27 @@ updated: 2026-08-22
 | 2026-08-21 | GET A LAW | 错误答案 | 用户明确报告不是答案；无其他判题文字。 |
 | 2026-08-22 | VARNISH | 错误答案 | 用户明确报告不是答案，并指出这一候选明显不合理；无其他判题文字。 |
 | 2026-08-22 | MARTINE | 错误答案 | 用户明确报告不是答案；无其他判题文字。 |
+| 2026-08-22 | VERMOUTH | 错误答案/中间答案 | 用户明确报告“不是答案或者中间答案”；无其他判题文字。 |
 
 ## Important failed routes
 
 - 上表二十项均是已明确错误的提交；没有新判题证据时不得再次作为答案提出。
-- `MARTINE` 已被明确判错。由 `H/Ra/In` 补配料并枚举酒名的路线没有题内唯一性，停止整个酒名家族，不再换拼法或找近邻配方。
-- `VARNISH` 已被明确判错。`H/Ra/Sn` 后补 `IV` 再重排的关键两字母没有独立提取，而且三个片段也不是提示 7 所说的三个现实配料名；该字谜枚举家族停止。
+- `MARTINE` 已被明确判错。旧路线用错误的 Yurmarinite/88 直接得到 `In`，再靠历史配方枚举酒名；不得恢复。当前路线由提示 4 独立固定 Ureyite/89，保留 `Sn` 作为 **SNOW** 的词首，不再任意执行 `LESS S`。
+- `NARWHAL` 没有提交判题，但已由用户指出机制错误并撤回：只给 `H/Ra/Sn` 没有给三个完整中间答案，且 `+LAW−S` 不是提示 7 允许的合并。不得再提。
+- `HARNESS` 没有提交判题；它把 `H/Ra/Sn` 与额外的 `Es` 做纯字母重排，既没有给出三项现实中间答案，也误读了“现实中混在一块”，已撤回。
+- `VARNISH` 已被明确判错。它在 `H/Ra/Sn` 后凭空补 `IV`；当前把三个元素符号按原大小写统一补成同为四字母的天气词，不再从词表猜补字母。
 - `GET A LAW` 已被判错，不能再作为答案提交；但 `Ge/Ta/La/W` 四列精确成句且能与 Xena/Lucy Lawless 闭合，所以保留为操作语。判题否定的是候选身份，不等于否定所有指令用途。
 - `BARISTA` 的 `LESS → Ar/Bi/Ta` 需要把英文 `LESS` 任意转成元素原子序数减法，随后又要从 `XENA'S` 或 `ANGOSTURA[V]` 补一个 S 并重排；判题已否定这条缺乏唯一指示的终局路线。
 - `ASTORIA` 已被明确判错，不得重提。它的配方证据没有 `MARTINE` 的 1916 年同名原始条目直接。
-- `MARTINI` 作为现代泛称已被明确判错。当前 `MARTINE` 不是无证据替换字母：1916 年同名配方明确逐项列出 vermouth、gin、Angostura；只有这条新证据允许有限恢复该配料族。
+- `ANGOSTURA` 已明确判错，不得再次作为中间答案提交；当前只保留它在完整操作句中的字面作用，不再据此猜 BITTERS。
+- `VERMOUTH` 已明确判定既不是答案也不是中间答案；因此 `VERMOUTH/BITTERS/GIN -> PERFECT` 整条路线撤回，`BITTERS`、`GIN`、`PERFECT` 不得顺次试错。
+- `MARTINI` 与 1916 年拼法 `MARTINE` 均已明确判错，不得重提；酒名枚举路线已经停止。
 - `ARGON / BISMUTH / TANTALUM` 三个元素全名均未通过中间答案验证，不能再次单独提交；它们所属的 `Ar/Bi/Ta → BARISTA` 路线也已整体停止。
 - `Backite + Morningstarite → 74 W` 违背图 21 的真实左右空间边界；保留为失败路线。
-- 图 26 当前采用 `Yurmarinite → 88 Ra`。`Marin` 的画面构词仍不完整，但它是现行 IMA 正式矿物，且与 `LUCY LESS → H/Ra/In`、提示 7 及 1916 年 MARTINE 配方形成同一条可复现链。Ureyite=9 保留为敏感性对照，其后 VARNISH 已被判错。
+- 图 26 的 Yurmarinite=`88 Ra` 是由 MARTINE 反推的失败读法：画面从未给出 `Marin`。官方提示 4 的《石头记》与右图 `Yuri + 宝玉/玉` 直接支持 Ureyite=`89 Ac`；VARNISH 被判错只否定任意补 `IV`，不否定 Ureyite 本身。
 - Fermion Index 只在 Colusite、Rutile、Forsterite 等少数位置偶合目标字母；Malachite、Arctite、Loveringite、Perrierite-(Ce) 等立即反例，停止该字段族。
 - 矿物公式质子数和 mod-26 在个别行偶合，但不能统一生成十字母后缀，停止该族。
-- 在原始五进制位流中盲搜 `GIN/VERMOUTH` 没有命中；这否定的是直接位流读取，不是否定后续由 `LUCY LESS` 明示的元素减法。
+- 在原始五进制位流中盲搜 `GIN/VERMOUTH` 没有命中；这与后续判题共同否定了调酒补词，但不否定由 `LUCY LESS` 明示的元素减法本身。
 - `ANGOSTURA/BITTERS` 作为五进制 key 的三种有界算术实验均无稳定明文，停止该假设族。
 - 把 `ARGON/BISMUTH/TANTALUM` 当作真实化学配方并猜 `CRYSTAL/CERAMIC/COATING` 需要任意添加反应物、气氛或泛化产物名，缺乏唯一性，不列候选。
 - `PINKGIN` 缺少 vermouth；`DRY MARTINI`、`GIN AND IT`、`Turf Club` 又不符合七字母枚举。它们只是配方近邻，不列候选。
@@ -254,18 +296,20 @@ updated: 2026-08-22
 - 参数化有界测试：`work/extraction_test.py`
 - FIA licensed circuits：https://www.fia.com/circuit-safety
 - IMA Master List：https://athena.unige.ch/athena/mineral/IMA-Master-List-2026-03.pdf
-- Yurmarinite（IMA 2013-033；以 Yuri B. Marin 命名）：https://www.mindat.org/min-43895.html
+- Yurmarinite（失败对照；名称确实来自 Yuri B. Marin，但图中无 Marin）：https://www.mindat.org/min-43895.html
 - Kosmochlor / Ureyite（旧名）的 Nickel–Strunz 编号 `9.DA.25`：https://www.mindat.org/min-2249.html
 - Englishite 的 Nickel–Strunz 编号 `8.DH.55`：https://www.mindat.org/min-1386.html
 - Westerveldite：https://www.mindat.org/min-4273.html
 - Northstarite（Strunz `7.JA.20`）：https://www.mindat.org/min-53865.html
 - Caltech 对 Xena/Eris、Dysnomia 与 Lucy Lawless 的说明：https://www.caltech.edu/about/news/dwarf-planet-formerly-known-xena-has-officially-been-named-eris-iau-announces-1187
+- Met Office 对 rain、snow、hail 均为 precipitation/weather types 的说明：https://weather.metoffice.gov.uk/learn-about/met-office-for-schools/other-content/other-resources/what-is-precipitation
 - Astoria 的经典配方（Old Tom gin、dry vermouth、Angostura orange bitters）：https://www.diffordsguide.com/cocktails/recipe/2260/astoria
 - D. Schoor 1916 年《Zakboekje voor recepten van American Drinks》；第 13 项 “Martine. Sweet.” 明列 Italian vermouth、gin、Angostura：https://www.dbnl.org/tekst/scho618zakb01_01/scho618zakb01_01_0003.php
+- Perfect Martini / Perfect Cocktail 的 gin、dry/sweet vermouth 与 Angostura 配方：https://www.diffordsguide.com/cocktails/recipe/1509/perfect-martini
 - Martini/Martine 早期名称与 gin、vermouth、Angostura 史料时间线：https://www.thedailybeast.com/the-coming-of-the-martini-an-annotated-timeline/
 - Varnish 的传统组成（干性油、树脂、稀释剂/溶剂）：https://en.wikipedia.org/wiki/Varnish
 - CAMEO 对 varnish 为树脂溶于干性液体所成涂层的说明：https://cameo.mfa.org/wiki/Varnish
 
 ## Next action
 
-重新查看图 17–26 的原始左右半图，并建立矿物名称、分类号及可能提取字段的逐行证据表；优先用矿物组自身的统一规则同时决定排序、`ASEVDIGITS` 是否真实以及图 26 的名称，不再由下游候选反推图 26。若题内证据仍不足且用户允许再开官方提示，信息增益最高的是提示 6（“第三部”怎么做），但本任务不会自行解锁。
+请用户先在中间答案框依次验证 **RAIN、SNOW、HAIL**。前两项分别保留完整词首 `Ra/Sn`，约束强于只保留 `H` 的第三项。若三者均获得中间反馈，再提交七字母 **WEATHER**；若任一项无反馈，就保留 `H/Ra/Sn` 算术层、撤回语义补全，并优先解锁提示 5 或提示 6 来核对第二/第三组的精确取法，而不是继续枚举配料或七字母词。

@@ -3,10 +3,10 @@ P1	OBSERVE + UPON	align hole letters O,B and P,O to the circles; read numbered p
 P2	UPON + HANG WITH	split UP|ON and HANG|WITH; semicircle sides fix the answer order while pictured extraction order UP,ON,WITH,HANG plus indexed/Caesar instructions reads SUNDAY	SUNDAY	exact under Hint 6
 P3	HANG WITH + HIGH GATE WARNING	cancel cross-input letter pairs; anagram remaining A,E,G,G,I,N,R	GEARING	exact under Hint 6
 P4	HIGH GATE WARNING + TACKLE	replace GATE with TACKLE to form HIGH TACKLE WARNING; answer its field	RUGBY	high
-P5	VENUS + SUNDAY	advance in planet and weekday sequences; extract JUPITER[1], URANUS[3], WEDNESDAY[3], TUESDAY[3]	JADE	exact under Hint 5
-P6	SUNDAY + GEARING	parse S|U|Nd and Ge|Ar|In; periodic-table routes end Mg,Eu,Md,B,Be,Fr and extract M,E,M,B,E,R	MEMBER	exact under Hint 5
+P5	VENUS + SUNDAY	follow each arrow successively: VENUS +3 -> JUPITER[1], then +2 -> URANUS[3]; SUNDAY +3 -> WEDNESDAY[3], then +6 -> TUESDAY[3]	JADE	exact under Hint 5
+P6	SUNDAY + GEARING	parse only the element-decomposable prefixes S|U|Nd (...AY) and Ge|Ar|In (...G); periodic-table routes end Mg,Eu,Md,B,Be,Fr and extract M,E,M,B,E,R	MEMBER	exact under Hint 5
 P7	GEARING + RUGBY	A1Z26 values under labels A..L; evaluate E+J,D/K,I-B,H-A,2sqrt(L)-C,4G-F	PIPKIN	exact under Hint 5
 P8	JADE + MEMBER	玉+囗=国=NATION and 员+囗=圆=CIRCLE; indexed extraction	TRANCE	exact under Hint 4
 P9	MEMBER + PIPKIN	map M↔P E↔I B↔K R↔N; connect matching pinyin and read on-line letters	SWEDEN	exact under Hint 4
 P10	TRANCE + SWEDEN	follow black route: T3 B6 B1 B2 T6 T2	ANSWER	exact match to the printed checksum; not the Node answer
-Final cryptic	OBSERVE / UPON / HANG WITH / HIGH GATE WARNING / TACKLE	extract ON from UPON-HIGH and OUT as the missing word in HANG _ WITH; LOOK ON=OBSERVE, LOOK OUT=WARNING, TAKE ON=TACKLE, and GATE=TAKE form three cells and axes of a 2x2 phrase matrix; fill the only missing cell	TAKE OUT	candidate; high confidence, awaiting user/site verification
+Final cryptic	OBSERVE / UPON / HANG WITH / HIGH GATE WARNING / TACKLE	exact parallel audits: GATE+DANGER+AT -> GET A GANDER AT (OBSERVE); GATE+DANGLE+ON-G+H -> GET A HANDLE ON (TACKLE)	GET A HANDLE ON / GET A GANDER AT	ranked hypotheses only; direction and shared cryptic indicator remain unresolved, so no submission candidate is promoted

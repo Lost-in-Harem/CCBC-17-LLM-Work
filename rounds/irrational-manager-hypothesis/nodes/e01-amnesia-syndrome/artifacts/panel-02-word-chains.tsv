@@ -1,7 +1,7 @@
 row	parent_word	semicircle_side	answer_half	clue	chain_from_parent	extraction	letter
-1	UP	left	UPON left half	similarity	UP — ON — THE — SAME — SOUND	SAME[1]	S
-1	UP	left	UPON left half	similarity	UP — ON — THE — SAME — SOUND	SOUND[3]	U
+1	UP	left	UPON left half	similarity	UP — TO — THE — SAME — STUFF	SAME[1]	S
+1	UP	left	UPON left half	similarity	UP — TO — THE — SAME — STUFF	STUFF[3]	U
 2	ON	right	UPON right half	risk	ON — THIN — ICE	ICE[1] shifted +5	N
-3	WITH	right	HANG WITH right half	timidity	WITH — HOLD — BACK	HOLD[4]	D
+3	WITH	right	HANG WITH right half	timidity	WITH — COLD — FEET	COLD[4]	D
 4	HANG	left	HANG WITH left half	procrastination	HANG — IN — THE — AIR	THE[2] shifted -7	A
 4	HANG	left	HANG WITH left half	procrastination	HANG — IN — THE — AIR	AIR[3] shifted +7	Y

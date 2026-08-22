@@ -1,3 +1,3 @@
-rank	candidate	left_chunk	operator	right_chunk	format_constraint	result	audit
-1	AQUATIC	TIC	+	AQUA	A??????	AQUA+TIC	TURN / IDEA / CHARACTER give TIC; WATER and COLOR jointly give AQUA. The plus sign joins the chunks, and the fixed initial A determines AQUA first.
-2	AQUARIA	RIA	+	AQUA	A??????	AQUA+RIA	Rejected by the user. It depended on the weaker placements 🔁 and 🔡 and on REPEAT / ALPHABET readings that did not differ cleanly from their lyric roles.
+status	rank	candidate	definition	anagram_indicator	fodder_1	operator	fodder_2	format_constraint	result	audit
+candidate	1	ANAGRAM	WORD PUZZLE	TURN / REARRANGE	A MAN	+	RAG	A??????	(A MAN RAG)* = ANAGRAM	The result is self-referential: ANAGRAM is exactly a rearrangement of A MAN RAG. The c6 swap is independently supported because R6 “何よりも大切” takes ✅ more naturally than ❓.
+rejected	2	ALBUMEN	WHITE	TURN/REARRANGE	MAN	+	BLUE	A??????	(MANBLUE)* = ALBUMEN	User explicitly reported the answer wrong on 2026-08-22. The exact Sunday Times precedent is therefore misleading coincidence, not validation of this puzzle's emoji readings.

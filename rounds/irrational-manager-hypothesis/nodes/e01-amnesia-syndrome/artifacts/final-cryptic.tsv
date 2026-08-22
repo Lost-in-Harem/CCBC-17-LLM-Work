@@ -1,9 +1,10 @@
-step	clue_material	operation	result	role	status
-1	UPON + HIGH	split the independently fixed UP|ON; remove HIGH=UP	ON	column label	exact
-2	HANG WITH	complete the synonymous idiom HANG _ WITH	OUT	column label; HANG OUT WITH	exact common phrase
-3	OBSERVE	resolve as LOOK ON using the ON label	LOOK ON	known matrix cell	exact phrasal-verb sense
-4	WARNING	resolve as the warning LOOK OUT using the OUT label	LOOK OUT	known matrix cell	exact warning utterance
-5	GATE	use the admission-receipts sense shared with TAKE	TAKE	row label	exact dictionary sense
-6	TACKLE	resolve as TAKE ON using TAKE and ON	TAKE ON	known matrix cell	exact phrasal-verb sense
-7	matrix completion	combine the TAKE row with the OUT column	TAKE OUT	missing fourth cell	candidate; all clue material assigned
-8	visual direction audit	five top boxes have only left-to-right placement and no reorder marks	no phrase-chain traversal	eliminates OUTTAKE route	exact observation from top-row crop
+stage	clue_material	normalization	exact_operation	result	role
+source-definition	OBSERVE	GET A GANDER AT	straight idiomatic definition	GET A GANDER AT	starting phrase
+source-core	WARNING	DANGER	anagram DANGER	GANDER	middle word of the starting phrase
+source-preposition	OBSERVE phrase	AT	last word of GET A GANDER AT	AT	starting preposition
+target-preposition	UPON	ON	replace AT with ON	ON	last word of the target phrase
+target-core	HANG	DANGLE	use DANGLE as the replacement six-letter fodder	DANGLE	replaces WARNING=DANGER
+letter-substitution	WITH HIGH GATE	HIGH=H; GATE=G	replace G in DANGLE with H	DANHLE	licensed one-letter substitution
+target-anagram	HANG WITH HIGH [for] GATE	DANHLE	anagram	HANDLE	middle word of the target phrase
+target-definition	TACKLE	GET A HANDLE ON	straight idiomatic definition	GET A HANDLE ON	answer candidate
+full-chain	OBSERVE ... TACKLE	GET A GANDER AT -> GET A HANDLE ON	DANGER* -> GANDER; DANGLE-G+H -> HANDLE; AT -> ON	GET A HANDLE ON	all clue blocks participate in the transformation
