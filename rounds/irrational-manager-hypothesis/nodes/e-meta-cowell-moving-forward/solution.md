@@ -3,14 +3,14 @@ node_id: e-meta-cowell-moving-forward
 title: 引领潮流的考威尔
 kind: meta
 round: irrational-manager-hypothesis
-parent: 
-source: 
+parent:
+source:
 round_feeder: no
 feeders: all-round-feeders
 status: working
 answer:
 confidence:
-summary: "已静态解包并逐格转录 11×48 Meta 矩阵；严格只采用 9 个 accepted feeder。红区长度多重集为 5×2、6×2、7×4、8×2、11×1，恰容纳现有答案，并反推 e-04、e-05 的正确答案都必须为 7 字母。低阶数列、XOR/LFSR、基础 autokey、共同循环密钥、常见摘要及 RC4/ChaCha20/Salsa20 均仅随机命中。e-03 隐藏图可确认为上海实体 geocache GCARK8R 的改写版，Hunt 把藏点由 NW 改成 SE；尚缺 e-04/e-05 的 accepted 答案及 Hunt 实体 cache 的现场内容，当前无可提交候选。"
+summary: "已确认本题的逐段循环生成机制，并将 11 行中的 6 行机械闭合到第 48 格：JANNA→M、FIREFOX→I、PIRATES→G、SEAHORSE→I、CHIEF→S、REMARK→I；每个完整串均吻合所有公开字母。已验证的有序集合为月份、原子序化学元素、Captain Planet 五元素、拉丁字母、十二生肖、希腊字母名与升行半音唱名。当前直接提取为 ??MI??G?ISI；剩余 HEARTHSTONE、SIDEBAR/ANAGRAM、CLIMATIC、WEIGHT 需要校正‘量级/另一种声音’集合后继续精确搜索。"
 updated: 2026-08-23
 ---
 
@@ -18,81 +18,120 @@ updated: 2026-08-23
 
 ## Current conclusion
 
-当前为 `working`，没有可靠候选答案。
+当前为 `working`。题目的核心生成机制已经由六条相互独立的整行命中确认，不再是猜测：
 
-已确认题面是一张 11 行、每行提取第 48 位的字母流矩阵。每行开头的红区用于放置 feeder 答案，但横行并不按 e-01～e-11 排列。只采用用户或网站确认过的答案后，9 个已知答案为：
+1. 将红区 feeder 答案无损分拆为若干个有序集合的元素；
+2. 每个元素各自在所属循环集合中选择一个固定的非零有符号步长；
+3. 第 \(g\) 代把每个初始元素移动 \(g\) 次，并按原分拆顺序拼接各元素的新名称/符号；
+4. 在红区答案后逐代追加，截到第 48 格；
+5. 行内所有公开字母用于唯一确定集合、方向和步长，第 48 格橙色字母用于 Meta 提取。
 
-| Feeder | Accepted answer | Length |
-| --- | --- | ---: |
-| e-01 | REMARK | 6 |
-| e-02 | JANNA | 5 |
-| e-03 | PIRATES | 7 |
-| e-06 | FIREFOX | 7 |
-| e-07 | CLIMATIC | 8 |
-| e-08 | CHIEF | 5 |
-| e-09 | SEAHORSE | 8 |
-| e-10 | HEARTHSTONE | 11 |
-| e-11 | WEIGHT | 6 |
+六行均吻合该行的**全部**公开格，而不是只命中橙格或局部片段。
 
-红区长度为 `11, 7, 5, 7, 7, 8, 7, 6, 8, 5, 6`，即 `5×2、6×2、7×4、8×2、11×1`。这与已确认答案的长度完全相容；剩下的两个空槽都是 7，因此 e-04、e-05 的正确答案都必须为 7 字母。e-05 的 `ANAGRAM` 虽也是 7 字母，但未 accepted，按用户要求不能使用。
+## Mechanically closed rows
 
-## Observations
+| Row | Feeder | Exact split and movement | Orange (48) |
+| ---: | --- | --- | :---: |
+| 3 | `JANNA` | `JAN`：月份 −1；`Na`：化学元素 +1 | `M` |
+| 4 | `FIREFOX` | `FIRE`：Captain Planet 元素 −1；`F`：拉丁字母 +1；`OX`：生肖 −1 | `I` |
+| 7 | `PIRATES` | `PI`：希腊字母名 +1；`RAT`：生肖 +1；`Es`：化学元素 +1 | `G` |
+| 9 | `SEAHORSE` | `Se`：化学元素 −1；`A`：拉丁字母 +1；`HORSE`：生肖 +1 | `I` |
+| 10 | `CHIEF` | `CHI`：希腊字母名 −1；`E`：拉丁字母 +2；`F`：拉丁字母 +2 | `S` |
+| 11 | `REMARK` | `RE`：升行半音唱名 +2；`MAR`：月份 +1；`K`：化学元素 −1 | `I` |
 
-- 原题 HTML 是 SingleFileZ 自解包文件；已安全解出其中的静态 `index.html`，未修改 `input/`。
-- 矩阵每行有 48 个实际字母格和末尾的 `...`；第 48 格统一为橙色问号。红格都是该行最左侧的连续前缀。
-- 逐行可见模式和颜色坐标已固化在 `work/visual/matrix.tsv`。全部字母来自 DOM，不依赖 OCR。
-- 表格的无障碍标签是“**一心向前的考威尔 Meta 矩阵**”，可见标题是“**引领潮流的考威尔**”。Simon Cowell 与 One Direction 的关联明显提示从左向右延伸各行，但尚不能单独确定生成规则。
-- “不同的潮流”下有 9 条省略主语的问题：文字的构成、另一种文字的构成、包含的元素、包含的其他元素、可疑的量级、需要注意的声音、另一种声音、时间的变化、特殊的生物。数量上恰好是除 e-02/e-03 外的 9 个 feeder；e-02/e-03 各自另有通关后内容，因此最可能总共给出 11 种横行来源或运算。
-- e-02 的 accepted 后隐藏原文为“**我说了你过不了第三关的吧！**”，DOM 中没有额外样式或元数据。
-- e-03 的 accepted 后隐藏图给出坐标模板 `0??.?????, 1??.?????`，要求到现代上海对应地点，在东南角某个供人休息、抽烟的结构下找 cache，并带笔。
-- e-03 图文可逐句追溯到公开 mystery geocache [GCARK8R Captain Blackheart's Treasure](https://www.geocaching.com/geocache/GCARK8R_captain-blackhearts-treasure)。原版写的是 `NW corner`，Hunt 图明确改成 `SE corner`，所以不能把公开原缓存当成 Hunt 缓存。拼图卫星图及公开地点资料均指向上海北外滩一带；北外滩航海公园确有船型坐凳等结构，但没有现场 capture 时不能臆测缓存内容。
+对应的 48 字符串如下；大小写只用于展示元素分拆，矩阵比较时统一为大写：
 
-## Working hypotheses
+```text
+row 3  JANNADECMGNOVALOCTSISEPPAUGSJULCLJUNARMAYKAPRCAM
+row 4  FIREFOXEARTHGRATHEARTHPIGWINDIDOGWATERJROOSTERFI
+row 7  PIRATESRHOOXFMSIGMATIGERMDTAURABBITNOUPSILONDRAG
+row 9  SEAHORSEASBGOATGECMONKEYGADROOSTERZNEDOGCUFPIGNI
+row 10 CHIEFPHIGHUPSILONIJTAUKLSIGMAMNRHOOPPIQROMICRONS
+row 11 REMARKMIAPRARFIMAYCLSIJUNSLIJULPDOAUGSIRESEPALMI
+```
 
-1. **11 个问题/隐藏内容分别指定 11 种字母流。** 数量对应关系和伪随机状横行支持这一点；缺点是仍未找出从“答案 + 来源”到 48 字母的精确运算。
-2. **Conway / look-and-say 主题。** Cowell/Conway、Simon “says”、向一个方向推进，以及九条中“文字构成、元素、量级、声音、时间变化、生物”等措辞，可联想到 look-and-say、Conway 的 92 个 audioactive elements、Conway 常数和 decay。反证是把 accepted 答案直接做普通字母 run-length look-and-say，第一代就与矩阵已知格冲突；若此主题正确，仍缺一层明确编码。
-3. **密码流或伪随机流。** “潮流/秘诀”、均匀字母分布和 Simon/X Factor/One Direction 的双关支持流密码或移位/XOR。常见直接构造均已排除，故下一步不能继续无界枚举密码算法；必须先从完整的第 10/11 个来源或现场 cache 获得新的格式指示。
+可复核表另存于 `artifacts/verified_rows.tsv`。
 
-最便宜的下一项判别不是再猜算法，而是补齐 e-04/e-05 的 accepted 答案，并取得 e-03 Hunt 版 cache 的现场内容（或用户确认它只是支线）。这样可把 11 个来源与 11 个长度槽完整配对，再对一行做精确验证。
+## Ordered sets confirmed by exact rows
 
-## Extraction
+| 题面“潮流” | 已验证的循环顺序 |
+| --- | --- |
+| 文字的构成 | 拉丁字母 `A…Z` |
+| 另一种文字的构成 | 希腊字母英文名 `ALPHA…OMEGA` |
+| 包含的元素 | 化学元素符号，按原子序 `H…Og` |
+| 包含的其他元素 | `EARTH, FIRE, WATER, WIND, HEART` |
+| 需要注意的一种声音 | 升行半音唱名 `DO, DI, RE, RI, MI, FA, FI, SOL, SI, LA, LI, TI` |
+| 时间的变化 | 月份英文缩写 `JAN…DEC` |
+| 特殊的生物 | 十二生肖英文名 `RAT…PIG` |
 
-尚未能恢复任何一行的完整第 48 位，因此不能进行 11 字母最终提取。
+其中 `FIREFOX` 严格确定 Captain Planet 五元素在本题使用的是
+`EARTH → FIRE → WATER → WIND → HEART` 的循环顺序；`REMARK` 严格确定使用的是升行半音唱名，而非普通七音唱名。
 
-## Candidate audit
+## Extraction so far
 
-不适用：当前没有同时解释矩阵、九条问题和两份隐藏内容的候选。
+按矩阵行序读取已确认橙格：
+
+```text
+row:     1 2 3 4 5 6 7 8 9 10 11
+orange:  ? ? M I ? ? G ? I  S  I
+```
+
+所以当前只有局部串 `??MI??G?ISI`。它还不是可提交答案，不能用语言直觉补空代替剩余五行的机械闭合。
+
+## Remaining rows
+
+| Row | Red length | Feeder state |
+| ---: | ---: | --- |
+| 1 | 11 | `HEARTHSTONE`（长度唯一） |
+| 2 | 7 | `SIDEBAR` / `ANAGRAM` 之一 |
+| 5 | 7 | `SIDEBAR` / `ANAGRAM` 之一 |
+| 6 | 8 | `CLIMATIC`（另一条 8 字母答案 `SEAHORSE` 已唯一命中 row 9） |
+| 8 | 6 | `WEIGHT`（另一条 6 字母答案 `REMARK` 已唯一命中 row 11） |
+
+`ANAGRAM` 仍是 e-05 的高置信 candidate，尚未由用户或 Hunt 网站确认为 accepted；此处只把它作为长度与机制假设。
+
+## Exact negative evidence after the breakthrough
+
+在正确的“混合集合、每段独立步进、逐代拼接”模型下：
+
+- 当前九集合猜法能产生的 `SIDEBAR` 6 种无损分拆，在 row 2 全部精确穷尽为零；
+- `ANAGRAM` 的 9 种无损分拆，在 row 5 全部精确穷尽为零；
+- `WEIGHT` 的现有唯一分拆，在 row 8 精确穷尽为零；
+- `CLIMATIC` 的 9 种无损分拆，在 row 6 全部精确穷尽为零；
+- SI 前缀已分别测试 2022 年 24 项与旧制 20 项、含/不含无前缀基准项、工程量级版本；常用最大块分拆仍为零；
+- 七个音名 `A…G` 与降行半音唱名也已作为额外集合加入诊断，但尚未补出剩余行。
+
+这些负结果不否定已确认的生成规则；相反，六行唯一整行命中加上剩余行在所有现有分拆下为零，把缺口定位到尚未正确识别的“可疑的量级”和/或“另一种声音”的精确集合定义。早期把整行限制为单一集合、把 `REMARK` 强行解释成 SI 前缀、把 `PIRATES` 强行解释成全化学元素等路线，均已被混合集合机制取代。
+
+## Feeder state
+
+| Feeder | Status | Answer |
+| --- | --- | --- |
+| e-01 | accepted | `REMARK` |
+| e-02 | accepted | `JANNA` |
+| e-03 | accepted | `PIRATES` |
+| e-04 | accepted | `SIDEBAR` |
+| e-05 | candidate | `ANAGRAM` |
+| e-06 | accepted | `FIREFOX` |
+| e-07 | accepted | `CLIMATIC` |
+| e-08 | accepted | `CHIEF` |
+| e-09 | accepted | `SEAHORSE` |
+| e-10 | accepted | `HEARTHSTONE` |
+| e-11 | accepted | `WEIGHT` |
+
+## Reproducibility
+
+- `work/visual/matrix.tsv`：从原页面 DOM 逐格转录的 11×48 矩阵与公开格。
+- `work/mixed_set_solver.py`：分拆、循环步进、未来公开格约束传播与整行验证的参数化求解器。
+- `artifacts/verified_rows.tsv`：六条已机械闭合行的紧凑复核表。
 
 ## Submission history
 
-只记录用户或比赛网站明确反馈过的提交；不要把尚未提交的候选写进来。
+当前没有 Meta 提交。
 
 | Date | Candidate | Result | Note |
 | --- | --- | --- | --- |
 
-## Evidence and artifacts
-
-- `work/visual/extract_singlefilez.py`：从不可直接渲染的 SingleFileZ 安全提取静态页面，并写出 manifest。
-- `work/visual/singlefilez/extraction_manifest.json`：解包清单。
-- `work/visual/matrix.tsv`：11 行的红区长度、橙格位置和可见字母模式。
-- `work/sequence_analysis.py`：DOM 解析和有界的线性、lag、XOR/LFSR 检验。
-- `work/cipher_analysis.py`：e-03 文本 autokey 与共同循环密钥检验。
-- `work/stream_analysis.py`：标准摘要和常见流密码的有界直接密钥检验。
-- 公开来源：[GCARK8R 原 geocache](https://www.geocaching.com/geocache/GCARK8R_captain-blackhearts-treasure)；[北外滩航海公园结构介绍](https://www.shhk.gov.cn/xwzx/002014/20230710/7c1cb81a-6de8-49a8-be60-e7380032240a.html)。
-
-尚无候选，因此暂未把实验脚本提升到 `artifacts/`。
-
-## Important failed routes
-
-- **未 accepted 的 feeder 候选：** 旧候选 `COMMENTATOR` 已被 accepted 的 `REMARK` 取代；e-05 的 `ANAGRAM` 仍不能使用；e-04 为空。不要用这些候选强行填行。
-- **答案直接作低阶数列种子：** 对 A=0 的一、二阶仿射/lag 递推、有限差分多项式、任意 tap 子集的 XOR/LFSR（A=0/A=1）均只得到随机水平匹配。三次有界实验后已停止该族。
-- **基础 autokey：** 以 PIRATES 为关键词、e-03 隐藏英文的正文/首字母/标题组合为明文，枚举偏移 0～100、三种加减方向和 plaintext/ciphertext feedback；最佳仅约 `5/13`。
-- **共同 Vigenere 式底流：** 枚举所有 accepted 答案在同长度行的排列、三种加减方向，最佳 `14/152` 列内碰撞；在大量排列选择后不显著，且没有逐列一致底流。
-- **答案直接作标准摘要/流密码密钥：** 14 种 hashlib 摘要/XOF、RC4、ChaCha20、Salsa20、大小写和 4 种常见 A–Z 映射中，最佳仅 `4/15`，排除便宜的直接构造。
-- **OEIS/A1Z26 前缀：** 最长且最有区分力的 HEARTHSTONE 前缀 `8,5,1,18,20,8,19,20,15,14,5` 在 OEIS 精确检索返回空；不再泛化拟合普通公开数列。
-- **Python `random.Random(answer)`：** 常见逐字母映射与矩阵不符。
-- **把 e-03 原 geocache 当作 Hunt 藏点：** 原文是 NW，Hunt 明改 SE；最多只能证明来源和大致区域，不能替代现场内容。
-
 ## Next action
 
-等待/取得 e-04、e-05 的 **accepted** 正确答案；同时请用户提供 e-03 Hunt 版东南角 cache 的照片、抄录或确认该线下任务不属于本 Meta。材料到齐后，先按 9 条问题 + 2 份隐藏内容建立一对一来源表，再只对一行检验候选生成规则，要求命中该行全部 10～15 个公开字母后才扩展到第 48 位。
+保持已经验证的逐段循环机制不变，继续反推“量级/另一种声音”的精确有序集合；每加入一个候选集合，就对 `HEARTHSTONE`、`SIDEBAR`/`ANAGRAM`、`CLIMATIC`、`WEIGHT` 的全部无损分拆做有限精确约束搜索。只有五条剩余行也逐格闭合并得到完整 11 字母提取后，才建立 Meta 答案 candidate。
