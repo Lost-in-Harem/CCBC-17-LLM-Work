@@ -1,5 +1,7 @@
 status	clue	decoded_work	artist	album	album_track	role	source
-rejected-ANOTHER	🔁 + ✅🚶‍➡️	Here It Goes Again	OK Go	Oh No	3	rejected external-song route	https://open.spotify.com/album/1qN6qh1gwgrYTCdSq21gov
-rejected-ANOTHER	💧🎨	Watercolour	Pendulum	Immersion	3	rejected external-song route	https://open.spotify.com/album/3XtEGVx9uh7J46nBzEc1VS
+rejected-ARCHIVE	🔄	Again	Archive			rejected normalization from song to artist	local knowledge; user rejected ARCHIVE and no answer search was performed
+rejected-ARCHIVE	✅🚶‍➡️	OK Go	OK Go			rejected middle list item	local knowledge; user rejected ARCHIVE and OK/GO do not pass the strict changed-meaning test
+rejected-ARCHIVE/rejected-metadata	💧🎨	Watercolour	Pendulum	Immersion	3	rejected normalization from song to artist; album and track number remain unused negative evidence	https://open.spotify.com/album/3XtEGVx9uh7J46nBzEc1VS
+rejected-ACYCLIC/rejected-metadata	🔄 + ✅🚶‍➡️	Here It Goes Again	OK Go	Oh No	3	old cycle route reused 🔄; album and track number are unused	https://open.spotify.com/album/1qN6qh1gwgrYTCdSq21gov
 rejected-ANOTHER	title 😊😠😢😃🏢	Upside Down & Inside Out	OK Go	Hungry Ghosts	1	rejected external-song route	https://open.spotify.com/track/5jGxeAkNbep75x8JLeb52H
 rejected-ANOTHER	take track 3	Another Set of Issues	OK Go	Hungry Ghosts	3	rejected external-song route	https://open.spotify.com/album/4C1TtVmFAU1a9P2GM0c4e5

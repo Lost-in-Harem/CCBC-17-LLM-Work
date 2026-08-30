@@ -1,0 +1,4 @@
+status	layer	positions	left_emoji	left_reading	right_emoji	right_reading	inside_out_reading	compound	role_of_first_component	reverse_audit
+rejected-APREFIX-AFFIXES	1	4→3	🚶‍➡️	WALK	➕️	CROSS	CROSS + WALK	CROSSWALK	compound free component, not a strict affix	WALK CROSS is not the conventional compound
+rejected-APREFIX-AFFIXES	2	5→2	✅️	MARK	💧	WATER	WATER + MARK	WATERMARK	compound free component, not a strict affix	MARK WATER is not the conventional compound
+rejected-APREFIX-AFFIXES	3	6→1	🔄	WHEEL	🎨	COLOR	COLOR + WHEEL	COLOR WHEEL	compound free component, not a strict affix	WHEEL COLOR is not the conventional term

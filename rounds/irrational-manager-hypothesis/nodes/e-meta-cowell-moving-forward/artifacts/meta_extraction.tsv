@@ -1,0 +1,9 @@
+row	feeder	exact_split	orange_token	owner_family	trend_index	indexed_letter	global_interpretation
+3	JANNA	JAN|Na	MAR	time	8	OUT-OF-RANGE	Locally exact decoy under the category-index extraction; JANNA has only 5 letters.
+4	FIREFOX	FIRE|F|OX	FIRE	elements-other	4	E	Valid: FIREFOX[4] = E.
+6	CLIMATIC	C|LIMA|TI|C	Y	writing-latin	1	C	Valid local route: CLIMATIC[1] = C; may still be a message-level decoy.
+7	PIRATES	PI|RAT|Es	DRAGON	biology	9	OUT-OF-RANGE	Locally exact decoy under the category-index extraction; PIRATES has only 7 letters.
+8	WEIGHT	W|EIGHT	FOURTEEN	magnitude	5	H	Valid: WEIGHT[5] = H.
+9	SEAHORSE	Se|A|HORSE	NI	elements-chemical	3	A	Valid: SEAHORSE[3] = A.
+10	CHIEF	CHI|E|F	S	writing-latin	1	C	Valid: CHIEF[1] = C.
+11	REMARK	RE|MAR|K	MI	sound-ascending	6	K	Valid: REMARK[6] = K.

@@ -26,26 +26,22 @@ import zipfile
 from collections import deque
 from pathlib import Path
 
-# Known square-pattern -> result mapping, built up across captures.
-# Extend this table as new captures reveal more patterns.
-SQUARE_TABLE = {
-    "sq--solid": "黄鳝",      # 2026-08-17 23:47 capture showed solid as an example row
-    "sq--lr-left": "黄鹂",
-    "sq--check-tl": "黄酒",   # 2026-08-17 13:03, transcribed from a screenshot
-    "sq--check-tr": "黄雀",   # 2026-08-17 13:03, complementary to check-tl
+# Hint 3 says to compare the square's split with the structure of the character
+# after 黄.  Only left/right and top/bottom patterns match this image set.  The
+# coloured region selects the corresponding component.
+IMAGE_STRUCTURE = {
+    "huangjiu": ("酒", "lr", {"sq--lr-left": "氵", "sq--lr-right": "酉"}),
+    "huanghe": ("河", "lr", {"sq--lr-left": "氵", "sq--lr-right": "可"}),
+    "huangli": ("鹂", "lr", {"sq--lr-left": "丽", "sq--lr-right": "鸟"}),
+    "huangpi": ("陂", "lr", {"sq--lr-left": "阝", "sq--lr-right": "皮"}),
+    "huangshan": ("鳝", "lr", {"sq--lr-left": "鱼", "sq--lr-right": "善"}),
+    "huangque": ("雀", "tb", {"sq--tb-top": "小", "sq--tb-bottom": "隹"}),
 }
 
 # 刘禹锡《乌衣巷》末联, laid out as the 7x2 grid of photo 2.
 WUYIXIANG = ["旧时王谢堂前燕", "飞入寻常百姓家"]
-
-# Photo 4, "+" rows: take B's radical, join it to a component of A to make a real
-# character, and read off where B's radical sits, map-style. Verified on all three
-# known "+" equations (喜+娇→嬉 女在左→西; 乐+奴→㜰 女在左→西; 狗+儿→𠁤 儿被围→中→忠).
-# The "-" rows are not understood yet (牛-人↔精 does not fit).
-DIRECTION_KEY = "上=北 下=南 左=西 右=东 包围/被包围=中；答案是该方位字或其同音字"
-RADICAL = {  # B -> its radical, for operands seen so far
-    "儿": "儿", "娇": "女", "奴": "女", "油": "氵", "米": "米", "人": "亻",
-}
+SURNAME_INDEX = {"時": 83, "时": 83, "王": 8, "謝": 34, "谢": 34,
+                 "燕": 315, "常": 80}
 
 ICON = {"\U0001F434": "马", "\U0001F426": "鸟", "\U0001F41F️": "鱼",
         "\U0001F42F": "虎", "\U0001F410": "羊", "\U0001F40E": "马"}
@@ -66,6 +62,8 @@ def clock(src: str) -> str:
 
 def photo1(src: str) -> list[str]:
     rows = []
+    examples = []
+    unknown_patterns = []
     for m in re.finditer(r'<div class=riddle1-row>(.*?)</div>\s*(?=<div class=riddle1-row>|</div>)', src, re.S):
         block = m.group(1)
         sq = re.search(r'class="riddle1-square (sq--[\w-]+)"', block)
@@ -73,11 +71,26 @@ def photo1(src: str) -> list[str]:
         img = re.search(r'riddle1-image riddle1-image--(\w+)', block)
         unk = "riddle1-unknown" in block
         pat = sq.group(1) if sq else "?"
+        image_id = img.group(1) if img else None
         rows.append(f"{pat} [{col.group(1) if col else '?'}] = "
-                    f"{'?' if unk else (img.group(1) if img else '?')}")
+                    f"{'?' if unk else (image_id or '?')}")
+        if image_id:
+            examples.append((pat, image_id))
         if unk:
-            known = SQUARE_TABLE.get(pat)
-            rows.append(f"    -> 按已知对照表 {pat} = {known or '未知（该图案还没见过）'}")
+            unknown_patterns.append(pat)
+    selected = []
+    coherent = len(examples) >= 2
+    for pat, image_id in examples:
+        item = IMAGE_STRUCTURE.get(image_id)
+        component = item[2].get(pat) if item else None
+        coherent = coherent and component is not None
+        selected.append(component)
+    if coherent:
+        rows.append(f"    -> 两条示例的分割都匹配字形；着色部分依次选出：{'、'.join(selected)}")
+        if selected == ["可", "阝"]:
+            rows.append("    -> 按部件原左右位置合并：⿰阝可 = 阿")
+    elif unknown_patterns:
+        rows.append("    -> 当前分钟并非两条分割同时匹配字形的有效相位")
     return rows
 
 
@@ -96,7 +109,10 @@ def photo2(src: str) -> list[str]:
             r, c = (i - 1) // 7 + 1, (i - 1) % 7 + 1
             out.append(f"r{r}c{c}={what}" + (f"[{border.group(1)}]" if border else ""))
             if unk and r <= 2 and c <= 7:
-                out.append(f"    -> 《乌衣巷》末联 第{r}句第{c}字 = {WUYIXIANG[r-1][c-1]}")
+                underlying = WUYIXIANG[r-1][c-1]
+                out.append(f"    -> 《乌衣巷》末联底字 = {underlying}（底字会随分钟移动，不等于固定答案）")
+                if underlying in SURNAME_INDEX:
+                    out.append(f"    -> 该底字是《百家姓》成员：S{SURNAME_INDEX[underlying]}")
     foot = re.search(r'<span class=box-footer-text>(.*?)</span>.*?<sub class=box-sn-sub>(\d+)</sub>', src, re.S)
     if foot:
         out.append(f"{foot.group(1)}∈S{foot.group(2)}")
@@ -141,7 +157,7 @@ def photo3(src: str) -> list[str]:
     for (r, c) in animals:
         cols[c + 1] += 1; rows[r + 1] += 1
     out.append(f"animals per column(1..5)={cols[1:]}  per row(1..5)={rows[1:]}"
-               "   # both captures so far: 羊(1,1) 鱼(3,3) 虎(5,5) fixed, 马+鸟 both in column 2")
+               "   # exact distribution for this minute; all five animals move with E")
     return out
 
 
@@ -153,14 +169,7 @@ def photo4(src: str) -> list[str]:
         row = vals[i:i + 5]
         out.append(" ".join(row))
         if len(row) == 5 and row[4] in "？?":
-            a, op, b = row[0], row[1], row[2]
-            if op == "+":
-                rad = RADICAL.get(b)
-                out.append(f"    -> 「+」行规则：取 B={b} 的部首"
-                           f"{'（' + rad + '）' if rad else ''}，与 A={a} 的部件拼成真实汉字，"
-                           f"看该部首落在哪个方位。{DIRECTION_KEY}")
-            else:
-                out.append(f"    -> 「{op}」行的规则仍未确定，请连同答案一起记录下来")
+            out.append("    -> 逐字拆字/方位读法已被提交否定；请与其他分钟比较后再解释")
     return out
 
 

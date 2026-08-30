@@ -1,0 +1,11 @@
+{
+  "command": "annotate",
+  "source": "G:/Repo/CCBC-17-LLM-Work/rounds/shi-qi-love-in-chaos/nodes/b10-puzzle-in-strand/work/visual/hint11/assets/image-001.jpg",
+  "source_sha256": "77d3828d90c69631fb91d4c4f434127af2691adb35c35039428ed18093c971f7",
+  "spec": "G:/Repo/CCBC-17-LLM-Work/rounds/shi-qi-love-in-chaos/nodes/b10-puzzle-in-strand/work/visual/hint11/annotations.json",
+  "spec_sha256": "bf092854be77c96284523791fb63cc5af8070ae6baecffc784e2b444bcd69113",
+  "coordinate_space": "EXIF-transposed source pixels",
+  "scale": 1,
+  "annotation_count": 38,
+  "output": "G:/Repo/CCBC-17-LLM-Work/rounds/shi-qi-love-in-chaos/nodes/b10-puzzle-in-strand/artifacts/hint11-annotated.png"
+}

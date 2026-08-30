@@ -1,7 +1,7 @@
-status	order	column	pink_cell	region	song	previous_lyric_role	emoji	alternate_reading	extraction_role	note
-candidate-ANAGRAM	1	5	r3c5	1	ライアーダンサー	ずっと話してる／持续循环	🔄	TURN / REARRANGE	anagram indicator	R6 的左右往返改用水平 repeat 图 🔁；粉格中的循环箭头改作重排指示。
-candidate-ANAGRAM	2	6	r32c6	4	㋰責任集合体	これはなんだ／それがなにか；疑问	❓️	WORD PUZZLE	definition	R6 的“何よりも大切”改用 ✅；这里的问号在最终读作待求的文字谜题。
-candidate-ANAGRAM	3	7	r47c7	5	イレギュラーマン	脱出复合图中的人物运动	🚶‍➡️	A MAN	fodder 1	不再表示脱出方向，而把人物直接读作 A MAN。
-candidate-ANAGRAM	4	8	r51c8	6	カンケーガール	交差点／交叉点	➕️	PLUS	operator	不再表示交差点，而连接两组重排字料。
-candidate-ANAGRAM	5	9	r16c9	2	ちっちゃな私	泣きたい／眼泪	💧	WET / SPILL	rag clue part 1	不再表示眼泪；与画具合看，提示需要抹掉的水或湿颜料。
-candidate-ANAGRAM	6	10	r26c10	3	ウルトラトレーラー	落書き／涂鸦	🎨	PAINTER'S RAG	rag clue part 2	不再表示落书；与前一枚合指擦水和颜料的 RAG。答案格式及自指重排排除 CLOTH/SPONGE。
+status	order	column	pink_cell	region	song	previous_lyric_role	emoji	alternate_reading	letter	note
+candidate-ATHWART	1	5	r3c5	1	ライアーダンサー	ずっと話してる／持续不断	🔄	TURN	T	圆形箭头改读转动，不再取 AGAIN／REPEAT／持续。
+candidate-ATHWART	2	6	r32c6	4	㋰責任集合体	ここはたのし／それでよろし的肯定场景	✅️	HEAVY	H	U+2705 的字符名为 WHITE HEAVY CHECK MARK；取 HEAVY，不再取 OK／RIGHT／肯定。
+candidate-ATHWART	3	7	r47c7	5	イレギュラーマン	脱出复合图中的人物运动	🚶‍➡️	WALK	W	改读普通步行动作，不再取 GO／EXIT／脱出。
+candidate-ATHWART	4	8	r51c8	6	カンケーガール	交差点／交叉点位置	➕️	ADD	A	改读加法运算，不再取 INTERSECTION／CROSSROADS。
+candidate-ATHWART	5	9	r16c9	2	ちっちゃな私	泣きたい／眼泪	💧	RAIN	R	改读雨滴，不再取 TEAR／CRY。
+candidate-ATHWART	6	10	r26c10	3	ウルトラトレーラー	落書き／涂鸦	🎨	TINT	T	改读色调／着色，不再取 GRAFFITI／DOODLE／DRAWING。

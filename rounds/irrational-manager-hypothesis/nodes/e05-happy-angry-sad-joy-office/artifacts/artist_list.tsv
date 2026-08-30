@@ -1,0 +1,6 @@
+order	emoji_group	alternate_reading	surface_type	normalized_artist	format_check	note
+1	🔄	AGAIN	song	ARCHIVE	rejected	User rejected ARCHIVE; *Again* is non-unique and is too close to the emoji's old continuation meaning.
+2	✅️🚶‍➡️	OK GO	artist	OK GO	does not match A??????	Already an artist name, so no further conversion is required.
+3	💧🎨	WATERCOLOUR	song	PENDULUM	does not match A??????	*Watercolour* is a song by Pendulum.
+connector	➕️	AND	list conjunction			Joins the second and third visible items; the implicit comma separates AGAIN from OK GO.
+result	three artists	ARCHIVE / OK GO / PENDULUM	artist list	ARCHIVE	rejected	The normalization-and-format filtering mechanism was explicitly rejected by the user.

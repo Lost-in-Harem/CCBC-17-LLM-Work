@@ -1,0 +1,19 @@
+stage	input	calculation	output
+photo4	E=5474; 兔-二报/怒-念印/咪-柴?	one-based differences	3.14=π
+intermediate	阿/飞/正/传	concatenate	阿飞正传
+target	阿飞正传 famous lines	minute + object	1960-04-16 14:59; 鸟
+offset	anchor=2026-08-19 14:51	target-anchor	E=-34892632; E mod25=18
+photo2_target	E mod14=2	caption frames + question	百家姓=S; cell=8→飞
+bird	(2E+7) mod25	zero-based=18	cell=19; coordinate=(4,4)
+target_maze_control	E mod140=128	compare solvable phases (9, 65)	no traversable route at target minute
+raw_position	visible row=4; column=4	concatenate the two displayed coordinates	44 (rejected)
+row_major_value	bird zero-based cell=18	convert page orbit to one-based cell	19
+photo3_like_check	maze post fixed likes=19	compare with one-based bird cell	19=19
+rejected_a_to_y	row-major cell=19	A-Y row-major	S (rejected)
+rejected_polybius	coordinate=(4,4)	standard I/J-combined 5×5 Polybius square	T (rejected)
+animal_alphabet_control	fully recovered non-horse tracks	A-Y row-major	goat=(1,5)→E; fish=(3,5)→O; tiger=(5,1)→U; bird=(4,4)→S (EOUS only; horse cell and ordering are not recovered)
+horse_overlap_control	horse anchor=(3,2); target is 18 knight moves later	chessboard parity	no overlap with bird (4,4)
+rejected_lookup	row-major cell=19; coordinate=44	S19; S44	尤; 葛 (both rejected)
+rejected_number	cell=19; maze-post likes=19	write 19 as digits or an English cardinal	19 / NINETEEN (both rejected)
+thematic_control	footless-bird line; title Carpe Diem	death / Memento Mori association	死/死亡/MEMENTO MORI (thematic only)
+leading_hypothesis	bird at (4,4); retained 13:03 and 23:48 mazes both enclose (4,4)-(4,5)	read the object inside the closed compartment	CAGED BIRD (exact target wall phase not fully reproduced)

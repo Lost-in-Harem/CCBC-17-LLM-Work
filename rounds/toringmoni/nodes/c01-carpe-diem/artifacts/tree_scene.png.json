@@ -1,0 +1,11 @@
+{
+  "command": "annotate",
+  "source": "G:/Repo/CCBC-17-LLM-Work/rounds/toringmoni/nodes/c01-carpe-diem/work/visual/inventory/assets/image-005.webp",
+  "source_sha256": "6e82257b0826f234cd7f3ac360f7d8eb4ac85b1856e669dfc83e28afd6237eb1",
+  "spec": "G:/Repo/CCBC-17-LLM-Work/rounds/toringmoni/nodes/c01-carpe-diem/work/visual/tree-scene-annotations.json",
+  "spec_sha256": "cda46fb79221108da0dfe2bac6a9743809c9569519d64d34e63bc477c8a892e5",
+  "coordinate_space": "EXIF-transposed source pixels",
+  "scale": 1,
+  "annotation_count": 3,
+  "output": "G:/Repo/CCBC-17-LLM-Work/rounds/toringmoni/nodes/c01-carpe-diem/artifacts/tree_scene.png"
+}

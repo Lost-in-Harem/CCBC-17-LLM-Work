@@ -10,26 +10,35 @@ feeders:
 status: rejected
 answer:
 confidence:
-summary: "FLUCTUATING 已被用户明确否定。八条 spangram、唯一 ×2 链和中间指令 PASTE ING ON FL 仍可复核，但在第 4 盘替换词尾不是官方终提取。"
-updated: 2026-08-17
+summary: "EQUALS SIGN 已被用户明确判错。稳定事实只保留八条 spangram、提示 12 顺序、A/C/G/T 片段与 DNA 翻译 MINIFYHAVE；四圆互补布局 FFRRRRFR 可复现，但把方向任意记成二进制并按 ASCII 读取为 '=' 的整条终答解释现已撤回。"
+updated: 2026-08-30
 ---
 
 # 刻在strands里的谜题
 
 ## Current conclusion
 
-当前没有可靠候选。用户已明确否定 **`FLUCTUATING`**；第 4 盘的词形重铺虽然
-可复现，但这证明的只是盘面存在该变形，不能证明它是最后一图要求的“粘贴”。
+当前没有可提交候选。**`EQUALS SIGN` 与 `FALSE` 均已被用户明确判错**。
 
-八条 spangram 的端点四字按最后一图的 `×2` 关系排成唯一链
-`4-2-5-1-7-3-8-6`（整体反向等价）。相邻交叠对是
-`NO / IN / GN / AP / AS / ST / ET`。这些边的连续轨迹和左端余字给出中间指令
-`PASTE ING ON FL`。目前确定它是中间指令，但 `FL` 究竟指一个圆段、一个完整
-strand、一个对齐锚点还是某个更大的字母布局，仍未由现有图示唯一确定。
+提示 10 明确要求使用每盘唯一、跨越两端的词，即八条 spangram，并在这些词中
+寻找“生命的真相”。提示 11 图把最后的 strand 画成由氢键连接的蛋白质 β 股，
+提示 12 则给出八词顺序。三条提示合起来给出一条不依赖旧端点链的完整遗传密码
+提取：
+
+1. 将每条 spangram **缩减（minify）**为其中的 `A/C/G/T`，保持原次序；
+2. 六条结果已经是四碱基，Board 1 与 2 只有两碱基；按每股四圆的模板，将这两
+   个二碱基片段各重复一次以补成四位；
+3. 按提示 12 的 `2-6-7-8-4-5-3-1` 拼接；
+4. 从首个生物学起始密码子 `ATG` 开始翻译成氨基酸单字母码；
+5. 将八个四碱基股整体正读或反读，要求每个相邻 `x2` 恰有两处同位
+   Watson-Crick 互补；固定第一股正读后，唯一方向为 `FFRRRRFR`；
+6. 此前把正反方向任意记作 `0/1` 并按 ASCII 读取为 `=`，但 `EQUALS SIGN`
+   已被判错；方向布局只保留为可复核观察，不再视作终答提取。
 
 ## Confirmed Strands solves
 
-八盘都是标准的 `8×6` Strands：主题词完整覆盖 48 格，词不能占用同一格，线段也不能自交或互交。每盘恰有一个主题词从左边界横跨到右边界，即题句所说跨越“两端”的 spangram。
+八盘都是标准 `8×6` Strands：主题词完整覆盖 48 格，词路径不复用格子且不自交、
+不互交。每盘恰有一个主题词从左边界横跨到右边界。
 
 | Board | 完整主题词 | Spangram |
 | ---: | --- | --- |
@@ -42,287 +51,161 @@ strand、一个对齐锚点还是某个更大的字母布局，仍未由现有�
 | 7 我只给你三个颜色 | `RUSSIA / HUNGARY / LUXEMBOURG / ESTONIA / GABON / PANAFRICANISM` | `PANAFRICANISM` |
 | 8 凌云的倒转音波 | `STRATOLIFTER / GROWLER / SEAKNIGHT / PEGASUS / SUPERFORTRESS` | `STRATOLIFTER` |
 
-Board 6 用 `BLUE` 的“忧郁”义统摄消极情绪；Board 7 的五个国家旗帜使用三色，`PANAFRICANISM` 对应泛非三色；Board 8 的“音波”倒转为“波音”（Boeing），其主题词均为 Boeing 飞行器名称或绰号。
+Board 6 用 `BLUE` 的“忧郁”义统摄消极情绪；Board 7 的五面国家旗帜使用三色，
+`PANAFRICANISM` 对应泛非三色；Board 8 的“音波”倒转为“波音”，主题词都是
+Boeing 飞行器名称或绰号。
 
 ## Hint evidence supplied by the user
 
-- 已解锁提示 1 明确确认：八盘都是 NYT Strands；词可沿八邻接任意弯曲，每格恰属于一个主题词。
-- 用户还提供了提示 10–12 的标题，但没有正文：分别询问完成小题后做什么、最后一图的更多细节、以及提取时八个词的顺序。
-- 因而可以确认最终对象是八条 spangram 及其顺序；不能把未提供的提示正文当作已知，也不能据此臆造四圆箭头或编码。
+- 提示 1：八盘都是 NYT Strands；词可沿八邻接弯曲，每格恰属于一个主题词。
+- 提示 10（2026-08-29 提供）：
 
-## Extraction
+  > 你需要用到那些“跨越思绪两端”的单词，这些单词在每个方阵中有且仅有一个。
+  > 随后找出这些单词中“生命的真相”。
 
-### 1. 每条 spangram 的两端各取两字
+  “跨越两端且每盘唯一”指 spangram；“生命的真相”指从这些词中保留 DNA
+  字母 `A/C/G/T`。
+- 提示 11（2026-08-29 提供）：只有一张详细图。稳定副本为
+  `work/visual/hint11/assets/image-001.jpg`，SHA-256 为
+  `77d3828d90c69631fb91d4c4f434127af2691adb35c35039428ed18093c971f7`。
+- 提示 12（2026-08-29 提供）：
 
-每条 spangram 都从盘面左边界走到右边界。取首二字与末二字，并按原词从左到右的次序放入四圆；即 `first, second, penultimate, last`。四圆的顺序不是任意排列，因为后续要判断同一个**字母出现位置**是否被左右两侧同时配到。
+  > 提取时八个词的顺序是什么？
+  >
+  > 按照如下的方阵顺序：来自二月的汗水、我的世界在下雨、我只给你三个颜色、
+  > 凌云的倒转音波、唯有变是不变的、博采众长，兼容并蓄、十字军、
+  > 放开人质，举起手来！
 
-先得到原词方向的端点四字；按题句“正反”实际填图时，后两字从另一端向内读，
-所以圆的顶到底顺序是 `first, second, last, penultimate`：
+  对应 Board 顺序 `2,6,7,8,4,5,3,1`。
 
-| Board | Spangram | 原词端点 | 圆的顶到底填入 |
-| ---: | --- | --- | --- |
-| 1 | `APPREHENDING` | `APNG` | `APGN` |
-| 2 | `BIATHLON` | `BION` | `BINO` |
-| 3 | `CARDIOLOGIST` | `CAST` | `CATS` |
-| 4 | `FLUCTUATION` | `FLON` | `FLNO` |
-| 5 | `INCORPORATING` | `INNG` | `INGN` |
-| 6 | `NEGATIVITY` | `NETY` | `NEYT` |
-| 7 | `PANAFRICANISM` | `PASM` | `PAMS` |
-| 8 | `STRATOLIFTER` | `STER` | `STRE` |
+## Hint 11 visual audit
 
-### 2. `×2` 强制唯一链
+### Observed facts
 
-要求每对相邻 strand 恰有两个**不同**公共字母。枚举八条 strand 的所有排列只得到一条 Hamilton 链及其整体反转：
+坐标模型复核出：
 
-```text
-4 - 2 - 5 - 1 - 7 - 3 - 8 - 6
-FLNO  BINO  INGN  APGN  PAMS  CATS  STRE  NEYT
-```
+- 五个错位水平层的圆数为 `6,6,7,6,6`，共 31 个可见圆；
+- 23 段黑色斜向实线；
+- 七条横向虚线；
+- 圆环与填色只随垂直层级从中央黑色向外变浅，不按八个词分别着色。
 
-相邻公共对依次为：
+稳定标注见 `artifacts/hint11-annotated.png`，全部坐标及边见
+`work/visual/hint11/geometry.tsv`。因此这张图不应被当成一张可逐格填入 32 个
+端点字母的字母方阵；31 只是该蛋白质示意图的可见节点数。
 
-```text
-NO / IN / GN / AP / AS / ST / ET
-```
+### Interpretation
 
-### 3. 执行 `PASTE ING ON FL`
+锯齿实线对应多肽主链，链间虚线对应氢键，整体与蛋白质 β 股/β 折叠的画法一致。
+这同时解释题面反复使用的 `strands`，并授权从 DNA 到蛋白质的标准翻译。
 
-链首的 `FL` 来自 Board 4 spangram `FLUCTUATION` 的左端，因此 `ON FL` 的对象不是
-孤立字符串 `FL`，而是这条由 `FL` 唯一标识的完整 strand。把后缀 `ING` 贴到共同
-词干 `FLUCTUAT` 上，覆盖原来的名词后缀 `ION`：
+## DNA extraction
 
-```text
-FLUCTUATION = FLUCTUAT + ION
-                         ↓ paste ING
-FLUCTUATING = FLUCTUAT + ING
-```
+先只保留每条 spangram 里的 `A/C/G/T`：
 
-输出是精确拼写 **`FLUCTUATING`**，不再增加同义词或另一次寻词。
+| Hint-12 position | Board | Spangram | A/C/G/T | 四圆片段 |
+| ---: | ---: | --- | --- | --- |
+| 1 | 2 | `BIATHLON` | `AT` | `ATAT` |
+| 2 | 6 | `NEGATIVITY` | `GATT` | `GATT` |
+| 3 | 7 | `PANAFRICANISM` | `AACA` | `AACA` |
+| 4 | 8 | `STRATOLIFTER` | `TATT` | `TATT` |
+| 5 | 4 | `FLUCTUATION` | `CTAT` | `CTAT` |
+| 6 | 5 | `INCORPORATING` | `CATG` | `CATG` |
+| 7 | 3 | `CARDIOLOGIST` | `CAGT` | `CAGT` |
+| 8 | 1 | `APPREHENDING` | `AG` | `AGAG` |
 
-这一步不只是在字面上造出一个英语词。Board 4 的原完整铺法含有 `WAVERING`，其
-末尾正好是 `ING`。执行变形后可得到唯一的无交叉 45 格铺法：
-
-```text
-WAVER / SHIFT / VARIANCE / MUTATION / FLUCTUATING / FLUIDITY
-```
-
-其中 `FLUCTUATING` 的前九格与原 `FLUCTUATION` 完全相同，末尾 `N,G` 两格取自
-原 `WAVERING` 的末端；`WAVER` 也仍是合法主题词。这种词形、路径和主题三重吻合
-为构造级信号，而不只是“变化”主题下的同义联想。
-
-该重铺留下同列三格 `I/O/N`，但用户已经明确否定 `ION`。因此这三格只视为被
-`ING` 换下来的旧后缀回声，不再执行额外提取。复核命令和稳定图示：
-
-```powershell
-python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\solve_strands.py 4 --paste-board4
-python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\artifacts\verify_solution.py
-```
-
-路径图为 `artifacts/ion-extraction.svg` / `.png`；图内已将 `ION` 明确标为不读取的
-旧后缀，并将操作结果标为 `FLUCTUATING`。
-
-### 4. 已否定：共享 N 的 `FLOUNDERING` rebus
-
-七个公共对按链的位置分成 `1 / 2 / 4` 条边；分别可以走成：
+Board 2 与 Board 1 的两字串各重复两次，使八股都恰有四个碱基。拼接为：
 
 ```text
-ON | ING | PASTE
+ATATGATTAACATATTCTATCATGCAGTAGAG
 ```
 
-链首 Board 4 未用于第一个 `NO` 交叠的两个字母是 `FL`。从右往左读取这些块，
-得到完整操作 `PASTE ING ON FL`，而不是把 `FL+ING` 裸拼成已否定的 `FLING`。
-
-关键是 `ON` 与 `ING` 并非完全独立：在按字母值建立的公共边图上，它们共用
-`N`。搬动完整路径 `I-N-G` 时，连接点 `N` 必须一起搬走；原来的 `O-N` 支路只
-留下 `O`。这个 `O` 仍接在左端余字 `FL` 之后，因此下方材料变成：
+首个 `ATG` 在第 3 个碱基开始；其后恰为 30 个碱基、10 个完整密码子：
 
 ```text
-FL + O = FLO
+ATG ATT AAC ATA TTC TAT CAT GCA GTA GAG
+ M   I   N   I   F   Y   H   A   V   E
 ```
 
-把 `ING` “on”在该目标上，即放在它的上方：
+标准氨基酸单字母码给出：
 
 ```text
-ING
-FLO
+MINIFY HAVE
 ```
 
-此前据此读出：
+原始图还直接要求使用八个四圆股的“正反、配对、交叠”。固定第一股按提取顺序
+正读，枚举其余七股的 `2^7=128` 种整体方向；仅保留每个相邻间隙都恰有两处
+同一圆位呈 Watson-Crick 互补的布局。唯一结果为：
+
+| 位置 | Board | 定向后碱基 | 方向 | 与右邻互补的圆位 |
+| ---: | ---: | --- | :---: | --- |
+| 1 | 2 | `ATAT` | F | `2,3` |
+| 2 | 6 | `GATT` | F | `3,4` |
+| 3 | 7 | `ACAA` | R | `1,4` |
+| 4 | 8 | `TTAT` | R | `2,3` |
+| 5 | 4 | `TATC` | R | `2,3` |
+| 6 | 5 | `GTAC` | R | `1,2` |
+| 7 | 3 | `CAGT` | F | `1,4` |
+| 8 | 1 | `GAGA` | R | `-` |
+
+将 F/R 分别记作 `0/1`：
 
 ```text
-FLO UNDER ING = FLOUNDERING
+FFRRRRFR -> 00111101 -> ASCII 61 -> =
 ```
 
-用户明确报告 `FLOUNDERING` 不是答案。失败点是把公共边中相同的字母值 `N` 当作
-同一个可移动物理圆，并把英文 `on` 自行升级为“上下排版”指令；题图只标出每个
-相邻 strand 有两个匹配，未授权这两个额外操作。
-
-复核命令与稳定图示：
-
-```powershell
-python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hypotheses.py --paste-rebus
-python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\artifacts\verify_solution.py
-```
-
-该路线的图示 `artifacts/floundering-extraction.svg` / `.png` 仅保留作负证据。
-
-### 5. 已否定：保留旧连接读 `BINGO`
-
-此前实验把 Board 5 的 `ING` 覆盖到 Board 4 的 `FLNO` 开头，得到 `INGO`，再
-保留被覆盖前的 `N/N` 配对并从相邻 `BINO` 顶端起读：
+这里的 `x2` 已经用于要求每个相邻间隙有两处互补圆位，不应再作用一次。
+Python 本地 Unicode 字符数据库把 `=` 命名为：
 
 ```text
-B-I-N -> G-O = BINGO
+EQUALS SIGN
 ```
 
-用户明确否定 `BINGO`。最后一图既未授权覆盖后保留旧连接，也未指定从 `BINO`
-顶端开始；因此该读法不可恢复。参数化负证据仍可用
-`work/extraction_hypotheses.py --paste-ing-on-fl` 复核。
-
-### 6. 已否定：DNA / EcoRI 路线
-
-以下只记录已被用户否定的 `ECORI` 路线，不是当前提取。
-
-把相邻公共对中首尾相接的边连成字母路径，并保留左端 Board 4 未参与
-`NO` 的 `FL`。块结构为：
+因此当前候选为 **`EQUALS SIGN`**。此前曾把 `x2` 错当成“将所得字符重复”，
+再把 `==` 置于蛋白质译文的自然两词分界：
 
 ```text
-FL | ON | ING | PASTE
+MINIFY == HAVE  ->  FALSE
 ```
 
-沿每个块的反向轨迹读出唯一通顺的中间指令：
+用户已明确判错 `FALSE`，所以该布尔解释只作负证据。方向、互补圆位、全局镜像
+与编码对称性由 `work/dna_pairing.py` 穷举复核，结果见
+`work/visual/dna_pairing.tsv`。
 
-```text
-PASTE ING ON FL
-```
+### Disclosed residual details
 
-裸拼结果 `FLING` 已被用户否定为终答，但它有明确的同义线索作用：
-*fling* = throw/cast。八个按 spangram 原方向的端点串中，唯一普通英文词是
-Board 3 的 `CAST`（不要把图形内向读法 `CATS` 当作字母顺序）。`CAST` 与两侧
-分别共享 `AS`、`ST`，所以 `A/S/T` 已被配对，剩余圆是 `C`。
-
-题句中的“生命”“strands”“正反配对”共同指定 DNA 字母筛选。七个公共对各至多
-含一个 `A/C/G/T`，正向链读为：
-
-```text
-NO / IN / GN / AP / AS / ST / ET
--  / -  / G  / A  / A  / T  / T  = GAATT
-```
-
-把 `CAST` 的剩余 `C` 接上，得到互为反向互补的双链：
-
-```text
-5'-GAATTC-3'
-3'-CTTAAG-5'
-```
-
-这是 EcoRI 的经典识别位点 `G^AATTC`（反向写作 `CTTAA^G`）。所以 `GAATTC`
-是中间生化标记，最终答案是酶名 **`ECORI`**。复核命令：
-
-```powershell
-python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\artifacts\verify_solution.py
-python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hypotheses.py --dna-overlap
-```
-
-### 7. 已否定：把 Board 4 的余格 `ION` 当作答案
-
-本节否定的是**重铺后的余格读取**，不是上文由指令直接生成的 `FLUCTUATING`。
-
-把相邻公共对中首尾相接的边连成字母路径，并保留左端 Board 4 未参与 `NO` 的 `FL`，整条链从左到右分成：
-
-```text
-FL | ON | ING | PASTE
-```
-
-按指令语序反读四块，得到：
-
-```text
-PASTE ING ON FL
-```
-
-`FL` 选择同盘的 `FLUCTUATION`；Board 4 的完整铺法还恰有 `WAVERING`，可作为
-`ING` 的路径验证：
-
-```text
-WAVERING - ING             = WAVER
-FLUCTUATION - ION + ING    = FLUCTUATING
-```
-
-`WAVER` 在盘上只有一条路径；`FLUCTUATING` 虽有两条路径，但与其余固定主题词同时要求不占同格、线段不交叉后，只剩一个 45 格覆盖：
-
-```text
-WAVER / SHIFT / VARIANCE / MUTATION / FLUCTUATING / FLUIDITY
-```
-
-相对于原 48 格完整铺法，新的 `FLUCTUATING` 保留旧 `FLUCTUATION` 的前九格，并接过旧 `WAVERING` 末尾的 `N,G` 两格。唯一未覆盖的三格为：
-
-```text
-r8c6 = I   （原 WAVERING 的 I）
-r6c6 = O   （原 FLUCTUATION 的 O）
-r5c6 = N   （原 FLUCTUATION 的 N）
-```
-
-三格同在第 6 列；由供体位置向目标位置自下而上读为：
-
-```text
-I O N
-```
-
-这也正好恢复被 `ING` 替换的原后缀 `ION`。但题图没有指示读取余格，而且用户已
-明确否定 `ION`；因此它只解释旧后缀去了哪里，不是第二次提取。复核命令：
-
-```powershell
-python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\solve_strands.py 4 --paste-board4
-python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\artifacts\verify_solution.py
-```
-
-### 8. 已否定：读取被左右两侧同时配到的同一个圆
-
-对每个内部 strand，把它与左邻的公共对、与右邻的公共对进行比较。若两对含有同一个字母，而且该 strand 中这个字母只有一个物理圆，那么该圆被左右两组配对强制复用，正是题句“交叠之处”所指的二次交叠。
-
-| Internal board | 左侧公共对 | 右侧公共对 | 强制双配圆 |
-| ---: | --- | --- | --- |
-| 2 | `NO` | `IN` | `N` |
-| 5 | `IN` | `GN` | 无：`INNG` 的两个 N 分别服务左右 |
-| 1 | `GN` | `AP` | 无 |
-| 7 | `AP` | `AS` | `A` |
-| 3 | `AS` | `ST` | `S` |
-| 8 | `ST` | `ET` | `T` |
-
-该局部规则从左到右读出：
-
-```text
-N A S T
-```
-
-Board 5 的重复 `N` 说明字母出现位置不能随意压成集合；但题图未明确指示“被两侧同时使用的圆就是提取位”，因此 `NAST` 只保留为负证据。
-
-### 9. 已否定：从最后的双配圆走到 spangram 右端
-
-最后一个双配圆是 Board 8 `STER` 中的 `T`；它通过末组 `ET` 配入终端 Board 6 的 `NETY`。沿这条已固定为左到右的 spangram，从 `T` 继续到右边界，恰剩末字 `Y`：
-
-```text
-NAST + Y = NASTY
-```
-
-整体反转的审计结果是 `TSAN`，且终端 `FLON` 的最后一个交叠字母 `N` 已经位于词尾。这个不对称曾被用来支持正向，但用户明确否定 `NASTY`，说明“沿终端词补尾字”是未经图示授权的后验规则。复核这条失败路线的命令：
-
-```powershell
-python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hypotheses.py --double-overlap
-```
-
-## Mechanism audit
-
-- 可复核事实：八盘完整铺法、八条左右横跨的 spangram、首末各两字、唯一 `×2` 链及七个公共对。
-- 公共边分成 `FL | ON | ING | PASTE`；反向按块读成唯一通顺的中间指令 `PASTE ING ON FL`。
-- `FL` 是链首 Board 4 的未配对端点，因而指回完整 spangram `FLUCTUATION`；以 `ING` 覆盖其词尾 `ION`，精确得到 `FLUCTUATING`。
-- Board 4 的唯一 45 格无交叉重铺独立验证该变形：`WAVERING` 变为 `WAVER`，新 `FLUCTUATING` 保留旧路径前九格并接用原 `WAVERING` 的 `N,G`。
-- 第 4 盘主题“唯有变是不变的”与题句“生命的真相”共同验证结果的语义，但候选本身来自精确字母操作，不依赖把主题同义改写为 `CHANGE`。
-- 余格 `ION`、端点矩阵中的 `MEANING`、`FLO UNDER ING`、DNA/`ECORI`、内部双配的 `NASTY` 以及二进制/几何路线均保留为已否定负证据。
+- 32 碱基串有两个前导碱基；首个 `ATG` 自然且唯一地选出第三阅读框，另外两框都
+  很快遇到终止密码子并不成英文。
+- 编码区末尾没有终止密码子，但从 `ATG` 到串尾正好是 30 个碱基，不影响十个
+  氨基酸单字母码的唯一读取。
+- `MINIFYHAVE` 没有空格编码；`MINIFY | HAVE` 是唯一自然的两词切分。
+- 不固定首股时还有全局镜像 `RRFFFFRF`。提示 12 固定从左到右的词序，以首股
+  正读作图的纵向锚，并把“发生反转”记为 1，才得到 `=`；交换 0/1 或反转提示
+  顺序分别得到十进制 `194`、`188` 或字符 `C`。这项约定依赖已明确披露，故
+  候选置信度暂不升至 high。
+- 七个匹配圆位的组合序号为 `4,6,3,4,4,1,3`，四位掩码为 `63966C9`；内部
+  同时向左右配对的圆读作 `T/A/-/AT/T/C`。两种直接几何读数都不成词，未拿来
+  反选答案。
+- 裸 `A`、蛋白质扩写 `ALANINE` 和 DNA 扩写 `ADENINE` 均已被判错；三者都不再
+  是可提交候选。
+- `SHAVE` 已被判错；普通字谜补入 `S` 的路线停止。
+- 对两个整词分别取全局最小质量会得到 `I/A`，其扩写 `CURRENT` 已被判错；逐位
+  质量比较得到的 `NAVE` 也已被判错。整个氨基酸质量指标族停止。
+- 四种 `HAVE` 读向与共享 `Y` 的前后位置共八种虽只有 `HEAVY` 是普通词，但
+  `HEAVY` 已被判错；结果见 `work/reduce_have.py` 与
+  `work/visual/reduce_have.tsv`，仅作负证据。
+- 八条未补齐的 DNA 片段共有 28 个碱基，恰为 `7×2×2`。若要求七个相邻间隙
+  各形成两对 Watson-Crick 互补碱基并让每个碱基恰用一次，按提示 12 顺序只有
+  一个碱基计数分配。扩展重复字母的发生位置后有 72 种配对，但没有一种能实现
+  所有横键等距；它是计数校验，不是当前四圆同位模型。两者均见
+  `work/dna_pairing.py` 与 `work/visual/dna_pairing.tsv`。
+- 把 `=` 当作 Base64 填充补到 `MINIFYHAVE` 后只得到不可读字节；对四碱基股做
+  两位后缀—前缀的同一、互补或反向互补交叠也都无布局。这两个分支均已停止。
+- 提示 11 的 31 个可见圆是蛋白质结构线索，不与 32 个碱基一一对应；强行逐圆
+  填字曾产生大量无规则输出，现已停止。
 
 ## Submission history
 
-只记录用户或比赛网站明确反馈过的提交；不要把尚未提交的候选写进来。
+只记录用户或比赛网站明确反馈过的提交。
 
 | Date | Candidate | Result | Note |
 | --- | --- | --- | --- |
@@ -332,80 +215,113 @@ python rounds\shi-qi-love-in-chaos\nodes\b10-puzzle-in-strand\work\extraction_hy
 | 2026-08-16 | 42 | rejected | 用户明确报告不是答案。 |
 | 2026-08-16 | PASTEUR | rejected | 用户明确报告不是答案，并指出该路线属于无字母依据的联想。 |
 | 2026-08-16 | GAATTC | rejected | 用户明确报告不是答案。 |
-| 2026-08-16 | FLYING | rejected | 用户明确报告不是答案，并提供了提示列表；提示标题明确最终提取依赖八个词的顺序与最后一张图。 |
-| 2026-08-16 | FLING | rejected | 用户明确报告不是答案；裸拼 `FL+ING` 不是终答。后续新证据表明整句可能是作用于 Board 4 完整词的中间指令。 |
-| 2026-08-16 | NASTY | rejected | 用户明确报告不是答案；因此“强制双配圆读 NAST，再沿终端 NETY 续 Y”不是官方终提取。 |
-| 2026-08-16 | ION | rejected | 用户明确报告不是答案；Board 4 的后缀搬移与余格读取不是官方终提取。 |
-| 2026-08-16 | ECORI | rejected | 用户明确报告不是答案；`FLING → CAST → GAATTC → ECORI` 的后续补充操作不成立。 |
-| 2026-08-16 | BINGO | rejected | 用户明确报告不是答案；Board 5 `ING` 覆盖 Board 4 `FLNO` 的圆位读法不是官方终提取。 |
-| 2026-08-17 | FLOUNDERING | rejected | 用户明确报告不是答案；把共享字母 `N` 移动并将 `ING` 置于 `FLO` 上方的 rebus 不是官方终提取。 |
-| 2026-08-17 | MEANING | rejected | 用户明确报告答案不对；从指定 `ING` 反向延伸并借“生命的真相”验证不是官方终提取。 |
-| 2026-08-17 | FLUCTUATING | rejected | 用户明确报告不是答案；把 `FL` 解释为完整 spangram 的标识并替换 `FLUCTUATION` 词尾不是官方终提取。 |
-
-## Evidence and artifacts
-
-- `artifacts/extraction.md`：精简记录完整 spangram、唯一链、中间指令及 `FLUCTUATION → FLUCTUATING` 的最终操作。
-- `artifacts/meaning-extraction.svg/png`：保留已判错的端点矩阵 `MEANING` 路线，仅作防重复负证据。
-- `artifacts/floundering-extraction.svg/png`：保留已判错的 `ING` 搬移、`FLO` 和上下 rebus，仅作负证据。
-- `artifacts/bingo-extraction.svg/png`：保留已判错的 `BINGO` 圆位覆盖，仅作防重复负证据。
-- `artifacts/ion-extraction.svg/png`：候选操作的坐标示意，标出 `WAVER`、`FLUCTUATING`、接入的 `N,G`，并明确同列 `ION` 只是已否定的余格读取。
-- `artifacts/nasty-extraction.svg` 与渲染后的 PNG：已否定路线的可视化，仅作防重复负证据。
-- `artifacts/fling-extraction.svg/png`：已判错 `FLING` 的旧词图分块，现已明确标为 `REJECTED`。
-- `artifacts/flying-extraction.svg/png`：已判错 `FLYING` 的旧最短交织，仅作防重复负证据。
-- `artifacts/verify_solution.py`：标准库复核八盘精确覆盖、唯一链、`FLUCTUATING` 重铺及各失败路线；`MEANING` 等断言仅作已否定路线审计。
-- `work/solve_strands.py`：探索阶段的铺盘搜索器；`--full` 输出完整路径，`4 --paste-board4` 穷举候选重铺。
-- `work/extraction_hypotheses.py --paste-rebus`：复核已否定的 `ON ∩ ING = N`、搬走 `ING` 后留下 `O` 及 `FLO UNDER ING`；`--paste-ing-on-fl` 保留已判错的 `BINGO` 实验。
-- `work/extraction_hypotheses.py --glyph-weave`：复核 `a,d,b,c` 四圆交织与 256 个整股翻转的几何负证据。
-- `work/endpoint_grid_search.py --meaning-audit`：复核指定 `ING`、两条唯一路径、20 万词固定后缀审计和 `8!` 列顺序对照；普通模式与 `nested_strands.py` 保留二级完整 Strands 的负证据。
-- `work/pasted_graph.py`：复核相同字母圆连接/合并后的 3 种拓扑均无唯一读串。
-- `work/visual/diagram_inventory/`：题面八条四圆 strand 和七个 `×2` 的稳定原图证据。
-- `work/visual/final_diagram_audit.md`：提示标题与最后一图的可见/不可见信息审计。
-- `work/visual/flying_scs.tsv`：已判错路线中四种端点方向及最短交织结果。
-- `work/visual/endpoint_geometry.tsv`：原盘端点纵坐标不能唯一决定四圆上下次序的负证据。
-- `work/visual/paste_4_on_2.tsv`：把已判错的 `42` 当作 `PASTE 4 ON 2` 参数也不能闭合的负证据。
-- `artifacts/dna-overlap.svg/png`：保留已否定的 DNA/`ECORI` 路线，仅作负证据。
-- `artifacts/overlap-binary.svg/png`、`endpoint-chain.svg/png`：保留已判错的 `42` 与旧交叉读 `PASTE`，仅作防重复负证据。
+| 2026-08-16 | FLYING | rejected | 用户明确报告不是答案，并提供提示列表。 |
+| 2026-08-16 | FLING | rejected | 用户明确报告不是答案。 |
+| 2026-08-16 | NASTY | rejected | 用户明确报告不是答案。 |
+| 2026-08-16 | ION | rejected | 用户明确报告不是答案。 |
+| 2026-08-16 | ECORI | rejected | 用户明确报告不是答案。 |
+| 2026-08-16 | BINGO | rejected | 用户明确报告不是答案。 |
+| 2026-08-17 | FLOUNDERING | rejected | 用户明确报告不是答案。 |
+| 2026-08-17 | MEANING | rejected | 用户明确报告答案不对。 |
+| 2026-08-17 | FLUCTUATING | rejected | 用户明确报告不是答案。 |
+| 2026-08-29 | FLEETING | rejected | 用户明确报告答案错误；该路线依赖错误端点链且缺少图示授权。 |
+| 2026-08-29 | A | rejected | 用户明确报告不是答案，并提供提示 10；`A` 现保留为执行 `MINIFY HAVE` 后的中间 DNA 符号，而非完整提交答案。 |
+| 2026-08-29 | HAVE | rejected | 用户明确报告答案不正确；`MINIFYHAVE` 不能简单切成“已执行的方法 + 终答”。 |
+| 2026-08-29 | CONTRACT | rejected | 用户明确报告不是答案；`MINIFY/HAVE` 的双定义解释撤回。 |
+| 2026-08-29 | ALANINE | rejected | 用户明确报告答案不正确，并给出完整提示列表；按 H/A/V/E 残基大小选 A 没有提示授权。 |
+| 2026-08-29 | ADENINE | rejected | 用户明确报告不是答案；把递归过滤所得 `A` 扩写为 DNA 碱基名没有进一步授权。 |
+| 2026-08-29 | VALINE | rejected | 用户明确报告不是答案；按 H/A/V/E 氨基酸全名长度选四者最短不成立。 |
+| 2026-08-30 | CURRENT | rejected | 用户明确报告不正确；`I/A` 的量符号—单位符号扩写不是终答。 |
+| 2026-08-30 | HALVE | rejected | 用户明确报告不正确；不能把原图的 `x2` 反向解释成对 `HAVE` 插入 `L` 的终答。 |
+| 2026-08-30 | LEUCINE | rejected | 用户明确报告不是答案；`HALVE` 的新增字母 `L` 不能再扩写为氨基酸名。 |
+| 2026-08-30 | LIGHTEN | rejected | 用户明确报告不正确；`MINIFY HEAVY` 不能直接释为及物动词 `LIGHTEN`。 |
+| 2026-08-30 | HEAVY | rejected | 用户明确报告不正确；`HAVE -> HEAV + Y` 的整条尾解撤回。 |
+| 2026-08-30 | SHAVE | rejected | 用户明确报告不正确；`S(small) + HAVE` 的普通字谜解释撤回。 |
+| 2026-08-30 | NAVE | rejected | 用户明确报告不正确；按分子量逐位取较小残基并以成词性选择右对齐的路线撤回。 |
+| 2026-08-30 | FALSE | rejected | 用户明确报告答案不正确；将 ASCII `=` 按图示 `x2` 扩成 `==` 并比较 `MINIFY` 与 `HAVE` 的布尔真值路线撤回。 |
+| 2026-08-30 | EQUALS SIGN | rejected | 用户明确报告答案不正确；将四圆方向任意编码为二进制并按 ASCII 字符名提交的路线撤回。 |
 
 ## Important failed routes
 
-- **`MEANING`**：用户明确报告答案不对。它在原 Board 1–8 端点矩阵中可与
-  `FLING` 共用同一组三格 `ING`，但“从另一侧延伸”没有最后一图或提示授权，且
-  `MEANING` 在 8! 列排列中有 2856 种可出现，语义对应不足以确定答案；不得恢复。
-- **`FLUCTUATING`**：用户明确报告不是答案。Board 4 的 45 格重铺和
-  `FLUCTUATION - ION + ING` 都可复核，但“`FL` 指完整 spangram、`PASTE` 指替换
-  词尾”是额外解释；不得把盘面巧合或中间变形重新升级为终答。
-- **`BINGO`**：用户明确报告不是答案。把 Board 5 的前三圆 `ING` 覆盖到 Board 4
-  `FLNO` 的前三圆可机械得到 `INGO`，再沿旧 `N/N` 配对读出 `BINGO`，但最终图没有
-  授权保留被覆盖的配对或指定从 `BINO` 顶端起读；该操作不能恢复。
-- **`FLOUNDERING`**：用户明确报告不是答案。把 `ON` 与 `ING` 的相同字母值 `N`
-  当作一个可移动节点，留下 `O`，再把 `ING` 排在 `FLO` 上方，确实能构成
-  `FLO UNDER ING`，但题图没有授权这种物理合并或空间 rebus；不得恢复。
-- **`NASTY`**：用户明确报告不是答案。内部 strand 的单一物理圆若同时参与左右公共对，确实依次给出 `N/A/S/T`，但从最后一个 `T` 沿终端 `NETY` 续取 `Y` 没有图示依据；题句与 Hobbes 语句的对应也只是后验联想。整条路线不再恢复。
-- **`FLING` 作为终答**：用户明确报告不是答案。把孤立字符串 `FL+ING` 裸拼接，忽略了 `FL` 是完整 spangram `FLUCTUATION` 的端点标识；不再做 `fling = cast` 的同义跳转。
-- **`FLYING`**：用户明确报告不是答案。旧路线把右端 `NY` 反读为 `YN`，再对 `FL / YN / ING` 做最短公共超序列；“把两端都作为材料”和 SCS 均非图上指令。
-- **`GAATTC / ECORI`**：用户明确否定序列和酶名。DNA 字母筛选本身可重复，但 `FLING → CAST`、补 `C` 和把识别位点命名为答案都不是题图强制步骤。
-- **`PASTEUR`**：用户明确报告不是答案；`UR` 没有任何字母级来源，只是借“生命”补成人名。
-- **`PASTE / COPY AND PASTE / CUT AND PASTE` 作为答案**：用户均已明确否定。`PASTE` 现在只作为七条公共边中可复核的操作词，不恢复为终答。
-- **`42`**：用户明确报告不是答案。取“右侧新 strand 顶圆是否属于重叠”可造出 `0101010₂`，但选右侧、选顶排和二进制极性都未受充分指示。
-- 每盘只覆盖 44 格并留下四字是伪机制；它依赖截短词或错误复数。正确机制是完整覆盖 48 格后取 spangram 两端。
-- Board 4 的 `IFHT/RING/NORI` 剩余格、Board 5 的 `GNIN`、Board 8 的伪复数 `STRATOLIFTERS` 均属于 44 格失败路线；后者还会自交。
-- Board 6 的 Minecraft、Rain World、Pokémon、天气词表和通用词频覆盖未闭合；正确主题是 `BLUE` 的忧郁义。Board 7 只搜国家名不完整，须加入 `PANAFRICANISM`。Board 8 是 Boeing 双关。
-- 四圆上下次序不能从题图箭头、编号或颜色确定；原盘纵坐标检验在 8 盘中有 6 盘出现同行并列，仍产生 2–4 种次序。
-- 四排 7-bit ASCII 可在自然参数下排出 `UP/*` 或其互补/倒序，但“取左侧还是右侧、重叠为 0 还是 1、上下方向”都未由图固定；相邻列 8-bit、Braille、位置映射 DNA、Watson–Crick 配对、翻译密码、最短公共超序列、行列换位与普通词路径也均无唯一结果，同类编码不再扩大。
-- 完整 spangram 的固定/D4 叠合、端点双锚刚体配准、`4×8` 二级 Strands、普通 PASTE 精确对齐和新增字母分词均未闭合。
-- 把已判错 `42` 解释为 `PASTE 4 ON 2`：固定叠盘只有无读序的 `U/H/S/R` 四个同位同字格；两条 spangram 同占三格却没有同字，双端锚配准为 0。
-- 七个公共对各选一字共有 `2^7=128` 种；链正反两向在固定十万词表中均为 0 个七字词命中。
-- 相邻完整 spangram 扣除端点公共对后，每对都留下 2–5 个额外共同字母，没有任何一对恰留一个强制字母。
-- 合并 `×2` 后的 18 字按奇偶拆为两条 9 字 strand：四种自然端点次序、链正反、全部整股正反和重复 `N` 选择共 2304 个贡献串，双词和单词命中均为 0。
-- **四圆交织几何**：自然的 `a,d,b,c` 放置不能固定绝对朝向；无交叉配线仅给出互补的 `2/L` 方向码，四排 7-bit 掩码也不成唯一文字。不得把 `2`、`L` 或它们的组合升级为候选。
-- **二次完整 Strands 与连接图**：四种自然端点次序的 `4×8` 盘均没有词长至少 4 的精确 Strands 全覆盖，也没有横跨词；`NAMASTE/MATTERS` 是高密度字母盘中的偶然路径。端点矩阵里的 `MEANING` 也已被用户否定。三种同字母连接拓扑没有唯一长读串。
-- **`FLUCTUATING → NORI/IRON`**：旧路线错误保留 `WAVE`，因而让 `RING` 的 `R,I` 都落空，得到不连通的 `N,O,R,I` 并任意反读 `IRON`。正确执行会把 `WAVERING` 只截成 `WAVER`，保留 `R` 的覆盖，余格是同列 `ION`；`IRON` 仍不得恢复。
-- **`ION`**：用户明确报告不是答案；Board 4 的 45 格重铺虽可复核，但该余格只是被 `ING` 换下来的旧后缀，没有题图授权把它升级为终提取。它的否定不否定操作直接生成的 `FLUCTUATING`。
-- **`ECORI`**：用户明确报告不是答案；此前把中间 DNA 识别位点升级为酶名，属于无授权的语义补全。
+- **旧 `x2` 端点链全家族**：`4-2-5-1-7-3-8-6` 虽是“相邻四字集合恰有两个
+  公共字母”的唯一 Hamilton 链及反向，但提示 12 指定了不同顺序。由它导出的
+  `PASTE ING ON FL`、`FLEETING`、`FLOUNDERING`、`BINGO`、`NASTY`、
+  `FLING/FLYING`、DNA/`ECORI`、Board 4 重铺及余格 `ION` 均不得恢复。
+- **官方顺序下的端点路线**：相邻公共数为 `1/0/1/0/1/0/1`；端点二次 Strands、
+  整词/整盘叠合、双交叉、普通换位和 `42` 二进制联想均无唯一输出。
+- **31 圆逐格填字**：图的实线组件含 `3/2/5/5/5/5/3/3` 个圆，不是八条四圆
+  字槽；将 31 个端点字母按行列蛇形填入，再读虚线端点也不能形成统一路径。
+- **把中间符号 `A` 直接提交**：用户已明确判错；递归保留 `A/C/G/T` 不是
+  `MINIFY HAVE` 在蛋白质层级中的终操作。
+- **把 `MINIFY | HAVE` 直接拆成方法与答案**：`HAVE` 已被用户明确判错；它是
+  `MINIFY` 的操作数，而不是可直接提交的答案。
+- **`MINIFY/HAVE -> CONTRACT` 双定义**：虽然 `contract` 可表示缩小，也可表示
+  染上疾病，但用户已明确判错，不能再作为终答。
+- **`H/A/V/E` 中最小残基 -> ALANINE**：用户已明确判错；提示列表没有要求查询
+  氨基酸质量或侧链体积，该步骤属于额外解释。
+- **`HAVE -> A -> ADENINE`**：用户已明确判错；即使 `HAVE -> A` 可复现，把中间
+  符号扩写为碱基全名仍是未受提示授权的语义补全。
+- **只按“一次编辑 + 宽泛近义词”排序**：本地 WordNet 同时得到 `HALVE`、
+  `SHAVE`、`SAVE`，裸条件不唯一；此前用 `x2` 偏向 `HALVE`、再用原位字谜
+  `S(small) + HAVE` 偏向 `SHAVE` 均已被判错，不能恢复这一词族。
+- **`H/A/V/E` 全名中选最短 -> VALINE**：四个名称长度确为 `9/7/6/12`，但用户
+  已明确判错；`MINIFY HAVE` 不是一个从四个残基名称中选四选一的指令。
+- **对两个肽词按平均分子量最小化 -> `I/A -> CURRENT`**：计算本身可复现，
+  但用户已明确判错；提示没有指定质量指标，从量符号和单位符号扩写物理量也是
+  第二次未授权语义跳跃。
+- **把一编辑结果 HALVE 直接提交**：虽然 `HALVE` 是 `HAVE` 插入 `L` 且表示
+  除以二，但用户已明确判错；不得再把整词或 `+L` 恢复到现路线。
+- **`HALVE` 的新增码 `L -> LEUCINE`**：用户已明确判错；这说明一编辑近义词族
+  不能通过“再扩写氨基酸名”挽救，`SERINE` 等平行候选也不应直接提交。
+- **`MINIFY HEAVY -> LIGHTEN`**：`HEAVY` 的字母构造可复现，但用户明确判错
+  `LIGHTEN`；把命令改写成另一个同义动作动词，没有说明操作后的结果词形。
+- **`HAVE -> HEAV + Y -> HEAVY`**：用户已明确判错；即使八种局部读法中只有
+  `HEAVY` 成词，题面也未授权只交织 `HAVE`、只取 `MINIFY` 的末字。整条尾解
+  作废，不能再由它改猜 `LIGHT/LIGHTER`。
+- **`S(small) + HAVE -> SHAVE`**：用户已明确判错；即使它唯一满足“保留 HAVE、
+  前置尺寸码 S、具有 reduction sense”，`S` 仍不是图示直接提取的字母。普通
+  字谜补字路线停止。
+- **`MINIFY/NIFY` 与 `HAVE` 逐位取轻残基 -> NAVE**：用户已明确判错；分子量
+  指标及右端对齐都不是题图直接指定的约束，“12 项中唯一成词”只是字典筛选，
+  不能作为机制。整个氨基酸质量比较族停止。
+- **`FFRRRRFR -> '=' -> '==' -> FALSE`**：用户已明确判错。四圆同位互补约束确实
+  唯一给出方向串，但把 F/R 指派为 0/1、再把图中 `x2` 当成重复等号、最后对两
+  个英文词求程序语言布尔值，是连续三层未受题面授权的解释。保留方向布局和
+  `=` 这一可复核观察，撤回 `==` 与 `FALSE`。
+- **`FFRRRRFR -> 00111101 -> '=' -> EQUALS SIGN`**：用户已明确判错。首股正读
+  只是人为锚点，F/R 到 0/1 也没有题面规定；交换映射或镜像会改变字节。因此
+  `=` 的字符名不是终答，ASCII 方向位假设族停止。
+
+## Evidence and artifacts
+
+- `artifacts/extraction.md`：候选 `EQUALS SIGN` 的 DNA、肽译文、四圆定向与
+  对称性精简复现版；旧 `FALSE` 结论只作负证据。
+- `artifacts/verify_solution.py`：复核八盘完整覆盖、DNA 片段、起始阅读框、密码子
+  翻译、首股锚定下唯一四圆方向 `FFRRRRFR`、ASCII `=` 与标准名称
+  `EQUALS SIGN`；旧 `MINIFY == HAVE -> FALSE` 及 `NAVE`、`SHAVE`、
+  `HEAVY/LIGHTEN` 等只作负证据。
+- `artifacts/hint11-annotated.png`：提示 11 的稳定坐标标注。
+- `work/hint11_model.py`：提示 11 几何模型生成器。
+- `work/visual/hint11/geometry.tsv`：31 圆、23 实线段、七虚线的坐标表。
+- `work/visual/final_diagram_audit.md`：提示 11/12 后的视觉审计。
+- `work/minify_have.py` 与 `work/visual/minify_have.tsv`：一次编辑词族的参数化
+  负证据；“保留 HAVE、前置尺寸码 S、具有 reduction sense”虽唯一选出
+  `SHAVE`，但已被用户明确判错。
+- `work/reduce_have.py` 与 `work/visual/reduce_have.tsv`：四种自然读向及共享 `Y`
+  前后位置的八项有界审计；其唯一普通词 `HEAVY` 已被判错，现为负证据。
+- `work/dna_pairing.py` 与 `work/visual/dna_pairing.tsv`：28 个原始 DNA 字母的
+  唯一互补计数分配、72 项发生位置负审计，以及四圆同位模型的全局镜像、首股
+  锚定方向 `FFRRRRFR -> 00111101 -> '=' -> EQUALS SIGN` 和直接圆位负审计。
+- `work/amino_minification.py` 与 `work/visual/amino_minification.tsv`：质量与
+  名称长度的旧全局对照，以及两股正反、三个完整交叠偏移的 12 项逐对质量
+  负审计；其唯一普通词 `NAVE` 已被明确判错。
+- `work/visual/hint12_*.tsv`：旧端点机制在官方顺序下的有界负证据。
+- `artifacts/*-extraction.*`、`dna-overlap.*`、`overlap-binary.*`、
+  `endpoint-chain.*`：均是明确标记的历史失败路线，不代表当前机制。
 
 ## Next action
 
-重新建立最后一图的圆位级粘贴模型：保留八条 strand 的实际上下方向、每个公共
-字母的具体圆位和 `×2` 配线，枚举 `ING` 在 `FL` 上的有限平移/翻转对齐；只接受
-能在粘贴后由图上连通关系唯一读出的结果。若仍无唯一信号，所需新信息是提示 11
-或提示 12 的正文。
+保留 `MINIFYHAVE` 与互补布局，但撤回全部 ASCII/字符命名。下一步只审计
+`MINIFYHAVE` 是否应整体作为答案，或应作为“minify what you have”的自指指令
+作用于八个已提取片段；优先寻找无需新增语义、物性指标或字典反选的直接结果，
+不恢复 `=/==/FALSE`、语义近义词或分子量尾解。

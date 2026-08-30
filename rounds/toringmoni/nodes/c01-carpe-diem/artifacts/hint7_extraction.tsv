@@ -1,0 +1,23 @@
+stage	observed_evidence	operation	output
+photo1	提示3；E mod9=4时黄河取可、黄陂取阝	按字形左右位置合并⿰阝可	阿
+photo2	提示4；S=百家姓；《乌衣巷》末联	问号补“飞入寻常百姓家”首字	飞
+photo3	提示5；所有可解相位共享同一条方折通路	提取通路字形，并由完整片名消歧	正
+photo4	提示6；E=5474时位次差为3、1、4	3.14=π；P+印韵母in→频；捷报频传	传
+intermediate	四图依次输出	拼接并识别相关作品	阿飞正传
+famous_line_time	电影“一分钟”台词明确给出1960-04-16下午三点前一分钟	换成分钟精度	1960-04-16 14:59
+famous_line_object	电影“无脚鸟”台词	选择图3中的鸟，不合读五只动物	鸟
+minute_offset	E0=2026-08-19 14:51	目标时刻减锚点	-34892632
+photo2_at_target	目标E mod14=2	红/蓝/黄框按题头顺序圈出百/家/姓，且问号在“飞”格	百家姓=S
+bird_orbit	鸟的零基行主序格号=(2E+7) mod25	E mod25=18；格号=18零基	二维坐标=(4,4)
+target_maze_control	目标E mod140=128	与可解相位9/65比较	该分钟迷宫不通；不能再提取通路
+direct_position	鸟的可见位置是第4行第4列	按题面二维布局直接并记行列	44；用户明确判错，不能原样提交
+row_major_value	鸟轨道零基格号18	转为玩家可读的一基行主序格号	第19格
+photo3_like_check	模块源码硬编码图3点赞数为19	与鸟的一基格号比较	19=19；独立消除零基/一基歧义
+rejected_number_format	鸟的一基格号与图3固定点赞数均为19	尝试数字串和英文基数词	19、NINETEEN；用户均明确判错，只保留为相位校验
+rejected_grid	5×5共25格；鸟在行主序第19格	按A–Y行主序铺格	S；用户明确判错，停止该映射
+rejected_polybius	同一坐标(4,4)	标准I/J合并的5×5 Polybius方阵	T；用户明确判错，停止密码表路线
+horse_overlap_control	马在E=0位于(3,2)，目标是18次马步后	马步每次翻转棋盘颜色，偶数步保持颜色	马与(4,4)的鸟不可能重合
+rejected_lookup	曾把格号19或坐标44接到图2的S_n	S19=尤、S44=葛；用户均明确判错	整个S_n终局查表家族停止
+retained_enclosure	13:03与23:48两份独立迷宫存档	从(4,4)出发均只能到(4,5)，两格区域的6条外边界墙全部存在	封闭1×2隔间；见work/target_bird_state.tsv
+thematic_control	无脚鸟台词末尾的死亡；题名Carpe Diem	联想死/死亡/Memento Mori	只属主题联想，不读取目标鸟的可见局部状态
+leading_hypothesis	目标鸟落在(4,4)，而两份保留盘面都把(4,4)-(4,5)围成封闭隔间	把封闭隔间中的鸟读成英语短语	CAGED BIRD；精确目标相位墙表未保留，尚有证据缺口

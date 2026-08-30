@@ -1,0 +1,7 @@
+order	emoji_group	alternate_reading	completed_name	kind	relation	next_group
+1	🔄	AGAIN	HERE IT GOES AGAIN	song	is by	✅️🚶‍➡️
+2	✅️🚶‍➡️	OK GO	OK GO	artist	joined by AND to second song	➕️
+3	➕️	AND	AND	connector	joins the two song–artist links	💧🎨
+4	💧🎨	WATERCOLOUR	WATERCOLOUR	song	is by	wrapping 🔄
+5	wrapping 🔄	PENDULUM	PENDULUM	artist	returns to the opening emoji	🔄
+summary	A + CYCLIC	CYCLIC	ACYCLIC	rejected	user rejected on 2026-08-30; double-reading 🔄 and prefixing A are unsupported	ACYCLIC

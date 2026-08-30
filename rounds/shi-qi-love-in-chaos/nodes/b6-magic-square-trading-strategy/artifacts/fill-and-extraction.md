@@ -1,5 +1,9 @@
 # Rejected depth-fit audit
 
+> Hint 3 confirms that corresponding cells across the three boards define a
+> depth/`里` axis for the **three-Han clue blocks**.  It does not rescue the
+> whole-word fill below: those entries are not answers to the repaired clues.
+
 This artifact preserves the exact construction that produced the rejected
 candidate **中山大学**. It is **not a verified fill** and must not be used as a
 source of solved entries.

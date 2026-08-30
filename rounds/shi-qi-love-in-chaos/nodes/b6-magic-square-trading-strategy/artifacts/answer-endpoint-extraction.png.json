@@ -1,0 +1,11 @@
+{
+  "command": "annotate",
+  "source": "G:/Repo/CCBC-17-LLM-Work/rounds/shi-qi-love-in-chaos/nodes/b6-magic-square-trading-strategy/work/visual/canonical/grids.png",
+  "source_sha256": "033e469b7e95d768c7d2cc3789a3625906c7ad1ef5faf715e3c6f1552ae096cc",
+  "spec": "G:/Repo/CCBC-17-LLM-Work/rounds/shi-qi-love-in-chaos/nodes/b6-magic-square-trading-strategy/work/visual/canonical/endpoint-annotation.json",
+  "spec_sha256": "10325cdbc19feedd6e94206958718b7bda6d4fd68c3f478983446030e4e75e19",
+  "coordinate_space": "EXIF-transposed source pixels",
+  "scale": 1,
+  "annotation_count": 4,
+  "output": "G:/Repo/CCBC-17-LLM-Work/rounds/shi-qi-love-in-chaos/nodes/b6-magic-square-trading-strategy/artifacts/answer-endpoint-extraction.png"
+}

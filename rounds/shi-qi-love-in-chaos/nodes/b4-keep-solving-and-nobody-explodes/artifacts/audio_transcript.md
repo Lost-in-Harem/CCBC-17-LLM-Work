@@ -55,17 +55,24 @@ Directly heard:
 - The 9-cell and the cell below it are blue; the cell right of the 8 is purple.
 - The seven descriptions are the broad descriptions above.
 
-Current interpretation:
+Hint-confirmed interpretation:
 
-1. Mausolus, a ruler represented by a portrait or sculpted head.
-2. Babylon, represented by the tiered roof gardens.
-3. Lighthouse, represented together with Alexandria's harbor.
-4. Sphinx, the common creature type of several blue Flying Magic cards.
-5. Zeus of T1 lifting the trophy at the O2.
-6. Colossus, represented by a huge tracked game vehicle/model.
-7. Templar Assassin, an old Dota female hero using a Warcraft III model.
+1. Mausolus points to the Mausoleum at Halicarnassus.
+2. The tiered roof gardens point to the Hanging Gardens of Babylon.
+3. The harbor/lighthouse points to the Lighthouse of Alexandria.
+4. A Sphinx card points to the Great Pyramid of Giza.
+5. Zeus of T1 lifting the trophy at the O2 points to the Statue of Zeus at
+   Olympia.
+6. A Colossus-named tracked vehicle points to the Colossus of Rhodes.
+7. A Temple/Artemis-linked female game character points to the Temple of
+   Artemis at Ephesus.
 
-The seven names point one-to-one to the Seven Wonders of the Ancient World.
-The intentionally audio-only source does not identify a unique original image
-for every row. The ASR family was tested in three bounded ways and did not
-recover more coordinates or names, so further transcription passes are stopped.
+The user-provided unlocked hints confirm that the seven targets share the
+Seven Wonders of the Ancient World theme and that exact source-image recovery
+is neither possible nor required. The ASR family was tested in three bounded
+ways and did not recover more coordinates or names, so further transcription
+passes remain stopped.
+
+The MP3 also has a stable direct render under
+`work/visual/audio_render/`: `render-manifest.json` records the source hash and
+the bounded waveform, spectrum, and metadata commands.

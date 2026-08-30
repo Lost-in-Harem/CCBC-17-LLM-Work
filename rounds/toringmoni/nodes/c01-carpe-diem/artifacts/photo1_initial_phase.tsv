@@ -1,0 +1,10 @@
+E_mod_9	row1_square	row1_image	row1_IDS	row1_match	row1_selected	row2_square	row2_image	row2_IDS	row2_match	row2_selected	both_match	assembly
+0	check-tl	黄酒	酒=⿰氵酉	no		check-tr	黄雀	雀=⿱小隹	no		no	
+1	check-tr	黄河	河=⿰氵可	no		tb-top	黄陂	陂=⿰阝皮	no		no	
+2	tb-top	黄鹂	鹂=⿰丽鸟	no		tb-bottom	黄鳝	鳝=⿰鱼善	no		no	
+3	tb-bottom	黄酒	酒=⿰氵酉	no		lr-right	黄雀	雀=⿱小隹	no		no	
+4	lr-right	黄河	河=⿰氵可	yes	可	lr-left	黄陂	陂=⿰阝皮	yes	阝	yes	⿰阝可=阿
+5	lr-left	黄鹂	鹂=⿰丽鸟	yes	丽	solid	黄鳝	鳝=⿰鱼善	no		no	
+6	solid	黄酒	酒=⿰氵酉	no		around-in	黄雀	雀=⿱小隹	no		no	
+7	around-in	黄河	河=⿰氵可	no		around-out	黄陂	陂=⿰阝皮	no		no	
+8	around-out	黄鹂	鹂=⿰丽鸟	no		check-tl	黄鳝	鳝=⿰鱼善	no		no	

@@ -118,6 +118,53 @@ def build_transitions() -> list[Transition]:
     ]
 
 
+def build_rebranch_transitions() -> list[Transition]:
+    """Replay the facts that remain fixed after removing four Russian edits.
+
+    Unknown cells are deliberately represented by symbols rather than by the
+    rejected STAN LEE assignment.  See rebranch_constraints.md for the live
+    hypothesis table.
+    """
+    return [
+        Transition(
+            ("西湖", "先斩后奏", "显而易见", "家丁", "孙权", "岁月", "青提子"),
+            "题面给出的初始七项。",
+        ),
+        Transition(
+            ("先见西湖", "先斩后奏", "显而易见", "宅男", "孙权", "岁月", "青提子"),
+            "复制先、见；家丁仍逐字换成网络用语宅男。",
+        ),
+        Transition(
+            ("先见西湖", "先斩后奏", "C(新同义成语)", "宅男", "T(新两子词)", "岁月", "青提子"),
+            "提示5只锁定同义成语C和两子词T均改变；具体取值仍待七月、八月闭环裁决。",
+        ),
+        Transition(
+            ("先见西湖", "先斩后奏", "C(新同义成语)", "北宅子", "T(新两子词)", "岁月", "青提子"),
+            "男按子替换为宅子；西顺时针转九十度为北并前置。",
+        ),
+        Transition(
+            ("先见西湖", "先斩后奏", "C(新同义成语)", "北宅子", "T(新两子词)", "杀猪刀", "青提子"),
+            "岁月的比喻改走岁月是把杀猪刀。",
+        ),
+        Transition(
+            ("洗", "先斩后奏", "X(C的字谜答案)", "字", "T(新两子词)", "刻", "青提子"),
+            "按谜面压成常见单字：先见西湖→洗、C→X、北宅子→字、杀猪刀→刻；X仍未知。",
+        ),
+        Transition(
+            ("洗", "X", "T", "刻", "字"),
+            "交换字与青提子；删含月、日的青提子及四字条目先斩后奏。正确X与T必须通过六月筛选。",
+        ),
+        Transition(
+            ("七月西文名称分支已触发", "T刻字"),
+            "后三项合成四字条目T刻字；外部有洗、X两个条目。原句的省略主语有两种读法，须由完整答案反证。",
+        ),
+        Transition(
+            ("最终组合待定",),
+            "最后一个条目换成一字姓氏并组合全部条目。STAN LEE已被用户判错；X、T、西文名称和姓氏重新开放。",
+        ),
+    ]
+
+
 def build_editor_clues() -> list[EditorClue]:
     return [
         EditorClue(1, "食物", "美国/英语", "什锦饭", "Jambalaya"),
@@ -253,6 +300,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path)
     parser.add_argument("--editor-output", type=Path)
+    parser.add_argument("--rebranch-output", type=Path)
     args = parser.parse_args()
 
     node = Path(__file__).resolve().parents[1]
@@ -304,13 +352,42 @@ def main() -> None:
     )
     write_editor_grid(editor_output, editor_clues)
 
+    russian_editors = {"罪与罚", "罗宋汤", "柴可夫斯基", "圣彼得堡"}
+    retained_revisions = [
+        revision for revision in revisions if revision.editor not in russian_editors
+    ]
+    rebranch_transitions = build_rebranch_transitions()
+    if len(retained_revisions) != len(rebranch_transitions):
+        raise ValueError("Rebranch transition count does not match retained revisions")
+    rebranch_output = args.rebranch_output or Path(__file__).with_name(
+        "rebranch_chain.tsv"
+    )
+    with rebranch_output.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.writer(handle, delimiter="\t")
+        writer.writerow(
+            ["step", "timestamp", "editor", "state_after_edit", "rationale"]
+        )
+        for step, (revision, transition) in enumerate(
+            zip(retained_revisions, rebranch_transitions), 1
+        ):
+            writer.writerow(
+                [
+                    step,
+                    revision.timestamp,
+                    revision.editor,
+                    " | ".join(transition.state),
+                    transition.rationale,
+                ]
+            )
+
     print(f"date signal: {date_message}")
     print("date verdict: a notice that the dates are a red herring")
     print("intermediate answer (user-confirmed): 折毛")
     print("second phase: delete the four Russian-editor records and replay;")
-    print("final answer is English and is still open (see solution.md)")
+    print("final candidate: none; STAN LEE was rejected (see rebranch_constraints.md)")
     print(f"wrote: {output}")
     print(f"wrote: {editor_output}")
+    print(f"wrote: {rebranch_output}")
 
 
 if __name__ == "__main__":

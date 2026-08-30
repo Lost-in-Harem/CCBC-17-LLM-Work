@@ -1,3 +1,13 @@
-status	rank	candidate	definition	anagram_indicator	fodder_1	operator	fodder_2	format_constraint	result	audit
-candidate	1	ANAGRAM	WORD PUZZLE	TURN / REARRANGE	A MAN	+	RAG	A??????	(A MAN RAG)* = ANAGRAM	The result is self-referential: ANAGRAM is exactly a rearrangement of A MAN RAG. The c6 swap is independently supported because R6 “何よりも大切” takes ✅ more naturally than ❓.
-rejected	2	ALBUMEN	WHITE	TURN/REARRANGE	MAN	+	BLUE	A??????	(MANBLUE)* = ALBUMEN	User explicitly reported the answer wrong on 2026-08-22. The exact Sunday Times precedent is therefore misleading coincidence, not validation of this puzzle's emoji readings.
+status	rank	candidate	emoji_message	shared_index	title_letters	given	transformation	result	audit
+candidate	0	ATHWART	TURN / HEAVY / WALK / ADD / RAIN / TINT	c5,c6,c7,c8,c9,c10	HEADQUARTERS	A	take the heads of the six alternate readings to get THWART, then prepend the given answer letter A	ATHWART	六图保持二次下落列序且各换义一次；标题的情绪办公室给 HEADQUARTERS，直接授权取 heads。U+2705 的字符名含 HEAVY，故第二字母 H 可客观复查。
+rejected	1	AFFIXES	WHEEL / MARK / WALK / CROSS / WATER / COLOR	(4,3)/(5,2)/(6,1)	INSIDE OUT	A	read mirrored layers from the center outward, right then left: CROSS+WALK / WATER+MARK / COLOR+WHEEL; call the three first components affixes	AFFIXES	用户于 2026-08-30 明确判错；这些是复合词自由成分而非严格 affix，inside-out 三对只保留为失败审计。
+rejected	2	APREFIX	WHEEL / MARK / WALK / CROSS / WATER / COLOR	(4,3)/(5,2)/(6,1)	INSIDE OUT	A	name the three first-component relationships PREFIX, then concatenate the article A	APREFIX	用户于 2026-08-30 明确判错；提示要求英文单词，不能把短语 A PREFIX 去空格冒充单词。
+rejected	3	ARCHIVE	AGAIN, OK GO AND WATERCOLOUR		ARCHIVE / OK GO / PENDULUM	A	normalize the three visible items to artists; select the unique A?????? name	ARCHIVE	用户于 2026-08-30 明确判错；AGAIN／OK／GO 也分别与前三枚 emoji 的歌词旧义过近，未满足提示 4 的严格换义。
+rejected	4	ACYCLIC	AGAIN — OK GO AND WATERCOLOUR — PENDULUM; PENDULUM returns to the opening 🔄		CYCLIC	A	A + CYCLIC	ACYCLIC	用户于 2026-08-30 明确判错；不得让同一枚 🔄 同时表示 AGAIN／Pendulum，也不得把格式 A 当作前缀运算。
+rejected	5	AQUEOUS	CYCLE / MARK / MAN + WATER / COLOUR		WATER	A	add WATER to form WATER CYCLE / WATERMARK / WATERMAN / WATERCOLOUR; convert the shared word to A??????	AQUEOUS	用户于 2026-08-29 明确判错；WATER 复合词虽整齐，但题面未指定 WATER→AQUEOUS，答案格式不能替代转换规则。
+rejected	6	ALBUMIN	HERE IT GOES AGAIN—OK GO AND WATERCOLOUR—PENDULUM; both are track 3 IN ALBUM	3	IN	A	INSIDE OUT moves IN outside: IN ALBUM → ALBUM IN	ALBUMIN	用户于 2026-08-29 明确判错；保留直接音乐读法，只撤销共同曲序、IN ALBUM 与标题移位等无提示延伸。
+rejected	7	AVERAGE	HERE IT GOES AGAIN → OK GO AND WATERCOLOUR → PENDULUM	3	NORM	A	INSIDE OUT gives the terminal letters N/O/R/M; convert NORM to the A?????? synonym	AVERAGE	用户明确判错；题名未指定只取右端末字母，NORM→AVERAGE 仍是按格式筛同义词。
+rejected	8	ANALOGY	HERE IT GOES AGAIN : OK GO :: WATERCOLOUR : PENDULUM	3		A	name the parallel song-to-artist relation	ANALOGY	用户于 2026-08-29 明确判错；六图没有正式类比记号，且循环箭头被双重使用。
+rejected	9	ARTISAN	Here It Goes Again — OK Go AND Watercolour — Pendulum	3	ASRNIT	A	rearrange A+ASRNIT	ARTISAN	用户于 2026-08-29 明确判错；把 3 施加到六首源歌曲罗马字标题并异序 AASRNIT 均无题面指令。
+withdrawn-not-submitted	10	ANAGRAM	REARRANGE / WORD PUZZLE / A MAN + RAG			A	(A MAN RAG)*	ANAGRAM	用户指出路线强行；关键的 💧🎨→RAG 没有独立依据，且 R4 红格应为 ✅ 而非第三枚 ❓。
+rejected	11	ALBUMEN	TURN/REARRANGE / WHITE / MAN + BLUE				(MANBLUE)*	ALBUMEN	用户于 2026-08-22 明确判错；现成 cryptic 同构不能替代题内语义。

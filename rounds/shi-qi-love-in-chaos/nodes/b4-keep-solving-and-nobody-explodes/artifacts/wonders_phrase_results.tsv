@@ -1,0 +1,2 @@
+rank	operation	blue_index	phrase	prefix_zipf	suffix_zipf	score	indices
+1	sum	15	ANS:PEEP	3.31	3.39	6.70	red=2;orange=3,6;yellow=9;green=6;cyan=6;blue=9+6=15;purple=4

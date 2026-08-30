@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="620" viewBox="0 0 900 620">
+  <rect width="900" height="620" fill="#ffffff"/>
+  <text x="450" y="38" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="700">1960-04-16 14:59 · target bird state</text>
+  <text x="450" y="68" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555">Bird orbit → cell 19 / (4,4); the number reading NINETEEN is rejected</text>
+
+  <g transform="translate(70 125)" font-family="sans-serif">
+    <g font-size="18" font-weight="700" text-anchor="middle" fill="#333">
+      <text x="40" y="-18">1</text><text x="120" y="-18">2</text><text x="200" y="-18">3</text><text x="280" y="-18">4</text><text x="360" y="-18">5</text>
+      <text x="-24" y="46">1</text><text x="-24" y="126">2</text><text x="-24" y="206">3</text><text x="-24" y="286">4</text><text x="-24" y="366">5</text>
+    </g>
+    <rect x="0" y="0" width="400" height="400" fill="#fafafa" stroke="#b8bec5" stroke-width="2"/>
+    <path d="M80 0V400 M160 0V400 M240 0V400 M320 0V400 M0 80H400 M0 160H400 M0 240H400 M0 320H400"
+          stroke="#d6d9dd" stroke-width="1.5" stroke-dasharray="5 5"/>
+
+    <g font-size="15" fill="#777">
+      <text x="9" y="22">1</text><text x="89" y="22">2</text><text x="169" y="22">3</text><text x="249" y="22">4</text><text x="329" y="22">5</text>
+      <text x="9" y="102">6</text><text x="89" y="102">7</text><text x="169" y="102">8</text><text x="249" y="102">9</text><text x="329" y="102">10</text>
+      <text x="9" y="182">11</text><text x="89" y="182">12</text><text x="169" y="182">13</text><text x="249" y="182">14</text><text x="329" y="182">15</text>
+      <text x="9" y="262">16</text><text x="89" y="262">17</text><text x="169" y="262">18</text><text x="249" y="262" font-weight="700" fill="#8a3600">19</text><text x="329" y="262">20</text>
+      <text x="9" y="342">21</text><text x="89" y="342">22</text><text x="169" y="342">23</text><text x="249" y="342">24</text><text x="329" y="342">25</text>
+    </g>
+
+    <rect x="240" y="240" width="160" height="80" rx="4" fill="#fff0c7" stroke="#9b4300" stroke-width="7"/>
+    <line x1="320" y1="244" x2="320" y2="316" stroke="#fff0c7" stroke-width="8"/>
+    <circle cx="280" cy="280" r="27" fill="#ffffff" stroke="#9b4300" stroke-width="3"/>
+    <text x="280" y="286" text-anchor="middle" font-size="17" font-weight="700" fill="#742d00">BIRD</text>
+    <text x="200" y="432" text-anchor="middle" font-size="15" font-weight="700" fill="#8a3600">Closed 1×2 compartment: six outer walls, shared inner edge open</text>
+  </g>
+
+  <g transform="translate(525 118)" font-family="sans-serif">
+    <rect x="0" y="0" width="330" height="430" rx="12" fill="#f6f8fa" stroke="#c7cdd4" stroke-width="2"/>
+    <text x="22" y="38" font-size="19" font-weight="700" fill="#222">Reproducible observations</text>
+    <text x="22" y="76" font-size="15" fill="#333">Hint 3–6 intermediate</text>
+    <text x="306" y="76" text-anchor="end" font-size="17" font-weight="700">阿飞正传</text>
+    <text x="22" y="110" font-size="15" fill="#333">Famous lines specify</text>
+    <text x="306" y="110" text-anchor="end" font-size="15" font-weight="700">14:59 · BIRD</text>
+    <text x="22" y="144" font-size="15" fill="#333">Target orbit</text>
+    <text x="306" y="144" text-anchor="end" font-size="17" font-weight="700">cell 19 · (4,4)</text>
+    <line x1="22" y1="165" x2="308" y2="165" stroke="#d4d9df"/>
+
+    <text x="22" y="201" font-size="15" fill="#333">Retained maze · 13:03</text>
+    <text x="306" y="201" text-anchor="end" font-size="15">(4,4)–(4,5) closed</text>
+    <text x="22" y="235" font-size="15" fill="#333">Retained maze · 23:48</text>
+    <text x="306" y="235" text-anchor="end" font-size="15">same compartment</text>
+    <text x="22" y="269" font-size="15" fill="#333">Boundary comparison</text>
+    <text x="306" y="269" text-anchor="end" font-size="17" font-weight="700" fill="#8a3600">6 / 6 in both</text>
+    <line x1="22" y1="290" x2="308" y2="290" stroke="#d4d9df"/>
+
+    <text x="22" y="328" font-size="15" fill="#333">Leading visual reading</text>
+    <text x="306" y="328" text-anchor="end" font-size="21" font-weight="700" fill="#18733c">CAGED BIRD</text>
+    <text x="22" y="365" font-size="14" fill="#555">Alternative lexicalization: JAILBIRD</text>
+    <text x="22" y="397" font-size="13" fill="#777">Caveat: the exact 57-minute wall phase table</text>
+    <text x="22" y="417" font-size="13" fill="#777">was not retained, so invariance is not fully reproduced.</text>
+  </g>
+</svg>

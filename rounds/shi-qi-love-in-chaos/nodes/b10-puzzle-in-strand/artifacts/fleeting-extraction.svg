@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="560" viewBox="0 0 1640 560">
+<rect width="1640" height="560" fill="#fffaf0"/>
+<style>text{font-family:Arial,sans-serif;fill:#172033}.code{font-size:17px;font-weight:700}.small{font-size:14px}.letter{font-size:24px;font-weight:700;text-anchor:middle;dominant-baseline:central}.result{font-size:30px;font-weight:700;text-anchor:middle}.muted{stroke:#9aa4b2;stroke-width:3}.strand{stroke:#253347;stroke-width:5;fill:none}.circle{fill:#fffaf0;stroke:#253347;stroke-width:4}.fl{fill:#ffd166}.eet{fill:#80edcf}.ing{fill:#cdb4db}.rejected{fill:#b42318}</style>
+<text x="820" y="35" class="result rejected">REJECTED ROUTE · endpoint order a,d,b,c</text>
+<polyline points="91,100 59,182 91,264 59,346" class="strand"/>
+<text x="75" y="62" class="code" text-anchor="middle">B4 · FNLO</text>
+<circle cx="91" cy="100" r="29" class="circle fl"/>
+<text x="91" y="100" class="letter">F</text>
+<circle cx="59" cy="182" r="29" class="circle"/>
+<text x="59" y="182" class="letter">N</text>
+<circle cx="91" cy="264" r="29" class="circle fl"/>
+<text x="91" y="264" class="letter">L</text>
+<circle cx="59" cy="346" r="29" class="circle"/>
+<text x="59" y="346" class="letter">O</text>
+<polyline points="296,100 264,182 296,264 264,346" class="strand"/>
+<text x="280" y="62" class="code" text-anchor="middle">B2 · BNIO</text>
+<circle cx="296" cy="100" r="29" class="circle"/>
+<text x="296" y="100" class="letter">B</text>
+<circle cx="264" cy="182" r="29" class="circle"/>
+<text x="264" y="182" class="letter">N</text>
+<circle cx="296" cy="264" r="29" class="circle"/>
+<text x="296" y="264" class="letter">I</text>
+<circle cx="264" cy="346" r="29" class="circle"/>
+<text x="264" y="346" class="letter">O</text>
+<polyline points="501,100 469,182 501,264 469,346" class="strand"/>
+<text x="485" y="62" class="code" text-anchor="middle">B5 · IGNN</text>
+<circle cx="501" cy="100" r="29" class="circle"/>
+<text x="501" y="100" class="letter">I</text>
+<circle cx="469" cy="182" r="29" class="circle"/>
+<text x="469" y="182" class="letter">G</text>
+<circle cx="501" cy="264" r="29" class="circle"/>
+<text x="501" y="264" class="letter">N</text>
+<circle cx="469" cy="346" r="29" class="circle"/>
+<text x="469" y="346" class="letter">N</text>
+<polyline points="706,100 674,182 706,264 674,346" class="strand"/>
+<text x="690" y="62" class="code" text-anchor="middle">B1 · AGPN</text>
+<circle cx="706" cy="100" r="29" class="circle"/>
+<text x="706" y="100" class="letter">A</text>
+<circle cx="674" cy="182" r="29" class="circle"/>
+<text x="674" y="182" class="letter">G</text>
+<circle cx="706" cy="264" r="29" class="circle"/>
+<text x="706" y="264" class="letter">P</text>
+<circle cx="674" cy="346" r="29" class="circle"/>
+<text x="674" y="346" class="letter">N</text>
+<polyline points="911,100 879,182 911,264 879,346" class="strand"/>
+<text x="895" y="62" class="code" text-anchor="middle">B7 · PMAS</text>
+<circle cx="911" cy="100" r="29" class="circle"/>
+<text x="911" y="100" class="letter">P</text>
+<circle cx="879" cy="182" r="29" class="circle"/>
+<text x="879" y="182" class="letter">M</text>
+<circle cx="911" cy="264" r="29" class="circle"/>
+<text x="911" y="264" class="letter">A</text>
+<circle cx="879" cy="346" r="29" class="circle"/>
+<text x="879" y="346" class="letter">S</text>
+<polyline points="1116,100 1084,182 1116,264 1084,346" class="strand"/>
+<text x="1100" y="62" class="code" text-anchor="middle">B3 · CTAS</text>
+<circle cx="1116" cy="100" r="29" class="circle"/>
+<text x="1116" y="100" class="letter">C</text>
+<circle cx="1084" cy="182" r="29" class="circle"/>
+<text x="1084" y="182" class="letter">T</text>
+<circle cx="1116" cy="264" r="29" class="circle"/>
+<text x="1116" y="264" class="letter">A</text>
+<circle cx="1084" cy="346" r="29" class="circle"/>
+<text x="1084" y="346" class="letter">S</text>
+<polyline points="1321,100 1289,182 1321,264 1289,346" class="strand"/>
+<text x="1305" y="62" class="code" text-anchor="middle">B8 · SRTE</text>
+<circle cx="1321" cy="100" r="29" class="circle"/>
+<text x="1321" y="100" class="letter">S</text>
+<circle cx="1289" cy="182" r="29" class="circle"/>
+<text x="1289" y="182" class="letter">R</text>
+<circle cx="1321" cy="264" r="29" class="circle"/>
+<text x="1321" y="264" class="letter">T</text>
+<circle cx="1289" cy="346" r="29" class="circle eet"/>
+<text x="1289" y="346" class="letter">E</text>
+<polyline points="1526,100 1494,182 1526,264 1494,346" class="strand"/>
+<text x="1510" y="62" class="code" text-anchor="middle">B6 · NYET</text>
+<circle cx="1526" cy="100" r="29" class="circle"/>
+<text x="1526" y="100" class="letter">N</text>
+<circle cx="1494" cy="182" r="29" class="circle"/>
+<text x="1494" y="182" class="letter">Y</text>
+<circle cx="1526" cy="264" r="29" class="circle eet"/>
+<text x="1526" y="264" class="letter">E</text>
+<circle cx="1494" cy="346" r="29" class="circle eet"/>
+<text x="1494" y="346" class="letter">T</text>
+<line x1="89" y1="182" x2="234" y2="182" stroke="#9aa4b2" stroke-width="3"/>
+<line x1="89" y1="346" x2="234" y2="346" stroke="#9aa4b2" stroke-width="3"/>
+<line x1="326" y1="264" x2="471" y2="100" stroke="#9aa4b2" stroke-width="3"/>
+<line x1="294" y1="182" x2="471" y2="264" stroke="#9aa4b2" stroke-width="3"/>
+<line x1="499" y1="182" x2="644" y2="182" stroke="#9aa4b2" stroke-width="3"/>
+<line x1="499" y1="346" x2="644" y2="346" stroke="#9aa4b2" stroke-width="3"/>
+<line x1="736" y1="100" x2="881" y2="264" stroke="#9aa4b2" stroke-width="3"/>
+<line x1="736" y1="264" x2="881" y2="100" stroke="#9aa4b2" stroke-width="3"/>
+<line x1="941" y1="264" x2="1086" y2="264" stroke="#9aa4b2" stroke-width="3"/>
+<line x1="909" y1="346" x2="1054" y2="346" stroke="#9aa4b2" stroke-width="3"/>
+<line x1="1114" y1="346" x2="1291" y2="100" stroke="#9aa4b2" stroke-width="3"/>
+<line x1="1114" y1="182" x2="1291" y2="264" stroke="#9aa4b2" stroke-width="3"/>
+<line x1="1319" y1="346" x2="1496" y2="264" stroke="#00a896" stroke-width="7"/>
+<line x1="1351" y1="264" x2="1464" y2="346" stroke="#9aa4b2" stroke-width="3"/>
+<text x="177" y="430" class="small" text-anchor="middle">NO</text>
+<text x="382" y="430" class="small" text-anchor="middle">IN</text>
+<text x="587" y="430" class="small" text-anchor="middle">GN</text>
+<text x="792" y="430" class="small" text-anchor="middle">AP</text>
+<text x="997" y="430" class="small" text-anchor="middle">AS</text>
+<text x="1202" y="430" class="small" text-anchor="middle">ST</text>
+<text x="1407" y="430" class="small" text-anchor="middle">ET</text>
+<line x1="1526" y1="294" x2="1494" y2="316" stroke="#00a896" stroke-width="7"/>
+<text x="1430" y="452" class="code" fill="#007f6d">E → E → T</text>
+<text x="820" y="500" class="result rejected">REJECTED: FL + EET + ING → FLEETING</text>
+<text x="820" y="535" class="small" text-anchor="middle">The green EET path has no pictured start, direction, or extra-step instruction.</text>
+</svg>

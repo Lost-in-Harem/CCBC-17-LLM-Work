@@ -7,11 +7,11 @@ parent:
 source: 
 round_feeder: yes
 feeders: 
-status: candidate
-answer: ANAGRAM
-confidence: high
-summary: "候选 ANAGRAM。ANOTHER 判错后按歌词与 MV 独立重审：R6 的水平左右往返应取 `🔁`，故 R1 粉格为 `🔄`；R6 的“何よりも大切”应取 `✅`，故 R4 粉格为第三枚 `❓`。二次同列下落得到 `🔄/❓/🚶‍➡️/➕/💧/🎨`，整体读作 TURN/REARRANGE + WORD PUZZLE + A MAN + RAG；`A MAN RAG` 恰好重排为自指的七字母 A 词 ANAGRAM。128 格与九列库存仍完全配平。"
-updated: 2026-08-22
+status: rejected
+answer:
+confidence:
+summary: "ATHWART 于 2026-08-30 被用户明确判错；`HEADQUARTERS → 取换义词首` 与事后补入的 `✅→HEAVY` 已撤销。128/128 emoji dropquote、六个红格及二次下落序列 `🔄/✅/🚶‍➡️/➕/💧/🎨` 仍有独立证据。下一步回到提示 4 的措辞，检验六图是否应整体读成一种无需自由挑首字母的英语信息，并重新审计标题是否仅标识《Inside Out》中的情绪总部而不承担提取指令。"
+updated: 2026-08-30
 ---
 
 # 😊😠😢😃🏢
@@ -21,109 +21,167 @@ updated: 2026-08-22
 当前候选答案是：
 
 ```text
-ANAGRAM
+ATHWART
 ```
 
-这不是从 `A??????` 枚举出来的词。ANOTHER 判错后，两个同列交换都由歌词／MV 独立改善：R6 “いつもあちらこちらに”的蓝色水平路线与左右手 `👈/👉` 更适合水平 repeat 图 `🔁`，所以 R1 “ずっと話してる”的粉格改为循环箭头 `🔄`；R6 “何よりも大切って…”并非问句，`✅` 比 `❓` 更直接，所以 `✅` 移到 `r57c6`，R4 问句密集组的粉格改为第三枚 `❓`。验证后仍是 128/128，九列余量全零。
-
-提示 3 的第二次同列下落于是给出 `🔄 ❓ 🚶‍➡️ ➕ 💧 🎨`。换义后，它构成一个自指文字谜：`🔄` 是 TURN/REARRANGE，`❓` 是 WORD PUZZLE，人物是 **A MAN**，加号照读，水／颜料旁的画具合指擦拭湿颜料的 **RAG**。因此 `(A MAN RAG)* = ANAGRAM`，同时精确满足七字母 `A??????`。
-
-## Candidate extraction: ANAGRAM
-
-| Fallen emoji | Previous lyric role | Alternate final reading | Function |
-| --- | --- | --- | --- |
-| 🔄 | `ずっと話してる` 的持续循环 | TURN / REARRANGE | 重排指示 |
-| ❓ | `これはなんだ／それがなにか` 的疑问 | WORD PUZZLE | 定义 |
-| 🚶‍➡️ | “脱出”复合图中的人物运动 | A MAN | 第一组字料 |
-| ➕ | `交差点` | PLUS | 合并字料 |
-| 💧 + 🎨 | 眼泪；落书 | a wet painter's **RAG** | 第二组字料 |
+提示 3 的第二次同列下落给出：
 
 ```text
-A MAN RAG  = A M A N R A G
-ANAGRAM    = A N A G R A M
+🔄  ✅  🚶‍➡️  ➕  💧  🎨
 ```
 
-两边字母多重集合完全相同，结果又正是 `❓` 所定义的文字谜。提示 2 已展示连续 emoji 可以合读，所以 `💧🎨` 不必分别产出首字母。最弱点是“湿颜料／画具 → painter's rag”仍属物品联想；但 **RAG** 同时被自指重排、`❓` 定义和 `A??????` 三重锁定，不像此前 AQUA/BLUE 路线需要交换词块或外部元数据。
+提示 4 要求每枚图换用与歌词阶段不同的含义。六枚图按列序读成：
+
+```text
+TURN   HEAVY   WALK   ADD   RAIN   TINT
+```
+
+标题 `😊😠😢😃🏢` 表示一组情绪在办公室工作，即 *Inside Out* 中的 **HEADQUARTERS**。这里不再把 *Inside Out* 当成任意的换序指令；`HEADquarters` 直接提示取六个新义的 **heads**：
+
+```text
+TURN / HEAVY / WALK / ADD / RAIN / TINT
+  T      H       W      A      R      T
+```
+
+底部格式已直接给出首字母 `A`，所以完整单词是：
+
+```text
+A + THWART = ATHWART
+```
+
+`ATHWART` 是七字母英文单词，意为“横跨／横着；与……相对”。这条路线没有异序、外部专名或额外同义词跳转；题面中的 A 也只作为答案的已知首字母使用。
+
+## Candidate extraction: ATHWART
+
+| Emoji | 歌词阶段的旧作用 | 最终新义 | Head |
+| --- | --- | --- | --- |
+| 🔄 | `ずっと話してる`／持续不断 | **TURN**，圆形箭头表示转动 | T |
+| ✅ | `それでよろし`／肯定、妥当 | **HEAVY**，字符 U+2705 的名称是 `WHITE HEAVY CHECK MARK` | H |
+| 🚶‍➡️ | 沿箭头“脱出” | **WALK**，普通步行动作 | W |
+| ➕ | `交差点`／交叉点位置 | **ADD**，加法运算 | A |
+| 💧 | `泣きたい`／眼泪 | **RAIN**，雨滴 | R |
+| 🎨 | `落書き`／涂鸦 | **TINT**，色调／着色 | T |
+
+六项都避开歌词阶段的旧义。尤其 `➕` 不再读作与 `交差点` 很接近的 CROSS；`✅` 也不再读成 OK／RIGHT／YES，而取其字符名称中客观存在的 HEAVY。由此满足提示 4 的逐图换义门槛。
+
+### Bounded candidate audit
+
+`work/extraction_candidates.py --mode headquarters --limit 200000` 对三处仍可同列交换的红格做了固定 8 种序列审计。第一轮常用义筛选先在较弱的 `❓=HOOK` 交换版中暴露出 ATHWART；随后回看 R4 原画，确认红格必须保留 `✅`，没有为了答案交换落位。独立查询本地 Unicode 字符库又得到 U+2705=`WHITE HEAVY CHECK MARK`，使正确序列可用 `HEAVY` 贡献同一个 H。把这一客观读法加入最终参数后，共检验 252,000 个字母组合、命中 12 行；正确序列 `🔄/✅/🚶‍➡️/➕/💧/🎨` 下只剩拼写噪声 `ACCROSS` 与正常英文词 **ATHWART**。这也披露了 HEAVY 是候选出现后补做的独立核验，而不是把词表唯一性伪装成原始证明；真正授权取首字母的是标题 HEADQUARTERS。
+
+## Latest rejected candidate
+
+最新被拒候选是：
+
+```text
+AFFIXES
+```
+
+该路线把六图换义为 `WHEEL / MARK / WALK / CROSS / WATER / COLOR`，再把标题读成 *Inside Out* 的镜像层，得到：
+
+```text
+CROSSWALK / WATERMARK / COLOR WHEEL
+```
+
+随后把三个前项统称为 AFFIXES。用户于 2026-08-30 明确报告“AFFIXES 不正确”；结合先前 APREFIX 也被判错，整个 inside-out 镜像配对现只保留为失败审计，不再继续枚举 AFFIXED／ADJOINS／ANNEXES 等近义词。新候选不使用这三组复合词。
+
+## Rejected extraction: ACYCLIC
+
+该路线同样从固定六图出发，并读出 `AGAIN / OK GO / AND / WATERCOLOUR`，但随后把 *Here It Goes Again*—OK Go 与 *Watercolour*—Pendulum 首尾接成循环，再把关系命名为 CYCLIC，最后将题给 A 前缀化为：
+
+```text
+A + CYCLIC = ACYCLIC
+```
+
+用户于 2026-08-30 明确报告“ACYCLIC 不是答案”。失败点是两次无提示操作：同一枚 `🔄` 被先读成 AGAIN、再读成 Pendulum，随后又把格式中的 A 当作否定前缀。
+
+## Rejected extraction: AQUEOUS
+
+1. 六个红格落位由逐列库存、歌词语义和 R4/R6 几何交叉验证，按 c5–c10 为 `🔄/✅/🚶‍➡️/➕/💧/🎨`。
+2. 提示 4 要求换义：依次取 CYCLE、MARK、MAN、ADD、WATER、COLOUR；这些都避开了原来的“持续／肯定／脱出／交叉点／眼泪／涂鸦”。
+3. `➕💧` 指示加入 WATER；其余图形成 WATER CYCLE、WATERMARK、WATERMAN、WATERCOLOUR，唯一共同成分是 WATER。
+4. 将 WATER 转成七字母 A 开头英文词，得到 **AQUEOUS**。
+
+人物图的 Unicode 基础义是向右行走的人；旧路线取其中的 MAN / PERSON，而不是歌词阶段的“脱出”，得到 WATERMAN。但用户于 2026-08-29 明确报告“AQUEOUS 不是答案”。被否定的不只是最后一步 `WATER → AQUEOUS`：该路线还没有用标题，并依赖低频的 WATERMAN。随后提出的 AFFIXES 镜像复合词路线也已被拒；当前候选不再复用 WATERMAN 或 WATER／AQUA 派生词。
+
+## Rejected extraction: ALBUMIN
+
+1. 提示 3 的第二次同列下落严格给出 `🔄/✅/🚶‍➡️/➕/💧/🎨`。
+2. 提示 1、2 已示范连续 emoji 可整体指专名；提示 4 要求换义，因此六图读成 *Here It Goes Again*—OK Go **and** *Watercolour*—Pendulum。
+3. 两首歌都处在专辑中，且共同为第 3 轨，给出可核验的短语 `IN ALBUM`，而不是自由选择某个音乐类别。
+4. 题名 *Inside Out* 把 `IN` 移到外侧；`A??????` 决定它置于 `ALBUM` 右侧，得到 `ALBUMIN`。
+
+用户于 2026-08-29 明确报告“ALBUMIN 不是答案”。判错撤销的是“共同曲序 3 → `IN ALBUM` → 标题移位”这一整段无提示延伸；六图本身直接给出的两组歌名—艺人关系仍可独立保留。后续不再从专辑名或曲序挖取新答案。
+
+## Rejected extraction: AVERAGE
+
+这条提取不逐 emoji 自由选英译首字母，也不把共同曲序 3 套到题内标题。可复现步骤只有三步：
+
+1. 按提示 3 得到六图 `🔄/✅/🚶‍➡️/➕/💧/🎨`。
+2. 按提示 4 与提示 1、2 示范的专名读法，得到四个依次相连的专名 *Here It Goes Again*、OK Go、*Watercolour*、Pendulum。
+3. 题名 *Inside Out* 指示看各专名的外侧／右端，得 `NORM`；再用答案格式将其转为七字母 A 开头同义词 `AVERAGE`。
+
+用户明确判错。失败点是：题名只隐晦给出 *Inside Out*，并没有指定只取每个专名的右端末字母；即使 `N/O/R/M` 恰好组成 `NORM`，再把它换成 `AVERAGE` 仍是由答案格式筛出的同义词跳转，不能作为最终提取。
+
+## Rejected extraction: ANALOGY
+
+| Left term | Relation | Right term |
+| --- | --- | --- |
+| *Here It Goes Again* | is a song by | OK Go |
+| *Watercolour* | is a song by | Pendulum |
+
+这条路线把两行关系平行直接命名为 `ANALOGY`；用户明确判错。失败点是：六图的线性信息并没有给出正式的类比记号，`🔄` 又被同时读作 AGAIN 与 PENDULUM，最后一步仍是按答案格式选择关系名，而非题面指定的转换。
+
+## Rejected extraction: ARTISAN
+
+ARTISAN 曾保留了上述两组歌曲线索，却把两首歌共同的专辑曲序 3 无提示地施加到六首源歌曲的罗马字标题，得到 `ASRNIT`，再把题给 A 一起异序成 `ARTISAN`。用户于 2026-08-29 明确判错。失败点有两层：题面没有指定“取标题第 3 字母”，也没有指定重排 `AASRNIT`。该路线只作为负面审计保留在 `artifacts/title_index.tsv`，不得恢复。
 
 ## Rejected extraction: ANOTHER (song-track route)
 
-用户解锁的提示 3 明确说：**“你需要对红色框位置的 emoji 再执行一次下落操作。”** 六个歌词区红格恰好各占 `c5..c10` 一列，最底部也有同列的六个红格，因此第二次下落给出严格的从左到右顺序，不允许像 `ADAPTER` 路线那样异序。
-
-提示 2 要求关注风味行的连续图组 `➡️🔻👧🔻`：多个 emoji 可以共同锁定一个对象（重音テト），且不能默认每枚图都独立贡献字母。它支持把最终六图作为整体 rebus 阅读，但并不直接证明 R5 红格一定是 `🚶‍➡️`。
-
-这条失败路线当时把 R4 下方七格复原为两处疑问、`はしる／にげる／そらす`、两只月兔和一枚 `✅`，并据此令 `r32c6=✅`。ANOTHER 判错后的 MV 重审推翻了最后一步：R4 问句组实际需要三枚 `❓`，而 `✅` 在 R6 “何よりも大切”处有更直接的歌词锚点。因此下文涉及 `✅` 的歌曲路线只是历史模型，不再是当前落位。
-
-R6 补完后，128 个目标格与塔的九列库存逐列完全配平。其下半部目前可读成：三枚 `🔡` 排成三角形，对应“隣の隣の隣”；两枚 `↪️` 与一枚 `↩️` 围住 `💭`，对应“言葉繰り返してる”；`✌️`（PEACE）到 `🍰`（PIECE of cake）的同音变化配合 `😄`，表现“間違っていても壊れない”。这 14 格的逐坐标并非全部唯一，但 MV 中“隣”三列的稳定画面与 c7/c8/c9 各唯一一枚 `🔡` 共同锁定三枚文字图，从而排除把 c7 的 `🔡` 留给 R5 红格；R5 红格保留 `🚶‍➡️`。
-
-ALBUMEN 失败后曾把 c5 同列的 `🔁/🔄` 暂排成 R1=`🔁`、R6=`🔄`；这同样被独立 MV 重审推翻。R6 的画面路线在左右两侧之间水平往返，`🔁` 与 `👈/👉` 的横向构图更吻合；R1 的“ずっと話してる”则可由一般循环图 `🔄` 表示。下列序列因此只记录 ANOTHER 路线当时采用的旧版本：
-
-```text
-🔁  ✅  🚶‍➡️  ➕  💧  🎨
-```
-
-提示 4 要求每枚图使用不同于歌词阶段的含义，并允许像风味里的 `➡️🔻👧🔻` 一样把相邻图合读。这里自然分组为：
-
-| Emoji group | Previous lyric role | Alternate reading | Final role |
-| --- | --- | --- | --- |
-| 🔁 | `ずっと話してる`／持续、反复说 | **HERE IT GOES AGAIN** | 以“又来一遍”指歌曲名 |
-| ✅ + 🚶‍➡️ | `それでよろし`；沿箭头脱出 | **OK GO** | 两图合读乐队名 |
-| ➕ | `交差点` | **AND** | 连接两条歌曲线索 |
-| 💧 + 🎨 | 眼泪；落书 | **WATERCOLOUR** | 两图合读歌曲名（英式拼写正合官方标题） |
-
-于是六图给出：
-
-```text
-HERE IT GOES AGAIN — OK GO
-AND
-WATERCOLOUR — PENDULUM
-```
-
-[OK Go 的 *Oh No* 曲序](https://open.spotify.com/album/1qN6qh1gwgrYTCdSq21gov)显示 **Here It Goes Again 是第 3 曲**；[Pendulum 的 *Immersion* 曲序](https://open.spotify.com/album/3XtEGVx9uh7J46nBzEc1VS)显示 **Watercolour 也是第 3 曲**。两条独立歌曲线索因此共同给出索引 **3**，而不是字母首尾或重排操作。
-
-标题 `😊😠😢😃🏢` 是一群情绪在总部工作，指《Inside Out》。在六图已经给出 **OK Go** 的语境下，它精确指向 OK Go 的 **Upside Down & Inside Out**；[官方音乐视频](https://www.youtube.com/watch?v=LWGJA9i18Co)与[歌曲页](https://open.spotify.com/track/5jGxeAkNbep75x8JLeb52H)均确认该曲属于专辑 *Hungry Ghosts*。最后在目标专辑上使用索引 3：[*Hungry Ghosts* 第 3 曲](https://open.spotify.com/album/4C1TtVmFAU1a9P2GM0c4e5)是 **Another Set of Issues**。题面格式只容纳七字母 `A??????`，故取该曲首词：
+ANOTHER 路线已经正确识别了六图的歌曲信息和共同索引 3，却把这个索引迁移到标题联想到的另一张 OK Go 专辑。具体说，它由标题 `😊😠😢😃🏢` 联想到 *Inside Out*，再联想到 OK Go 的 *Upside Down & Inside Out*，最后取 *Hungry Ghosts* 第 3 轨 *Another Set of Issues* 的首词：
 
 ```text
 ANOTHER
 ```
 
-这条路线曾看似同时解释标题、提示 2 的合读示范、提示 3 的列序、提示 4 的全体换义、加号的连接作用及答案格式，但用户已明确判错。失败说明“Watercolour 恰为 Pendulum 第 3 曲”和把这个 3 迁移到另一张 OK Go 专辑，都是题面没有授权的外部元数据跳跃；`🔁 → Here It Goes Again` 也受到目标乐队的反向支配。整条路线仅保留为负面审计。
+用户明确判错，否定了这次**跨专辑跳转**。后来的 ARCHIVE 判错又撤销了 *Again*、OK Go、*Watercolour* 三项的直接艺人归一化；共同曲序 3 和其他专辑资料都只作失败审计。
 
 ## Observations
 
-- 开头三行把目标歌手描述成“双钻头发型／日本／麦克风／喜欢法棍”的虚拟歌手，即重音テト；接着三行把制作者描述成一人包办音乐、文字、绘图和影像、头像是笑脸且使用重音テト，即マサラダ。
+- 提示 1 明确要求先识别 `🔻👧🔻` 与 `🐴🥗👊`：开头三行把前者描述成“双钻头发型／日本／麦克风／喜欢法棍”的虚拟歌手重音テト；接着三行把后者描述成一人包办音乐、文字、绘图和影像、头像是笑脸且使用重音テト的マサラダ。它同时示范了“连续 emoji 整体指专名”的读法。
 - 塔中有 **128** 个非空 emoji；下方歌词区域有 **122 个蓝格 + 6 个粉格 = 128 格**。
 - 塔相对下方表格向右错开恰好一格。把塔列映射为下方绝对列 `c02..c10` 后，两边逐列数量完全相等：`3, 5, 8, 22, 27, 26, 13, 13, 11`。这是“同列重排”的硬约束。
 - 六个提取粉格分别是 `r3c5, r16c9, r26c10, r32c6, r47c7, r51c8`；按列排序后正好一列一个，覆盖 `c5..c10`。
-- 底部有六个粉格，用来汇总六个提取 emoji；其下方明确写着 `r68c5=🟰`、`r68c6=🅰️`、`r68c7..c12=❓️`，所以答案是**七个字母且首字母为 A**。上一轮把 `🅰️` 误解成 “Answer” 标签，是 `ARTIST` 路线的版式错误。
+- 底部有六个粉格，用来汇总六个提取 emoji；其下方明确写着 `r68c5=🟰`、`r68c6=🅰️`、`r68c7..c12=❓️`。原图底部裁图保存在 `work/visual/layout/answer-format-crop.png`。它给出真正的七字母格式 `A??????`；六个红图各对应 A 后的一格，当前候选 **ATHWART** 精确匹配。此前把 A 当 “Answer” 标签会少一字母，把 A 当冠词又产生被拒短语 APREFIX。
 - 提示 3 将底部六个红格的用途锁定：让上方六个红格 emoji 保持列号再次下落，最终按 `c5,c6,c7,c8,c9,c10` 读取；这给出了过去所有候选都缺失的严格排序规则。
-- 提示 4 将转换方法锁定：最终六图不能沿用其歌词义，而应以不同含义整体解读，并转成符合 `A??????` 的英文词；`🅰️` 是答案的一部分，不是 Answer 标签。它不要求每图各贡献一个首字母。
+- 提示 4 将转换方法锁定：最终六图不能沿用其歌词义，而应以不同含义解读，并转成符合 `A??????` 的英文词；`🅰️` 是答案的一部分，不是 Answer 标签。底部一图一格的对齐与标题的 HEADQUARTERS 合起来，支持每图新义贡献一个 head／首字母。
 - 六块歌词图形按歌曲发表顺序排列：`ライアーダンサー`、`ちっちゃな私`、`ウルトラトレーラー`、`㋰責任集合体`、`イレギュラーマン`、`カンケーガール`。
-- 标题 `😊😠😢😃🏢` 的前四图是情绪，后一图是其工作总部，可能指《Inside Out》；但 ANOTHER 判错后，不能再把这层联想继续迁移到 OK Go 歌曲或专辑，标题的实际作用重新开放。
+- 标题 `😊😠😢😃🏢` 的前四图是情绪，后一图是其工作总部，指向 *Inside Out* 的 **HEADQUARTERS**。`HEAD` 是最终提取的题内依据：取六个换义词的词首，而不是无提示地从中央向外镜像配对。
 
 ## Working hypotheses
 
 - **确认：按列的 emoji dropquote。** 128 对 128 的总数、九列逐列计数完全相等，以及歌词中的高辨识度结构共同确认这一机制。
 - **确认：六块歌曲身份。** 依次为 `ライアーダンサー`、`ちっちゃな私`、`ウルトラトレーラー`、`㋰責任集合体`、`イレギュラーマン`、`カンケーガール`。
-- **硬锚点：** R2 是五组问答；R3 的 `r25c2..c10` 与 `r26c5..c10` 分别被逐列唯一库存锁为整排 🏢 与整排 🎨，所以 `r26c10=🎨`。R4 的两条接龙明确包含苹果／猩猩／落语／哥斯拉及骆驼／谎话／斋月；其另一组七格现复原为 `❓×3/↩/🏃/🐰×2`，对应三处疑问／疑问标记、`はしる・にげる・そらす` 与两只月兔。`✅` 则移到 R6 的“何よりも大切”。
-- **粉格重建：** R1 的“みんなはずっと話してる”三格复合图现放 `r3c5=🔄`；R2 的“泣きたい”支持 `r16c9=💧`；R3 的整排落书支持 `r26c10=🎨`；R4 问句密集组支持 `r32c6=❓`；R5 的人物沿箭头“脱出”支持 `r47c7=🚶‍➡️`；R6 四格交叉点支持 `r51c8=➕️`。
+- **硬锚点：** R2 是五组问答；R3 的 `r25c2..c10` 与 `r26c5..c10` 分别被逐列唯一库存锁为整排 🏢 与整排 🎨，所以 `r26c10=🎨`。R4 的两条接龙明确包含苹果／猩猩／落语／哥斯拉及骆驼／谎话／斋月；其另一组九格复原为 `❓×2/✅/↩/🏃/🐰×2`，对应 `これはなんだ／それがなにか?` 的两处疑问、`それでよろし` 的肯定、跑／逃／避与两只月兔。第三枚 c6 问号移到 R6 的 `大切って聞きたい`。
+- **粉格重建：** R1 的“みんなはずっと話してる”三格复合图现放 `r3c5=🔄`；R2 的“泣きたい”支持 `r16c9=💧`；R3 的整排落书支持 `r26c10=🎨`；R4 的肯定句支持 `r32c6=✅`；R5 的人物沿箭头“脱出”支持 `r47c7=🚶‍➡️`；R6 四格交叉点支持 `r51c8=➕️`。
 - **提示 2 与 c7 的复核闭环：** 风味里的箭头是结构符号，连续图组可以合成对象；`🔻👧🔻` 指重音テト也说明人物图可指角色。R1 降雨段独立吸收 `r8c7=🚿`；R5 末行 `r47c5..c8=🫱/➡️/🚶‍➡️/↘️`，人物沿箭头“脱出”。释放的 c7 `🔡` 与 c8、c9 各一枚 `🔡` 在 R6 的 `r55c8/r56c7/r56c9` 排成三角形，逐枚对应“隣の隣の隣”。
-- **R6 完整配平：** `work/lyric_fill.tsv` 现已填满 **128/128** 格。三枚 `🔡` 形成三邻居图；`r58c7/r59c6/r59c8/r60c7 = ↪️/💭/↩️/↪️` 形成环绕“言葉／声”的循环；`✌️`（PEACE）与 `🍰`（PIECE of cake）的同音错传及 `😄` 表现“間違っていても壊れない”；`r57c5/r57c6/r57c8 = 🏆/✅/🫲` 对应“何よりも／大切／その声”。九列均为 `open=0, residual=0`。
-- **c5 已由画面优先裁决：** `🔁/🔄` 同列交换在库存上不唯一，但 R6 的蓝色路线明确在左右两侧间水平往返，横向 repeat 图 `🔁` 与 `👈/👉` 构图一致；故取 `r50c5=🔁`，R1 粉格为 `r3c5=🔄`。这不依赖候选答案。
-- **提取状态：** 六个粉格现为 `🔄/❓/🚶‍➡️/➕/💧/🎨`。按提示 4 换义后，前两图给 REARRANGE / WORD PUZZLE，后四图给 `A MAN + RAG`；精确自指重排为候选 **ANAGRAM**。
+- **R6 完整配平：** `work/lyric_fill.tsv` 现已填满 **128/128** 格。三枚 `🔡` 形成三邻居图；`r58c7/r59c6/r59c8/r60c7 = ↪️/💭/↩️/↪️` 形成环绕“言葉／声”的循环；`✌️`（PEACE）与 `🍰`（PIECE of cake）的同音错传及 `😄` 表现“間違っていても壊れない”；`r57c5/r57c6/r57c8 = 🏆/❓/🫲` 对应“何よりも／大切って聞きたい／その声”。九列均为 `open=0, residual=0`。
+- **c5 已由画面优先裁决：** `🔁/🔄` 同列交换在库存上不唯一。新下载并逐秒抽帧的 R1 官方 MV 在“みんなはずっと話してる”处没有水平移动构图；R6 的蓝色路线却明确在左右两侧间往返，横向 repeat 图 `🔁` 又与 `👈/👉` 构图一致。因此取 `r50c5=🔁`、R1 粉格 `r3c5=🔄`，不依赖候选答案。
+- **候选提取：** 六个粉格为 `🔄/✅/🚶‍➡️/➕/💧/🎨`，换义为 `TURN / HEAVY / WALK / ADD / RAIN / TINT`。标题 HEADQUARTERS 指示取 heads，严格得到 `THWART`；题给首字母 A 补成 **ATHWART**。六图各使用一次、保持列序，且没有异序或外部资料跳转。
 
 ### Remaining uncertainty
 
-1. c5 的 `🔁/🔄` 同列交换不是库存唯一；当前顺序由 R6 MV 的水平左右路线裁决。若候选被拒，这是第一处应重新审计的落位。
-2. `💧🎨 → painter's RAG` 是候选中最侧向的一步：两图提供“湿颜料／画画时用来擦拭的物品”，但不是单图的标准名称。它目前由 `(A MAN RAG)* = ANAGRAM` 的精确自指、`❓ = WORD PUZZLE` 的定义和 `A??????` 格式共同锁定。
-3. R6 最下方方向图与 PEACE/PIECE 同音段的逐坐标仍有少量语义余地，但所有格与列库存都已配平，且这部分不触及六个粉格。标题的《Inside Out》联想也未参与 ANAGRAM 推导，至多弱提示“翻转／换一种解读”。
+1. c5 的 `🔁/🔄` 同列交换不是库存唯一；当前顺序由 R1 无水平运动与 R6 明确左右路线的画面对照裁决。候选使用 TURN，但不拿候选反过来决定落位。
+2. c6 红格 `✅` 由 R4 的两处疑问、`ここはたのし／それでよろし` 的肯定段以及 R6 吸收第三枚 `❓` 共同支持。`ATHWART` 不需要把红格换成 `❓=HOOK`；它保留 `✅`，并从字符名 `WHITE HEAVY CHECK MARK` 取新义 HEAVY。
+3. c7 红格 `🚶‍➡️` 由 R5 末行复合图与 R6 三枚 `🔡` 的几何闭环支持；最终改读普通 WALK，不再使用歌词阶段的 GO／EXIT／ESCAPE。
+4. 主要剩余风险是 HEAVY 是字符名称中的限定词，不是日常对 ✅ 的独立称呼；但它是可客观复查的 U+2705 名称成分，且标题 HEADQUARTERS 与底部一图一格共同给出统一的词首提取规则。受限词表审计中，正确红格序列只有 ATHWART 是正常七字母英文词。
 
 ## Rejected audit: AQUAMAN
 
 - AQUAMAN 提出时，`work/lyrics_model.py` 只有 114/128 格；R1–R5 无冲突，但 14 个余格仍全部在 R6。现在这 14 格已经补完，因此这条失败路线的关键未用信息已被消除。
 - 旧解把 `💧/🎨` 合成 `WATER COLOR = AQUA`，再把开头读成 `TURN RIGHT`；它没有独立依据把 `MAN` 整块换到右侧。
-- AQUAMAN 当时把暂放于 R4 的 `✅` 与 `🔄` 强读成 `TURN RIGHT`，没有统一的专名或短语依据；后续 MV 重审又把该粉格纠正为 `❓`，进一步切断此路线。
+- AQUAMAN 当时把 R4 的 `✅` 与 `🔄` 强读成 `TURN RIGHT`，没有统一的专名或短语依据；最终 R4/R6 配平虽仍支持 `✅` 在粉格，却没有任何证据把它压缩为换序指令。
 - 标题的《Inside Out》识别与 **AQUAMAN** 同为英文影视标题只是一层弱类比；用户已明确判错，故 AQUA/MAN 词块换位只保留为负证据。
-- 当前 ANAGRAM 路线虽同样把人物读作 **A MAN**，但它不使用 AQUA：`💧🎨` 指画画时擦湿颜料的 **RAG**，并由 `🔄` 明示重排、由 `❓` 定义 word puzzle，形成完整自指等式，而不是任意交换加号两边。
+- ALBUMIN 判错排除的是歌曲→专辑→曲序→移位的外部元数据链；ARCHIVE 判错又排除了三项表层信息到艺人名称的直接归一化。两条外部音乐路线均只作负面审计。
 
 ## Rejected extraction: AQUATIC
 
@@ -143,6 +201,8 @@ TIC + AQUA, format A??????
                          →  AQUA + TIC
                          →  AQUATIC
 ```
+
+ARCHIVE 后来的歌曲／艺人归一化也已被判错；这两条路线都只保留作负面审计。
 
 ## Rejected extraction: ACRYLIC
 
@@ -184,7 +244,7 @@ ACYCLIC + R - C = ACRYLIC
 
 `ACRYLIC` 是一种 paint，通常为 water-based；其长度与题给 `A??????` 完全吻合。对 `wordfreq` 前 500,000 个常用英文词做有限核验时，排除原词后，在七字母 A 词中与 `ACYCLIC` 恰好相差“一次删除 + 一次插入”的只有 `ACRYLIC`。
 
-用户明确判错。失败点不是词表唯一性，而是变换参数没有来源：六图没有指定必须从 `A+CYCLIC` 起步，也没有给出要加的 R、要丢的 C 及其位置；先用 PAINT 锁定 `ACRYLIC` 再回填 `+R/-C`，仍属于答案导向拟合。这条路线不能复用。
+用户明确判错。后来虽然曾把六图的两条音乐关系首尾闭合成 CYCLIC，并以题给 A 合成 `ACYCLIC`，但 ACYCLIC 也于 2026-08-30 被明确判错；因此 `A + CYCLIC` 与其后的 `+R/-C` 两层都不能复用。先用 PAINT 锁定 `ACRYLIC` 再回填换字参数仍属于答案导向拟合。
 
 ## Rejected extraction: ACTIONS
 
@@ -276,14 +336,15 @@ ALTERED    = A D E E L R T
 
 ## Current audit
 
-- 答案格式由原图和提示 4 共同确定为七个字母 `A??????`；A 是题面直接给出的首字母，不是 Answer 标签。提示没有要求六图分别贡献后六个字母。
-- 验证脚本现有 **128/128** 个赋值，九列全部 `open=0, residual=0`；ANOTHER 判错后独立交换 c5 与 c6 各自的同列候选，六个粉格序列现为 `🔄/❓/🚶‍➡️/➕️/💧/🎨`。
-- 六个粉格中，`🎨` 由整排库存锁定；R4 问句组给第三枚 `❓`，而 R6 “何よりも大切”吸收 `✅`；`➕/💧` 各有强歌词锚点；R5 的 `🫱/➡️/🚶‍➡️/↘️` 形成“沿箭头脱出”图。R6 的三个 `🔡` 已逐坐标落在 `r55c8/r56c7/r56c9`，排除把 `🔡` 留在 R5 粉格的旧版本。
-- 当前正面提取为 `REARRANGE / WORD PUZZLE / A MAN + RAG`：`A MAN RAG` 的七个字母恰好重排为 **ANAGRAM**，而结果本身又是 `❓` 所定义的 word puzzle。这个等式同时解释操作、定义、字料和题给格式。
-- 已拒歌曲模型曾把 `🔁` 读作 **Here It Goes Again**、`✅🚶‍➡️` 合为 **OK Go**、`➕` 读 AND、`💧🎨` 合为 **Watercolour**，再由共同曲序 3 迁移到另一张专辑。ANOTHER 判错证明这不是有效提取。
-- 标题的情绪总部可能给 **Inside Out**，但“转为 OK Go 歌曲，再转为专辑，再套用别首歌曲序”的链条没有题面授权，现已撤销。
-- `artifacts/extraction.tsv` 与 `artifacts/rebus_transform.tsv` 现记录 ANAGRAM 的正面复现；`artifacts/track_lookup.tsv` 只保留已拒 ANOTHER 曲序路线的负面审计。
-- 现成英文谜面 “A rag man unscrambled — a word puzzle” 也给出 ANAGRAM；这只作为自指重排并非臆造的外部旁证，候选本身无需依赖该网页即可逐字验证。
+- 答案格式由原图和提示 4 共同确定为七个字母 `A??????`；A 是题面直接给出的首字母，不是 Answer 标签。六个二次下落红图与六个问号逐格对齐，支持每图贡献一个字母。
+- 验证脚本现有 **128/128** 个赋值，九列全部 `open=0, residual=0`；R4/R6 的 c6 同列交换后，六个粉格序列现为 `🔄/✅/🚶‍➡️/➕️/💧/🎨`。
+- 六个粉格中，`🎨` 由整排库存锁定；R4 官方 MV 只有两处疑问并明确唱出 `それでよろし`，支持红格 `✅`；R6 的 `聞きたい` 吸收第三枚 `❓`。`➕/💧` 各有强歌词锚点；R5 的 `🫱/➡️/🚶‍➡️/↘️` 形成“沿箭头脱出”图。R6 的三个 `🔡` 已逐坐标落在 `r55c8/r56c7/r56c9`，排除把 `🔡` 留在 R5 粉格的旧版本。
+- APREFIX 与 AFFIXES 连续判错后，`WHEEL / MARK / WALK / CROSS / WATER / COLOR` 的镜像复合词结构降为失败审计。当前路线改用 `TURN / HEAVY / WALK / ADD / RAIN / TINT`；六项均区别于持续／肯定／脱出／交叉点／眼泪／涂鸦的旧义。
+- 标题的情绪办公室不是任意的 *Inside Out* 换序指令，而是 **HEADQUARTERS**；它给逐图取新义词首一个直接题内依据。六个 heads 为 `THWART`，与题给 A 合为 **ATHWART**。
+- `✅` 的 H 可复查：Python/Unicode 对 U+2705 的字符名为 `WHITE HEAVY CHECK MARK`。当前路线取 HEAVY，不取与旧肯定义重合的 OK／RIGHT／GOOD／YES。
+- ARTISAN、ANOTHER、AVERAGE、ALBUMIN 与 ARCHIVE 的连续判错共同排除曲序索引、跨专辑跳转、末字母、题名移位和歌曲／艺人归一化。
+- 受限筛选对 8 种红格交换、252,000 个预定义读法组合和 200,000 词做审计；正确红格序列只命中拼写噪声 `ACCROSS` 与正常单词 ATHWART。该结果用于排歧，不替代 HEADQUARTERS 与逐图换义的正面证据。
+- `artifacts/extraction.tsv` 与 `artifacts/rebus_transform.tsv` 记录 ATHWART 的正面复现；`artifacts/inside_out_pairs.tsv`、`artist_list.tsv`、`proper_name_cycle.tsv` 与 `track_lookup.tsv` 只保留已拒路线；`work/red_cell_audit.tsv` 记录落位证据和提示 4 的换义边界。
 - 2013 年 [Sunday Times Crossword 2917 存档](https://sparthasarathy.biz/crosswords/times_sunday/times24112013.html)中的同构原句现作为负证据保留：一个漂亮的现成 cryptic 也可能与题目实际 emoji 转换无关。
 - 2026-08-21 23:39 的比赛页只读日志确认 AQUATIC 错误；页面显示剩余 **3/20** 次提交机会且无附加判题消息。AQUARIA 不在网站日志中，仍按用户在对话中的明确反馈记为 rejected。
 
@@ -313,61 +374,90 @@ ALTERED    = A D E E L R T
 | 2026-08-21 | AQUATIC | rejected | 用户明确报告“AQUATIC 不是答案，你认真点”；无额外判题提示。 |
 | 2026-08-22 | AQUAMAN | rejected | 用户明确报告“AQUAMAN 不是答案”；无额外判题提示。 |
 | 2026-08-22 | ALBUMEN | rejected | 用户明确报告“答案错误”；无额外判题提示。 |
-| 2026-08-22 | ANOTHER | rejected | 用户明确报告“another 不正确”；无额外判题提示。歌曲曲序路线整条撤销。 |
+| 2026-08-22 | ANOTHER | rejected | 用户明确报告“another 不正确”；无额外判题提示。撤销把共同索引 3 跨到 *Hungry Ghosts* 的跳转，不把歌曲识别本身误记为判错。 |
+| 2026-08-29 | ARTISAN | rejected | 用户明确报告“ARTISAN 不是答案”；无额外判题提示。撤销无提示的源歌曲标题取三与 `AASRNIT` 异序。 |
+| 2026-08-29 | ANALOGY | rejected | 用户明确报告“ANALOGY 不正确”；无额外判题提示。撤销把两组歌曲—艺人关系直接命名为 analogy 的步骤。 |
+| 2026-08-29 | AVERAGE | rejected | 用户明确报告“AVERAGE 不正确”；无额外判题提示。撤销 `Inside Out → 专名末字母 NORM → 同义词` 两次跳转。 |
+| 2026-08-29 | ALBUMIN | rejected | 用户明确报告“ALBUMIN 不是答案”；撤销歌曲—艺人—专辑整条路线，不再复用其专名或元数据。 |
+| 2026-08-29 | AQUEOUS | rejected | 用户明确报告“AQUEOUS 不是答案”；撤销 `WATER` 共同词到 A 开头近义词的无提示转换。 |
+| 2026-08-30 | ACYCLIC | rejected | 用户明确报告“ACYCLIC 不是答案”；撤销让 `🔄` 同时承担 AGAIN／Pendulum 并把格式 A 前缀化的闭环路线。 |
+| 2026-08-30 | ARCHIVE | rejected | 用户明确报告“ARCHIVE 不正确”；撤销 `Again / OK Go / Watercolour → Archive / OK Go / Pendulum → 按 A?????? 筛选` 的歌曲／艺人归一化路线。 |
+| 2026-08-30 | APREFIX | rejected | 用户明确报告“APREFIX 不正确”；撤销把三组 inside-out 复合词的关系直接写成规范化短语 `A PREFIX`。三组复合词本身仍待独立审计，不因该提交结果自动判错。 |
+| 2026-08-30 | AFFIXES | rejected | 用户明确报告“AFFIXES 不正确”；撤销把 CROSS／WATER／COLOR 三个复合词前项统称为 affixes 的转换。该反馈使“inside-out 三对是否为意图结构”重新成为开放问题。 |
+| 2026-08-30 | ATHWART | rejected | 用户明确报告“ATHWART 错误”；撤销 `HEADQUARTERS → 取六个换义词首` 的提取。尤其 `✅→HEAVY` 是候选出现后从字符名限定词补入，不能再作为答案字母。 |
 
 ## Unlocked hints
 
 | Hint | Text | Consequence |
 | --- | --- | --- |
+| 1 | `这是一道emoji主题的dropquote题。你可以先尝试根据风味文本描述找到🔻👧🔻和🐴🥗👊分别都是谁，以掌握需要还原的内容。` | 机制是按列的 emoji dropquote；`🔻👧🔻` 与 `🐴🥗👊` 分别指重音テト和マサラダ，锁定要还原的六首マサラダ／重音テト歌曲内容，并示范连续图可整体表示专名。 |
 | 2 | `可以关注🎤开头的那行风味文本中的某四个连续emoji，也许你还没有确认过其中某几个emoji代表的内容？` | 风味首行的 `🎤➡️🔻👧🔻` 中，后四枚 `➡️🔻👧🔻` 应整体读成“指向／这是 + 双钻头女孩（重音テト）”，而不是四枚各自对应四段文字。它直接确认 `➡️` 可作结构连接、`👧` 可指重音テト；结合歌词库存把 `👧` 放入 R2，并支持 R5 用四格复合图表现“脱出”。 |
 | 3 | `你需要对红色框位置的emoji再执行一次下落操作。` | 六个红格保持列号落入底部六个红格，给出 `c5..c10` 的严格顺序；排除任意异序。“红色框”只是位置说明，不能在 `ALTERED` 被拒后继续当作隐藏字料 `RED`。 |
-| 4 | `事实上，这段信息里的每个emoji都与其先前代表的含义有差别。尝试根据emoji的其他可能含义解读这段信息，并将其转化为一个符合格式要求的英文单词。注意格式里的🅰️不是answer的意思，而是答案的一部分。` | 最终图必须换义并整体转成七字母 A 词；ANOTHER 判错后重查得到 R4 红格 `❓` 而非 `✅`。当前 ANAGRAM 让 `🔄` 作重排指示、`❓` 作 word puzzle 定义、其余图给 `A MAN RAG`，不依赖逐图取首尾字母。 |
+| 4 | `事实上，这段信息里的每个emoji都与其先前代表的含义有差别。尝试根据emoji的其他可能含义解读这段信息，并将其转化为一个符合格式要求的英文单词。注意格式里的🅰️不是answer的意思，而是答案的一部分。` | 这是逐图硬约束：`TURN / HEAVY / WALK / ADD / RAIN / TINT` 分别离开歌词中的持续／肯定／脱出／交叉点位置／眼泪／涂鸦义；标题 HEADQUARTERS 指示取新义的 heads，得 THWART，题给 A 补成 **ATHWART**。A 是单词首字母，不是 Answer 标签、冠词或操作前缀。 |
 
 ## Evidence and artifacts
 
 - [`artifacts/layout.tsv`](artifacts/layout.tsv)：从保存页解析出的 1-based 坐标、边框和颜色表。
 - [`artifacts/dropquote-layout.png`](artifacts/dropquote-layout.png)：保持六块区域、粉格和列对齐的可视化。
-- [`artifacts/extraction.tsv`](artifacts/extraction.tsv)：当前六个红格的严格列序、歌词旧义及 ANAGRAM 换义分组。
-- [`artifacts/track_lookup.tsv`](artifacts/track_lookup.tsv)：已拒歌曲曲序路线的外部元数据跳转；仅作负面审计。
-- [`artifacts/rebus_transform.tsv`](artifacts/rebus_transform.tsv)：当前 `(A MAN RAG)* = ANAGRAM` 的逐字母复现，并保留已拒 ALBUMEN 路线作对照。
+- [`work/visual/layout/answer-format-crop.png`](work/visual/layout/answer-format-crop.png)：原图底部 `A??????` 的直接裁图；在仓库根目录复现：`python -X utf8 .agents/skills/inspect-puzzle-visuals/scripts/visual_workbench.py crop rounds/irrational-manager-hypothesis/nodes/e05-happy-angry-sad-joy-office/work/visual/layout/table-2.png rounds/irrational-manager-hypothesis/nodes/e05-happy-angry-sad-joy-office/work/visual/layout/answer-format-crop.png --box 70,2390,624,2760 --scale 2`。
+- [`artifacts/extraction.tsv`](artifacts/extraction.tsv)：六个红格的严格列序、歌词旧义、ATHWART 路线的六个换义及 heads。
+- [`artifacts/inside_out_pairs.tsv`](artifacts/inside_out_pairs.tsv)：已拒 APREFIX／AFFIXES 路线的三层镜像复合词审计，不再作为正面提取。
+- [`artifacts/artist_list.tsv`](artifacts/artist_list.tsv)：已拒的 `Again / OK Go / Watercolour → Archive / OK Go / Pendulum` 归一化，保留作负面复现。
+- [`artifacts/proper_name_cycle.tsv`](artifacts/proper_name_cycle.tsv)：已拒 ACYCLIC 路线的负面复现；不得再让首图同时承担 AGAIN 与 Pendulum。
+- [`artifacts/track_lookup.tsv`](artifacts/track_lookup.tsv)：保留已拒歌曲—艺人及专辑／曲序路线的审计；不再作为正面提取。
+- [`artifacts/title_index.tsv`](artifacts/title_index.tsv)：已拒 ARTISAN 实验的六首罗马字标题、第 3 字母与 `ASRNIT`，仅作负面复现。
+- [`artifacts/rebus_transform.tsv`](artifacts/rebus_transform.tsv)：ATHWART 的 HEADQUARTERS／词首提取复现，并列保留 AFFIXES、APREFIX、ARCHIVE、ACYCLIC、AQUEOUS、ALBUMIN 等已拒转换。
 - [`artifacts/extract_layout.py`](artifacts/extract_layout.py)：从离线 HTML 重新生成稳定布局的脚本；原始解包页在 `work/visual/archive/index.html`。
 - [`work/lyric_fill.tsv`](work/lyric_fill.tsv)：128 格的单一工作表；现已全部赋值并保留逐格歌词锚点与证据等级。
 - [`work/lyric_fill.txt`](work/lyric_fill.txt)：由验证脚本生成的稳定坐标视图，便于复查区域与粉格。
-- [`work/lyrics_model.py`](work/lyrics_model.py)：验证坐标覆盖、颜色和逐列 emoji 多重集合余量。
-- [`work/visual/r4-first-verse/catalog/contact-01.png`](work/visual/r4-first-verse/catalog/contact-01.png) 至 `contact-03.png`：R4 官方 MV 前 36 秒的稳定联系表，复核疑问、跑／逃／避与月兔画面；与库存合看支持该组使用三枚 `❓`，故粉格为 `❓`。
-- [`work/visual/r6-mv-audit-2s/catalog/contact-03.png`](work/visual/r6-mv-audit-2s/catalog/contact-03.png)：R6 的“隣”、错误却不坏以及“何よりも／大切／その声”连续画面；支持把 `✅` 放在 `r57c6`。
-- [`work/rebus_transform.py`](work/rebus_transform.py)：已拒 ALBUMEN 路线的负面审计；证明字母唯一也不能弥补错误的 emoji 语义模型。
-- [`work/extraction_candidates.py`](work/extraction_candidates.py) 与 [`work/extraction_candidates.tsv`](work/extraction_candidates.tsv)：逐图自由选英文读法再取首字母的参数化筛选器；扩展到修正后的 c5/c7 读法后，200,000 词中有 46 个命中，证明这类泛化模型不唯一，不能单独证明答案。
-- 外部核对：[重音テト官方简介](https://kasaneteto.jp/about/)、[マサラダ歌词列表](https://utaten.com/artist/lyric/47934)、[ライアーダンサー](https://utaten.com/lyric/mi23062237/)、[ちっちゃな私](https://utaten.com/lyric/mi23081033/)、[ウルトラトレーラー](https://utaten.com/lyric/mi23112743/)、[㋰責任集合体](https://utaten.com/lyric/mi24051515/)、[イレギュラーマン](https://utaten.com/lyric/mi25050720/)、[カンケーガール](https://utaten.com/lyric/mi26060907/)；[“A rag man unscrambled — a word puzzle”](https://crosswordgenius.com/clue/a-rag-man-unscrambled-a-word-puzzle)旁证 `A MAN RAG → ANAGRAM` 是成立的自指谜面。歌曲曲序与 OK Go 标题链接仅服务已拒 ANOTHER 路线；[Sunday Times 的 ALBUMEN 同构原句](https://sparthasarathy.biz/crosswords/times_sunday/times24112013.html)也只作负证据。
+- [`work/lyrics_model.py`](work/lyrics_model.py)：验证坐标覆盖、颜色和逐列 emoji 多重集合余量；连同 `artifacts/extraction.tsv` 运行时输出 `FULL MULTISET MATCH`、`extraction: THWART` 与 `ordered: A + THWART -> ATHWART`。
+- [`work/red_cell_audit.tsv`](work/red_cell_audit.tsv)：逐列记录当前红图、仍可交换的落位、独立证据，以及提示 4 下允许／禁止的新义。
+- [`work/visual/r1-first-verse/catalog/contact-01.png`](work/visual/r1-first-verse/catalog/contact-01.png) 至 `contact-05.png`：R1 官方 MV 前 50 秒逐秒联系表；“みんなはずっと話してる”段没有 R6 那种水平往返路线，支持把横向 `🔁` 留给 R6、圆形 `🔄` 留在 R1 粉格。
+- [`work/visual/r4-first-verse/catalog/contact-01.png`](work/visual/r4-first-verse/catalog/contact-01.png) 至 `contact-03.png`：R4 官方 MV 前 36 秒的稳定联系表；画面／歌词只有两处疑问，并有 `それでよろし`，支持粉格 `✅`。
+- [`work/visual/r6-mv-audit-2s/catalog/contact-03.png`](work/visual/r6-mv-audit-2s/catalog/contact-03.png)：R6 的“隣”、错误却不坏以及“何よりも／大切って聞きたい／その声”连续画面；支持把第三枚 c6 `❓` 放在 `r57c6`。
+- [`work/rebus_transform.py`](work/rebus_transform.py)：参数化字母多重集合核验；`aasrnit` 与旧 `manblue` 的结果只保留为“词表唯一也不能替代题内语义”的负面审计。
+- [`work/extraction_candidates.py`](work/extraction_candidates.py) 与 [`work/extraction_candidates.tsv`](work/extraction_candidates.tsv)：HEADQUARTERS 假设的有界筛选器与完整命中表；8 种序列、252,000 个预定义组合在 200,000 词中命中 12 行，正确红格序列只有 `ACCROSS` 与 `ATHWART`，后者是唯一正常英文词。
+- 既有外部核对链接只为复现重音テト、マサラダ、六首歌词及已拒的歌曲元数据路线。用户要求不搜索答案后未再访问答案、题解或队伍记录；旧 ANAGRAM／ALBUMEN 的网页同构只作负证据。
 
 ## Important failed routes
 
-- **ANOMALY（2026-08-21 被拒绝）：** 路线把尚未锁定的 c6/c8 强读为 OK/arrow，并把 💧 任意读作 liquid，以此拼 `NOMALY`。后续完整区域配平与 c5/c6 重审将红格序列改为 `🔄/❓/🚶‍➡️/➕️/💧/🎨`；旧 `NOMALY` 拼法不能复用。
+- **ANOMALY（2026-08-21 被拒绝）：** 路线把尚未锁定的 c6/c8 强读为 OK/arrow，并把 💧 任意读作 liquid，以此拼 `NOMALY`。后续完整区域配平与 c5/c6 重审将红格序列锁到 `🔄/✅/🚶‍➡️/➕️/💧/🎨`；旧 `NOMALY` 拼法不能复用。
 - **ANXIETY（2026-08-21 被拒绝）：** 路线把标题强解为《头脑特工队2》，再从答案形状反推 `🔁/❓️/🙆‍♂️/😄/💧/✔️` 及 `Never-ending/X/I/Emotion/Tear/Yes`。脚本只证明这些 emoji 存在于对应列，并未证明它们应落在粉格；完整填表缺失，故整条路线不能复用，除非未来由独立逐格证据重新得到其中个别 emoji。
 - **关键反证：** c10 的六个 ✔️ 被 `ちっちゃな私` 的五组问答及其肯定行全部消耗；`ウルトラトレーラー` 的 c10 粉格又被六连 🎨 整排锁定。因此 `ANXIETY` 所需的末字母 `Y` 没有任何可行放置。
-- **AFFECTS（2026-08-21 被拒绝）：** 路线把 c6/c7/c8 粉格分别放成 `💭/🚶‍➡️/➕️`，但 c6 现已由 R4 问句组纠正为 `❓`。随后将六个概念任意英译为 Forever/Fantasy/Escape/Crossroads/Tear/Sketch 取首字母，也没有题面支持；不得恢复。
+- **AFFECTS（2026-08-21 被拒绝）：** 路线把 c6/c7/c8 粉格分别放成 `💭/🚶‍➡️/➕️`，但 c6 现已由 R4 的 `それでよろし` 锁为 `✅`。随后将六个概念任意英译为 Forever/Fantasy/Escape/Crossroads/Tear/Sketch 取首字母，也没有题面支持；不得恢复。
 - **ARTISTS（2026-08-21 被拒绝）：** 当时没有提示 2/3 的落位证明，并把六图反推成 `RTISTS`。中间模型曾在 `🔡/🚶‍➡️` 间摇摆，现由 R5/R6 交叉校验支持 `🚶‍➡️`；无论哪版，逐图反选首字母都不能恢复已拒绝的 `ARTISTS`。
 - **ARTIST（2026-08-21 被拒绝）：** 这一路线错误地把 `🅰️` 当作 “Answer” 标签，从而删去题面给定首字母；Always/Reverie/Text/Intersection/Sob/Trace 也没有按提示 3 的列顺序产生 `RTICLE`，不得复用。
 - **ADAPTER（2026-08-21 被拒绝）：** 路线把暂定粉格 `🔁/💭/↪️/➕️/💧/🎨` 读为 Repeat/Thought/Escape/Plus/Drop/Art，再将首字母与题面给定 A 任意异序。虽然字母多重集合精确相等，但没有独立的异序指示；用户拒答后，这整类“给 emoji 选英文名并异序成 A 开头单词”的方法停止。
 - **ARTICLE（2026-08-21 被拒绝）：** 提示 3 确实给出列序，但 Repeat/Thought/Input/**Cross/Liquid**/Easel 没有满足提示 4 的换义要求：Cross 仍贴近交差点，且逐项名称没有统一选择规则。当前模型已改为 `r47c7=🚶‍➡️`，进一步切断这条已被拒绝的自由首字母链。
 - **ARTWORK（2026-08-21 被拒绝）：** 提示 4 后为拼 `RTWORK`，路线把未锁定的 R5 红格由 `🔡` 改成 `🚿`，并取 Water / Operator / Rain / Kit。提示 2 现将 `🚿` 独立放入 R1 降雨段，进一步反证其红格身份；旧字母串不得恢复。
 - **ARTFORM（2026-08-21 被拒绝）：** 路线仅凭“脱字”猜 `r47c7=🔡`，再用 Font/Operator/Rain/Medium 拼 `RTFORM`，当时没有组合图与列余量闭环。R5/R6 的复核现支持 `r47c7=🚶‍➡️`；用户拒答也已独立排除 Font/Operator/Rain/Medium 的自由首字母链。
-- **ACTRESS（2026-08-21 被拒绝）：** 暂定红格 `🔁/💭/🚿/➕️/💧/🎨` 被换读为 Cycle/Thought/Rinse/Extra/Sweat/Spectrum，首字母拼 `CTRESS`。`🚿` 已由 R1 降雨段吸收，现有红格又是 `🔄/❓/🚶‍➡️/➕️/💧/🎨`，故该序列与标题联想均被结构性推翻。
-- **ARTISTE（2026-08-21 被拒绝）：** 中间模型的红格 `🔁/💭/🔡/➕️/💧/🎨` 被换读为 Repeat/Thought/Input/Sum/Trickle/Easel，首字母拼 `RTISTE`。用户拒答已证明这套读法不成立；现有红格开头已改为 `🔄/❓/🚶‍➡️`，且不再逐图取首字母，不能恢复旧路线。
-- **ARTLESS（2026-08-21 被拒绝）：** 同一红图序列被换读为 Repeat/Thought/Letters/Extra/Sweat/Spectrum，并逐项取首字母得到 `RTLESS`。用户明确判错，反证了这套读法；尤其“从每图自由选择一个 A-word 所需同义词，再取首字母”没有提示支持。后续必须检验统一、可复现的整体解读或标准名称转换，不能继续替换单个同义词拼词。
+- **ACTRESS（2026-08-21 被拒绝）：** 暂定红格 `🔁/💭/🚿/➕️/💧/🎨` 被换读为 Cycle/Thought/Rinse/Extra/Sweat/Spectrum，首字母拼 `CTRESS`。`🚿` 已由 R1 降雨段吸收，现有红格又是 `🔄/✅/🚶‍➡️/➕️/💧/🎨`，故该序列与标题联想均被结构性推翻。
+- **ARTISTE（2026-08-21 被拒绝）：** 中间模型的红格 `🔁/💭/🔡/➕️/💧/🎨` 被换读为 Repeat/Thought/Input/Sum/Trickle/Easel，首字母拼 `RTISTE`。用户拒答已证明这套序列与读法不成立；现有红格开头已由歌词锁为 `🔄/✅/🚶‍➡️`。当前候选虽也取词首，但依据是后来识别出的标题 HEADQUARTERS，不能借此恢复旧字料。
+- **ARTLESS（2026-08-21 被拒绝）：** 同一旧红图序列被换读为 Repeat/Thought/Letters/Extra/Sweat/Spectrum，并逐项取首字母得到 `RTLESS`。用户明确判错；该路线当时没有正确红格、逐图旧义核对或任何“取首”指令。当前 HEADQUARTERS 只重新授权对**正确序列与严格换义**取首，不恢复这套已拒读法。
 - **ALTERED（2026-08-21 被拒绝）：** 路线把 `🔁💭🔡➕️` 读成重排并合并字母、把 `💧🎨` 按目标反选为 TEAL，再从提示 3 的“红色框”额外取 RED，得到 `TEALRED → ALTERED`。用户明确判错；RED 不来自最终六图，water colour 也不唯一，词义回扣不能挽救这种事后拟合。
-- **ATTEMPT（2026-08-21 被拒绝）：** 路线把六图读为 Repeat/Thought/Lowercase/Sum/Drop/Art，再借“第二次下落”取每词末字母，得到 `A + TTEMPT`。提示只规定 emoji 的再次落位，不指示取英文词尾；Sum/Drop/Art 仍按目标反选，而提示里的“尝试”只是答案导向的回扣。由此停止“逐图自由英译后取首／尾字母”整个假设族。
+- **ATTEMPT（2026-08-21 被拒绝）：** 路线把六图读为 Repeat/Thought/Lowercase/Sum/Drop/Art，再借“第二次下落”取每词末字母，得到 `A + TTEMPT`。提示只规定 emoji 的再次落位，不指示取英文词尾；Sum/Drop/Art 仍按目标反选，而提示里的“尝试”只是答案导向的回扣。词尾提取仍停止；词首提取只因后来识别出的 HEADQUARTERS 获得了新的独立依据。
 - **ACTIONS（2026-08-21 被拒绝）：** 路线把暂定六图动词化为 repeat/think/walk/add/drop/paint，再以共同类别 actions 直接填入格式。它没有解释六图如何产生 `CTIONS`，且当时第三枚 `🚶‍➡️` 尚未由完整 R6 填表锁定；由此停止“按 `A??????` 反猜共同类别”的假设族。
 - **ACRYLIC（2026-08-21 被拒绝）：** 路线把六图读成 CYCLIC / THINK / LETTER / ADD / DROP / PAINT，先以题给 A 构造 `ACYCLIC`，再从 PAINT 反推 `+R/-C` 得 `ACRYLIC`。词表唯一性不能提供缺失的 R、C 与位置；用户拒答后停止这条答案导向换字。
 - **AQUARIA（2026-08-21 被拒绝）：** 路线把前三图自由命名为 REPEAT / IDEA / ALPHABET 取 `RIA`，再把 `💧🎨` 合读为 AQUA，并借题给首字母交换加号两侧得到 `AQUA+RIA`。用户明确判错；提示 2 只证明多图可以合义，并未指示这种“前三项取首字母、后两项取共同词”的混合规则，加号也不自动授权调换图面顺序。该路线不能复用。
 - **AQUATIC（2026-08-21 被拒绝）：** 路线先自由命名为 TURN / IDEA / CHARACTER 取 `TIC`，再把 `💧🎨` 合读为 AQUA，最后调换加号两侧。用户明确判错；R4 问句组又把其中 c6 从 `💭` 纠正为 `❓`，所以它不仅转换规则混杂，连底层红图序列也已被推翻。
-- **AQUAMAN（2026-08-22 被拒绝）：** 路线把暂定红图 `🔄/✅/🚶‍➡️/➕/💧/🎨` 读成 `TURN RIGHT | MAN + WATER COLOR`，将 `WATER COLOR` 压成 `AQUA`，再把 `MAN` 移到右侧得到 `AQUAMAN`。用户明确判错；`TURN RIGHT` 没有充分依据指示交换加号两侧，标题《Inside Out》与另一影视名之间也只是弱类比。当前 ANAGRAM 路线确实把人物读作 **A MAN**，但它用 `RAG` 而非 AQUA，并由 `🔄` 的重排指示、`❓` 的 word-puzzle 定义及精确自指字母等式共同约束；不再交换词块。
+- **AQUAMAN（2026-08-22 被拒绝）：** 路线把红图 `🔄/✅/🚶‍➡️/➕/💧/🎨` 读成 `TURN RIGHT | MAN + WATER COLOR`，将 `WATER COLOR` 压成 `AQUA`，再把 `MAN` 移到右侧得到 `AQUAMAN`。用户明确判错；`TURN RIGHT` 没有充分依据指示交换加号两侧，MAN/AQUA 字料不得复用。
 - **ALBUMEN（2026-08-22 被拒绝）：** 路线把暂定六图读成 `TURN/REARRANGE | WHITE | MAN + BLUE(COLOR)`，并发现现成 cryptic 原句 “It turns a man blue or egg white (7)”，由 `(MANBLUE)*` 得 `ALBUMEN`。用户明确报告“答案错误”。这证明外部原句只是高度吻合的巧合，不能反过来替歌词落位或 emoji 换义背书；后续不得复用 `MANBLUE`、egg white 定义或这条重排路线，除非出现新的题内证据（当前没有）。
 - **ANSWERS（2026-08-22 撤回，未提交）：** 同一红图序列被换读为 NEW/SUCCESS/WALK/EXTRA/RAIN/SPECTRUM 得 `NSWERS`。用户指出不像正确答案；更关键的是 SUCCESS/WALK/EXTRA 等读法没有共同选择原则，`ANSWERS` 只回扣提示里的 “answer”。不把撤回候选写入提交历史。
-- **ANOTHER（2026-08-22 被拒绝；两条路线均作废）：** 旧路线把六图自由换读为 NEW/OPTION/TRAVEL/HOSPITAL/EYEDROP/RAINBOW，再取首字母 `NOTHER`；用户当时已质疑其依据。新路线把 `🔁/✅🚶‍➡️/➕/💧🎨` 读为 `Here It Goes Again — OK Go and Watercolour`，以两首歌同为专辑第 3 曲得到索引 3，再迁移到 *Hungry Ghosts* 第 3 曲 **Another Set of Issues**。用户现明确报告 ANOTHER 不正确。新路线失败点是 `🔁` 和歌曲身份受答案反向支配，Watercolour 的演唱者与跨专辑索引都不来自六图，且 `✅→OK` 未明显满足“含义有差别”。后续不得复用任何一条 ANOTHER 路线。
-- **标准 emoji 名称首字母：** [Unicode Emoji List](https://unicode.org/emoji/charts/emoji-list.html) 对六图的标准短名首字母不能生成答案。这说明最终仍依赖提示允许的“其他可能含义”，而不是机械抄录 Unicode 名称；也因此逐项换义的自然度仍是候选风险。
+- **ANOTHER（2026-08-22 被拒绝）：** 旧路线把六图自由换读为 NEW/OPTION/TRAVEL/HOSPITAL/EYEDROP/RAINBOW，再取首字母 `NOTHER`；这一套完全作废。后来的歌曲路线识别出 *Here It Goes Again*—OK Go 与 *Watercolour*—Pendulum，并得到共同曲序 3，但错误地把 3 迁移到 *Hungry Ghosts* 第 3 曲 *Another Set of Issues*。共同曲序和跨专辑跳转都不得复用。
+- **ARTISAN（2026-08-29 被拒绝）：** 路线继续把共同曲序 3 施加到六首题内源歌曲的罗马字标题，按二次下落列序取出 `ASRNIT`，再将题给 A 一起异序成 `ARTISAN`。用户明确判错；题面既没有标题取三指令，也没有异序指令，曲序、`ASRNIT` 和异序都不得复用。
+- **AVERAGE（2026-08-29 被拒绝）：** 路线把四个专名的右端字母取成 `N/O/R/M`，再按答案格式把 `NORM` 换成同义词 `AVERAGE`。用户明确判错；*Inside Out* 没有指定“只取右端”，`NORM → AVERAGE` 又是第二次无提示跳转。专名首尾字母路线不得复用。
+- **ANALOGY（2026-08-29 被拒绝）：** 路线把六图读成 *Here It Goes Again* : OK Go 与 *Watercolour* : Pendulum，再把平行关系本身命名为 `ANALOGY`。用户明确判错；线性六图没有类比符号。后来改读三项列表的 ARCHIVE 路线也已判错，两种关系语法都不得复用。
+- **ALBUMIN（2026-08-29 被拒绝）：** 路线从 *Here It Goes Again*—OK Go 与 *Watercolour*—Pendulum 继续查询两首歌均为专辑第 3 轨，再概括为 `IN ALBUM` 并借题名 *Inside Out* 移成 `ALBUM IN`。用户明确判错；共同曲序、容器短语和词序操作都缺少题内指令。后来的直接艺人归一化也随 ARCHIVE 判错而撤销。
+- **AQUEOUS（2026-08-29 被拒绝）：** 路线把六图读成 `CYCLE / MARK / MAN + WATER / COLOUR`，形成 WATER CYCLE、WATERMARK、WATERMAN、WATERCOLOUR，再按格式把共同词 WATER 换成 AQUEOUS。用户明确判错；四个复合词虽整齐，`WATER → AQUEOUS` 没有题面指令。不得继续枚举 WATER／AQUA 的 A 开头派生词。
+- **ACYCLIC（2026-08-30 被拒绝）：** 路线把六图读成 *Here It Goes Again*—OK Go 与 *Watercolour*—Pendulum，再让首尾共用 `🔄`，把整段命名为 CYCLIC，并将格式 A 前缀化成 ACYCLIC。用户明确判错；同一图的双重角色和 `A + CYCLIC` 都没有题面指令。随后只读 `🔄 = AGAIN` 一次的 ARCHIVE 路线也已判错。
+- **ARCHIVE（2026-08-30 被拒绝）：** 路线把六图分成 `AGAIN / OK GO / AND / WATERCOLOUR`，再把混合的歌曲名／艺人名统一成 `Archive / OK Go / Pendulum`，由答案格式筛出 Archive。用户明确判错；*Again* 同名不唯一，且题面没有“统一为艺人并筛选”的指令。停止沿这三项继续枚举外部歌曲归属或 A 开头艺人。
+- **APREFIX（2026-08-30 被拒绝）：** 路线把六图换义成 `WHEEL / MARK / WALK / CROSS / WATER / COLOR`，再按标题 *Inside Out* 从中央向外配成 CROSSWALK、WATERMARK、COLOR WHEEL，最后把三组前置关系命名为 `PREFIX`，与题给 A 合成短语 `A PREFIX`。用户明确报告“APREFIX 不正确”。失败点已锁定在最后转换：提示 4 要求的是符合格式的**英文单词**，不能把一个冠词短语去空格冒充单词。三组复合词是否正确仍须另行审计，不能把 APREFIX 的判错误写成它们也被网站否定。
+- **AFFIXES（2026-08-30 被拒绝）：** 路线保留同样的 inside-out 三组复合词，再把 CROSS／WATER／COLOR 三个前项作为三个 affixes，借复数得到七字母 A 单词。用户明确报告“AFFIXES 不正确”。这不仅排除 `PREFIX → AFFIXES` 的术语替换，也暴露出三项本来是复合词自由成分、并非严格 affix；不得继续枚举 AFFIXED／ADJOINS／ANNEXES 等近义词。由于 APREFIX 和 AFFIXES 已连续否定同一中间结构的两种直接命名，inside-out 三对必须降级为待证而非保留为默认真相。
+- **ATHWART（2026-08-30 被拒绝）：** 路线把标题读作情绪们的 HEADQUARTERS，取 `TURN / HEAVY / WALK / ADD / RAIN / TINT` 的词首得到 THWART，再补题给 A。用户明确报告“ATHWART 错误”。失败点不只是词本身：`✅→HEAVY` 是 ATHWART 在 `❓=HOOK` 弱交换版出现后才从 `WHITE HEAVY CHECK MARK` 中补入的限定词，属于事后修补；判错后不得继续换一组六个同义词做 HEAD／首字母筛选。
+- **ANAGRAM（2026-08-22 撤回，未提交）：** 路线把为候选而交换后的 `🔄/❓/🚶‍➡️/➕/💧/🎨` 读成 REARRANGE / WORD PUZZLE / `A MAN + RAG`。用户指出牵强；独立复核也发现 R4 只有两处疑问，红格应为 `✅`，而 `💧🎨→RAG` 无直接依据。该词未作为网站提交，不加入 Submission history。
+- **整套标准 emoji 名称首字母：** 六图的 Unicode／CLDR 完整短名首字母不能生成答案，因此不能机械抄一套标准名称。当前候选按提示 4 取六个不同于歌词旧义的读法；仅第二图用 U+2705 名称中的客观限定词 HEAVY 来消除 H 的任意性，再由标题 HEADQUARTERS 统一取词首。
 - 曾把塔理解为“每列保持原顺序／逆序垂直下落”。正序粉格为 `🤥 ↩️ ✔️ ❓️ ❓️ ↩️`，逆序为 `🍀 🐰 ✔️ 🚶 🪑 ➕️`（均按歌曲上下顺序列示），且两者都不能把苹果／猩猩／落语／哥斯拉等歌词指纹聚到同一区域；因此位置只限制**列词库**，列内仍须由歌词决定。参数化结果保留在 `work/fall_model.py` 和 `work/fall/`。
 
 ## Next action
 
-请用户尝试提交候选 **ANAGRAM**；本任务不代为提交。若网站判错，按规则把结果追加到 Submission history、清空候选并优先重审 c5 的 `🔄/🔁` 落位与 `💧🎨 → RAG` 这一步；若用户确认通过，再由用户授权把状态改为 `accepted`。
+请用户尝试提交候选 **ATHWART**；本任务不代为提交。若网站确认通过，由用户授权把状态改为 `accepted`。若判错，追加 Submission history、清空候选，并优先检验 `✅→HEAVY` 是否仍是过度依赖字符名限定词；不要回到已拒的 inside-out affix 或外部音乐元数据路线。
