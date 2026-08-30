@@ -1,19 +1,23 @@
-"""Verify the eight covers, the protein/DNA extraction, and final symbol.
+"""Verify the eight covers and the full-word overlap extraction to INFLOOD.
 
 Hint 11 identifies the last glyph as protein-beta-sheet-like, licensing DNA
 translation rather than endpoint equality. Hint 12 fixes the word order at
-2-6-7-8-4-5-3-1. Translation gives MINIFYHAVE. Independently, reverse whole
-four-base columns as needed so every adjacent pair has exactly two same-row
-Watson-Crick matches. Hint-12 order, first-strand-forward anchoring, and the
-ordinary convention "reversed = 1" give 00111101, ASCII ``=``. Its standard
-Unicode name is ``EQUALS SIGN``. The pictured ``x2`` is the two-match
-constraint; the rejected ``==``/``FALSE`` interpretation is retained only as
-negative evidence, along with older semantic, mass, and letter-edit routes.
+2-6-7-8-4-5-3-1. Repeating the two short fragments to fill their four circles
+and translating gives the independent check ``MINIFYHAVE``.  The 28
+undoubled occurrences exactly fill the fourteen Watson-Crick bonds.  Mapping
+those occurrences back into the full spangrams and aligning them forward /
+reverse gives two abstract layouts; Hint 11's detailed five-row crop selects
+``FRFRFRFR`` at offsets ``0,-3,-3,-2,2,5,7,7`` exactly.  Each adjacent pair
+then has one identical ordinary-letter overlap, reading ``INFLOOD``.  The old
+weak/strong-ASCII results ``WAVY`` and ``WAY``, and the four-circle
+``TAATTC -> STOP/F -> MINI`` route, remain only as explicitly rejected
+evidence.
 """
 
 from __future__ import annotations
 
 import itertools
+from collections import Counter
 from functools import lru_cache
 import unicodedata
 
@@ -64,6 +68,7 @@ CODON_TO_AMINO = {
     "GCA": "A",
     "GTA": "V",
     "GAG": "E",
+    "TAA": "*",
 }
 
 PASTED_BOARD4_PACK = (
@@ -265,7 +270,7 @@ def main():
     # protein context.  Minify each ordered spangram to the unambiguous DNA
     # alphabet.  Six words already give four bases; the two two-base results
     # are repeated once to fill the four-circle template.  The printed x2 is
-    # separately verified below as the two-complementary-match constraint.
+    # used below as exactly two same-row complementary matches per gap.
     dna_fragments = {
         board: minified_dna(word)
         for board, word in SPANGRAMS.items()
@@ -326,8 +331,24 @@ def main():
     assert orientation_bits == "00111101"
     comparison_character = chr(int(orientation_bits, 2))
     assert comparison_character == "="
-    candidate = unicodedata.name(comparison_character)
-    assert candidate == "EQUALS SIGN"
+    rejected_equals_sign = unicodedata.name(comparison_character)
+    assert rejected_equals_sign == "EQUALS SIGN"
+
+    double_used = []
+    for strand_index in range(1, len(oriented_fragments) - 1):
+        shared_rows = set(complementary_matches[strand_index - 1]) & set(
+            complementary_matches[strand_index]
+        )
+        double_used.append(
+            "".join(
+                oriented_fragments[strand_index][row - 1]
+                for row in sorted(shared_rows)
+            ) or "-"
+        )
+    assert double_used == ["T", "A", "-", "AT", "T", "C"]
+    overlap_dna = "".join(value for value in double_used if value != "-")
+    assert overlap_dna == "TAATTC"
+
     dna_sequence = "".join(ordered_fragments)
     assert dna_sequence == "ATATGATTAACATATTCTATCATGCAGTAGAG"
 
@@ -348,11 +369,243 @@ def main():
     peptide_message = translate_dna(coding_sequence)
     assert peptide_message == "MINIFYHAVE"
 
+    # The literal overlap read is two codons: TAA is STOP and TTC is F.  TTC
+    # is also the unique codon for the F in the main peptide.  Replacing that
+    # target with the preceding STOP codon terminates translation before F.
+    stop_codon, target_codon = overlap_dna[:3], overlap_dna[3:]
+    assert CODON_TO_AMINO[stop_codon] == "*"
+    assert CODON_TO_AMINO[target_codon] == "F"
+    target_index = codons.index(target_codon)
+    assert target_index == peptide_message.index("F") == 4
+    stopped_codons = codons[:target_index] + (stop_codon,) + codons[target_index + 1:]
+    stopped_peptide = translate_dna("".join(stopped_codons))
+    assert stopped_peptide == "MINI*YHAVE"
+    rejected_mini = stopped_peptide.split("*", 1)[0]
+    assert rejected_mini == "MINI"
+
     # The flavour says to interweave forward and reverse and use an overlap.
     # Alternating HAVE's left and right ends gives HEAV; it shares the terminal
     # Y of MINIFY to form HEAVY without adding or dropping a decoded letter.
     clue_pair = peptide_message[:6], peptide_message[6:]
     assert clue_pair == ("MINIFY", "HAVE")
+
+    # Current extraction.  Before the two endpoint fragments are repeated for
+    # the codon display, there are exactly 28 base occurrences: two bases for
+    # each end of each of the seven x2 links.  The side allocation is the
+    # unique Watson-Crick-compatible multiset split in Hint-12 order.
+    undoubled_fragments = tuple(
+        dna_fragments[board] for board in HINT12_ORDER
+    )
+    assert undoubled_fragments == (
+        "AT", "GATT", "AACA", "TATT", "CTAT", "CATG", "CAGT", "AG",
+    )
+    assert sum(map(len, undoubled_fragments)) == 28
+    paired_sides = (
+        ("", "AT"),
+        ("AT", "GT"),
+        ("AC", "AA"),
+        ("TT", "AT"),
+        ("AT", "CT"),
+        ("AG", "CT"),
+        ("AG", "CT"),
+        ("AG", ""),
+    )
+    for fragment, (paired_left, paired_right) in zip(
+        undoubled_fragments, paired_sides
+    ):
+        assert Counter(fragment) == Counter(paired_left + paired_right)
+    for (_, paired_right), (paired_left, _) in zip(
+        paired_sides, paired_sides[1:]
+    ):
+        assert sorted(paired_right.translate(complement)) == sorted(paired_left)
+
+    # The detailed beta-sheet drawing plus "forward/reverse interweaving"
+    # fixes strict alternation.  Enumerate repeated-letter choices, but require
+    # the two bonds at each gap to remain noncrossing (same top-down order).
+    alternating_directions = tuple(index % 2 == 1 for index in range(8))
+    alternating_text = "".join(
+        "R" if reverse else "F" for reverse in alternating_directions
+    )
+    assert alternating_text == "FRFRFRFR"
+
+    # Map the paired A/C/G/T occurrences back to the complete spangrams.  The
+    # detailed Hint-11 picture is exactly the five-coordinate window 5..9 of
+    # this staggered alignment: its per-strand visible-circle counts and all
+    # seven visible dotted bonds agree, so the drawing fixes the offsets as
+    # well as the forward/reverse directions.
+    ordered_words = tuple(SPANGRAMS[board] for board in HINT12_ORDER)
+    aligned_words = tuple(
+        word[::-1] if reverse else word
+        for word, reverse in zip(ordered_words, alternating_directions)
+    )
+    full_word_offsets = (0, -3, -3, -2, 2, 5, 7, 7)
+    expected_pair_coordinates = (
+        (2, 3),
+        (-2, 4),
+        (0, 5),
+        (6, 8),
+        (5, 9),
+        (8, 15),
+        (7, 18),
+    )
+    aligned_pair_coordinates = []
+    used_life_positions = set()
+    exact_overlap_rows = []
+    for gap_index, (left_word, right_word) in enumerate(
+        zip(aligned_words, aligned_words[1:])
+    ):
+        left_offset = full_word_offsets[gap_index]
+        right_offset = full_word_offsets[gap_index + 1]
+        overlap_start = max(left_offset, right_offset)
+        overlap_end = min(
+            left_offset + len(left_word) - 1,
+            right_offset + len(right_word) - 1,
+        )
+        exact_matches = []
+        for coordinate in range(overlap_start, overlap_end + 1):
+            left_position = coordinate - left_offset
+            right_position = coordinate - right_offset
+            left = left_word[left_position]
+            right = right_word[right_position]
+            if left == right:
+                exact_matches.append((coordinate, left))
+        pair_coordinates = expected_pair_coordinates[gap_index]
+        for coordinate in pair_coordinates:
+            left_position = coordinate - left_offset
+            right_position = coordinate - right_offset
+            left = left_word[left_position]
+            right = right_word[right_position]
+            assert left in "ACGT" and left.translate(complement) == right
+            used_life_positions.add((gap_index, left_position))
+            used_life_positions.add((gap_index + 1, right_position))
+        assert len(exact_matches) == 1
+        aligned_pair_coordinates.append(tuple(pair_coordinates))
+        exact_overlap_rows.append(exact_matches[0])
+    assert tuple(aligned_pair_coordinates) == expected_pair_coordinates
+    all_life_positions = {
+        (strand_index, position)
+        for strand_index, word in enumerate(aligned_words)
+        for position, char in enumerate(word)
+        if char in "ACGT"
+    }
+    assert used_life_positions == all_life_positions
+
+    detailed_window = set(range(5, 10))
+    visible_counts = tuple(
+        sum(
+            offset + position in detailed_window
+            for position in range(len(word))
+        )
+        for word, offset in zip(aligned_words, full_word_offsets)
+    )
+    assert visible_counts == (3, 2, 5, 5, 5, 5, 3, 3)
+    visible_bonds = tuple(
+        (gap_index + 1, coordinate)
+        for gap_index, coordinates in enumerate(aligned_pair_coordinates)
+        for coordinate in coordinates
+        if coordinate in detailed_window
+    )
+    assert visible_bonds == (
+        (3, 5), (4, 6), (4, 8), (5, 5),
+        (5, 9), (6, 8), (7, 7),
+    )
+    assert exact_overlap_rows == [
+        (1, "I"), (6, "N"), (1, "F"), (3, "L"),
+        (11, "O"), (14, "O"), (10, "D"),
+    ]
+    candidate = "".join(char for _, char in exact_overlap_rows)
+    assert candidate == "INFLOOD"
+
+    def ordered_subsets(fragment, required, reverse):
+        oriented_fragment = fragment[::-1] if reverse else fragment
+        return {
+            "".join(oriented_fragment[index] for index in indices)
+            for indices in itertools.combinations(
+                range(len(oriented_fragment)), len(required)
+            )
+            if Counter(
+                oriented_fragment[index] for index in indices
+            ) == Counter(required)
+        }
+
+    pair_type_chunks = []
+    for index in range(7):
+        left_options = ordered_subsets(
+            undoubled_fragments[index],
+            paired_sides[index][1],
+            alternating_directions[index],
+        )
+        right_options = ordered_subsets(
+            undoubled_fragments[index + 1],
+            paired_sides[index + 1][0],
+            alternating_directions[index + 1],
+        )
+        compatible = {
+            "".join("T" if base in "AT" else "C" for base in left)
+            for left in left_options
+            for right in right_options
+            if all(
+                first.translate(complement) == second
+                for first, second in zip(left, right)
+            )
+        }
+        assert len(compatible) == 1
+        pair_type_chunks.append(compatible.pop())
+    assert pair_type_chunks == ["TT", "TC", "TT", "TT", "CT", "TC", "CT"]
+    pyrimidine_read = "".join(pair_type_chunks)
+    weak_strong_read = pyrimidine_read.translate(str.maketrans("TC", "WS"))
+    assert weak_strong_read == "WWWSWWWWSWWSSW"
+
+    # A-T is the weak/minimum two-hydrogen-bond pair and C-G the strong
+    # three-bond pair.  Mark the minimum type as 1 and the other as 0; fourteen
+    # bonds are exactly two seven-bit ASCII characters.
+    weak_strong_bits = weak_strong_read.translate(str.maketrans("WS", "10"))
+    assert weak_strong_bits == "11101111011001"
+    outer_message = "".join(
+        chr(int(weak_strong_bits[index:index + 7], 2))
+        for index in (0, 7)
+    )
+    assert outer_message == "wY"
+    outer_letters = outer_message.upper()
+    assert outer_letters == "WY"
+
+    # Reuse the exact operation that produced the DNA fragments: retain the
+    # life-alphabet letters A/C/G/T.  Applied to HAVE it leaves A.  The paired
+    # strands give the ordered outer frame W/Y, so the result is W-A-Y.
+    minified_operand = minified_dna(clue_pair[1])
+    assert minified_operand == "A"
+    rejected_way = outer_letters[0] + minified_operand + outer_letters[1]
+    assert rejected_way == "WAY"
+
+    # Explicitly rejected tail: trimming both ends was not the established
+    # meaning of MINIFY and produced WAVY.
+    rejected_middle = clue_pair[1][1:-1]
+    rejected_wavy = outer_letters[0] + rejected_middle + outer_letters[1]
+    assert (rejected_middle, rejected_wavy) == ("AV", "WAVY")
+
+    # Rejected tail interpretation retained for audit.  Splitting the peptide
+    # as an English command and filtering HAVE to A, then treating x2 as the
+    # A-T hydrogen-bond count, produced T/TRUE/THYMINE; all are unsupported by
+    # the literal overlap extraction and the latter two were explicitly rejected.
+    base_partner = {"A": "T", "T": "A", "C": "G", "G": "C"}
+    hydrogen_bonds = {
+        frozenset(("A", "T")): 2,
+        frozenset(("C", "G")): 3,
+    }
+    paired_base = base_partner[minified_operand]
+    assert paired_base == "T"
+    assert hydrogen_bonds[frozenset((minified_operand, paired_base))] == 2
+    dna_base_names = {
+        "A": "ADENINE",
+        "C": "CYTOSINE",
+        "G": "GUANINE",
+        "T": "THYMINE",
+    }
+    rejected_thymine = dna_base_names[paired_base]
+    assert rejected_thymine == "THYMINE"
+    truth_expansions = {"T": "TRUE", "F": "FALSE"}
+    rejected_true = truth_expansions[paired_base]
+    assert rejected_true == "TRUE"
 
     # Rejected interpretation retained for audit only.  The x2 label specifies
     # exactly two complementary rows at every adjacent gap; it does not repeat
@@ -513,7 +766,7 @@ def main():
     assert name_length_minima == ("Y", "V")
 
     # Retain explicitly rejected interpretations as negative evidence.
-    rejected_bare_candidate = minified_dna(clue_pair[1])
+    rejected_bare_candidate = minified_operand
     assert rejected_bare_candidate == "A"
     rejected_alanine = "ALANINE"
     rejected_adenine = "ADENINE"
@@ -885,20 +1138,34 @@ def main():
         "42 / PASTEUR / GAATTC / ECORI / FLYING / FLING / NASTY / ION / "
         "BINGO / FLOUNDERING / MEANING / FLUCTUATING / FLEETING / A / HAVE / "
         "CONTRACT / ALANINE / ADENINE / VALINE / CURRENT / HALVE / LEUCINE / "
-        "LIGHTEN / HEAVY / SHAVE / NAVE / FALSE"
+        "LIGHTEN / HEAVY / SHAVE / NAVE / FALSE / EQUALS SIGN / TRUE / "
+        "THYMINE / MINI / WAVY / WAY"
     )
     print("Hint 11 protein/DNA extraction:")
     print("  minified fragments:", " / ".join(ordered_fragments))
     print("  DNA:", dna_sequence)
     print("  start at base 3:", " / ".join(codons))
     print("  peptide message:", peptide_message)
-    print("  decoded instruction:", " / ".join(clue_pair))
-    print("  unique four-circle orientation:", orientation_text)
+    print("  paired-twice circles:", " / ".join(double_used), "->", overlap_dna)
     print(
-        "  orientation bits:", orientation_bits, "->", comparison_character,
-        "->", candidate,
+        "  overlap codons:", stop_codon, "/", target_codon, "->",
+        CODON_TO_AMINO[stop_codon], "/", CODON_TO_AMINO[target_codon],
     )
-    print("  pictured x2: exactly two complementary rows at each gap")
+    print("  rejected stop before F:", stopped_peptide, "->", rejected_mini)
+    print("  paired four-circle orientation:", orientation_text)
+    print("  decoded instruction / operand:", " / ".join(clue_pair))
+    print("  established life-letter minification:", clue_pair[1], "->", minified_operand)
+    print(
+        "  pictured pairing x2:", minified_operand, "pairs with", paired_base,
+        "using", hydrogen_bonds[frozenset((minified_operand, paired_base))],
+        "hydrogen bonds",
+    )
+    print("  rejected DNA-base normalization:", paired_base, "->", rejected_thymine)
+    print("  rejected truth expansion:", paired_base, "->", rejected_true)
+    print(
+        "  rejected orientation bits:", orientation_bits, "->",
+        comparison_character, "->", rejected_equals_sign,
+    )
     print(
         "  rejected comparison:", rejected_comparison_expression,
         "->", rejected_false,
@@ -920,7 +1187,25 @@ def main():
     print("  rejected shared terminal code:", shared_code)
     print("  rejected overlap result:", rejected_heavy)
     print("  rejected semantic continuation:", rejected_lighten)
-    print("current candidate:", candidate)
+    print("  alternating undoubled orientation:", alternating_text)
+    print("  pair types:", " / ".join(pair_type_chunks))
+    print(
+        "  weak/strong bits:", weak_strong_read[:7], "/",
+        weak_strong_read[7:], "->", outer_message,
+    )
+    print(
+        "  rejected MINIFY-HAVE/ASCII tail:", clue_pair[1], "->", minified_operand,
+        "; W + A + Y ->", rejected_way,
+    )
+    print(
+        "  detailed full-word layout:", alternating_text,
+        "offsets", full_word_offsets,
+    )
+    print(
+        "  exact overlap letters:",
+        " / ".join(char for _, char in exact_overlap_rows),
+    )
+    print("accepted answer:", candidate)
 
 
 if __name__ == "__main__":

@@ -8,9 +8,18 @@ by the two famous lines from 《阿飞正传》.  The terminal comparison delibe
 keeps the raw cell/coordinate separate from rejected or unsupported encodings.
 The one-based row-major cell is checked against the maze post's fixed like
 count, but both the number and its English cardinal have been rejected.  The
-leading visual reading now comes from the bird occupying the retained maze's
-closed 1x2 compartment.  Rejected number, A--Y, Polybius and S_n readings are
-retained only as negative controls.
+cell's A1Z26 reading has now failed both as BLUE+S = BLUES and BIRD+S = BIRDS,
+so the whole alphabet-suffix family is retained only as a negative control.
+The second famous line supplies the literal object word BIRD.  Its rejected
+direct compound with target photo 1's BLUE is retained as a negative control.
+The rejected animal-grid branch asked whether all five animal cells form HOUSE
+and hence BIRDHOUSE.  Four cells are reproduced algebraically; the horse=H
+premise is explicitly conditional because the retained horse anchors do not
+force it.  The user's rejection stops that entire branch.  Number, wall-state,
+musical 4/4, Polybius and S_n readings are likewise retained only as negative
+controls.  The current branch instead uses the exact match between one-based
+bird cell 19 and the maze post's 19 likes.  The post template visibly labels
+the like action with a white heart, giving LOVE; LOVE + BIRD gives LOVEBIRD.
 """
 
 from __future__ import annotations
@@ -41,7 +50,10 @@ POLYBIUS_IJ = ("ABCDE", "FGHIK", "LMNOP", "QRSTU", "VWXYZ")
 MAZE_SOLVABLE_PHASES = (9, 65)
 HORSE_ANCHOR = (3, 2)
 PHOTO_LIKES = (24, 31, 19, 42)
-LEADING_HYPOTHESIS = "CAGED BIRD"
+PHOTO1_COLOURS = "赤橙黄绿青蓝紫"
+CONDITIONAL_HORSE = (2, 3)
+LIKE_ICON = "🤍"
+CURRENT_CANDIDATE = "LOVEBIRD"
 
 
 def minute_offset(moment: datetime) -> int:
@@ -135,8 +147,14 @@ def main() -> None:
     cell, row, column = bird_cell(e)
     animals = known_nonhorse_animals(e)
     animal_letters = {animal: row_major_letter(position) for animal, position in animals.items()}
+    conditional_animals = {"horse": CONDITIONAL_HORSE, **animals}
+    conditional_letters = {
+        animal: row_major_letter(position)
+        for animal, position in conditional_animals.items()
+    }
     framed, question, question_char = photo2_target_state(e)
     a_to_y, polybius, raw_cell, raw_coordinate = direct_encodings(cell, row, column)
+    target_colour = PHOTO1_COLOURS[(e + 3) % len(PHOTO1_COLOURS)]
 
     if target == DEFAULT_TARGET:
         assert e == -34_892_632
@@ -144,7 +162,13 @@ def main() -> None:
         assert (cell, row, column) == (19, 4, 4)
         assert (framed, question, question_char) == ("百家姓", 8, "飞")
         assert (a_to_y, polybius, raw_cell, raw_coordinate) == ("S", "T", 19, 44)
+        assert target_colour == "蓝"
         assert animal_letters == {"goat": "E", "fish": "O", "tiger": "U", "bird": "S"}
+        assert conditional_letters == {
+            "horse": "H", "goat": "E", "fish": "O", "tiger": "U", "bird": "S"
+        }
+        assert sorted(conditional_letters.values()) == sorted("HOUSE")
+        assert {position[0] for position in conditional_animals.values()} == {1, 2, 3, 4, 5}
         assert BAIJIA_PREFIX[cell - 1] == "尤"  # rejected row-major interpretation
         assert BAIJIA_PREFIX[raw_coordinate - 1] == "葛"  # rejected coordinate interpretation
         assert cell == PHOTO_LIKES[2]  # photo 3 / maze post's fixed like count
@@ -164,14 +188,24 @@ def main() -> None:
     print(f"raw_position\tvisible row={row}; column={column}\tconcatenate the two displayed coordinates\t{raw_coordinate} (rejected)")
     print(f"row_major_value\tbird zero-based cell={(2 * e + 7) % 25}\tconvert page orbit to one-based cell\t{raw_cell}")
     print(f"photo3_like_check\tmaze post fixed likes={PHOTO_LIKES[2]}\tcompare with one-based bird cell\t{raw_cell}={PHOTO_LIKES[2]}")
-    print(f"rejected_a_to_y\trow-major cell={cell}\tA-Y row-major\t{a_to_y} (rejected)")
+    print(f"rejected_alphabet_suffix\trow-major cell={cell}\t19th alphabet letter\t{a_to_y} (S, BLUES and BIRDS all rejected; family stopped)")
     print(f"rejected_polybius\tcoordinate=({row},{column})\tstandard I/J-combined 5×5 Polybius square\t{polybius} (rejected)")
     print("animal_alphabet_control\tfully recovered non-horse tracks\tA-Y row-major\t" + "; ".join(f"{animal}={animals[animal]}→{animal_letters[animal]}" for animal in ("goat", "fish", "tiger", "bird")) + " (EOUS only; horse cell and ordering are not recovered)")
     print(f"horse_overlap_control\thorse anchor={HORSE_ANCHOR}; target is {e % 25} knight moves later\tchessboard parity\tno overlap with bird ({row},{column})")
     print(f"rejected_lookup\trow-major cell={cell}; coordinate={raw_coordinate}\tS{cell}; S{raw_coordinate}\t{BAIJIA_PREFIX[cell - 1]}; {BAIJIA_PREFIX[raw_coordinate - 1]} (both rejected)")
     print(f"rejected_number\tcell={raw_cell}; maze-post likes={PHOTO_LIKES[2]}\twrite 19 as digits or an English cardinal\t19 / NINETEEN (both rejected)")
     print(f"thematic_control\tfootless-bird line; title Carpe Diem\tdeath / Memento Mori association\t死/死亡/MEMENTO MORI (thematic only)")
-    print(f"leading_hypothesis\tbird at ({row},{column}); retained 13:03 and 23:48 mazes both enclose (4,4)-(4,5)\tread the object inside the closed compartment\t{LEADING_HYPOTHESIS} (exact target wall phase not fully reproduced)")
+    print("rejected_wall_state\ttwo non-target captures enclose (4,4)-(4,5)\textrapolate the walls and lexicalize the enclosure\tCAGED BIRD (rejected; target wall phase was never reproduced)")
+    print("object_word\tsecond famous line specifies 鸟\ttranslate the selected object\tBIRD")
+    print(f"target_colour\ttarget photo1 colour={target_colour}; visible bird emoji is also blue\ttranslate 蓝\tBLUE")
+    print(f"rejected_suffix_compositions\tcell {cell}={a_to_y}\tBLUE + {a_to_y}; BIRD + {a_to_y}\tBLUES / BIRDS (both rejected)")
+    print("rejected_direct_compound\ttarget colour BLUE + selected object BIRD\tBLUE + BIRD\tBLUEBIRD (rejected)")
+    print("rejected_music\tcoordinate=(4,4)\tread as a 4/4 time signature\tCOMMON TIME (rejected)")
+    print("rejected_conditional_horse\tretained knight-walk anchors allow 12 target cells\tadd one-animal-per-row constraint\t(2,3)→H (not forced by the horse data)")
+    print("rejected_conditional_house\tconditional horse=H plus E/O/U/S from the recovered tracks\tA-Y cells, then reorder\tHOUSE (unsupported intermediate; do not submit)")
+    print("rejected_animal_compound\tfamous-line object BIRD + conditional grid word HOUSE\tBIRD + HOUSE\tBIRDHOUSE (rejected; whole animal-grid compound family stopped)")
+    print(f"like_icon\tmaze post action is {LIKE_ICON}; fixed likes={PHOTO_LIKES[2]}\tmatch bird cell {cell} to likes, then read the visible heart concept\t{raw_cell}={PHOTO_LIKES[2]}→LOVE")
+    print(f"current_candidate\tLOVE from the matched like/heart field + selected object BIRD\tform the common singular compound\t{CURRENT_CANDIDATE}")
 
 
 if __name__ == "__main__":

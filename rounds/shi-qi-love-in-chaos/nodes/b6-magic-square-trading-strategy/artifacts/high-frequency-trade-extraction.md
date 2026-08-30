@@ -1,83 +1,81 @@
-# High-frequency trade extraction
+# Rejected four-high-frequency-trade extraction: 嬴政
 
-## 1. Select the four repeated-frequency trades
+> The user explicitly rejected **嬴政** on 2026-08-30.  The four
+> value-2/value-2 crossings remain valid observations, but the center-out
+> regrouping below has no puzzle-given traversal rule.  This artifact is kept
+> only as negative evidence; the current extraction is the closed loop in
+> `artifacts/extraction-loop.md`.
 
-The fixed component ledger in `direction-frequency-solution.json` fills every
-cell with the frequency of its component inside its own direction (`横`, `纵`,
-or `里`).  All 57 crossings agree.  Exactly four geometric clue-block trades
-have value 2.  Since every traded block has three Han characters, value 2
-selects the middle character on each side:
+## 1. Select the four value-2 trades
 
-| Order | Crossing | Restored traded blocks | Middle pair | Fanqie |
+The direction-local component-frequency fill agrees at all 57 crossings.
+Exactly four actual clue-block trades have value 2 on both sides.  Since each
+traded block has three Han characters, value 2 selects its middle character.
+
+Use the puzzle as printed: order crossings by board, row, and column, and
+order the two statement blocks by the displayed directions `横 / 纵 / 里`.
+This removes the previously arbitrary choice between the two fanqie
+orientations.
+
+| Order | Crossing | Printed blocks in direction order | Middle pair | Fanqie |
 | ---: | --- | --- | --- | --- |
-| 1 | G1 r06c12 | `在干活` / `吃兔子` | 干 / 兔 | `GU` |
-| 2 | G1 r08c02 | `地质学` / `雷锋是` | 质 / 锋 | `ZHENG` |
-| 3 | G1↔里 r10c10 | `气性不` / `记忆中` | 性 / 忆 | `XI` |
-| 4 | G3↔里 r10c10 | `六百号` / `的味道` | 百 / 味 | `BEI` |
+| 1 | G1 r05c12 | `吃兔子` / `在干活` | 兔 / 干 | `TAN` |
+| 2 | G1 r07c02 | `地质学` / `雷锋是` | 质 / 锋 | `ZHENG` |
+| 3 | G1↔里 r09c10 | `记忆中` / `气性不` | 忆 / 性 | `YING` |
+| 4 | G3↔里 r09c10 | `的味道` / `六百号` | 味 / 百 | `WAI` |
 
-Each trade pair permits two fanqie orientations.  After excluding invalid
-Mandarin combinations, eight combinations remain; the only continuous
-natural phrase is:
+The fixed stream is:
 
 ```text
-GU / ZHENG / XI / BEI  ->  古筝 / 西北
+TAN / ZHENG / YING / WAI
 ```
 
-## 2. Read the two maximum-frequency keyword blocks
+As a control, using the repaired blocks with the same fixed direction order
+would give `GU / FI / XI / BEI`.  The rejected route
+`GU / ZHENG / XI / BEI -> 古筝 / 西北` mixed the two puzzle states pair by
+pair and therefore had no consistent orientation rule.
 
-Among all 180 restored three-Han blocks, only `关键词` repeats.  Its two host
-clues answer `反切` and `BREAK`, supplying the phonetic operation above and a
-split between `古筝` and `西北`.  The two blocks traded against `关键词`, in
-restored-row order, are:
+## 2. Preserve the two keyword trades separately
 
-```text
-古代人 / 的概念  ->  古代人的概念
-```
+Only the block `关键词` repeats among the 180 repaired three-Han blocks.  The
+two occurrences answer different clues and trade with different blocks:
 
-This is the definition for the final landing.
-
-## 3. Use the ancient five-tone/direction correspondence
-
-`古筝` fixes the relevant ancient domain as the five tones.  In the
-traditional five-tone/five-direction correspondence:
-
-| Direction | East | South | Center | West | North |
-| --- | --- | --- | --- | --- | --- |
-| Tone | 角 | 徵 | 宫 | 商 | 羽 |
-
-Therefore `西北` maps in its stated order to `商羽`.  Reading the pair in the
-two directions available to a trade gives:
-
-| Pair | Fanqie construction | Toneless syllable |
+| Host clue answer | Counterpart traded with `关键词` | Role |
 | --- | --- | --- |
-| 商羽 | `sh-` from 商 + `-u` from 羽 | `SHU` |
-| 羽商 | `y-` from 羽 + `-ang` from 商 | `YANG` |
+| `反切` | `古代人` | the fanqie result is an ancient person |
+| `BREAK` | `的概念` | use the concept of a break, not the literal word |
 
-A bounded scan of the local two-Han dictionary for `SHU/YANG` in either order
-returns only `杨树、输氧、沭阳、样书、阳数、杨淑`.  Only **阳数** means an
-ancient concept: in the traditional yin-yang classification, odd numbers are
-yang numbers.  The extracted definition fixes both character choice and
-order:
+The old analysis concatenated the counterparts as `古代人的概念`.  That
+discarded the local pairing and led to a chain of unsupported semantic
+landings.  Keeping the associations explains both instructions directly.
+
+## 3. Break at the center and read the nested pairs
+
+The `BREAK` depth clue is at the exact common center of the three boards.
+Place the break in the center of the four-syllable stream:
 
 ```text
-YANG / SHU  ->  阳数
+TAN [ ZHENG | YING ] WAI
 ```
 
-The candidate answer is **阳数**.
+Read away from the break, right side before left side:
 
-## Controls
+| Layer | Syllables | Result |
+| --- | --- | --- |
+| inner (`里`) | `YING / ZHENG` | **嬴政** |
+| outer | `WAI / TAN` | **外滩** |
 
-- `古筝→弦、西北→乾、弦乾→闲钱` used two unrelated conversion systems and
-  an extra homophone; the user explicitly rejected `闲钱`.
-- Selecting a northwest or southeast depth answer produced the explicitly
-  rejected `路人甲` and `氨气`.
-- Indexing all fifteen planar/depth crossings gives fixed pair streams with
-  several invalid syllables in both global orientations; that negative audit
-  is in `work/visual/depth-character-state-audit.md`.
+The outer result is an internal checksum: `外滩` literally begins with
+“outside” and fixes the right-before-left orientation.  The inner result is
+the one selected by `里` and by the paired counterpart `古代人`.
+The bundled local dictionary independently lists `嬴政` as a person-name for
+`YING/ZHENG` and `外滩` as a noun for `WAI/TAN`; no web lookup is involved.
+
+The candidate answer is therefore **嬴政**.
 
 ## Reproduction
 
-Validate the direction-local frequency fill and list the four value-2 trades:
+Validate the direction-local fill and list the four value-2 trades:
 
 ```powershell
 python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\component_crossword.py `
@@ -85,7 +83,7 @@ python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strateg
   --render-direction-fill rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\artifacts\direction-frequency-solution.json
 ```
 
-Reproduce `关键词×2 -> 古代人的概念`:
+Reproduce the two keyword trades:
 
 ```powershell
 python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\high_frequency.py `
@@ -94,10 +92,21 @@ python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strateg
   --output rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\high-frequency-audit-current.md
 ```
 
-Reproduce both `商羽` fanqie syllables and the bounded local landing scan:
+Reproduce the fixed fanqie orientations:
 
 ```powershell
 python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\fanqie_audit.py `
   --dict rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\jieba-dict.txt `
-  --two-way-pair 商羽
+  --pairs 兔干 质锋 忆性 味百
+
+python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\fanqie_audit.py `
+  --dict rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\jieba-dict.txt `
+  --reading ying zheng
+
+python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\fanqie_audit.py `
+  --dict rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\jieba-dict.txt `
+  --reading wai tan
 ```
+
+The coordinate and orientation audit is retained at
+`work/visual/high-frequency-orientation-audit.md`.

@@ -44,17 +44,21 @@ required `111` pattern; that split is not otherwise unique.
 
 ## Extraction consequence
 
-In the natural visible-component fill, exactly four actual crossing trades
-have value 2. Selecting character 2 of their three-Han blocks and applying the
-repaired instruction `反切` reads `古筝 / 西北`. Independently, the only
-repeated restored clue block is `关键词×2`; its trade partners read
-`古代人的概念`. The rejected `路人甲` and `氨气` attempts show that this is not
-a spatial choice among the five depth answers, and the rejected `闲钱` rules
-out the unrelated conversions `古筝→弦` and `西北→乾`.  Instead, `古筝` fixes
-the ancient five-tone domain; under five tones paired with five directions,
-`西北→商羽`.  The pair's two fanqie orientations read `SHU/YANG`, and the
-independent definition uniquely lands on `阳数`.  The complete extraction is
-recorded in `artifacts/high-frequency-trade-extraction.md`.
+The numeric fill fixes ambiguous repaired answers, especially `易伤`, `名著`,
+and `氨气`.  This matters at the final locator: the three fixed underlines
+read `DA/MI/JI = DAMAGE`, and the unique repaired clue containing its Chinese
+counterpart is `发生后伤害数字变大`.  Its answer **易伤** decomposes as
+`日 / 勿 / 伤` and participates in the exact 57/57 crossing closure; the old
+semantic alternative `暴击` does not.
+
+The former answer-length chain `易伤 -> ζ电势 -> BREAK` and its return to
+`数网格端` produced the user-rejected candidate `循环`.  It is preserved only
+as negative evidence in `artifacts/extraction-loop.md` because the puzzle does
+not state that answer character counts should index clue blocks.
+
+The former selection of only the four value-2/value-2 crossings led to
+`TAN/ZHENG/YING/WAI` and then to the user-rejected `嬴政`; that extraction is
+not part of the current route.
 
 ## Reproduction
 

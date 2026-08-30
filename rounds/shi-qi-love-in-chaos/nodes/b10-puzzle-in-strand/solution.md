@@ -7,10 +7,10 @@ parent:
 source:
 round_feeder: yes
 feeders:
-status: rejected
-answer:
-confidence:
-summary: "EQUALS SIGN 已被用户明确判错。稳定事实只保留八条 spangram、提示 12 顺序、A/C/G/T 片段与 DNA 翻译 MINIFYHAVE；四圆互补布局 FFRRRRFR 可复现，但把方向任意记成二进制并按 ASCII 读取为 '=' 的整条终答解释现已撤回。"
+status: accepted
+answer: INFLOOD
+confidence: high
+summary: "用户已明确确认 INFLOOD 正确。将 28 个 A/C/G/T 出现位置映回提示 12 顺序下的八个完整 spangram，并要求每处 ×2 为水平 Watson-Crick 配对，只剩两个布局；提示 11 详细图的可见圆数和七条虚线唯一选中 FRFRFRFR、偏移 0,-3,-3,-2,2,5,7,7。七个相邻词各恰有一个相同普通字母交叠，依次读出 INFLOOD。"
 updated: 2026-08-30
 ---
 
@@ -18,22 +18,26 @@ updated: 2026-08-30
 
 ## Current conclusion
 
-当前没有可提交候选。**`EQUALS SIGN` 与 `FALSE` 均已被用户明确判错**。
+答案 **`INFLOOD`**（自然分词 **`IN FLOOD`**）已由用户明确确认正确，状态为
+`accepted`。
 
-提示 10 明确要求使用每盘唯一、跨越两端的词，即八条 spangram，并在这些词中
-寻找“生命的真相”。提示 11 图把最后的 strand 画成由氢键连接的蛋白质 β 股，
-提示 12 则给出八词顺序。三条提示合起来给出一条不依赖旧端点链的完整遗传密码
-提取：
+提示 10 选出八条 spangram 并从中保留生命字母 `A/C/G/T`；提示 12 固定顺序
+`2-6-7-8-4-5-3-1`。八段长度正好是 `2,4,4,4,4,4,4,2`，所以 28 个碱基出现
+恰可各用一次，填满图中 `7 间隙 × 2 对 × 2 端点`。把这些碱基映回完整
+spangram 的原位置并让整词正读或反读，只剩两个水平配对布局。
 
-1. 将每条 spangram **缩减（minify）**为其中的 `A/C/G/T`，保持原次序；
-2. 六条结果已经是四碱基，Board 1 与 2 只有两碱基；按每股四圆的模板，将这两
-   个二碱基片段各重复一次以补成四位；
-3. 按提示 12 的 `2-6-7-8-4-5-3-1` 拼接；
-4. 从首个生物学起始密码子 `ATG` 开始翻译成氨基酸单字母码；
-5. 将八个四碱基股整体正读或反读，要求每个相邻 `x2` 恰有两处同位
-   Watson-Crick 互补；固定第一股正读后，唯一方向为 `FFRRRRFR`；
-6. 此前把正反方向任意记作 `0/1` 并按 ASCII 读取为 `=`，但 `EQUALS SIGN`
-   已被判错；方向布局只保留为可复核观察，不再视作终答提取。
+提示 11 的详细图不是泛化的蛋白质示意：它的八股可见圆数
+`3,2,5,5,5,5,3,3` 与七条可见虚线，逐项唯一匹配布局
+`FRFRFRFR`、纵向偏移 `0,-3,-3,-2,2,5,7,7` 的第 `9..5` 行裁窗。
+在这个被图唯一指定的完整单词对齐中，每个相邻词对还恰有一个相同普通字母：
+
+```text
+I / N / F / L / O / O / D  ->  INFLOOD
+```
+
+`WAY` 已由用户判错；弱/强互补键—七位 ASCII—`WY` 补词家族停止，只在后文
+保留为负证据。四圆端股翻译出的 `MINIFYHAVE` 仍是 DNA/蛋白质语境的独立校验，
+但不是当前终答。
 
 ## Confirmed Strands solves
 
@@ -90,13 +94,17 @@ Boeing 飞行器名称或绰号。
 - 圆环与填色只随垂直层级从中央黑色向外变浅，不按八个词分别着色。
 
 稳定标注见 `artifacts/hint11-annotated.png`，全部坐标及边见
-`work/visual/hint11/geometry.tsv`。因此这张图不应被当成一张可逐格填入 32 个
-端点字母的字母方阵；31 只是该蛋白质示意图的可见节点数。
+`work/visual/hint11/geometry.tsv`。31 个圆不是八股的总长度，而是完整错位布局
+在连续五个纵坐标中的裁窗；因此应按八个连通实线分量的可见数
+`3,2,5,5,5,5,3,3` 比对候选布局。
 
 ### Interpretation
 
-锯齿实线对应多肽主链，链间虚线对应氢键，整体与蛋白质 β 股/β 折叠的画法一致。
-这同时解释题面反复使用的 `strands`，并授权从 DNA 到蛋白质的标准翻译。
+锯齿实线对应正读或反读的完整 spangram，链间虚线对应选中的 Watson-Crick
+配对。穷举所得两个完整词布局中，只有 `FRFRFRFR`、偏移
+`0,-3,-3,-2,2,5,7,7` 在全局行 `9..5` 上产生详细图的八股可见数；它在这个
+窗口内的七条选中配对也与图上七条虚线逐一同位。因而详细图同时给出了方向、
+错位与哪些偶然互补位置实际连线，不能只当成 β 折叠的气氛提示。
 
 ## DNA extraction
 
@@ -113,7 +121,8 @@ Boeing 飞行器名称或绰号。
 | 7 | 3 | `CARDIOLOGIST` | `CAGT` | `CAGT` |
 | 8 | 1 | `APPREHENDING` | `AG` | `AGAG` |
 
-Board 2 与 Board 1 的两字串各重复两次，使八股都恰有四个碱基。拼接为：
+第一条读法按原图每股四圆，将 Board 2 与 Board 1 的两字串各重复一次，使八股
+都恰有四个碱基。拼接为：
 
 ```text
 ATATGATTAACATATTCTATCATGCAGTAGAG
@@ -129,79 +138,134 @@ ATG ATT AAC ATA TTC TAT CAT GCA GTA GAG
 标准氨基酸单字母码给出：
 
 ```text
-MINIFY HAVE
+MINIFYHAVE
 ```
 
-原始图还直接要求使用八个四圆股的“正反、配对、交叠”。固定第一股按提取顺序
-正读，枚举其余七股的 `2^7=128` 种整体方向；仅保留每个相邻间隙都恰有两处
-同一圆位呈 Watson-Crick 互补的布局。唯一结果为：
+这是一条精确的英文指令 `MINIFY HAVE`，不是答案本身。
 
-| 位置 | Board | 定向后碱基 | 方向 | 与右邻互补的圆位 |
-| ---: | ---: | --- | :---: | --- |
-| 1 | 2 | `ATAT` | F | `2,3` |
-| 2 | 6 | `GATT` | F | `3,4` |
-| 3 | 7 | `ACAA` | R | `1,4` |
-| 4 | 8 | `TTAT` | R | `2,3` |
-| 5 | 4 | `TATC` | R | `2,3` |
-| 6 | 5 | `GTAC` | R | `1,2` |
-| 7 | 3 | `CAGT` | F | `1,4` |
-| 8 | 1 | `GAGA` | R | `-` |
+### Current full-spangram alignment and extraction
 
-将 F/R 分别记作 `0/1`：
+原始八段总长恰为 28：
 
 ```text
-FFRRRRFR -> 00111101 -> ASCII 61 -> =
+AT / GATT / AACA / TATT / CTAT / CATG / CAGT / AG
 ```
 
-这里的 `x2` 已经用于要求每个相邻间隙有两处互补圆位，不应再作用一次。
-Python 本地 Unicode 字符数据库把 `=` 命名为：
+原图七处 `×2` 正好需要 `7 × 2 × 2 = 28` 个碱基。要求每个出现位置只进入
+一对 Watson-Crick 键，得到唯一的左右侧碱基多重集分配：
+
+| Board | 原串 | 向左配对 | 向右配对 |
+| ---: | --- | --- | --- |
+| 2 | `AT` | — | `AT` |
+| 6 | `GATT` | `AT` | `GT` |
+| 7 | `AACA` | `AC` | `AA` |
+| 8 | `TATT` | `TT` | `AT` |
+| 4 | `CTAT` | `AT` | `CT` |
+| 5 | `CATG` | `AG` | `CT` |
+| 3 | `CAGT` | `AG` | `CT` |
+| 1 | `AG` | `AG` | — |
+
+关键修正是：水平配对的坐标应是这些碱基在**完整 spangram** 中的位置，而不是
+压缩后的 A/C/G/T 串下标。区分重复字母出现位置、允许整词正读或反读并固定首词
+正读后，只有两个全局水平布局：
+
+| 方向 | 偏移 | 每个相邻词对唯一的相同普通字母 |
+| --- | --- | --- |
+| `FRFFRFRF` | `0,-3,-3,-4,-7,-12,-13,-13` | `I/N/I/L/O/O/D` |
+| `FRFRFRFR` | `0,-3,-3,-2,2,5,7,7` | `I/N/F/L/O/O/D` |
+
+提示 11 详细图唯一选中第二行：其连续五行裁窗恰为全局行 `9..5`，八股可见圆
+数为 `3,2,5,5,5,5,3,3`；窗口中七条实际绘出的配对依次是
+`g5@9, g4@8, g6@8, g7@7, g4@6, g3@5, g5@5`，与坐标模型完全相同。
+
+在选中的完整单词对齐里，各相邻词对除了两处生命字母配对，还恰有一个位置上的
+普通字母完全相同：
+
+| Gap | 对齐词对 | 两个选中配对行 | 相同字母行 | 提取 |
+| ---: | --- | --- | ---: | :---: |
+| 1 | `BIATHLON / YTIVITAGEN` | `2,3` | 1 | `I` |
+| 2 | `YTIVITAGEN / PANAFRICANISM` | `-2,4` | 6 | `N` |
+| 3 | `PANAFRICANISM / RETFILOTARTS` | `0,5` | 1 | `F` |
+| 4 | `RETFILOTARTS / FLUCTUATION` | `6,8` | 3 | `L` |
+| 5 | `FLUCTUATION / GNITAROPROCNI` | `5,9` | 11 | `O` |
+| 6 | `GNITAROPROCNI / CARDIOLOGIST` | `8,15` | 14 | `O` |
+| 7 | `CARDIOLOGIST / GNIDNEHERPPA` | `7,18` | 10 | `D` |
+
+按间隙从左到右读：
 
 ```text
-EQUALS SIGN
+I / N / F / L / O / O / D  ->  INFLOOD
 ```
 
-因此当前候选为 **`EQUALS SIGN`**。此前曾把 `x2` 错当成“将所得字符重复”，
-再把 `==` 置于蛋白质译文的自然两词分界：
+因此答案是 **`INFLOOD`**，自然分词为 **`IN FLOOD`**。完整枚举见
+`work/dna_pairing.py`，稳定坐标图见 `artifacts/in-flood-extraction.svg/.png`。
+
+### Rejected four-circle STOP/F branch
+
+以下四圆同位模型仍是可复核的观察，但其终止码解释已被用户判错。把八个四碱基
+片段依次放入原图八股，并固定第一股按提取
+次序自上而下。每一股可正读或反读；要求相邻两股在同一圆位恰有两个
+Watson-Crick 互补，唯一得到：
 
 ```text
-MINIFY == HAVE  ->  FALSE
+方向      F     F     R     R     R     R     F     R
+四圆股    ATAT  GATT  ACAA  TTAT  TATC  GTAC  CAGT  GAGA
+向右配对位 23    34    14    23    23    12    14    -
 ```
 
-用户已明确判错 `FALSE`，所以该布尔解释只作负证据。方向、互补圆位、全局镜像
-与编码对称性由 `work/dna_pairing.py` 穷举复核，结果见
+题面说答案出现在“交叠之处”。对六条内部股，只有同一个物理圆既参与左侧配对、
+又参与右侧配对时才算双重交叠。按股从左到右、每股从上到下读取：
+
+```text
+T / A / - / AT / T / C  ->  TAATTC
+```
+
+继续按同一遗传密码分组：
+
+```text
+TAA | TTC  ->  STOP | F
+```
+
+主编码区中 `TTC` 恰是 `MINIFYHAVE` 唯一 `F` 的密码子。把它换成前面的 `TAA`
+终止密码子，等价于在 `F` 之前停止翻译：
+
+```text
+M I N I | STOP | Y H A V E  ->  MINI
+```
+
+该路线曾给出 **`MINI`**，但用户已明确判错。问题在于 `TAATTC` 只是一种圆位
+读数，图中没有箭头授权把 `TAA` 当成对主串 `TTC` 的替换指令。
+
+### Rejected direction and mirror audit
+
+将八个补成四位的片段强制在同一圆位恰有两处互补，固定首股按提取次序自上而下
+后唯一得到 `FFRRRRFR`。若连首股也反转，会出现全局镜像 `RRFFFFRF`；但这违反
+了初始书写锚点。方向布局本身用于读取物理圆位，而不是当二进制。此前的
+`00111101 -> '=' -> EQUALS SIGN` 仍因 F/R→0/1 没有题面授权且已被用户判错，
+整个 ASCII 方向位假设族停止。穷举保存在 `work/dna_pairing.py` 与
 `work/visual/dna_pairing.tsv`。
 
 ### Disclosed residual details
 
-- 32 碱基串有两个前导碱基；首个 `ATG` 自然且唯一地选出第三阅读框，另外两框都
-  很快遇到终止密码子并不成英文。
-- 编码区末尾没有终止密码子，但从 `ATG` 到串尾正好是 30 个碱基，不影响十个
-  氨基酸单字母码的唯一读取。
-- `MINIFYHAVE` 没有空格编码；`MINIFY | HAVE` 是唯一自然的两词切分。
-- 不固定首股时还有全局镜像 `RRFFFFRF`。提示 12 固定从左到右的词序，以首股
-  正读作图的纵向锚，并把“发生反转”记为 1，才得到 `=`；交换 0/1 或反转提示
-  顺序分别得到十进制 `194`、`188` 或字符 `C`。这项约定依赖已明确披露，故
-  候选置信度暂不升至 high。
-- 七个匹配圆位的组合序号为 `4,6,3,4,4,1,3`，四位掩码为 `63966C9`；内部
-  同时向左右配对的圆读作 `T/A/-/AT/T/C`。两种直接几何读数都不成词，未拿来
-  反选答案。
-- 裸 `A`、蛋白质扩写 `ALANINE` 和 DNA 扩写 `ADENINE` 均已被判错；三者都不再
-  是可提交候选。
-- `SHAVE` 已被判错；普通字谜补入 `S` 的路线停止。
-- 对两个整词分别取全局最小质量会得到 `I/A`，其扩写 `CURRENT` 已被判错；逐位
-  质量比较得到的 `NAVE` 也已被判错。整个氨基酸质量指标族停止。
-- 四种 `HAVE` 读向与共享 `Y` 的前后位置共八种虽只有 `HEAVY` 是普通词，但
-  `HEAVY` 已被判错；结果见 `work/reduce_have.py` 与
-  `work/visual/reduce_have.tsv`，仅作负证据。
-- 八条未补齐的 DNA 片段共有 28 个碱基，恰为 `7×2×2`。若要求七个相邻间隙
-  各形成两对 Watson-Crick 互补碱基并让每个碱基恰用一次，按提示 12 顺序只有
-  一个碱基计数分配。扩展重复字母的发生位置后有 72 种配对，但没有一种能实现
-  所有横键等距；它是计数校验，不是当前四圆同位模型。两者均见
-  `work/dna_pairing.py` 与 `work/visual/dna_pairing.tsv`。
-- 把 `=` 当作 Base64 填充补到 `MINIFYHAVE` 后只得到不可读字节；对四碱基股做
-  两位后缀—前缀的同一、互补或反向互补交叠也都无布局。这两个分支均已停止。
-- 提示 11 的 31 个可见圆是蛋白质结构线索，不与 32 个碱基一一对应；强行逐圆
-  填字曾产生大量无规则输出，现已停止。
+- 当前 28 碱基模型在多重集层面唯一；扩展重复字母发生位置共有 72 种配法。
+  把碱基映回完整词位置并要求每处两键同高后只剩两个布局；详细图再唯一选择
+  `FRFRFRFR`。这三层都不依赖字典择词。
+- 选中布局在第 5、8 行有额外的偶然互补碱基相邻，但提示图没有画出所有偶然
+  互补；它只画每个碱基出现恰用一次的 14 条选中键。尤其第 8 行中央 A–T 没有
+  虚线，正与单次使用约束吻合。
+- 七个 `I/N/F/L/O/O/D` 都是完整词对齐后的**同字母**重合，不是互补碱基、
+  ASCII 映射或语义补词；每个间隙恰有一个，因此读序由提示 12 的横向次序直接给定。
+- 答案保留原样 `INFLOOD`；`IN FLOOD` 只是自然空格，不把 `FLOOD` 再换同义词、
+  删字或扩成未经提取的格言。
+- 32 碱基旁证串有两个前导碱基；首个 `ATG` 自然选出第三阅读框，之后恰为
+  30 个碱基并译成 `MINIFYHAVE`。串尾无终止码不影响十个单字母氨基酸码。
+- 四圆模型的双重交叠串 `TAATTC -> TAA/TTC -> STOP/F` 及结果 `MINI` 已判错；
+  方向位 `FFRRRRFR -> '='` 也因没有 F/R→比特授权且答案判错而停止。
+- 旧 28 碱基非交叉配对可稳定读出 `WWWSWWW|WSWWSSW -> w/Y`，但 `WAVY`、
+  `WAY` 均被用户判错。按预设分界，整个弱/强键—七位 ASCII—`WY` 补词家族
+  停止；不得恢复 `WHY/WHEY/WAVY/WAY`。
+- 氨基酸质量、名称长度、普通一编辑、逻辑值、碱基全名与 `HAVE` 局部重排等
+  解释族均已有明确判错结果，继续只作负证据。
 
 ## Submission history
 
@@ -240,6 +304,12 @@ MINIFY == HAVE  ->  FALSE
 | 2026-08-30 | NAVE | rejected | 用户明确报告不正确；按分子量逐位取较小残基并以成词性选择右对齐的路线撤回。 |
 | 2026-08-30 | FALSE | rejected | 用户明确报告答案不正确；将 ASCII `=` 按图示 `x2` 扩成 `==` 并比较 `MINIFY` 与 `HAVE` 的布尔真值路线撤回。 |
 | 2026-08-30 | EQUALS SIGN | rejected | 用户明确报告答案不正确；将四圆方向任意编码为二进制并按 ASCII 字符名提交的路线撤回。 |
+| 2026-08-30 | TRUE | rejected | 用户明确报告答案不正确；将 A-T 配对所得 `T` 按逻辑真值展开为 `TRUE` 的规范化撤回。 |
+| 2026-08-30 | THYMINE | rejected | 用户明确报告答案不正确；把图示 `x2` 解释为 A-T 两个氢键并将所得 `T` 扩写为 DNA 碱基全名的路线撤回。 |
+| 2026-08-30 | MINI | rejected | 用户明确报告答案不正确；将双重交叠串 `TAATTC` 解释为 `TAA/TTC = STOP/F` 并在主肽串唯一 `F` 前终止的路线撤回。 |
+| 2026-08-30 | WAVY | rejected | 用户明确报告答案不正确；将 28 个原始碱基按严格正反交替和不交叉配对读成弱/强二进制 `wY`，再把 `HAVE` 两端裁成 `AV` 的路线撤回。 |
+| 2026-08-30 | WAY | rejected | 用户明确报告答案不正确；弱/强键七位 ASCII `WY` 加 `HAVE -> A` 的补词路线撤回，并停止整个 `WY` 补词家族。 |
+| 2026-08-30 | INFLOOD | accepted | 用户明确确认答案正确。 |
 
 ## Important failed routes
 
@@ -252,9 +322,10 @@ MINIFY == HAVE  ->  FALSE
 - **31 圆逐格填字**：图的实线组件含 `3/2/5/5/5/5/3/3` 个圆，不是八条四圆
   字槽；将 31 个端点字母按行列蛇形填入，再读虚线端点也不能形成统一路径。
 - **把中间符号 `A` 直接提交**：用户已明确判错；递归保留 `A/C/G/T` 不是
-  `MINIFY HAVE` 在蛋白质层级中的终操作。
-- **把 `MINIFY | HAVE` 直接拆成方法与答案**：`HAVE` 已被用户明确判错；它是
-  `MINIFY` 的操作数，而不是可直接提交的答案。
+  肽串 `MINIFYHAVE` 的图示终操作。
+- **把 `MINIFY | HAVE` 拆开后直接提交 `HAVE`**：`HAVE` 已被用户明确判错。
+  `MINIFYHAVE` 当前只作 DNA/蛋白质语境的独立校验；终答直接来自完整词对齐的
+  七个相同字母交叠，不能把操作数原样当答案，也不再把它拼进 `WY`。
 - **`MINIFY/HAVE -> CONTRACT` 双定义**：虽然 `contract` 可表示缩小，也可表示
   染上疾病，但用户已明确判错，不能再作为终答。
 - **`H/A/V/E` 中最小残基 -> ALANINE**：用户已明确判错；提示列表没有要求查询
@@ -289,18 +360,38 @@ MINIFY == HAVE  ->  FALSE
   个英文词求程序语言布尔值，是连续三层未受题面授权的解释。保留方向布局和
   `=` 这一可复核观察，撤回 `==` 与 `FALSE`。
 - **`FFRRRRFR -> 00111101 -> '=' -> EQUALS SIGN`**：用户已明确判错。首股正读
-  只是人为锚点，F/R 到 0/1 也没有题面规定；交换映射或镜像会改变字节。因此
-  `=` 的字符名不是终答，ASCII 方向位假设族停止。
+  可由初始书写顺序锚定，但 F/R 到 0/1 仍没有题面规定；交换映射会改变字节。
+  因此方向布局保留，`=` 的字符名不是终答，ASCII 假设族停止。
+- **`MINIFY HAVE -> A -> T -> TRUE` 的逻辑展开**：用户已明确判错。即使把图中
+  `x2` 解释为 A-T 的两个氢键，`T` 也不能再凭“真相”一词扩成逻辑值 `TRUE`；
+  上游生物学中间量与这一错误规范化分开审计。
+- **`MINIFY HAVE -> A -> T -> THYMINE` 的两氢键路线**：用户已明确判错。这不只
+  否定碱基全名，还使“图示 `x2` 专指单个 A-T 的两个氢键”失去候选支撑；当前
+  路线把每个 `x2` 统一建模为相邻两股之间两对被图选中的互补碱基。
+- **`TAATTC -> STOP/F -> MINI`**：用户已明确判错。`TAATTC` 是首股正读布局下
+  同时向左右配对圆的真实读数，但把相邻两个密码子当成“用 STOP 替换 F”的指令
+  没有图示箭头授权；该终止替换与答案 `MINI` 均撤回。
+- **弱/强键七位 ASCII—`WY` 补词家族**：`WAVY` 与 `WAY` 均被用户明确判错。
+  前者把 `MINIFY` 临时改释为两端裁字，后者虽复用 `A/C/G/T` 过滤得到 `A`，仍需
+  把弱/强键任意指定为比特并以成词性把字母塞入 `WY`。按预设分界，
+  `WHY/WHEY/WAVY/WAY` 等整个补词家族停止；独立计算结果仅作负证据。
 
 ## Evidence and artifacts
 
-- `artifacts/extraction.md`：候选 `EQUALS SIGN` 的 DNA、肽译文、四圆定向与
-  对称性精简复现版；旧 `FALSE` 结论只作负证据。
-- `artifacts/verify_solution.py`：复核八盘完整覆盖、DNA 片段、起始阅读框、密码子
-  翻译、首股锚定下唯一四圆方向 `FFRRRRFR`、ASCII `=` 与标准名称
-  `EQUALS SIGN`；旧 `MINIFY == HAVE -> FALSE` 及 `NAVE`、`SHAVE`、
-  `HEAVY/LIGHTEN` 等只作负证据。
+- `artifacts/extraction.md`：答案 `INFLOOD` 的 28 碱基唯一分配、两个完整词布局、
+  详细图裁窗判别与七个同字母交叠的精简复现版。
+- `artifacts/verify_solution.py`：复核八盘完整覆盖、DNA 片段、密码子旁证、完整词
+  `FRFRFRFR` 对齐、提示图可见圆/虚线以及 `I/N/F/L/O/O/D`；旧 `WAVY/WAY`、
+  `TAATTC -> STOP/F -> MINI` 及更早结果只作负证据。
+- `artifacts/in-flood-extraction.svg/.png`：已确认答案的稳定完整坐标图；显示八词
+  正反方向、纵向偏移、14 条选中互补键、提示 11 裁窗及七个相同字母交叠。
+- `artifacts/way-extraction.svg/.png`：已判错 `HAVE -> A; W+A+Y -> WAY` 的历史图，
+  已明确标成 rejected，不代表当前答案。
+- `artifacts/wavy-extraction.svg/.png`：已判错 `HAVE -> AV -> WAVY` 的历史图，
+  已明确标成 rejected，不代表当前答案。
 - `artifacts/hint11-annotated.png`：提示 11 的稳定坐标标注。
+- `artifacts/stop-f-extraction.svg/.png`：已判错 `TAATTC -> STOP/F -> MINI`
+  路线的历史标注图，不代表当前答案。
 - `work/hint11_model.py`：提示 11 几何模型生成器。
 - `work/visual/hint11/geometry.tsv`：31 圆、23 实线段、七虚线的坐标表。
 - `work/visual/final_diagram_audit.md`：提示 11/12 后的视觉审计。
@@ -309,9 +400,10 @@ MINIFY == HAVE  ->  FALSE
   `SHAVE`，但已被用户明确判错。
 - `work/reduce_have.py` 与 `work/visual/reduce_have.tsv`：四种自然读向及共享 `Y`
   前后位置的八项有界审计；其唯一普通词 `HEAVY` 已被判错，现为负证据。
-- `work/dna_pairing.py` 与 `work/visual/dna_pairing.tsv`：28 个原始 DNA 字母的
-  唯一互补计数分配、72 项发生位置负审计，以及四圆同位模型的全局镜像、首股
-  锚定方向 `FFRRRRFR -> 00111101 -> '=' -> EQUALS SIGN` 和直接圆位负审计。
+- `work/dna_pairing.py` 与 `work/visual/dna_pairing.tsv`：28 碱基唯一多重集
+  分配、72 个出现位置级配法、两个完整词水平布局、提示 11 唯一裁窗与
+  `INFLOOD`；同时保留 `WWWSWWW|WSWWSSW -> w/Y`、四圆 `FFRRRRFR`、
+  600 项直接翻译和 `STOP/F -> MINI` 的负证据。
 - `work/amino_minification.py` 与 `work/visual/amino_minification.tsv`：质量与
   名称长度的旧全局对照，以及两股正反、三个完整交叠偏移的 12 项逐对质量
   负审计；其唯一普通词 `NAVE` 已被明确判错。
@@ -321,7 +413,5 @@ MINIFY == HAVE  ->  FALSE
 
 ## Next action
 
-保留 `MINIFYHAVE` 与互补布局，但撤回全部 ASCII/字符命名。下一步只审计
-`MINIFYHAVE` 是否应整体作为答案，或应作为“minify what you have”的自指指令
-作用于八个已提取片段；优先寻找无需新增语义、物性指标或字典反选的直接结果，
-不恢复 `=/==/FALSE`、语义近义词或分子量尾解。
+无需继续求解；**`INFLOOD`** 已由用户确认正确。保留当前验证脚本、坐标图与
+失败路线，供 Round feeder 或后续复核使用。

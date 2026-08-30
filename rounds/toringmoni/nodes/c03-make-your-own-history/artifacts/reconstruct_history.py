@@ -119,12 +119,7 @@ def build_transitions() -> list[Transition]:
 
 
 def build_rebranch_transitions() -> list[Transition]:
-    """Replay the facts that remain fixed after removing four Russian edits.
-
-    Unknown cells are deliberately represented by symbols rather than by the
-    rejected STAN LEE assignment.  See rebranch_constraints.md for the live
-    hypothesis table.
-    """
+    """Replay the WOOD candidate after removing four Russian edits."""
     return [
         Transition(
             ("西湖", "先斩后奏", "显而易见", "家丁", "孙权", "岁月", "青提子"),
@@ -135,32 +130,32 @@ def build_rebranch_transitions() -> list[Transition]:
             "复制先、见；家丁仍逐字换成网络用语宅男。",
         ),
         Transition(
-            ("先见西湖", "先斩后奏", "C(新同义成语)", "宅男", "T(新两子词)", "岁月", "青提子"),
-            "提示5只锁定同义成语C和两子词T均改变；具体取值仍待七月、八月闭环裁决。",
+            ("先见西湖", "先斩后奏", "一目了然", "宅男", "上林", "岁月", "青提子"),
+            "显而易见改走同义成语一目了然；曹操之子曹上、曹林的名组成上林。",
         ),
         Transition(
-            ("先见西湖", "先斩后奏", "C(新同义成语)", "北宅子", "T(新两子词)", "岁月", "青提子"),
-            "男按子替换为宅子；西顺时针转九十度为北并前置。",
+            ("先见西湖", "先斩后奏", "一目了然", "右宅子", "上林", "岁月", "青提子"),
+            "男按子替换为宅子；新词上林中的方位上顺时针转九十度为右并前置，走删除俄国记录后才开放的新分支。",
         ),
         Transition(
-            ("先见西湖", "先斩后奏", "C(新同义成语)", "北宅子", "T(新两子词)", "杀猪刀", "青提子"),
+            ("先见西湖", "先斩后奏", "一目了然", "右宅子", "上林", "杀猪刀", "青提子"),
             "岁月的比喻改走岁月是把杀猪刀。",
         ),
         Transition(
-            ("洗", "先斩后奏", "X(C的字谜答案)", "字", "T(新两子词)", "刻", "青提子"),
-            "按谜面压成常见单字：先见西湖→洗、C→X、北宅子→字、杀猪刀→刻；X仍未知。",
+            ("洗", "先斩后奏", "子", "孔", "上林", "刻", "青提子"),
+            "按谜面压成常见单字：先见西湖→洗；一目了然取一与了合成子；右宅子取宅的最右笔乚与子合成孔；杀猪刀→刻。",
         ),
         Transition(
-            ("洗", "X", "T", "刻", "字"),
-            "交换字与青提子；删含月、日的青提子及四字条目先斩后奏。正确X与T必须通过六月筛选。",
+            ("洗", "子", "上林", "刻", "孔"),
+            "交换孔与青提子；删含月、日的青提子及四字条目先斩后奏；洗、子、上林、刻、孔均通过天气与七曜筛选。",
         ),
         Transition(
-            ("七月西文名称分支已触发", "T刻字"),
-            "后三项合成四字条目T刻字；外部有洗、X两个条目。原句的省略主语有两种读法，须由完整答案反证。",
+            ("洗", "子", "LEE"),
+            "后三项合成上林刻孔；外部尚有洗、子两项，触发把刚合成的四字谜面替换为西文名称的分支。刻出林中的木和孔中的子，以上下结构合成李，写成西文姓氏LEE。",
         ),
         Transition(
-            ("最终组合待定",),
-            "最后一个条目换成一字姓氏并组合全部条目。STAN LEE已被用户判错；X、T、西文名称和姓氏重新开放。",
+            ("洗子李",),
+            "把最后一项LEE替换为合适中文姓氏李并组合。组合串洗子李继续按谜语读：从李中洗去子，余木；最终英文候选为WOOD。",
         ),
     ]
 
@@ -384,7 +379,7 @@ def main() -> None:
     print("date verdict: a notice that the dates are a red herring")
     print("intermediate answer (user-confirmed): 折毛")
     print("second phase: delete the four Russian-editor records and replay;")
-    print("final candidate: none; STAN LEE was rejected (see rebranch_constraints.md)")
+    print("final candidate: WOOD (see rebranch_constraints.md)")
     print(f"wrote: {output}")
     print(f"wrote: {editor_output}")
     print(f"wrote: {rebranch_output}")

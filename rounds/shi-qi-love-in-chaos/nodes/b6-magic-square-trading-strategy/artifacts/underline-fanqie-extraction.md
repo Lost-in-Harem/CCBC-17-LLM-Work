@@ -1,9 +1,10 @@
-# Fixed-underline STOP LOSS extraction
+# Fixed-underline DAMAGE locator
 
 > The user explicitly rejected `DAMAGE` as the final answer on 2026-08-29.
-> It remains a mechanically exact intermediate.  Combined with the second
-> maximum-frequency keyword answer `BREAK` and the title category “交易策略”,
-> it yields the current candidate `STOP LOSS（止损）`.
+> It is instead a locator: among the 50 repaired clues, exactly one asks about
+> damage, and its frequency-validated answer is **易伤**.  The later
+> answer-length walk that continued past this row produced the rejected
+> candidate `循环`; it is not needed for this shortest extraction.
 
 This artifact records the intermediate extraction after the 57 geometric block
 trades.  The three literal underline locations are treated as fixed marks on
@@ -28,8 +29,11 @@ what remains under the three fixed marks.
 
 After reconstruction, `关键词` is the unique highest-frequency three-Han
 block.  Its two occurrences lie in clues whose answers are **反切** and
-**BREAK**.  Applying ordinary modern fanqie to each marked pair—initial of the
-first character plus final of the second—gives:
+**BREAK**.  The blocks traded against those two occurrences, in repaired-row
+order, are `古代人 / 的概念`.  Thus “古代人的概念” selects the ancient
+phonological method **反切** from those two answers; **BREAK** is reserved for
+the final step.  Applying ordinary modern fanqie to each marked pair—initial
+of the first character plus final of the second—gives:
 
 | Marked pair | First initial | Second final | Result |
 | --- | --- | --- | --- |
@@ -43,23 +47,29 @@ The previously proposed statement-order reading was:
 DA / MI / JI  ->  DAMAGE
 ```
 
-The English word is not the submission answer.  The other occurrence of the
-unique maximum-frequency block `关键词` lies in “结束本部分的关键词”, whose
-answer is **BREAK**.  In functional terms:
+The English word is not the submission answer.  Translate it only far enough
+to locate the matching repaired clue:
 
 ```text
-BREAK  -> STOP -> 止
-DAMAGE -> LOSS -> 损
+发生后 / 伤害数 / 字变大  ->  易伤
+          DAMAGE
 ```
 
-The title asks for a trading strategy, so the two components uniquely form:
+No other repaired row contains `伤害`.  `易伤` is also not a loose semantic
+guess: decomposing it as `日 / 勿 / 伤` gives `111` in the vertical direction
+and preserves equality at every one of the 57 crossings.  Alternatives such
+as `暴击` do not fit that completed frequency crossword.
 
-```text
-STOP LOSS -> 止损
-```
+The other clue answering **BREAK** is the last source clue and explicitly
+says it ends this part.  The user also rejected `BREAK` as the answer.  Its
+sound role is therefore a terminal marker, not permission to invent another
+answer-length traversal.  The former continuation
+`易伤 -> ζ电势 -> BREAK -> 数网格端 -> ...` ended in the rejected structural
+guess `循环` and is retained only as negative evidence.
 
-This uses `BREAK` directly and does not require the unsupported
-answer-length path through `暴击 -> ζ电势`.
+The missing characters themselves still travel with their three-Han blocks
+and complete ordinary repaired clues as `榜样 / 曼丽 / 气性`; the fixed
+locations are the visible extraction marks.
 
 ## Reproduction
 

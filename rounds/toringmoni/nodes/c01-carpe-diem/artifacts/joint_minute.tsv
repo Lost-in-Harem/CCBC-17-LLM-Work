@@ -9,11 +9,21 @@ target_maze_control	E mod140=128	compare solvable phases (9, 65)	no traversable 
 raw_position	visible row=4; column=4	concatenate the two displayed coordinates	44 (rejected)
 row_major_value	bird zero-based cell=18	convert page orbit to one-based cell	19
 photo3_like_check	maze post fixed likes=19	compare with one-based bird cell	19=19
-rejected_a_to_y	row-major cell=19	A-Y row-major	S (rejected)
+rejected_alphabet_suffix	row-major cell=19	19th alphabet letter	S (S, BLUES and BIRDS all rejected; family stopped)
 rejected_polybius	coordinate=(4,4)	standard I/J-combined 5×5 Polybius square	T (rejected)
-animal_alphabet_control	fully recovered non-horse tracks	A-Y row-major	goat=(1,5)→E; fish=(3,5)→O; tiger=(5,1)→U; bird=(4,4)→S (EOUS only; horse cell and ordering are not recovered)
-horse_overlap_control	horse anchor=(3,2); target is 18 knight moves later	chessboard parity	no overlap with bird (4,4)
+animal_alphabet_control	fully recovered non-horse tracks	A-Y row-major	goat=(1, 5)→E; fish=(3, 5)→O; tiger=(5, 1)→U; bird=(4, 4)→S (EOUS only; horse cell and ordering are not recovered)
+horse_overlap_control	horse anchor=(3, 2); target is 18 knight moves later	chessboard parity	no overlap with bird (4,4)
 rejected_lookup	row-major cell=19; coordinate=44	S19; S44	尤; 葛 (both rejected)
 rejected_number	cell=19; maze-post likes=19	write 19 as digits or an English cardinal	19 / NINETEEN (both rejected)
 thematic_control	footless-bird line; title Carpe Diem	death / Memento Mori association	死/死亡/MEMENTO MORI (thematic only)
-leading_hypothesis	bird at (4,4); retained 13:03 and 23:48 mazes both enclose (4,4)-(4,5)	read the object inside the closed compartment	CAGED BIRD (exact target wall phase not fully reproduced)
+rejected_wall_state	two non-target captures enclose (4,4)-(4,5)	extrapolate the walls and lexicalize the enclosure	CAGED BIRD (rejected; target wall phase was never reproduced)
+object_word	second famous line specifies 鸟	translate the selected object	BIRD
+target_colour	target photo1 colour=蓝; visible bird emoji is also blue	translate 蓝	BLUE
+rejected_suffix_compositions	cell 19=S	BLUE + S; BIRD + S	BLUES / BIRDS (both rejected)
+rejected_direct_compound	target colour BLUE + selected object BIRD	BLUE + BIRD	BLUEBIRD (rejected)
+rejected_music	coordinate=(4,4)	read as a 4/4 time signature	COMMON TIME (rejected)
+rejected_conditional_horse	retained knight-walk anchors allow 12 target cells	add one-animal-per-row constraint	(2,3)→H (not forced by the horse data)
+rejected_conditional_house	conditional horse=H plus E/O/U/S from the recovered tracks	A-Y cells, then reorder	HOUSE (unsupported intermediate; do not submit)
+rejected_animal_compound	famous-line object BIRD + conditional grid word HOUSE	BIRD + HOUSE	BIRDHOUSE (rejected; whole animal-grid compound family stopped)
+like_icon	maze post action is 🤍; fixed likes=19	match bird cell 19 to likes, then read the visible heart concept	19=19→LOVE
+current_candidate	LOVE from the matched like/heart field + selected object BIRD	form the common singular compound	LOVEBIRD

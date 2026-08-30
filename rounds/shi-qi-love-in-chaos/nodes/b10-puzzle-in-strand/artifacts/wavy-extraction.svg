@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="690" viewBox="0 0 1200 690">
+  <style>
+    .title { font: 700 27px system-ui, sans-serif; fill: #172033; }
+    .sub { font: 16px system-ui, sans-serif; fill: #475569; }
+    .label { font: 700 17px system-ui, sans-serif; fill: #334155; }
+    .mono { font: 700 21px ui-monospace, monospace; fill: #172033; text-anchor: middle; }
+    .small { font: 14px system-ui, sans-serif; fill: #64748b; text-anchor: middle; }
+    .strand { stroke: #475569; stroke-width: 6; }
+    .bead { fill: #fff; stroke: #334155; stroke-width: 4; }
+    .weak { fill: #dbeafe; stroke: #2563eb; stroke-width: 2; }
+    .strong { fill: #fee2e2; stroke: #dc2626; stroke-width: 2; }
+    .bit { font: 700 22px ui-monospace, monospace; text-anchor: middle; }
+    .result { font: 800 34px ui-monospace, monospace; fill: #b91c1c; text-anchor: middle; }
+    .trim { fill: #94a3b8; text-decoration: line-through; }
+    .keep { fill: #047857; }
+  </style>
+  <rect width="1200" height="690" fill="#f8fafc"/>
+  <text x="48" y="42" class="title">Rejected trim-both-ends tail: WAVY</text>
+  <text x="48" y="70" class="sub">Hint-12 order 2,6,7,8,4,5,3,1; every original A/C/G/T occurrence is used in one of 14 Watson-Crick bonds.</text>
+
+  <!-- Alternating strands.  Endpoint strands contain two original bases; internal strands contain four. -->
+  <g>
+    <line class="strand" x1="100" y1="120" x2="100" y2="210"/>
+    <line class="strand" x1="240" y1="100" x2="240" y2="280"/>
+    <line class="strand" x1="380" y1="100" x2="380" y2="280"/>
+    <line class="strand" x1="520" y1="100" x2="520" y2="280"/>
+    <line class="strand" x1="660" y1="100" x2="660" y2="280"/>
+    <line class="strand" x1="800" y1="100" x2="800" y2="280"/>
+    <line class="strand" x1="940" y1="100" x2="940" y2="280"/>
+    <line class="strand" x1="1080" y1="120" x2="1080" y2="210"/>
+  </g>
+  <g class="bead">
+    <circle cx="100" cy="120" r="25"/><circle cx="100" cy="210" r="25"/>
+    <circle cx="240" cy="100" r="25"/><circle cx="240" cy="160" r="25"/><circle cx="240" cy="220" r="25"/><circle cx="240" cy="280" r="25"/>
+    <circle cx="380" cy="100" r="25"/><circle cx="380" cy="160" r="25"/><circle cx="380" cy="220" r="25"/><circle cx="380" cy="280" r="25"/>
+    <circle cx="520" cy="100" r="25"/><circle cx="520" cy="160" r="25"/><circle cx="520" cy="220" r="25"/><circle cx="520" cy="280" r="25"/>
+    <circle cx="660" cy="100" r="25"/><circle cx="660" cy="160" r="25"/><circle cx="660" cy="220" r="25"/><circle cx="660" cy="280" r="25"/>
+    <circle cx="800" cy="100" r="25"/><circle cx="800" cy="160" r="25"/><circle cx="800" cy="220" r="25"/><circle cx="800" cy="280" r="25"/>
+    <circle cx="940" cy="100" r="25"/><circle cx="940" cy="160" r="25"/><circle cx="940" cy="220" r="25"/><circle cx="940" cy="280" r="25"/>
+    <circle cx="1080" cy="120" r="25"/><circle cx="1080" cy="210" r="25"/>
+  </g>
+  <g class="mono">
+    <text x="100" y="120">A</text><text x="100" y="210">T</text>
+    <text x="240" y="100">T</text><text x="240" y="160">T</text><text x="240" y="220">A</text><text x="240" y="280">G</text>
+    <text x="380" y="100">A</text><text x="380" y="160">A</text><text x="380" y="220">C</text><text x="380" y="280">A</text>
+    <text x="520" y="100">T</text><text x="520" y="160">T</text><text x="520" y="220">A</text><text x="520" y="280">T</text>
+    <text x="660" y="100">C</text><text x="660" y="160">T</text><text x="660" y="220">A</text><text x="660" y="280">T</text>
+    <text x="800" y="100">G</text><text x="800" y="160">T</text><text x="800" y="220">A</text><text x="800" y="280">C</text>
+    <text x="940" y="100">C</text><text x="940" y="160">A</text><text x="940" y="220">G</text><text x="940" y="280">T</text>
+    <text x="1080" y="120">G</text><text x="1080" y="210">A</text>
+  </g>
+  <g>
+    <text class="label" x="100" y="330" text-anchor="middle">F</text><text class="small" x="100" y="352">2 · AT</text>
+    <text class="label" x="240" y="330" text-anchor="middle">R</text><text class="small" x="240" y="352">6 · GATT</text>
+    <text class="label" x="380" y="330" text-anchor="middle">F</text><text class="small" x="380" y="352">7 · AACA</text>
+    <text class="label" x="520" y="330" text-anchor="middle">R</text><text class="small" x="520" y="352">8 · TATT</text>
+    <text class="label" x="660" y="330" text-anchor="middle">F</text><text class="small" x="660" y="352">4 · CTAT</text>
+    <text class="label" x="800" y="330" text-anchor="middle">R</text><text class="small" x="800" y="352">5 · CATG</text>
+    <text class="label" x="940" y="330" text-anchor="middle">F</text><text class="small" x="940" y="352">3 · CAGT</text>
+    <text class="label" x="1080" y="330" text-anchor="middle">R</text><text class="small" x="1080" y="352">1 · AG</text>
+  </g>
+
+  <text x="48" y="400" class="label">Two noncrossing bonds per gap (W = weak A-T; S = strong C-G)</text>
+  <g class="mono">
+    <rect class="weak" x="70" y="420" width="120" height="48" rx="8"/><text x="130" y="444">WW</text>
+    <rect class="weak" x="220" y="420" width="120" height="48" rx="8"/><text x="280" y="444">WS</text>
+    <rect class="weak" x="370" y="420" width="120" height="48" rx="8"/><text x="430" y="444">WW</text>
+    <rect class="weak" x="520" y="420" width="120" height="48" rx="8"/><text x="580" y="444">WW</text>
+    <rect class="strong" x="670" y="420" width="120" height="48" rx="8"/><text x="730" y="444">SW</text>
+    <rect class="weak" x="820" y="420" width="120" height="48" rx="8"/><text x="880" y="444">WS</text>
+    <rect class="strong" x="970" y="420" width="120" height="48" rx="8"/><text x="1030" y="444">SW</text>
+  </g>
+
+  <text x="48" y="510" class="label">Binary polarity: W=1, S=0 (the reverse polarity is not printable)</text>
+  <text x="340" y="550" class="bit" fill="#2563eb">WWWSWWW = 1110111 = w</text>
+  <text x="860" y="550" class="bit" fill="#dc2626">WSWWSSW = 1011001 = Y</text>
+
+  <text x="48" y="607" class="label">The codon read says MINIFY HAVE:</text>
+  <text x="380" y="607" class="mono"><tspan class="trim">H</tspan><tspan class="keep">AV</tspan><tspan class="trim">E</tspan> → AV</text>
+  <text x="600" y="662" class="result">W + AV + Y = WAVY — REJECTED</text>
+</svg>

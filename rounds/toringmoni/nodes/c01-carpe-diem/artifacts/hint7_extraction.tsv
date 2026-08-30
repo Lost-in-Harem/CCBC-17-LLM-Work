@@ -14,10 +14,21 @@ direct_position	鸟的可见位置是第4行第4列	按题面二维布局直接�
 row_major_value	鸟轨道零基格号18	转为玩家可读的一基行主序格号	第19格
 photo3_like_check	模块源码硬编码图3点赞数为19	与鸟的一基格号比较	19=19；独立消除零基/一基歧义
 rejected_number_format	鸟的一基格号与图3固定点赞数均为19	尝试数字串和英文基数词	19、NINETEEN；用户均明确判错，只保留为相位校验
-rejected_grid	5×5共25格；鸟在行主序第19格	按A–Y行主序铺格	S；用户明确判错，停止该映射
+rejected_alphabet_suffix	鸟在一基第19格	取第19个英文字母	S、BLUES、BIRDS均被判错；整个字母后缀家族停止
 rejected_polybius	同一坐标(4,4)	标准I/J合并的5×5 Polybius方阵	T；用户明确判错，停止密码表路线
 horse_overlap_control	马在E=0位于(3,2)，目标是18次马步后	马步每次翻转棋盘颜色，偶数步保持颜色	马与(4,4)的鸟不可能重合
 rejected_lookup	曾把格号19或坐标44接到图2的S_n	S19=尤、S44=葛；用户均明确判错	整个S_n终局查表家族停止
 retained_enclosure	13:03与23:48两份独立迷宫存档	从(4,4)出发均只能到(4,5)，两格区域的6条外边界墙全部存在	封闭1×2隔间；见work/target_bird_state.tsv
 thematic_control	无脚鸟台词末尾的死亡；题名Carpe Diem	联想死/死亡/Memento Mori	只属主题联想，不读取目标鸟的可见局部状态
-leading_hypothesis	目标鸟落在(4,4)，而两份保留盘面都把(4,4)-(4,5)围成封闭隔间	把封闭隔间中的鸟读成英语短语	CAGED BIRD；精确目标相位墙表未保留，尚有证据缺口
+rejected_wall_state	两份非目标分钟的墙都围住(4,4)-(4,5)	把墙体外推到历史目标分钟并词汇化	CAGED BIRD；用户明确判错，且目标墙相位从未复现
+object_word	《阿飞正传》第二句名台词明确指定“鸟”	把被观察对象译成终答语言	BIRD
+target_colour	目标E mod7=2使图1动态颜色精确为“蓝”；鸟emoji也目视为蓝色	译成终答语言	BLUE
+rejected_suffix_compositions	鸟的一基第19格曾转成S	BLUE+S；BIRD+S	BLUES、BIRDS均被判错；共同的S后缀停止
+rejected_music	鸟坐标(4,4)	写成4/4拍并取专名	COMMON TIME；用户明确判错，音乐路线停止
+rejected_direct_compound	目标分钟动态颜色BLUE + 名台词指定对象BIRD	直接组成英文复合词	BLUEBIRD；用户明确判错，空格变体一并停止
+known_animal_cells	目标分钟可代数恢复的四条非马轨道	按A–Y行主序记格	羊E、鱼O、虎U、鸟S
+rejected_conditional_horse	留存马步锚点允许12个目标格；H并不唯一	额外要求五只动物恰好各占一行	马=(2,3)→H；仅为已拒路线的结构反推
+rejected_conditional_grid_word	条件马字母H + 已知E/O/U/S	重排五个位置字母	HOUSE；题面未明示重排，不得单独提交
+rejected_animal_compound	名台词对象BIRD + 条件盘面词HOUSE	组成常见英文复合词	BIRDHOUSE；用户明确判错，整个动物字母复合路线停止
+like_icon	图3帖子的19次赞正上方有题面原生白心🤍动作	让目标鸟的一基格号19与点赞数19相合，再读取心形概念	19=19→LOVE；不再编码数字19
+current_candidate	点赞心形给出的LOVE + 提示7指定的单只鸟BIRD	组成常见单数英文复合词	LOVEBIRD
