@@ -32,33 +32,36 @@ on all three layers:
 | --- | --- | --- | --- |
 | r04c04 | 一个可 / 有可无 / 的影子 | 路人甲 | 111 |
 | r04c10 | 学狐狸 / 能达成 / 这件事 | 成精 | 111 |
-| r07c07 | 结束本 / 部分的 / 关键词 | **BREAK** | 111 |
+| r07c07 | 结束本 / 部分的 / 关键词 | **END** | 111 |
 | r10c04 | 两根骨 / 头连接 / 根与尖 | 关节 | 111 |
 | r10c10 | 记忆中 / 厕所里 / 的味道 | 氨气 | 212 |
 
-The middle depth line is at the exact center of all three boards. Its clue
-does answer **BREAK**, but the user explicitly rejected BREAK as the final
-answer. It is therefore an internal stop word, not an extraction target. If
-used only for the numeric check, a provisional `B / RE / AK` split has the
-required `111` pattern; that split is not otherwise unique.
+The middle depth line is at the exact center of all three boards.  Its clue
+answers **END**, whose three letters fill the three cells directly as
+`E / N / D`.  The former `BREAK` fill required the arbitrary merger
+`B / RE / AK`, contrary to the decomposition rule, and has been discarded.
 
 ## Extraction consequence
 
-The numeric fill fixes ambiguous repaired answers, especially `易伤`, `名著`,
-and `氨气`.  This matters at the final locator: the three fixed underlines
-read `DA/MI/JI = DAMAGE`, and the unique repaired clue containing its Chinese
-counterpart is `发生后伤害数字变大`.  Its answer **易伤** decomposes as
-`日 / 勿 / 伤` and participates in the exact 57/57 crossing closure; the old
-semantic alternative `暴击` does not.
+Hint 3 restricts extraction to the depth/`里` dimension absent from an
+ordinary crossword.  Among the four value-2/value-2 trades in the complete
+fill, exactly two involve that dimension:
 
-The former answer-length chain `易伤 -> ζ电势 -> BREAK` and its return to
-`数网格端` produced the user-rejected candidate `循环`.  It is preserved only
-as negative evidence in `artifacts/extraction-loop.md` because the puzzle does
-not state that answer character counts should index clue blocks.
+```text
+edge 55: 横 气性不 / 里 记忆中, index 2 -> 性忆 -> XI
+edge 57: 横 六百号 / 里 的味道, index 2 -> 百味 -> BEI
+                                                   西北
+```
 
-The former selection of only the four value-2/value-2 crossings led to
-`TAN/ZHENG/YING/WAI` and then to the user-rejected `嬴政`; that extraction is
-not part of the current route.
+The pair order is fixed by the statement directions `横` before `里`; the
+trade order is fixed by the displayed boards G1 before G3.  The separately
+restored keyword `反切` supplies the operation, and the other keyword `END`
+says to stop rather than use `西北` as a second-stage line selector.  In the
+stacked three-dimensional grid, `西北` is the extracted viewing direction or
+**perspective**.  The accepted Round Meta fixes the English feeder form as
+**PERSPECTIVE**; details are in
+`artifacts/depth-high-frequency-extraction.md` and
+`artifacts/meta-backsolve-perspective.md`.
 
 ## Reproduction
 

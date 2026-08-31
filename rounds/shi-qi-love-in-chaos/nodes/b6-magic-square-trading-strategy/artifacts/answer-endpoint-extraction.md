@@ -1,17 +1,14 @@
-# Answer-endpoint high-frequency extraction
+# Rejected answer-endpoint high-frequency extraction
 
-> `细节` was explicitly rejected as the final answer.  In the corrected
-> extraction it is an intermediate instruction: the later trade chain reads
-> `数网格端`, which independently licenses this endpoint count and makes it
-> the first step of a closed loop.  The former `视角 / PERSPECTIVE`
-> continuation remains rejected.
+> This construction led through `细节` and `DAMAGE` to the explicitly
+> rejected candidate `伤势`.  It is not the active extraction; Hint 3 instead
+> selects high-frequency trades on the depth dimension directly.
 
 A repaired clue with an N-character answer selects slot position N,
 placing the answer's final character at that cell. The three planes
 are center-aligned with the canonical 13 by 13 coordinate system.
 
-- Counted endpoints: 49
-- Skipped instruction/unindexable answer: 50:BREAK
+- Counted endpoints: 50
 - Maximum centered frequency: 3
 - Maximum coordinate: r10c04
 
@@ -84,6 +81,7 @@ The following 节 resolves that syllable as 细, giving **细节**.
 | 47 | 里 | I02 | Z04 | 关节 | 2 | 节 | r10c04 |
 | 48 | 里 | I03 | Z02 | 成精 | 2 | 精 | r04c10 |
 | 49 | 里 | I04 | Z01 | 路人甲 | 3 | 甲 | r04c04 |
+| 50 | 里 | I05 | Z03 | END | 3 | D | r07c07 |
 
 ## Repeated endpoints
 
@@ -92,9 +90,11 @@ The following 节 resolves that syllable as 细, giving **细节**.
 | exact layer | G2-r10c03 | 2 | 纵:翼; 里:关节 |
 | exact layer | G2-r12c09 | 2 | 横:贝纳尔; 纵:案内所 |
 | exact layer | G3-r03c12 | 2 | 横:义和团; 纵:名著 |
+| exact layer | G3-r06c07 | 2 | 横:ζ电势; 里:END |
 | centered | r04c03 | 2 | 横:枪眼; 横:田鸡 |
 | centered | r04c12 | 2 | 横:义和团; 纵:名著 |
 | centered | r06c11 | 2 | 横:生产队; 横:母语者 |
+| centered | r07c07 | 2 | 横:ζ电势; 里:END |
 | centered | r07c09 | 2 | 纵:焯水; 纵:元音 |
 | centered | r10c04 | 3 | 纵:翼; 横:中冲穴; 里:关节 |
 | centered | r10c12 | 2 | 纵:天文学; 横:气功所 |

@@ -1,89 +1,74 @@
-# Rejected four-high-frequency-trade extraction: 嬴政
+# Rejected highest-frequency-block route: 谷歌 / GOOGLE
 
-> The user explicitly rejected **嬴政** on 2026-08-30.  The four
-> value-2/value-2 crossings remain valid observations, but the center-out
-> regrouping below has no puzzle-given traversal rule.  This artifact is kept
-> only as negative evidence; the current extraction is the closed loop in
-> `artifacts/extraction-loop.md`.
+The user explicitly rejected both `谷歌` and `GOOGLE`.  This artifact retains
+the reproducible `GU/GE` observation as negative evidence; it is not the
+active extraction. The observed uniqueness of `关键词×2` and its two host
+answers `反切 / END` remain valid; the active use of those instructions is in
+`artifacts/depth-high-frequency-extraction.md`.
 
-## 1. Select the four value-2 trades
+The former four-value-2 shell route produced the user-rejected intermediates
+`嬴政 / 外滩` and then the user-rejected candidate `杜月笙`.  The phrase
+“高频交易” has a more literal and more tightly anchored reading: find the
+highest-frequency repaired clue block and inspect the trades made by that
+block.
 
-The direction-local component-frequency fill agrees at all 57 crossings.
-Exactly four actual clue-block trades have value 2 on both sides.  Since each
-traded block has three Han characters, value 2 selects its middle character.
+## 1. The unique highest-frequency block
 
-Use the puzzle as printed: order crossings by board, row, and column, and
-order the two statement blocks by the displayed directions `横 / 纵 / 里`.
-This removes the previously arbitrary choice between the two fanqie
-orientations.
+After all 57 crossing trades are undone, the 50 clues contain 180 three-Han
+block occurrences and 179 distinct texts.  Exactly one block occurs twice:
 
-| Order | Crossing | Printed blocks in direction order | Middle pair | Fanqie |
-| ---: | --- | --- | --- | --- |
-| 1 | G1 r05c12 | `吃兔子` / `在干活` | 兔 / 干 | `TAN` |
-| 2 | G1 r07c02 | `地质学` / `雷锋是` | 质 / 锋 | `ZHENG` |
-| 3 | G1↔里 r09c10 | `记忆中` / `气性不` | 忆 / 性 | `YING` |
-| 4 | G3↔里 r09c10 | `的味道` / `六百号` | 味 / 百 | `WAI` |
+| Block | Frequency | Repaired host | Host answer |
+| --- | ---: | --- | --- |
+| `关键词` | 2 | `G1-A07.4` | `反切` |
+| `关键词` | 2 | `I05.3 / Z03.3` | `END` |
 
-The fixed stream is:
+The first host supplies the operation.  The second says that this is the end
+of the extraction rather than another answer to follow.
 
-```text
-TAN / ZHENG / YING / WAI
-```
+## 2. Inspect its two trades
 
-As a control, using the repaired blocks with the same fixed direction order
-would give `GU / FI / XI / BEI`.  The rejected route
-`GU / ZHENG / XI / BEI -> 古筝 / 西北` mixed the two puzzle states pair by
-pair and therefore had no consistent orientation rule.
+At each repaired host, put the selected high-frequency block first and the
+block it traded with second.  The direction-local component-frequency fill
+gives value 1 at both crossing cells, so index character 1 of both three-Han
+blocks:
 
-## 2. Preserve the two keyword trades separately
+| Order | Repaired host | Crossing | High-frequency block | Trade partner | Cell value | Indexed pair | Fanqie |
+| ---: | --- | --- | --- | --- | ---: | --- | --- |
+| 1 | `G1-A07.4` | G1 r07c12 / edge 12 | `关键词` | `古代人` | 1 | `关古` | `GU` |
+| 2 | `I05.3` | G3 r06c07 / edge 51 | `关键词` | `的概念` | 1 | `关的` | `GE` |
 
-Only the block `关键词` repeats among the 180 repaired three-Han blocks.  The
-two occurrences answer different clues and trade with different blocks:
+The order is fixed by the repaired hosts in statement order: the G1 across
+host precedes the final depth host.  The orientation is also fixed: the
+selected high-frequency block is the object whose two trades are being
+examined, so it precedes its partner in each pair.
 
-| Host clue answer | Counterpart traded with `关键词` | Role |
-| --- | --- | --- |
-| `反切` | `古代人` | the fanqie result is an ancient person |
-| `BREAK` | `的概念` | use the concept of a break, not the literal word |
-
-The old analysis concatenated the counterparts as `古代人的概念`.  That
-discarded the local pairing and led to a chain of unsupported semantic
-landings.  Keeping the associations explains both instructions directly.
-
-## 3. Break at the center and read the nested pairs
-
-The `BREAK` depth clue is at the exact common center of the three boards.
-Place the break in the center of the four-syllable stream:
+The referenced CCBC 15 “河海解谜” explicitly establishes fanqie as the
+operation and allows tone changes.  Thus the fixed reading is:
 
 ```text
-TAN [ ZHENG | YING ] WAI
+GU / GE
 ```
 
-Read away from the break, right side before left side:
+## 3. Rejected landing
 
-| Layer | Syllables | Result |
-| --- | --- | --- |
-| inner (`里`) | `YING / ZHENG` | **嬴政** |
-| outer | `WAI / TAN` | **外滩** |
+Toneless `GU/GE` has multiple possible spellings, including `骨骼`.  The
+former route tried to resolve the homophone from the repeated block
+`关键词`, because keywords can be submitted to Google searches.  It proposed:
 
-The outer result is an internal checksum: `外滩` literally begins with
-“outside” and fixes the right-before-left orientation.  The inner result is
-the one selected by `里` and by the paired counterpart `古代人`.
-The bundled local dictionary independently lists `嬴政` as a person-name for
-`YING/ZHENG` and `外滩` as a noun for `WAI/TAN`; no web lookup is involved.
+```text
+谷歌
+```
 
-The candidate answer is therefore **嬴政**.
+The user rejected both this Chinese spelling and `GOOGLE`.  The semantic step
+was therefore not a valid disambiguator.  `GU/GE` alone also does not justify
+switching to another homophone such as `骨骼`, so the route is closed unless
+new题面 evidence independently selects a landing.
+
+No online answer or solution lookup was used.
 
 ## Reproduction
 
-Validate the direction-local fill and list the four value-2 trades:
-
-```powershell
-python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\component_crossword.py `
-  --layout rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\visual\canonical\layout.json `
-  --render-direction-fill rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\artifacts\direction-frequency-solution.json
-```
-
-Reproduce the two keyword trades:
+Reproduce the unique repeated block and its two partners:
 
 ```powershell
 python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\high_frequency.py `
@@ -92,21 +77,19 @@ python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strateg
   --output rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\high-frequency-audit-current.md
 ```
 
-Reproduce the fixed fanqie orientations:
+Reproduce the numeric fill and verify that edges 12 and 51 both have value 1:
+
+```powershell
+python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\component_crossword.py `
+  --layout rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\visual\canonical\layout.json `
+  --report rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\all_crossings_unanchored.md `
+  --all-character-pairs rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\artifacts\direction-frequency-solution.json
+```
+
+Reproduce the two fanqie pairs:
 
 ```powershell
 python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\fanqie_audit.py `
   --dict rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\jieba-dict.txt `
-  --pairs 兔干 质锋 忆性 味百
-
-python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\fanqie_audit.py `
-  --dict rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\jieba-dict.txt `
-  --reading ying zheng
-
-python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\fanqie_audit.py `
-  --dict rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\jieba-dict.txt `
-  --reading wai tan
+  --pairs 关古 关的
 ```
-
-The coordinate and orientation audit is retained at
-`work/visual/high-frequency-orientation-audit.md`.

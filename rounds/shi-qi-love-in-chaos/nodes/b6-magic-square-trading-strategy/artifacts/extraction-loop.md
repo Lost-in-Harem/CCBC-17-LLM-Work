@@ -1,106 +1,102 @@
-# Rejected closed-loop extraction
+# Rejected endpoint trade-chain extraction: 伤势
 
-> The user explicitly rejected **循环** on 2026-08-30.  The route below is
-> retained as negative evidence.  In particular, its answer-length traversal
-> and its edge-by-edge interleaving of printed/repaired states are not licensed
-> by the puzzle text.  The current shortest extraction stops when `DAMAGE`
-> locates the repaired clue answered by **易伤**.
+**Status: rejected.** The user explicitly rejected `伤势`.  The chain below
+is reproducible but stacks several unlicensed interpretations of `END` and
+the underline marks; it is retained only as negative evidence.  The active
+direct extraction is the depth-only high-frequency route in
+`artifacts/depth-high-frequency-extraction.md`.
 
-This artifact starts only after the 57 clue-block trades and the 57/57
-direction-frequency fill have been verified.  It uses the repaired answers in
-`artifacts/direction-frequency-solution.json`; in particular the damage clue
-answers **易伤**, not the earlier provisional **暴击**.
+## 1. Count the ends of all 50 entries
 
-## 1. Count the ends of the grid entries
+For an answer written with `N` characters or symbols, its end lies at cell
+`N` of its assigned entry. `END` has three letters and is included normally;
+its endpoint is `D` on G3. Center-aligning the three boards and counting all
+50 endpoints gives one coordinate of maximum frequency:
 
-For each repaired clue answer of `N` written characters, place its last
-character at position `N` of its assigned grid entry.  `BREAK` is an
-instruction and is skipped because its five Latin letters do not index its
-three-cell entry.
+| Centered coordinate | Direction | Entry answer | End |
+| --- | --- | --- | --- |
+| r10c04 | 横 | 中冲穴 | 穴 |
+| r10c04 | 纵 | 翼 | 翼 |
+| r10c04 | 里 | 关节 | 节 |
 
-Center-aligning the three printed boards gives one unique coordinate occupied
-by three such ends.  All other centered coordinates have at most two:
+The maximum is 3; every other coordinate has frequency at most 2. In the
+statement's direction order `横 / 纵 / 里`, the carriers are `穴 / 翼 / 节`.
+The repaired clue “西十五河海解谜中的关键词” answers `反切`, so `穴翼`
+gives `XI`; the following `节` fixes the homophone as:
 
-| Centered coordinate | Direction | Entry | Answer length | End character |
-| --- | --- | --- | ---: | --- |
-| r10c04 | 横 | G3-A08 | 中冲穴, 3 | 穴 |
-| r10c04 | 纵 | G2-D02 | 翼, 1 | 翼 |
-| r10c04 | 里 | Z04 | 关节, 2 | 节 |
+```text
+穴 / 翼 / 节 -> XI / 节 -> 细节
+```
 
-In the displayed direction order, `穴 / 翼 / 节` gives `XI / 节`: fanqie of
-`穴翼` is `XI`, and the following `节` fixes the landing as **细节**.  This is
-an instruction, not the answer.
+The full 50-end ledger, including `END`, is generated in
+`artifacts/answer-endpoint-extraction.md`.
 
-## 2. The literal details give DAMAGE
+## 2. The three marked details give DAMAGE
 
-The page has exactly three underline marks.  After the clue-block trades are
-undone, the two marked characters at those fixed statement locations are:
+The page has exactly three underline runs. After all crossing trades are
+undone, the characters occupying those fixed printed locations are:
 
-| Mark order | Characters | Fanqie |
+| Mark | Pair | Fanqie |
 | ---: | --- | --- |
 | 1 | 黛拉 | DA |
 | 2 | 曼丽 | MI |
 | 3 | 记忆 | JI |
 
-Thus the marked **细节** read `DA / MI / JI`, the English phonetic rebus
-**DAMAGE**.  The user rejected DAMAGE as the submission answer, but it is an
-exact locator for the repaired clue `发生后伤害数字变大`, answered by
-**易伤**.
+Thus the marked `细节` read `DA / MI / JI`, the phonetic English locator
+`DAMAGE`. This is an instruction to enter the repaired clue containing
+“伤害”, not a submission answer.
 
-## 3. Follow answer lengths until BREAK
+## 3. Follow answer ends through their trades
 
-An answer of `N` written characters selects block `N` of its assigned entry.
-If that block was traded at a crossing, follow the counterpart to the clue on
-the other entry:
+The unique repaired clue containing “伤害” is
+`发生后 / 伤害数 / 字变大`, whose crossing-locked answer is `易伤`.
+Go to the end of that answer: its written length 2 selects block 2 of its
+assigned entry. Follow the actual trade at that block. Repeat once:
 
-| Current answer | Length-selected block | Trade edge | Counterpart block | Next answer |
+| Current answer | End / selected block | Trade | Partner block | Next clue answer |
 | --- | --- | ---: | --- | --- |
-| 易伤 | `伤害数` (block 2) | 35 | `物理化` | ζ电势 |
-| ζ电势 | `的概念` (block 3) | 51 | `关键词` | BREAK |
+| 易伤 | **伤** / `伤害数` | 35 | `物理化` | ζ电势 |
+| ζ电势 | **势** / `的概念` | 51 | `关键词` | END |
 
-`BREAK` terminates the walk.  Both selected crossings have direction-frequency
-value 1, which indexes the first character of every three-Han block.  At each
-trade, read the printed (traded) pair and then the repaired pair by fanqie:
+The second destination clue is `结束本部分的关键词`, so `END` terminates the
+walk. The two nonterminal answer ends collected on the way are:
 
-| Edge | Printed pair | Reading | Repaired pair | Reading |
+```text
+易[伤] -> ζ电[势] -> END
+             伤势
+```
+
+The candidate answer is **伤势**.
+
+## 4. Closed mechanical check
+
+Both traversed trades have direction-frequency value 1. Index character 1
+of the two traded three-Han blocks and read each trade in the natural
+printed-before-repair order. Applying the same `反切` keyword gives:
+
+| Trade | Printed pair | Reading | Repaired pair | Reading |
 | ---: | --- | --- | --- | --- |
-| 35 | `伤物` | SHU | `物伤` | WANG |
-| 51 | `关的` | GE | `的关` | DUAN |
+| 35 | `伤物` | SHU = 数 | `物伤` | WANG = 网 |
+| 51 | `关的` | GE = 格 | `的关` | DUAN = 端 |
 
-The fixed stream is therefore:
-
-```text
-SHU / WANG / GE / DUAN  ->  数 / 网 / 格 / 端
-```
-
-That instruction is **数网格端**: count the ends of the grid entries.  It is
-exactly the operation in step 1, so the extraction returns to its own start.
-
-## 4. Landing
-
-The extraction is a literal program-like loop:
-
-```text
-数网格端 -> 细节 -> DAMAGE -> 易伤 -> ζ电势 -> BREAK
-     ^                                             |
-     +---------------------------------------------+
-```
-
-`BREAK` is the programming keyword that exits this loop.  The structure being
-identified, and the answer candidate, is **循环** (`LOOP`).  This explains why
-`细节`, `DAMAGE`, and `BREAK` are all precise intermediate signals but were
-each rejected when submitted literally.
+This spells `数网格端`, exactly the operation that starts step 1. It is a
+self-check, not the final answer; the terminal `END` makes the carried endpoint
+characters `伤 / 势` the output.
 
 ## Reproduction
 
-The corrected endpoint count is generated by:
+From the repository root:
 
 ```powershell
 python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\selection_frequency.py `
   --layout rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\visual\canonical\layout.json `
-  --report rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\all_crossings_unanchored.md
-```
+  --report rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\all_crossings_unanchored.md `
+  --output rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\artifacts\answer-endpoint-extraction.md
 
-The two chain edges and their printed/repaired character pairs are edges 35
-and 51 in the finite 57-trade audit produced by
-`work/component_crossword.py --all-character-pairs`.
+python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\answer_trade_graph.py `
+  --layout rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\visual\canonical\layout.json `
+  --report rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\all_crossings_unanchored.md `
+  --dict rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\jieba-dict.txt `
+  --components rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\artifacts\direction-frequency-solution.json `
+  --output rounds\shi-qi-love-in-chaos\nodes\b6-magic-square-trading-strategy\work\answer_trade_graph.md
+```

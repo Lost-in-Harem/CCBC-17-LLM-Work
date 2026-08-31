@@ -3,8 +3,11 @@
 > Hint 3 invalidates the premise of this extraction.  The contents of
 > corresponding cells across the three boards are three-Han clue blocks along
 > the depth/`里` axis; the puzzle never instructs solvers to use repaired
-> answer lengths as cell indices.  `PERSPECTIVE / 视角` is withdrawn and this
-> file is retained only as negative evidence.
+> answer lengths as cell indices.  This derivation of `PERSPECTIVE / 视角` is
+> withdrawn and the file is retained only as negative evidence; the same answer
+> is now independently supported by the Meta and the depth/high-frequency
+> extraction.  This old route also uses the superseded
+> five-letter central fill `BREAK`; the strict three-cell answer is `END`.
 
 This artifact records the former post-reconstruction hypothesis that
 continued past the explicitly rejected readings `细节` and `DAMAGE`.

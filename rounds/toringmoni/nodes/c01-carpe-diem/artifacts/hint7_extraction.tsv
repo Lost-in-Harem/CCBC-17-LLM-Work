@@ -7,28 +7,52 @@ intermediate	四图依次输出	拼接并识别相关作品	阿飞正传
 famous_line_time	电影“一分钟”台词明确给出1960-04-16下午三点前一分钟	换成分钟精度	1960-04-16 14:59
 famous_line_object	电影“无脚鸟”台词	选择图3中的鸟，不合读五只动物	鸟
 minute_offset	E0=2026-08-19 14:51	目标时刻减锚点	-34892632
-photo2_at_target	目标E mod14=2	红/蓝/黄框按题头顺序圈出百/家/姓，且问号在“飞”格	百家姓=S
+photo2_at_target	目标E mod14=2	红/蓝/黄框按题头顺序圈出百/家/姓，且问号在“飞”格	百家姓=S；?=飞=FLY
 bird_orbit	鸟的零基行主序格号=(2E+7) mod25	E mod25=18；格号=18零基	二维坐标=(4,4)
+bird_motion	鸟每分钟沿行主序前进两格	比较目标分钟前一帧、目标帧与后一帧	第17格(4,2)→第19格(4,4)→第21格(5,1)
+rejected_skipped_square	目标到达帧从一基第17格直达第19格	以5×5方格的A–Y行主序标号读取被跨过的第18格	R；导向OVER THE RAINBOW，用户明确判错
+hint5_fixed_path	提示5已恢复所有可解相位共有的唯一通路	保留通路中心线，不外推目标分钟墙体	(1,1)→(1,2)→(1,3)→(2,3)→(3,3)→(4,3)→(5,3)→(5,4)→(5,5)
+arrival_crossing	鸟从第17格飞到目标第19格	连接两个格心并与固定通路求交	恰在第18格(4,3)相交；它是通路第6步
+departure_control	若把“目标分钟”解释为目标帧到下一帧	第19格到第21格的格心线段与固定通路求交	仍穿过通路竖段，交点为(13/3,3)
+failed_crossing_paths	把固定通路与鸟轨道的25种到达线段全部求交	统计有交点的相位数	25/25全部相交；CROSSING PATHS不区分目标分钟，停止
+rejected_rainbow_distinctiveness	穷举鸟25相位与颜色7相位的最小公倍数周期	同时要求飞越R且图1为BLUE	虽为1/175相位，OVER THE RAINBOW仍被判错，不能挽救无指令的R展开
 target_maze_control	目标E mod140=128	与可解相位9/65比较	该分钟迷宫不通；不能再提取通路
 direct_position	鸟的可见位置是第4行第4列	按题面二维布局直接并记行列	44；用户明确判错，不能原样提交
 row_major_value	鸟轨道零基格号18	转为玩家可读的一基行主序格号	第19格
 photo3_like_check	模块源码硬编码图3点赞数为19	与鸟的一基格号比较	19=19；独立消除零基/一基歧义
 rejected_number_format	鸟的一基格号与图3固定点赞数均为19	尝试数字串和英文基数词	19、NINETEEN；用户均明确判错，只保留为相位校验
-rejected_alphabet_suffix	鸟在一基第19格	取第19个英文字母	S、BLUES、BIRDS均被判错；整个字母后缀家族停止
+square_letter	鸟在一基第19个方格	按A1Z26只取中间字母	S；裸S、名词拼接及TIME FLIES屈折路线均已拒，只作失败控制
 rejected_polybius	同一坐标(4,4)	标准I/J合并的5×5 Polybius方阵	T；用户明确判错，停止密码表路线
-horse_overlap_control	马在E=0位于(3,2)，目标是18次马步后	马步每次翻转棋盘颜色，偶数步保持颜色	马与(4,4)的鸟不可能重合
-rejected_lookup	曾把格号19或坐标44接到图2的S_n	S19=尤、S44=葛；用户均明确判错	整个S_n终局查表家族停止
+horse_overlap_control	马在E=0位于(3,2)，目标E为偶数	马步每次翻转棋盘颜色，偶数步保持颜色	马与(4,4)的鸟不可能重合；不能排除马在相邻(4,5)
+rejected_target_sequence_lookup	目标分钟图2把百家姓定义为S；鸟在一基第19格	查百家姓S19	尤；中文提交已被用户判错
+rejected_english_romanisation	终答须为英文且提示6有拼音操作	把姓氏“尤”转写为拼音/罗马字	YOU；用户明确判错，整条S19路线停止
+rejected_flavor_check	题面原句“我这一生只会为你停留一次”	把“为你”译成终答语言	for YOU；候选被拒后不能再作提取依据
+rejected_coordinate_lookup	鸟二维坐标曾被拼为44	查百家姓S44	葛；用户明确判错，坐标下标路线停止
 retained_enclosure	13:03与23:48两份独立迷宫存档	从(4,4)出发均只能到(4,5)，两格区域的6条外边界墙全部存在	封闭1×2隔间；见work/target_bird_state.tsv
 thematic_control	无脚鸟台词末尾的死亡；题名Carpe Diem	联想死/死亡/Memento Mori	只属主题联想，不读取目标鸟的可见局部状态
-rejected_wall_state	两份非目标分钟的墙都围住(4,4)-(4,5)	把墙体外推到历史目标分钟并词汇化	CAGED BIRD；用户明确判错，且目标墙相位从未复现
+rejected_wall_state	两份非目标分钟的墙都围住(4,4)-(4,5)	把墙体外推并泛称为cage	CAGED BIRD；用户明确判错
+target_wall_fit	十份新只读盘面覆盖周期2/3/4/5/7/10所需的目标余数	对全部60条单位边逐条拟合相容周期并投到E=-34892632	目标墙37条；歧义边0条
+target_bird_walls	目标鸟=(4,4)	读取本格北/东/南/西四边	1/0/1/1；仅向东开放
+target_bird_component	从(4,4)沿所有开放边遍历	求完整连通块与外边界	连通块={(4,4),(4,5)}；六条外边界墙全部存在
 object_word	《阿飞正传》第二句名台词明确指定“鸟”	把被观察对象译成终答语言	BIRD
 target_colour	目标E mod7=2使图1动态颜色精确为“蓝”；鸟emoji也目视为蓝色	译成终答语言	BLUE
-rejected_suffix_compositions	鸟的一基第19格曾转成S	BLUE+S；BIRD+S	BLUES、BIRDS均被判错；共同的S后缀停止
+rainbow_carrier	图1颜色序列固定为赤橙黄绿青蓝紫	识别标准七色集合	RAINBOW；为被飞越的R提供题面内展开
+rejected_rainbow_answer	目标BLUE BIRD从Q到S时越过R，再以七色载体展开R	视觉字谜	OVER THE RAINBOW；用户明确判错，整族停止
+target_photo4	目标分钟图4第二行为“乐+娇↔亚”；右侧五字轮换序列是“印度尼西亚”	读取同分钟右侧现字	亚；可直接读作ASIA，且完整序列本身是东南亚国家印度尼西亚
+direct_geometry	5×5中心是一基坐标(3,3)，目标鸟是一基坐标(4,4)	行、列各增加1	鸟在中心正东南一格，即SOUTHEAST
+rejected_geography	目标鸟相对中心为SOUTHEAST；同分钟图4现字“亚”可译ASIA	跨图合成	SOUTHEAST ASIA；用户明确判错，整条地理路线停止
+rejected_suffix_compositions	鸟的一基第19格曾转成S	BLUE+S；BIRD+S；FLY+S	BLUES、BIRDS、TIME FLIES均被判错；A1Z26后缀与英语屈折路线停止
 rejected_music	鸟坐标(4,4)	写成4/4拍并取专名	COMMON TIME；用户明确判错，音乐路线停止
 rejected_direct_compound	目标分钟动态颜色BLUE + 名台词指定对象BIRD	直接组成英文复合词	BLUEBIRD；用户明确判错，空格变体一并停止
 known_animal_cells	目标分钟可代数恢复的四条非马轨道	按A–Y行主序记格	羊E、鱼O、虎U、鸟S
 rejected_conditional_horse	留存马步锚点允许12个目标格；H并不唯一	额外要求五只动物恰好各占一行	马=(2,3)→H；仅为已拒路线的结构反推
 rejected_conditional_grid_word	条件马字母H + 已知E/O/U/S	重排五个位置字母	HOUSE；题面未明示重排，不得单独提交
 rejected_animal_compound	名台词对象BIRD + 条件盘面词HOUSE	组成常见英文复合词	BIRDHOUSE；用户明确判错，整个动物字母复合路线停止
-like_icon	图3帖子的19次赞正上方有题面原生白心🤍动作	让目标鸟的一基格号19与点赞数19相合，再读取心形概念	19=19→LOVE；不再编码数字19
-current_candidate	点赞心形给出的LOVE + 提示7指定的单只鸟BIRD	组成常见单数英文复合词	LOVEBIRD
+rejected_like_compound	图3帖子的19次赞正上方有题面原生白心🤍动作	由心形取LOVE再接BIRD	LOVEBIRD；用户明确判错，19赞只保留为一基编号校验
+rejected_time_square	名台词1给TIME；鸟在第19格；盘面单元为方格	19→S；TIME+S+SQUARE；另附4×4=16	TIMES SQUARE；用户明确判错，A1Z26拼词与数值双关停止
+rejected_dead_end	两份留存墙盘中(4,4)的北、西、南均为墙，只有东侧开放	把非目标墙外推为目标局部拓扑并加入死亡语义	DEAD END；用户明确判错；后来的精确墙模型只确认度数，不恢复死亡读法
+rejected_direct_route	迷宫入口格(1,1)与出口格(5,5)	连接两格中心，忽略墙体	主对角线经过鸟；AS THE CROW FLIES 已被用户明确判错
+rejected_crow_geometry	目标鸟在(4,4)且位于入口—出口格心直线	曾把鸟泛化成crow并读取直飞惯用语	AS THE CROW FLIES；整条路线停止
+rejected_time_flies_sync	穷举图2十四相位与鸟二十五相位的联合周期	同时要求图2给S与飞=FLY、鸟在第19格=S	虽在350相位中恰有1个，TIME FLIES仍被用户判错，整条屈折路线停止
+rejected_english_inflection	第一句曾被词汇化为TIME；目标页给FLY与S	单数主语TIME + FLY的第三人称单数	TIME FLIES；用户明确判错
+current_candidate	目标BIRD位于历史目标分钟精确复原的封闭maze cell中	maze cell→jail cell；bird in jail	JAILBIRD

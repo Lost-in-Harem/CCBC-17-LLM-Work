@@ -1,10 +1,10 @@
 # Fixed-underline DAMAGE locator
 
 > The user explicitly rejected `DAMAGE` as the final answer on 2026-08-29.
-> It is instead a locator: among the 50 repaired clues, exactly one asks about
-> damage, and its frequency-validated answer is **易伤**.  The later
-> answer-length walk that continued past this row produced the rejected
-> candidate `循环`; it is not needed for this shortest extraction.
+> The later endpoint trade walk also ended at the explicitly rejected
+> `伤势`, so this is now retained only as a failed-route audit.  The active
+> direct extraction is recorded in
+> `artifacts/depth-high-frequency-extraction.md`.
 
 This artifact records the intermediate extraction after the 57 geometric block
 trades.  The three literal underline locations are treated as fixed marks on
@@ -27,13 +27,9 @@ what remains under the three fixed marks.
 
 ## Instruction and phonetic readout
 
-After reconstruction, `关键词` is the unique highest-frequency three-Han
-block.  Its two occurrences lie in clues whose answers are **反切** and
-**BREAK**.  The blocks traded against those two occurrences, in repaired-row
-order, are `古代人 / 的概念`.  Thus “古代人的概念” selects the ancient
-phonological method **反切** from those two answers; **BREAK** is reserved for
-the final step.  Applying ordinary modern fanqie to each marked pair—initial
-of the first character plus final of the second—gives:
+After reconstruction, one clue explicitly answers **反切**. Applying that
+operation to each marked pair—initial of the first character plus final of
+the second—gives:
 
 | Marked pair | First initial | Second final | Result |
 | --- | --- | --- | --- |
@@ -60,16 +56,13 @@ guess: decomposing it as `日 / 勿 / 伤` gives `111` in the vertical direction
 and preserves equality at every one of the 57 crossings.  Alternatives such
 as `暴击` do not fit that completed frequency crossword.
 
-The other clue answering **BREAK** is the last source clue and explicitly
-says it ends this part.  The user also rejected `BREAK` as the answer.  Its
-sound role is therefore a terminal marker, not permission to invent another
-answer-length traversal.  The former continuation
-`易伤 -> ζ电势 -> BREAK -> 数网格端 -> ...` ended in the rejected structural
-guess `循环` and is retained only as negative evidence.
+The other keyword clue strictly answers **END=E/N/D**. A former continuation
+followed the end of `易伤` through `ζ电势` to `END` and carried the ends
+`伤 / 势`; the user explicitly rejected that result, so it is not active.
 
 The missing characters themselves still travel with their three-Han blocks
-and complete ordinary repaired clues as `榜样 / 曼丽 / 气性`; the fixed
-locations are the visible extraction marks.
+and complete ordinary repaired clues as `榜样 / 曼丽 / 气性`. Treating the
+fixed underline locations as extraction marks is part of this failed route.
 
 ## Reproduction
 

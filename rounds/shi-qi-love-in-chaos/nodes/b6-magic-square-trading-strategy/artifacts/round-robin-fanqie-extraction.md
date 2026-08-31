@@ -3,7 +3,9 @@
 > The user explicitly rejected **另一半** on 2026-08-29.  The allocation of
 > each fill's two characters to two numbered partners and the subsequent
 > frequency ranking were not stated by the puzzle.  This file is retained as
-> negative evidence and must not be used to restore that candidate.
+> negative evidence and must not be used to restore that candidate.  The
+> central depth clue is now filled as `END`, not the former arbitrarily
+> grouped `BREAK`; this removes another premise of the construction below.
 
 This artifact records the former extraction from the three travelling blank
 fills after all 57 geometric three-Han-block trades repaired the clues.
@@ -39,9 +41,9 @@ B3 = 气性
 ```
 
 The unique maximum-frequency three-Han block in the repaired clues is
-`关键词`, occurring twice.  Its two clue answers are `反切` and `BREAK`.
-Thus the blank fills are broken into individual characters, and the resulting
-two-character trades are read by fanqie.
+`关键词`, occurring twice.  The old route treated its two clue answers as
+`反切` and `BREAK`; the second is correctly `END`, so using it to “break” the
+blank fills was unsupported in addition to the arbitrary round-robin rule.
 
 ## Three-way round-robin trade
 

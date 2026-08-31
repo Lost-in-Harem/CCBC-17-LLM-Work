@@ -119,7 +119,7 @@ def build_transitions() -> list[Transition]:
 
 
 def build_rebranch_transitions() -> list[Transition]:
-    """Replay the WOOD candidate after removing four Russian edits."""
+    """Replay the proven second-phase skeleton after removing Russian edits."""
     return [
         Transition(
             ("西湖", "先斩后奏", "显而易见", "家丁", "孙权", "岁月", "青提子"),
@@ -130,32 +130,32 @@ def build_rebranch_transitions() -> list[Transition]:
             "复制先、见；家丁仍逐字换成网络用语宅男。",
         ),
         Transition(
-            ("先见西湖", "先斩后奏", "一目了然", "宅男", "上林", "岁月", "青提子"),
-            "显而易见改走同义成语一目了然；曹操之子曹上、曹林的名组成上林。",
+            ("先见西湖", "先斩后奏", "有目共睹", "宅男", "上林", "岁月", "青提子"),
+            "显而易见改走同义成语有目共睹；曹操之子曹上、曹林的名合理构词为上林。",
         ),
         Transition(
-            ("先见西湖", "先斩后奏", "一目了然", "右宅子", "上林", "岁月", "青提子"),
-            "男按子替换为宅子；新词上林中的方位上顺时针转九十度为右并前置，走删除俄国记录后才开放的新分支。",
+            ("先见西湖", "先斩后奏", "有目共睹", "北宅子", "上林", "岁月", "青提子"),
+            "男按子替换为宅子；取首项方位西顺时针转九十度为北，插在宅子前。",
         ),
         Transition(
-            ("先见西湖", "先斩后奏", "一目了然", "右宅子", "上林", "杀猪刀", "青提子"),
+            ("先见西湖", "先斩后奏", "有目共睹", "北宅子", "上林", "杀猪刀", "青提子"),
             "岁月的比喻改走岁月是把杀猪刀。",
         ),
         Transition(
-            ("洗", "先斩后奏", "子", "孔", "上林", "刻", "青提子"),
-            "按谜面压成常见单字：先见西湖→洗；一目了然取一与了合成子；右宅子取宅的最右笔乚与子合成孔；杀猪刀→刻。",
+            ("洗", "先斩后奏", "者", "字", "上林", "刻", "青提子"),
+            "先见西湖→洗；有目共睹→者（者有目成为睹）；北宅子取宅上部宀与子合成字；杀猪刀以亥（猪）加刂（刀）合成刻。",
         ),
         Transition(
-            ("洗", "子", "上林", "刻", "孔"),
-            "交换孔与青提子；删含月、日的青提子及四字条目先斩后奏；洗、子、上林、刻、孔均通过天气与七曜筛选。",
+            ("洗", "者", "上林", "刻", "字"),
+            "交换字与青提子；删含月、日的青提子及四字条目先斩后奏，恰剩五项。",
         ),
         Transition(
-            ("洗", "子", "LEE"),
-            "后三项合成上林刻孔；外部尚有洗、子两项，触发把刚合成的四字谜面替换为西文名称的分支。刻出林中的木和孔中的子，以上下结构合成李，写成西文姓氏LEE。",
+            ("JOHN", "上林刻字"),
+            "后三项合成上林刻字；外侧洗、者数量大于一，合并为洗者，并由施洗者约翰换成西文名称JOHN。",
         ),
         Transition(
-            ("洗子李",),
-            "把最后一项LEE替换为合适中文姓氏李并组合。组合串洗子李继续按谜语读：从李中洗去子，余木；最终英文候选为WOOD。",
+            ("JOHN", "TYLER"),
+            "上林刻字指向刻有“上林”铭文的上林瓦当，即TILE/瓦；瓦者是tiler，对应职业姓氏TYLER，组合得JOHN TYLER。",
         ),
     ]
 
@@ -379,7 +379,8 @@ def main() -> None:
     print("date verdict: a notice that the dates are a red herring")
     print("intermediate answer (user-confirmed): 折毛")
     print("second phase: delete the four Russian-editor records and replay;")
-    print("final candidate: WOOD (see rebranch_constraints.md)")
+    print("accepted answer (user-confirmed): JOHN TYLER")
+    print("Meta check: US 10th president -> Italian 10th president CARLO AZEGLIO CIAMPI")
     print(f"wrote: {output}")
     print(f"wrote: {editor_output}")
     print(f"wrote: {rebranch_output}")
