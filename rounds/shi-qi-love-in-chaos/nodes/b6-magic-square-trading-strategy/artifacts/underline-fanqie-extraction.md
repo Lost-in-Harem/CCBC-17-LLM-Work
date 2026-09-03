@@ -2,9 +2,8 @@
 
 > The user explicitly rejected `DAMAGE` as the final answer on 2026-08-29.
 > The later endpoint trade walk also ended at the explicitly rejected
-> `伤势`, so this is now retained only as a failed-route audit.  The active
-> direct extraction is recorded in
-> `artifacts/depth-high-frequency-extraction.md`.
+> `伤势`, so this is now retained only as a failed-route audit. The current
+> extraction is recorded in `artifacts/wolf-extraction.md`.
 
 This artifact records the intermediate extraction after the 57 geometric block
 trades.  The three literal underline locations are treated as fixed marks on

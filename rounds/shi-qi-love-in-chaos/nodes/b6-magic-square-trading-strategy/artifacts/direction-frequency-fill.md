@@ -41,27 +41,28 @@ answers **END**, whose three letters fill the three cells directly as
 `E / N / D`.  The former `BREAK` fill required the arbitrary merger
 `B / RE / AK`, contrary to the decomposition rule, and has been discarded.
 
-## Extraction consequence
+## Cyclic extraction prefix
 
-Hint 3 restricts extraction to the depth/`里` dimension absent from an
-ordinary crossword.  Among the four value-2/value-2 trades in the complete
-fill, exactly two involve that dimension:
+Hint 3 adds the depth/`里` dimension absent from an ordinary crossword. It
+does not discard the planar directions. The complete fill has four
+value-2/value-2 trades. Read each printed traded pair in the single global
+direction cycle `横→纵→里→横`:
 
 ```text
-edge 55: 横 气性不 / 里 记忆中, index 2 -> 性忆 -> XI
-edge 57: 横 六百号 / 里 的味道, index 2 -> 百味 -> BEI
-                                                   西北
+edge 06: 横 吃兔子 / 纵 在干活, index 2 -> 兔干 -> TAN
+edge 09: 横 地质学 / 纵 雷锋是, index 2 -> 质锋 -> ZHENG
+edge 55: 里 气性不 / 横 记忆中, index 2 -> 性忆 -> XI
+edge 57: 里 六百号 / 横 的味道, index 2 -> 百味 -> BEI
 ```
 
-The pair order is fixed by the statement directions `横` before `里`; the
-trade order is fixed by the displayed boards G1 before G3.  The separately
-restored keyword `反切` supplies the operation, and the other keyword `END`
-says to stop rather than use `西北` as a second-stage line selector.  In the
-stacked three-dimensional grid, `西北` is the extracted viewing direction or
-**perspective**.  The accepted Round Meta fixes the English feeder form as
-**PERSPECTIVE**; details are in
-`artifacts/depth-high-frequency-extraction.md` and
-`artifacts/meta-backsolve-perspective.md`.
+The restored keyword `反切` supplies the operation. Reading central `E/N/D`
+as East/North/Depth fixes `横→纵→里→横`, producing
+`弹筝西北→企业的`. The former continuations to `CORPORATE`, `HIGH FLYER`,
+`LANG/WOLF`, `PHILOSOPHY`, and `CONCUBINE` were explicitly rejected. New
+evidence keeps this mechanical prefix, then reads the two trades made by the
+unique repeated block `关键词` as `GU/GE=骨骼`, completing
+`企业的骨骼→CORPORATE STRUCTURE`; see
+`artifacts/corporate-structure-extraction.md`.
 
 ## Reproduction
 

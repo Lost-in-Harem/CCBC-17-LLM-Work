@@ -4,9 +4,10 @@
 > corresponding cells across the three boards are three-Han clue blocks along
 > the depth/`里` axis; the puzzle never instructs solvers to use repaired
 > answer lengths as cell indices.  This derivation of `PERSPECTIVE / 视角` is
-> withdrawn and the file is retained only as negative evidence; the same answer
-> is now independently supported by the Meta and the depth/high-frequency
-> extraction.  This old route also uses the superseded
+> withdrawn and the file is retained only as negative evidence; `PERSPECTIVE`
+> has since also been explicitly rejected by the user.  The later exact phrase
+> `POINT OF VIEW` was also explicitly rejected; neither route is active, and
+> does not rehabilitate this chain.  This old route also uses the superseded
 > five-letter central fill `BREAK`; the strict three-cell answer is `END`.
 
 This artifact records the former post-reconstruction hypothesis that
@@ -87,8 +88,8 @@ The local two-Han dictionary's toneless `shi / jiao` hits are led by `视角`
 describes the puzzle's central operation: the same positions are read through
 clue-block, answer-grid, and three-plane views.
 
-The extracted Chinese answer is therefore **视角**; the corresponding English
-answer form is **PERSPECTIVE**.
+This obsolete route therefore proposed Chinese **视角** and English
+**PERSPECTIVE**.  Both the derivation and the English answer are rejected.
 
 ## Reproduction pointers
 

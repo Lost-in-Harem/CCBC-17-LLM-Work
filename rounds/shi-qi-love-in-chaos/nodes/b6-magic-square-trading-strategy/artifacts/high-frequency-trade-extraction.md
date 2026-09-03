@@ -1,10 +1,13 @@
 # Rejected highest-frequency-block route: 谷歌 / GOOGLE
 
 The user explicitly rejected both `谷歌` and `GOOGLE`.  This artifact retains
-the reproducible `GU/GE` observation as negative evidence; it is not the
-active extraction. The observed uniqueness of `关键词×2` and its two host
-answers `反切 / END` remain valid; the active use of those instructions is in
-`artifacts/depth-high-frequency-extraction.md`.
+the reproducible `GU/GE` observation but no longer treats every non-Google
+landing as unsupported: comparison with the printed state now gives the exact
+pair `GUAN/DUAN=关断` and repaired `GU/GE≈骨骼`.  The rejected `CONCUBINE` route used
+the host `反切` and the complete partners `古代人 / 的概念` in the separate,
+stricter continuation `企业的反切 -> qiè -> 妾`; see
+`artifacts/concubine-extraction.md`.  The bone landing remains an unused
+checksum rather than an alternate answer.
 
 The former four-value-2 shell route produced the user-rejected intermediates
 `嬴政 / 外滩` and then the user-rejected candidate `杜月笙`.  The phrase

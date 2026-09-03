@@ -2,9 +2,8 @@
 
 **Status: rejected.** The user explicitly rejected `伤势`.  The chain below
 is reproducible but stacks several unlicensed interpretations of `END` and
-the underline marks; it is retained only as negative evidence.  The active
-direct extraction is the depth-only high-frequency route in
-`artifacts/depth-high-frequency-extraction.md`.
+the underline marks; it is retained only as negative evidence. The current
+extraction is in `artifacts/wolf-extraction.md`.
 
 ## 1. Count the ends of all 50 entries
 

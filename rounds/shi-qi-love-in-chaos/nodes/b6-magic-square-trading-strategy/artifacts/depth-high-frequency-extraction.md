@@ -1,4 +1,11 @@
-# Depth-only high-frequency extraction
+# Rejected depth-only high-frequency subset
+
+> **Status: rejected.** `PERSPECTIVE` and `POINT OF VIEW` were both explicitly
+> rejected.  More importantly, Hint 3 establishes the extra `里` direction but
+> never says to discard the ordinary `横/纵` maximum-frequency trades.  The
+> two-edge `西北` result below is reproducible but is not the complete
+> extraction.  The complete four-edge route is in
+> `artifacts/anachronism-extraction.md`.
 
 This is the direct extraction supported by Hint 3.  It uses only trades on
 the depth/`里` dimension, which is the dimension absent from an ordinary
@@ -31,13 +38,9 @@ both traded three-Han blocks.  The separately restored keyword answer
           西北
 ```
 
-The other restored keyword is `END`; it says to stop the mechanical walk
-here.  In particular, `西北` is not an instruction to select the northwest
-depth line and start a second extraction.  In the three-dimensional stacked
-grid it is a viewing direction—a **perspective**.  With the user's explicit
-authorization to reverse-solve through the accepted Round Meta, the English
-feeder answer is locked as **PERSPECTIVE**; see
-`artifacts/meta-backsolve-perspective.md`.
+The former route treated the other keyword `END` as a stop and then promoted
+`西北` to a viewing concept.  Both attempted English landings were rejected;
+the missing planar trades are the decisive structural defect.
 
 ## Reproduction
 

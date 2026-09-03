@@ -1,10 +1,12 @@
 # Rejected magic-square END/fanqie extraction: 季节
 
-**Status: rejected.** The user explicitly reported `季节` is not the answer.
-This file preserves the reproducible failed route; it does not authorize
-treating title-word `幻方` as a generic opposite-corner pairing instruction or
-executing central `END` as a last-character function. The active extraction is
-`artifacts/depth-high-frequency-extraction.md`.
+**Status: rejected diagonal pairing.** The user explicitly reported `季节` is
+not the answer. The four answer ends and the `END/反切` operations remain
+reproducible, but the later `清明 / TOMB SWEEPING DAY` verdict closed this
+entire 2×2 family. The current candidate does not use this table; it uses the
+complete keyword partners directly as `古代人 / 的概念 -> 观念`. See
+`artifacts/philosophy-extraction.md`. The recursive Chinese `奇迹` and its
+English translations `WONDER/MIRACLE` are all rejected.
 
 ## 1. Select the two high-frequency keywords
 

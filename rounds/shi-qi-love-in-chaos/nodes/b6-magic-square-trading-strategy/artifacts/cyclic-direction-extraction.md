@@ -1,10 +1,12 @@
-# Rejected cyclic-direction extraction: 量化
+# Rejected cyclic-direction landing: CORPORATE
 
-**Status: rejected.** The user explicitly rejected both `高频交易` and the
-later terminal `量化`. The bounded streams below remain reproducible, but the
-cycle orientation was chosen because it makes Mandarin rather than by a
-题面-specified ordering; `QI/YE/DE` also has several homophonic landings.
-This route is no longer used by the active extraction.
+**Status: rejected landing, retained upstream.** The user explicitly rejected
+both **CORPORATE** and the alternate **WEEKEND** landing.  The later strict
+central fill `E / N / D` independently authorizes the direction cycle, so the
+phonetic prefix `弹筝西北 -> 企业的` remains reproducible.  Only the direct
+English landings documented here are closed; the current continuation is
+the now user-rejected `企业的反切 -> qiè -> 妾 -> CONCUBINE` route in
+`artifacts/concubine-extraction.md`.
 
 ## 1. Orient the three dimensions cyclically
 
@@ -59,7 +61,7 @@ QI / YE / DE = 企业的
 The direction rule has therefore been reused at two extraction levels; no
 pair is individually reversed to force a legal syllable.
 
-## 3. Rejected completion `企业的 END`
+## 3. Stop at the complete definition `企业的`
 
 The unique repeated traded block `关键词` occurs in two restored clues. Their
 answers are `反切`, used above, and `END`:
@@ -68,35 +70,52 @@ answers are `反切`, used above, and `END`:
 结束本部分的关键词 -> END
 ```
 
-The extracted fragment `企业的` is deliberately possessive and incomplete.
-Place the second keyword after it exactly as supplied:
+The old route treated `企业的` as an incomplete possessive phrase. That was
+the grammatical mistake: the feeder answer is English, so Chinese `企业的`
+is a complete adjective definition:
 
 ```text
-企业的 END
+企业的 = CORPORATE
 ```
 
-This means the **ending of the enterprise's name**, not `END(企业)=业` and not
-the English phrase `BUSINESS END`.  The title identifies the enterprise by
-its short name `幻方`; its full name is `幻方量化`.  Therefore:
+The clue for the other keyword literally says that it is the keyword that
+ends this part. Thus `END` is a stop signal once this complete definition has
+been obtained; it is not an instruction to reverse the previous stream, take
+a last letter, or append an English fixed phrase.
+
+The title and flavor text independently place the speaker inside an
+algorithmic high-frequency-trading enterprise and therefore support the
+corporate sense. No company-name lookup is required.
+
+## 4. Rejected extensions
+
+The former company-name completion was:
 
 ```text
 企业：幻方量化
 END：      量化
 ```
 
-This proposed **量化**. The user explicitly rejected it, so the following
-thematic checks are insufficient to authorize the completion:
+It proposed **量化**, which the user explicitly rejected. `BUSINESS END`,
+`业`, `甲方`, and directly copying `高频交易` were also rejected. None of
+those verdicts rejects the mechanically obtained `QI/YE/DE`; they rule out
+adding another semantic operation after it.
 
-1. The title “幻方的交易策略” defines `量化` as the hidden modifier of its
-   trading strategy and as the omitted suffix of `幻方量化`.
-2. The main fill literally turns decomposed answer components into numerical
-   frequencies: it *quantifies* them.
-3. “算法工程师 / 高频交易” describes the quantitative-finance setting without
-   itself being the answer.
+## 5. Meta positional check
 
-The earlier rejected `业` took the end of the generic word `企业`; `甲方` took
-ends from two unrelated short strings.  Neither identified the enterprise's
-full name, so those verdicts do not collapse this more specific operation.
+After accepted feeder b4=`PEEP` takes the `PUSA` row formerly assigned to b6,
+the unresolved sixth Meta row uses suffix `BO` and needs `O`. Left-align:
+
+```text
+BO
+CORPORATE
+ O
+```
+
+The only same-position equal letter is `O` at position 2, exactly the sixth
+letter of accepted Meta `PARADOXXING`. The Chinese name proposed for that
+audio row has not been independently re-established, so this remains
+corroboration rather than the primary derivation.
 
 ## Reproduction
 

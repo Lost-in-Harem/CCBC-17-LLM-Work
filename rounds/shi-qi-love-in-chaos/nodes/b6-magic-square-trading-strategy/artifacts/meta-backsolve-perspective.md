@@ -1,11 +1,18 @@
-# Meta-backed identification of PERSPECTIVE
+# Rejected Meta synonym fill: PERSPECTIVE
+
+> **Status: rejected.** The user explicitly rejected `PERSPECTIVE` on
+> 2026-08-31.  The accepted Meta constrains this feeder's semantic key to
+> `观=VIEW` and its overlap letter to initial `P`; it does not authorize this
+> particular synonym.  The exact replacement supported by the local
+> `西北=compass POINT` extraction is documented in
+> `artifacts/point-of-view-extraction.md`.
 
 The user explicitly authorized reverse-solving this feeder through its Round
 Meta.  The Meta `八音盒里的潘多拉` is accepted with answer `PARADOXXING`.
 Its first audio object is `观音菩萨`; the semantic prefix `观` selects this
 feeder, while the suffix `PUSA` is left-aligned with the feeder answer.
 
-The Meta's recorded feeder value is `PERSPECTIVE`:
+The Meta solution had recorded the unverified feeder guess `PERSPECTIVE`:
 
 ```text
 PUSA
@@ -34,10 +41,10 @@ Two local observations converge on the same concept.
    after `古代人`, matching the Meta's semantic key.
 
 The former artifact that reached `视角` through answer-length endpoints was
-invalid because it used the wrong clue answer `暴击` and the wrong central
-fill `BREAK`.  The candidate is revived here on independent evidence: the
-accepted Meta, the depth-only `西北` extraction, and the repeated-keyword
-partner phrase.  No online answer or official solution was consulted.
+also invalid because it used the wrong clue answer `暴击` and the wrong
+central fill `BREAK`.  Neither that route nor this broad semantic fill may be
+used to restore `PERSPECTIVE`.  No online answer or official solution was
+consulted.
 
 ## Reproduction
 
@@ -53,4 +60,6 @@ The Meta overlap can be checked read-only from the repository root with:
 python -X utf8 rounds\shi-qi-love-in-chaos\nodes\b-meta-pandora-that-is-trapped\work\positional_overlap.py
 ```
 
-Its b6 row is `观音菩萨 / PUSA / PERSPECTIVE / position 1 / P`.
+Its b6 row is the now-rejected guess
+`观音菩萨 / PUSA / PERSPECTIVE / position 1 / P`; only the semantic key
+`观=VIEW` and the overlap requirement `position 1 / P` survive.

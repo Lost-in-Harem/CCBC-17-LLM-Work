@@ -2,9 +2,10 @@
 
 > The block counts and counterpart table below remain reproducible.  The
 > former `嬴政／外滩` shell interpretation and its `杜月笙` continuation were
-> explicitly rejected.  Reading the two trades directly also led to the
-> explicitly rejected `谷歌 / GOOGLE`; see
-> `artifacts/high-frequency-trade-extraction.md`.
+> explicitly rejected.  Reading the two trades as `谷歌 / GOOGLE` and directly
+> translating `古代人的概念` as `PRECONCEPTION` were also rejected.  The
+> the rejected `CONCUBINE` route used the counterparts as a type constraint after
+> `企业的反切 -> qiè`; see `artifacts/concubine-extraction.md`.
 
 - reconstructed clue rows: `50`
 - three-Han block occurrences: `180`
@@ -35,7 +36,8 @@ maximum-frequency block first and index character 1 of it and its partner:
 | **反切** | `关古` | `GU` |
 | **END** | `关的` | `GE` |
 
-The fixed stream under this hypothesis is `GU/GE`, but the attempted
-`关键词 -> 谷歌 / GOOGLE` homophone landing was explicitly rejected.  The
-stream has no题面-internal reason to select another homophone, so this route
-is retained only as a bounded negative audit.
+The fixed repaired stream is `GU/GE`; the attempted `谷歌 / GOOGLE` landing
+was explicitly rejected.  A later state comparison found the exact pair
+`GUAN/DUAN=关断` before repair and the strong repaired landing `GU/GE=骨骼`.
+That dual state is retained as a checksum, not used to replace the current
+answer candidate, because it still lacks a unique English normalization.

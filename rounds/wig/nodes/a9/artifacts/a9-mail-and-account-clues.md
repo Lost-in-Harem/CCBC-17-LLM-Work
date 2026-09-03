@@ -1,6 +1,6 @@
 # A9 visible evidence
 
-Collected from the WIG interface on 2026-08-30. No public-answer search was used. The user explicitly authorized installation of **猴子喂食俱乐部**; installation succeeded. No answer, message, dial, or hint request was submitted, and **毋知** was not opened.
+Collected from the WIG interface through 2026-09-03. No public-answer search was used. The user explicitly authorized the WIG installation/submission chain; it completed successfully. No message, dial, or hint request was made, and **毋知** was not opened.
 
 ## Mail: 请帮助我守护时柒
 
@@ -30,7 +30,8 @@ Collected from the WIG interface on 2026-08-30. No public-answer search was used
 
 - Searching WIG's 手机状元榜 for the exact name **猴子喂食俱乐部** produced one result; the user authorized installation and the store showed **安装成功**.
 - Intro text says it indexes public road surveillance, has 17 CCTV channels, does not use the first general channel, and requires replacing each used channel number with its unique code.
-- The search page requires a street or town name. Every grounded query tested so far returned `0 条记录`; the complete finite audit is in `../work/a9-search-audit.tsv`.
+- The search page requires a street or town name. Early grounded queries returned `0 条记录`; the complete finite audit is in `../work/a9-search-audit.tsv`.
+- The later Final Meta chain supplied the exact word **静海镇**. This uniquely returned `有明区静海镇` with 26 CCTV images.
 
 ## Read-only story calls
 
@@ -39,4 +40,12 @@ Collected from the WIG interface on 2026-08-30. No public-answer search was used
 
 ## Final Meta link
 
-The local Final Meta《沉向网中的追迹者》says to download a real-world app inside the virtual world to open the path to saving 时柒. A9 supplies the exact app name and road-surveillance purpose, and the authorized installation now executes that instruction. `wig/a9` is therefore a confirmed operational dependency even though neither final answer is known yet.
+The local Final Meta《沉向网中的追迹者》says to download a real-world app inside the virtual world to open the path to saving 时柒. The completed chain is:
+
+`闲鱼 → 算菜 → 颤音 → 锤锤 → 猛隆过江 → 加拿天 → 静海镇 → 猴子喂食俱乐部`
+
+The Monkey CCTV images decode as Unicode to:
+
+`最终，你找到了时柒。结果就是：艺人得道，弃圈†升天†`
+
+The exact answer `艺人得道，弃圈†升天†` was accepted by the Final Meta page; both U+2020 daggers are mandatory. The site then showed the final story in which police arrive as 鬼火暗 enters the room, 徐霓 is frightened but saved, and 时柒 later graduates. The full channel mapping and image-by-image extraction are in `cctv-decode.md`.

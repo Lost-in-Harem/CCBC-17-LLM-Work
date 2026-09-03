@@ -1,8 +1,8 @@
 # Rejected answer-endpoint high-frequency extraction
 
 > This construction led through `细节` and `DAMAGE` to the explicitly
-> rejected candidate `伤势`.  It is not the active extraction; Hint 3 instead
-> selects high-frequency trades on the depth dimension directly.
+> rejected candidate `伤势`. It is not the active extraction; the current
+> route is recorded in `artifacts/qingming-extraction.md`.
 
 A repaired clue with an N-character answer selects slot position N,
 placing the answer's final character at that cell. The three planes
