@@ -3,9 +3,14 @@
 > The block counts and counterpart table below remain reproducible.  The
 > former `嬴政／外滩` shell interpretation and its `杜月笙` continuation were
 > explicitly rejected.  Reading the two trades as `谷歌 / GOOGLE` and directly
-> translating `古代人的概念` as `PRECONCEPTION` were also rejected.  The
-> the rejected `CONCUBINE` route used the counterparts as a type constraint after
-> `企业的反切 -> qiè`; see `artifacts/concubine-extraction.md`.
+> translating `古代人的概念` as `PRECONCEPTION` were also rejected. The
+> rejected `CONCUBINE` route used the counterparts as a type constraint after
+> `企业的反切 -> qiè`. A later extraction joined the reproducible repaired
+> stream `GU/GE=骨骼` to `QI/YE/DE=企业的`, but the user rejected
+> `CORPORATE STRUCTURE`, and joining `企业的` to `权贵` was rejected as
+> `MOGUL`. The current route uses the complete counterpart blocks
+> `古代人 / 的概念` as the labels that validate `嘉庆 / 阶级`, then converges
+> with Enterprise-E on `SOVEREIGN`.
 
 - reconstructed clue rows: `50`
 - three-Han block occurrences: `180`
@@ -39,5 +44,6 @@ maximum-frequency block first and index character 1 of it and its partner:
 The fixed repaired stream is `GU/GE`; the attempted `谷歌 / GOOGLE` landing
 was explicitly rejected.  A later state comparison found the exact pair
 `GUAN/DUAN=关断` before repair and the strong repaired landing `GU/GE=骨骼`.
-That dual state is retained as a checksum, not used to replace the current
-answer candidate, because it still lacks a unique English normalization.
+The dual state remains an interesting checksum, but the user rejected its
+semantic continuation `企业的骨骼 -> CORPORATE STRUCTURE`; it is no longer
+part of the active extraction.

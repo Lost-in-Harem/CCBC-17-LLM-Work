@@ -3,11 +3,11 @@
 The user explicitly rejected both `谷歌` and `GOOGLE`.  This artifact retains
 the reproducible `GU/GE` observation but no longer treats every non-Google
 landing as unsupported: comparison with the printed state now gives the exact
-pair `GUAN/DUAN=关断` and repaired `GU/GE≈骨骼`.  The rejected `CONCUBINE` route used
-the host `反切` and the complete partners `古代人 / 的概念` in the separate,
-stricter continuation `企业的反切 -> qiè -> 妾`; see
-`artifacts/concubine-extraction.md`.  The bone landing remains an unused
-checksum rather than an alternate answer.
+pair `GUAN/DUAN=关断` and repaired `GU/GE≈骨骼`. The rejected `CONCUBINE` route
+used the host `反切` and the complete partners `古代人 / 的概念` as a type
+constraint. A later attempt joined `GU/GE` to the independent
+`QI/YE/DE=企业的` stream as `企业的骨骼`, but the user rejected
+`CORPORATE STRUCTURE`; both semantic landings are now closed.
 
 The former four-value-2 shell route produced the user-rejected intermediates
 `嬴政 / 外滩` and then the user-rejected candidate `杜月笙`.  The phrase
@@ -54,18 +54,22 @@ GU / GE
 
 ## 3. Rejected landing
 
-Toneless `GU/GE` has multiple possible spellings, including `骨骼`.  The
-former route tried to resolve the homophone from the repeated block
+Toneless `GU/GE` has multiple possible spellings, including `骨骼`. The
+former Google route tried to resolve the homophone from the repeated block
 `关键词`, because keywords can be submitted to Google searches.  It proposed:
 
 ```text
 谷歌
 ```
 
-The user rejected both this Chinese spelling and `GOOGLE`.  The semantic step
-was therefore not a valid disambiguator.  `GU/GE` alone also does not justify
-switching to another homophone such as `骨骼`, so the route is closed unless
-new题面 evidence independently selects a landing.
+The user rejected both this Chinese spelling and `GOOGLE`. The semantic step
+was therefore not a valid disambiguator. `GU/GE` alone also did not justify
+switching to another homophone such as `骨骼`. The later independent
+`QI/YE/DE` stream made `企业的骨骼` linguistically natural, but the explicit
+rejection of `CORPORATE STRUCTURE` shows that natural completion was not an
+authorized extraction. The later `企业的 + 权贵 -> MOGUL` join was rejected as
+well. The current route instead keeps each complete trade partner, yielding
+the labels `古代人 / 的概念` without an extra character index.
 
 No online answer or solution lookup was used.
 

@@ -1,8 +1,8 @@
-# Candidate extraction: CORPORATE STRUCTURE
+# Rejected extraction: CORPORATE STRUCTURE
 
-> Status: candidate, not yet confirmed by the user. The earlier answer
-> `CORPORATE` was rejected because it stopped after only the first of the two
-> phonetic streams below.
+> Status: rejected by the user on 2026-09-03. Keep this only as a reproducible
+> record of the two phonetic streams. Their direct semantic concatenation and
+> every English synonym of `CORPORATE STRUCTURE` are closed routes.
 
 ## 1. Restore and fill the three-dimensional crossword
 
@@ -76,20 +76,21 @@ supported by the title/flavor's enterprise setting. As a bounded diagnostic,
 the local Chinese model ranks it first at `-23.665`; the next phrase,
 `七爷的骨骼`, scores `-28.019`.
 
-Thus the extraction ends with the Chinese definition:
+The now-rejected interpretation treated the extraction as the Chinese definition:
 
 ```text
 企业的骨骼
 ```
 
-The conventional English answer is:
+It then proposed the English answer:
 
 ```text
 CORPORATE STRUCTURE
 ```
 
-This does not restore the rejected one-word answer `CORPORATE`: that word was
-only the unfinished first stream. The second stream supplies `STRUCTURE`.
+The user rejected `CORPORATE STRUCTURE`; therefore the second stream cannot be
+used merely to supply `STRUCTURE`, and changing the English wording is not a
+valid continuation.
 
 ## 5. Meta check and residual ambiguity
 
@@ -104,11 +105,10 @@ CORPORATESTRUCTURE
  O
 ```
 
-The Chinese definition can be paraphrased as *company structure* or
-*organizational structure*. `CORPORATE STRUCTURE` is preferred because
-`企业的` directly supplies *corporate* and the resulting English phrase is
-standard; this answer-form choice is why confidence remains medium pending a
-verdict.
+The Meta overlap and language-model preference did not validate the semantic
+join. Do not retry *company structure*, *organizational structure*, or
+*corporate skeleton*. A new route must explain whether `GU/GE` is an operation
+on a puzzle object rather than a noun to append to `企业的`.
 
 ## Reproduction
 

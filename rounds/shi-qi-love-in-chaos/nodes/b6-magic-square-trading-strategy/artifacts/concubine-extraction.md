@@ -87,9 +87,12 @@ CONCUBINE
 
 The same two keyword trades also have the exact state pair
 `GUAN/DUAN -> 关断` before repair and `GU/GE -> 骨骼` after repair.  This is a
-strong checksum involving `END`, but it does not yet specify a unique English
-landing. Neither it nor the `qiè -> 妾` type claim supplied a valid final
-answer, as confirmed by the user's rejection.
+strong checksum involving `END`, but it did not by itself specify a unique
+English landing. The later `GU/GE + QI/YE/DE` join was rejected as
+`CORPORATE STRUCTURE`, and the later join to grid answer `权贵` was rejected as
+`MOGUL`. The current route instead keeps the spelling structure
+`QIYE=ENTERPRISE`, `END(QIYEDE)=E`; that does not validate the `qiè -> 妾`
+claim or the rejected answer recorded here.
 
 ## Reproduction
 

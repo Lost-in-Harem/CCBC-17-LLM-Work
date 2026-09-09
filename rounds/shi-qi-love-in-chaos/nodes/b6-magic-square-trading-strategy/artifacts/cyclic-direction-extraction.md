@@ -4,9 +4,13 @@
 both **CORPORATE** and the alternate **WEEKEND** landing.  The later strict
 central fill `E / N / D` independently authorizes the direction cycle, so the
 phonetic prefix `弹筝西北 -> 企业的` remains reproducible.  Only the direct
-English landings documented here are closed; the current continuation is
-the now user-rejected `企业的反切 -> qiè -> 妾 -> CONCUBINE` route in
-`artifacts/concubine-extraction.md`.
+English landings documented here are closed. A later continuation read the
+two trades of the unique repeated `关键词` block as `GU/GE=骨骼` and proposed
+`企业的骨骼 -> CORPORATE STRUCTURE`; the user rejected that answer as well.
+The later `企业的权贵 -> MOGUL` join was also explicitly rejected. The current
+candidate keeps the Romanized form: `QIYE=企业=ENTERPRISE` and
+`END(QIYEDE)=E`, identifying Enterprise-E rather than another Chinese
+possessive completion.
 
 ## 1. Orient the three dimensions cyclically
 

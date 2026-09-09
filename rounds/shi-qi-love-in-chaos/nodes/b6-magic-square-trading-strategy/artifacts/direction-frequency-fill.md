@@ -57,12 +57,12 @@ edge 57: 里 六百号 / 横 的味道, index 2 -> 百味 -> BEI
 
 The restored keyword `反切` supplies the operation. Reading central `E/N/D`
 as East/North/Depth fixes `横→纵→里→横`, producing
-`弹筝西北→企业的`. The former continuations to `CORPORATE`, `HIGH FLYER`,
-`LANG/WOLF`, `PHILOSOPHY`, and `CONCUBINE` were explicitly rejected. New
-evidence keeps this mechanical prefix, then reads the two trades made by the
-unique repeated block `关键词` as `GU/GE=骨骼`, completing
-`企业的骨骼→CORPORATE STRUCTURE`; see
-`artifacts/corporate-structure-extraction.md`.
+`弹筝西北→QI/YE/DE`. The direct landings `CORPORATE`, `HIGH FLYER`,
+`LANG/WOLF`, `PHILOSOPHY`, `CONCUBINE`, `CORPORATE STRUCTURE`, and `MOGUL`
+were explicitly rejected. The current route instead keeps the Romanized
+structure: `QIYE=企业=ENTERPRISE`, while `END(QIYEDE)=E`, giving
+**Enterprise-E**. The independently extracted concept `阶级=class` then
+identifies its exact class name, `SOVEREIGN`.
 
 ## Reproduction
 

@@ -1,12 +1,12 @@
 # Rejected magic-square END/fanqie extraction: 季节
 
-**Status: rejected diagonal pairing.** The user explicitly reported `季节` is
-not the answer. The four answer ends and the `END/反切` operations remain
-reproducible, but the later `清明 / TOMB SWEEPING DAY` verdict closed this
-entire 2×2 family. The current candidate does not use this table; it uses the
-complete keyword partners directly as `古代人 / 的概念 -> 观念`. See
-`artifacts/philosophy-extraction.md`. The recursive Chinese `奇迹` and its
-English translations `WONDER/MIRACLE` are all rejected.
+**Status: diagonal, cross-family, and recursive endings rejected.** The user
+explicitly rejected `季节`, `清明 / TOMB SWEEPING DAY`, and `奇迹 /
+WONDER / MIRACLE`. The four answer ends and the `END/反切` operations remain
+reproducible. The current route uses only the same-column dual reading
+`嘉庆 / 阶级` to satisfy the labels `古代人 / 概念`. It combines the retained
+`class` meaning with Enterprise-E and the independent fact that 嘉庆 was a
+sovereign; it does not restore any rejected endpoint.
 
 ## 1. Select the two high-frequency keywords
 
