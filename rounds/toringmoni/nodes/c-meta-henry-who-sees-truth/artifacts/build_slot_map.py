@@ -9,7 +9,9 @@
 The k-th folder slot of a feeder receives the letter at position i_k of that
 feeder's L-letter slogan answer.
 
-Writes artifacts/meta-slot-map.tsv. Run from anywhere:
+Includes the ten resolved strings recorded in solution.md and the accepted
+feeders (c03 synchronized from its 2026-08-31 verdict). Verifies the accepted
+answer and writes artifacts/meta-slot-map.tsv. Run from anywhere:
     python3 rounds/toringmoni/nodes/c-meta-henry-who-sees-truth/artifacts/build_slot_map.py
 """
 from pathlib import Path
@@ -30,28 +32,47 @@ DATA = {
     "c10": ([12, 23, 26], [17, 12, 7, 3]),
 }
 
+# Final feeder answer -> transformed string; the transformation axes are
+# documented in solution.md. Keep spaces in source answers for readability.
+ANSWERS = {
+    "c01": ("PITA", "NAAN"),
+    "c02": ("LITHARGE", "CARBONMONOXIDE"),
+    "c03": ("JOHN TYLER", "CARLOAZEGLIOCIAMPI"),
+    "c04": ("UMBREON", "FLAREON"),
+    "c05": ("BOUGAINVILLEA", "VANDAMISSJOAQUIM"),
+    "c06": ("JAMES SHOAL", "MOHE"),
+    "c07": ("EMERGENCY SKIN", "TWOTRUTHSANDALIE"),
+    "c08": ("KAGAMINE RIN", "HATSUNEMIKU"),
+    "c09": ("PAINTBRUSH", "STROKE"),
+    "c10": ("CLOTHOID", "LOGARITHMICSPIRAL"),
+}
+
 rows = []
 for node, (folders, code) in DATA.items():
     assert len(folders) == 3
-    if code is None:
-        for k, slot in enumerate(folders, 1):
-            rows.append((slot, node, k, "", "", ""))
-        continue
     L, *idx = code
     assert L == max(code), f"{node}: first number is not the maximum"
     assert len(idx) == 3
+    feeder_answer, transformed = ANSWERS[node]
+    assert len(transformed) == L, (node, transformed, L)
     for k, (slot, i) in enumerate(zip(folders, idx), 1):
-        rows.append((slot, node, k, L, i, f"S{L}[{i}]"))
+        assert 1 <= i <= L, (node, i)
+        rows.append((slot, node, k, L, i, transformed[i - 1],
+                     feeder_answer, transformed))
 
 rows.sort()
 assert [r[0] for r in rows] == list(range(1, 31)), "slots do not tile 1..30"
+answer = "".join(r[5] for r in rows)
+assert answer == "BACKUPANDTESTSUMMARIZETHEGISTS", answer
 
 out = HERE / "meta-slot-map.tsv"
 with out.open("w", encoding="utf-8") as fh:
-    fh.write("slot\tnode\tnth_folder\tstring_len_L\tletter_index\tletter\n")
+    fh.write("slot\tnode\tnth_folder\tstring_len_L\tletter_index\tletter"
+             "\tfeeder_answer\ttransformed_string\n")
     for r in rows:
         fh.write("\t".join(str(x) for x in r) + "\n")
 
 for r in rows:
     print("\t".join(str(x) for x in r))
 print(f"\nwrote {out}")
+print(f"answer\t{answer}")

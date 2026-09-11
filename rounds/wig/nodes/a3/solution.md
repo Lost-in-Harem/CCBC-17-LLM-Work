@@ -11,7 +11,7 @@ status: accepted
 answer: 徐霓
 confidence: high
 summary: 在跳窗向密码菌真实地址下出一杯生椰拿铁后，后台返回 correct:true；真实座机脚本把“沈小姐”改口为“徐小姐”，随后明确推断徐霓，并由胡瑞华通话与通话记录确认任务完成。
-updated: 2026-08-15
+updated: 2026-09-11
 ---
 
 # 第一个任务完成的不错
@@ -94,4 +94,4 @@ updated: 2026-08-15
 
 ## Next action
 
-a3 已由网站确认，无需再下单、拨号或提交。胡瑞华明确说“明天上班之后”再根据社工库结果布置后续任务；当前刷新邮件仍无新内容。后续只在新邮件或新通话事件出现时创建下一 answer-producing Node，并把跨应用状态继续记入 `rounds/wig/STATE.md`。
+本事件已确认完成，无当前操作待办。原先等待的后续调查已归档于 [a4](../a4/solution.md)，全局结局与漫画素材册完成记录见 [STATE.md](../../STATE.md)。

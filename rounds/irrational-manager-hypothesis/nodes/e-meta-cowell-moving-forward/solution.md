@@ -10,8 +10,8 @@ feeders: all-round-feeders
 status: accepted
 answer: FAMILY GUISE
 confidence: high
-summary: "用户于 2026-08-30 明确确认最终答案 FAMILY GUISE 正确。主机制是把 feeder 分拆为九类有序集合的元素，并令各片段按固定方向与步长移动；已完整复原的八行中，rows 3/4/6/7/8/9/10 的橙字与 FAMILY GUISE 精确一致（7/8），旧断句 FAMILY GUY IS 仅命中 5/8。rows 1/2/5 与 row 11=E 的预期路线尚未机械闭合，作为复原缺口保留，不影响用户确认的 accepted 状态。"
-updated: 2026-08-30
+summary: 用户已于 2026-08-30 确认 FAMILY GUISE。机制为把 feeder 分拆成有序集合成员，各片段按固定步长逐代移动，取第48格。2026-09-11 同步 e05 的已接受答案 ALFALFA 及 row 5 的14个公开格验证，橙字为 L；rows 1/2 与 row 11 的 E 仍是归档复原缺口。
+updated: 2026-09-11
 ---
 
 # 引领潮流的考威尔
@@ -37,7 +37,7 @@ updated: 2026-08-30
 依赖节点 e05 的候选 `ATHWART` 已于 2026-08-30 被用户明确判错；它曾由六图换义
 首字母 `THWART` 与题给首字母 `A` 得出，但现在不能再作为本 Meta 的 feeder。
 `APREFIX` 与后继猜测 `AFFIXES` 也均于同日被用户明确判错，因此本 Meta 不再把
-`A PREFIX` 当作指令。e05 的真实答案仍未知，但不影响已确认的 Meta 答案。
+`A PREFIX` 当作指令。e05 后来已由用户确认答案 **ALFALFA**；此前未知状态已过时。其 row 5 的具体复现见下方归档同步。
 
 `FIRE` 又由用户明确判错。它曾依靠 `FAMILY GUY IS→ON FOX` 定位 `FIREFOX`，
 再取该行橙格 owner token `FIRE`，并用 e05 候选 `A PREFIX` 作语义复核。判错说明
@@ -56,7 +56,7 @@ FAMILY GUY IS:   M I Y G U Y  I  S   -> 5/8
 “Family Guy's”同音；在“运营秘诀”的语境下还可直读为用“家人／家庭”包装组织的
 管理伪装。它不依赖 `ON FOX`、Cowell 节目或 e05 的错误候选。
 
-用户确认解决了答案归属，但逐行复原仍有缺口：rows 1/2/5 未闭合，row 11 的目标
+用户确认解决了答案归属。归档同步后 row 5 已闭合，剩余 rows 1/2 尚未闭合，row 11 的目标
 `E` 在核心目录六种分拆（968 节点）及现有全部目录的四个较短分拆中均已穷尽为零；
 四个五／六段细分在有限时间边界内停止，不能记作排除。当前 exact row 11 仍给 `I`，
 应视作稀疏约束下的局部诱饵路线，而不是推翻已获用户确认的答案。
@@ -390,9 +390,16 @@ SingleFileZ 中的真实 `index.html` 已解包到 `work/visual/singlefilez/`。
 
 ## Next action
 
-答案工作已经完成，无需再次验证或提交。若将来要补全归档解法，只继续寻找
-rows 1/2/5 与 row 11=`E` 的**提示直接支持**表示法，并在 e05 获得新的可靠候选或
-accepted 答案后重新检查 rows 2/5；这些复原工作不得改变 `FAMILY GUISE` 的 accepted
-状态，除非用户另有明确反馈。不要再扩无边界集合别名或语言词表，也不得复用
-`FIRE`、`SIMON PETER`、`ONE DIRECTION`、`PETER PRINCIPLE` 或
-`FAMILY GUY IS→ON FOX`。
+答案工作已完成，无需再次验证或提交。若将来补全归档解法，继续核对 rows 1/2 与 row 11=E 的题面支持；row 5=ALFALFA 已由 e05 接受记录同步。保留全部失败路线，不以已知答案反造未证实的格位。
+
+## Archive synchronization (2026-09-11)
+
+来源：[e05 已接受解答](../e05-happy-angry-sad-joy-office/solution.md)。其 row 5 已在原记录中给出完整生成流：
+
+```text
+ALFALFA = ALFA[NATO −1] | L[拉丁 +1] | FA[唱名 −1]
+后续代：ZULU|M|MI → YANKEE|N|RE → XRAY|O|DO → WHISKEY|P|TI → VICTOR|Q|LA
+前 48 格：ALFALFAZULUMMIYANKEENREXRAYODOWHISKEYPTIVICTORQL
+```
+
+14/14 个公开格命中，第 48 格为 L，与 FAMILY GUISE 第 5 位一致。本次仅同步已记录的复现；原有穷举脚本在 e05 当前目录缺失，未重新声称复跑完整词典搜索。剩余缺口是 rows 1/2 与 row 11 的目标 E，旧章节中把 row 5 一并列为未知的文字属于历史状态。

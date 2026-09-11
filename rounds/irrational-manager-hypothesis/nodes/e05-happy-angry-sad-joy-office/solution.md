@@ -11,7 +11,7 @@ status: accepted
 answer: ALFALFA
 confidence: high
 summary: "用户于 2026-08-30 明确确认 ALFALFA 正确。决定性证据来自 Round Meta：Meta 已 accepted（FAMILY GUISE），其机制是把每个 feeder 无损拆成九类有序集合的成员、各片段按固定步长逐代移动并截到第 48 格。按 feeder 长度可判定 Meta 的 rows 2/5 只能是 SIDEBAR 与 e05 的答案。用重新实现并已对 rows 3/4/6/8 自检通过的求解器反解 row 5：在 5073 个七字母 A 词中唯一命中 ALFALFA = ALFA[NATO −1] | L[拉丁 +1] | FA[唱名 −1]，逐代生成 ZULU|M|MI → YANKEE|N|RE → XRAY|O|DO → WHISKEY|P|TI → VICTOR|Q|LA，14/14 个公开格全中，且第 48 格橙字为 L，正是 FAMILY GUISE 的第 5 个字母。题内也自洽：六枚二次下落的 emoji 改用各自最直白的图标本名读法，首字母依次为 LOOP/F.../ALPHABET/LEFT/F.../ART = L F A L F A，与题给 🅰️ 合成 A + LFALFA = ALFALFA。这同时解释了此前 31 次判错——旧笔记的红格序列在 c6/c8/c9 上取错了 emoji。"
-updated: 2026-08-30
+updated: 2026-09-11
 ---
 
 # 😊😠😢😃🏢
@@ -172,14 +172,16 @@ ALFALFA 流  : ALFALFAZULUMMIYANKEENREXRAYODOWHISKEYPTIVICTORQL
 
 ## Evidence and artifacts
 
+2026-09-11 目录核对：下列标注“文件缺失”的 10 个临时脚本/结果在本节点当前目录中均不存在；对应条目仅保留原来的运行记录，不能作为现成可运行文件。其余已归档文件保持原样。
+
 - [`artifacts/layout.tsv`](artifacts/layout.tsv)：从保存页解析出的 1-based 坐标、边框和颜色表；本轮已与 `input/` 的纯文本 emoji 顺序逐枚核对一致。
 - [`artifacts/dropquote-layout.png`](artifacts/dropquote-layout.png)：保持六块区域、粉格和列对齐的可视化。
 - [`artifacts/extract_layout.py`](artifacts/extract_layout.py)：从离线 HTML 重新生成布局的脚本（依赖 `bs4`，当前环境未安装；`artifacts/layout.tsv` 可直接使用）。
-- [`work/render_layout.py`](work/render_layout.py)、[`work/regions.py`](work/regions.py)、[`work/cells.py`](work/cells.py)、[`work/freq.py`](work/freq.py)、[`work/locks.py`](work/locks.py)：本轮独立复算布局、六块结构、逐列格位、emoji 频次与整排锁。
-- [`work/extract_families.py`](work/extract_families.py)：13,406,400 种换义组合 × 三个提取族的有界审计；结论是逐图取字母整族失败。
-- [`work/meta_solver.py`](work/meta_solver.py)：Round Meta 生成机制的独立实现；对 rows 3/4/6/8 逐格复现公开字母并给出正确橙字，可作模型自检。
-- [`work/dict_backsolve.py`](work/dict_backsolve.py) 与 [`work/dict_backsolve.txt`](work/dict_backsolve.txt)：用 Meta rows 2/5 的公开格反解七字母 A 词，含 `SIDEBAR` 对照组。
-- [`work/freeform.py`](work/freeform.py)：同一反解的无字典版本；row 2 在 900 秒／5,410 万节点内未跑完且零命中，仅作负面记录。
+- `work/render_layout.py`（文件缺失）、`work/regions.py`（文件缺失）、`work/cells.py`（文件缺失）、`work/freq.py`（文件缺失）、`work/locks.py`（文件缺失）：本轮独立复算布局、六块结构、逐列格位、emoji 频次与整排锁。
+- `work/extract_families.py`（文件缺失）：13,406,400 种换义组合 × 三个提取族的有界审计；结论是逐图取字母整族失败。
+- `work/meta_solver.py`（文件缺失）：Round Meta 生成机制的独立实现；对 rows 3/4/6/8 逐格复现公开字母并给出正确橙字，可作模型自检。
+- `work/dict_backsolve.py`（文件缺失） 与 `work/dict_backsolve.txt`（文件缺失）：用 Meta rows 2/5 的公开格反解七字母 A 词，含 `SIDEBAR` 对照组。
+- `work/freeform.py`（文件缺失）：同一反解的无字典版本；row 2 在 900 秒／5,410 万节点内未跑完且零命中，仅作负面记录。
 - 已拒路线的旧复现表仍留在 `artifacts/`：`extraction.tsv`、`rebus_transform.tsv`、`inside_out_pairs.tsv`、`artist_list.tsv`、`proper_name_cycle.tsv`、`track_lookup.tsv`、`title_index.tsv`。它们只作负面审计，不得再当正面证据。
 - 外部核对：本轮按用户授权只检索了六首歌的歌词与曲目信息（未检索本题答案／题解／队伍记录），用于独立确认 R2 的五连自问自答、R4 的肯定句与两条しりとり、R5 的「脱出」段、R6 的「交差点」与「隣の隣の隣」等锚点。
 
@@ -224,12 +226,4 @@ ALFALFA 流  : ALFALFAZULUMMIYANKEENREXRAYODOWHISKEYPTIVICTORQL
 
 ## Next action
 
-答案已由用户确认，本节点无需再提交或验证。若将来要补全归档解法，只剩两项复原工作：
-
-1. 按已确认的 `L F A L F A` 重新审计六个红格的歌词落位（重点 c6、c8、c9），把 128
-   格填表重新闭合一次；`c6`/`c9` 具体是 FIRE／FLAG／FADE 中的哪一枚仍未唯一确定，
-   但三者都给同一个字母，不影响已确认的答案。
-2. Meta `e-meta-cowell-moving-forward` 的 row 5 现在可以补写为已闭合行：
-   `ALFALFA = ALFA[nato−1] | L[latin+1] | FA[sol7−1]`，逐代
-   `ZULU|M|MI → YANKEE|N|RE → XRAY|O|DO → WHISKEY|P|TI → VICTOR|Q|LA`，
-   14/14 公开格命中，第 48 格橙字 `L`。该修改属于 Meta 节点，不在本节点范围内。
+答案 ALFALFA 已确认，无比赛提交待办；row 5 的已知生成链已同步到 Round Meta。若完善复现，先恢复缺失的求解脚本，再核对 c6/c8/c9 的歌词落位与具体 emoji，补齐 128 格填表。

@@ -11,7 +11,7 @@ status: accepted
 answer: JAMES SHOAL
 confidence: high
 summary: 答案 JAMES SHOAL（曾母暗沙），由用户提供确认，本 Node 未能自行解出。已确立机制：每段英文句里若干个"有中文雅译的音译外来词"被把一段连续字母替换成了普通英文单词；标记 方框(a/b) 中 b = 该外来词英文原词的字母数、a = 取第 a 个字母、方框个数 = 其雅译的汉字数；每段标记取出的字母拼成一个英文词，该词是该句句意所指音译词中某个汉字的意思。六段只自行确认第 5 段（FRANCE/TOAST/HYACINTH/PARTY → ASIA = 亚，对应亚当）；最终如何由六段词得到 JAMES SHOAL 未复原。
-updated: 2026-08-18
+updated: 2026-09-11
 ---
 
 # 情迷翡冷翠
@@ -133,8 +133,13 @@ updated: 2026-08-18
 
 ## Submission history
 
-| 时间 | 提交 | 结果 |
-| --- | --- | --- |
-| — | 本 Node 未提交过任何答案 | — |
+| Date | Candidate | Result | Note |
+| --- | --- | --- | --- |
+| — | 本 Node 未提交过任何答案 | — | 保留旧记录：Agent 未自行提交。 |
+| 2026-08-18 | JAMES SHOAL | accepted (user-confirmed) | 用户直接告知并确认；依据下方既有正文补入表格，不是本次网站提交。 |
 
 答案 `JAMES SHOAL` 由用户于 2026-08-18 直接告知并确认。
+
+## Next action
+
+答案 JAMES SHOAL 已由用户确认，无比赛待办。归档解法仍只完整复原六段中的第 5 段；如需继续完善，应补齐其他五段及六段结果到最终地点的提取，并恢复复算脚本所需的词表。

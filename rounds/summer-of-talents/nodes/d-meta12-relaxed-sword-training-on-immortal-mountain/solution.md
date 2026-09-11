@@ -11,7 +11,7 @@ status: accepted
 answer: 求解
 confidence: high
 summary: 用户确认 feeder 066=之。将每个“！”读作“不”，三行依次为“不甚了了＝不知道”“不了了之＝不结果（没有结果）”“不求甚解＝不深思”；红格“求”加黄格“解”提取求解，已由用户确认。
-updated: 2026-08-20
+updated: 2026-09-11
 ---
 
 # 在仙山练剑就纯粹讲究的是一个惬意
@@ -80,7 +80,7 @@ D E = ??
 
 ## Evidence and artifacts
 
-- 原题：`input/73b27c8591b_b790baa5e2944ca19bb8226f8db9e66a.webp`
+- 原题：`input/ae7d8dfc470b67d47e9b113b27c8591b_b790baa5e2944ca19bb8226f8db9e66a.webp`
 - 稳定视觉清单：`work/visual/meta-inventory/manifest.json`、`work/visual/meta-inventory/index.tsv`
 - Feeder 直裁图：`work/visual/feeder-025.png`、`work/visual/feeder-044.png`、`work/visual/feeder-046.png`、`work/visual/feeder-066-detail.png`
 - 旧三字词穷举：`work/reduplicative_search.py`、`work/reduplicative_candidates.tsv`（保留为负面证据）。
@@ -93,5 +93,4 @@ D E = ??
 
 ## Next action
 
-已确认，无进一步解题动作；接下来处理尚未确认的独立漫画小题。
-
+本 Meta 的答案“求解”已确认，当前无解题或提交待办。漫画素材册已于 2026-09-11 确认 71/71；旧笔记里的“未解”“待提交”是历史状态。素材最新进度见 [WIG 状态](../../../wig/STATE.md)，本题的已知复原缺口保留在正文中。

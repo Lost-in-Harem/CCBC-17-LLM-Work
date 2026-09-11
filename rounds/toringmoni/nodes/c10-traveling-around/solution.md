@@ -11,7 +11,7 @@ status: accepted
 answer: CLOTHOID
 confidence: high
 summary: "已解出并判正确：CLOTHOID（回旋曲线／欧拉螺线）。最后一层机制已题内复原：四个加粗空是求同的一侧，填法为 平复(2 4)=BE CALM、扬抑(7)=TROCHEE、缝线都快掉完了(10)=THREADBARE、核心信条(4 5)=CORE IDEAL；按真实路线 第四日→第一日→第二日→第三日 与各国纪念品逐位求同，得片段 CL/O/TH/OID，连读即 CLOTHOID。九个候选曲线名中只有它有解且切分唯一（SPIRAL 需要 P、EULER/CORNU 需要 U，四个加粗中文的任何填法都供不出，这也解释了 EULER SPIRAL 判错——错的是英文写法而非曲线）。与 Meta 交叉验证闭合：CLOTHOID 中文「欧拉螺线」经 欧拉→伯努利 得对数螺线 LOGARITHMICSPIRAL，第 12/7/3 位 S/T/G 与 Meta 答案槽 12/23/26 全中。四件纪念品的确切名称未定，位置模板已锁死，仅为验证。"
-updated: 2026-08-19
+updated: 2026-09-11
 ---
 
 # 周游列国
@@ -1172,12 +1172,4 @@ P 与 U。这也解释了 `EULER SPIRAL` 为何判错：**错的不是曲线，�
 
 ## Next action
 
-**已完成。答案 `CLOTHOID` 判正确。**
-
-由已判正确的 Meta 答案 `BACKUPANDTESTSUMMARIZETHEGISTS` 三处独立校验反推得到
-（槽 12/23/26 ← `LOGARITHMICSPIRAL` 的第 12/7/3 位 = S/T/G，逐一吻合）。
-
-若判错，同一条曲线的其余英文名依次为 **`CORNU SPIRAL`**（羊角螺线）、**`SPIRO`**。
-再往下则须重新审视替换轴：另一条可能是 **黄金 → 对数**（鹦鹉螺壳常被误称黄金螺线、
-实为对数螺线，也吻合「复利的自然力量」＝复利式生长的自然造物），
-对应答案为 **`GOLDEN SPIRAL`**。
+答案 CLOTHOID 已获用户确认，无比赛提交待办。若将来补齐独立复现，应核对四件纪念品的确切英文名及逐位求同过程；旧候选排序只保留为探索历史。

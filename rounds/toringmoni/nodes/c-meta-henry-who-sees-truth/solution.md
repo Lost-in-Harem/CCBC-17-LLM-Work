@@ -10,13 +10,21 @@ feeders: all-round-feeders
 status: accepted
 answer: BACKUPANDTESTSUMMARIZETHEGISTS
 confidence: high
-summary: "已解出：BACKUPANDTESTSUMMARIZETHEGISTS（BACKUP AND TEST / SUMMARIZE THE GISTS）。机制＝每条 WIG 广告语点出一件名不副实的东西，给出伪→真替换轴，施加到该小题自己的答案上得到新词，长度恰为编码 (L,i1,i2,i3) 的 L，再填进题面页 30 槽虚线的三个 📁 槽。十串：c01 NAAN、c02 CARBONMONOXIDE、c03（18 字母，[7]=Z [14]=I [17]=P，未定）、c04 FLAREON、c05 VANDAMISSJOAQUIM、c06 MOHE、c07 TWOTRUTHSANDALIE、c08 HATSUNEMIKU、c09 STROKE（画笔→笔画，对应熊猫/猫熊的字序颠倒）、c10 LOGARITHMICSPIRAL（欧拉螺线→伯努利螺线）。30 槽零冲突组装成功。"
-updated: 2026-08-19
+summary: 用户已确认 BACKUPANDTESTSUMMARIZETHEGISTS。十条 WIG 广告提供伪→真替换轴，将对应小题答案转换为指定长度的英文串，按三枚文件夹的槽号及索引填入 30 格。2026-09-11 同步 c03=JOHN TYLER，其转换串 CARLOAZEGLIOCIAMPI 的第17/7/14位为 P/Z/I；十串与全部最终 feeder 均已填入可复算表。
+updated: 2026-09-11
 ---
 
 # 去伪存真的李昌钰
 
 ## Current conclusion
+
+答案 **BACKUPANDTESTSUMMARIZETHEGISTS** 已于 2026-08-19 获用户确认。广告语提供转换轴，小题答案经转换后按编码取三个字母，填入该题的三个文件夹槽；30 槽依次读出最终答案。
+
+2026-09-11 归档同步：c01=PITA、c03=JOHN TYLER、c10=CLOTHOID 都已有独立接受记录。c03 的美式→意式轴对应第 10 任总统 **CARLO AZEGLIO CIAMPI**，去空格得 18 字母，索引 17/7/14 为 P/Z/I。
+
+[完整槽位表](artifacts/meta-slot-map.tsv) 已补全转换串和实际字母；可用 [复算脚本](artifacts/build_slot_map.py) 生成并核对。下方保留早期探索，其中“未解”“无候选”等描述不代表当前状态。
+
+## Historical investigation
 
 本 Meta 的**结构已经解开，内容层尚未解开**。目前没有可提交候选。
 
@@ -280,19 +288,4 @@ c09 就是靠这一点解开的——熊猫的名实不符本质是**名字被�
 
 ## Next action
 
-**请用户提交 `BACKUPANDTESTSUMMARIZETHEGISTS`。**
-
-三十个槽由十个串零冲突组装（`artifacts/meta-slot-map.tsv` 可复核）。此前两次判错都发生在
-「末词＝FACTS」这一**推测**前提下；FACTS 会强制 c09 首字母＝C，从而把 c09 逼进 `C????E`。
-真正的 c09 是 **STROKE**：熊猫的名实不符正是**字序颠倒**（本该叫猫熊），把同样的颠倒施加到
-c09 答案 **画笔 → 笔画 ＝ STROKE**——这恰好是提示所说的「中文部分的特性」。
-
-由此还反推出两条对未解小题的约束：
-
-- **c10 周游列国**：其答案应是 **欧拉螺线（Euler spiral／clothoid）** 一类，替换 欧拉→伯努利
-  后得 **对数螺线 LOGARITHMICSPIRAL**（伯努利螺线，spira mirabilis），17 字母且 `[7]=T` ✓。
-- **c03 创造你的历史**：其答案经 美式→意式 替换后是 **18 字母**，且 `[7]=Z`、`[14]=I`、`[17]=P`。
-  （c03 是十串中唯一仍未独立确定的，但它的三个字母已被整句话固定，不影响提交。）
-
-若本次仍判错，唯一可疑处是末词 `GISTS` 与 c03 的 `[14]=I`；替代读法为 `GUSTS`
-（`[14]=U`），但「SUMMARIZE THE GISTS」在语义上明显更合理。
+本 Meta 已确认，十个转换串均已同步，当前无解题或提交待办。复核时运行 `artifacts/build_slot_map.py`，应得到 BACKUPANDTESTSUMMARIZETHEGISTS。

@@ -11,12 +11,14 @@ status: accepted
 answer: REST
 confidence: high
 summary: 19 个颜色替换词对应下方色槽，拼音索引提取得到中间指令 PAINT LINES IN PASSAGE。根据下方图示矩阵的纵向连线与分段结构（红 1 段 5 点、黄 2 段 4+2 点、绿 1 段 4 点、蓝 2 段 2+2 点），在正文矩阵中连接各色锚点，四色分别精确绘制出大写字母 R、E、S、T，拼出答案 REST，完美呼应正文末尾终点词“安宁”。
-updated: 2026-08-14
+updated: 2026-09-11
 ---
 
 # 雪为何色
 
 ## Current conclusion
+
+2026-09-11 归档核对：既有状态为 `accepted`，答案 **REST**；下方 `Submission history` 仅单独登记了中间答案确认，未登记最终答案的独立回执。本次保留原有状态，不补造提交日期或判定。
 
 本题分为中间答案提取与最终连线识读两个阶段，逻辑完全闭环：
 
@@ -98,4 +100,4 @@ $$\text{Red (R)} + \text{Yellow (E)} + \text{Green (S)} + \text{Blue (T)} \longr
 
 ## Next action
 
-向题目提交最终答案 **`REST`** 并确认通过。
+当前归档状态为 accepted，答案 REST，无需重复提交。若补齐验收档案，应从原任务或用户已有记录补录最终答案的真实确认日期与反馈；不得把中间答案确认当作最终回执。

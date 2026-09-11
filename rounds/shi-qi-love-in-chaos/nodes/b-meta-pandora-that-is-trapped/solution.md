@@ -10,8 +10,8 @@ feeders: all-round-feeders
 status: accepted
 answer: PARADOXXING
 confidence: high
-summary: 用户明确确认 PARADOXXING 为正确答案。11 段音频各指向一个含“音”的名称；将“音”后的汉字写成无声调拼音，与其语义对应的英文 feeder 答案左对齐，只取同一位置相同的唯一字母，再按音频 1→11 读取，得到 PARADOXXING。该闭环同时给未完成小题反推出 b4 WONDER、b6 PERSPECTIVE、b10 CURRENT，均仍需各小题独立验证。
-updated: 2026-08-17
+summary: 用户已明确确认 PARADOXXING。历史机制为音频识别含“音”的名称，将“音”后拼音与英文 feeder 左对齐取同位相同字母。2026-09-11 归档发现旧表仍用 WONDER/PERSPECTIVE/CURRENT，而对应小题最新接受答案为 PEEP/LIGHTNING/INFLOOD；三行配对需要另行复原，不能把旧反推候选继续交给小题。
+updated: 2026-09-11
 ---
 
 # 八音盒里的潘多拉
@@ -19,6 +19,16 @@ updated: 2026-08-17
 ## Current conclusion
 
 正确答案为 **`PARADOXXING`**，已获用户明确确认。
+
+2026-09-11 归档核对：本 Meta 的接受记录不变，但下方 2026-08-17 的提取表包含三个已过时的反推候选：
+
+| 小题 | 旧表反推值 | 最新已接受答案 |
+| --- | --- | --- |
+| [b4](../b4-keep-solving-and-nobody-explodes/solution.md) | WONDER | PEEP |
+| [b6](../b6-magic-square-trading-strategy/solution.md) | PERSPECTIVE | LIGHTNING |
+| [b10](../b10-puzzle-in-strand/solution.md) | CURRENT | INFLOOD |
+
+因此旧表可以复现当时的字串，但尚不能作为使用全部最终 feeder 的完整解答。对应音频与名称的三行配对仍是归档复原缺口；本次没有重新求解或改变答案判定。
 
 题面示例 `初音WEILAI / 巡音LIUGE / 镜音LIAN` 的作用是说明改写法：找到音频所指的含“音”名称，保留“音”及其前面的汉字，把“音”后面的部分改写成无声调拼音。名称中“音”前的字义负责把它配到一个 feeder；拼音后缀则负责提取。
 
@@ -80,7 +90,7 @@ PARADOXXING
 | 10 | 《电音之王》 | 电音之王 | 歌名本身满足格式 |
 | 11 | “狐狸经常摔跤——脚滑/狡猾” | 谐音梗 | 用户明确指出；笑点是同音双关 |
 
-## Meta-derived clues for unfinished feeders
+## Historical Meta-derived clues for feeders
 
 这些只作为线索，不代替 feeder 自己的完整推导：
 
@@ -145,4 +155,4 @@ answer\tPARADOXXING
 
 ## Next action
 
-本 Meta 已完成，无待办。将 `WONDER / PERSPECTIVE / CURRENT` 作为受 meta 强约束的候选交给 b4、b6、b10，各自仍须在原题中补齐独立推导并由用户确认后才能标为 accepted。
+本 Meta 及全部 feeder 均已记录为 accepted，无比赛提交待办。若继续补写完整题解，使用 b4=PEEP、b6=LIGHTNING、b10=INFLOOD 重新核对三行音频配对；旧反推值只保留在历史记录中。
