@@ -1,0 +1,14 @@
+Source: https://heptadec.cipherpuzzles.com/launchpad
+Surface: 漫画素材大全, 素材 NO. 013
+Observed after normal submission of 列车 on 2026-09-11:
+
+- generic "已收集 71 张，共 71 张":
+  - strong: "71"
+  - generic: /71
+- region "第 13 张素材详情":
+  - paragraph: 素材关键词
+  - paragraph: 列车
+  - generic: 已收集
+
+This is an excerpt of the visible DOM returned immediately after submission,
+not an inferred verdict or a solution-page lookup.

@@ -1,0 +1,17 @@
+{
+  "source": "diagram.webp",
+  "canvas": [702,702],
+  "coordinates": "source pixels, x right, y down",
+  "boxes": [
+    {"id":"A","bounds":[72,293,184,406],"whole":"轰","upper":"车","lower":"双"},
+    {"id":"B","bounds":[216,293,329,406],"whole":"轰","upper":"车","lower":"双"},
+    {"id":"C","bounds":[361,293,474,406],"whole":"烈","upper":"列","lower":"灬"},
+    {"id":"D","bounds":[506,293,618,406],"whole":"烈","upper":"列","lower":"灬"}
+  ],
+  "routes": [
+    {"id":"love","height":349,"read":["A.whole","B.whole","C.whole","D.whole"],"result":"轰轰烈烈"},
+    {"id":"home","height":383,"read":["B.lower","A.lower"],"result":"双双"},
+    {"id":"speechless","height":383,"read":["D.lower","C.lower"],"result":"灬灬","count":8,"reference":"……","reference_count":6,"ratio":"4/3"},
+    {"id":"answer","height":314,"read":["C.upper","B.upper"],"result":"列车"}
+  ]
+}

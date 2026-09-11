@@ -1,0 +1,23 @@
+{
+  "source":"diagram.webp",
+  "canvas":[2160,2160],
+  "positions":"approximate centers in normalized image coordinates, x right, y down",
+  "nodes":{
+    "hand":{"xy":[0.51,0.17],"reading":"手"},
+    "spider":{"xy":[0.10,0.48],"reading":"蜘蛛"},
+    "X":{"xy":[0.43,0.48],"reading":"纸"},
+    "Y":{"xy":[0.59,0.48],"reading":"牌"},
+    "house":{"xy":[0.89,0.48],"reading":"屋"},
+    "noodles":{"xy":[0.51,0.80],"reading":"面"}
+  },
+  "word_paths":[
+    {"read":["hand","X"],"word":"手纸"},
+    {"read":["hand","Y"],"word":"手牌"},
+    {"read":["X","noodles"],"word":"纸面"},
+    {"read":["Y","noodles"],"word":"牌面"},
+    {"read":["spider","X","Y"],"word":"蜘蛛纸牌"},
+    {"read":["X","Y","house"],"word":"纸牌屋"}
+  ],
+  "answer_read":["X","Y"],
+  "answer":"纸牌"
+}

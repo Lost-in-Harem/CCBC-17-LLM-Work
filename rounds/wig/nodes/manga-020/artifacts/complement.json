@@ -1,0 +1,17 @@
+{
+  "source": "diagram.webp",
+  "canvas": [749, 749],
+  "coordinate_system": "original image pixels, top-left origin; approximate centerlines",
+  "grid": "Within every listed box, use the Tian grid: top/middle/bottom horizontal and left/middle/right vertical lines. Keep source ink outside the grid; complement source ink within the grid.",
+  "blocks": [
+    {"id":"R1A","bounds":[73,114,160,206],"result":"山"},
+    {"id":"R1B","bounds":[194,114,289,206],"result":"川"},
+    {"id":"R2A","bounds":[73,322,160,413],"result":"土"},
+    {"id":"R2B","bounds":[198,318,285,413],"result":"王"},
+    {"id":"R3A","bounds":[73,538,160,633],"result":"王","outside_ink":"upper dot remains; full character 主"},
+    {"id":"R3B","bounds":[191,538,285,633],"result":"口"},
+    {"id":"R3C1","bounds":[309,495,404,592],"result":"日"},
+    {"id":"R3C2","bounds":[309,603,404,698],"result":"日"}
+  ],
+  "assembly": ["R1A+R1B=山川", "R2A+R2B=土王", "R3A=主; R3B left of vertically stacked R3C1,R3C2=唱; answer 主唱"]
+}
